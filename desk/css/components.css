@@ -154,6 +154,7 @@ label { font-size: 0.875rem; color: var(--muted); }
 .gc text { font-size: 12px; fill: var(--muted); }
 .gc .gc-tick { font-variant-numeric: tabular-nums; }
 .gc .gc-title, .gc .gc-lab.strong { fill: var(--text); font-weight: 600; }
+.gc .gc-lab { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; } /* lines never run through a label */
 .gc-axis, .gc-zero { stroke: var(--rule-strong); stroke-width: 1; }
 .gc-grid { stroke: var(--rule); stroke-width: 1; }
 .gc-line { fill: none; stroke: var(--text); stroke-width: 1.75; }
@@ -172,6 +173,18 @@ label { font-size: 0.875rem; color: var(--muted); }
 .gc-break { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 3; }
 .gc-key { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: var(--fs-caption); color: var(--muted); }
 .gc-key li { display: flex; align-items: center; gap: 6px; }
+.gc-view { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; margin: 0 0 6px; font-size: var(--fs-caption); }
+.gc-view-lab { color: var(--muted); margin-right: 8px; }
+.gc-view-btn { font: inherit; padding: 3px 9px; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--text); cursor: pointer; margin-left: -1px; }
+.gc-view-btn[aria-pressed="true"] { background: var(--text); color: var(--surface); border-color: var(--text); }
+.gc-view-btn:not([aria-pressed="true"]):hover { background: var(--surface-2); }
+.gc-box { min-width: 0; }
+.gc-halo { stroke: var(--surface); stroke-width: 5; stroke-linecap: round; stroke-opacity: 0.75; }
+.gc .gc-dl { font-weight: 600; }
+.gc .gc-dl.ten, .gc .gc-dl.twenty { fill: var(--chart-focus-ink); }
+.gc .gc-dl.peers { fill: var(--chart-peer); }
+.gc .gc-dv { font-variant-numeric: tabular-nums; }
+.gc-lead { fill: none; stroke: var(--muted); stroke-width: 1; }
 .gc-sw { display: inline-block; flex: none; width: 22px; height: 0; border-top: 3px solid var(--chart-focus); }
 .gc-sw.ten { border-top-width: 3px; }
 .gc-sw.twenty { border-top: 2px dashed var(--chart-focus); }

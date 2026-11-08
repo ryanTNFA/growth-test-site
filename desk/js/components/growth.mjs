@@ -3,8 +3,9 @@
 // pictures on the Areas page, each from numbers already in the data file (growth_read.mjs arranges them):
 //   patternChecks: the four patterns the engine checks in order, each a track with the zone where it fits, the line
 //     and the economy's dot; the first that fits names the growth problem.
-//   growthChart: income per person and growth each year on one time axis, the last 10 and 20 years shaded, their
-//     averages drawn across them, the similar economies' median beside them; drawn at the width it is given.
+//   growthChart: income per person and growth each year on one time axis, the last 30 years unless the reader asks
+//     for all; the last 10 and 20 years shaded, their averages drawn across them and labelled at the right, the peer
+//     median beside them; drawn at the width it is given.
 //   incomeStrip: the figures the statement reads against income, one dot each on a shared scale of standard deviations.
 import { h, fmt, fmtSigned } from '../common.mjs';
 import { sdText, outside, gapSentence } from '../growth_read.mjs';
@@ -83,6 +84,14 @@ export function patternChecks(read) {
 }
 
 // ---------- the growth record ----------
+// The chart opens on the last 30 years (Ryan, 8 November 2026: on the full record the recent bars and the lines across
+// them were "hard to read or interpret"). Thirty years shows the decade before the 20-year window, so that window has a
+// visible start, and every peak the collapse check can count (8–30 years old); a button shows all years, and the
+// reader's choice holds for the visit as they move between economies (each a page load, so it is kept in sessionStorage).
+const VIEW_YEARS = 30;
+const VIEW_KEY = 'growth-chart-years';
+let showAll = (() => { try { return sessionStorage.getItem(VIEW_KEY) === 'all'; } catch { return false; } })();
+
 /** @type {WeakMap<Element, ResizeObserver>} */
 const watching = new WeakMap();
 
@@ -93,14 +102,38 @@ const watching = new WeakMap();
  * @returns {HTMLElement} the key under the chart
  */
 export function growthChart(host, o) {
+  const years = [...o.level, ...o.growth].map((p) => p[0]);
+  const first = years.length ? Math.min(...years) : 0, latest = years.length ? Math.max(...years) : 0;
+  const long = latest - first + 1 > VIEW_YEARS + 2; // a choice only where all years show meaningfully more
+  const from = () => (long && !showAll ? latest - VIEW_YEARS + 1 : first);
+  const box = h('div', { class: 'gc-box' });
+  const key = h('ul', { class: 'gc-key' });
   let last = 0;
-  const draw = () => {
+  const draw = (force = false) => {
     const w = Math.max(300, Math.round(host.clientWidth || 600));
-    if (Math.abs(w - last) < 8) return;
+    if (!force && Math.abs(w - last) < 8) return;
     last = w;
-    host.replaceChildren(chartSvg(w, o));
+    box.replaceChildren(chartSvg(w, o, from()));
   };
-  draw();
+  const fill = () => key.replaceChildren(...keyItems(o, from()));
+  /** @type {HTMLElement[]} */
+  const btns = [];
+  /** @param {boolean} all @param {string} label */
+  const pick = (all, label) => {
+    const b = h('button', { type: 'button', class: 'gc-view-btn', 'aria-pressed': String(showAll === all) }, label);
+    b.addEventListener('click', () => {
+      showAll = all;
+      try { sessionStorage.setItem(VIEW_KEY, all ? 'all' : 'recent'); } catch { /* storage may be unavailable */ }
+      btns.forEach((x, i) => x.setAttribute('aria-pressed', String((i === 1) === all)));
+      draw(true); fill();
+    });
+    btns.push(b);
+    return b;
+  };
+  const view = long ? h('div', { class: 'gc-view', role: 'group', 'aria-label': 'Years shown' },
+    h('span', { class: 'gc-view-lab' }, 'Show'), pick(false, `Last ${VIEW_YEARS} years`), pick(true, `All years, since ${first}`)) : null;
+  host.replaceChildren(...(view ? [view, box] : [box]));
+  draw(); fill();
   const prev = watching.get(host); if (prev) prev.disconnect();
   if (typeof ResizeObserver !== 'undefined') {
     // redraw in the next frame: replacing the chart inside the observer's callback changes the host's height mid-frame
@@ -108,17 +141,42 @@ export function growthChart(host, o) {
     const ro = new ResizeObserver(() => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; draw(); }); } });
     ro.observe(host); watching.set(host, ro);
   }
-  return chartKey(o);
+  return key;
 }
 
 /** @param {number} lo @param {number} hi */
 function niceStep(lo, hi) { const r = hi - lo; return r <= 10 ? 2 : r <= 24 ? 5 : 10; }
 
-/** @param {number} W @param {{level: [number, number][], growth: [number, number][], g: any, name: string}} o */
-function chartSvg(W, { level, growth, g, name }) {
+/** @type {SVGTextElement | null} */
+let ruler = null;
+/** The width of a semibold chart label, measured by a hidden text in the chart's own styles. @param {string} text */
+function labelWidth(text) {
+  if (!ruler || !ruler.isConnected) {
+    const box = s('svg', { class: 'gc', width: 0, height: 0, 'aria-hidden': 'true', style: 'position:absolute;visibility:hidden' });
+    ruler = /** @type {SVGTextElement} */ (s('text', { class: 'gc-dl' }));
+    box.append(ruler); document.body.append(box);
+  }
+  ruler.textContent = text;
+  return ruler.getComputedTextLength();
+}
+
+/**
+ * @param {number} W
+ * @param {{level: [number, number][], growth: [number, number][], g: any, name: string}} o
+ * @param {number} from the first year shown
+ */
+function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   const G1 = g.G1 || {}, G3 = g.G3 || {}, G4 = g.G4 || {};
+  const level = allLevel.filter((p) => p[0] >= from), growth = allGrowth.filter((p) => p[0] >= from);
   const narrow = W < 520;
-  const ML = 30, MR = 10, top = 22, levH = narrow ? 84 : 100, gap = 30, barH = narrow ? 120 : 140, bottom = 22;
+  // the averages, labelled at their right ends: the right margin is as wide as the longest label
+  const avgDefs = [
+    { win: G1.years_20y || G1.window_20y, v: G1.avg_20y, cls: 'twenty', lab: narrow ? '20 yr' : '20-yr average' },
+    G1.structural_n > 1 ? { win: G1.years_10y || G1.window_10y, v: G1.structural_median_10y, cls: 'peers', lab: narrow ? 'peers' : 'peer median' } : null,
+    { win: G1.years_10y || G1.window_10y, v: G1.avg_10y, cls: 'ten', lab: narrow ? '10 yr' : '10-yr average' },
+  ].filter((a) => a != null && a.v != null && Number.isFinite(a.v)).map((a) => ({ ...a, text: `${a.lab} ${fmt(a.v, 1)}%` }));
+  const MR = Math.ceil(Math.max(0, ...avgDefs.map((a) => labelWidth(a.text)))) + 16; // the figures' tabular digits run a little wider
+  const ML = 30, top = 22, levH = narrow ? 84 : 100, gap = 30, barH = narrow ? 120 : 140, bottom = 22;
   const H = top + levH + gap + barH + bottom;
   const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: 'gc', role: 'img' });
   const years = [...level.map((p) => p[0]), ...growth.map((p) => p[0])];
@@ -127,28 +185,30 @@ function chartSvg(W, { level, growth, g, name }) {
   const X = (y) => ML + ((y - y0 + 0.5) / (y1 - y0 + 1)) * (W - ML - MR);
   const bw = Math.max(1, ((W - ML - MR) / (y1 - y0 + 1)) * 0.72);
 
-  // income per person, from zero
-  const vmax = level.length ? Math.max(...level.map((p) => p[1])) * 1.25 : 1; // headroom keeps the peak label off the title
+  // income per person, from zero; the peak is the whole record's, and may come before the years shown
+  const peak = allLevel.length ? allLevel.find((p) => p[0] === G3.peak_year) || allLevel.reduce((a, b) => (b[1] > a[1] ? b : a)) : null;
+  const vmax = level.length ? Math.max(...level.map((p) => p[1]), peak ? peak[1] : 0) * 1.25 : 1; // headroom keeps the peak label off the title
   const LY = (v) => top + levH - (v / vmax) * levH;
   svg.append(s('text', { x: ML, y: top - 8, class: 'gc-title' }, narrow ? 'Income per person (2015 US$)' : 'Income per person (constant 2015 US$)'));
   svg.append(s('line', { x1: ML, x2: W - MR, y1: LY(0), y2: LY(0), class: 'gc-axis' }));
   // the averages cover the years observed (years_10y), which can stop short of the window; never past the drawn years
   const inside = (w) => (Array.isArray(w) && w[1] >= y0 && w[0] <= y1 ? [Math.max(w[0], y0), Math.min(w[1], y1)] : null);
   const w10 = inside(G1.years_10y || G1.window_10y), w20 = inside(G1.years_20y || G1.window_20y);
-  if (level.length) {
+  if (level.length && peak) {
     svg.append(s('path', { d: level.map((p, i) => `${i ? 'L' : 'M'}${X(p[0]).toFixed(1)},${LY(p[1]).toFixed(1)}`).join(' '), class: 'gc-line' }));
-    const peak = level.find((p) => p[0] === G3.peak_year) || level.reduce((a, b) => (b[1] > a[1] ? b : a));
     const end = level[level.length - 1];
-    if (end[0] !== peak[0]) {
-      // the shortfall: the peak's level carried forward to the latest year
-      svg.append(s('line', { x1: X(peak[0]), x2: X(end[0]), y1: LY(peak[1]), y2: LY(peak[1]), class: 'gc-peakline' }));
+    const before = peak[0] < y0, same = end[0] === peak[0];
+    if (!same) {
+      // the shortfall: the peak's level carried forward to the latest year, from the left edge when the peak is earlier
+      svg.append(s('line', { x1: before ? ML : X(peak[0]), x2: X(end[0]), y1: LY(peak[1]), y2: LY(peak[1]), class: 'gc-peakline' }));
       svg.append(s('line', { x1: X(end[0]), x2: X(end[0]), y1: LY(peak[1]), y2: LY(end[1]), class: 'gc-short' }));
     }
-    svg.append(s('circle', { cx: X(peak[0]), cy: LY(peak[1]), r: 3.5, class: 'gc-peak' }));
-    const px = X(peak[0]); const right = px > W * 0.62;
-    const same = end[0] === peak[0];
-    svg.append(s('text', { x: px + (right ? -7 : 7), y: LY(peak[1]) - 7, 'text-anchor': right ? 'end' : 'start', class: 'gc-lab strong' },
-      same ? `peak, ${peak[0]}: $${fmt(peak[1], 0)}` : `peak ${peak[0]}: $${fmt(peak[1], 0)}`));
+    if (!before) svg.append(s('circle', { cx: X(peak[0]), cy: LY(peak[1]), r: 3.5, class: 'gc-peak' }));
+    const label = before ? `◀ peak ${peak[0]}: $${fmt(peak[1], 0)}` : same ? `peak, ${peak[0]}: $${fmt(peak[1], 0)}` : `peak ${peak[0]}: $${fmt(peak[1], 0)}`;
+    // the label runs right of the peak unless it would pass the chart's edge
+    const px = before ? ML + 2 : X(peak[0]); const right = !before && px + 7 + labelWidth(label) + 4 > W;
+    const lx0 = before ? px : px + (right ? -7 : 7);
+    svg.append(s('text', { x: lx0, y: LY(peak[1]) - 7, 'text-anchor': right ? 'end' : 'start', class: 'gc-lab strong' }, label));
     if (!same) {
       const below = G3.shortfall_pct != null ? ` (${fmt(G3.shortfall_pct, 0)}% below)` : '';
       svg.append(s('text', { x: X(end[0]) - 4, y: Math.min(LY(end[1]) + 15, top + levH - 3), 'text-anchor': 'end', class: 'gc-lab' },
@@ -185,18 +245,31 @@ function chartSvg(W, { level, growth, g, name }) {
       svg.append(s('path', { d: `M${x - half},${base}L${x},${tip}L${x + half},${base}Z`, class: 'gc-cut' }));
     }
   }
-  const seg = (w, v, cls) => (Array.isArray(w) && v != null && Number.isFinite(v)
-    ? svg.append(s('line', { x1: X(w[0]) - bw / 2, x2: X(w[1]) + bw / 2, y1: BY(v), y2: BY(v), class: cls })) : null);
-  seg(w20, G1.avg_20y, 'gc-avg twenty');
-  if (G1.structural_n > 1) seg(w10, G1.structural_median_10y, 'gc-avg peers');
-  seg(w10, G1.avg_10y, 'gc-avg ten');
+  // the averages: a halo under each keeps it clear of the bars; each is labelled at its right end, nudged apart when close
+  const avgs = avgDefs.map((a) => ({ ...a, w: inside(a.win) })).filter((a) => Array.isArray(a.w))
+    .map((a) => ({ ...a, x0: X(a.w[0]) - bw / 2, x1: X(a.w[1]) + bw / 2, y: BY(a.v), ly: BY(a.v) }));
+  for (const a of avgs) svg.append(s('line', { x1: a.x0, x2: a.x1, y1: a.y, y2: a.y, class: 'gc-halo' }));
+  for (const a of avgs) svg.append(s('line', { x1: a.x0, x2: a.x1, y1: a.y, y2: a.y, class: `gc-avg ${a.cls}` }));
+  const labs = [...avgs].sort((a, b) => a.y - b.y);
+  labs.forEach((a, i) => { a.ly = Math.max(a.y, i ? labs[i - 1].ly + 15 : B0 + 6); }); // never up into the panel's title
+  const over = labs.length ? labs[labs.length - 1].ly - (B0 + barH - 4) : 0;
+  if (over > 0) for (const a of labs) a.ly -= over;
+  const lx = W - MR + 8;
+  for (const a of labs) {
+    if (Math.abs(a.ly - a.y) > 1 || a.x1 < W - MR - 1) svg.append(s('path', { d: `M${a.x1 + 1},${a.y}L${lx - 3},${a.ly}`, class: 'gc-lead' }));
+    const t = s('text', { x: lx, y: a.ly + 4, class: `gc-dl ${a.cls}` }, `${a.lab} `); // a.text, with the figure in its own span
+    t.append(s('tspan', { class: 'gc-dv' }, `${fmt(a.v, 1)}%`));
+    svg.append(t);
+  }
   if (G4.reported && G4.break_year != null && G4.break_year >= y0) {
     const bx = X(G4.break_year - 0.5);
     svg.append(s('line', { x1: bx, x2: bx, y1: B0, y2: B0 + barH, class: 'gc-break' }));
-    svg.append(s('text', { x: bx + 4, y: B0 + 11, class: 'gc-lab' }, 'break'));
+    const left = bx + 40 > W - MR; // near the right edge the word sits left of the line, clear of the averages' labels
+    svg.append(s('text', { x: left ? bx - 4 : bx + 4, y: B0 + 11, 'text-anchor': left ? 'end' : 'start', class: 'gc-lab' }, 'break'));
   }
-  // the years
-  const every = narrow ? 20 : 10;
+  // the years: a label every 5, 10 or 20 years, as the width allows
+  const ppy = (W - ML - MR) / (y1 - y0 + 1);
+  const every = [5, 10, 20, 50].find((e) => e * ppy >= 60) || 50;
   for (let y = Math.ceil(y0 / every) * every; y <= y1; y += every) {
     if (X(y) - X(y0) < 56 || X(y1) - X(y) < 56) continue; // keep clear of the first and last years' labels
     svg.append(s('text', { x: X(y), y: H - 6, 'text-anchor': 'middle', class: 'gc-tick' }, String(y)));
@@ -212,8 +285,11 @@ function chartSvg(W, { level, growth, g, name }) {
   return svg;
 }
 
-/** @param {{g: any, growth?: [number, number][]}} o */
-function chartKey({ g, growth }) {
+/**
+ * The key's items for the years shown.
+ * @param {{g: any, growth?: [number, number][]}} o @param {number} from
+ */
+function keyItems({ g, growth }, from) {
   const G1 = g.G1 || {}, G4 = g.G4 || {};
   const item = (cls, text) => h('li', {}, h('span', { class: `gc-sw ${cls}`, 'aria-hidden': 'true' }), text);
   const span = (win, obs) => {
@@ -223,17 +299,19 @@ function chartKey({ g, growth }) {
   };
   const peers = G1.structural_n > 1 && G1.structural_median_10y != null;
   const rank = peers && G1.rank_in_structural != null ? `; ranked ${G1.rank_in_structural} of ${G1.structural_n} by growth` : '';
-  const vals = (growth || []).map((p) => p[1]);
+  const vals = (growth || []).filter((p) => p[0] >= from).map((p) => p[1]);
   const cut = vals.some((v) => v > 15 || v < -15);
-  return h('ul', { class: 'gc-key' },
+  const early = G4.break_year != null && G4.break_year < from ? ' (before the years shown)' : '';
+  return [
     G1.avg_10y != null ? item('ten', `Last 10 years${span(G1.window_10y, G1.years_10y)}: ${fmt(G1.avg_10y, 1)}% a year`) : null,
     G1.avg_20y != null ? item('twenty', `Last 20 years${span(G1.window_20y, G1.years_20y)}: ${fmt(G1.avg_20y, 1)}% a year`) : null,
-    peers ? item('peers', `Similar economies, last 10 years: ${fmt(G1.structural_median_10y, 1)}% (median)${rank}`) : null,
+    peers ? item('peers', `Peer median, last 10 years: ${fmt(G1.structural_median_10y, 1)}% (similar economies)${rank}`) : null,
     cut ? item('cut', 'A bar cut at the edge of the scale: hover it for the year’s growth') : null,
     G4.reported && G4.break_year != null
-      ? item('break', `Break in ${G4.break_year}: growth ${G4.change_pp < 0 ? 'fell' : 'rose'} `
+      ? item('break', `Break in ${G4.break_year}${early}: growth ${G4.change_pp < 0 ? 'fell' : 'rose'} `
         + `from ${fmt(G4.mean_before, 1)}% a year before to ${fmt(G4.mean_after, 1)}% after`)
-      : null);
+      : null,
+  ].filter((x) => x != null);
 }
 
 // ---------- against what income predicts ----------
