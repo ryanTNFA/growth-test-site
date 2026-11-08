@@ -2,6 +2,7 @@
 // strip for a node, the C4 growth record, the C7 firm obstacles and (phase 4) the C11 composition. evidence.mjs owns the state and the
 // indicator charts (C1 to C3); it passes what these views need in `ctx`.
 import { nodeCode, h, fmt, fmtSigned, shortName, sourceLabel, tierLabelOf, tierClass, withData, currentSetting, SETTING_LABEL, currentHash, missingTestKind, MISSING_TEST_LABEL } from './common.mjs';
+import { glyphGroup } from './components/testmark.mjs';
 import { stripRows, familyRows, obstacleRows, indexSeries, exportShares, TEST_ORDER } from './evidence_math.mjs';
 import { plainTierOf, tierBySetLine, evidenceNode } from './card.mjs';
 import { ratingAnatomy } from './anatomy.mjs';
@@ -293,12 +294,12 @@ export function drawStrip(host, ctx) {
     // Two blocks keep a reader from taking an informing quantity for a price.
     const split = (t === 'price' || t === 'camels') && rs.some((r) => !r.votes) && rs.some((r) => r.votes);
     if (split) {
-      heads.push({ key: `__${t}`, text: `${TEST_LABEL[t].toUpperCase()} · COUNTS` });
+      heads.push({ key: `__${t}`, text: `${TEST_LABEL[t].toUpperCase()} · COUNTS`, test: t, first: true });
       keys.push(`__${t}`, ...rs.filter((r) => r.votes).map((r) => r.id));
-      heads.push({ key: `__${t}_inform`, text: `${TEST_LABEL[t].toUpperCase()} · INFORMS ONLY` });
+      heads.push({ key: `__${t}_inform`, text: `${TEST_LABEL[t].toUpperCase()} · INFORMS ONLY`, test: t, first: false });
       keys.push(`__${t}_inform`, ...rs.filter((r) => !r.votes).map((r) => r.id));
     } else {
-      heads.push({ key: `__${t}`, text: TEST_LABEL[t].toUpperCase() });
+      heads.push({ key: `__${t}`, text: TEST_LABEL[t].toUpperCase(), test: t, first: true });
       keys.push(`__${t}`, ...rs.map((r) => r.id));
     }
   }
@@ -309,7 +310,8 @@ export function drawStrip(host, ctx) {
     const rows = fams.map((r) => ({ ...r, xc: cl(r.x), label: labelOf(r), stale: r.members.every(stale) }));
     // Margins fit the measured labels. Wide screens right-align the test headings to the axis; phones start them at the left edge.
     const headW = Math.max(0, ...heads.map((d) => textW(d.text, 10.5, 600, MONO)));
-    const ml = Math.ceil(Math.max(Math.max(0, ...rows.map((r) => textW(r.label, 12))) + 14, narrow ? 0 : headW + 16));
+    const BADGE = 20; // each test's mark (components/testmark.mjs): on a phone before its first heading, else beside the axis
+    const ml = Math.ceil(Math.max(Math.max(0, ...rows.map((r) => textW(r.label, 12))) + 14, narrow ? 0 : headW + 16 + BADGE + 7));
     // The richest right-hand label that leaves a phone 120 px of strip: then the rank goes, then the data year.
     const sd = (r) => fmtSigned(r.x, 1);
     // The family's signal (−2 to +2, what enters the verdict) after the arrow, and whether it counts.
@@ -341,7 +343,17 @@ export function drawStrip(host, ctx) {
       P.dot(rows.filter((r) => !r.stale), dot),
       P.dot(rows.filter((r) => r.stale), { ...dot, fillOpacity: 0.3, strokeDasharray: '2.5,2' }),
       P.text(rows.filter((r) => Math.abs(r.x) > lim), { x: 'xc', y: 'id', text: (d) => (d.x > 0 ? '▶' : '◀'), fontSize: 9, fill: pal.text, dy: -10 }),
-      P.text(heads, { x: -lim, y: 'key', text: 'text', textAnchor: narrow ? 'start' : 'end', dx: narrow ? 2 - ml : -12, fontSize: 10.5, fontWeight: 600, fill: pal.muted, fontFamily: MONO }),
+      P.text(heads, { x: -lim, y: 'key', text: 'text', textAnchor: narrow ? 'start' : 'end', dx: narrow ? 2 + BADGE + 6 - ml : -12 - BADGE - 6, fontSize: 10.5, fontWeight: 600, fill: pal.muted, fontFamily: MONO }),
+      // the marks, in literal colours so a downloaded chart keeps them: at a phone's left edge, else in a column beside the axis
+      (_index, scales) => {
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        const y = /** @type {any} */ (scales).y, half = typeof y.bandwidth === 'function' ? y.bandwidth() / 2 : 0;
+        for (const d of heads.filter((x) => x.first)) {
+          const cx = narrow ? 2 + BADGE / 2 : ml - 12 - BADGE / 2;
+          g.append(glyphGroup(d.test, { cx, cy: y(d.key) + half, size: BADGE, disc: pal.band, ink: pal.text }));
+        }
+        return g;
+      },
       P.text(rows, { x: lim, y: 'id', text: right, textAnchor: 'start', dx: 10, fontSize: 11.5, fill: (d) => (d.stale ? pal.muted : pal.text) }),
       P.text([shortHead ? 'binding ▶' : '▲ toward binding'], { frameAnchor: 'top-right', dy: -14, dx: -4, textAnchor: 'end', fontSize: 11, fontWeight: 600, fill: pal.binding }),
       P.text([shortHead ? '◀ not' : '◀ away from binding'], { frameAnchor: 'top-left', dy: -14, dx: 4, textAnchor: 'start', fontSize: 11, fill: pal.muted }),

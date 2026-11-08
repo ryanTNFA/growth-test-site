@@ -638,7 +638,8 @@ button.robust[aria-expanded="true"]::after { content: ' ▴'; }
 /* the counted bars are background colour: keep them in print and in forced colours, where backgrounds are dropped */
 .lg-bar, .lg-zero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 @media (forced-colors: active) { .lg-bar:not(.hollow), .lg-zero { forced-color-adjust: none; background: CanvasText; } .lg-bar.hollow { border-color: CanvasText; } }
-.tally .lg-row { grid-template-columns: minmax(88px, 1fr) minmax(110px, 2.4fr) minmax(56px, 0.8fr); padding: 2px 0; }
+.tally .lg-row { grid-template-columns: minmax(124px, 1fr) minmax(110px, 2.4fr) minmax(56px, 0.8fr); padding: 2px 0; }
+.tally .lg-t .lg-lab { white-space: nowrap; }
 .tally .lg-track { height: 14px; }
 .tally .lg-net { border-top-width: 1px; margin-top: 4px; padding-top: 5px; }
 .tally .lg-cap { margin-top: 4px; }
@@ -646,7 +647,7 @@ button.robust[aria-expanded="true"]::after { content: ' ▴'; }
   .lg-row, .lg-axis { grid-template-columns: minmax(0, 1fr) minmax(56px, 0.8fr); grid-template-areas: 'lab val' 'track track'; row-gap: 2px; }
   .lg-lab { grid-area: lab; } .lg-val { grid-area: val; text-align: right; } .lg-track, .lg-track-head { grid-area: track; }
   .lg-axis .lg-lab, .lg-axis .lg-val { display: none; }
-  .tally .lg-row { grid-template-columns: minmax(84px, 0.9fr) minmax(0, 2fr) minmax(56px, 0.7fr); grid-template-areas: none; }
+  .tally .lg-row { grid-template-columns: minmax(124px, 0.9fr) minmax(0, 2fr) minmax(56px, 0.7fr); grid-template-areas: none; }
   .tally .lg-lab, .tally .lg-val, .tally .lg-track { grid-area: auto; }
 }
 /* Predict first: the bars, the words and the chip wait for the reveal; the axis and the labels stay */
@@ -753,3 +754,14 @@ details[open] > .gt-fold-sum::after { transform: rotate(-135deg); }
 /* the bar has six items: on phones it wraps instead of overflowing */
 @media (max-width: 760px) { .nav-global .topnav { flex-wrap: wrap; row-gap: 2px; } }
 }
+
+/* ---------- the four tests' marks (components/testmark.mjs): a glyph in a soft disc before a test's name ---------- */
+.tmark { display: inline-grid; place-items: center; flex: none; width: 1.6em; height: 1.6em; margin-right: 0.4em; border-radius: 50%;
+  background: var(--chart-band); color: var(--text); vertical-align: -0.45em; letter-spacing: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.tmark .tglyph { width: 68%; height: 68%; }
+.tglyph { fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.tmark.lg { width: 2.75rem; height: 2.75rem; margin: 0 0 4px; }
+.tmark-svg { pointer-events: none; }
+.tm-list { list-style: none; margin: 4px 0 8px; padding: 0; }
+.tm-list li { margin: 4px 0; padding-left: 2em; text-indent: -2em; } /* wrapped lines hang under the words, not the mark */
+@media (forced-colors: active) { .tmark { background: none; border: 1px solid CanvasText; } }

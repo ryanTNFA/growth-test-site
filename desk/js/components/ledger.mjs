@@ -9,6 +9,7 @@
 // page; the tally (the four tests, the net score and the lines) beside the Bottom line's cards and the Analyst View's verdict.
 import { h, fmtSigned } from '../common.mjs';
 import { TEST_SHORT, bandWord } from '../anatomy.mjs';
+import { testMark } from './testmark.mjs';
 
 /** Where a score sits on the axis, as a percentage of the track (0 in the middle, +-2 at the ends). @param {number} x */
 const pct = (x) => 50 + 25 * Math.max(-2, Math.min(2, x));
@@ -94,7 +95,7 @@ export function tally(a, { fork = false, missing = () => 'no test', of = '' } = 
   if (!a) return null;
   const el = h('div', { class: `tally${fork ? ' fork' : ''}`, role: 'figure', 'aria-label': tallyWords(a, fork) });
   for (const t of a.tests) {
-    const lab = h('span', {}, `${t.num} ${TEST_SHORT[t.key]}`, t.weight > 1 ? h('span', { class: 'lg-x' }, ` ×${t.weight}`) : null);
+    const lab = h('span', {}, testMark(t.key), `${t.num} ${TEST_SHORT[t.key]}`, t.weight > 1 ? h('span', { class: 'lg-x' }, ` ×${t.weight}`) : null);
     const val = t.T == null ? h('span', { class: 'muted' }, noScore(t, missing))
       : h('span', {}, fmt2(t.T), t.shrunk ? h('span', { class: 'lg-tag' }, ' thin') : null);
     el.append(row('lg-t', lab, track(t.T, { thick: t.weight > 1 ? 10 : 6, fork, dashed: t.T == null }), val));
@@ -136,7 +137,7 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
 function testSection(a, t, fork, missing, why) {
   const head = `Test ${t.num} · ${TEST_SHORT[t.key]}${t.weight > 1 ? ` ×${t.weight}` : ''}`;
   const sec = h('section', { class: 'lg-test', 'data-test': t.key },
-    h('h4', { class: 'lg-th' }, h('span', { class: 'lg-tn' }, head), ' ', h('span', { class: 'lg-q' }, t.question)));
+    h('h4', { class: 'lg-th' }, testMark(t.key), h('span', { class: 'lg-tn' }, head), ' ', h('span', { class: 'lg-q' }, t.question)));
   for (const f of t.voting) sec.append(famRow(f, fork));
   if (t.informing.length) {
     sec.append(h('div', { class: 'lg-subrule' }, `shown, not counted (${t.informing.length})`));

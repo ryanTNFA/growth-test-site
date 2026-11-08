@@ -10,6 +10,7 @@
 // The footer carries #versions (pages with data fill it), the prototype sentence, the citation and the affiliation note.
 import { h, withData, qs, getJSON, dataBase, SETTINGS, SETTING_LABEL, SETTING_HINT, currentSetting, HASH, CARRIED_KEYS, readHash,
   setHashKeys } from './common.mjs';
+import { fillTestMarks } from './components/testmark.mjs';
 import './components/elements.mjs'; // <gt-term> and <gt-fold>, on every page (C7)
 
 const PAGE = document.body.dataset.page || '';
@@ -172,6 +173,7 @@ function footer() {
 }
 
 function mount() {
+  fillTestMarks(); // the four tests' marks on the static pages (<span data-tmark="price">)
   const foot = document.querySelector('footer.foot');
   if (foot && !foot.childElementCount) foot.replaceChildren(footer());
   const header = document.querySelector('header.topbar');

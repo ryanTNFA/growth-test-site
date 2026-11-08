@@ -7,6 +7,7 @@ import { INCOME_ID, refSpan, scatterRows, structureFit, linearFit, lowessFit, li
 import { createControls, bubbleChart, barRace } from './player.mjs';
 import { reducedMotion } from './motion.mjs';
 import { renderRail, renderNodeHead, drawStrip, drawGrowth, drawObstacles, drawComposition, nodeScope, VIEWS } from './evidence_node.mjs';
+import { testMark } from './components/testmark.mjs';
 import { pqChoices, drawPriceQty, drawComove, drawBypass, drawCamels, CAMEL_VECTORS, CAMEL_FACTOR } from './evidence_tests.mjs';
 
 initTheme();
@@ -782,7 +783,7 @@ function renderTabs() {
   for (const [k, test, name] of avail) {
     const [dir, chip, tip] = testChip(k, test);
     const b = h('button', { type: 'button', role: 'tab', id: `tab-${k}`, class: 'ev-tab', 'aria-controls': `sec-${k}`, title: tip },
-      h('span', { class: 'ev-tab-name' }, name), h('span', { class: `ev-chip-dir ${dir}` }, chip));
+      h('span', { class: 'ev-tab-name' }, testMark(test), name), h('span', { class: `ev-chip-dir ${dir}` }, chip));
     b.addEventListener('click', () => select(k, false));
     b.addEventListener('keydown', (e) => {
       const i = avail.findIndex(([x]) => x === k);
