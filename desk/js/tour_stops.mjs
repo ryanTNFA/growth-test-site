@@ -63,12 +63,14 @@ export const TOUR = [
     mindbook: 'Mindbook, the top of the tree: cost of finance versus low returns.',
   },
   {
-    n: 5, title: 'The growth problem', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}`, anchor: '#growth', anchorName: 'the growth problem panel',
+    n: 5, title: 'The growth problem', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}`, anchor: '#growth-pattern', keep: ['#growth-question', '#growth-against'],
+    anchorName: 'the four growth checks',
     say: [
       'Before the tree, the symptom. Indonesia grew about 3.3% a year over the last ten years, and investment runs near 29% of GDP, above what its income predicts (about 1.3 standard deviations). Growth diagnostics asks what limits private investment; when investment is not low, the question is sharper, not moot: what keeps high investment from buying more growth, and which few constraints would matter if investment faltered.',
-      'Every number here is read as a surprise: the gap from what an economy at Indonesia’s income would show, in standard deviations, not the level.',
+      'The tool names the growth problem by checking four patterns in turn: a slowdown, a collapse below an old peak, unusual volatility, fast growth. Indonesia’s 3.3% a year clears the 3% line, so the record reads as growing. Below the checks, each figure is read as a surprise: the gap from what an economy at Indonesia’s income would show, in standard deviations, not the level.',
     ],
-    look: ['The growth record and its classification.', 'The investment residual: the gap from the income-conditional expectation, with its sign.'],
+    look: ['The four checks: each dot against its line, and the fourth, fast growth, marked as the one that names the pattern.',
+      'Investment on the strip below: about 1.3 sd above what its income predicts, outside the shaded band.'],
   },
   {
     n: 6, title: 'Three statistics, then four tests', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}`, anchor: '#topsplit', anchorName: 'the first-decision table',

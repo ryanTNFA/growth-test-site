@@ -3,6 +3,8 @@
 // card.mjs, the state helpers and the memo. Each render function draws only when its container is on the page.
 import { tabHref, refreshNav } from './shell.mjs';
 import { nodeCode, getJSON, loadRegistry, initTheme, h, fmt, fmtSigned, fmtInt, fmtValue, tierClass, TIER_ORDER, parseHash, writeState, qs, unitHint, shortName, sourceLink, sourceLabel, isStale, englishList, downloadText, dataBase, withData, gNorm, reasonClause, DATA_GAP_KINDS, isRegistryGap, SETTING_LABEL } from './common.mjs';
+import { growthChecks, incomeRows } from './growth_read.mjs';
+import { patternChecks, growthChart, incomeStrip } from './components/growth.mjs';
 import { renderTree, compactTree } from './tree.mjs';
 import { createCard, plainTier, plainTierOf, PLAIN_TIER, bottomLine, fcsNote, refSpan } from './card.mjs';
 import { robustChip } from './components/marks.mjs';
@@ -234,12 +236,11 @@ function renderGrowth() {
   if (!on('growth-statement')) return; // the Bottom line shows the question only
   const cleaned = stmt.replace(/\s*Provisional top-split reading:[^()]*(\([^)]*\))?\.?/g, '').trim();
   $('growth-statement').textContent = cleaned || 'No growth problem statement in the file.';
-  $('growth-class').textContent = g.classification ? `Growth pattern: ${g.classification.replace(/_/g, ' ')}` : '';
-  const series = (sc.series && sc.series['NY.GDP.PCAP.KD']) || [];
-  $('spark').replaceChildren(sparkline(series, gn.g3.peakYear));
-  const inv = sc.series && sc.series['NE.GDI.FTOT.ZS'];
-  const lastInv = inv && inv.length ? inv[inv.length - 1] : null;
-  $('spark-cap').textContent = `GDP per capita, constant 2015 US$, ${series.length ? `${series[0][0]}–${series[series.length - 1][0]}` : 'no series in the file'}; peak marked${gn.g3.peakYear ? ` (${gn.g3.peakYear})` : ''}.${lastInv ? ` Investment (gross fixed capital formation): ${fmt(lastInv[1], 1)}% of GDP in ${lastInv[0]} (G6 uses the three-year mean).` : ''}`;
+  const read = growthChecks(g, state.registry.params.growth_problem);
+  $('growth-pattern').replaceChildren(patternChecks(read));
+  const series = sc.series || {};
+  $('growth-key').replaceChildren(growthChart($('growth-chart'), { level: series['NY.GDP.PCAP.KD'] || [], growth: series['NY.GDP.PCAP.KD.ZG'] || [], g, name: c }));
+  $('growth-income').replaceChildren(incomeStrip(incomeRows(g)));
   const { g1, g2, g3, g4, g5, g6, g7, g10, g11, g12 } = gn;
   const cell = (lab, val, sub, na) => h('div', { class: 'stat' }, h('span', { class: 'lab' }, lab), h('span', { class: `val num${na ? ' na' : ''}` }, val), sub ? h('span', { class: 'sub' }, sub) : null);
   const w10 = (g.G1 && g.G1.window_10y) || null;
@@ -251,37 +252,10 @@ function renderGrowth() {
     cell('G3 · peak year', g3.peakYear ?? '—', g3.yearsSince != null ? `${g3.yearsSince} years ago · ${fmt(g3.shortfall, 1)}% below peak` : ''),
     cell('G4 · growth break', g4.reported ? String(g4.breakYear) : 'none', g4.change != null ? `${fmtSigned(g4.change, 2)} pp (${fmt(g4.before, 1)} → ${fmt(g4.after, 1)}) · ${g4.method}` : '', !g4.reported),
     cell('G5 · volatility (s.d., 20y)', fmt(g5.sd, 2), `peers median ${fmt(g5.peers, 2)} · universe pct ${g5.pct == null ? '—' : Math.round(g5.pct)}`),
-    cell('G6 · investment residual', fmtSigned(g6.t, 2), `GFCF ${fmt(g6.value, 1)}% of GDP (${g6.year ?? '—'}) · private split unavailable`),
+    cell('G6 · investment residual', fmtSigned(g6.t, 2), `GFCF ${fmt(g6.value, 1)}% of GDP (${g6.year != null ? `${g6.year - 2}–${String(g6.year).slice(2)} average` : '—'}) · private split unavailable`),
     cell('G7 · savings residual', fmtSigned(g7.savings.t, 2), `savings ${fmt(g7.savings.value, 1)}% · CAB ${fmtSigned(g7.cab.value, 1)}% · FDI ${fmt(g7.fdi.value, 1)}%`),
   );
   $('g-context').textContent = `Context — G10 exports residual t ${fmtSigned(g10.exports.t, 2)}, complexity (ECI) residual t ${g10.eci.t == null ? 'not available' : fmtSigned(g10.eci.t, 2)}; G11 unemployment ${fmt(g11.value, 1)}% (t ${fmtSigned(g11.t, 2)}); G12 population ${fmtInt(g12.population)}, urban ${fmt(g12.urban_share, 1)}%, resource rents ${fmt(g12.resource_rents, 1)}% of GDP, ${g12.landlocked ? 'landlocked' : 'coastal'}.`;
-}
-
-function sparkline(series, peakYear) {
-  const W = 560, H = 180, m = { top: 20, right: 70, bottom: 26, left: 12 };
-  const svgNS = 'http://www.w3.org/2000/svg';
-  const svg = document.createElementNS(svgNS, 'svg');
-  svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('class', 'spark'); svg.setAttribute('role', 'img');
-  if (!series.length) { svg.setAttribute('aria-label', 'No GDP per capita series'); return svg; }
-  const ys = series.map((p) => p[0]), vs = series.map((p) => p[1]);
-  const y0 = Math.min(...ys), y1 = Math.max(...ys), v0 = 0, v1 = Math.max(...vs) * 1.08;
-  const X = (y) => m.left + (y - y0) / (y1 - y0) * (W - m.left - m.right);
-  const Y = (v) => m.top + (1 - (v - v0) / (v1 - v0)) * (H - m.top - m.bottom);
-  const el = (t, a, txt) => { const e = document.createElementNS(svgNS, t); for (const [k, v] of Object.entries(a)) e.setAttribute(k, v); if (txt != null) e.textContent = txt; svg.append(e); return e; };
-  el('line', { x1: m.left, x2: W - m.right, y1: Y(0), y2: Y(0), class: 'axis' });
-  el('path', { d: series.map((p, i) => `${i ? 'L' : 'M'}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(' '), class: 'line' });
-  let peak = series[0]; for (const p of series) if (p[1] > peak[1]) peak = p;
-  if (peakYear != null) { const f = series.find((p) => p[0] === peakYear); if (f) peak = f; }
-  el('line', { x1: X(peak[0]), x2: X(peak[0]), y1: Y(peak[1]), y2: Y(0), class: 'axis peak-line' });
-  el('circle', { cx: X(peak[0]), cy: Y(peak[1]), r: 4, class: 'peak' });
-  const peakX = X(peak[0]); const anchor = peakX > W - m.right - 110 ? 'end' : 'start';
-  el('text', { x: peakX + (anchor === 'end' ? -8 : 8), y: Y(peak[1]) - 7, 'text-anchor': anchor, class: 'label-strong' }, `peak ${peak[0]}: ${fmt(peak[1], 0)}`);
-  const last = series[series.length - 1];
-  el('text', { x: X(last[0]) + 6, y: Y(last[1]) + 4 }, `${fmt(last[1], 0)}`);
-  el('text', { x: m.left, y: H - 7 }, String(y0));
-  el('text', { x: W - m.right, y: H - 7, 'text-anchor': 'end' }, String(last[0]));
-  svg.setAttribute('aria-label', `GDP per capita from ${y0} to ${last[0]}; peak ${peak[0]} at ${fmt(peak[1], 0)}; latest ${fmt(last[1], 0)}.`);
-  return svg;
 }
 
 // ---------------- top split (analyst panel) ----------------

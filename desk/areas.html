@@ -41,13 +41,22 @@
   </section>
 
   <section class="panel" id="growth" aria-labelledby="growth-h">
-    <div class="panel-head"><div><span class="kicker">The growth problem</span><h2 id="growth-h">The question</h2></div><p id="growth-class"></p></div>
+    <div class="panel-head"><div><span class="kicker">The growth problem</span><h2 id="growth-h">The question</h2></div></div>
     <p class="lede-question" id="growth-question"></p>
-    <div class="grid-2">
-      <p class="prose" id="growth-statement"></p>
-      <figure class="spark-wrap" id="spark-fig"><div id="spark"></div><figcaption id="spark-cap"></figcaption></figure>
+    <div id="growth-pattern"></div>
+    <div class="gc-pair">
+      <figure class="gc-fig"><div class="gc-host" id="growth-chart"></div><figcaption id="growth-key"></figcaption></figure>
+      <div class="gi-wrap" id="growth-against">
+        <h3 class="gi-h">Against what its income predicts</h3>
+        <div id="growth-income"></div>
+        <p class="gi-cap">Each dot is the gap between the figure and what economies at the same income show, in standard deviations (sd). The shaded band, within 1 sd either side, is usual for its income; values in bold lie outside it.</p>
+      </div>
     </div>
-    <details class="rule-detail" style="margin-top:14px">
+    <details class="rule-detail">
+      <summary>The growth statement in full</summary>
+      <p class="prose" id="growth-statement"></p>
+    </details>
+    <details class="rule-detail">
       <summary>Growth statistics G1 to G7 (for analysts)</summary>
       <div class="stat-grid" id="g-grid" role="group" aria-label="Growth statistics G1 to G7"></div>
       <p class="small muted" id="g-context" style="margin-top:10px"></p>
