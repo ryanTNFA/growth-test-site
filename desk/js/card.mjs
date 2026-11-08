@@ -3,7 +3,10 @@
 // the tree, Proposal Check and the memo share, so every surface says the same thing.
 import { nodeCode, h, fmt, fmtSigned, fmtSignal, fmtValue, tierLabel, tierClass, isCannotTell, unitHint, shortName, sourceLink, sourceLabel, missingTestReason,
   subreasonLabel, TEST_ORDER, TEST_NUM, USER_TIERS, isStale, withData, TIER_ORD, englishList, isRegistryGap, DATA_GAP_KINDS, cannotTellCode, leanOf,
-  CANNOT_TELL_PLAIN, ROBUST_PLAIN, robustDetail, currentHash, missingTestKind, MISSING_TEST_LABEL, FORK, forkWords, forkSideOf } from './common.mjs';
+  CANNOT_TELL_PLAIN, ROBUST_PLAIN, robustDetail, currentHash, missingTestKind, MISSING_TEST_LABEL, FORK, forkWords, forkSideOf,
+  } from './common.mjs';
+import { ratingAnatomy } from './anatomy.mjs';
+import { ledger } from './components/ledger.mjs';
 import { robustChip, reasonTag } from './components/marks.mjs';
 export { robustChip, reasonTag }; // moved to components/marks.mjs (C7); re-exported for one release
 
@@ -175,40 +178,26 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
         const sn = view.nodes.find((n) => n.id === sid); const sr = registry.nodeById[sid];
         const li = h('li', {}, h('button', { class: 'btn quiet small', type: 'button', onclick: () => onOpenNode(sid) }, `${sr ? sr.short : sid}`), ' ',
           h('span', { class: `tier-badge ${tierClass(sn && sn.tier)}` }, h('span', {}, plainTier(sn && sn.tier))));
-        if (sid === node.rollup_from) li.append(h('span', { class: 'small', style: 'margin-left:6px;color:var(--accent)' }, 'sets the rating'));
+        if (sid === ev.id) li.append(h('span', { class: 'small', style: 'margin-left:6px;color:var(--accent)' }, 'sets the rating'));
         ul.append(li);
       }
       sec.append(ul);
       drawer.append(sec);
     }
 
-    // tests
+    // the ledger: how the rating adds up, on one axis (components/ledger.mjs), in place of the old 2x2 grid of test scores
     if (ev.scored !== false && ev.tier !== 'desk_undiagnosable' && ev.tier !== 'context_only' && ev.tests) {
       const sec = h('section', {}, h('h3', {},
-        ev !== node ? `The four standard tests, for ${evReg ? evReg.short.toLowerCase() : ev.id}` : 'The four standard tests'));
-      const grid = h('div', { class: 'tests' });
-      for (const t of TEST_ORDER) {
-        const tv = ev.tests ? ev.tests[t] : null;
-        const cell = h('div', { class: 'test' }, h('span', { class: 'lab' }, `Test ${TEST_NUM[t]} · ${TEST_PLAIN[t]}`));
-        if (tv && tv.T != null) {
-          cell.append(h('span', { class: 'val num' }, `${fmtSigned(tv.T)} `, h('span', { class: 'small muted' }, leanWord(tv.T))), h('span', { class: 'fams' },
-            `Measures: ${(tv.families || []).map(prettyFamily).join(', ')}${tv.shrunk ? ' · pulled toward zero: too little high-quality evidence behind ' +
-              'it' : ''}`));
-        } else if (tv && tv.not_observed) {
-          cell.append(h('span', { class: 'val na' }, 'no price measure'), h('span', { class: 'fams' },
-            `No high-quality (class A/B) price for ${country}; ${(tv.informing || []).length} quantit${(tv.informing || []).length === 1 ? 'y ' +
-              'informs' : 'ies inform'} (${(tv.informing || []).map(prettyFamily).join(', ')}) but do not vote.`));
-        } else { // D7: a test the tool has not defined for this area is shown apart from one this economy lacks the data for
-          const kind = missingTestKind(t, ev.id, registry);
-          cell.append(h('span', { class: 'val na' }, MISSING_TEST_LABEL[kind]), h('span', { class: 'fams' },
-            `${kind === 'not_defined' ? 'A gap in the tool, the same for every economy: ' : `For ${country}: `}` +
-              missingTestReason(t, ev.id, registry).replace(/^Not computed: /, '')));
-        }
-        if (t === 'price' && ev.price_test_note) cell.append(h('span', { class: 'fams', style: 'margin-top:6px' }, ev.price_test_note));
-        grid.append(cell);
+        ev !== node ? `How the rating adds up, for ${evReg ? evReg.short.toLowerCase() : ev.id}` : 'How the rating adds up'));
+      // the reading the view actually applied (a fallback view stays on Standard), the comparator set of the numbers in force
+      const a = ratingAnatomy(ev, registry, { snapshotYear: pctx.snapshotYear, byId: pctx.byId || {}, set: setKey, fallbackSet: activeSet,
+        setting: view.setting || 'standard', comovement: scorecard.comovement || [] });
+      const chip = h('span', { class: `tier-badge ${tierClass(ev.tier)}` }, h('span', {}, plainTierOf(ev.id, ev.tier)));
+      const lg = ledger(a, { fork: ev.id === FORK, chip, country, missing: (t) => MISSING_TEST_LABEL[missingTestKind(t, ev.id, registry)],
+        why: (t) => missingTestReason(t, ev.id, registry).replace(/^Not computed: /, '') });
+      if (lg) {
+        sec.append(lg); drawer.append(sec);
       }
-      sec.append(grid);
-      drawer.append(sec);
     }
 
     // evidence, split relative to the sign of N: "consistent with the verdict" and "dissent"
@@ -588,10 +577,24 @@ export function factText(r, ctx) {
   const stale = age != null && age > limit ? `; ${age} years old` : '';
   return `${readingText(r)} (${plainSource(r)}, ${refSpanLong(r)}${stale})${rank ? `, ${rank}` : ''}`;
 }
-/** The node whose evidence stands behind a rating: a roll-up shows its representative sub-node. */
+/**
+ * The node whose evidence stands behind a rating: a roll-up shows its representative sub-node. The engine stores the
+ * representative of the Standard run (rollup_from); under another reading (or comparator set) the roll-up's tier can come from
+ * another sub-node, so when the stored one no longer carries the roll-up's tier, pick the one that does by the engine's own key
+ * (aggregate.mjs rollupNode: the tier, then the most sources, then the highest score).
+ * @param {any} node @param {any[]} nodes the nodes in force (the reading and the comparator set applied)
+ */
 export function evidenceNode(node, nodes) {
-  if (node && node.sub_nodes && !(node.families || []).length && node.rollup_from) return (nodes || []).find((n) => n.id === node.rollup_from) || node;
-  return node;
+  if (!(node && node.sub_nodes && !(node.families || []).length && node.rollup_from)) return node;
+  const all = nodes || [];
+  const rep = all.find((n) => n.id === node.rollup_from);
+  if (!rep || rep.tier === node.tier) return rep || node;
+  const subs = node.sub_nodes.map((id) => all.find((n) => n.id === id)).filter(Boolean);
+  const same = subs.filter((n) => n.tier === node.tier);
+  const pool = same.length ? same : subs.filter((n) => (TIER_ORD[n.tier] ?? 0) === (TIER_ORD[node.tier] ?? 0));
+  if (!pool.length) return rep;
+  const num = (x, d) => (Number.isFinite(x) ? x : d);
+  return pool.slice().sort((a, b) => num(b.E, -1) - num(a.E, -1) || num(b.N, -Infinity) - num(a.N, -Infinity))[0];
 }
 const sigOf = (r,
   ctx) => { const s = r.signal_by_set && r.signal_by_set[ctx.setKey] != null ? r.signal_by_set[ctx.setKey] : r.signal; return s == null ? 0 : s; };

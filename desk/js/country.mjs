@@ -6,7 +6,7 @@
 // components/); the three lists come from the same bottomLine() call on both, and the memo is built the same way.
 import { tabHref, refreshNav } from './shell.mjs';
 import { getJSON, loadRegistry, initTheme, h, parseHash, writeState, qs, dataBase, withData, englishList, downloadText, SETTING_LABEL, fmt, shortName,
-  tierClass, nodeCode } from './common.mjs';
+  tierClass, nodeCode, missingTestKind, MISSING_TEST_LABEL } from './common.mjs';
 import { compactTree } from './tree.mjs';
 import { plainTier, plainTierOf, bottomLine, fcsNote, refSpan, plainSummary, whatWouldMove, fieldQuestions, whyNotLines, evidenceNode } from './card.mjs';
 import { robustChip, reasonTag } from './components/marks.mjs';
@@ -15,6 +15,8 @@ import { buildMemo } from './memo.mjs';
 import { memoHTML } from './components/markdown.mjs';
 import { buildBriefing } from './briefing.mjs';
 import { answerSentence, forkSentence, itemName } from './country_text.mjs';
+import { ratingAnatomy } from './anatomy.mjs';
+import { tally } from './components/ledger.mjs';
 
 initTheme();
 const iso = (qs('iso') || document.body.dataset.iso || '').toUpperCase();
@@ -272,10 +274,15 @@ function renderCards() {
         ov ? h('span', { class: 'small' }, '→ you: ', h('span', { class: `tier-badge ${tierClass(ov.tier)}` }, h('span', {}, plainTierOf(id, ov.tier)))) : null),
       h('p', { class: 'k-card-plain' }, plainSummary(n, ctx, { brief: true })));
     const sub = (title, el) => (el ? [h('h4', { class: 'k-card-h' }, title), el] : []);
-    const parts = [...sub('Why not higher, why not lower', why),
+    const a = ratingAnatomy(ev, state.registry, { snapshotYear: snapshotYear(), byId: ctx.byId, set: ctx.setKey, fallbackSet: state.activeSet,
+      setting: state.view.setting || 'standard', comovement: state.scorecard.comovement || [] });
+    const of = ev !== n ? short(ev.id).replace(/\?$/, '').toLowerCase() : '';
+    const parts = [...sub('How it adds up', tally(a, { fork: id === 'N0', of, missing: (t) => MISSING_TEST_LABEL[missingTestKind(t, ev.id, state.registry)] })),
+      ...sub('Why not higher, why not lower', why),
       ...sub('What would move the rating', moves.length ? h('ul', { class: 'k-card-list' }, moves.map((x) => h('li', {}, x))) : null),
       ...sub('Two days in-country', qs.length ? h('ul', { class: 'k-card-list' }, qs.map((x) => h('li', {}, x))) : null)];
-    if (parts.length) card.append(fold('More', ...parts));
+    // a plain <details>, not <gt-fold>: the tally inside is a rating surface, and nothing slides a rating into view (tenet 6)
+    if (parts.length) card.append(h('details', { class: 'k-fold' }, h('summary', { class: 'gt-fold-sum' }, 'More'), h('div', { class: 'gt-fold-body' }, ...parts)));
     body.append(card);
   }
 }

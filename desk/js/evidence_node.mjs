@@ -1,9 +1,11 @@
 // Evidence page, node views (evidence-viz-prd phase 2): the left rail in Mindbook order, the C9 evidence
 // strip for a node, the C4 growth record, the C7 firm obstacles and (phase 4) the C11 composition. evidence.mjs owns the state and the
 // indicator charts (C1 to C3); it passes what these views need in `ctx`.
-import { nodeCode, h, fmt, fmtSigned, shortName, sourceLabel, tierLabelOf, tierClass, withData, currentSetting, SETTING_LABEL, currentHash } from './common.mjs';
+import { nodeCode, h, fmt, fmtSigned, shortName, sourceLabel, tierLabelOf, tierClass, withData, currentSetting, SETTING_LABEL, currentHash, missingTestKind, MISSING_TEST_LABEL } from './common.mjs';
 import { stripRows, familyRows, obstacleRows, indexSeries, exportShares, TEST_ORDER } from './evidence_math.mjs';
-import { plainTierOf, tierBySetLine } from './card.mjs';
+import { plainTierOf, tierBySetLine, evidenceNode } from './card.mjs';
+import { ratingAnatomy } from './anatomy.mjs';
+import { tally } from './components/ledger.mjs';
 import { reasonTag, robustChip } from './components/marks.mjs';
 import { median, isNum } from '../../engine/src/stats.mjs';
 
@@ -236,6 +238,24 @@ export function renderNodeHead({ titleEl, qEl, verdictEl }, { view, registry, sc
   ].filter(Boolean));
   const np = sn.tier === 'elimination' ? null : noPriceNote(scorecard, view, countryName);
   if (np) verdictEl.append(h('span', { class: 'small ev-noprice' }, np));
+  // the tally: the four tests and the net score against the lines, the same picture as the Bottom line's cards and the drawer.
+  // The file holds the numbers of its own comparator set only, so under another set the tally would contradict the chip: leave it out.
+  const own = (scorecard && scorecard.meta && scorecard.meta.active_comparator_set) || 'structural';
+  if (set !== own) {
+    verdictEl.append(h('span', { class: 'small muted lg-off' }, ' How this rating adds up, test by test, is drawn for the default comparison countries; choose them above to see it.'));
+    return;
+  }
+  const reading = offStandard ? setting : 'standard';
+  // under another reading a roll-up's tier can come from another sub-area: lay the reading's tiers over the nodes, then pick it
+  const nodesNow = ((scorecard && scorecard.nodes) || []).map((x) => (reading !== 'standard' && x.tier_by_setting && x.tier_by_setting[reading]
+    ? { ...x, tier: x.tier_by_setting[reading] } : x));
+  const ev = evidenceNode(nodesNow.find((x) => x.id === sn.id) || sn, nodesNow);
+  const byId = Object.fromEntries(((scorecard && scorecard.indicators) || []).map((r) => [r.id, r]));
+  const a = ratingAnatomy(ev, registry, { snapshotYear: scorecard && scorecard.meta ? scorecard.meta.snapshot_year : undefined, byId, set, setting: reading,
+    comovement: (scorecard && scorecard.comovement) || [] });
+  const of = ev.id !== sn.id && registry.nodeById[ev.id] ? registry.nodeById[ev.id].short.replace(/\?$/, '').toLowerCase() : '';
+  const tl = tally(a, { fork: sn.id === 'N0', of, missing: (t) => MISSING_TEST_LABEL[missingTestKind(t, ev.id, registry)] });
+  if (tl) verdictEl.append(tl);
 }
 
 // ---------- C9 evidence strip ----------

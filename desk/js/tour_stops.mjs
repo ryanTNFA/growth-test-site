@@ -79,13 +79,13 @@ export const TOUR = [
     look: ['The row the three statistics fall in, and the thresholds beside each statistic.', 'The sentence that reads the fork from the four tests, apart from the table.'],
   },
   {
-    n: 7, title: 'Four tests on one area, and who votes', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N0`, anchor: '#drawer .tests', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the four tests in the open card',
+    n: 7, title: 'Four tests on one area, and who votes', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N0`, anchor: '#drawer .ledger', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the ledger in the open card',
     say: [
       'A binding constraint shows in four ways. Its price is high (test 1). Investment moves when it moves (test 2). Firms pay to work around it (test 3). Activities that need little of it do unusually well (test 4, camels and hippos). One test can be fooled; the method asks several kinds of evidence to agree.',
       'Each measure carries a class. A measures the cost directly (a price: the real lending rate, the share of firms fully credit constrained). B is behaviour that only makes sense if the constraint binds (borrowers discouraged by terms; firms financing investment from their own funds). C is a quantity or a survey answer that cannot tell cause from effect (bank liquidity, loan rejections): it informs but does not vote on the price test. D is an expert rating; it never decides.',
       'On the fork for Indonesia the price test points toward costly finance and the workarounds test is near zero; two tests agree, where "points to" would need three. So the card says "leans to finance", and "Why not higher" says exactly why.',
     ],
-    look: ['The four test cells, each with its score from −2 to +2 and the families behind it.', 'The "informs, does not vote" notes on class C measures.', 'The fold "Why not higher, why not lower".'],
+    look: ['One axis for everything: a measure’s signal, a test’s score, the net score, −2 at the left and +2 at the right.', 'Thicker bars count more; hollow bars are shown but not counted (the class C quantities under the price test).', 'The net score against the dashed lines (±0.5, a rating when two tests agree) and the solid ones (±1, on its own).'],
     check: { q: 'Two of the four tests agree that finance looks costly in Indonesia. Why does the card stop at "leans to finance"?',
       a: 'Because a finding needs several kinds of evidence to agree: "points to" needs a score of 1 or more and three agreeing tests, and the fork has a score of about 0.5 with two. One strong test can flag; it takes concordance to establish.' },
     mindbook: 'Mindbook, the four tests and concordance.',
@@ -128,12 +128,12 @@ export const TOUR = [
     mindbook: 'Mindbook, the camels and hippos test; low quantity is not scarcity.',
   },
   {
-    n: 12, title: 'One strong test is a flag, not a finding', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N11.corruption`, anchor: '#drawer .tests', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the four tests in the open card',
+    n: 12, title: 'One strong test is a flag, not a finding', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N11.corruption`, anchor: '#drawer .ledger', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the ledger in the open card',
     say: [
       'Corruption is Indonesia’s one "worth a closer look". The price test is strong: the share of firms asked for a bribe and the share expected to give gifts to tax officials both sit far above what income predicts (class A, both from the 2023 firm survey). Only one of the four tests speaks, so the flag comes by the alternative rule: one test at or above +1 can flag on its own.',
       'It cannot do more. "Likely a main constraint" needs three agreeing tests; here there is one, and the expert index (class D) sits where income predicts and informs without voting. "Why not higher" says this in one line. Under the Cautious reading, which asks for more sources, the flag drops to unclear.',
     ],
-    look: ['The price test’s score and its two voting families from one survey year.', 'The expert index marked "informs, does not vote".'],
+    look: ['The price test’s two thick class A bars, far to the right, from one survey year.', 'The expert index as a hollow bar under “shown, not counted”.', 'The net score past the solid +1 line, on its own.'],
     check: { q: 'Corruption has the highest score on Indonesia’s page. Why is it not "likely a main constraint"?',
       a: 'Only one of the four tests speaks, and it rests on two voting families from one survey year. A flag needs one test; a finding needs several kinds of evidence to agree. The card’s "why not higher" line says exactly that.' },
     mindbook: 'Mindbook, the four tests and concordance.',

@@ -5,7 +5,7 @@
 // on one (RATING), throwing in development and doing nothing in production.
 
 /** Selectors of the rating surfaces (tenet 6): a tier badge, the strip, the three lists, the rail's dots, an area square. */
-export const RATING = '.tier-badge, .strip, .bl-list, .tier-dot, [data-area]';
+export const RATING = '.tier-badge, .strip, .bl-list, .tier-dot, [data-area], .ledger, .tally';
 const DURS = { 1: 150, 2: 250, 3: 400 };
 
 /** True when the reader asked for reduced motion (or there is no window, as under Node). */

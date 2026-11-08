@@ -14,4 +14,5 @@
 .doc-body code { font-family: var(--mono); font-size: 0.85em; background: var(--surface-2); padding: 0 3px; }
 .doc-body pre { overflow-x: auto; background: var(--surface-2); padding: 10px; }
 .doc-body .table-wrap { margin: 10px 0; }
+.methods-ledger { max-width: 760px; margin-top: 12px; }
 }
