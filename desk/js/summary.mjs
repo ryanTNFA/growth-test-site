@@ -9,12 +9,16 @@ import { reasonTag, robustChip } from './components/marks.mjs';
 import { currentSetting, SETTING_LABEL } from './common.mjs';
 import { heatRow, TEST_ORDER } from './evidence_math.mjs';
 import { railModel, nodeScope, VIEWS } from './evidence_node.mjs';
+import { testMark } from './components/testmark.mjs';
 
 initTheme();
 const DATA = dataBase();
 const $ = (id) => document.getElementById(id);
 const TEST_HEAD = { price: '1 · Price', changes: '2 · Changes', circumvention: '3 · Circumvention', camels: '4 · Camels' };
 const LIM = 2; // the colour scale saturates at ±2 (sd for benchmarking; test scores run from −2 to +2)
+// Ryan, 8 November 2026: a test the method never defines for an area is not missing data. It is blank for every economy,
+// so it reads as not applicable (a closed grey cell), apart from "no data" (a dashed, empty cell: this economy lacks it).
+const NA = new Set(['no test defined', 'no indicator']);
 
 const state = { iso: (qs('iso') || 'KEN').toUpperCase(), set: 'structural', overrides: {}, registry: null, countries: [], scorecard: null, model: [] };
 
@@ -90,6 +94,10 @@ function buildModel() {
 
 // ---------- render ----------
 function valueCell(v, empty, title) {
+  if (v == null && NA.has(empty || '')) {
+    return h('td', { class: 'sm-cell sm-na', title: `Not applicable, for every economy: ${title || empty}` }, h('span', { 'aria-hidden': 'true' }, 'n/a'),
+      h('span', { class: 'visually-hidden' }, `not applicable (${empty})`));
+  }
   if (v == null) return h('td', { class: 'sm-cell sm-empty', title: title || '' }, empty || '—');
   const p = cellPaint(v);
   return h('td', { class: 'sm-cell', style: `background:${p.fill};color:${p.ink}`, title: title || '' }, fmtSigned(Math.abs(v) < 0.05 ? 0 : v, 1));
@@ -113,29 +121,40 @@ function conclusionCells(r) {
 function render() {
   buildModel();
   const R = state.registry;
-  const head = h('tr', {}, h('th', { scope: 'col', class: 'sm-node' }, 'Node'), h('th', { scope: 'col' }, 'Benchmarking', h('br'), h('span', { class: 'sm-unit' }, 'median sd')),
-    ...TEST_ORDER.map((t) => h('th', { scope: 'col' }, `Test ${TEST_HEAD[t].split(' · ')[0]}`, h('br'), h('span', { class: 'sm-unit' }, TEST_HEAD[t].split(' · ')[1]))),
-    h('th', { scope: 'col' }, 'Verdict layer'), h('th', { scope: 'col' }, 'Your conclusion'), h('th', { scope: 'col' }, 'Note'));
+  // Two header rows: benchmarking stands apart (a gap column), the four tests sit under one heading, each with its mark
+  const sub = (t) => h('span', { class: 'sm-unit' }, t);
+  const gap = () => h('td', { class: 'sm-gap', 'aria-hidden': 'true' });
+  const head = [
+    h('tr', {}, h('th', { scope: 'col', rowspan: '2', class: 'sm-node' }, 'Node'),
+      h('th', { scope: 'col', rowspan: '2', class: 'sm-col' }, 'Benchmarking', h('br'), sub('unusual for'), h('br'), sub('its income?')),
+      h('td', { class: 'sm-gap', rowspan: '2', 'aria-hidden': 'true' }),
+      h('th', { scope: 'colgroup', colspan: '4', class: 'sm-tests-h' }, 'The four tests', h('br'), sub('does it bind?')),
+      h('th', { scope: 'col', rowspan: '2' }, 'Verdict layer'), h('th', { scope: 'col', rowspan: '2' }, 'Your conclusion'), h('th', { scope: 'col', rowspan: '2' }, 'Note')),
+    h('tr', {}, ...TEST_ORDER.map((t) => h('th', { scope: 'col', class: 'sm-col' },
+      testMark(t), `Test ${TEST_HEAD[t].split(' · ')[0]}`, h('br'), sub(TEST_HEAD[t].split(' · ')[1])))),
+  ];
   const body = h('tbody', {});
   for (const r of state.model) {
-    if (r.group) { body.append(h('tr', { class: 'sm-group' }, h('th', { colspan: '9', scope: 'colgroup' }, r.group))); continue; }
+    if (r.group) { body.append(h('tr', { class: 'sm-group' }, h('th', { colspan: '10', scope: 'colgroup' }, r.group))); continue; }
     const href = withData(`/growth-test-site/desk/evidence.html?iso=${state.iso}&node=${encodeURIComponent(r.id)}${state.set !== 'structural' ? `#set=${state.set}` : ''}`);
     const bt = r.bench != null ? `${r.nBench} indicators with data: ${r.toward} at least 0.75 sd toward binding, ${r.away} at least 0.75 sd away. Median of their binding-side distances from what income and structure predict.` : 'No indicator of this node has a value in the window.';
     body.append(h('tr', { class: `${r.sub ? 'sm-sub' : ''}${r.context ? ' sm-context' : ''}${state.overrides[r.id] ? ' sm-overridden' : ''}` },
       h('th', { scope: 'row', class: 'sm-node' }, h('a', { href }, h('span', { class: 'sm-id' }, r.sub ? '' : nodeCode(r.id)), ' ', r.short)),
-      valueCell(r.bench == null ? null : Math.max(-3, Math.min(3, r.bench)), r.benchEmpty, bt),
+      valueCell(r.bench == null ? null : Math.max(-3, Math.min(3, r.bench)), r.benchEmpty, bt), gap(),
       ...TEST_ORDER.map((t) => valueCell(r.tests[t], r.empty[t], r.why[t] || `${TEST_HEAD[t]}: the verdict layer's test score, from −2 (evidence against) to +2 (for).`)),
       h('td', { class: 'sm-tier' }, r.tier ? [h('span', { class: `tier-badge ${tierClass(r.tier)}`, title: r.bySet || null }, h('span', {}, plainTierOf(r.id, r.tier))), r.tagNode ? reasonTag(r.tagNode) : null, r.tagNode ? robustChip(r.tagNode) : null] : '—'),
       ...conclusionCells(r)));
   }
-  $('heat-wrap').replaceChildren(h('table', { class: 'sm-table', id: 'heat' }, h('caption', { class: 'visually-hidden' }, `Diagnostic heat map for ${nameOf(state.iso)}`), h('thead', {}, head), body));
+  $('heat-wrap').replaceChildren(h('table', { class: 'sm-table', id: 'heat' }, h('caption', { class: 'visually-hidden' }, `Diagnostic heat map for ${nameOf(state.iso)}`), h('thead', {}, ...head), body));
   renderKey();
   renderText();
 }
 
 function renderKey() {
   const steps = [-2, -1, -0.5, 0, 0.5, 1, 2];
-  $('key').replaceChildren(h('span', { class: 'sm-key-l' }, '◀ away from binding'), ...steps.map((v) => { const p = cellPaint(v); return h('span', { class: 'sm-swatch', style: `background:${p.fill};color:${p.ink}` }, fmtSigned(v, 1).replace('+0.0', '0').replace('−0.0', '0')); }), h('span', { class: 'sm-key-r' }, 'toward binding ▶'));
+  $('key').replaceChildren(h('span', { class: 'sm-key-l' }, '◀ away from binding'), ...steps.map((v) => { const p = cellPaint(v); return h('span', { class: 'sm-swatch', style: `background:${p.fill};color:${p.ink}` }, fmtSigned(v, 1).replace('+0.0', '0').replace('−0.0', '0')); }), h('span', { class: 'sm-key-r' }, 'toward binding ▶'),
+    h('span', { class: 'sm-swatch sm-empty' }, 'no data'), h('span', { class: 'sm-key-t' }, 'this economy lacks it'),
+    h('span', { class: 'sm-swatch sm-na' }, 'n/a'), h('span', { class: 'sm-key-t' }, 'no such test for this area, in any economy'));
 }
 
 function renderText() {
@@ -196,6 +215,7 @@ function readingText() {
 
 function heatSVG() {
   const surface = css('--bg', '#faf7f0'), text = css('--text', '#1c2e4a'), muted = css('--muted', '#4a5d7e'), rule = css('--rule', '#e6d9d0');
+  const naFill = d3.color(d3.interpolateLab(surface, css('--rule-strong', '#7a879c'))(0.16)).formatHex();
   const anyOv = Object.keys(state.overrides).length > 0;
   const cols = [['Benchmarking', 96], ...TEST_ORDER.map((t) => [TEST_HEAD[t].split(' · ')[1], 96]), ['Verdict layer', 170], ...(anyOv ? [['Analyst', 170]] : [])];
   const nameW = 220, rowH = 26, top = 70;
@@ -204,7 +224,7 @@ function heatSVG() {
   const e = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const p = [`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="Inter, system-ui, sans-serif" font-size="12">`, `<rect width="${W}" height="${H}" fill="${surface}"/>`,
     `<text x="8" y="24" font-size="17" font-weight="600" fill="${text}">${e(`${nameOf(state.iso)}: diagnostic summary`)}</text>`,
-    `<text x="8" y="44" fill="${muted}">${e(`Benchmarking: median sd toward binding · tests: verdict-layer scores, −2 to +2 · snapshot ${state.scorecard.meta.snapshot_id}`)}</text>`];
+    `<text x="8" y="44" fill="${muted}">${e(`Benchmarking: median sd toward binding · tests: verdict-layer scores, −2 to +2 · n/a: no such test for the area · snapshot ${state.scorecard.meta.snapshot_id}`)}</text>`];
   let x = nameW;
   for (const [c, w] of cols) { p.push(`<text x="${x + w / 2}" y="${top - 8}" text-anchor="middle" font-weight="600" fill="${text}">${e(c)}</text>`); x += w; }
   state.model.forEach((r, i) => {
@@ -217,7 +237,10 @@ function heatSVG() {
     for (const [v, em] of vals) {
       const pt = cellPaint(v);
       if (pt) p.push(`<rect x="${cx + 2}" y="${y + 2}" width="92" height="${rowH - 4}" fill="${pt.fill}"/><text x="${cx + 48}" y="${y + 17}" text-anchor="middle" fill="${pt.ink}" font-weight="600">${e(fmtSigned(Math.abs(v) < 0.05 ? 0 : v, 1))}</text>`);
-      else p.push(`<text x="${cx + 48}" y="${y + 17}" text-anchor="middle" fill="${muted}" font-style="italic" font-size="11">${e(em || '—')}</text>`);
+      else if (NA.has(em || '')) p.push(`<rect x="${cx + 2}" y="${y + 2}" width="92" height="${rowH - 4}" fill="${naFill}"/>`
+        + `<text x="${cx + 48}" y="${y + 17}" text-anchor="middle" fill="${muted}" font-size="11">n/a</text>`);
+      else p.push(`<rect x="${cx + 5}" y="${y + 5}" width="86" height="${rowH - 10}" fill="none" stroke="${muted}" stroke-dasharray="3 2"/>`
+        + `<text x="${cx + 48}" y="${y + 17}" text-anchor="middle" fill="${muted}" font-style="italic" font-size="11">${e(em || '—')}</text>`);
       cx += 96;
     }
     p.push(`<text x="${cx + 6}" y="${y + 17}" fill="${text}">${e(plainTierOf(r.id, r.tier))}</text>`);
@@ -244,7 +267,9 @@ async function loadCountry() {
   const name = nameOf(state.iso);
   $('page-title').textContent = `${name}: diagnostic summary`;
   document.title = `${name} · Heat map · The Growth Test`;
-  $('page-sub').textContent = 'Each row is a node of the tree. The colour shows which way the evidence leans; the verdict layer\'s tier and your own conclusion sit beside it. Click a node to see its evidence.';
+  $('page-sub').textContent = 'Each row is a node of the tree. The colour shows which way the evidence leans; the verdict layer\'s tier and your own conclusion sit beside it. '
+    + 'A dashed empty cell has no data for this economy; a grey n/a cell is a test the method does not define for that area, so it is blank for every economy. '
+    + 'Click a node to see its evidence.';
 }
 
 async function main() {

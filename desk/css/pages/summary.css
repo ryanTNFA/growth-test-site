@@ -10,7 +10,16 @@
 .sm-key { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; margin: 0 0 10px; font-size: 0.75rem; }
 .sm-swatch { display: inline-block; min-width: 40px; padding: 3px 4px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; }
 .sm-key-l { margin-right: 8px; color: var(--muted); }
-.sm-key-r { margin-left: 8px; color: var(--tier-binding); font-weight: 600; }
+.sm-key-r { margin-left: 8px; margin-right: 18px; color: var(--tier-binding); font-weight: 600; }
+.sm-key-t { margin: 0 14px 0 6px; color: var(--muted); }
+.sm-swatch.sm-empty, .sm-swatch.sm-na { min-width: 56px; padding: 5px 6px; outline-offset: -2px; }
+
+/* benchmarking against the four tests, above the table */
+.sm-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 28px; margin: 0 0 18px; max-width: 1080px; }
+.sm-two-b { border-top: 3px solid var(--rule-strong); padding-top: 8px; font-size: 0.9375rem; }
+.sm-two-b p { margin: 0 0 6px; max-width: 62ch; }
+.sm-two-b .sm-two-h { margin: 0 0 6px; font-weight: 600; }
+.sm-two-h span { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.0625rem; color: var(--muted); }
 :root[data-theme="dark"] .sm-key-r { color: var(--chart-binding); }
 
 .sm-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-top: 1px solid var(--rule-strong); }
@@ -24,7 +33,19 @@
 .sm-table tbody th.sm-node a:hover { text-decoration: underline; }
 .sm-id { display: inline-block; min-width: 3.4em; font-family: var(--mono, "IBM Plex Mono", ui-monospace, monospace); font-size: 0.75rem; color: var(--muted); }
 .sm-sub th.sm-node { padding-left: 22px !important; }
-.sm-cell { width: 88px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; padding: 6px 4px; }
+.sm-cell { width: 104px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; padding: 6px 4px; }
+/* the five value columns share one width; their headings never wrap mid-label */
+.sm-table thead th.sm-col { width: 104px; min-width: 104px; white-space: nowrap; }
+.sm-table thead .tmark { margin-right: 0.3em; }
+/* the four tests sit under one heading, ruled across their columns; a gap column keeps benchmarking apart */
+.sm-table thead th.sm-tests-h { padding-bottom: 6px; border-bottom: 2px solid var(--rule-strong); }
+.sm-gap { width: 12px; min-width: 12px; padding: 0; }
+/* not applicable: a closed, striped grey cell, the same for every economy, as a calendar marks a slot nobody can book
+   (no data stays the dashed, empty cell) */
+.sm-na { font-weight: 400; font-size: 0.75rem; color: var(--muted);
+  background: repeating-linear-gradient(-45deg, color-mix(in srgb, var(--rule-strong) 34%, transparent) 0 1px, transparent 1px 6px),
+    color-mix(in srgb, var(--rule-strong) 12%, var(--bg)); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+@media (forced-colors: active) { .sm-na { background: none; outline: 1px solid GrayText; outline-offset: -4px; } }
 /* empty cells match the data-gap badge (dashed, unfilled) rather than the weak-evidence hatch */
 .sm-empty { font-weight: 400; font-style: italic; font-size: 0.75rem; color: var(--muted); outline: 1px dashed var(--rule-strong); outline-offset: -4px; }
 /* Context rows recede by muted ink and desaturated fills, not opacity (0.7 opacity put muted text at 3.2:1 in light). */
