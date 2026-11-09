@@ -467,19 +467,19 @@ Windows end at the latest year with any `NY.GDP.PCAP.KD.ZG` observation in the u
 
 | Statistic | Computation | Function |
 |---|---|---|
-| G1 | Mean real GDP per capita growth over 10 and 20 years (at least half the years observed); structural-set and regional medians; rank among structural peers (1 = fastest) | `growth.mjs:windowAverage`, `growthProblem` |
+| G1 | Mean real GDP per capita growth over the last 10 and 20 years and over the decade before the last (at least half the years observed); structural-set and regional medians; rank among structural peers (1 = fastest) | `growth.mjs:windowAverage`, `growthProblem` |
 | G2 | Convergence residual: Huber regression across economies (rows sorted by iso3) of 10-year average growth on ln GDP per capita PPP in 2015 with region dummies (regions with ≥ 5 economies); t = residual/scale | `growth.mjs:growthUniverse` |
-| G3 | Peak-to-date year of `NY.GDP.PCAP.KD`, years since, shortfall 100 × (peak − latest)/peak | `growth.mjs:peakToDate`, `assessPeak` |
-| G4 | Single-break simplified: the split year maximizing \|mean(after) − mean(before)\| with each segment ≥ 8 years; reported if the change ≥ 2.0 points | `growth.mjs:singleBreak` |
+| G3 | Peak-to-date year of `NY.GDP.PCAP.KD`, years since, shortfall 100 × (peak − latest)/peak; the first year income reached within 2 percent of today's level (rubric 0.3.0) | `growth.mjs:peakToDate`, `assessPeak`, `levelFirstReached` |
+| G4 | The growth record in eras since 1990 (rubric 0.3.0): the least-squares partition into at most four eras of ≥ 8 years, keeping the most breaks for which each era is ≥ 2 points from the one before; the latest break fills the single-break fields | `growth.mjs:growthEras`, `erasBlock` |
 | G5 | Standard deviation of growth over 20 years; structural median; universe percentile | `growth.mjs:windowSd` |
 | G6 | ICR t and percentile of `NE.GDI.FTOT.ZS`; private split stated as unavailable | `growthProblem` |
 | G7 | ICR of `NY.GNS.ICTR.ZS`; levels and ICRs of the current account and net FDI | `growthProblem` |
 | G10 | ICRs of exports to GDP and ECI | `growthProblem` |
 | G11, G12 | Unemployment level and ICR; population, urban share, rents, landlocked, region, income group | `growthProblem` |
 
-Classification, first rule that fires (`params.growth_problem`): `slowdown` if the 10-year mean ≤ the 20-year mean − 1.5 points; `collapse_recovery` if the peak is 8 to 30 years old and the shortfall ≥ 10 percent; `volatile` if G5 is above the 75th universe percentile; `growing` if the 10-year mean ≥ 3, or G2 t ≥ 1.0 and the 10-year mean ≥ 2; else `mixed`. The statement fills the Workbook 2.3 template. Classification does not enter any tier.
+Classification, first rule that fires (`params.growth_problem`, rubric 0.3.0): `collapse_recovery` if the peak is 8 to 30 years old and the shortfall ≥ 10 percent; `slowdown` if the last decade's mean ≤ the decade before's − 2 points; `acceleration` if it is ≥ the decade before's + 2 and ≥ 2; `volatile` if G5 is above the 75th universe percentile; `growing` if the 10-year mean ≥ 3, or G2 t ≥ 1.0 and the 10-year mean ≥ 2; `never_recovered` if the peak is more than 30 years old and the shortfall ≥ 20 percent; `high_income_pace` for a high-income economy growing at least 0; `stuck` under 1.5; `steady` from 1.5 to under 3; `not_classifiable` with no 10-year mean. `mixed` remains as a fallback that cannot fire once a 10-year mean exists. The statement fills the Workbook 2.3 template, names the eras and, when it is at least five years ago, the year income per person first reached today's level. Classification does not enter any tier.
 
-*Implementation:* `engine/src/growth.mjs:classifyGrowthProblem`, `buildStatement`, `proseName`. *Tests:* `engine/test/growth.test.mjs` (seven tests: windows, classification bounds, the `growing` rule and `mixed` fallback, articles, prose); `engine/test/synthetic.test.mjs` ("growth problem statistics, classification and statement").
+*Implementation:* `engine/src/growth.mjs:classifyGrowthProblem`, `buildStatement`, `proseName`. *Tests:* `engine/test/growth.test.mjs` (windows, classification bounds, the `growing` rule, the 0.3.0 slowdown and patterns, the eras, the level line, articles, prose); `engine/test/synthetic.test.mjs` ("growth problem statistics, classification and statement").
 
 ### 5.2 Top split (first decision node)
 
@@ -567,7 +567,7 @@ Workbook section 10 records items 9–11, 13, 14 and 16 as amendments; they are 
 | 5 | Section 3: regional peers "income within one income group" | Starts at the target's group and widens until at least 6 members; capped at 15 | `comparators.mjs:regionalSet` |
 | 6 | 4.7: peer-rank thresholds "with n ≤ 12" | Applied at any set size (regional sets reach 16); ties take half a rank; small-set ambiguity scores 0 | `signals.mjs:peerGap` |
 | 7 | 4.7: rules for each statistic, no rule for combining them | Indicator signal = median of the ICR signal and the active-set peer-gap signal; the other two sets enter only through fragility | `signals.mjs:indicatorSignal` |
-| 8 | 4.3: slopes with Newey-West errors; Bai-Perron or Kar-Pritchett-Raihan-Sen breaks | No trend slopes in any signal; G4 is a single-break simplified test | `growth.mjs:singleBreak` |
+| 8 | 4.3: slopes with Newey-West errors; Bai-Perron or Kar-Pritchett-Raihan-Sen breaks | No trend slopes in any signal; G4 (rubric 0.3.0) is a least-squares partition into eras with a fixed minimum length and a minimum shift in place of a test statistic | `growth.mjs:growthEras` |
 | 9 | 4.4 and 4.7: co-movement of *private* investment, +1 at sign consistency ≥ 0.7, −2 for a wrong sign at ≥ 0.7; event variant | Exact one-sided binomial sign test (+1 at p ≤ 0.10; −1 at p ≤ 0.10, −2 at p ≤ 0.025); y is total gross fixed capital formation; two specifications only (finance, macro); no event variant (Workbook 10.5) | `signals.mjs:comovement`, `comovementSignal` |
 | 10 | 4.5 and 4.7: θ from manufacturing value-added shares (UNIDO) or export shares/RCA; scored by its percentile (≤ 10 → +2, ≤ 25 → +1, ≥ 90 → −2, ≥ 75 → −1) | θ from ln(1 + RCA) within scored products, on HS92 exports (no value-added data). **Scoring resolved in rubric 0.1.6:** a voting θ is scored by the 4.7 percentile rule, plus a two-standard-error gate the Workbook does not have | `ingest/camels.py`, `scorecard.mjs:camelsSignal` |
 | 11 | 4.6 and 6.2: every family votes on every test, scaled by its class weight | On the price test only class A/B families vote; C/D inform (Workbook 10.1) | `aggregate.mjs:testScores` |

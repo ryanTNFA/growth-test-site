@@ -425,6 +425,9 @@ export function drawGrowth(host, ctx) {
   const g = scorecard && scorecard.growth_problem;
   const peak = g && g.G3 && g.G3.peak_year >= base ? own.find((r) => r.year === g.G3.peak_year) : null;
   const brk = g && g.G4 && g.G4.reported && g.G4.break_year >= base ? g.G4 : null;
+  // rubric 0.3.0: G4 is the growth record in eras since 1990; brk is the latest break, the one the label names
+  const eras = g && g.G4 && Array.isArray(g.G4.eras) && g.G4.eras.length > 1 ? g.G4.eras.filter((e) => e.to >= base && isNum(e.mean)) : [];
+  const cuts = eras.map((e) => e.from).filter((y) => y > base);
   const grow = (growth && growth.v[iso] ? growth.years.map((y, i) => ({ year: y, value: growth.v[iso][i] })) : []).filter((r) => r.year >= base && r.year <= asOf && isNum(r.value));
   // The axis ends at the last year with data, which gets its own tick, rather than running empty to the as-of year.
   const last = Math.max(own[own.length - 1].year, grow.length ? grow[grow.length - 1].year : base);
@@ -451,13 +454,13 @@ export function drawGrowth(host, ctx) {
       // At the latest year the peak needs no label (the reading says so), and it would sit on the economy's own label.
       ...(peak ? [P.dot([peak], { x: 'year', y: 'value', r: 5, fill: pal.surface, stroke: pal.focus, strokeWidth: 2 })] : []),
       ...(peak && peak.year !== own[own.length - 1].year ? [P.text([peak], { x: 'year', y: 'value', text: () => `peak ${peak.year}`, dy: -12, fontSize: 11, fill: pal.focusInk })] : []),
-      ...(brk ? [P.ruleX([brk.break_year], { stroke: pal.text, strokeOpacity: 0.5, strokeDasharray: '4,3' })] : []),
+      ...(cuts.length ? [P.ruleX(cuts, { stroke: pal.text, strokeOpacity: 0.5, strokeDasharray: '4,3' })] : []),
       P.tip(own, P.pointerX({ x: 'year', y: 'value', title: (d) => `${countryName} ${d.year}\n${fmt(d.value, 0)} (${base} = 100)` })),
     ],
   });
   const peerGrow = years.map((y) => { const i = growth ? growth.years.indexOf(y) : -1; const v = peers.filter((p) => p !== iso).map((p) => (i >= 0 && growth.v[p] ? growth.v[p][i] : null)).filter(isNum); return v.length >= 3 ? { year: y, median: median(v) } : null; }).filter(Boolean);
   const h2 = Math.round(h1 * 0.62);
-  const regimes = brk ? [{ x1: base, x2: brk.break_year, v: brk.mean_before }, { x1: brk.break_year, x2: last, v: brk.mean_after }] : [];
+  const regimes = eras.map((e) => ({ x1: Math.max(e.from, base), x2: Math.min(e.to + 1, last), v: e.mean }));
   // The engine's regime means are ink, not the comparators' navy, and solid, since the footer keys dashed lines to the comparator median.
   // Their label runs right of the break, else left of it (clear of the tick labels); where neither side has room (a mid-window break on
   // a phone) it drops "a year", and as a last resort it ends at the chart's right edge.
@@ -475,7 +478,8 @@ export function drawGrowth(host, ctx) {
       P.rectY(grow, { x1: (d) => d.year - 0.4, x2: (d) => d.year + 0.4, y: 'value', fill: pal.focus, fillOpacity: 0.85 }),
       P.line(peerGrow, { x: 'year', y: 'median', stroke: pal.muted, strokeDasharray: '5,3', strokeWidth: 1.3 }),
       ...regimes.map((r) => P.link([r], { x1: 'x1', x2: 'x2', y1: 'v', y2: 'v', stroke: pal.text, strokeWidth: 1.8 })),
-      ...(brk ? [P.ruleX([brk.break_year], { stroke: pal.text, strokeOpacity: 0.5, strokeDasharray: '4,3' }), P.text([brk], brkSide === 'edge' ? { frameAnchor: 'top-right', text: () => brkText, dy: 4, dx: 66, textAnchor: 'end', fontSize: 11, fill: pal.text } : { x: 'break_year', frameAnchor: 'top', text: () => brkText, dy: 4, dx: brkSide === 'left' ? -6 : 6, textAnchor: brkSide === 'left' ? 'end' : 'start', fontSize: 11, fill: pal.text })] : []),
+      ...(cuts.length ? [P.ruleX(cuts, { stroke: pal.text, strokeOpacity: 0.5, strokeDasharray: '4,3' })] : []),
+      ...(brk ? [P.text([brk], brkSide === 'edge' ? { frameAnchor: 'top-right', text: () => brkText, dy: 4, dx: 66, textAnchor: 'end', fontSize: 11, fill: pal.text } : { x: 'break_year', frameAnchor: 'top', text: () => brkText, dy: 4, dx: brkSide === 'left' ? -6 : 6, textAnchor: brkSide === 'left' ? 'end' : 'start', fontSize: 11, fill: pal.text })] : []),
       P.tip(grow, P.pointerX({ x: 'year', y: 'value', title: (d) => `${countryName} ${d.year}\n${fmtSigned(d.value, 1)}%` })),
     ],
   });
@@ -493,8 +497,9 @@ export function drawGrowth(host, ctx) {
   const parts = [];
   if (G1 && isNum(G1.avg_10y)) parts.push(`GDP per capita grew <strong>${fmt(G1.avg_10y, 1)}% a year over ${G1.window_10y.join('–')}</strong>, against a median of ${fmt(G1.structural_median_10y, 1)}% for its structural comparators (${ordinal(G1.rank_in_structural)} of ${G1.structural_n}); over 20 years, ${fmt(G1.avg_20y, 1)}% against ${fmt(G1.structural_median_20y, 1)}%.`);
   if (G3) parts.push(G3.years_since_peak === 0 ? `It is at its peak (${G3.peak_year}).` : `It is ${fmt(G3.shortfall_pct, 0)}% below its ${G3.peak_year} peak.`);
-  if (brk) parts.push(`The engine finds one break, in ${brk.break_year}: growth ${brk.change_pp < 0 ? 'slowed' : 'rose'} from ${fmt(brk.mean_before, 1)}% to ${fmt(brk.mean_after, 1)}% a year.`);
-  else if (g && g.G4 && g.G4.reported && g.G4.break_year < base) parts.push(`The engine's break year, ${g.G4.break_year}, is before ${base}; show from 1960 to see it.`);
+  const allEras = g && g.G4 && Array.isArray(g.G4.eras) ? g.G4.eras : [];
+  if (allEras.length > 1) parts.push(`The engine splits growth since ${allEras[0].from} into ${allEras.length} eras: ${allEras.map((e, i) => `${fmt(e.mean, 1)}% a year ${i === allEras.length - 1 ? `since ${e.from}` : `in ${e.from}–${e.to}`}`).join(', ')}.`);
+  else if (allEras.length === 1) parts.push(`Growth since ${allEras[0].from} shows no lasting shift: ${fmt(allEras[0].mean, 1)}% a year.`);
   const csv = ['iso3,year,gdp_per_capita_index,growth_pct,comparator_median_index,comparator_median_growth'];
   for (const y of years) { const a = own.find((r) => r.year === y), b = grow.find((r) => r.year === y), c = band.find((r) => r.year === y), d = peerGrow.find((r) => r.year === y); csv.push([iso, y, a ? a.value : '', b ? b.value : '', c ? c.median : '', d ? d.median : ''].join(',')); }
   return { csv, text: parts.join(' '), base };

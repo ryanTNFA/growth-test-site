@@ -130,9 +130,117 @@ export function peakToDate(byYear) {
 }
 
 /**
- * Simplified single-break test on a growth series: the split year (first year of the
- * second segment) maximizing |mean(after) − mean(before)| with both segments holding at
- * least minSegment observations; reported only if the change ≥ minChange percentage points.
+ * The first year income per person reached roughly today's level (within tolerancePct percent below the latest
+ * value): {year, years_since, below_series_start}. below_series_start is true when the first year of the record
+ * was strictly above today's level, so income is lower now than when the record begins (rubric 0.3.0).
+ */
+export function levelFirstReached(byYear, tolerancePct) {
+  const years = yearsOf(byYear);
+  if (!years.length) return null;
+  const latest = years[years.length - 1];
+  const now = byYear[latest];
+  if (!isNum(now) || now <= 0) return null;
+  const floor = now * (1 - tolerancePct / 100);
+  const year = years.find((y) => byYear[y] >= floor);
+  return { year, years_since: latest - year, below_series_start: byYear[years[0]] > now, series_start: years[0] };
+}
+
+/**
+ * The growth record in eras (rubric 0.3.0, replacing the single break across the whole series): the least-squares
+ * partition of growth since startYear into at most maxBreaks + 1 eras, each holding at least minYears observations,
+ * keeping the largest number of breaks for which every era differs from the one before by at least minChange
+ * points. One bad year (2020) cannot be an era of its own. Workbook 4.3 asks for Bai-Perron or Kar-Pritchett-Raihan-
+ * Sen breaks; this is that partition with a fixed minimum size and a minimum shift in place of a test statistic.
+ * Returns {eras: [{from, to, mean, n_obs}], n_obs}.
+ */
+export function growthEras(byYear, { startYear, endYear, minYears, minChange, maxBreaks }) {
+  const years = yearsOf(byYear).filter((y) => y >= startYear && (endYear == null || y <= endYear));
+  const v = years.map((y) => byYear[y]);
+  const n = v.length;
+  if (n < minYears) return { eras: [], n_obs: n };
+  const P = [0];
+  const Q = [0];
+  for (let i = 0; i < n; i++) {
+    P.push(P[i] + v[i]);
+    Q.push(Q[i] + v[i] * v[i]);
+  }
+  const mean = (i, j) => (P[j] - P[i]) / (j - i);
+  const cost = (i, j) => Q[j] - Q[i] - ((P[j] - P[i]) * (P[j] - P[i])) / (j - i);
+  const era = (i, j) => ({ from: years[i], to: years[j - 1], mean: mean(i, j), n_obs: j - i });
+  const most = Math.min(maxBreaks, Math.floor(n / minYears) - 1);
+  for (let k = most; k >= 1; k--) {
+    // best[s][j]: the least cost of v[0..j) in s + 1 eras; cut[s][j]: where the last of them starts
+    const best = [];
+    const cut = [];
+    for (let s = 0; s <= k; s++) {
+      best.push(new Array(n + 1).fill(Infinity));
+      cut.push(new Array(n + 1).fill(-1));
+    }
+    for (let j = minYears; j <= n; j++) best[0][j] = cost(0, j);
+    for (let s = 1; s <= k; s++) {
+      for (let j = (s + 1) * minYears; j <= n; j++) {
+        for (let i = s * minYears; i <= j - minYears; i++) {
+          const c = best[s - 1][i] + cost(i, j);
+          if (c < best[s][j]) {
+            best[s][j] = c;
+            cut[s][j] = i;
+          }
+        }
+      }
+    }
+    if (!Number.isFinite(best[k][n])) continue;
+    const bounds = [n];
+    for (let s = k, j = n; s >= 1; s--) {
+      j = cut[s][j];
+      bounds.unshift(j);
+    }
+    bounds.unshift(0);
+    const eras = [];
+    for (let e = 0; e + 1 < bounds.length; e++) eras.push(era(bounds[e], bounds[e + 1]));
+    if (eras.every((x, e) => e === 0 || Math.abs(x.mean - eras[e - 1].mean) >= minChange)) return { eras, n_obs: n };
+  }
+  return { eras: [era(0, n)], n_obs: n };
+}
+
+/**
+ * G4 from the eras: the eras themselves, and, for the fields the Scorecard has always carried, the latest break
+ * (the first year of the last era, against the era before it); reported when there are at least two eras.
+ */
+export function erasBlock(byYear, endYear, gp) {
+  const r = growthEras(byYear, {
+    startYear: gp.eras_start_year,
+    endYear,
+    minYears: gp.eras_min_years,
+    minChange: gp.eras_min_change_pp,
+    maxBreaks: gp.eras_max_breaks,
+  });
+  const out = {
+    method: `eras since ${gp.eras_start_year}: least-squares breaks, each era at least ${gp.eras_min_years} years, each at least ${gp.eras_min_change_pp} points from the one before`,
+    start_year: gp.eras_start_year,
+    eras: r.eras,
+    reported: r.eras.length >= 2,
+    break_year: null,
+    mean_before: null,
+    mean_after: null,
+    change_pp: null,
+    n_obs: r.n_obs,
+  };
+  if (out.reported) {
+    const a = r.eras[r.eras.length - 2];
+    const b = r.eras[r.eras.length - 1];
+    out.break_year = b.from;
+    out.mean_before = a.mean;
+    out.mean_after = b.mean;
+    out.change_pp = b.mean - a.mean;
+    out.direction = out.change_pp < 0 ? 'deceleration' : 'acceleration';
+  }
+  return out;
+}
+
+/**
+ * Simplified single-break test on a growth series (rubric 0.1 to 0.2.9; kept for reference, no longer called): the
+ * split year maximizing |mean(after) − mean(before)| with both segments holding at least minSegment observations;
+ * reported only if the change ≥ minChange percentage points.
  */
 export function singleBreak(byYear, minSegment, minChange) {
   const years = yearsOf(byYear);
@@ -184,11 +292,14 @@ export function growthUniverse({ series, countries, params, snapshotYear }) {
   }
   const g10 = {};
   const g20 = {};
+  const g10prior = {};
   const vol = {};
   for (const c of countries) {
     const g = growth[c.iso3];
     g10[c.iso3] = windowAverage(g, endYear, w10);
     g20[c.iso3] = windowAverage(g, endYear, w20);
+    // rubric 0.3.0: the decade before the last, so a slowdown compares two decades that do not overlap
+    g10prior[c.iso3] = windowAverage(g, endYear - w10, w10);
     vol[c.iso3] = windowSd(g, endYear, gp.volatility_window_years);
   }
   const initialYear = endYear - w10;
@@ -239,6 +350,7 @@ export function growthUniverse({ series, countries, params, snapshotYear }) {
   return {
     g10,
     g20,
+    g10prior,
     vol,
     vol_values: volValues,
     convergence,
@@ -250,6 +362,7 @@ export function growthUniverse({ series, countries, params, snapshotYear }) {
       anchor: gp.window_anchor || 'latest_observed_year',
       span_10y: [endYear - w10 + 1, endYear],
       span_20y: [endYear - w20 + 1, endYear],
+      span_prior_10y: [endYear - 2 * w10 + 1, endYear - w10],
       span_volatility: [endYear - gp.volatility_window_years + 1, endYear],
     },
   };
@@ -285,26 +398,48 @@ export function assessPeak(G3, gp) {
   return { collapse: false, status: tooOld && tooShallow ? 'old_and_shallow' : tooOld ? 'too_old' : 'too_shallow' };
 }
 
+/** The growth patterns in the order the rules are tried (rubric 0.3.0), then the two fallbacks. */
+export const GROWTH_PATTERNS = [
+  'collapse_recovery', 'slowdown', 'acceleration', 'volatile', 'growing', 'never_recovered', 'high_income_pace', 'stuck', 'steady',
+  'not_classifiable', 'mixed',
+];
+
 /**
- * Classification rules in order (rubric v0.1.1):
- *   slowdown          10-year average ≤ 20-year average − slowdown_min_gap_pp (1.5)
+ * Classification rules in order (rubric 0.3.0; v0.1.1 for collapse, volatile and growing):
  *   collapse_recovery peak age in [collapse_min_peak_age_years (8), collapse_max_peak_age_years (30)]
- *                     and shortfall ≥ collapse_min_shortfall_pct (10)
+ *                     and shortfall ≥ collapse_min_shortfall_pct (10) (first since 0.3.0: an economy still well below a
+ *                     recent peak has a bigger problem than its last decade's pace)
+ *   slowdown          the last decade's average ≤ the decade before's − slowdown_min_drop_pp (2; two decades that do
+ *                     not overlap, where 0.2.9 compared the 10- and 20-year averages, which needed a 3-point fall)
+ *   acceleration      the last decade's average ≥ the decade before's + acceleration_min_rise_pp (2) and
+ *                     ≥ acceleration_min_growth_pct (2): growth has sped up (Hausmann, Pritchett and Rodrik's word)
  *   volatile          G5 universe percentile > volatile_min_universe_percentile (75)
  *   growing           10-year average ≥ growing_min_growth_pct (3), or convergence t ≥
  *                     growing_alt_min_convergence_t (1.0) and 10-year average ≥ growing_alt_min_growth_pct (2)
- *   mixed             otherwise (no dominant pattern; replaces the v0.1 fallback low_level)
+ *   never_recovered   peak older than collapse_max_peak_age_years (30) and shortfall ≥ never_recovered_min_shortfall_pct (20)
+ *   high_income_pace  a high-income economy growing at least high_income_pace_min_growth_pct (0) a year
+ *   stuck             10-year average < stuck_max_growth_pct (1.5)
+ *   steady            10-year average from stuck_max_growth_pct to growing_min_growth_pct (1.5 to 3)
+ *   not_classifiable  no 10-year average and none of the rules above fired
+ *   mixed             otherwise (cannot happen once the 10-year average exists; kept as the defensive fallback)
  * Returns {classification, rule, peak} where rule says which condition fired.
  */
-export function classifyGrowthProblem({ avg10, avg20, convergenceT, G3, volatilityPercentile }, gp) {
+export function classifyGrowthProblem({ avg10, avg20 = null, avgPrior10 = null, convergenceT, G3, volatilityPercentile, highIncome = false }, gp) {
   const peak = assessPeak(G3, gp);
-  if (isNum(avg10) && isNum(avg20) && avg10 <= avg20 - gp.slowdown_min_gap_pp) {
-    return { classification: 'slowdown', rule: `10-year average ${f1(avg10)} ≤ 20-year average ${f1(avg20)} − ${gp.slowdown_min_gap_pp}`, peak };
-  }
   if (peak.collapse) {
     return {
       classification: 'collapse_recovery',
       rule: `peak ${G3.peak_year} is ${G3.years_since_peak} years old (within ${gp.collapse_min_peak_age_years}–${gp.collapse_max_peak_age_years}) and the shortfall ${f1(G3.shortfall_pct)} percent ≥ ${gp.collapse_min_shortfall_pct}`,
+      peak,
+    };
+  }
+  if (isNum(avg10) && isNum(avgPrior10) && avg10 <= avgPrior10 - gp.slowdown_min_drop_pp) {
+    return { classification: 'slowdown', rule: `10-year average ${f1(avg10)} ≤ the decade before's ${f1(avgPrior10)} − ${gp.slowdown_min_drop_pp}`, peak };
+  }
+  if (isNum(avg10) && isNum(avgPrior10) && avg10 >= avgPrior10 + gp.acceleration_min_rise_pp && avg10 >= gp.acceleration_min_growth_pct) {
+    return {
+      classification: 'acceleration',
+      rule: `10-year average ${f1(avg10)} ≥ the decade before's ${f1(avgPrior10)} + ${gp.acceleration_min_rise_pp} and ≥ ${gp.acceleration_min_growth_pct}`,
       peak,
     };
   }
@@ -321,7 +456,26 @@ export function classifyGrowthProblem({ avg10, avg20, convergenceT, G3, volatili
       peak,
     };
   }
-  return { classification: 'mixed', rule: 'no dominant pattern: none of the slowdown, collapse, volatility or growing rules fired', peak };
+  if (G3 && isNum(G3.years_since_peak) && G3.years_since_peak > gp.collapse_max_peak_age_years && isNum(G3.shortfall_pct) && G3.shortfall_pct >= gp.never_recovered_min_shortfall_pct) {
+    return {
+      classification: 'never_recovered',
+      rule: `peak ${G3.peak_year} is ${G3.years_since_peak} years old (> ${gp.collapse_max_peak_age_years}) and the shortfall ${f1(G3.shortfall_pct)} percent ≥ ${gp.never_recovered_min_shortfall_pct}`,
+      peak,
+    };
+  }
+  if (!isNum(avg10)) {
+    return { classification: 'not_classifiable', rule: 'no 10-year average growth, and no rule that needs none of it fired', peak };
+  }
+  if (highIncome && avg10 >= gp.high_income_pace_min_growth_pct) {
+    return { classification: 'high_income_pace', rule: `high income and 10-year average ${f1(avg10)} ≥ ${gp.high_income_pace_min_growth_pct}`, peak };
+  }
+  if (avg10 < gp.stuck_max_growth_pct) {
+    return { classification: 'stuck', rule: `10-year average ${f1(avg10)} < ${gp.stuck_max_growth_pct}`, peak };
+  }
+  if (avg10 < gp.growing_min_growth_pct) {
+    return { classification: 'steady', rule: `10-year average ${f1(avg10)} from ${gp.stuck_max_growth_pct} to under ${gp.growing_min_growth_pct}`, peak };
+  }
+  return { classification: 'mixed', rule: 'no dominant pattern: none of the rules fired', peak };
 }
 
 /**
@@ -336,6 +490,7 @@ export function growthProblem({ uni, country, series, refs, features, sets, icr,
   const structural = (sets.structural && sets.structural.members) || [];
   const g10 = uni.g10[iso3] || { mean: null };
   const g20 = uni.g20[iso3] || { mean: null };
+  const g10p = (uni.g10prior && uni.g10prior[iso3]) || { mean: null, years: null, n_obs: 0 };
   const peers10 = structural.map((m) => (uni.g10[m] ? uni.g10[m].mean : null)).filter(isNum);
   const allG10 = [g10.mean, ...peers10].filter(isNum).sort((a, b) => b - a);
   const rank = isNum(g10.mean) ? allG10.indexOf(g10.mean) + 1 : null;
@@ -350,6 +505,10 @@ export function growthProblem({ uni, country, series, refs, features, sets, icr,
     window_end_year: win.end_year ?? null,
     n_obs_10y: g10.n_obs,
     n_obs_20y: g20.n_obs,
+    avg_prior_10y: g10p.mean,
+    years_prior_10y: g10p.years,
+    window_prior_10y: win.span_prior_10y || null,
+    n_obs_prior_10y: g10p.n_obs,
     structural_median_10y: medianOver(uni.g10, structural, (x) => x.mean),
     structural_median_20y: medianOver(uni.g20, structural, (x) => x.mean),
     region_median_10y: medianOver(uni.g10, regionMembers, (x) => x.mean),
@@ -370,8 +529,14 @@ export function growthProblem({ uni, country, series, refs, features, sets, icr,
     : { t: null, residual_pp: null, n: conv.n, reason: conv.reason };
   const level = (series[LEVEL] || {})[iso3];
   const G3 = peakToDate(level);
+  if (G3) {
+    const lf = levelFirstReached(level, gp.level_reached_tolerance_pct);
+    G3.level_first_reached = lf ? lf.year : null;
+    G3.years_since_level_first_reached = lf ? lf.years_since : null;
+    G3.below_series_start = lf ? lf.below_series_start : null;
+  }
   const growthSeries = (series[GROWTH] || {})[iso3];
-  const G4 = singleBreak(growthSeries, gp.break_min_segment_years, gp.break_min_change_pp);
+  const G4 = erasBlock(growthSeries, win.end_year ?? null, gp);
   const volRec = uni.vol[iso3] || { sd: null };
   const G5 = {
     sd: volRec.sd,
@@ -402,13 +567,48 @@ export function growthProblem({ uni, country, series, refs, features, sets, icr,
   };
 
   const cls = classifyGrowthProblem(
-    { avg10: g10.mean, avg20: g20.mean, convergenceT: G2.t, G3, volatilityPercentile: G5.universe_percentile },
+    {
+      avg10: g10.mean,
+      avg20: g20.mean,
+      avgPrior10: g10p.mean,
+      convergenceT: G2.t,
+      G3,
+      volatilityPercentile: G5.universe_percentile,
+      highIncome: country.income_group === 'High income',
+    },
     gp,
   );
   if (G3) G3.assessment = cls.peak.status;
 
   const statement = buildStatement({ country, classification: cls.classification, peak: cls.peak, G1, G2, G3, G4, G5, G6, G7, G10, topSplit, gp });
   return { G1, G2, G3, G4, G5, G6, G7, G10, G11, G12, classification: cls.classification, classification_rule: cls.rule, statement };
+}
+
+/**
+ * "GDP per capita is about where it was in 2006": said when the first year income reached roughly today's level is
+ * at least level_line_min_years ago (rubric 0.3.0).
+ */
+function levelSentence(G3, gp) {
+  const g = gp || {};
+  if (!G3 || !isNum(G3.level_first_reached) || !isNum(G3.years_since_level_first_reached)) return null;
+  if (G3.years_since_level_first_reached < (g.level_line_min_years ?? 5)) return null;
+  const y = G3.level_first_reached;
+  if (G3.below_series_start) return `GDP per capita is lower than in ${y}, the first year of the record.`;
+  if (y === G3.series_start) return `GDP per capita is about where it was in ${y}, the first year of the record.`;
+  return `GDP per capita is about where it first was in ${y}.`;
+}
+
+/** The eras since the start year in one sentence, or the absence of any lasting shift. */
+function erasSentence(G4, gp) {
+  if (!G4 || !Array.isArray(G4.eras) || !G4.eras.length) return null;
+  const e = G4.eras;
+  if (e.length === 1) {
+    const shift = gp && isNum(gp.eras_min_change_pp) ? gp.eras_min_change_pp : 2;
+    return `Growth since ${e[0].from} shows no lasting shift of ${shift} points or more: it averaged ${f1(e[0].mean)} percent a year over ${e[0].from}–${e[0].to}.`;
+  }
+  const items = e.map((x, i) => `${x.from}–${x.to} at ${f1(x.mean)}${i === 0 ? ' percent a year' : ''}`);
+  const list = items.length === 2 ? items.join(' and ') : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
+  return `Since ${e[0].from} growth has run in ${e.length === 2 ? 'two' : e.length === 3 ? 'three' : 'four'} eras: ${list}.`;
 }
 
 /** "X standard deviations above/below expectation", or "at expectation" when |t| < AT_EXPECTATION_ABS_T. */
@@ -433,6 +633,8 @@ function peakSentence(G3, peak, classification, gp) {
       // For collapse_recovery the opening clause already states the peak; otherwise say it plainly.
       return classification === 'collapse_recovery' ? null : `GDP per capita peaked in ${G3.peak_year} and is ${f1(G3.shortfall_pct)} percent below that peak.`;
     case 'too_old':
+      // never_recovered: the opening clause states the peak, and here the old peak is the problem, not context
+      if (classification === 'never_recovered') return null;
       return `GDP per capita peaked in ${G3.peak_year}, ${G3.years_since_peak} years ago, and is ${f1(G3.shortfall_pct)} percent below that peak; a peak older than ${g.collapse_max_peak_age_years} years is context here, not the growth problem.`;
     case 'too_shallow':
       return `GDP per capita peaked in ${G3.peak_year} and is ${f1(G3.shortfall_pct)} percent below that peak, a shortfall under ${g.collapse_min_shortfall_pct} percent that is context, not the growth problem.`;
@@ -448,9 +650,30 @@ export function buildStatement({ country, classification, peak = null, G1, G2, G
   const name = proseName(country.name || country.iso3);
   const pk = peak || (G3 ? assessPeak(G3, gp || { collapse_min_peak_age_years: 8, collapse_max_peak_age_years: 30, collapse_min_shortfall_pct: 10 }) : null);
   let problem;
+  const before = isNum(G1.avg_prior_10y) ? f1(G1.avg_prior_10y) : null;
   switch (classification) {
     case 'slowdown':
-      problem = `a slowdown${G4 && G4.reported && G4.direction === 'deceleration' ? ` since ${G4.break_year}` : ' over the last decade'} (10-year average ${f1(G1.avg_10y)} percent against ${f1(G1.avg_20y)} over 20 years)`;
+      problem = `a slowdown${G4 && G4.reported && G4.direction === 'deceleration' ? ` since ${G4.break_year}` : ' over the last decade'} (${f1(G1.avg_10y)} percent a year over the last decade against ${before} in the decade before)`;
+      break;
+    case 'acceleration':
+      problem = `growth that has sped up, from ${before} percent a year in the decade before to ${f1(G1.avg_10y)} in the last decade; the question is whether it lasts`;
+      break;
+    case 'never_recovered':
+      problem = `income that never recovered: GDP per capita is still ${f1(G3.shortfall_pct)} percent below its ${G3.peak_year} peak, ${G3.years_since_peak} years on`;
+      break;
+    case 'stuck':
+      problem = `growth too slow to catch up: ${f1(G1.avg_10y)} percent a year over the last decade${before != null ? ` (${before} in the decade before)` : ''}`;
+      break;
+    case 'steady':
+      problem = `steady but moderate growth: ${f1(G1.avg_10y)} percent a year over the last decade${before != null ? ` (${before} in the decade before)` : ''}, short of the pace that closes income gaps quickly`;
+      break;
+    case 'high_income_pace': {
+      const peers = isNum(G1.structural_median_10y) ? ` (structural-peer median ${f1(G1.structural_median_10y)})` : '';
+      problem = `the modest pace of a high-income economy: ${f1(G1.avg_10y)} percent a year over the last decade${peers}; growth diagnostics is built for economies far from the income frontier, so its readings here call for care`;
+      break;
+    }
+    case 'not_classifiable':
+      problem = 'not classifiable from the available growth record (no 10-year average growth)';
       break;
     case 'collapse_recovery':
       problem = `a collapse after the ${G3.peak_year} peak in GDP per capita, still ${f1(G3.shortfall_pct)} percent below it after ${G3.years_since_peak} years`;
@@ -493,12 +716,10 @@ export function buildStatement({ country, classification, peak = null, G1, G2, G
   }
   const ps = peakSentence(G3, pk, classification, gp);
   if (ps) parts.push(ps);
-  if (G4 && G4.reported) {
-    const article = /^[aeiou]/i.test(G4.direction) ? 'an' : 'a';
-    parts.push(
-      `A simplified single-break test finds ${article} ${G4.direction} in ${G4.break_year}: average growth ${f1(G4.mean_before)} percent before and ${f1(G4.mean_after)} after.`,
-    );
-  }
+  const ls = levelSentence(G3, gp);
+  if (ls) parts.push(ls);
+  const es = erasSentence(G4, gp);
+  if (es) parts.push(es);
   const invT = G6.icr ? G6.icr.t : null;
   parts.push(
     `${sdPhrase(invT, 'Investment (gross fixed capital formation to GDP)')}${isNum(G6.value_ref) ? ` at ${f1(G6.value_ref)} percent of GDP` : ''}; the private-public split is ${G6.private_split}.`,
@@ -517,6 +738,24 @@ export function buildStatement({ country, classification, peak = null, G1, G2, G
   );
   let question;
   switch (classification) {
+    case 'acceleration':
+      question = 'what lifted growth in the last decade, and what could stop it';
+      break;
+    case 'never_recovered':
+      question = `why has GDP per capita not regained its ${G3.peak_year} level, ${G3.years_since_peak} years on`;
+      break;
+    case 'stuck':
+      question = 'why has growth stayed too slow to catch up, and what keeps investment from lifting it';
+      break;
+    case 'steady':
+      question = 'what would it take for growth to run faster than it has';
+      break;
+    case 'high_income_pace':
+      question = 'what limits productivity growth in an economy already near the income frontier';
+      break;
+    case 'not_classifiable':
+      question = 'what holds back faster growth, which the growth record is too short to say';
+      break;
     case 'slowdown':
       question = `why has growth slowed${G4 && G4.reported && G4.direction === 'deceleration' ? ` since ${G4.break_year}` : ' over the last decade'}, and what stopped investment from sustaining it`;
       break;

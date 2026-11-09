@@ -4,7 +4,7 @@
 // that page's HTML, or one of three shell-drawn controls), the words beside it, and sometimes a check question. Every
 // number and rating quoted here is pinned to desk/data/IDN.json and to the rubric by tests/test_tour.py, so a rubric
 // change cannot silently make a stop lie. The stops speak in the tool's voice only: no TNFA view, no "fund this".
-export const RUBRIC = '0.2.9';
+export const RUBRIC = '0.3.0';
 export const TOUR_ISO = 'IDN';
 export const TOUR_COUNTRY = 'Indonesia';
 
@@ -67,9 +67,9 @@ export const TOUR = [
     anchorName: 'the four growth checks',
     say: [
       'Before the tree, the symptom. Indonesia grew about 3.3% a year over the last ten years, and investment runs near 29% of GDP, above what its income predicts (about 1.3 standard deviations). Growth diagnostics asks what limits private investment; when investment is not low, the question is sharper, not moot: what keeps high investment from buying more growth, and which few constraints would matter if investment faltered.',
-      'The tool names the growth problem by checking four patterns in turn: a slowdown, a collapse below an old peak, unusual volatility, fast growth. Indonesia’s 3.3% a year clears the 3% line, so the record reads as growing. Below the checks, each figure is read as a surprise: the gap from what an economy at Indonesia’s income would show, in standard deviations, not the level.',
+      'The tool names the growth problem with four checks: how far income is below an earlier peak, how growth changed from the decade before, how much it swings, and how fast it has been. Indonesia’s 3.3% a year clears the 3% line, so the record reads as growing. Below the checks, each figure is read as a surprise: the gap from what an economy at Indonesia’s income would show, in standard deviations, not the level.',
     ],
-    look: ['The four checks: each dot against its line, and the fourth, fast growth, marked as the one that names the pattern.',
+    look: ['The four checks: each dot against its lines, and the fourth, the pace, marked as the one that names the pattern.',
       'Investment on the strip below: about 1.3 sd above what its income predicts, outside the shaded band.'],
   },
   {

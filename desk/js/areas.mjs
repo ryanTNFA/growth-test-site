@@ -4,7 +4,7 @@
 import { tabHref, refreshNav } from './shell.mjs';
 import { nodeCode, getJSON, loadRegistry, initTheme, h, fmt, fmtSigned, fmtInt, fmtValue, tierClass, TIER_ORDER, parseHash, writeState, qs, unitHint, shortName, sourceLink, sourceLabel, isStale, englishList, downloadText, dataBase, withData, gNorm, reasonClause, DATA_GAP_KINDS, isRegistryGap, SETTING_LABEL } from './common.mjs';
 import { growthChecks, incomeRows } from './growth_read.mjs';
-import { patternChecks, growthChart, incomeStrip } from './components/growth.mjs';
+import { patternChecks, growthChart, incomeStrip, growthStory } from './components/growth.mjs';
 import { renderTree, compactTree } from './tree.mjs';
 import { createCard, plainTier, plainTierOf, PLAIN_TIER, bottomLine, fcsNote, refSpan } from './card.mjs';
 import { robustChip } from './components/marks.mjs';
@@ -237,20 +237,25 @@ function renderGrowth() {
   const cleaned = stmt.replace(/\s*Provisional top-split reading:[^()]*(\([^)]*\))?\.?/g, '').trim();
   $('growth-statement').textContent = cleaned || 'No growth problem statement in the file.';
   const read = growthChecks(g, state.registry.params.growth_problem);
+  // the year's story, drafted by AI and checked in code, when there is one; else the record from the data alone
+  const story = growthStory(state.narrative, sc.meta.snapshot_id);
+  $('growth-story').replaceChildren(...(story ? [story] : []));
   $('growth-pattern').replaceChildren(patternChecks(read));
   const series = sc.series || {};
   $('growth-key').replaceChildren(growthChart($('growth-chart'), { level: series['NY.GDP.PCAP.KD'] || [], growth: series['NY.GDP.PCAP.KD.ZG'] || [], g, name: c }));
   $('growth-income').replaceChildren(incomeStrip(incomeRows(g)));
-  const { g1, g2, g3, g4, g5, g6, g7, g10, g11, g12 } = gn;
+  const { g1, g2, g3, g5, g6, g7, g10, g11, g12 } = gn;
   const cell = (lab, val, sub, na) => h('div', { class: 'stat' }, h('span', { class: 'lab' }, lab), h('span', { class: `val num${na ? ' na' : ''}` }, val), sub ? h('span', { class: 'sub' }, sub) : null);
   const w10 = (g.G1 && g.G1.window_10y) || null;
   const w20 = (g.G1 && g.G1.window_20y) || null;
+  const eras = (g.G4 && Array.isArray(g.G4.eras) ? g.G4.eras : []).filter((e) => e && e.mean != null); // rubric 0.3.0
   $('g-grid').replaceChildren(
     cell(`G1 · growth, 10-year avg${w10 ? ` (${w10[0]}–${w10[1]})` : ''}`, g1.avg10 != null ? `${fmt(g1.avg10, 2)}%` : '—', `20-year${w20 ? ` (${w20[0]}–${w20[1]})` : ''} ${fmt(g1.avg20, 2)}% · peers ${fmt(g1.peers10, 2)}% · region ${fmt(g1.region10, 2)}%${g1.years10 && w10 && (g1.years10[0] !== w10[0] || g1.years10[1] !== w10[1]) ? ` · observed ${g1.years10[0]}–${g1.years10[1]}` : ''}`),
     cell('G1 · rank among structural peers', g1.rank != null ? `${g1.rank} of ${g1.n}` : '—', 'by 10-year average growth'),
     cell('G2 · convergence residual', fmtSigned(g2.t, 2), `t · Huber, region dummies${g2.n ? ` · n ${g2.n}` : ''}`),
     cell('G3 · peak year', g3.peakYear ?? '—', g3.yearsSince != null ? `${g3.yearsSince} years ago · ${fmt(g3.shortfall, 1)}% below peak` : ''),
-    cell('G4 · growth break', g4.reported ? String(g4.breakYear) : 'none', g4.change != null ? `${fmtSigned(g4.change, 2)} pp (${fmt(g4.before, 1)} → ${fmt(g4.after, 1)}) · ${g4.method}` : '', !g4.reported),
+    cell(`G4 · eras since ${eras.length ? eras[0].from : 1990}`, eras.length ? String(eras.length) : 'none',
+      eras.map((e) => `${e.from}–${e.to} ${fmt(e.mean, 1)}%`).join(' · '), !eras.length),
     cell('G5 · volatility (s.d., 20y)', fmt(g5.sd, 2), `peers median ${fmt(g5.peers, 2)} · universe pct ${g5.pct == null ? '—' : Math.round(g5.pct)}`),
     cell('G6 · investment residual', fmtSigned(g6.t, 2), `GFCF ${fmt(g6.value, 1)}% of GDP (${g6.year != null ? `${g6.year - 2}–${String(g6.year).slice(2)} average` : '—'}) · private split unavailable`),
     cell('G7 · savings residual', fmtSigned(g7.savings.t, 2), `savings ${fmt(g7.savings.value, 1)}% · CAB ${fmtSigned(g7.cab.value, 1)}% · FDI ${fmt(g7.fdi.value, 1)}%`),

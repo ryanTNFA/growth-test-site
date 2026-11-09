@@ -1,6 +1,6 @@
 {
   "_comment": "Rubric parameters v0.1.4 (Workbook Appendix B as corrected by docs/CHANGELOG-rubric.md). Every number here is a starting point to be calibrated in Phase 0. The engine must read all thresholds from this file; nothing numeric is hard-coded.",
-  "rubric_version": "0.2.9",
+  "rubric_version": "0.3.0",
   "snapshot_reference_window_years": 12,
   "icr": {
     "controls": [
@@ -173,23 +173,32 @@
     "override_when_rate_low": true
   },
   "growth_problem": {
-    "_comment": "v0.1.2: the G1 and G5 windows end at the latest year with any growth observation in the universe (window_anchor = latest_observed_year), so '10 years' means 2016-2025 on the 2026-10-24 snapshot; the convergence regression's initial year is the window's first year minus one. v0.1.1: collapse_max_peak_age_years, collapse_min_shortfall_pct and the growing rule (growing_*) are new; slowdown_min_gap_pp, collapse_min_peak_age_years and volatile_min_universe_percentile carry the v0.1 spec values unchanged and are only moved here from the engine code.",
+    "_comment": "v0.3.0 (rubric 0.3.0, 9 November 2026): a slowdown compares the last decade with the decade before (two windows that do not overlap; 0.2.9 compared the 10- and 20-year averages, so its 1.5-point gap needed a 3-point fall), and a collapse is tried before a slowdown, and five patterns are added for the records that fitted none: acceleration (growth sped up by 2 points or more), never_recovered, high_income_pace, stuck and steady, with not_classifiable where there is no 10-year average. G4 is the growth record in eras since 1990 (least-squares breaks, each era at least 8 years and 2 points from the one before), replacing the single break across the whole series; G3 gains the first year income reached roughly today's level. v0.1.2: the G1 and G5 windows end at the latest year with any growth observation in the universe (window_anchor = latest_observed_year). v0.1.1: collapse_max_peak_age_years, collapse_min_shortfall_pct and the growing rule (growing_*).",
     "window_anchor": "latest_observed_year",
     "growth_windows_years": [
       10,
       20
     ],
     "volatility_window_years": 20,
-    "break_min_segment_years": 8,
-    "break_min_change_pp": 2.0,
-    "slowdown_min_gap_pp": 1.5,
+    "slowdown_min_drop_pp": 2.0,
     "collapse_min_peak_age_years": 8,
     "collapse_max_peak_age_years": 30,
     "collapse_min_shortfall_pct": 10,
+    "acceleration_min_rise_pp": 2.0,
+    "acceleration_min_growth_pct": 2.0,
     "volatile_min_universe_percentile": 75,
     "growing_min_growth_pct": 3,
     "growing_alt_min_convergence_t": 1.0,
-    "growing_alt_min_growth_pct": 2
+    "growing_alt_min_growth_pct": 2,
+    "never_recovered_min_shortfall_pct": 20,
+    "high_income_pace_min_growth_pct": 0,
+    "stuck_max_growth_pct": 1.5,
+    "eras_start_year": 1990,
+    "eras_min_years": 8,
+    "eras_min_change_pp": 2.0,
+    "eras_max_breaks": 3,
+    "level_reached_tolerance_pct": 2,
+    "level_line_min_years": 5
   },
   "settings": {
     "_comment": "Rubric 0.1.8 (front-door PRD W4, docs/calibration-review.md sections 4.4 and 4.5): three named readings of the same evidence. Each setting overrides params.tiers; standard overrides nothing and is the release, the default and the only citable reading. The asymmetry is enforced by the engine (aggregate.mjs paramsForSetting): no setting may loosen the bars for probably_not or ruled_out, or let a node leave cannot_tell with fewer voting families, below standard. None of the three is calibrated until the retrospective (W6) reports.",

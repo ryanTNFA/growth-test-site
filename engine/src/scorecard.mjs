@@ -20,7 +20,7 @@ import { evaluateNode, rollupNode, rankNodes, statements, bootstrapRanks, applyT
 import { topSplit, RATE_SOURCES } from './topsplit.mjs';
 import { growthUniverse, growthProblem } from './growth.mjs';
 
-export const ENGINE_VERSION = '0.1.9';
+export const ENGINE_VERSION = '0.2.0';
 export const DEFAULT_SETS = ['structural', 'regional', 'aspirational'];
 export const DESK_SERIES = ['NY.GDP.PCAP.KD', 'NY.GDP.PCAP.KD.ZG', 'NE.GDI.FTOT.ZS', 'FR.INR.RINR', 'FS.AST.PRVT.GD.ZS', 'FP.CPI.TOTL.ZG'];
 export const RATIONING_INDICATOR = 'IC.FRM.CRDC.FL.ZS';
@@ -199,6 +199,16 @@ export function readingsForSet(ind, setName) {
 }
 
 /**
+ * The workbook 4.7 band for a camels percentile, before the 2-SE gate: oriented so that the binding side scores
+ * positive (direction -1: low theta binds); <= 10 -> +2, <= 25 -> +1, >= 90 -> -2, >= 75 -> -1, else 0. Shared by
+ * camelsSignal and the Desk's camel ruler (camelRulers), so the two cannot disagree.
+ */
+export function camelsBand(pct, direction) {
+  const p = direction === -1 ? pct : 100 - pct;
+  return p <= 10 ? 2 : p <= 25 ? 1 : p >= 90 ? -2 : p >= 75 ? -1 : 0;
+}
+
+/**
  * Workbook 4.7 camels-and-hippos signal: the percentile of theta's reference value among all economies with one,
  * oriented so that the binding side scores positive (registry direction -1: low theta binds); <= 10 -> +2, <= 25 -> +1,
  * >= 90 -> -2, >= 75 -> -1, else 0. Zero when |theta| < 2 SE in the latest year (the SE series is registry `se_id`).
@@ -209,13 +219,58 @@ export function camelsSignal(ctx, ind, iso3, r) {
   const all = cache[ind.id];
   const below = all.filter((v) => v < r.value_ref).length, ties = all.filter((v) => v === r.value_ref).length;
   const pct = all.length > 1 ? (100 * (below + 0.5 * (ties - 1))) / (all.length - 1) : 50;
-  const p = ind.direction === -1 ? pct : 100 - pct;
-  let signal = p <= 10 ? 2 : p <= 25 ? 1 : p >= 90 ? -2 : p >= 75 ? -1 : 0;
+  let signal = camelsBand(pct, ind.direction);
   const se = ind.se_id && ctx.refs[ind.se_id] && ctx.refs[ind.se_id][iso3];
   const seLatest = se && se.available && se.year === r.year ? se.value : null;
   const gated = signal !== 0 && (!isNum(seLatest) || Math.abs(r.value) < 2 * seLatest);
   if (gated) signal = 0;
   return { signal_rule: 'workbook_4.7_percentile', camels_percentile: pct, camels_se: isNum(seLatest) ? seLatest : null, camels_gated: gated, signal };
+}
+
+/**
+ * The camel ruler (Ryan, 9 November 2026: show what counts as a camel): for every indicator scored by the workbook 4.7
+ * percentile rule, every economy's reference theta ranked as camelsSignal ranks it, its band, the latest-year theta and
+ * SE the 2-SE gate reads, and the signal camelsSignal gives (computed for class X indicators too, as a "would score";
+ * the Desk says those are not counted). edges are the band boundaries in theta units, each midway between the last
+ * economy in one band and the first in the next. Rows are sorted from the most camels (rank 1) to the most hippos.
+ * Returns {[indicator id]: ruler}; the CLI writes each to desk/data/ruler/{id}.json.
+ */
+export function camelRulers(ctx) {
+  const out = {};
+  for (const ind of ctx.registry.indicators) {
+    if (ind.scoring !== 'camels_percentile') continue;
+    const refs = ctx.refs[ind.id] || {};
+    const rows = [];
+    for (const iso3 of Object.keys(refs).sort()) {
+      const r = refs[iso3];
+      if (!r || !r.available || !isNum(r.value_ref)) continue;
+      const cs = camelsSignal(ctx, ind, iso3, r);
+      const se = cs.camels_se;
+      const band = camelsBand(cs.camels_percentile, ind.direction);
+      rows.push({ iso3, value_ref: r.value_ref, year_ref: r.year_ref, value: isNum(r.value) ? r.value : null, year: r.year ?? null, se,
+        percentile: cs.camels_percentile, band, clear: isNum(se) && isNum(r.value) && Math.abs(r.value) >= 2 * se, signal: cs.signal, n_ref: r.n_ref ?? null });
+    }
+    // rank 1 = most camels: lowest theta when low binds (direction -1), highest when high binds
+    rows.sort((a, b) => (ind.direction === -1 ? a.value_ref - b.value_ref : b.value_ref - a.value_ref) || cmpIso(a.iso3, b.iso3));
+    const edges = [];
+    for (let i = 1; i < rows.length; i++) {
+      // at: where the bands meet, for drawing; inner: the last value inside the band it leaves (an economy must pass it to
+      // take that rank and band: the band follows rank, so the midpoint alone is not enough)
+      if (rows[i].band !== rows[i - 1].band) edges.push({ at: (rows[i].value_ref + rows[i - 1].value_ref) / 2, inner: rows[i - 1].value_ref, from: rows[i - 1].band, to: rows[i].band });
+    }
+    out[ind.id] = {
+      id: ind.id, name: ind.name, class: ind.class, direction: ind.direction, nodes: ind.nodes || [], family: ind.family,
+      snapshot_year: ctx.snapshotYear, n: rows.length, edges: edges.map((e) => ({ ...e, at: sig6(e.at), inner: sig6(e.inner) })),
+      columns: ['iso3', 'value_ref', 'year_ref', 'value', 'year', 'se', 'percentile', 'band', 'clear', 'signal', 'n_ref'],
+      // six significant figures: the ranks, bands and gates above are computed at full precision; the Desk only prints them
+      rows: rows.map((r) => [r.iso3, sig6(r.value_ref), r.year_ref, sig6(r.value), r.year, sig6(r.se), sig6(r.percentile), r.band, r.clear, r.signal, r.n_ref]),
+    };
+  }
+  return out;
+}
+
+function cmpIso(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
 }
 
 /**

@@ -318,11 +318,146 @@ export function drawBypass(host, ctx) {
   return { csv, text };
 }
 
+// ---------- the camel ruler (test 4: what counts as a camel) ----------
+// Ryan, 9 November 2026: the scatter "doesn't really tell me the story quickly"; show what our threshold is for a camel,
+// for every place the test is used. Every number comes from the engine's ruler file (engine/src/scorecard.mjs
+// camelRulers, desk/data/ruler/{id}.json): each economy's average tilt ranked as the rating ranks it, the band edges in
+// theta units, and the latest-year tilt and standard error the 2-SE check reads. Nothing is recomputed here.
+const BAND_WORDS = { 2: 'strong camels', 1: 'camels', 0: 'neither camels nor hippos', '-1': 'hippos', '-2': 'strong hippos' };
+const BAND_SHORT = { 2: 'strong camels', 1: 'camels', 0: 'neither', '-1': 'hippos', '-2': 'strong hippos' };
+const ordinalN = (n) => `${n}${n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th'}`;
+const th = (v) => fmtSigned(v, 3);
+
+/**
+ * What the rank rests on: the reference value is the mean of the years with data in the three years to year_ref.
+ * @param {any} r the rulerRow
+ */
+export function tiltSpan(r) {
+  if (!r.year_ref) return 'its average tilt';
+  if (r.n_ref === 1) return `its ${r.year_ref} tilt (one year of data)`;
+  if (r.n_ref === 2) return `its average tilt over the two years with data, to ${r.year_ref}`;
+  return `its average tilt, ${r.year_ref - 2}–${r.year_ref}`;
+}
+
+/**
+ * The economy's row of a ruler file, with its rank (1 = most camels) and the thresholds, or null.
+ * @param {any} ruler @param {string} iso
+ */
+export function rulerRow(ruler, iso) {
+  if (!ruler || !Array.isArray(ruler.rows)) return null;
+  const C = ruler.columns || ['iso3', 'value_ref', 'year_ref', 'value', 'year', 'se', 'percentile', 'band', 'clear', 'signal', 'n_ref'];
+  const at = (r) => Object.fromEntries(C.map((k, i) => [k, r[i]]));
+  const i = ruler.rows.findIndex((r) => r[0] === iso);
+  if (i < 0) return null;
+  const edges = ruler.edges || [];
+  // the band edge a camel must pass (camel side to neither), and a hippo (neither to hippo side), in rank order
+  const camelEdge = edges.find((e) => e.from > 0 && e.to <= 0), hippoEdge = edges.find((e) => e.from >= 0 && e.to < 0);
+  // the strong lines: into the most camel-like 10 percent, and into the most hippo-like
+  const strongCamel = edges.find((e) => e.from === 2), strongHippo = edges.find((e) => e.to === -2);
+  // the values to pass: the last economy now inside the camel (hippo) side, whose rank and band a newcomer would take
+  return { ...at(ruler.rows[i]), rank: i + 1, n: ruler.n, camelEdge: camelEdge ? camelEdge.inner ?? camelEdge.at : null,
+    hippoEdge: hippoEdge ? hippoEdge.inner ?? hippoEdge.at : null,
+    strongCamelEdge: strongCamel ? strongCamel.at : null, strongHippoEdge: strongHippo ? strongHippo.at : null,
+    first: at(ruler.rows[0]), last: at(ruler.rows[ruler.rows.length - 1]) };
+}
+
+/**
+ * The ruler in words: a headline, whether it counts, and what it would take to count.
+ * @param {any} r the rulerRow @param {{name: string, votes: boolean, direction: number}} o
+ */
+export function rulerWords(r, { name, votes, direction }) {
+  // a threshold printed to three decimals can round onto the economy's own value: then four
+  const thr = (x) => (Number(x.toFixed(3)) === Number(r.value_ref.toFixed(3)) ? fmtSigned(x, 4) : th(x));
+  const band = r.band, side = band > 0 ? 'camels' : band < 0 ? 'hippos' : null;
+  const twoSe = isNum(r.se) ? 2 * r.se : null;
+  const zero = twoSe == null ? `its ${r.year} tilt has no standard error, so it cannot be told from zero`
+    : `its ${r.year} tilt is ${th(r.value)}, ${r.clear ? 'more' : 'less'} than ${fmt(twoSe, 3)} from zero`;
+  let head = `${BAND_WORDS[band][0].toUpperCase()}${BAND_WORDS[band].slice(1)}: ${ordinalN(r.rank)} of ${r.n}`;
+  if (side && !r.clear) head += ', but too close to zero to count';
+  if (votes) head += `; scores ${band === 0 || !r.clear ? '0' : fmtSigned(r.signal, 0)}`;
+  const beyond = direction === -1 ? 'below' : 'above';
+  let need = '';
+  const where = { 2: 'the most camel-like 10 percent', 1: 'the most camel-like quarter', '-1': 'the most hippo-like quarter', '-2': 'the most hippo-like 10 percent' };
+  if (side && r.clear) {
+    // a measure outside the rating would count, not counts
+    const counts = votes ? 'It counts as' : 'It would count as';
+    need = `${counts} ${Math.abs(band) === 2 ? 'strong ' : ''}${side}${votes ? '' : ' if this measure were in the rating'}: its average tilt, ${th(r.value_ref)}, `
+      + `is in ${where[band]} of economies, and ${zero}.`;
+  }
+  else if (side && twoSe != null) {
+    need = `Its average tilt, ${th(r.value_ref)}, is in the ${side} band, but its ${r.year} tilt, ${th(r.value)}, is within ${fmt(twoSe, 3)} of zero `
+      + '(two standard errors), so it does not count.';
+  } else if (side) need = `Its average tilt, ${th(r.value_ref)}, is in the ${side} band, but ${zero}, so it does not count.`;
+  else if (r.camelEdge != null) {
+    need = `To count as camels, ${name} would need an average tilt ${beyond} ${thr(r.camelEdge)} (it has ${th(r.value_ref)})`
+      + (twoSe == null ? ', and a standard error for its latest tilt.' : ` and a ${r.year} tilt more than ${fmt(twoSe, 3)} from zero (it has ${th(r.value)}).`);
+  }
+  return { head, need, counted: votes };
+}
+
+/**
+ * The ruler: every economy's average tilt on the five scoring bands, the economy's dot, and below it whether its latest
+ * tilt is clear of zero (the hatch is plus and minus two standard errors around zero).
+ * @param {any} ruler @param {any} r the rulerRow @param {{name: string, iso: string, width: number, pal: any, votes: boolean, nameOf: (iso: string) => string}} o
+ */
+export function rulerSvg(ruler, r, { name, iso, width, pal, votes, nameOf }) {
+  const W = Math.max(300, width), narrow = W < 520, L = 8, R = 8;
+  const refs = ruler.rows.map((x) => x[1]);
+  const twoSe = isNum(r.se) ? 2 * r.se : null;
+  const lim = Math.max(...refs.map(Math.abs), isNum(r.value) ? Math.abs(r.value) + (twoSe || 0) : 0) * 1.06 || 1;
+  const X = (v) => L + ((v + lim) / (2 * lim)) * (W - L - R);
+  const A0 = 22, AH = 22, B = 128, H = 152;
+  const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: 'cr-svg', role: 'img',
+    'aria-label': `${name}: ${BAND_WORDS[r.band]}, ${ordinalN(r.rank)} of ${r.n} by average tilt; its ${r.year} tilt is ${r.clear ? 'clear of' : 'too close to'} zero.` });
+  const add = (tag, a, t) => { const e = svgEl(tag, a); if (t != null) e.textContent = t; svg.append(e); return e; };
+  // the five bands, from the edges in theta order; camel side in the binding tint, hippo side in the fit's
+  const cuts = [...(ruler.edges || [])].sort((a, b) => a.at - b.at);
+  const lowBand = ruler.direction === -1 ? r.first.band : r.last.band;
+  const segs = []; let from = -lim, band = lowBand;
+  for (const e of cuts) { segs.push({ a: from, b: e.at, band }); from = e.at; band = ruler.direction === -1 ? e.to : e.from; }
+  segs.push({ a: from, b: lim, band });
+  const tint = (b) => (b > 0 ? pal.binding : b < 0 ? pal.fit : null);
+  const op = (b) => (Math.abs(b) === 2 ? 0.34 : 0.15) * (votes ? 1 : 0.6);
+  for (const g of segs) {
+    if (tint(g.band)) add('rect', { x: X(g.a), y: A0, width: Math.max(0, X(g.b) - X(g.a)), height: AH, fill: tint(g.band), 'fill-opacity': op(g.band) });
+    const word = BAND_SHORT[g.band], mid = (X(g.a) + X(g.b)) / 2;
+    if (X(g.b) - X(g.a) > word.length * 6.2 + 6) add('text', { x: mid, y: A0 - 6, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, word);
+  }
+  add('rect', { x: L, y: A0, width: W - L - R, height: AH, fill: 'none', stroke: pal.other, 'stroke-opacity': 0.5 });
+  for (const v of refs) add('line', { x1: X(v), x2: X(v), y1: A0 + 5, y2: A0 + AH - 5, stroke: pal.text, 'stroke-opacity': 0.3 });
+  add('line', { x1: X(0), x2: X(0), y1: A0 - 2, y2: B + 14, stroke: pal.text, 'stroke-opacity': 0.5, 'stroke-dasharray': '2 3' });
+  // the economy, and the most camel-like and most hippo-like economies at the ends (Ryan's #1 and #n)
+  add('circle', { cx: X(r.value_ref), cy: A0 + AH / 2, r: 6.5, fill: pal.focus, stroke: pal.surface, 'stroke-width': 2 });
+  const lab = `${narrow ? iso : name}, ${ordinalN(r.rank)}`, lw = lab.length * 6.6;
+  add('text', { x: Math.min(W - R - lw / 2, Math.max(L + lw / 2, X(r.value_ref))), y: A0 + AH + 15, 'text-anchor': 'middle', 'font-size': 11.5, 'font-weight': 600, fill: pal.focusInk }, lab);
+  const end = (row, right) => `${right ? '' : '◀ '}${narrow ? row.iso3 : nameOf(row.iso3)}, most ${row === r.first ? 'camels' : 'hippos'}${right ? ' ▶' : ''}`;
+  const lo = ruler.direction === -1 ? r.first : r.last, hi = ruler.direction === -1 ? r.last : r.first;
+  add('text', { x: L, y: A0 + AH + 31, 'font-size': 10.5, fill: pal.muted }, end(lo, false));
+  add('text', { x: W - R, y: A0 + AH + 31, 'text-anchor': 'end', 'font-size': 10.5, fill: pal.muted }, end(hi, true));
+  // clear of zero? the latest tilt with two standard errors either side, against the hatch of plus and minus 2 SE
+  add('text', { x: L, y: B - 24, 'font-size': 11, fill: pal.text }, narrow ? `Clear of zero? ${r.year} tilt ± 2 se` : `Clear of zero? Its ${r.year} tilt, ± 2 standard errors`);
+  const pid = `cr-hatch-${iso}-${ruler.id}`.replace(/[^A-Za-z0-9-]/g, '-');
+  const defs = add('defs', {});
+  const pat = svgEl('pattern', { id: pid, width: 6, height: 6, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' });
+  pat.append(svgEl('line', { x1: 0, y1: 0, x2: 0, y2: 6, stroke: pal.other, 'stroke-width': 1.5, 'stroke-opacity': 0.7 }));
+  defs.append(pat);
+  if (twoSe != null) {
+    add('rect', { x: X(-twoSe), y: B - 9, width: X(twoSe) - X(-twoSe), height: 18, fill: `url(#${pid})` });
+    add('text', { x: X(0), y: B + 24, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, 'too close to zero to count');
+  } else {
+    add('rect', { x: L, y: B - 9, width: W - L - R, height: 18, fill: `url(#${pid})` });
+    add('text', { x: X(0), y: B + 24, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, 'no standard error: cannot be told from zero');
+  }
+  if (isNum(r.value)) {
+    if (twoSe != null) add('line', { x1: X(r.value - twoSe), x2: X(r.value + twoSe), y1: B, y2: B, stroke: pal.focus, 'stroke-width': 2 });
+    add('circle', { cx: X(r.value), cy: B, r: 5.5, fill: r.clear ? pal.focus : pal.surface, stroke: pal.focus, 'stroke-width': 2 });
+  }
+  return svg;
+}
+
 // ---------- C12 camels and hippos (test 4) ----------
 /** Which intensity vectors speak to which node (ingest/camels.py writes them). */
 export const CAMEL_VECTORS = { N0: ['finance_dependence', 'intangibility'], N3: ['finance_dependence', 'intangibility'], N4: ['schooling'], N5: ['electricity'], N6: ['time_sensitivity'], 'N11.property': ['contract_intensity'] };
-/** 1-based rank from the most camels (lowest theta), from the stored percentile. */
-const camelRank = (pn) => Math.round((pn.pctile / 100) * (pn.n - 1)) + 1;
 export const CAMEL_FACTOR = { finance_dependence: 'external finance', schooling: 'skilled workers', time_sensitivity: 'fast, reliable transport', contract_intensity: 'enforceable contracts', intangibility: 'lending without collateral', electricity: 'electricity' };
 
 /**
@@ -331,9 +466,29 @@ export const CAMEL_FACTOR = { finance_dependence: 'external finance', schooling:
  * income predicts (ln(1 + RCA) residual, y). The slope is theta. A falling line is the camels pattern.
  */
 export function drawCamels(host, ctx) {
-  const { P, pal, width: w0, countryName, panels } = ctx;
+  const { P, pal, width: w0, countryName, panels, iso, nameOf } = ctx;
   host.replaceChildren();
   const width = Math.max(320, w0);
+  // the answer first: one ruler per factor, then the products behind it (Ryan, 9 November 2026)
+  const rulerBlocks = [];
+  for (const pn of panels) {
+    const r = rulerRow(pn.ruler, iso);
+    pn.rr = r;
+    if (!r) continue;
+    const factor = CAMEL_FACTOR[pn.name] || 'the factor';
+    const w = rulerWords(r, { name: countryName, votes: pn.votes, direction: pn.ruler.direction });
+    rulerBlocks.push(h('div', { class: 'cr' },
+      h('p', { class: 'cr-k' }, `${pn.label.charAt(0).toUpperCase() + pn.label.slice(1)}`),
+      h('p', { class: 'cr-head' }, w.head),
+      h('p', { class: 'cr-chip' }, pn.votes ? `Counted in the rating${pn.fam && pn.fam.node ? ` (${pn.fam.node})` : ''}.`
+        : 'Shown, not counted in the rating: this measure has not passed its placebo check.'),
+      h('p', { class: 'cr-row' }, `Where ${countryName} ranks: ${tiltSpan(r)}, among ${r.n} economies (1 = exports lean furthest from products that need ${factor})`),
+      rulerSvg(pn.ruler, r, { name: countryName, iso, width, pal, votes: pn.votes, nameOf }),
+      w.need ? h('p', { class: 'cr-need' }, w.need) : null));
+  }
+  // the rulers go in their own host, outside the chart's role="img" box, so screen readers read them as text
+  const rhost = ctx.rulerHost || null;
+  if (rhost) rhost.replaceChildren(...(rulerBlocks.length ? [h('div', { class: 'cr-list' }, ...rulerBlocks), h('p', { class: 'cr-products' }, 'The products behind it')] : []));
   const cols = width >= 760 && panels.length > 1 ? 2 : 1;
   const cw = Math.floor((width - (cols - 1) * 24) / cols);
   const built = [], csv = ['vector,hs4,product,intensity_percentile,export_residual_ln1p_rca'], lines = [];
@@ -374,7 +529,8 @@ export function drawCamels(host, ctx) {
         // textAnchor and dx are constants in Plot, so labels right of 70 get their own mark and read leftward.
         ...[[lab.filter((d) => d.x <= 70), 'start', 6], [lab.filter((d) => d.x > 70), 'end', -6]].map(([ls, anchor, dx]) => P.text(ls, { x: 'x', y: (d) => clip(d.y), text: (d) => trunc(d.name.replace(/;.*$/, ''), 24), dx, textAnchor: anchor, fontSize: 10, fill: pal.text, stroke: pal.surface, strokeWidth: 3, paintOrder: 'stroke' })),
         P.text([trunc(`${pn.label}`, Math.floor(cw / 7))], { frameAnchor: 'top-left', dx: -44, dy: -48, fontSize: 12, fontWeight: 600, fill: pal.text }),
-        P.text([`θ = ${fmtSigned(pn.theta, 3)} (se ${fmt(pn.se, 3)}) · rank ${camelRank(pn)} of ${pn.n}, 1 = most camels · ${pn.year}${isNum(pn.coverage) ? ` · covers ${Math.round(pn.coverage * 100)}% of exports` : ''}`], { frameAnchor: 'top-left', dx: -44, dy: -31, fontSize: 10.5, fill: pal.muted }),
+        // the rank lives in the ruler above (the engine's); here, what the dots and the line are
+        P.text([trunc(`Each dot is a product; the line is the ${pn.year} tilt, θ = ${fmtSigned(pn.theta, 3)} (se ${fmt(pn.se, 3)})${isNum(pn.coverage) ? ` · covers ${Math.round(pn.coverage * 100)}% of exports` : ''}`, Math.floor(cw / 5.9))], { frameAnchor: 'top-left', dx: -44, dy: -31, fontSize: 10.5, fill: pal.muted }),
         P.text(['↑ exports more than income predicts'], { frameAnchor: 'top-left', dx: -44, dy: -9, fontSize: 10.5, fill: pal.muted }),
         P.tip(rows, P.pointer({ x: 'x', y: (d) => clip(d.y), title: (d) => `${d.name} (HS ${d.code})\nIntensity: ${Math.round(d.x)}th percentile of products\nExports ${d.y >= 0 ? 'above' : 'below'} what income predicts by ${fmt(Math.abs(d.y), 2)} in ln(1 + RCA)` })),
       ],
@@ -405,10 +561,15 @@ export function drawCamels(host, ctx) {
     const miss = (pn.unscored || []).filter((u) => u[1] >= 0.02).map((u) => `${u[2] ? lower(String(u[2]).replace(/;.*$/, '')) : `unspecified goods (HS ${u[0]})`} (${Math.round(u[1] * 100)}%)`);
     const cover = isNum(pn.coverage) ? ` The products it scores make up ${Math.round(pn.coverage * 100)}% of ${countryName}'s ${pn.year} goods exports${miss.length ? `; not scored: ${miss.join(', ')}` : ''}.` : '';
     const f = pn.fam;
+    // the rank and percentile are the engine's (the ruler file): its average tilt among every economy with one
+    const r = pn.rr;
+    const pct = r ? r.percentile : pn.pctile, n = r ? r.n : pn.n;
+    const gated = r ? r.band !== 0 && !r.clear : Math.abs(pn.theta) < 2 * pn.se;
     const inRating = pn.votes && f && isNum(f.signal)
-      ? ` In the rating it enters ${f.node} as <strong>${fmtSigned(f.signal, 1)}</strong>: its θ is at the ${ordinal(Math.round(pn.pctile))} percentile of ${pn.n} economies${f.signal === 0 ? (Math.abs(pn.theta) < 2 * pn.se ? ', and within two standard errors of zero, so it scores 0' : ', between the bands that score') : ''} (the workbook's percentile bands: 10th or below +2, 25th +1, 75th −1, 90th or above −2, oriented so camels point toward binding).`
+      ? ` In the rating it enters ${f.node} as <strong>${fmtSigned(f.signal, 1)}</strong>: its average tilt is at the ${ordinal(Math.round(pct))} percentile of ${n} economies${f.signal === 0 ? (gated ? ', and its latest tilt is within two standard errors of zero, so it scores 0' : ', between the bands that score') : ''} (the workbook's percentile bands: 10th or below +2, 25th +1, 75th −1, 90th or above −2, oriented so camels point toward binding).`
       : ' It is shown here but not counted in the rating: this vector did not pass its placebo check (see the rubric changelog).';
-    return `<strong>${pn.label.charAt(0).toUpperCase() + pn.label.slice(1)}</strong>: θ = ${fmtSigned(pn.theta, 3)} (se ${fmt(pn.se, 3)}, clustered by ${pn.se_cluster || 'source industry'}), ${pattern}. It ranks ${ordinal(camelRank(pn))} of ${pn.n} economies counting from the most camels.${cover}${inRating}`;
+    const rank = r ? ` It ranks ${ordinal(r.rank)} of ${r.n} economies counting from the most camels, by ${tiltSpan(r)}.` : '';
+    return `<strong>${pn.label.charAt(0).toUpperCase() + pn.label.slice(1)}</strong>: θ = ${fmtSigned(pn.theta, 3)} in ${pn.year} (se ${fmt(pn.se, 3)}, clustered by ${pn.se_cluster || 'source industry'}), ${pattern}.${rank}${cover}${inRating}`;
   };
   return { csv, text: lines.map(say).join('<br>') };
 }

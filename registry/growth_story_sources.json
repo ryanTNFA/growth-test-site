@@ -1,0 +1,23 @@
+{
+  "_comment": "Where the annual growth story may look, and how recent its sources must be (Ryan, 9 November 2026: no story resting on two old reports; UN sources as the fallback for small economies; data only as the last resort). Tier 2 is searched only when tier 1 gives fewer than min_recent_sources recent sources; with fewer across both, no AI story is written (tier 3) and the page shows the pattern, the eras and the level line from the data. A domain covers its subdomains. synth/check_sources.py enforces every rule here in code.",
+  "recent_years": 3,
+  "since_last_year_months": 18,
+  "min_recent_sources": 2,
+  "max_quote_words": 25,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "Institutions",
+      "domains": ["imf.org", "worldbank.org", "growthlab.hks.harvard.edu", "mcc.gov", "oecd.org", "afdb.org", "adb.org", "iadb.org", "ebrd.com", "caribank.org"]
+    },
+    {
+      "tier": 2,
+      "name": "The United Nations",
+      "domains": ["cepal.org", "unescap.org", "uneca.org", "unescwa.org", "unece.org", "unctad.org", "undp.org", "un.org"]
+    }
+  ],
+  "banned_phrases": [
+    "should fund", "should invest", "invest in", "prioritize spending", "prioritise spending", "we recommend", "recommend that",
+    "the binding constraint", "is binding", "likely binding", "binds growth"
+  ]
+}

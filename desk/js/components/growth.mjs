@@ -1,14 +1,15 @@
 // @ts-check
 // The growth problem, drawn (Ryan, 8 November 2026: the section "feels pretty dull, given its importance"). Three
 // pictures on the Areas page, each from numbers already in the data file (growth_read.mjs arranges them):
-//   patternChecks: the four patterns the engine checks in order, each a track with the zone where it fits, the line
-//     and the economy's dot; the first that fits names the growth problem.
+//   patternChecks: the pattern, the record in one line (its eras), and the four checks that find the engine's patterns
+//     (rubric 0.3.0), each a track with the zones where a pattern fits, the lines and the economy's dot.
 //   growthChart: income per person and growth each year on one time axis, the last 30 years unless the reader asks
-//     for all; the last 10 and 20 years shaded, their averages drawn across them and labelled at the right, the peer
-//     median beside them; drawn at the width it is given.
+//     for all; the last decade and the decade before shaded, their averages drawn across them and labelled at the
+//     right, the peer median beside them; the eras since 1990 split by dashed lines, each with its average at the top;
+//     drawn at the width it is given.
 //   incomeStrip: the figures the statement reads against income, one dot each on a shared scale of standard deviations.
 import { h, fmt, fmtSigned } from '../common.mjs';
-import { sdText, outside, gapSentence } from '../growth_read.mjs';
+import { sdText, outside, gapSentence, storyState } from '../growth_read.mjs';
 
 const SVG = 'http://www.w3.org/2000/svg';
 /** @param {string} tag @param {Record<string, any>} attrs @param {string | null} [text] */
@@ -19,12 +20,71 @@ function s(tag, attrs, text = null) {
   return e;
 }
 
+// ---------- the growth story (drafted by AI once a year, checked in code; synth/README.md) ----------
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+/** "9 November 2026" from "2026-11-09" @param {string} d */
+const longDate = (d) => {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(d || ''));
+  return m ? `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}` : String(d || '');
+};
+
+/**
+ * The sources of a thread, as short links: "IMF, 2025". Only https links are drawn.
+ * @param {any[]} cites
+ */
+function sourceLinks(cites) {
+  // one link per document: several passages from one report read as one source
+  const seen = new Set();
+  const xs = (Array.isArray(cites) ? cites : []).filter((c) => c && /^https:\/\//.test(String(c.url || '')) && !seen.has(c.url) && seen.add(c.url));
+  if (!xs.length) return null;
+  const parts = [];
+  xs.forEach((c, i) => {
+    if (i) parts.push('; ');
+    const text = `${c.publisher || 'source'}, ${String(c.date || '').slice(0, 4)}`;
+    parts.push(h('a', { href: c.url, rel: 'noopener', target: '_blank', title: c.title || '' }, text));
+  });
+  return h('span', { class: 'gs-src' }, ' (', ...parts, ')');
+}
+
+/**
+ * The year's growth story for the economy, or null when the page should show only the record from the data.
+ * @param {any} narrative the narrative file (or null) @param {string} snapshotId
+ */
+export function growthStory(narrative, snapshotId) {
+  const state = storyState(narrative, snapshotId);
+  if (!['checked', 'reviewed', 'stale'].includes(state)) return null;
+  const st = narrative.growth_story, meta = st.meta || {};
+  const threads = Array.isArray(st.threads) ? st.threads : [];
+  const sinceCites = (st.since_last_year && st.since_last_year.citations) || [];
+  const n = new Set([...threads.flatMap((t) => (t.citations || []).map((c) => c.url)), ...sinceCites.map((c) => c.url)]).size;
+  // Ryan, 9 November 2026: the AI label is said plainly but quietly, at the end, in the caption's size: the stories are
+  // reliable, and a loud warning on one of the first things a reader sees would undermine the site
+  const reviewed = meta.status === 'reviewed' && meta.reviewed_on ? `, reviewed ${longDate(meta.reviewed_on)}` : '';
+  const label = `Summary drafted with AI from ${n} published source${n === 1 ? '' : 's'} and checked against the data, ${longDate(meta.written)}${reviewed}.`;
+  const since = st.since_last_year && st.since_last_year.text
+    ? h('p', { class: 'gs-since' }, h('strong', {}, 'This year: '), st.since_last_year.text, sourceLinks(st.since_last_year.citations)) : null;
+  return h('div', { class: 'gs' },
+    state === 'stale' ? h('p', { class: 'gs-stale' }, `Written for the data of ${longDate(meta.snapshot_id)}; the figures below are newer.`) : null,
+    h('p', { class: 'gs-head' }, st.headline),
+    h('p', { class: 'gs-arc' }, st.arc),
+    threads.length ? h('ul', { class: 'gs-threads' }, threads.map((t) => h('li', {},
+      h('span', { class: 'gs-tt' }, t.title), ' ', t.text, sourceLinks(t.citations)))) : null,
+    since,
+    st.tension ? h('p', { class: 'gs-tension' }, h('strong', {}, 'Where the sources and the numbers differ: '), st.tension) : null,
+    h('p', { class: 'gs-label' }, label));
+}
+
 // ---------- the four checks ----------
 const STATE = {
   decides: 'Yes: this names the pattern',
-  also: 'Yes, but an earlier check came first',
+  also: 'Yes, but another pattern comes first',
   no: 'No',
   na: 'No figure',
+};
+/** What a check found, in a word or two, before the state ("Slowdown: this names the pattern"). */
+const FOUND = {
+  collapse_recovery: 'A collapse', never_recovered: 'Never recovered', slowdown: 'A slowdown', acceleration: 'Speeding up',
+  volatile: 'Volatile', growing: 'Growing', high_income_pace: 'High-income pace', stuck: 'Stuck', steady: 'Steady, not fast',
 };
 
 /**
@@ -36,8 +96,7 @@ function meterEl(m, label) {
   const zone = (z, cls) => h('span', { class: cls, 'aria-hidden': 'true',
     style: `left:${at(z[0]).toFixed(2)}%;width:${(at(z[1]) - at(z[0])).toFixed(2)}%` });
   const track = h('div', { class: 'gp-track', role: 'img', 'aria-label': label },
-    zone(m.zone, `gp-zone${m.zoneOn ? '' : ' off'}`),
-    m.alt ? zone(m.alt, `gp-zone alt${m.altOn ? '' : ' off'}`) : null,
+    m.zones.map((z) => zone(z.z, `gp-zone${z.light ? ' alt' : ''}${z.on ? '' : ' off'}`)),
     m.ticks.map((t) => h('span', { class: 'gp-tick', style: `left:${at(t.at).toFixed(2)}%`, 'aria-hidden': 'true' })),
     m.value == null ? null : h('span', {
       class: `gp-dot${m.clipped ? ` clip ${m.value <= m.min ? 'lo' : 'hi'}` : ''}`, style: `left:${at(m.value).toFixed(2)}%`, 'aria-hidden': 'true',
@@ -60,25 +119,31 @@ function meterEl(m, label) {
 export function patternChecks(read) {
   const items = read.checks.map((c, i) => {
     const state = c.met == null ? 'na' : !c.met ? 'no' : c.decides ? 'decides' : 'also';
+    // the pace always finds a pattern, so it says which; the others say yes or no, and name the pattern when yes
+    const tail = state === 'decides' ? ': this names the pattern' : ', but another pattern comes first';
+    const said = c.met && c.names ? `${FOUND[c.names] || c.names}${tail}` : STATE[state];
     return h('li', { class: `gp-check ${state}` },
       h('p', { class: 'gp-q' }, h('span', { class: 'gp-n' }, String(i + 1)), ' ', c.question),
-      h('p', { class: `gp-state ${state}` }, STATE[state]),
+      h('p', { class: `gp-state ${state}` }, said),
       meterEl(c.meter, `${c.question} ${c.figure} ${c.need}`),
       h('p', { class: 'gp-fig' }, c.figure),
       h('p', { class: 'gp-need' }, c.need));
   });
-  const lead = read.pattern === 'unclassified'
-    ? 'The tool checks four patterns in turn, but without ten years of growth it cannot run them.'
-    : read.pattern === 'mixed' ? 'The tool checks four patterns in turn. None fits, so the record is read as mixed.'
-      : 'The tool checks four patterns in turn; the first that fits names the growth problem.';
+  const lead = read.pattern === 'not_classifiable'
+    ? 'Four checks read the growth record, but without ten years of growth they cannot name a pattern.'
+    : read.pattern === 'mixed' ? 'Four checks read the growth record. None fits, so the record is read as mixed.'
+      : 'Four checks read the growth record. Where more than one fits, the first in this order names the pattern: a recent collapse, '
+        + 'a change from the decade before, unusual swings, fast growth, an old peak never regained, then the pace.';
   const sw = (cls) => h('span', { class: `gp-sw ${cls}`, 'aria-hidden': 'true' });
   const key = h('p', { class: 'gp-key' },
-    h('span', {}, sw('zone'), 'where the pattern fits'),
-    h('span', {}, sw('off'), 'in range, but ruled out by the check’s other condition (the peak’s age; growth not far enough ahead of its income)'),
+    h('span', {}, sw('zone'), 'where a pattern fits'),
+    h('span', {}, sw('off'), 'in range, but ruled out by the check’s other condition (the peak’s age; growth too slow to count as speeding up, '
+      + 'or not far enough ahead of its income)'),
     h('span', {}, sw('dot'), 'this economy'));
   return h('div', { class: 'gp' },
     h('p', { class: 'gp-head' }, h('span', { class: `gp-chip ${read.pattern}` }, read.label), ' ',
       h('span', { class: 'gp-mean' }, `${read.meaning[0].toUpperCase()}${read.meaning.slice(1)}.`)),
+    read.arc ? h('p', { class: 'gp-arc' }, read.arc) : null,
     h('p', { class: 'gp-lead' }, lead),
     h('ol', { class: 'gp-checks' }, items), key);
 }
@@ -171,7 +236,7 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   const narrow = W < 520;
   // the averages, labelled at their right ends: the right margin is as wide as the longest label
   const avgDefs = [
-    { win: G1.years_20y || G1.window_20y, v: G1.avg_20y, cls: 'twenty', lab: narrow ? '20 yr' : '20-yr average' },
+    { win: G1.years_prior_10y || G1.window_prior_10y, v: G1.avg_prior_10y, cls: 'before', lab: narrow ? 'before' : 'decade before' },
     G1.structural_n > 1 ? { win: G1.years_10y || G1.window_10y, v: G1.structural_median_10y, cls: 'peers', lab: narrow ? 'peers' : 'peer median' } : null,
     { win: G1.years_10y || G1.window_10y, v: G1.avg_10y, cls: 'ten', lab: narrow ? '10 yr' : '10-yr average' },
   ].filter((a) => a != null && a.v != null && Number.isFinite(a.v)).map((a) => ({ ...a, text: `${a.lab} ${fmt(a.v, 1)}%` }));
@@ -193,7 +258,9 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   svg.append(s('line', { x1: ML, x2: W - MR, y1: LY(0), y2: LY(0), class: 'gc-axis' }));
   // the averages cover the years observed (years_10y), which can stop short of the window; never past the drawn years
   const inside = (w) => (Array.isArray(w) && w[1] >= y0 && w[0] <= y1 ? [Math.max(w[0], y0), Math.min(w[1], y1)] : null);
-  const w10 = inside(G1.years_10y || G1.window_10y), w20 = inside(G1.years_20y || G1.window_20y);
+  const w10 = inside(G1.years_10y || G1.window_10y), w0 = inside(G1.years_prior_10y || G1.window_prior_10y);
+  // the two decades the change check compares; bars before them are faded
+  const w20 = w10 && w0 ? [w0[0], w10[1]] : w10;
   if (level.length && peak) {
     svg.append(s('path', { d: level.map((p, i) => `${i ? 'L' : 'M'}${X(p[0]).toFixed(1)},${LY(p[1]).toFixed(1)}`).join(' '), class: 'gc-line' }));
     const end = level[level.length - 1];
@@ -219,14 +286,14 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   // growth each year
   const B0 = top + levH + gap;
   const vals = growth.map((p) => p[1]);
-  const lo = Math.max(-15, Math.min(-2, ...vals)), hi = Math.min(15, Math.max(6, ...vals, G1.avg_10y ?? 0, G1.avg_20y ?? 0));
+  const lo = Math.max(-15, Math.min(-2, ...vals)), hi = Math.min(15, Math.max(6, ...vals, G1.avg_10y ?? 0, G1.avg_prior_10y ?? 0));
   const step = niceStep(lo, hi);
   const ylo = Math.floor(lo / step) * step, yhi = Math.ceil(hi / step) * step;
   const BY = (v) => B0 + ((yhi - Math.max(ylo, Math.min(yhi, v))) / (yhi - ylo)) * barH;
   svg.append(s('text', { x: ML, y: B0 - 8, class: 'gc-title' }, 'Growth of income per person each year (%)'));
   const band = (w, cls) => (Array.isArray(w)
     ? svg.append(s('rect', { x: X(w[0]) - bw / 2 - 1, y: B0, width: X(w[1]) - X(w[0]) + bw + 2, height: barH, class: cls })) : null);
-  band(w20, 'gc-band'); band(w10, 'gc-band ten');
+  band(w0, 'gc-band'); band(w10, 'gc-band ten');
   for (let v = ylo; v <= yhi + 1e-9; v += step) {
     svg.append(s('line', { x1: ML, x2: W - MR, y1: BY(v), y2: BY(v), class: v === 0 ? 'gc-zero' : 'gc-grid' }));
     svg.append(s('text', { x: ML - 5, y: BY(v) + 4, 'text-anchor': 'end', class: 'gc-tick' }, v === 0 ? '0' : fmtSigned(v, 0)));
@@ -261,11 +328,19 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
     t.append(s('tspan', { class: 'gc-dv' }, `${fmt(a.v, 1)}%`));
     svg.append(t);
   }
-  if (G4.reported && G4.break_year != null && G4.break_year >= y0) {
-    const bx = X(G4.break_year - 0.5);
-    svg.append(s('line', { x1: bx, x2: bx, y1: B0, y2: B0 + barH, class: 'gc-break' }));
-    const left = bx + 40 > W - MR; // near the right edge the word sits left of the line, clear of the averages' labels
-    svg.append(s('text', { x: left ? bx - 4 : bx + 4, y: B0 + 11, 'text-anchor': left ? 'end' : 'start', class: 'gc-lab' }, 'break'));
+  // the eras since 1990 (G4.eras): a dashed line where one ends and the next begins, and each era's average at the top
+  // of its stretch when the stretch is wide enough for it
+  const eras = Array.isArray(G4.eras) ? G4.eras.filter((e) => e && e.to >= y0 && Number.isFinite(e.mean)) : [];
+  if (eras.length > 1) {
+    for (const e of eras) {
+      if (e.from > y0) {
+        const bx = X(e.from - 0.5);
+        svg.append(s('line', { x1: bx, x2: bx, y1: B0, y2: B0 + barH, class: 'gc-break' }));
+      }
+      const a = Math.max(e.from, y0), b = Math.min(e.to, y1);
+      const text = `${fmt(e.mean, 1)}%`, room = X(b) - X(a) + bw;
+      if (room >= labelWidth(text) + 10) svg.append(s('text', { x: (X(a) + X(b)) / 2, y: B0 + 12, 'text-anchor': 'middle', class: 'gc-lab gc-era' }, text));
+    }
   }
   // the years: a label every 5, 10 or 20 years, as the width allows
   const ppy = (W - ML - MR) / (y1 - y0 + 1);
@@ -278,8 +353,8 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   svg.append(s('text', { x: X(y1), y: H - 6, 'text-anchor': 'end', class: 'gc-tick' }, String(y1)));
   const since = G3.years_since_peak ? ` and is ${fmt(G3.shortfall_pct, 0)}% below that peak` : ', the latest year';
   const pk = G3.peak_year != null ? ` Income per person peaked in ${G3.peak_year}${since}.` : '';
-  const avg20 = G1.avg_20y != null ? ` and ${fmt(G1.avg_20y, 1)}% over the last 20` : '';
-  const avg = G1.avg_10y != null ? ` Growth averaged ${fmt(G1.avg_10y, 1)}% a year over the last 10 years${avg20}.` : '';
+  const before = G1.avg_prior_10y != null ? ` and ${fmt(G1.avg_prior_10y, 1)}% in the decade before` : '';
+  const avg = G1.avg_10y != null ? ` Growth averaged ${fmt(G1.avg_10y, 1)}% a year over the last 10 years${before}.` : '';
   const med = G1.structural_n > 1 && G1.structural_median_10y != null ? ` The similar economies' median is ${fmt(G1.structural_median_10y, 1)}%.` : '';
   svg.setAttribute('aria-label', `${name}: income per person ${y0}–${y1} and growth each year.${pk}${avg}${med}`);
   return svg;
@@ -301,16 +376,19 @@ function keyItems({ g, growth }, from) {
   const rank = peers && G1.rank_in_structural != null ? `; ranked ${G1.rank_in_structural} of ${G1.structural_n} by growth` : '';
   const vals = (growth || []).filter((p) => p[0] >= from).map((p) => p[1]);
   const cut = vals.some((v) => v > 15 || v < -15);
-  const early = G4.break_year != null && G4.break_year < from ? ' (before the years shown)' : '';
+  const eras = Array.isArray(G4.eras) ? G4.eras.filter((e) => e && Number.isFinite(e.mean)) : [];
+  const shown = eras.filter((e) => e.to >= from);
+  const eraText = eras.length > 1
+    ? `Eras since ${eras[0].from}, split by the dashed lines, with each era’s average at the top: `
+      + eras.map((e, i) => `${fmt(e.mean, 1)}% a year ${i === eras.length - 1 ? `since ${e.from}` : `in ${e.from}–${e.to}`}`).join('; ')
+      + (shown.length < eras.length ? ' (the first before the years shown)' : '')
+    : '';
   return [
     G1.avg_10y != null ? item('ten', `Last 10 years${span(G1.window_10y, G1.years_10y)}: ${fmt(G1.avg_10y, 1)}% a year`) : null,
-    G1.avg_20y != null ? item('twenty', `Last 20 years${span(G1.window_20y, G1.years_20y)}: ${fmt(G1.avg_20y, 1)}% a year`) : null,
+    G1.avg_prior_10y != null ? item('before', `The decade before${span(G1.window_prior_10y, G1.years_prior_10y)}: ${fmt(G1.avg_prior_10y, 1)}% a year`) : null,
     peers ? item('peers', `Peer median, last 10 years: ${fmt(G1.structural_median_10y, 1)}% (similar economies)${rank}`) : null,
     cut ? item('cut', 'A bar cut at the edge of the scale: hover it for the year’s growth') : null,
-    G4.reported && G4.break_year != null
-      ? item('break', `Break in ${G4.break_year}${early}: growth ${G4.change_pp < 0 ? 'fell' : 'rose'} `
-        + `from ${fmt(G4.mean_before, 1)}% a year before to ${fmt(G4.mean_after, 1)}% after`)
-      : null,
+    eraText ? item('break', eraText) : null,
   ].filter((x) => x != null);
 }
 

@@ -818,7 +818,12 @@ async function camelData(iso, vecNames) {
   for (const v of vecNames) if (!camelCache[`p:${v}`]) camelCache[`p:${v}`] = getJSON(`${DATA}/camels/products/${v}.json`, { optional: true });
   const [mine, ...prods] = await Promise.all([camelCache[iso], ...vecNames.map((v) => camelCache[`p:${v}`])]);
   const products = Object.fromEntries(vecNames.map((v, k) => [v, prods[k]]).filter(([, p]) => p));
-  return mine && Object.keys(products).length ? { products, mine } : null;
+  // the engine's camel ruler per indicator (desk/data/ruler): the ranks and bands the rating uses
+  const ids = Object.values(products).map((p) => p.id).filter(Boolean);
+  for (const id of ids) if (!camelCache[`r:${id}`]) camelCache[`r:${id}`] = getJSON(`${DATA}/ruler/${encodeURIComponent(id)}.json`, { optional: true });
+  const rul = await Promise.all(ids.map((id) => camelCache[`r:${id}`]));
+  const rulers = Object.fromEntries(ids.map((id, k) => [id, rul[k]]).filter(([, r]) => r));
+  return mine && Object.keys(products).length ? { products, mine, rulers } : null;
 }
 
 /** The presence version of test 4 (ingest/hippo_gap.py): the hippo gap, entry rates and the surprises; null when not built. */
@@ -910,12 +915,13 @@ async function renderTests(c) {
   const camel = vecNames.length ? await camelData(state.iso, vecNames) : null;
   // Each vector's family in the verdict layer: its signal (workbook 4.7 percentile bands) and whether it counts.
   const camelFam = (id) => { const rec = ((state.scorecard && state.scorecard.indicators) || []).find((r) => r.id === id); if (!rec) return null; for (const n of state.scorecard.nodes || []) for (const f of n.families || []) if (f.id === rec.family) return { ...f, node: n.id }; return null; };
-  const camelPanels = camel ? vecNames.filter((v) => camel.mine.vectors[v] && camel.products[v]).map((v) => { const fam = camelFam(camel.products[v].id); return { name: v, ...camel.products[v], ...camel.mine.vectors[v], year: camel.mine.year, fam, votes: !!(fam && fam.votes) }; }) : [];
+  const camelPanels = camel ? vecNames.filter((v) => camel.mine.vectors[v] && camel.products[v]).map((v) => { const fam = camelFam(camel.products[v].id); return { name: v, ...camel.products[v], ...camel.mine.vectors[v], year: camel.mine.year, fam, votes: !!(fam && fam.votes), ruler: camel.rulers[camel.products[v].id] || null }; }) : [];
   $('sec-c12').hidden = !camelPanels.length;
+  if (!camelPanels.length) $('ruler12').replaceChildren();
   const sig = camelPanels.filter((pn) => Math.abs(pn.theta) >= 2 * pn.se);
   state.c12dir = !sig.length ? 'none' : sig.every((pn) => pn.theta < 0) ? 'toward' : sig.every((pn) => pn.theta > 0) ? 'away' : 'mixed';
   if (camelPanels.length) {
-    const out = drawCamels($('chart12'), { ...base, width: $('chart12').clientWidth || 900, panels: camelPanels });
+    const out = drawCamels($('chart12'), { ...base, iso: state.iso, nameOf, width: $('chart12').clientWidth || 900, panels: camelPanels, rulerHost: $('ruler12') });
     state.outs.c12 = out;
     const hp = await hippoData(state.iso);
     $('readout12').innerHTML = out.text + hippoText(hp, vecNames, nameOf(state.iso), camelFam);
@@ -1339,7 +1345,7 @@ function exportPack() {
   downloadText(`${state.iso}-${String(state.node).replace(/[^A-Za-z0-9._-]/g, '_')}-chart-pack-${c.asOf}.html`, html, 'text/html');
 }
 function chartSVG(key, { framed = false } = {}) {
-  const svg = $(HOSTS[key]).querySelector('svg');
+  const svg = $(HOSTS[key]).querySelector('svg.ev-stack') || $(HOSTS[key]).querySelector('svg');
   if (!svg) return null;
   const clone = svg.cloneNode(true);
   const w = svg.getAttribute('width') || svg.viewBox.baseVal.width, hgt = svg.getAttribute('height') || svg.viewBox.baseVal.height;

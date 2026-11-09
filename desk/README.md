@@ -204,7 +204,12 @@ Two persona walkthroughs (a policy officer and an economist) found that the Snap
   - y is how much more the economy exports of that product than economies at its income level, measured as the residual of ln(1 + RCA) from a per-product fit on log income.
   - The line is the fitted tilt: the economy's average residual plus θ times intensity, so it slopes the way θ does.
   - θ is the slope per standard deviation of intensity: the Rajan-Zingales statistic of Workbook 4.5. Its standard errors are clustered by source industry (HS2 chapter for the time vector).
-  - The panel subtitle gives θ, its standard error, and the economy's rank among about 180 economies (1 = most camels).
+  - Above the products, one camel ruler per factor (9 November 2026): a headline in words ("Camels: 27th of 137, but too close to zero to count;
+    scores 0"), every economy's average tilt on the five scoring bands with the economy's dot and the most camel-like and most hippo-like
+    economies at the ends, then "Clear of zero?": the latest tilt ± 2 standard errors against the hatched zone the 2-SE check ignores, and
+    one sentence on what it would take to count. Every number is the engine's (desk/data/ruler/{id}.json, written by
+    engine/src/scorecard.mjs camelRulers, which shares camelsBand with the scoring); tests/test_camel_ruler.py holds them to the scorecards.
+  - The scatter's subtitle says what the dots and the line are, with θ and its standard error; the rank lives in the ruler.
 - **Wording.** The reading names a pattern, never a verdict:
   - "camels pattern" when θ < 0;
   - "hippos pattern" when θ > 0;
