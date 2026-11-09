@@ -104,13 +104,20 @@ function indText(i, also = []) {
     also.length ? `also ${also.join(', ')}` : null].filter(Boolean).join(' · ');
 }
 
+// Chrome draws a native select's list as wide as its longest option; a 200-character option pushed the list past the
+// window's edge, shifted it left and cut it off (Ryan, 9 November 2026). The visible text is capped; the full text is the
+// option's title and stays in the "Find an indicator" box.
+const OPT_MAX = 96;
+const capOpt = (s, room) => (s.length > room ? `${s.slice(0, room - 1)}…` : s);
 function indOption(i, also = []) {
   const base = indText(i, also);
-  if (!state.coverage) return h('option', { value: i.id }, base);
+  // the status (no data, outside the window) always shows; the description gives way to it
+  const opt = (attrs, tail = '') => h('option', { ...attrs, title: base + tail }, capOpt(base, OPT_MAX - tail.length) + tail);
+  if (!state.coverage) return opt({ value: i.id });
   const cov = covOf(i.id), asOf = state.asOf || snapYear();
-  if (!cov) return h('option', { value: i.id, disabled: i.id !== state.ind ? '' : null }, `${base} · no data for ${nameOf(state.iso)}`);
-  if (cov[1] < asOf - windowOf(i)) return h('option', { value: i.id, class: 'ev-opt-old' }, `${base} · outside the window`);
-  return h('option', { value: i.id }, base);
+  if (!cov) return opt({ value: i.id, disabled: i.id !== state.ind ? '' : null }, ` · no data for ${nameOf(state.iso)}`);
+  if (cov[1] < asOf - windowOf(i)) return opt({ value: i.id, class: 'ev-opt-old' }, ' · outside the window');
+  return opt({ value: i.id });
 }
 
 function buildIndicatorSelect() {
