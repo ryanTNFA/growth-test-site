@@ -6,14 +6,17 @@
 //   1 price          a price tag: is it expensive, or rationed?
 //   2 changes        a line that turns up after a dashed marker: when it changed, did investment move?
 //   3 circumvention  a path that arcs over a block: are firms paying to get around it?
-//   4 camels         a camel: do the activities that need it least do best? (camels thrive where water is scarce)
+//   4 camels         a camel, filled: do the activities that need it least do best? (camels thrive where water is scarce)
+//                    (Ryan, the same day: the first, outlined camel "looks like a sheep" when small. A camel reads at 14 px by a
+//                    level body on long striding legs, one hump, and a neck that dips from the shoulder to a head held forward;
+//                    a filled body keeps that outline where a thin stroke blurs.)
 // testMark() is the badge (the glyph in a soft disc) set before a test's name; fillTestMarks() fills the static pages'
 // placeholders (<span data-tmark="price">); glyphGroup() draws the badge inside an SVG chart in literal colours.
 // Self-contained (no import from common.mjs), so shell.mjs can fill every page's placeholders without an import cycle.
 
 const SVG = 'http://www.w3.org/2000/svg';
 
-/** @typedef {{d: string, dash?: string}} Stroke */
+/** @typedef {{d: string, dash?: string, fill?: boolean}} Stroke fill: a filled shape (the camel's body), else a stroke */
 /** @type {Record<string, Stroke[]>} */
 export const GLYPH = {
   price: [
@@ -31,9 +34,9 @@ export const GLYPH = {
     { d: 'M18.4 17.3l2.6 2.7 2.4-2.8' },
   ],
   camels: [
-    { d: 'M2.5 13c.4-5.6 5.2-6.6 6.4-2.6 1-4.6 5.4-4.6 6.2-.4.6-1.6 1.4-3.6 2.2-4.6.4-.5 1-.6 1.6-.6h1.6c.5 0 .9.3 1 .8l.3 1.1-2.3.6-2.6 '
-      + '5.9c-.3.6-.8.9-1.4.9H4.2c-1 0-1.7-.5-1.7-1.1z' },
-    { d: 'M5.2 14.2V21M7.6 14.2V21M13 14.2V21M15.4 14.2V21' },
+    { d: 'M2.6 10.4c0-1.3.9-2.3 2.1-2.6l1.4-.4C6.8 5.3 8.4 3.6 10.2 3.6s3.1 1.5 3.7 3.4l.4 1.3c.4 1.2 1.6 1.7 2.5 1l.9-.9c.2-.9.4-2.2.9-3.1'
+      + '.4-.7 1.1-1.1 1.9-1h.8l1.6.6c.5.2.5.9 0 1.1l-1.7.6-1.8 5c-.5 1.4-1.8 2.3-3.3 2.3H5.3c-1.5 0-2.7-1.2-2.7-2.7z', fill: true },
+    { d: 'M6 13.8l-1.4 8.2M6 13.8l1.8 8.2M15.6 13.8l-1.4 8.2M15.6 13.8l1.8 8.2' },
   ],
 };
 
@@ -52,9 +55,18 @@ function el(tag, attrs) {
   return e;
 }
 
-/** The glyph's strokes, appended to an SVG parent. @param {Element} parent @param {string} key */
-function strokes(parent, key) {
-  for (const s of GLYPH[key] || []) parent.append(el('path', s.dash ? { d: s.d, 'stroke-dasharray': s.dash } : { d: s.d }));
+/**
+ * The glyph's paths, appended to an SVG parent; a filled shape takes the ink as its fill.
+ * @param {Element} parent @param {string} key @param {string} [ink] the fill for filled shapes
+ */
+function strokes(parent, key, ink = 'currentColor') {
+  for (const s of GLYPH[key] || []) {
+    /** @type {Record<string, string>} */
+    const a = { d: s.d };
+    if (s.dash) a['stroke-dasharray'] = s.dash;
+    if (s.fill) a.fill = ink;
+    parent.append(el('path', a));
+  }
   return parent;
 }
 
@@ -104,6 +116,6 @@ export function glyphGroup(key, { cx, cy, size, disc, ink }) {
     transform: `translate(${(cx - 12 * s).toFixed(2)},${(cy - 12 * s).toFixed(2)}) scale(${s.toFixed(4)})`,
     fill: 'none', stroke: ink, 'stroke-width': (1.9).toFixed(1), 'stroke-linecap': 'round', 'stroke-linejoin': 'round',
   });
-  g.append(strokes(inner, key));
+  g.append(strokes(inner, key, ink));
   return g;
 }
