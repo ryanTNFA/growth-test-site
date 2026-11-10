@@ -85,7 +85,7 @@ Counts per source are from `registry/indicators.json` (classes) and `data/snapsh
 | Source (registry `source` / `extra_group`) | Indicators | Classes | Observations | Years | Economies per indicator | Vintage | Licence note |
 |---|---|---|---|---|---|---|---|
 | World Development Indicators (`worldbank_wdi`) | 59 | A 10, B 4, C 30, X 15 | 207,445 | 1960–2025 | 69–217 | WDI bulk files last updated 2026-10-08 | World Bank open data |
-| World Bank bulk files from other databases (`worldbank_zip`: WGI estimates, HCI) | 8 | C 2, D 4, X 2 | 33,814 | 1996–2025 | 174–207 | WGI 2026-09-25; HCI 2020-09-21 | World Bank open data |
+| World Bank bulk files from other databases (`worldbank_zip`: WGI voice and accountability, HCI) | 3 | C 2, X 1 | 6,694 | 1996–2025 | 174–207 | WGI 2026-09-25; HCI 2020-09-21 | World Bank open data |
 | IMF World Economic Outlook (`weo`) | 4 | C 2, X 2 | 25,032 | 1990–2025 | 193–196 | October 2026 WEO via the IMF DataMapper (SDMX was unavailable); years after 2025 dropped as projections | IMF terms |
 | Growth Lab Economic Complexity Index (`eci`) | 1 | C 1 | 4,289 | 1995–2024 | 144 | Harvard Dataverse file 13439575 | as published |
 | Enterprise Surveys via Data360 (`es360`) | 40 | A 4, B 4, C 32 | 17,963 | 2006–2026 | 151–180 | Data360 metadata 2026-08-25 | CC BY 4.0 |
@@ -96,6 +96,11 @@ Counts per source are from `registry/indicators.json` (classes) and `data/snapsh
 | Returns to schooling (`rts`): Montenegro-Patrinos 2014; Psacharopoulos-Patrinos 2018 | 6 | A 6 | 2,908 | 1960–2014 | 72–137 | 2014-09; 2018-04 | CC BY 3.0 IGO |
 | Barro-Lee educational attainment (`barrolee`) | 6 | C 6 | 11,726 | 1950–2015 | 143 | v3 (2021) and v2.2 (2016) | research use with citation |
 | Prindex tenure security (`prindex`) | 5 | C 5 | 1,186 | 2019–2024 | 131–138 | public release 2024-09-10 | attribution |
+| Heritage Foundation, Index of Economic Freedom (`heritage`): property rights, judicial effectiveness, government integrity, business freedom | 4 | D 4 | 7,277 | 2016–2025 | 185 | 2026 edition; year = edition − 1 | Heritage copyright notice; non-commercial; attribution |
+| World Justice Project, Rule of Law Index (`wjp`): factors 2, 6 and 7 | 3 | D 3 | 4,881 | 2013–2026 | 143 | 2026 historical data file | no licence stated; attribution |
+| World Uncertainty Index, Ahir, Bloom and Furceri (`wui`) | 1 | C 1 | 8,847 | 1952–2025 | 142 | October 2026 update; quarters averaged to years, all four required | all rights reserved; cite NBER WP 29763 |
+| GI-TOC Global Organized Crime Index (`ocindex`): criminality, resilience | 2 | D 1, X 1 | 1,158 | 2020–2024 | 193 | editions 2021, 2023, 2025; year = edition − 1 | all rights reserved; attribution |
+| World Bank Business Ready (`bready`): property transfer, dispute resolution, liquidation and company-entry times and fees | 5 | A 5 | 721 | 2024–2025 | 86–101 | 2024 (50 economies) and 2025 (101) editions, economy-answer files | CC BY 4.0 (Data360), attribution |
 | Growth Lab trade data, HS92 (`atlas`) | 5 | C 5 | 29,731 | 1995–2024 | 209 | Dataverse v18.0, 2026-04-22 | CC0 1.0 |
 | Camels-and-hippos θ and its standard errors (`camels`, computed by `ingest/camels.py`) | 6 | B 1 (`CH.SKILL`), X 5 | 18,512 | 2000–2024 | 144 | computed 2026-10-29 from the `atlas` file and three intensity vectors | derived |
 | Derived (computed by the engine) | 8 | A 3, B 2, X 3 | n/a | n/a | n/a | n/a | n/a |
@@ -648,6 +653,10 @@ When citing a number, give the economy, node, tier, the indicator and its refere
 - Newey, W. and K. West (1987). "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix." *Econometrica* 55(3).
 - Psacharopoulos, G. and H. Patrinos (2018). "Returns to Investment in Education: A Decennial Review of the Global Literature." World Bank Policy Research Working Paper 8402.
 - Rajan, R. and L. Zingales (1998). "Financial Dependence and Growth." *American Economic Review* 88(3).
-- World Bank. World Development Indicators; Worldwide Governance Indicators; Enterprise Surveys (Data360); Global Financial Development Database; Doing Business (2004–2020); Human Capital Index.
+- World Bank. World Development Indicators; Worldwide Governance Indicators; Enterprise Surveys (Data360); Global Financial Development Database; Doing Business (2004–2020); Business Ready (B-READY) 2024 and 2025; Human Capital Index.
+- Ahir, H., N. Bloom and D. Furceri (2022). "The World Uncertainty Index." NBER Working Paper 29763; data updated October 2026.
+- The Heritage Foundation. *Index of Economic Freedom*, 2026 edition and earlier editions.
+- World Justice Project. *WJP Rule of Law Index*, 2026 historical data file.
+- Global Initiative Against Transnational Organized Crime. *Global Organized Crime Index*, 2021, 2023 and 2025 editions.
 - IMF. World Economic Outlook (October 2026); International Financial Statistics and Financial Soundness Indicators via SDMX 3.0.
 - Prindex (ODI and Global Land Alliance). Rounds 1 and 2 public data, 2024 release.

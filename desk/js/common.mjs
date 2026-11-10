@@ -461,6 +461,12 @@ export const EXTRA_GROUPS = {
   itu: { label: 'ITU ICT Price Baskets', url: 'https://www.itu.int/en/ITU-D/Statistics/Pages/ICTprices/default.aspx' },
   camels: { label: 'Growth Lab HS92 trade with industry intensity vectors (Rajan-Zingales, Ciccone-Papaioannou, Hummels-Schaur)',
     url: 'https://atlas.hks.harvard.edu/' },
+  // rubric 0.3.1 (10 November 2026): named sources in place of the World Bank's governance aggregates
+  heritage: { label: 'The Heritage Foundation, Index of Economic Freedom', url: 'https://www.heritage.org/index/' },
+  wjp: { label: 'World Justice Project, Rule of Law Index', url: 'https://worldjusticeproject.org/rule-of-law-index/' },
+  wui: { label: 'World Uncertainty Index (Ahir, Bloom and Furceri)', url: 'https://worlduncertaintyindex.com/' },
+  ocindex: { label: 'GI-TOC, Global Organized Crime Index', url: 'https://ocindex.net/' },
+  bready: { label: 'World Bank Business Ready (B-READY)', url: 'https://www.worldbank.org/en/businessready' },
 };
 /** The source's web page for an indicator, or null. @param {any} ind @returns {string | null} */
 export function sourceLink(ind) {

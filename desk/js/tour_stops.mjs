@@ -4,7 +4,7 @@
 // that page's HTML, or one of three shell-drawn controls), the words beside it, and sometimes a check question. Every
 // number and rating quoted here is pinned to desk/data/IDN.json and to the rubric by tests/test_tour.py, so a rubric
 // change cannot silently make a stop lie. The stops speak in the tool's voice only: no TNFA view, no "fund this".
-export const RUBRIC = '0.3.0';
+export const RUBRIC = '0.3.1';
 export const TOUR_ISO = 'IDN';
 export const TOUR_COUNTRY = 'Indonesia';
 
@@ -48,7 +48,7 @@ export const TOUR = [
       'Predict first is on: the lists are hidden until you reveal them. Write down what you expect in each for Indonesia (which areas, and how many), then use "Reveal everything on this page" in the bar.',
       'Then compare. Each list serves a different decision. "Stop arguing about" is where the evidence leans away. "Look closer" is where a field visit should start. "Can’t settle yet" says what to measure first, grouped by the reason the data fall short.',
     ],
-    look: ['Two areas the data argue against: electricity and macro risk, each "probably not", which is weaker than "ruled out".', 'One area worth a closer look: corruption, under micro risk.', 'Nine areas the public data cannot settle, each with its reason and a next step.'],
+    look: ['Two areas the data argue against: electricity and macro risk, each "probably not", which is weaker than "ruled out".', 'Two areas worth a closer look: corruption, under micro risk, and domestic savings.', 'Eight areas the public data cannot settle, each with its reason and a next step.'],
     check: { q: 'Electricity is on Indonesia’s "stop arguing about" list. Does that mean power is not a problem for Indonesian firms?',
       a: 'No. It means the public evidence leans away from power as what holds private investment back: connections come fast, outages are few for its income, and only a few firms own a generator. "Probably not" is a lean at a flag’s low bar, not a clear; "ruled out" would need three agreeing tests, five voting sources and no high-quality measure the other way.' },
     mindbook: 'Mindbook, the asymmetry of errors: a false clear costs more than an extra look.',
@@ -132,10 +132,10 @@ export const TOUR = [
   {
     n: 12, title: 'One strong test is a flag, not a finding', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N11.corruption`, anchor: '#drawer .ledger', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the ledger in the open card',
     say: [
-      'Corruption is Indonesia’s one "worth a closer look". The price test is strong: the share of firms asked for a bribe and the share expected to give gifts to tax officials both sit far above what income predicts (class A, both from the 2023 firm survey). Only one of the four tests speaks, so the flag comes by the alternative rule: one test at or above +1 can flag on its own.',
-      'It cannot do more. "Likely a main constraint" needs three agreeing tests; here there is one, and the expert index (class D) sits where income predicts and informs without voting. "Why not higher" says this in one line. Under the Cautious reading, which asks for more sources, the flag drops to unclear.',
+      'Corruption is the stronger of Indonesia’s two "worth a closer look" areas. The price test is strong: the share of firms asked for a bribe and the share expected to give gifts to tax officials both sit far above what income predicts (class A, both from the 2023 firm survey). Only one of the four tests speaks, so the flag comes by the alternative rule: one test at or above +1 can flag on its own.',
+      'It cannot do more. "Likely a main constraint" needs three agreeing tests; here there is one, and the two expert indexes (class D, from the World Justice Project and the Heritage Foundation) inform without voting: one sits where income predicts, the other leans away. "Why not higher" says this in one line. Under the Cautious reading, which asks for more sources, the flag drops to unclear.',
     ],
-    look: ['The price test’s two thick class A bars, far to the right, from one survey year.', 'The expert index as a hollow bar under “shown, not counted”.', 'The net score past the solid +1 line, on its own.'],
+    look: ['The price test’s two thick class A bars, far to the right, from one survey year.', 'The two expert indexes as hollow bars under “shown, not counted”.', 'The net score past the solid +1 line, on its own.'],
     check: { q: 'Corruption has the highest score on Indonesia’s page. Why is it not "likely a main constraint"?',
       a: 'Only one of the four tests speaks, and it rests on two voting families from one survey year. A flag needs one test; a finding needs several kinds of evidence to agree. The card’s "why not higher" line says exactly that.' },
     mindbook: 'Mindbook, the four tests and concordance.',

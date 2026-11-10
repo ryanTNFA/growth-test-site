@@ -1,6 +1,6 @@
 {
   "_comment": "Constraint Check indicator registry v0.1.2 (prototype; changes from v0.1 and v0.1.1 in docs/CHANGELOG-rubric.md). Fields: id (source code), name, source (worldbank_wdi | worldbank_zip | weo | eci | derived | static), nodes (list of node ids or [] for context), test (price | changes | circumvention | camels | context), class (A|B|C|D|X where X = context, no signal), direction (+1 = higher value means MORE binding, -1 = higher value means LESS binding, 0 = context), transform (none | log1p | log | logit), family (evidence family id; signals within a family are deduplicated to one), slow (true if slow-moving stock: recency decay relaxed), years (first year to ingest), notes. Optional: source_code (World Bank API indicator code when it differs from the id) and source_id (World Bank source/database id) for the bulk-zip fetch; hidden_until_fixed (true = the engine treats the indicator as unavailable: not displayed, not counted); regime_sensitive (\"monetary\": downgraded to class C for economies in registry/static_monetary_regimes.json, v0.1.2); fallback_for (indicator id: this indicator carries no signal for an economy where that indicator is available in the window, v0.1.2); caveat (one sentence the Desk prints under the indicator).",
-  "rubric_version": "0.3.0",
+  "rubric_version": "0.3.1",
   "indicators": [
     {
       "id": "NY.GDP.PCAP.PP.KD",
@@ -777,89 +777,6 @@
       "family": "current_account",
       "years": 1990,
       "notes": "Backup."
-    },
-    {
-      "id": "RL.EST",
-      "name": "WGI rule of law (estimate)",
-      "source": "worldbank_zip",
-      "source_code": "GOV_WGI_RL.EST",
-      "source_id": 3,
-      "nodes": [
-        "N11.property"
-      ],
-      "test": "price",
-      "class": "D",
-      "direction": -1,
-      "transform": "none",
-      "family": "wgi_rl",
-      "years": 1996,
-      "notes": "Composite perception index: Class D, context only, never decisive. v0.1.1: fetched from World Bank source 3 (Worldwide Governance Indicators, code GOV_WGI_RL.EST), which serves the governance estimate on its -2.5..2.5 scale; the DS57 archive copy under RL.EST was on a different scale (engine-issues 15)."
-    },
-    {
-      "id": "CC.EST",
-      "name": "WGI control of corruption (estimate)",
-      "source": "worldbank_zip",
-      "source_code": "GOV_WGI_CC.EST",
-      "source_id": 3,
-      "nodes": [
-        "N11.corruption"
-      ],
-      "test": "price",
-      "class": "D",
-      "direction": -1,
-      "transform": "none",
-      "family": "wgi_cc",
-      "years": 1996,
-      "notes": "Class D. v0.1.1: source 3 code GOV_WGI_CC.EST (estimate scale)."
-    },
-    {
-      "id": "RQ.EST",
-      "name": "WGI regulatory quality (estimate)",
-      "source": "worldbank_zip",
-      "source_code": "GOV_WGI_RQ.EST",
-      "source_id": 3,
-      "nodes": [
-        "N11.regulation"
-      ],
-      "test": "price",
-      "class": "D",
-      "direction": -1,
-      "transform": "none",
-      "family": "wgi_rq",
-      "years": 1996,
-      "notes": "Class D. v0.1.1: source 3 code GOV_WGI_RQ.EST (estimate scale)."
-    },
-    {
-      "id": "PV.EST",
-      "name": "WGI political stability and absence of violence (estimate)",
-      "source": "worldbank_zip",
-      "source_code": "GOV_WGI_PV.EST",
-      "source_id": 3,
-      "nodes": [
-        "N11.policy"
-      ],
-      "test": "price",
-      "class": "D",
-      "direction": -1,
-      "transform": "none",
-      "family": "wgi_pv",
-      "years": 1996,
-      "notes": "Class D. v0.1.1: source 3 code GOV_WGI_PV.EST (estimate scale)."
-    },
-    {
-      "id": "GE.EST",
-      "name": "WGI government effectiveness (estimate)",
-      "source": "worldbank_zip",
-      "source_code": "GOV_WGI_GE.EST",
-      "source_id": 3,
-      "nodes": [],
-      "test": "context",
-      "class": "X",
-      "direction": 0,
-      "transform": "none",
-      "family": "wgi_ge",
-      "years": 1996,
-      "notes": "Context. v0.1.1: source 3 code GOV_WGI_GE.EST (estimate scale)."
     },
     {
       "id": "VA.EST",
@@ -4385,6 +4302,273 @@
       "slow": false,
       "years": 2024,
       "notes": "Median density, at 2017-19, of the products the economy exported competitively by 2022-24 and not before: short jumps (high) or long ones (low). Context for the coordination reading (H2)."
+    },
+    {
+      "id": "HER.PROPERTY",
+      "name": "Heritage: property rights (score, 0-100)",
+      "source": "extra",
+      "extra_group": "heritage",
+      "source_code": "Property Rights",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "her_property",
+      "slow": false,
+      "years": 2016,
+      "notes": "Class D (composite index), informing only. These are expert composite scores built partly from other sources (Heritage names Freedom House, Transparency International and others among its inputs), so they are not independent of other indicators in the registry. Higher score = freer = constraint LESS likely binding (direction -1). They replace the World Bank WGI. Year = edition - 1; editions from 2017 only because component methods changed (judicial effectiveness added, property rights re-based) and earlier editions are not spliced. Property Rights score (0-100): strength of private property protection and enforcement. "
+    },
+    {
+      "id": "HER.JUDICIAL",
+      "name": "Heritage: judicial effectiveness (score, 0-100)",
+      "source": "extra",
+      "extra_group": "heritage",
+      "source_code": "Judicial Effectiveness",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "her_judicial",
+      "slow": false,
+      "years": 2016,
+      "notes": "Class D (composite index), informing only. These are expert composite scores built partly from other sources (Heritage names Freedom House, Transparency International and others among its inputs), so they are not independent of other indicators in the registry. Higher score = freer = constraint LESS likely binding (direction -1). They replace the World Bank WGI. Year = edition - 1; editions from 2017 only because component methods changed (judicial effectiveness added, property rights re-based) and earlier editions are not spliced. Judicial Effectiveness score (0-100): independence and effectiveness of courts in enforcing rights; exists from the 2017 edition. "
+    },
+    {
+      "id": "HER.INTEGRITY",
+      "name": "Heritage: government integrity (score, 0-100)",
+      "source": "extra",
+      "extra_group": "heritage",
+      "source_code": "Government Integrity",
+      "nodes": [
+        "N11.corruption"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "her_integrity",
+      "slow": false,
+      "years": 2016,
+      "notes": "Class D (composite index), informing only. These are expert composite scores built partly from other sources (Heritage names Freedom House, Transparency International and others among its inputs), so they are not independent of other indicators in the registry. Higher score = freer = constraint LESS likely binding (direction -1). They replace the World Bank WGI. Year = edition - 1; editions from 2017 only because component methods changed (judicial effectiveness added, property rights re-based) and earlier editions are not spliced. Government Integrity score (0-100): freedom from corruption in government and public services. "
+    },
+    {
+      "id": "HER.BUSINESS",
+      "name": "Heritage: business freedom (score, 0-100)",
+      "source": "extra",
+      "extra_group": "heritage",
+      "source_code": "Business Freedom",
+      "nodes": [
+        "N11.regulation"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "her_business",
+      "slow": false,
+      "years": 2016,
+      "notes": "Class D (composite index), informing only. These are expert composite scores built partly from other sources (Heritage names Freedom House, Transparency International and others among its inputs), so they are not independent of other indicators in the registry. Higher score = freer = constraint LESS likely binding (direction -1). They replace the World Bank WGI. Year = edition - 1; editions from 2017 only because component methods changed (judicial effectiveness added, property rights re-based) and earlier editions are not spliced. Business Freedom score (0-100): ease of starting, running and closing a business under regulation. "
+    },
+    {
+      "id": "WJP.F2_CORRUPTION",
+      "name": "WJP Rule of Law Index, Factor 2: Absence of Corruption (0-1, higher = less corruption)",
+      "source": "extra",
+      "extra_group": "wjp",
+      "source_code": "Factor 2: Absence of Corruption",
+      "nodes": [
+        "N11.corruption"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "wjp_corruption",
+      "slow": false,
+      "years": 2013,
+      "notes": "Class D (composite expert and perception index): informs only. Built from WJP's own general-population (household) and expert surveys, independent of the World Bank. Higher = stronger rule of law, so direction is -1 (a high score means the constraint is less likely to bind). Absence of corruption in the executive, judiciary, military/police and legislature. "
+    },
+    {
+      "id": "WJP.F6_REGULATORY",
+      "name": "WJP Rule of Law Index, Factor 6: Regulatory Enforcement (0-1, higher = better enforcement)",
+      "source": "extra",
+      "extra_group": "wjp",
+      "source_code": "Factor 6: Regulatory Enforcement",
+      "nodes": [
+        "N11.regulation"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "wjp_regulatory",
+      "slow": false,
+      "years": 2013,
+      "notes": "Class D (composite expert and perception index): informs only. Built from WJP's own general-population (household) and expert surveys, independent of the World Bank. Higher = stronger rule of law, so direction is -1 (a high score means the constraint is less likely to bind). Whether regulations are fairly and effectively implemented and enforced, without improper influence, with due process and without expropriation without adequate compensation. "
+    },
+    {
+      "id": "WJP.F7_CIVIL_JUSTICE",
+      "name": "WJP Rule of Law Index, Factor 7: Civil Justice (0-1, higher = better civil justice)",
+      "source": "extra",
+      "extra_group": "wjp",
+      "source_code": "Factor 7: Civil Justice",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": -1,
+      "transform": "none",
+      "family": "wjp_civil_justice",
+      "slow": false,
+      "years": 2013,
+      "notes": "Class D (composite expert and perception index): informs only. Built from WJP's own general-population (household) and expert surveys, independent of the World Bank. Higher = stronger rule of law, so direction is -1 (a high score means the constraint is less likely to bind). Whether ordinary people can resolve civil disputes peacefully and effectively through the courts: accessible, affordable, free of discrimination, corruption and improper influence, timely and effectively enforced. "
+    },
+    {
+      "id": "WUI.WUI",
+      "name": "World Uncertainty Index (annual mean of quarterly values)",
+      "source": "extra",
+      "extra_group": "wui",
+      "source_code": "WUI_Data.xlsx:T2",
+      "nodes": [
+        "N11.policy"
+      ],
+      "test": "price",
+      "class": "C",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "wui",
+      "slow": false,
+      "years": 1952,
+      "notes": "World Uncertainty Index: the frequency of the word 'uncertainty' (and variants) in the Economist Intelligence Unit country report for the quarter, normalised by the report's total words (file scaling x1,000). Annualised here as the simple mean of the four quarterly values, only for calendar years with all four quarters, so partial years (including the latest, still-incomplete year) are dropped. The raw series is used, not the authors' 3-quarter moving average. It is an academic text-based perception measure of how much uncertainty EIU analysts write about, not a price, a quantity or a firm-reported obstacle, and it moves with global shocks as well as country conditions: class C (informs only). Higher = more uncertainty = more likely binding for policy and macro predictability (Workbook N11). Zero quarters are genuine (no mention), hence log1p."
+    },
+    {
+      "id": "OCI.CRIMINALITY",
+      "name": "GI-TOC: organized-crime criminality (score, 1-10)",
+      "source": "extra",
+      "extra_group": "ocindex",
+      "nodes": [
+        "N11.crime"
+      ],
+      "test": "price",
+      "class": "D",
+      "direction": 1,
+      "transform": "none",
+      "family": "oci_criminality",
+      "slow": false,
+      "years": 2020,
+      "notes": "Expert-assessed composite from GI-TOC's expert network (over 300 expert assessments per edition), 1-10, higher = more. Editions are three vintages of an evolving methodology (the 2025 edition adds criminal-market categories), so level shifts between editions are partly methodological. Class D composite (mean of criminal markets and criminal actors scores); informs only. Higher = more organized crime, so more likely binding on the crime area. Adds an independent, expert-based source to a crime area that today has homicides and firm-reported crime costs. Year is edition - 1 (the assessed year)."
+    },
+    {
+      "id": "OCI.RESILIENCE",
+      "name": "GI-TOC: resilience to organized crime (score, 1-10)",
+      "source": "extra",
+      "extra_group": "ocindex",
+      "nodes": [],
+      "test": "context",
+      "class": "X",
+      "direction": 0,
+      "transform": "none",
+      "family": "oci_resilience",
+      "slow": false,
+      "years": 2020,
+      "notes": "Expert-assessed composite from GI-TOC's expert network (over 300 expert assessments per edition), 1-10, higher = more. Editions are three vintages of an evolving methodology (the 2025 edition adds criminal-market categories), so level shifts between editions are partly methodological. Context only, no signal: state and non-state capacity to withstand organized crime (governance, justice, enforcement, AML, prevention). Year is edition - 1."
+    },
+    {
+      "id": "BR.PROP_DAYS",
+      "name": "Transferring property (B-READY): time (calendar days)",
+      "source": "extra",
+      "extra_group": "bready",
+      "source_code": "PT_3_132",
+      "nodes": [
+        "N11.property",
+        "N8"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "db_property",
+      "slow": false,
+      "years": 2024,
+      "notes": "Class A: the time or money price of a public service, like the Doing Business row it parallels. This is B-READY's measure of the same service as DB.PROP_DAYS, with a different method (expert consultations on a standardized scenario in the largest business city; Second Edition handbook for 2025, First Edition for 2024). It shares the family db_property with the Doing Business row so the two count once, and the two are never spliced into one series. Expert estimates for a standardized case, not firm experience. Total time to transfer ownership of a commercial property between two domestic companies, in the measured city (expert consultations, median of experts). Unit: days. Parallels DB.PROP_DAYS (Registering property: time)."
+    },
+    {
+      "id": "BR.CONTRACT_DAYS",
+      "name": "Resolving a commercial dispute (B-READY): first-instance plus enforcement time (calendar days)",
+      "source": "extra",
+      "extra_group": "bready",
+      "source_code": "DR_G_1_1+DR_H_2_3",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "db_contracts",
+      "slow": false,
+      "years": 2024,
+      "notes": "Class A: the time or money price of a public service, like the Doing Business row it parallels. This is B-READY's measure of the same service as DB.CONTRACT_DAYS, with a different method (expert consultations on a standardized scenario in the largest business city; Second Edition handbook for 2025, First Edition for 2024). It shares the family db_contracts with the Doing Business row so the two count once, and the two are never spliced into one series. Expert estimates for a standardized case, not firm experience. Calendar days for the first-instance court to deliver a written judgment (DR_G_1_1) plus the enforcement institution to locate, seize and transfer the debtor's bank funds (DR_H_2_3); both must be numeric. Appeal, arbitration and mandatory-mediation time are excluded. Unit: days. Parallels DB.CONTRACT_DAYS (Enforcing contracts: time)."
+    },
+    {
+      "id": "BR.CONTRACT_COST",
+      "name": "Resolving a commercial dispute (B-READY): fees (% of claim value)",
+      "source": "extra",
+      "extra_group": "bready",
+      "source_code": "DR_G_1_4+DR_G_1_6+DR_H_2_5+DR_H_2_6",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "db_contracts",
+      "slow": false,
+      "years": 2024,
+      "notes": "Class A: the time or money price of a public service, like the Doing Business row it parallels. This is B-READY's measure of the same service as DB.CONTRACT_COST, with a different method (expert consultations on a standardized scenario in the largest business city; Second Edition handbook for 2025, First Edition for 2024). It shares the family db_contracts with the Doing Business row so the two count once, and the two are never spliced into one series. Expert estimates for a standardized case, not firm experience. Plaintiff attorney fees and first-instance court fees plus creditor attorney fees and enforcement-institution fees, each as % of claim value (DR_G_1_4, DR_G_1_6, DR_H_2_5, DR_H_2_6); all four must be numeric. Unit: % of claim value. Parallels DB.CONTRACT_COST (Enforcing contracts: cost, % of claim)."
+    },
+    {
+      "id": "BR.INSOLV_MONTHS",
+      "name": "Business insolvency (B-READY): time to complete a liquidation proceeding (months)",
+      "source": "extra",
+      "extra_group": "bready",
+      "source_code": "bi_timedays_liq96",
+      "nodes": [
+        "N11.property"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "db_insolvency",
+      "slow": false,
+      "years": 2024,
+      "notes": "Class A: the time or money price of a public service, like the Doing Business row it parallels. This is B-READY's measure of the same service as DB.INSOLV_RECOVERY, with a different method (expert consultations on a standardized scenario in the largest business city; Second Edition handbook for 2025, First Edition for 2024). It shares the family db_insolvency with the Doing Business row so the two count once, and the two are never spliced into one series. Expert estimates for a standardized case, not firm experience. Expert estimate of the months to complete a liquidation proceeding in practice (bi_timedays_liq96). 'Calculate median; 50% Skip Logic: x' answers (half the experts skipped) are taken at x. B-READY publishes time, not a recovery rate, so direction is +1 here. Unit: months. Parallels DB.INSOLV_RECOVERY (Resolving insolvency: recovery rate)."
+    },
+    {
+      "id": "BR.START_DAYS",
+      "name": "Business entry (B-READY): total time to enter the market, domestic company (calendar days)",
+      "source": "extra",
+      "extra_group": "bready",
+      "source_code": "BE_6_4_1",
+      "nodes": [
+        "N11.regulation"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "db_start",
+      "slow": false,
+      "years": 2024,
+      "notes": "Class A: the time or money price of a public service, like the Doing Business row it parallels. This is B-READY's measure of the same service as DB.START_DAYS, with a different method (expert consultations on a standardized scenario in the largest business city; Second Edition handbook for 2025, First Edition for 2024). It shares the family db_start with the Doing Business row so the two count once, and the two are never spliced into one series. Expert estimates for a standardized case, not firm experience. Total calendar days to complete the entire company entry process for a domestic company (BE_6_4_1). Unit: days. Parallels DB.START_DAYS (Starting a business: time)."
     }
   ],
   "comovement_specs": [
@@ -4414,6 +4598,17 @@
       "expected_sign": -1,
       "window_years": 20,
       "notes": "Investment should respond to stabilization."
+    },
+    {
+      "id": "CM.SAVINGS",
+      "node": "N2",
+      "also_nodes": [],
+      "x": "NY.GNS.ICTR.ZS",
+      "y": "NE.GDI.FTOT.ZS",
+      "lag": 1,
+      "expected_sign": 1,
+      "window_years": 20,
+      "notes": "Rubric 0.3.1 (10 November 2026): if low domestic savings bind and foreign savings cannot substitute, investment follows domestic saving (Workbook N2 'if binding'; Hausmann, Rodrik and Velasco; Feldstein and Horioka). A rise in gross national saving should be followed by a rise in investment the next year. Lagged one year, like CM.FINANCE and CM.MACRO, so a boom that lifts both in the same year does not read as binding. Saving is measured as a national-accounts residual, so the test reads changes, not levels. Gives N2 its second voting kind of evidence (with the real deposit rate); before it, N2 could not leave 'cannot tell: registry coverage' for any economy."
     }
   ],
   "connectors_not_built": {

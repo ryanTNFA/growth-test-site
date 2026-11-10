@@ -406,7 +406,8 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
 export function prettyFamily(id) {
   if (!id) return '';
   if (id.startsWith('CM.')) return id;
-  return id.replace(/^es_/, 'ES: ').replace(/^wgi_/, 'WGI ').replace(/_/g, ' ');
+  return id.replace(/^es_/, 'ES: ').replace(/^wgi_/, 'WGI ').replace(/^her_/, 'Heritage: ').replace(/^wjp_/, 'WJP: ')
+    .replace(/^oci_/, 'GI-TOC: ').replace(/_/g, ' ');
 }
 
 // ===================================================================================
