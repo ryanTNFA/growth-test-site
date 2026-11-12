@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "iso3": "COG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "COG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org (tier 1): Republic of Congo Article IV 2025 press release",
+        "imf.org, worldbank.org, afdb.org (tier 1): Republic of Congo 2026 IMF staff mission, debt, oil, growth",
+        "worldbank.org, afdb.org and other tier 1 domains: Congo Republic Macro Poverty Outlook, economic update, oil growth",
+        "imf.org, worldbank.org, afdb.org, oecd.org (tier 1): 2014 oil price shock, recession, debt crisis, growth history",
+        "imf.org, worldbank.org, afdb.org, oecd.org (tier 1): civil war 1997-1999, post-conflict recovery",
+        "Opened: worldbank.org press release 2025-09-23; worldbank.org/en/country/congo/overview (undated, not cited); imf.org PR 25/061 (2025-03-12); imf.org PR 24/269 (2024-07-11, not cited); imf.org PR 26/079 (2026-03-16); imf.org Country Report 19/244 PDF (2019); imf.org Letter of Intent 2000-11-03; afdb.org Congo Economic Outlook (403, not cited); elibrary.imf.org 2005 report (403, not cited)",
+        "Critic re-opened every cited URL: imf.org LOI 2000, imf.org CR 19/244 PDF (text extracted), worldbank.org PR 2025-09-23, imf.org PR 26/079, imf.org PR 25/061"
+      ],
+      "critic_changes": [
+        "IMF Country Report 19/244 citations: date made more precise from '2019' to '2019-07' (the report is dated July 2019); quote 'ramped-up spending' corrected to the PDF's text 'ramped- up spending', and the quote now starts at 'Congo' as on the page.",
+        "Thread 'The 2014 oil price crash': dropped 'oil revenue shrank', which the cited passage does not say; added a second exact passage from the same report ('The oil price shock produced a large decline in growth.') to support the link to the oil price fall; reworded 'growth has averaged -3.6 percent a year since 2016' to 'has fallen 3.6 percent a year on average over 2016–2025'.",
+        "Arc: 'debt relief and high oil prices paid for a burst of public building' reworded (debt relief did not pay for spending; the source says it helped growth while spending rose on infrastructure and consumption); 'as public investment was cut and debt piled up' changed to 'as spending on public works was cut sharply', since the cited 2016–17 passage names spending cuts, not debt build-up.",
+        "Thread 'Oil windfalls and debt relief': 'roads, buildings and running costs' changed to 'public works and day-to-day costs' to match the source's 'public infrastructure and consumption'.",
+        "Thread 'Ageing oil, slow recovery' renamed 'Oil dependence, slow recovery': 'falling output from older fields' is not in the source and was changed to 'falling oil output'; 'held back activity in 2025' had its year removed, because the IMF page does not tie that sentence to 2025.",
+        "since_last_year: removed 'in 2025' from the IMF sentence for the same reason.",
+        "Thread 'Debt and unpaid bills': 'The debt built up in the boom years still weighs on the state' changed to 'Public debt remains high', which is what the cited 2026 passage supports; 'suppliers and lenders' changed to 'at home and abroad' to match 'domestic and external arrears'.",
+        "Tension: 'high growth' changed to 'faster growth' to match the IMF's 'accelerate growth'.",
+        "All numbers checked against desk/data/COG.json (41.8, 1984, 1975, -1.9, 0.2, 2.6, -3.6, 1.5, 10.9 in 2016, 7.9 in 2017, 8.5 in 2020, 0.7 in 2025, -0.3 in 2024, first rise since 2014): all correct. All quoted passages were confirmed on their pages; 3 distinct recent tier 1 sources survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Oil lifted Congo's income per person, then the 2014 price crash and heavy debt pulled it back to where it first stood in 1975.",
+    "arc": "Income per person in the Republic of Congo peaked in 1984 and is now 41.8 percent below that peak, about where it first was in 1975. In 1990–1999 it fell 1.9 percent a year, a decade that ended in civil war, which the IMF says cut output outside oil sharply. Growth was nearly flat in 2000–2007, at 0.2 percent a year, then rose to 2.6 in 2008–2015, when debt relief and high oil prices helped growth and the state spent heavily on public works. The oil price shock from 2014 ended that: income per person fell 10.9 percent in 2016 and 7.9 percent in 2017 as spending on public works was cut sharply. Since 2016 it has fallen 3.6 percent a year on average, against 1.5 in the decade before, with another drop of 8.5 percent in 2020 and only a small rise of 0.7 percent in 2025.",
+    "threads": [
+      {
+        "title": "Civil war in the 1990s",
+        "text": "Armed conflict in the late 1990s hit the economy outside oil hard and pushed more people into poverty. Income per person fell 1.9 percent a year over 1990–1999.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/loi/2000/cog/01/index.htm",
+            "publisher": "IMF",
+            "title": "Republic of Congo Letter of Intent, Memorandum of Economic Policies, and Technical Memorandum of Understanding",
+            "date": "2000-11-03",
+            "quote": "During 1997–99, non-oil real GDP contracted by 19 percent, and poverty increased significantly."
+          }
+        ]
+      },
+      {
+        "title": "Oil windfalls and debt relief",
+        "text": "After debt relief in 2010 and with oil prices high, the state spent heavily on public works and day-to-day costs, paid for by oil money and new borrowing. Income per person grew 2.6 percent a year in 2008–2015, the best era since 1990.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1cogea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Congo: Staff Report—Press Release; Staff Report; Debt Sustainability Analysis, and Statement by the Executive Director for the Republic of Congo (IMF Country Report No. 19/244)",
+            "date": "2019-07",
+            "quote": "HIPC debt relief and high international oil prices helped Congo accelerate growth and poverty reduction."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1cogea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Congo: Staff Report—Press Release; Staff Report; Debt Sustainability Analysis, and Statement by the Executive Director for the Republic of Congo (IMF Country Report No. 19/244)",
+            "date": "2019-07",
+            "quote": "Congo ramped- up spending on public infrastructure and consumption financed by oil revenue windfalls and a rapid re-accumulation of debt."
+          }
+        ]
+      },
+      {
+        "title": "The 2014 oil price crash",
+        "text": "When oil prices fell from 2014, growth turned sharply negative and the state cut its spending on public works deeply. Income per person fell 10.9 percent in 2016 and 7.9 percent in 2017, and has fallen 3.6 percent a year on average over 2016–2025.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1cogea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Congo: Staff Report—Press Release; Staff Report; Debt Sustainability Analysis, and Statement by the Executive Director for the Republic of Congo (IMF Country Report No. 19/244)",
+            "date": "2019-07",
+            "quote": "The oil price shock produced a large decline in growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1cogea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Congo: Staff Report—Press Release; Staff Report; Debt Sustainability Analysis, and Statement by the Executive Director for the Republic of Congo (IMF Country Report No. 19/244)",
+            "date": "2019-07",
+            "quote": "turned sharply negative in 2016–17, with particularly large decelerations in non-oil growth, driven by severe contractions in spending on infrastructure"
+          }
+        ]
+      },
+      {
+        "title": "Oil dependence, slow recovery",
+        "text": "Oil still dominates the economy, and falling oil output has shown how fragile growth is. The IMF adds that weak public investment, disruptions to power supply and slack oil activity have held back growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/09/23/republic-of-congo-improving-the-management-of-produced-human-and-natural-capital-to-raise-living-standards",
+            "publisher": "World Bank",
+            "title": "Republic of Congo: Improving the Management of Produced, Human and Natural Capital to Raise Living Standards",
+            "date": "2025-09-23",
+            "quote": "the contraction in oil production has highlighted the vulnerability of an economy still dependent on hydrocarbons"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Post-Financing Assessment with the Republic of Congo",
+            "date": "2026-03-16",
+            "quote": "Weak public investments, energy supply disruptions, and lackluster hydrocarbon activity impeded stronger economic growth."
+          }
+        ]
+      },
+      {
+        "title": "Debt and unpaid bills",
+        "text": "Public debt remains high, and new unpaid bills at home and abroad keep appearing. An IMF-supported programme ended in 2025 with reforms running behind schedule.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Post-Financing Assessment with the Republic of Congo",
+            "date": "2026-03-16",
+            "quote": "Debt vulnerabilities have remained elevated, with total public debt estimated to have reached 97.2 percent of GDP at end-2025"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/03/12/pr-25061-congo-imf-executive-board-concludes-the-sixth-review-of-the-ecf-arrangement",
+            "publisher": "IMF",
+            "title": "Republic of Congo - IMF Executive Board Concludes the Sixth Review of the Extended Credit Facility Arrangement and Approves US$43 million Disbursement",
+            "date": "2025-03-12",
+            "quote": "Program performance in the sixth review was mixed, with persistent delays in structural reform implementation."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In September 2025 the World Bank reported that income per person rose in 2024 for the first time since 2016, while falling oil output showed how fragile growth remains. In March 2026 the IMF said weak public investment, power supply disruptions and slack oil activity had held back growth, and that new unpaid bills had built up. In the data, income per person grew 0.7 percent in 2025, its first rise since 2014.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/09/23/republic-of-congo-improving-the-management-of-produced-human-and-natural-capital-to-raise-living-standards",
+          "publisher": "World Bank",
+          "title": "Republic of Congo: Improving the Management of Produced, Human and Natural Capital to Raise Living Standards",
+          "date": "2025-09-23",
+          "quote": "The Congolese economy posted modest real GDP growth of 2.6% in 2024, marking a moderate increase in per capita income for the first time …"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/16/pr26079-imf-executive-board-concludes-2026-post-financing-assessment-with-the-republic-of-congo",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Post-Financing Assessment with the Republic of Congo",
+          "date": "2026-03-16",
+          "quote": "Newly accumulated domestic and external arrears point to persistent weaknesses in debt management"
+        }
+      ]
+    },
+    "tension": "The World Bank says income per person rose in 2024 for the first time since 2016, but the data here show a 0.3 percent fall in 2024 and the first rise in 2025. The IMF also describes the years up to 2014 as a time of faster growth and falling poverty, yet income per person grew only 1.5 percent a year over 2006–2015 and never got back to its 1984 peak."
+  }
+}

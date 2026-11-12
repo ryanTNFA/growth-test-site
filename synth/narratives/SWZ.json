@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "iso3": "SWZ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SWZ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Eswatini Article IV consultation IMF staff report 2025 (tier 1 allowed_domains)",
+        "worldbank.org: Eswatini Macro Poverty Outlook World Bank growth (tier 1 allowed_domains)",
+        "worldbank.org / imf.org / afdb.org: Eswatini Systematic Country Diagnostic growth slowed 1990s South Africa investment decline (tier 1 allowed_domains)",
+        "imf.org: Eswatini 2021 civil unrest COVID-19 contraction 2020 IMF Article IV (tier 1 allowed_domains)",
+        "Opened: thedocs.worldbank.org MPO Eswatini (October 2026); imf.org 2025 Article IV staff report PDF and PR 25/319; imf.org 2023 Article IV staff report PDF; documents1.worldbank.org Eswatini SCD (2020); afdb.org Country Focus Report 2025 (HTTP 403, not used)",
+        "Critic check: re-opened all four cited documents (PDF text extracted locally) and verified every quoted passage, date and number"
+      ],
+      "critic_changes": [
+        "Tied to South Africa: the IMF citation ('growth is expected to slow to 2.8 percent ... historical average of 2.6 percent') did not support the electricity claim. Replaced it with the IMF 2025 passage saying Eswatini imports 70–80 percent of its electricity from South Africa and Mozambique.",
+        "Customs revenue thread: no citation supported 'public debt more than doubled during 2014–2020'. Added the IMF 2025 passage that says so. To stay within 3 citations, dropped the 2020 World Bank SCD quote on deficits in 2011 and from 2016, and removed that sentence. Changed 'rise and fall with trade in the region' to 'which are volatile', which is what the cited passage says.",
+        "Arc: removed 'as, the World Bank says, rising customs revenue fed public spending' (2002–2007). The SCD does not say that rising customs revenue drove spending in that period. Reworded the AGOA clause to match the SCD (accession to AGOA in 2001 brought new clothing investment).",
+        "Arc: softened the causal links. The 2016–2025 slowdown now happened 'while' swings in customs revenue strained the budget, not 'as'. The 2022 fall is linked to cash shortages only through 'the IMF says', because the IMF describes slower growth, not a fall.",
+        "Tension: removed '2.6 percent a year' when used for the sources' total GDP growth figure. That number comes from a source, not the data file, and in the data file 2.6 means something else (income-per-person growth in 2006–2015).",
+        "Narrow base thread: the MPO says total investment, not private investment, contracted sharply in 2025. Reworded to match.",
+        "since_last_year: 'public wage increase' changed to 'public wage review', the MPO's wording. Added an MPO citation (October 2026) for the growth pickup in 2025 and Q1 2026.",
+        "Dates: the IMF 2023 Article IV (CR 23/160) is dated more precisely as 2023-05 (Board May 3, 2023; press release May 2023). Added the country report number (25/279) to the IMF 2025 title. 2025-09 is confirmed.",
+        "Verified as correct: all other quotes appear verbatim on their pages. Numbers 2.4, 1.8, 3.0, 6.2, 2.6, 1.6 and 3.1, the falls in 2018, 2020 and 2022, and the 2025 peak all match desk/data/SWZ.json. The headline is 153 characters. No banned phrases. Tier 1 holds, with 3 recent sources (IMF 2023, IMF 2025, World Bank MPO 2026)."
+      ]
+    },
+    "headline": "Eswatini's income per person has grown a steady 2.4 percent a year since 1990, without regaining the investment that left when apartheid sanctions ended.",
+    "arc": "The data show one era since 1990: income per person grew 2.4 percent a year on average over 1990–2025, with no lasting shift. The sources start the story earlier, in the 1980s, when firms moved to Eswatini to get around sanctions on apartheid South Africa. After sanctions ended in 1994 many firms moved back, and income per person grew no faster than 1.8 percent a year from 1996 to 2001. Growth then ran between 3.0 and 6.2 percent a year in 2002–2007, after joining the US trade scheme AGOA in 2001 brought new clothing investment. Growth slowed from 2.6 percent a year in 2006–2015 to 1.6 percent in 2016–2025 while swings in customs revenue strained the budget, and income per person fell in 2018, in the 2020 pandemic, and in 2022, when, the IMF says, government cash shortages slowed building work. It still reached a new high in 2025, after growth of 3.1 percent, with recent growth led by manufacturing, information technology and construction.",
+    "threads": [
+      {
+        "title": "The sanctions boom and its end",
+        "about": "history",
+        "text": "In the 1980s, South African and multinational firms set up in Eswatini to get around sanctions on apartheid South Africa. When South Africa opened up in the mid-1990s, many moved back, and investment fell sharply between the 1980s and the 2000s. In 2023 the IMF wrote that the country had still not fully recovered from that loss.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/966931608603154612/txt/Eswatini-Systematic-Country-Diagnostic-Toward-Equal-Opportunity-Accelerating-Inclusion-and-Poverty-Reduction.txt",
+            "publisher": "World Bank",
+            "title": "Eswatini Systematic Country Diagnostic: Toward Equal Opportunity: Accelerating Inclusion and Poverty Reduction",
+            "date": "2020-12-14",
+            "quote": "Democratic South Africa eroded Eswatini’s advantage as the subregion’s preferred destination for foreign investment"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/966931608603154612/txt/Eswatini-Systematic-Country-Diagnostic-Toward-Equal-Opportunity-Accelerating-Inclusion-and-Poverty-Reduction.txt",
+            "publisher": "World Bank",
+            "title": "Eswatini Systematic Country Diagnostic: Toward Equal Opportunity: Accelerating Inclusion and Poverty Reduction",
+            "date": "2020-12-14",
+            "quote": "Investment declined sharply, from an average of 50 percent of GDP in the 1980s to 12 percent in the 2000s"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1swzea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 23/160)",
+            "date": "2023-05",
+            "quote": "Eswatini has yet to fully recover from the disinvestment that occurred following the lifting of sanctions on South Africa after apartheid ended"
+          }
+        ]
+      },
+      {
+        "title": "Customs revenue and the budget",
+        "about": "present",
+        "text": "A large share of government revenue comes from Southern African Customs Union transfers, which are volatile. Public debt more than doubled during 2014–2020, and the World Bank reports that budget pressures grew again in 2025–26.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1swzea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 25/279)",
+            "date": "2025-09",
+            "quote": "Eswatini is also highly dependent on the volatile Southern African Customs Union (SACU) revenue transfers, which have averaged 39 percent of total revenue"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1swzea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 25/279)",
+            "date": "2025-09",
+            "quote": "Public debt is moderate at just under 40 percent of GDP; however, it more than doubled during 2014–2020"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eswatini",
+            "date": "2026-10",
+            "quote": "Fiscal pressures intensified, widening the deficit to 5.0 percent of GDP in FY2025/26"
+          }
+        ]
+      },
+      {
+        "title": "Tied to South Africa",
+        "about": "present",
+        "text": "Eswatini's fortunes move with South Africa's through shared customs revenue and a currency pegged to the rand. The IMF also notes that most of its electricity is imported from South Africa and Mozambique.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eswatini",
+            "date": "2026-10",
+            "quote": "Eswatini depends heavily on South Africa’s economic performance through Southern African Customs Union (SACU) trade and Common Monetary Area monetary integration"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1swzea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 25/279)",
+            "date": "2025-09",
+            "quote": "Eswatini imports 70–80 percent of its electricity from South Africa and Mozambique, making it vulnerable to potential supply disruptions and price fluctuations"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, unrest and cash shortages",
+        "about": "history",
+        "text": "Income per person fell in 2020, though the IMF judged the economy more resilient than the rest of the customs union. Large protests calling for political reform in 2021 cost lives, and in 2022 government cash shortages slowed building projects.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1swzea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 23/160)",
+            "date": "2023-05",
+            "quote": "Real GDP contracted by a modest 1.6 percent in 2020 against a 6 percent average contraction in the SACU region"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1swzea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 23/160)",
+            "date": "2023-05",
+            "quote": "Large-scale demonstrations calling for political reform occurred in 2021, leading to loss of life, closure of schools, and deployment of the army"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1swzea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of Eswatini: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Kingdom of Eswatini (IMF Country Report No. 23/160)",
+            "date": "2023-05",
+            "quote": "Growth is estimated to have declined to 3.6 percent in 2022—linked to base effects, a slowing of construction projects in response to government cash constraints"
+          }
+        ]
+      },
+      {
+        "title": "Narrow base, few jobs",
+        "about": "present",
+        "text": "The World Bank describes a narrow production base and weak, volatile private investment, and total investment contracted sharply in 2025. Most working-age adults do not have a job.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eswatini",
+            "date": "2026-10",
+            "quote": "Annual growth averaged 2.6 percent over the past decade, reflecting a narrow production base"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eswatini",
+            "date": "2026-10",
+            "quote": "Only one in three working-age adults is employed, reflecting weak job creation for a growing labor force"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eswatini",
+            "date": "2026-10",
+            "quote": "Investment is expected to increase modestly, driven by public capital projects, after contracting sharply in 2025"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up in 2025 and early 2026, and income per person reached a new high in 2025. At the same time, the budget deficit widened after a public wage review agreed in October 2025, and foreign reserves fell to critically low levels in mid-2026 as imports of fuel and capital goods rose.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Eswatini",
+          "date": "2026-10",
+          "quote": "Real GDP growth reached 4.8 percent in 2025—the strongest annual performance since 2019—and increased to 6.5 percent year-on-year in the first quarter of 2026"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-swz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Eswatini",
+          "date": "2026-10",
+          "quote": "International reserves fell to a critically low 1.9 months of import cover in June"
+        }
+      ]
+    },
+    "tension": "The sources date Eswatini's slowdown to the end of sanctions in the mid-1990s, but the data find no lasting shift since 1990. Most of the strong sanctions years fall before 1990, when the era test starts, and the slow late 1990s were followed by faster growth in 2002–2007. The World Bank's figure for growth over the past decade measures total output, while income per person grew 1.6 percent a year over 2016–2025; part of that gap is population growth."
+  }
+}

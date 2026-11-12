@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "iso3": "NER",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NER",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): Niger IMF Article IV 2025 staff report economy growth oil exports",
+        "tier 1 domains: Niger Macro Poverty Outlook World Bank 2025 growth",
+        "tier 1 domains: Niger uranium boom 1970s collapse 1980s growth decline per capita income history",
+        "imf.org: Niger IMF 2026 press release review Extended Credit Facility",
+        "Critic re-opened and checked: thedocs.worldbank.org MPO Niger (October 2026); documents1.worldbank.org Niger Economic Update April 2025; imf.org PR 25/251 (2025-07-14); imf.org PR 26/328 (2026-10-08); imf.org Country Report 07/14 (January 2007)"
+      ],
+      "critic_changes": [
+        "All five cited URLs were opened, and the three PDFs were text-extracted. Every quoted passage appears on its page; the MPO quotes differ from the PDF text only where the PDF breaks words with hyphens across lines ('rev- enues', 'per- cent') or across a page. All dates match the documents (MPO October 2026, WB Economic Update April 2025, IMF PR 2025-07-14, IMF PR 2026-10-08, IMF CR 07/14 January 2007).",
+        "All numbers checked against desk/data/NER.json: 29.7 percent shortfall, 1965 peak, 60 years, below the 1960 start, eras -1.4 (1990-2004) and 2.1 (2005-2025), 1.8 (2006-2015), 2.4 (2016-2025), and yearly 8.6 (2022), -2.1 (2021), -0.7 (2023), 4.8 (2024), 3.6 (2025). All are correct.",
+        "Arc: corrected the claim that the World Bank calls the whole post-2005 period 'relatively stable and well supported by aid and investment'. The source says this of 2011 to 2023 only, so the arc now says that.",
+        "Arc and thread 1: removed the 1994 CFA franc devaluation claim. Thread 1 needed a citation for its drought claim, which had none, so the drought passage from IMF CR 07/14 replaced the devaluation passage, and the devaluation sentence was dropped from both thread and arc.",
+        "Headline: 'uranium busts' (plural) changed to 'a uranium bust', since the source describes one collapse.",
+        "Thread 'Stability ends in 2023': no cited passage supported the February 2024 lifting of sanctions or the rerouted trade. The MPO quote now runs on to 'despite their lifting in February 2024' (trimmed at the start to stay within 25 words). The border citation now uses the WB passage on longer and more expensive transport routes. 'Coup' changed to 'regime change' to match the source.",
+        "Thread 'Rain-fed farming': 'Most households' changed to 'Most workers', to match the source's 'more than 70 percent of employment'.",
+        "Thread 'Oil exports through Benin': the source says hydrocarbon dependence raises growth volatility; it does not name oil price swings. The text now says oil makes growth more volatile.",
+        "since_last_year: dropped 'The past year has been steadier', which no source states. Dropped 'oil output near capacity' and kept the harvest and lower food prices, adding the MPO inflation passage to support them."
+      ]
+    },
+    "headline": "Niger's income per person is still below its 1960 level: decades of drought and a uranium bust, then steadier growth since 2005 and a new oil boom.",
+    "arc": "Niger's income per person is lower today than in 1960, the first year of the record, and still 29.7 percent below its 1965 peak, 60 years on. The IMF traces the long slide to droughts in the late 1960s and early 1970s and to the collapse of world uranium prices in the early 1980s, which set off a long recession made worse by political instability. From 1990 to 2004 income per person shrank by 1.4 percent a year on average. Since 2005 it has grown by 2.1 percent a year, rising from 1.8 percent in 2006 to 2015 to 2.4 percent in 2016 to 2025, and the World Bank describes Niger as politically stable from 2011 to 2023, drawing aid and investment. Growth still swings with the rains on Niger's farms, and fast population growth absorbs much of each gain. After the July 2023 regime change and regional sanctions, crude exports through the new pipeline to Benin helped lift income per person by 4.8 percent in 2024 and 3.6 percent in 2025.",
+    "threads": [
+      {
+        "title": "Uranium bust and drought",
+        "text": "Droughts in the late 1960s and early 1970s hurt growth and weakened farming, and the collapse of world uranium prices in the early 1980s set off a long recession. The IMF adds that limited policy adjustment and political instability deepened it.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr0714.pdf",
+            "publisher": "IMF",
+            "title": "Niger: Selected Issues and Statistical Appendix (IMF Country Report No. 07/14)",
+            "date": "2007-01",
+            "quote": "A series of droughts in the late 1960s and early 1970s hurt growth and weakened the agricultural sector."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr0714.pdf",
+            "publisher": "IMF",
+            "title": "Niger: Selected Issues and Statistical Appendix (IMF Country Report No. 07/14)",
+            "date": "2007-01",
+            "quote": "However, growth weakened with the collapse of world uranium prices in the early 1980s, precipitating a prolonged recession."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr0714.pdf",
+            "publisher": "IMF",
+            "title": "Niger: Selected Issues and Statistical Appendix (IMF Country Report No. 07/14)",
+            "date": "2007-01",
+            "quote": "Limited policy adjustment to the terms-of-trade shock and political instability worsened the situation."
+          }
+        ]
+      },
+      {
+        "title": "Rain-fed farming sets the pace",
+        "text": "Most workers depend on rain-fed farming, so the weather moves growth up and down from year to year, and repeated droughts and floods have hit output over the past two decades. A very good rainy season helped income per person jump 8.6 percent in 2022, after a 2.1 percent fall in 2021.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Niger (October 2026)",
+            "date": "2026-10",
+            "quote": "Niger relies heavily on rain-fed agriculture (about 40 percent of GDP), exposing the majority of households (more than 70 percent of employment) to climate-related shocks."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099061125094521580/pdf/P507242-544e3271-96ea-4c10-a14e-c656cfe31228.pdf",
+            "publisher": "World Bank",
+            "title": "Niger Economic Update, April 2025: Strengthening the Agri-Food System",
+            "date": "2025-04",
+            "quote": "Over the past two decades, Niger faced at least nine major droughts and five major floods, affecting its rural population and rainfed agriculture."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099061125094521580/pdf/P507242-544e3271-96ea-4c10-a14e-c656cfe31228.pdf",
+            "publisher": "World Bank",
+            "title": "Niger Economic Update, April 2025: Strengthening the Agri-Food System",
+            "date": "2025-04",
+            "quote": "The jump in 2022 was due to a base effect (from the contraction in output in 2021) and very favorable rainfall."
+          }
+        ]
+      },
+      {
+        "title": "Stability ends in 2023",
+        "text": "From 2011 to 2023 Niger was seen as politically stable in the Sahel and drew aid and investment. The July 2023 regime change brought regional sanctions and less outside financing, and income per person fell 0.7 percent in 2023. The sanctions were lifted in February 2024, but the border with Benin stayed closed, pushing trade onto longer, costlier routes.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099061125094521580/pdf/P507242-544e3271-96ea-4c10-a14e-c656cfe31228.pdf",
+            "publisher": "World Bank",
+            "title": "Niger Economic Update, April 2025: Strengthening the Agri-Food System",
+            "date": "2025-04",
+            "quote": "From 2011 to 2023, Niger was considered politically stable in the Sahel, attracting significant international development assistance and investment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Niger (October 2026)",
+            "date": "2026-10",
+            "quote": "July 2023 regime change, reduced external financing and regional sanctions structurally constrained fiscal space, trade, and service delivery despite their lifting in February 2024"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099061125094521580/pdf/P507242-544e3271-96ea-4c10-a14e-c656cfe31228.pdf",
+            "publisher": "World Bank",
+            "title": "Niger Economic Update, April 2025: Strengthening the Agri-Food System",
+            "date": "2025-04",
+            "quote": "The closure forced Niger to shift to and rely on longer and more expensive transport routes, leading to lower trade volume, and disrupting uranium exports."
+          }
+        ]
+      },
+      {
+        "title": "Oil exports through Benin",
+        "text": "Large-scale crude exports through the Niger-Benin pipeline began in May 2024 and, with a strong harvest, drove the rebound: income per person rose 4.8 percent in 2024 and 3.6 percent in 2025. The World Bank notes that leaning more on oil also makes growth more volatile.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Niger (October 2026)",
+            "date": "2026-10",
+            "quote": "Since its completion in May 2024, the Niger-Benin pipeline has boosted oil exports, government revenues, and GDP growth."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/14/pr-25251-niger-imf-completes-7th-review-of-the-ecf-arrange-and-3rd-review-of-the-arrange-rsf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Seventh Review of the Extended Credit Facility Arrangement and the Third Review of the Arrangement under the Resilience and Sustainability Facility with Niger",
+            "date": "2025-07-14",
+            "quote": "Growth in 2024 is estimated at 10.3 percent, driven by the start of crude oil exports and an exceptional agricultural harvest"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099061125094521580/pdf/P507242-544e3271-96ea-4c10-a14e-c656cfe31228.pdf",
+            "publisher": "World Bank",
+            "title": "Niger Economic Update, April 2025: Strengthening the Agri-Food System",
+            "date": "2025-04",
+            "quote": "Niger's economy is becoming more dependent on hydrocarbon, potentially exposing it to even higher growth volatility."
+          }
+        ]
+      },
+      {
+        "title": "Population growth absorbs the gains",
+        "text": "Niger's population grows fast, so much of each year's GDP growth is used up before it reaches income per person. The IMF found growth below population growth for decades, and the World Bank says rapid population growth, with low productivity, has kept extreme poverty high.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Niger (October 2026)",
+            "date": "2026-10",
+            "quote": "Low productivity and rapid population growth have kept extreme poverty above 50 percent at the end of 2025."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr0714.pdf",
+            "publisher": "IMF",
+            "title": "Niger: Selected Issues and Statistical Appendix (IMF Country Report No. 07/14)",
+            "date": "2007-01",
+            "quote": "Niger's economic growth in the past several decades has been relatively modest and was below the rate of population growth."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The World Bank and the IMF both expect strong growth in 2026, helped by a good harvest that has pushed food prices down. Niger cleared most of its debt-service arrears in the first half of 2026. The border with Benin is still closed.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/08/pr26328-imf-staff-completes-the-2026-iv-consultation-and-reaches-staff-level-agreement-with-niger",
+          "publisher": "IMF",
+          "title": "IMF Staff completes the 2026 Article IV Consultation and reaches Staff-Level Agreement with Niger on the Tenth Review under the Extended Credit Facility and a new 38-month Extended Credit Facility Request",
+          "date": "2026-10-08",
+          "quote": "Economic growth is expected to remain strong at 7 percent in 2026 and 6.7 percent in 2027."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Niger (October 2026)",
+          "date": "2026-10",
+          "quote": "Inflation is estimated to average -1.9 percent in 2026 as lower food prices following a favorable agricultural season more than offset pressures"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Niger (October 2026)",
+          "date": "2026-10",
+          "quote": "Combined with the clearance of most debt-service arrears in H1 2026 and planned bilateral arrears clearance by end-2026, these efforts have moderated debt vulnerabilities"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ner.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Niger (October 2026)",
+          "date": "2026-10",
+          "quote": "An upside risk is the reopening of the Benin border."
+        }
+      ]
+    },
+    "tension": "The sources describe a strong oil-led boom in 2024, but in the data income per person grew 4.8 percent that year and 3.6 percent in 2025, because fast population growth absorbs much of the gain; the sources also differ on how fast GDP grew in 2024. After two decades of growth, income per person is still lower than in 1960 and 29.7 percent below its 1965 peak."
+  }
+}

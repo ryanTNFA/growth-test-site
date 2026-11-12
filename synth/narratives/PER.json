@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "PER",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PER",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Peru Article IV consultation 2025 IMF staff concluding statement\"",
+        "tier 1 domains: \"Peru Macro Poverty Outlook World Bank 2025 growth\"",
+        "tier 1 domains: \"OECD Economic Survey Peru 2025 growth productivity informality\" (OECD pages returned 403, not cited)",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, oecd.org, iadb.org: \"Peru growth 1990s stabilization hyperinflation reforms commodity boom 2000s poverty reduction\"",
+        "imf.org: \"Peru 2023 Article IV staff report hyperinflation commodity boom poverty reduced two-thirds\" (IMF eLibrary pages returned 403, not cited)",
+        "Opened: imf.org 2026 and 2024 Article IV concluding statements; thedocs.worldbank.org Macro Poverty Outlook Peru October 2026; imf.org Dialogo a fondo 'Peru's Road to Economic Success' (2015); documents1.worldbank.org 'Economic Growth in Peru' (no date shown, not cited)",
+        "Critic pass: re-opened all four cited URLs (imf.org 2015 PDF and thedocs.worldbank.org MPO PDF text extracted locally and checked)"
+      ],
+      "critic_changes": [
+        "All four cited URLs re-opened; the two PDFs (IMF 2015 Dialogo a fondo, World Bank MPO October 2026) were extracted locally. Every quoted passage was found verbatim, and every date matches the document (IMF PDF metadata: October 1, 2015; MPO footer: October 2026; IMF statements: 2026-03-26 and 2024-03-22).",
+        "Headline: reworded so the 5.3 percent is tied to the 2002–2013 era and the 1.3 percent to income per person since 2014, and so it no longer says the boom 'lifted' income (the sources call the era a commodity boom but do not measure its effect). 148 characters.",
+        "Arc: 'a new fall in 1998 that the IMF ties to external shocks' changed to 'that the IMF calls a reminder of Peru's exposure to external shocks', which is what the cited passage says. All arc numbers (-11.5, -14.3, -7.1, 1.0, 5.3, 25.3, 1.3, -12.0, -1.4, 2025 peak) checked against PER.json series and G4.eras.",
+        "Thread 'Stabilization after hyperinflation': 'ended the crisis' softened to 'took on the crisis', because the cited passage says only that the program addressed many macroeconomic problems.",
+        "Thread 'The commodity boom years': removed 'carried by high prices for Peru's mineral exports', which no cited passage supports. It now says the World Bank calls the era a commodity boom.",
+        "Thread 'Political volatility': the IMF citation ('sustained high metal prices or increased post-election political stability') did not support the claim that the IMF counts political uncertainty and social unrest among domestic risks. It was replaced with the passage on the same page that does: 'Key domestic risks: political uncertainty, social unrest...'.",
+        "Thread 'Weather shocks and metal prices': renamed 'Weather shocks and export prices'. 'High prices for copper and gold' replaced with export prices at record highs against import prices, because the cited passages speak only of terms of trade and never name copper or gold.",
+        "since_last_year: removed the causal claim that record export prices lifted private investment, which the cited passage does not make. It now reports the IMF's investment finding as stated. Added the World Bank El Niño Costero citation, because the El Niño claim had no supporting citation in this section.",
+        "Tension: numbers checked against data (era mean 1.3; investment 20.5 percent of GDP in 2025 and 25.3 in 2013). No change.",
+        "Banned phrases: none found. The World Bank MPO's own summary uses 'binding constraints'; this phrase does not appear in the story."
+      ]
+    },
+    "headline": "Peru's income per person grew 5.3 percent a year in the 2002–2013 commodity boom; since 2014 it has grown 1.3 percent a year amid political turmoil.",
+    "arc": "Peru entered the 1990s in collapse: income per person fell 11.5 percent in 1988, 14.3 percent in 1989 and 7.1 percent in 1990, as hyperinflation took hold. A stabilization program in 1990–92 and later reforms brought growth back, but the first era, 1990–2001, averaged only 1.0 percent a year, with a new fall in 1998 that the IMF calls a reminder of Peru's exposure to external shocks. From 2002 to 2013 income per person grew 5.3 percent a year in what the World Bank calls a commodity boom, and investment climbed to 25.3 percent of GDP by 2013. Growth then slowed sharply in 2014, and the era since has averaged 1.3 percent a year; the World Bank links this to high political volatility and the IMF to a fall in productivity growth. The pandemic cut income per person by 12.0 percent in 2020, and climate shocks and social unrest brought another fall of 1.4 percent in 2023, yet by 2025 income per person was at its highest level so far.",
+    "threads": [
+      {
+        "title": "Stabilization after hyperinflation",
+        "about": "history",
+        "text": "In the late 1980s output collapsed and prices spun out of control. A stabilization program in 1990–92 took on the crisis and began a long run of reforms, but growth in the 1990s stayed uneven, and 1998 brought a new fall.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/blog/dialogo/100115.pdf",
+            "publisher": "IMF",
+            "title": "Peru’s Road to Economic Success",
+            "date": "2015-10-01",
+            "quote": "While the Peruvian economy contracted by about 25 percent in the 3 years prior to the implementation of the stabilization program in the early 1990s"
+          },
+          {
+            "url": "https://www.imf.org/external/np/blog/dialogo/100115.pdf",
+            "publisher": "IMF",
+            "title": "Peru’s Road to Economic Success",
+            "date": "2015-10-01",
+            "quote": "The history of Peru’s successful performance began with an ambitious stabilization program in 1990–92, which addressed a multitude of macroeconomic problems"
+          },
+          {
+            "url": "https://www.imf.org/external/np/blog/dialogo/100115.pdf",
+            "publisher": "IMF",
+            "title": "Peru’s Road to Economic Success",
+            "date": "2015-10-01",
+            "quote": "the period also included 1998, the only year of economic contraction in the post stabilization period, and a reminder of Peru’s vulnerabilities to external shocks"
+          }
+        ]
+      },
+      {
+        "title": "The commodity boom years",
+        "about": "history",
+        "text": "From 2002 to 2013 income per person grew 5.3 percent a year, in what the World Bank calls a commodity boom. The boom ended in 2014, when the economy slowed more sharply than at any time since the global financial crisis.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Peru (October 2026)",
+            "date": "2026-10",
+            "quote": "less than half the 6.1 percent recorded during the 2002–2013 commodity boom"
+          },
+          {
+            "url": "https://www.imf.org/external/np/blog/dialogo/100115.pdf",
+            "publisher": "IMF",
+            "title": "Peru’s Road to Economic Success",
+            "date": "2015-10-01",
+            "quote": "In the first half of 2014, Peru’s economy experienced its sharpest deceleration since the global financial crisis."
+          }
+        ]
+      },
+      {
+        "title": "Political volatility",
+        "about": "present",
+        "text": "Since the boom ended, Peru has gone through repeated changes of president. The World Bank links this turmoil to the slower growth of the past decade, and the IMF counts political uncertainty and social unrest among the main risks at home.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Peru (October 2026)",
+            "date": "2026-10",
+            "quote": "Over the past decade, Peru’s high political volatility—marked by eight changes in the presidency—held average real annual GDP growth to 2.5 percent"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/25/mcs-03262026-peru-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Peru: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-03-26",
+            "quote": "Key domestic risks: political uncertainty, social unrest, weather-related shocks including a stronger El Niño Costero, persistently high insecurity, and illegal mining."
+          }
+        ]
+      },
+      {
+        "title": "Slow productivity, wide informality",
+        "about": "present",
+        "text": "The IMF finds that slower productivity growth has pulled down how fast the economy can grow. Most workers hold informal jobs, and the World Bank says this, along with weak public services and gaps in infrastructure, has held back growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/21/cs32124-peru-concluding-statement-2024-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Peru: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03-22",
+            "quote": "Average and potential growth have fallen to about 2.5 percent, driven by a decline in total factor productivity growth"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Peru (October 2026)",
+            "date": "2026-10",
+            "quote": "High worker informality, around 70 percent, poor public service delivery, and infrastructure deficiencies, have damped growth potential."
+          }
+        ]
+      },
+      {
+        "title": "Weather shocks and export prices",
+        "about": "present",
+        "text": "Climate shocks and social unrest pushed income per person down in 2023. Since then export prices at record highs against import prices have pulled the other way, while a new El Niño has hit farming and fishing.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/21/cs32124-peru-concluding-statement-2024-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Peru: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03-22",
+            "quote": "Economic growth declined to -0.6 percent in 2023, driven by climate-related shocks and social turmoil."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/25/mcs-03262026-peru-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Peru: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-03-26",
+            "quote": "Record-high terms of trade (TOT) underpinned positive momentum in 2025."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Peru (October 2026)",
+            "date": "2026-10",
+            "quote": "El Niño Costero weighed on agricultural and fisheries output, but exceptionally favorable terms of trade supported strong performance"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 2.4 percent and reached a new high, and the IMF reports private investment growing at its fastest pace since 2013, leaving aside the rebound after the pandemic. In 2026 a new government took office after the election and business expectations rose, while an El Niño event weighed on farming and fishing.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/25/mcs-03262026-peru-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Peru: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-03-26",
+          "quote": "Private investment grew 10 percent in 2025, its strongest pace since 2013 excluding the post-pandemic rebound."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Peru (October 2026)",
+          "date": "2026-10",
+          "quote": "The 2026 election brought in a new administration whose stated priorities include supporting public and private investment, which immediately lifted business expectations"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-per.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Peru (October 2026)",
+          "date": "2026-10",
+          "quote": "El Niño Costero weighed on agricultural and fisheries output, but exceptionally favorable terms of trade supported strong performance"
+        }
+      ]
+    },
+    "tension": "The sources describe the decade since the boom in terms of total GDP growth, but income per person grew only 1.3 percent a year over 2014–2025, because part of the growth went to a larger population. And while the IMF reports private investment in 2025 growing at its fastest pace since 2013, investment was still 20.5 percent of GDP in 2025, below the 25.3 percent of 2013."
+  }
+}

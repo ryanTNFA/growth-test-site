@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "BLR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BLR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch allowed_domains=tier 1 list (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Belarus economy growth 2024 2025\"",
+        "WebSearch allowed_domains=[worldbank.org]: \"Belarus Macro Poverty Outlook\"",
+        "WebSearch allowed_domains=[ebrd.com]: \"EBRD Regional Economic Prospects Belarus 2026\"",
+        "WebSearch allowed_domains=[imf.org]: \"Belarus Article IV staff report growth model state-owned enterprises directed lending Russia energy\"",
+        "Opened (draft and critic): thedocs.worldbank.org Macro Poverty Outlook Belarus, October 2026",
+        "Opened (draft and critic): documents1.worldbank.org Macro Poverty Outlook Belarus, April 2024",
+        "Opened (draft and critic): ebrd.com Regional Economic Prospects, September 2026",
+        "Opened (draft and critic): imf.org IMF Country Report No. 15/136, 2015 Article IV Consultation"
+      ],
+      "critic_changes": [
+        "Opened all four cited documents (IMF Country Report 15/136, World Bank MPO October 2026 and April 2024, EBRD REP September 2026) and extracted their text: every quoted passage appears verbatim, URLs are on tier 1 domains and dates match (IMF dated May 2015; MPO pages marked October 2026 and Apr 24; EBRD September 2026). No citation dropped.",
+        "Headline: said 'Belarus grew' and 'on cheap Russian energy and credit'; changed to income per person, and to the IMF's framing (dependence on Russian energy subsidies); the 2008 credit boom was not the driver of the whole era.",
+        "Arc: 'fell through most of the 1990s' was wrong (income per person fell 1991–1995 and rose 1996–1999); corrected. 'rested in part on Russian energy subsidies' softened to the IMF's own wording (weak spots it hid).",
+        "Arc: 'currency crises in 2009 and 2011 when expansionary wage and credit policies met a fixed exchange rate' merged two different causes; the IMF ties 2009 to the global financial crisis and only 2011 to wage/credit policy under a fixed rate. Rewritten.",
+        "Arc and thread 2: the cited IMF 2015 report links only 2015 (not 2016) to declining trade with Russia; 2016 decline now stated without a cause. Added the 2020 dip (-0.3) so the list of falling years is complete.",
+        "Thread 1: 'peaking above 10 percent in several years' used a figure not in the data; replaced with the data's 12.2 percent peak in 2004.",
+        "Thread 2: swapped the 'Growth was anemic' citation for the IMF passage on abandoning exchange-rate control and the devaluation, which supports the text's devaluation claim; 'currency peg broke' reworded to the source's terms.",
+        "Thread 3: 'closed most European markets' tightened to the source's 'EU markets largely closed'; replaced the EBRD citation with the World Bank passage that Russia 'absorbs most exports', which is what the text claims.",
+        "Thread 4: 'large wage rises, cheap credit and state-backed building' for the 2023–2024 rebound was not supported by the cited (2026) passages; reworded to stimulus-led growth as the World Bank describes it.",
+        "since_last_year: added a citation for the ICT/software relocation claim (it was not in any quote) and the EBRD passage on 2026 drivers; 'a better harvest' changed to 'stronger farming' to match 'stronger agricultural sector'.",
+        "Tension: income per person set new highs in 2023 as well as 2024 and 2025 (2023 level exceeds 2021); corrected. 'stimulus that works less well each year' softened; the link to outmigration restated as a fact about population plus the World Bank's note, not an inference presented as the source's.",
+        "Checked all numbers against desk/data/BLR.json (eras -2.1, 7.4, 1.2; 10-year 1.6 vs 4.5; yearly 0.4, 1.9, -4.0, -2.6, -0.3, -3.9, 4.7, 4.9, 1.8, 12.2; peak 2025). No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Income per person grew 7.4 percent a year in 1999–2011, leaning on Russian energy subsidies; since 2012 it has averaged 1.2, propped up by stimulus.",
+    "arc": "Income per person fell every year from 1991 to 1995 and then recovered, so the 1991–1998 era averaged -2.1 percent a year; the sources do not explain that era. From 1999 to 2011 growth ran at 7.4 percent a year, which the IMF calls a decade of strong performance that hid weak spots, among them an overvalued currency and heavy dependence on Russian energy subsidies. The boom ended in two crises: the global financial crisis hit in 2009, and in 2011 expansionary wage and credit policies under a fixed exchange rate ended in a large devaluation. Growth has stayed low since, and the 2012–2025 era averaged 1.2 percent a year, with income per person falling in 2015 (-4.0) as trade with Russia declined, again in 2016 (-2.6), dipping in 2020 (-0.3) and falling in 2022 (-3.9), the year Western sanctions followed Russia's invasion of Ukraine. Over 2016–2025 growth averaged 1.6 percent a year against 4.5 in the decade before. A rebound of 4.7 percent in 2023 and 4.9 in 2024, then 1.8 in 2025, took income per person to its highest level yet in 2025, with the World Bank and EBRD describing recent growth that leans on wages, credit and state-backed construction while trade runs through Russia.",
+    "threads": [
+      {
+        "title": "A boom on Russian energy",
+        "text": "Growth averaged 7.4 percent a year from 1999 to 2011, peaking at 12.2 percent in 2004. The IMF later described this as a decade of strong performance that hid weak spots, including an overvalued currency and heavy dependence on Russian energy subsidies. Growth nearly stopped in 2009, at 0.4 percent, when the global financial crisis hit.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15136.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Belarus: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Belarus (IMF Country Report No. 15/136)",
+            "date": "2015-05",
+            "quote": "After a decade of strong performance, Belarus was badly hit by the global financial crisis, which revealed long standing vulnerabilities."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15136.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Belarus: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Belarus (IMF Country Report No. 15/136)",
+            "date": "2015-05",
+            "quote": "These included an overvalued currency, an outsize current account deficit, and heavy dependence on Russian energy subsidies."
+          }
+        ]
+      },
+      {
+        "title": "Currency crises and stop-go policy",
+        "text": "After 2009, wage and credit stimulus returned, and in 2011 the authorities gave up control of the exchange rate in a large devaluation. Growth fell to 1.9 percent in 2012 and stayed low. Income per person shrank in 2015 and 2016; the IMF linked the 2015 slowdown partly to declining trade with Russia.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15136.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Belarus: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Belarus (IMF Country Report No. 15/136)",
+            "date": "2015-05",
+            "quote": "were reversed and substituted with highly expansionary wage and credit policies in an attempt to spur growth"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15136.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Belarus: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Belarus (IMF Country Report No. 15/136)",
+            "date": "2015-05",
+            "quote": "the control over the official exchange rate was abandoned, resulting in a devaluation by 65 percent"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15136.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Belarus: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Belarus (IMF Country Report No. 15/136)",
+            "date": "2015-05",
+            "quote": "In 2015, growth has slowed sharply as high uncertainty, reductions in real incomes, administrative measures, and declining trade with Russia weighed on activity."
+          }
+        ]
+      },
+      {
+        "title": "Sanctions and trade through Russia",
+        "text": "Since Russia's invasion of Ukraine, Western sanctions have largely closed European Union markets, and exports such as potash and refined oil now travel through Russia at higher cost. Income per person fell 3.9 percent in 2022. Russia now takes most of Belarus's exports, which ties its growth closely to its neighbor's.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belarus, October 2026",
+            "date": "2026-10",
+            "quote": "Belarus's economy remains centralized and increasingly isolated since Russia's invasion of Ukraine and the Western sanctions that followed."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099736004042431178/pdf/IDU1d388aa1a1a63d149c01a0881e19f6167ab2c.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Belarus: April 2024",
+            "date": "2024-04",
+            "quote": "the economy established new trade routes and redirected exports, particularly of potash fertilizers and refined oil products, through Russia, albeit at higher logistical costs"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belarus, October 2026",
+            "date": "2026-10",
+            "quote": "deepened dependence on Russia, which now absorbs most exports and intermediates much of the rest"
+          }
+        ]
+      },
+      {
+        "title": "Stimulus meets a tight labor market",
+        "text": "The rebound of 4.7 percent in 2023 and 4.9 in 2024 leaned on stimulus. The World Bank says growth still depends on fiscal and credit stimulus that works less well as capacity runs short, while labor hoarding and skilled workers leaving keep the labor market tight. The EBRD notes that wages are rising faster than productivity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belarus, October 2026",
+            "date": "2026-10",
+            "quote": "Growth remains dependent on fiscal and credit stimulus whose effectiveness is increasingly blunted by structural and capacity constraints."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belarus, October 2026",
+            "date": "2026-10",
+            "quote": "Labor hoarding in state-linked firms and outmigration of skilled workers kept the labor market tight, sustaining real wage gains."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/economic-surveys/regional-economic-prospects/2026/Regional%20Economic%20Prospects%20September%202026.pdf",
+            "publisher": "EBRD",
+            "title": "Regional Economic Prospects in the EBRD Regions, September 2026: Running dry",
+            "date": "2026-09",
+            "quote": "the underlying inflationary pressures remain as wage growth outpaces improvements in productivity"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed in 2025, to 1.8 percent for income per person, which the World Bank reads as a sign of how fragile the model is. In the first seven months of 2026 growth picked up again on firmer Russian demand, stronger farming and software services, as work moved from Russia; the EBRD points to wage gains, investment and state-backed construction. A partial easing of US sanctions has not changed the main route for trade, which still runs through Russia at higher cost.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belarus, October 2026",
+          "date": "2026-10",
+          "quote": "Although Belarus avoided recession, its 2025 slowdown highlighted the fragility of Belarus's economic model."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belarus, October 2026",
+          "date": "2026-10",
+          "quote": "growth accelerated to 2.1 percent year-on-year in January–July 2026, supported by firmer demand from Russia and a stronger agricultural sector"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belarus, October 2026",
+          "date": "2026-10",
+          "quote": "led by the Information and Communication Technology (ICT) sector (+4.9 percent), as tighter conditions in Russia prompted a relocation of activity"
+        },
+        {
+          "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/economic-surveys/regional-economic-prospects/2026/Regional%20Economic%20Prospects%20September%202026.pdf",
+          "publisher": "EBRD",
+          "title": "Regional Economic Prospects in the EBRD Regions, September 2026: Running dry",
+          "date": "2026-09",
+          "quote": "supported mainly by wage gains, investment and state-backed construction, while weak external demand, sanctions-related logistical constraints, limited export diversification and heavy dependence on Russia"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-blr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belarus, October 2026",
+          "date": "2026-10",
+          "quote": "despite a partial US easing, trade has been rerouted through Russia, raising costs and squeezing export margins"
+        }
+      ]
+    },
+    "tension": "The sources describe an economy at its limits, with falling potential output, growing isolation and stimulus that works less and less well. Yet in the data, income per person set new highs in 2023, 2024 and 2025, after growing 4.7 and 4.9 percent in 2023 and 2024. Growth in income per person also ran above the economy-wide growth the World Bank reports for 2023 to 2025, which means the population was shrinking; the World Bank notes skilled workers leaving. The slow era averaged 1.2 percent a year, but recent years show it as a mix of falls and rebounds, not a steady crawl."
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "ARG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ARG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Argentina Article IV IMF staff report 2025 economic program review",
+        "worldbank.org: Argentina Macro Poverty Outlook World Bank 2025",
+        "imf.org: IMF Independent Evaluation Office The IMF and Argentina 1991-2001 convertibility crisis",
+        "tier 1 allowed_domains on every search: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org",
+        "opened: thedocs.worldbank.org MPO Argentina (October 2026); imf.org 2026 Article IV / second EFF review staff report; imf.org 2025 EFF request staff report (Country Report 25/95); imf.org IEO press release 2004",
+        "critic: re-opened all four cited URLs with WebFetch and checked every quote against the extracted PDF text"
+      ],
+      "critic_changes": [
+        "All four cited URLs opened; every quote found verbatim in the page or extracted PDF text, and dates confirmed (IEO press release 2004-07-29; EFF request Country Report 25/95, April 2025; 2026 Article IV staff report circulated May 8, 2026; World Bank MPO October 2026). All numbers (3.5, 0.3, 3.0, -0.3, 11.8, 10.3, 4.0, 5.4, 2011, 2008, falls in 1999-2002 and 2023-2024) checked against desk/data/ARG.json.",
+        "Arc: 'From 1990 to 1997 ... while the peso was pegged' changed to say the peg began in 1991, as the IEO source states (1990 was before the peg).",
+        "Thread 'Pegged peso, then default': dropped 'much of it in dollars' (not supported by the source); added two IEO citations from the same page supporting the 1991 peg and the steady rise in public debt.",
+        "Thread 'Boom gains, then lost ground': the second quote did not cover 'held back private investment and formal jobs'; replaced it with a 21-word passage from the same sentence that does ('...controls that discouraged private investment and formal employment').",
+        "Thread 'Deficits paid with printed money': the pandemic was not supported by any cited passage; added an IMF 2025 quote on 'shocks from the global pandemic' and reworded to match.",
+        "Thread 'Stabilization and its strains': the opening sentence (cut deficit, stopped central bank financing, removed many controls) had no supporting citation; rewritten as 'Since 2024 the government has run budget surpluses and stopped the central bank from paying for the government', supported by an added IMF 2025 quote; 'removed many controls' dropped.",
+        "Thread 'Farms, energy and mining lead': 'manufacturing, construction and retail lag' was not in any quoted passage; changed to 'manufacturing and construction lag' and extended the IMF 2025 quote to the part of the sentence saying construction and manufacturing still lag.",
+        "No recommendation or banned-phrase language found; headline (133 characters), arc (5 sentences), since_last_year and tension kept as drafted. Tier 1 holds with 3 distinct recent tier 1 sources."
+      ]
+    },
+    "headline": "Argentina's income per person grew in the 1990s and 2000s booms, then stalled after 2013; it is still 5.4 percent below its 2011 peak.",
+    "arc": "From 1990 to 1997 income per person grew 3.5 percent a year, and from 1991 the peso was pegged to the US dollar. From 1998 to 2005 growth slowed to 0.3 percent a year: income per person fell each year from 1999 to 2002, by 11.8 percent in 2002, as rising public debt ended in a default in December 2001 and the end of the peg, before a fast rebound. From 2006 to 2013 growth ran at 3.0 percent a year during the 2000s commodity boom, and income per person peaked in 2011. Since 2014 it has averaged -0.3 percent a year; the IMF links the slide to falling productivity under distortive policies, heavy state intervention and controls, while deficits paid for with printed money, the 2020 pandemic and a drought in 2023 added shocks. A stabilization drive that began at the end of 2023 brought a rebound of 4.0 percent in 2025, but income per person is still 5.4 percent below its 2011 peak and about where it first was in 2008.",
+    "threads": [
+      {
+        "title": "Pegged peso, then default",
+        "about": "history",
+        "text": "From 1991 the peso was tied one-for-one to the US dollar, and growth was strong until 1997. Public debt rose steadily, and the slump that followed ended in a sovereign default in December 2001 and the end of the peg. Income per person fell 11.8 percent in 2002.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/External/NP/ieo/2004/pr/eng/pr0402.htm",
+            "publisher": "IMF",
+            "title": "IMF's Independent Evaluation Office Announces Release of Report on the Role of the IMF in Argentina",
+            "date": "2004-07-29",
+            "quote": "In December 2001, Argentina defaulted on its sovereign debt and soon afterwards abandoned the convertibility regime"
+          },
+          {
+            "url": "https://www.imf.org/External/NP/ieo/2004/pr/eng/pr0402.htm",
+            "publisher": "IMF",
+            "title": "IMF's Independent Evaluation Office Announces Release of Report on the Role of the IMF in Argentina",
+            "date": "2004-07-29",
+            "quote": "under which the peso had been pegged at parity with the U.S. dollar since 1991"
+          },
+          {
+            "url": "https://www.imf.org/External/NP/ieo/2004/pr/eng/pr0402.htm",
+            "publisher": "IMF",
+            "title": "IMF's Independent Evaluation Office Announces Release of Report on the Role of the IMF in Argentina",
+            "date": "2004-07-29",
+            "quote": "surveillance underestimated the vulnerability that could arise from the steady increase in public debt"
+          }
+        ]
+      },
+      {
+        "title": "Boom gains, then lost ground",
+        "about": "history",
+        "text": "The 2000s commodity boom lifted income per person to a peak in 2011. The IMF says those gains were then reversed, and ties the decline to falling productivity under distortive policies, state intervention and heavy controls that held back private investment and formal jobs.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+            "date": "2026-05",
+            "quote": "real per capita GDP fell by close to 15 percent over 2011–24, reversing convergence gains during the 2000s commodity boom."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+            "date": "2026-05",
+            "quote": "falling productivity, stemming from distortive policies, extensive state intervention, and burdensome regulations and controls that discouraged private investment and formal employment"
+          }
+        ]
+      },
+      {
+        "title": "Deficits paid with printed money",
+        "about": "history",
+        "text": "The IMF describes a long record of the central bank paying for government deficits, which fed high inflation and repeated booms and busts. From 2020 to 2023 this pushed inflation to triple digits despite price controls, on top of the shock of the global pandemic, in which income per person fell 10.3 percent in 2020.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1argea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Request for an Extended Arrangement Under the Extended Fund Facility-Press Release; Staff Report; Staff Supplement; and Statement by the Executive Director for Argentina",
+            "date": "2025-04",
+            "quote": "Argentina’s long history of fiscal dominance and central bank financing of the deficit, which have resulted in high and persistent inflation and frequent boom-bust episodes."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1argea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Request for an Extended Arrangement Under the Extended Fund Facility-Press Release; Staff Report; Staff Supplement; and Statement by the Executive Director for Argentina",
+            "date": "2025-04",
+            "quote": "Loose fiscal policy financed by money creation sent annual inflation into triple digits, despite heavy-handed price controls"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1argea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Request for an Extended Arrangement Under the Extended Fund Facility-Press Release; Staff Report; Staff Supplement; and Statement by the Executive Director for Argentina",
+            "date": "2025-04",
+            "quote": "shocks from the global pandemic and the War on Ukraine"
+          }
+        ]
+      },
+      {
+        "title": "Stabilization and its strains",
+        "about": "present",
+        "text": "Since 2024 the government has run budget surpluses and stopped the central bank from paying for the government. Income per person fell in 2023 and 2024, then grew 4.0 percent in 2025, though political uncertainty before the October 2025 midterm elections set off a rush into dollars and slowed growth for a time.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1argea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Request for an Extended Arrangement Under the Extended Fund Facility-Press Release; Staff Report; Staff Supplement; and Statement by the Executive Director for Argentina",
+            "date": "2025-04",
+            "quote": "Sustained fiscal surpluses has allowed the elimination of central bank financing of the government"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+            "date": "2026-05",
+            "quote": "political uncertainties ahead of the October midterm elections led to a surge in resident dollarization and reserve losses"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+            "date": "2026-05",
+            "quote": "political uncertainties during 2025 temporarily slowed growth and the disinflation process."
+          }
+        ]
+      },
+      {
+        "title": "Farms, energy and mining lead",
+        "about": "present",
+        "text": "A drought hit farm output in 2023, and farming recovered the next year. Growth now leans on agribusiness, energy and mining, and Argentina has become a net energy exporter, but these sectors create few jobs for their size while manufacturing and construction lag.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-arg.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Argentina",
+            "date": "2026-10",
+            "quote": "Growth potential is increasingly concentrated in agribusiness, energy, and mining—capital-intensive sectors that generate few direct jobs relative to their output and export contribution."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1argea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Request for an Extended Arrangement Under the Extended Fund Facility-Press Release; Staff Report; Staff Supplement; and Statement by the Executive Director for Argentina",
+            "date": "2025-04",
+            "quote": "agriculture has recovered given improved weather conditions following last year’s drought, sectors like construction and manufacturing still lag in annual terms"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+            "date": "2026-05",
+            "quote": "Argentina (now a net energy exporter)"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 4.0 percent in 2025, its first rise since 2022, despite a pause before the October 2025 midterm elections. In 2026 activity slowed again, the World Bank reports.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-arg.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Argentina",
+          "date": "2026-10",
+          "quote": "After growing 4.5 percent in 2025, activity has slowed."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1argea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Argentina: Staff Report for the 2026 Article IV Consultation, Second Review Under the Extended Arrangement Under the Extended Fund Facility",
+          "date": "2026-05",
+          "quote": "political uncertainties during 2025 temporarily slowed growth and the disinflation process."
+        }
+      ]
+    },
+    "tension": "The IMF describes a deep fall in income per person after 2011, while in this tool's data the fall is shallower: even before the 2025 rebound the drop from the 2011 peak is smaller than the IMF's figure, and by 2025 income per person is only 5.4 percent below that peak, so the tool reads the shortfall as context rather than the growth problem."
+  }
+}

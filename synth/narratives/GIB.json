@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "iso3": "GIB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GIB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Gibraltar economy growth\"",
+        "tier 1 (same domains): \"Gibraltar Brexit treaty economic outlook report\"",
+        "tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"Gibraltar economy growth\"",
+        "tier 2 (same domains): \"Gibraltar economy report 2024 2025\""
+      ],
+      "critic_changes": [],
+      "reason": "No recent IMF, World Bank, OECD or UN country analysis covers Gibraltar (only statistics portals), and the data file has no growth series or eras to tell."
+    }
+  }
+}

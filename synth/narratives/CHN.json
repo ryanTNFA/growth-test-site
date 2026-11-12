@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "CHN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CHN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch (tier 1 domains: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): China Article IV 2025 IMF staff concluding statement property sector deflation",
+        "WebSearch (tier 1 domains): China Economic Update World Bank 2025",
+        "WebSearch (imf.org, worldbank.org, oecd.org, adb.org): China growth slowdown since 2012 rebalancing investment-led growth model returns to investment declining",
+        "Opened: imf.org press release PR 26/053 (2026-02-18)",
+        "Opened: imf.org IMF Country Report 26/44, 2025 Article IV staff report (PDF)",
+        "Opened: worldbank.org press release, China Economic Update, 2025-12-11",
+        "Opened: thedocs.worldbank.org China Economic Update July 2026, Rebalancing Growth (PDF)",
+        "Opened: imf.org Working Paper WP/24/238, China's Path to Sustainable and Balanced Growth (PDF)",
+        "Critic: WebFetch of all three cited PDFs (imf.org WP/24/238, imf.org IMF Country Report 26/44, thedocs.worldbank.org CEU July 2026), text extracted and every quoted passage matched against the page text",
+        "Tier 2 (UN domains) not searched: tier 1 gave enough recent sources"
+      ],
+      "critic_changes": [
+        "Opened all three cited documents (IMF WP/24/238, IMF Country Report 26/44, World Bank China Economic Update July 2026), extracted their text and matched every quoted passage; all passages appear verbatim and the dates match (WP 'November 2024'; CR 'February 2026'; CEU 'July 2026 issue', cover titled 'China Economic Update (June 2026)').",
+        "Headline: replaced 'as investment, credit and housing lost force' with 'as investment paid less and housing slumped'. Private credit kept rising (194.3 percent of GDP in 2024), so saying credit 'lost force' was not supported by the data or the sources.",
+        "Thread 'Credit-fuelled building after 2008': added a third citation from the same IMF working paper ('excessive credit growth') because the text says the building was financed by fast credit, and neither existing quote mentioned credit.",
+        "Thread 'Exports carry a low-price economy': added a citation for the 'technical gains' claim. The original quote covered only the low returns, excess supply and debt half of the IMF sentence.",
+        "since_last_year: widened both quotes slightly so they also support 'flared' (the IMF's 'another escalation of trade tensions in September') and 'second quarter' / 'slowed momentum' (the World Bank's 'Momentum softened in the second quarter'). Both remain at most 25 words.",
+        "Tension: dropped the sentence saying income per person grew faster than total output in the IMF's figures, 'a sign that the population has stopped growing'. It compares the data with an IMF figure (5 percent) that is not in the data file, and no opened source supports the population claim. Kept the GDP deflator point, which the staff report supports ('the GDP deflator continued to decline').",
+        "tier1_recent_found set from 4 to 3: the three distinct recent tier 1 documents cited and verified. The World Bank December 2025 press release was listed as opened but not cited, and PR 26/053 is part of Country Report 26/44.",
+        "Checked every number against desk/data/CHN.json: 9.3, 5.8, 5.4, 9.0, 13.6 (2007), 23.9 (1990), 44.1 (2013), 2.1/8.5/3.1 (2020 to 2022), 5.5/5.1/5.1 (2023 to 2025), 100.4 (2008) and 149.6 (2015) private credit, 39.7 investment (2024), 0.1 CPI (2025), and the 2025 peak. All match. Note that growth_problem.G6 gives investment as 40.4 for 2024 while the series gives 39.7; the story uses the series value.",
+        "No banned phrases and no recommendation or verdict language found; nothing else removed."
+      ]
+    },
+    "headline": "China's income per person grew 9.3 percent a year from 1990 to 2011, then 5.8 percent from 2012 as investment paid less and housing slumped.",
+    "arc": "From 1990 to 2011 China's income per person grew 9.3 percent a year, with a high of 13.6 percent in 2007, as productivity rose after China joined the WTO and capital built up fast. Investment climbed from 23.9 percent of GDP in 1990 to 44.1 percent in 2013, and after the 2008 global crisis growth leaned more and more on infrastructure and housing paid for with credit. Since 2012 growth has run at 5.8 percent a year, and the last decade averaged 5.4 percent against 9.0 in the decade before; the IMF links the slowdown to slower productivity growth, falling returns to investment and a shrinking workforce. The pandemic years swung from 2.1 percent in 2020 to 8.5 in 2021 and 3.1 in 2022, and a housing slump that began in 2021 has weighed on household spending since. Growth held between 5.1 and 5.5 percent from 2023 to 2025, carried more by exports than by demand at home, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Trade opening and fast capital",
+        "about": "history",
+        "text": "Growth in the 2000s rose to 13.6 percent in 2007. The IMF links that boom to productivity gains after China joined the WTO and to a rapid build-up of capital.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024238-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "China’s Path to Sustainable and Balanced Growth (IMF Working Paper WP/24/238)",
+            "date": "2024-11",
+            "quote": "China’s high growth rates in the early 2000s were largely driven by increases in productivity following the WTO accession and rapid accumulation of capital"
+          }
+        ]
+      },
+      {
+        "title": "Credit-fuelled building after 2008",
+        "about": "history",
+        "text": "After the 2008 global crisis, growth came to rest on building infrastructure and housing, financed by fast credit growth. Private credit rose from 100.4 percent of GDP in 2008 to 149.6 percent in 2015, and investment peaked at 44.1 percent of GDP in 2013. The IMF says productivity growth slowed in the decade before the pandemic as investment went to less productive uses.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024238-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "China’s Path to Sustainable and Balanced Growth (IMF Working Paper WP/24/238)",
+            "date": "2024-11",
+            "quote": "Following the Global Financial Crisis (GFC), China’s growth became increasingly dependent on investment in infrastructure and housing."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024238-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "China’s Path to Sustainable and Balanced Growth (IMF Working Paper WP/24/238)",
+            "date": "2024-11",
+            "quote": "This was made possible by high savings and excessive credit growth (Figure 4) accompanied by sharply rising debt levels across the economy."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2024/english/wpiea2024238-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "China’s Path to Sustainable and Balanced Growth (IMF Working Paper WP/24/238)",
+            "date": "2024-11",
+            "quote": "In the decade before the pandemic, productivity growth slowed, including because of increasingly less productive investment"
+          }
+        ]
+      },
+      {
+        "title": "The housing slump since 2021",
+        "about": "present",
+        "text": "Home prices have fallen since mid-2021 and housing investment has roughly halved as a share of GDP. Falling home values and a soft job market have made households careful with money, so spending at home has stayed weak.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/0cb2fc6dd88d4db3816dc0433b5cb49b-0070012026/original/CEU-July-2026-EN.pdf",
+            "publisher": "World Bank",
+            "title": "China Economic Update (June 2026): Rebalancing Growth",
+            "date": "2026-07",
+            "quote": "Real housing prices have fallen by 23 percent since their peak in July 2021"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+            "date": "2026-02",
+            "quote": "Housing investment has fallen from a peak of 12.3 percent of GDP in 2020 to 6.1 percent in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/0cb2fc6dd88d4db3816dc0433b5cb49b-0070012026/original/CEU-July-2026-EN.pdf",
+            "publisher": "World Bank",
+            "title": "China Economic Update (June 2026): Rebalancing Growth",
+            "date": "2026-07",
+            "quote": "consumer spending remained cautious due to the negative wealth effect from falling property prices and the soft labor market."
+          }
+        ]
+      },
+      {
+        "title": "Ageing and falling returns",
+        "about": "present",
+        "text": "The IMF and the World Bank both expect growth to keep easing as the workforce shrinks, investment earns less and productivity grows more slowly. Investment was still 39.7 percent of GDP in 2024, down from 44.1 percent in 2013.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+            "date": "2026-02",
+            "quote": "Over the medium term, growth is projected to continue decelerating due to a declining labor force, decreasing returns to investment, and slower productivity growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/0cb2fc6dd88d4db3816dc0433b5cb49b-0070012026/original/CEU-July-2026-EN.pdf",
+            "publisher": "World Bank",
+            "title": "China Economic Update (June 2026): Rebalancing Growth",
+            "date": "2026-07",
+            "quote": "partially offset the structural drag from demographic aging, elevated debt, and diminishing returns to capital"
+          }
+        ]
+      },
+      {
+        "title": "Exports carry a low-price economy",
+        "about": "present",
+        "text": "With demand at home weak, exports and state support carried growth, and income per person grew 5.1 percent in 2025. Consumer prices rose only 0.1 percent that year. The IMF says the state-led model has brought technical gains but also low returns, excess supply in some industries and rising debt.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+            "date": "2026-02",
+            "quote": "Real GDP grew by 5 percent in 2025, meeting the authorities’ target, supported by robust exports and policy stimulus."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+            "date": "2026-02",
+            "quote": "the growth model based on state-led investment and industrial policy support has led to technological advances and gains in international market share"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+            "date": "2026-02",
+            "quote": "it has also resulted in low aggregate returns, excess supply in some tradable sectors, and the build-up of debt and financial vulnerabilities."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Trade tension with the United States flared in 2025 and then eased with a one-year truce in October, while exports helped income per person grow 5.1 percent in 2025. In the second quarter of 2026 a global energy supply shock raised costs and slowed momentum, on top of the continuing housing slump.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1chnea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "People’s Republic of China: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the People’s Republic of China",
+          "date": "2026-02",
+          "quote": "After another escalation of trade tensions in September, the US and China agreed to a one-year truce in October"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/0cb2fc6dd88d4db3816dc0433b5cb49b-0070012026/original/CEU-July-2026-EN.pdf",
+          "publisher": "World Bank",
+          "title": "China Economic Update (June 2026): Rebalancing Growth",
+          "date": "2026-07",
+          "quote": "Momentum softened in the second quarter, as disruptions to global energy supply raised costs and increased uncertainty."
+        }
+      ]
+    },
+    "tension": "The sources describe weak demand at home, falling home prices and prices that barely rise, yet the data show income per person growing 5.1 percent in 2025 and at its highest level ever. Part of the gap is about how growth is measured: the IMF notes that the GDP deflator kept falling, so growth after inflation looks stronger than growth in money terms."
+  }
+}

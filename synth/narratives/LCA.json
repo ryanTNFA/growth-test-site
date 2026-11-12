@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "iso3": "LCA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LCA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org: St. Lucia Article IV staff report IMF",
+        "worldbank.org: St. Lucia Macro Poverty Outlook World Bank",
+        "imf.org, worldbank.org (tier 1 list): St. Lucia banana industry decline preferential access EU growth tourism 1990s",
+        "opened: imf.org 2025 Article IV (Country Report 26/3) PDF; thedocs.worldbank.org MPO Saint Lucia October 2026 PDF; imf.org WP/10/59 Caribbean Bananas PDF; imf.org 2008 Article IV (Country Report 08/329) PDF",
+        "checker re-opened all four cited PDFs and verified every quoted passage in the extracted text"
+      ],
+      "critic_changes": [
+        "Arc: replaced 'higher than in nine of ten economies' (a figure not in the data file) with the file's own rank, the 91st percentile (universe_percentile 90.9; classification_rule '91th percentile').",
+        "Arc and pandemic thread: replaced 'almost a quarter' with the data file's figure, 23.2 percent (NY.GDP.PCAP.KD.ZG 2020 = -23.16).",
+        "Arc: made the hurricane claim specific to the 2007 storm the cited IMF 2008 report describes, instead of the general 'hurricanes'.",
+        "Arc: attributed 'one of the largest falls in the region' to the 2020 fall in general, since the IMF passage is about economic growth, not income per person.",
+        "Pandemic thread: 'by 2024 income per person was above its 2019 level' changed to 'by 2022', the first year the series is back above 11,078 (2022: 11,259). The old wording was true but understated the rebound.",
+        "Banana thread: dropped 'carried the rural economy', which no cited passage supports; reworded so the thread says only what WP/10/59 (three decades of preferences to the eastern Caribbean, mostly through Europe) and CR 08/329 support.",
+        "Debt thread: 'made worse by repeated shocks' reworded to follow the World Bank passage ('exposure to shocks ... compounding structural challenges').",
+        "IMF Country Report 26/3 citations: date changed from 2026-01-14 to 2026-01, the date on the report's cover (the 14 January date belongs only to the press release inside it); title aligned with the cover, 'Press Release and Staff Report'.",
+        "IMF Country Report 08/329 citations: title corrected to the cover's 'Public Information Notice on the Executive Board Discussion'; trailing period removed from one quote to match the page.",
+        "since_last_year: first quote extended with the page's own words 'due to the closure of two major hotels' so it supports the hotel claim (still 25 words or fewer).",
+        "Verified in the extracted text of all four PDFs (MPO Saint Lucia, marked 'Macro Poverty Outlook / October 2026'; IMF CR 26/3; IMF WP/10/59, March 2010; IMF CR 08/329, October 2008): every quoted passage appears verbatim. All are on imf.org or worldbank.org (tier 1). Two distinct recent tier 1 sources (IMF 2026-01, World Bank 2026-10), so the story stays tier 1.",
+        "All other numbers checked against desk/data/LCA.json and kept: 1.4 (1990–2025 era mean), 7.7 (sd), 0.9 (avg_prior_10y 2006–2015), 11.0 and 19.2 (2021, 2022 growth), 12,191 (2024 peak), 8,418 (1990 level), 2.1 and 2.2 (10-year average and structural-peer median), 0.8 (shortfall from peak), 11,078 (2019 level). No banned phrases or recommendation language found."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "St. Lucia's income per person rides tourism's swings: a collapse in 2020, a fast rebound, a new peak in 2024, then a slip as hotels closed.",
+    "arc": "Since 1990 St. Lucia's growth shows no lasting shift: income per person grew 1.4 percent a year on average over 1990–2025, one long era rather than several. Inside that era the year-to-year swings are large: their standard deviation over the last 20 years, 7.7, sits at the 91st percentile of all economies. As bananas lost the value of their protected access to Europe from the early 1990s, tourism became the main growth sector, but a hurricane in 2007 and slumps in arrivals kept growth uneven, and income per person grew only 0.9 percent a year over 2006–2015. The pandemic cut income per person by 23.2 percent in 2020, in one of the largest falls in the region, before a tourism rebound lifted it 11.0 percent in 2021 and 19.2 percent in 2022. It reached a new peak of about 12,191 constant US dollars in 2024, up from 8,418 in 1990, and growth over 2016–2025 averaged 2.1 percent a year, close to the structural-peer median of 2.2. In 2025 hotel closures and fewer flights cut tourist arrivals, leaving income per person 0.8 percent below that peak.",
+    "threads": [
+      {
+        "title": "Bananas give way to tourism",
+        "about": "history",
+        "text": "For about three decades, bananas sold to Europe under trade preferences gave the eastern Caribbean islands, St. Lucia among them, valuable support. The value of those preferences fell sharply from the early 1990s, banana exports declined, and tourism, backed by rising foreign investment, became the main source of growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2010/wp1059.pdf",
+            "publisher": "IMF",
+            "title": "Caribbean Bananas: The Macroeconomic Impact of Trade Preference Erosion (Working Paper WP/10/59)",
+            "date": "2010-03",
+            "quote": "the value of implicit assistance provided through trade preferences has declined precipitously since the early 1990s"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08329.pdf",
+            "publisher": "IMF",
+            "title": "St. Lucia: 2008 Article IV Consultation—Staff Report; Staff Supplement, and Public Information Notice on the Executive Board Discussion (IMF Country Report No. 08/329)",
+            "date": "2008-10",
+            "quote": "banana exports have declined, tourism has become the main growth sector, and FDI flows have accelerated since 2005/06"
+          }
+        ]
+      },
+      {
+        "title": "Storms in the hurricane belt",
+        "about": "present",
+        "text": "The island sits in the hurricane belt, and storms have knocked back output. In 2007 a hurricane hit banana exports and activity stalled; the World Bank still names recurrent climate shocks as a source of volatile growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08329.pdf",
+            "publisher": "IMF",
+            "title": "St. Lucia: 2008 Article IV Consultation—Staff Report; Staff Supplement, and Public Information Notice on the Executive Board Discussion (IMF Country Report No. 08/329)",
+            "date": "2008-10",
+            "quote": "activity was flat in 2007, reflecting a hurricane-induced contraction in banana exports"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-lca.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Saint Lucia (October 2026)",
+            "date": "2026-10",
+            "quote": "the country’s location in the hurricane belt exposes it to recurrent climate shocks"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse, tourism rebound",
+        "about": "present",
+        "text": "When travel stopped in 2020, income per person fell 23.2 percent. The return of visitors drove a sharp recovery, and by 2022 income per person was back above its 2019 level of about 11,078 constant US dollars.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lcaea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "St. Lucia: 2025 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/3)",
+            "date": "2026-01",
+            "quote": "After one of the largest declines in the region in 2020, economic growth rebounded sharply, buoyed by increased tourism services."
+          }
+        ]
+      },
+      {
+        "title": "Slow catch-up, heavy debt",
+        "about": "present",
+        "text": "Behind the swings, the IMF describes income per person drifting further behind the United States over past decades, with weak productivity and high public debt. The World Bank adds weak infrastructure and limited access to credit, and says exposure to shocks has compounded these problems.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lcaea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "St. Lucia: 2025 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/3)",
+            "date": "2026-01",
+            "quote": "long-standing challenges remain with income per capita diverging from the US in the past decades, weak productivity, high public debt stock"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-lca.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Saint Lucia (October 2026)",
+            "date": "2026-10",
+            "quote": "Exposure to shocks has weighed on growth and job creation, compounding structural challenges, including high public debt, infrastructure weaknesses, and limited access to credit."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The closure of two large hotels and fewer flights cut tourist arrivals in 2025, and the World Bank now estimates the economy shrank that year. Construction, farming and manufacturing softened the fall, and arrivals picked up again in the first half of 2026.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-lca.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Saint Lucia (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP contracted by 0.6 percent in 2025, largely reflecting a 2.1 percent fall in stay-over arrivals due to the closure of two major hotels"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-lca.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Saint Lucia (October 2026)",
+          "date": "2026-10",
+          "quote": "Tourism flows recovered in the first half of 2026, as stay-over arrivals rose by 2.5 percent compared with the same period in 2025."
+        }
+      ]
+    },
+    "tension": "The IMF, writing in late 2025, called recent performance robust and expected the economy to keep growing that year on the back of construction. The World Bank's later estimate shows a contraction, and the data show income per person slipping to 0.8 percent below its 2024 peak. The strong rebound since 2020 also sits inside a long record of just 1.4 percent a year since 1990, the slow catch-up the IMF itself describes."
+  }
+}

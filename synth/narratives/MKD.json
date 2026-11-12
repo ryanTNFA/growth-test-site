@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "MKD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MKD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'North Macedonia IMF Article IV 2025 staff concluding statement growth'",
+        "tier 1 domains: 'North Macedonia Macro Poverty Outlook World Bank growth 2025'",
+        "tier 1 domains: 'North Macedonia growth history 1990s transition embargo 2001 conflict output decline'",
+        "tier 1 domains: 'North Macedonia country economic memorandum productivity growth slowdown emigration population decline'",
+        "opened (drafter): imf.org 2026 Article IV press release; imf.org 2026 staff concluding statement; imf.org Country Report 26/124; imf.org Country Report 06/345; thedocs.worldbank.org Macro Poverty Outlook October 2026; documents1.worldbank.org SCD update PDF (unreadable)",
+        "critic re-opened and text-checked: imf.org cr06345.pdf; imf.org 1mkdea2026002.pdf (CR 26/124); thedocs.worldbank.org mpo-mkd.pdf (October 2026)",
+        "critic tier 1 search 'North Macedonia 2026 Article IV IMF staff concluding statement press release' not run: web search budget for the turn was used up"
+      ],
+      "critic_changes": [
+        "tier1_recent_found lowered from 4 to 2: the critic could confirm only the two cited recent tier 1 sources (IMF Country Report 26/124, 2026; World Bank MPO, October 2026). The search to check the Article IV press release and concluding statement could not run because the turn's web search budget was used up. The story stays tier 1.",
+        "All three cited PDFs were opened and their text extracted. Every quoted passage was confirmed on the page, and the dates match: CR 06/345 is dated October 2006, CR 26/124 June 2026 (completed May 12, 2026) and the MPO October 2026.",
+        "Headline: dropped 'productivity has stalled'. The IMF finds that productivity drove most output gains after COVID in 2021–2025, and the World Bank sees a marginal improvement after the pandemic. Also replaced 'lost decade', since the shrinking era runs 8 years (1991–1998), with a headline that matches the data.",
+        "Arc: replaced 'break-up of Yugoslavia' with 'the shock of transition', because the cited IMF text speaks of the onset of transition, not the break-up. Replaced 'road building' with 'infrastructure investment' to match the World Bank's wording for 2025. Reworded 'Since then ... 2006–2015' because that window starts before the 2007 peak. Changed 'productivity growth that turned negative after the crisis' to 'weak productivity growth after the crisis' so it fits the IMF's later post-COVID finding.",
+        "Transition thread: added the IMF passage on dependence on agriculture, steel and textiles, because the thread's claim about a few old sectors had no supporting citation.",
+        "Boom thread: added the IMF passage on reforms, FDI and EU integration in 2001–2008, which supports the arc's causal claim, and named it in the text.",
+        "Emigration thread: the claim that labor's contribution turned negative was not in the cited passages. Added the IMF passage that says so. Extended the World Bank quote to cover the gender gap and youth NEET claims.",
+        "Productivity thread: retitled from 'Productivity has stalled'. Limited the capital-over-productivity claim to the post-crisis decade (2009–2019) the IMF describes, citing the IMF passage. Dropped 'wages rising faster than productivity' because no cited passage supported it. Noted the World Bank's 'marginally improved post-pandemic'.",
+        "since_last_year: replaced 'highway building' with 'infrastructure investment', per the World Bank's wording. Extended the second quote to include 'Inflationary pressures have resurfaced', which supports the inflation claim.",
+        "Tension: attributed the Western Balkan peer comparison to the IMF, whose CR 26/124 makes it. Softened 'rises faster' to 'can rise faster', since population figures are not in the data file.",
+        "All numbers were checked against desk/data/MKD.json and all match: -1.8 (1991–1998), 3.1 (1999–2025), 1995 low, -3.5 (2001), -3.7 (2020), 7.1 (2007 peak), 3.7 (2006–2015), 2.7 (2016–2025), 2025 at peak, 5+ percent each year 2004–2008, 2009 near zero, 2012 slight dip, 3.7 in 2025 as the fastest since 2021, and the regional median of 2.0. No banned phrases and no recommendations were found."
+      ]
+    },
+    "headline": "After shrinking through most of the 1990s, North Macedonia has grown steadily since 1999, though more slowly of late as emigration thins the workforce.",
+    "arc": "North Macedonia's income per person shrank by 1.8 percent a year from 1991 to 1998, as the shock of transition, a closed Greek border and the UN embargo on Serbia hurt trade, and it hit bottom in 1995. From 1999 to 2025 it grew by 3.1 percent a year, a run broken by the 2001 armed conflict (-3.5 in 2001) and the 2020 pandemic (-3.7). Growth was fastest before the global financial crisis and peaked at 7.1 percent in 2007, helped by reforms, foreign investment and closer ties with the EU. Growth has since been steady but slower, averaging 3.7 percent a year over 2006–2015 and 2.7 over 2016–2025. The IMF and World Bank link the slowdown to weak productivity growth after the crisis and to emigration and ageing, which are shrinking the workforce. In 2025 income per person reached its highest level so far, as infrastructure investment and household spending drove growth.",
+    "threads": [
+      {
+        "title": "Transition slump and blockades",
+        "text": "After independence, income per person fell every year from 1991 to 1995 and only began to edge up in 1996. The IMF points to political shocks: the closed Greek border, the UN embargo on Serbia and the Kosovo crisis. These hit an economy that rested on a few old sectors such as farming, steel and textiles.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr06345.pdf",
+            "publisher": "IMF",
+            "title": "Former Yugoslav Republic of Macedonia: Selected Issues (IMF Country Report No. 06/345)",
+            "date": "2006-10",
+            "quote": "political shocks like the closure of the Greek border, trade restrictions from the UN embargo on Serbia, and the Kosovo crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr06345.pdf",
+            "publisher": "IMF",
+            "title": "Former Yugoslav Republic of Macedonia: Selected Issues (IMF Country Report No. 06/345)",
+            "date": "2006-10",
+            "quote": "entered the transition process with an economy that was dependent on a few, traditional sectors, in particular, agriculture, steel, and textiles"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr06345.pdf",
+            "publisher": "IMF",
+            "title": "Former Yugoslav Republic of Macedonia: Selected Issues (IMF Country Report No. 06/345)",
+            "date": "2006-10",
+            "quote": "The output trough was reached in 1995"
+          }
+        ]
+      },
+      {
+        "title": "The 2001 conflict",
+        "text": "The armed conflict in 2001 cut income per person by 3.5 percent and dried up foreign financing. Exports did not regain their pre-crisis share of the economy until 2005.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr06345.pdf",
+            "publisher": "IMF",
+            "title": "Former Yugoslav Republic of Macedonia: Selected Issues (IMF Country Report No. 06/345)",
+            "date": "2006-10",
+            "quote": "The political crisis of 2001 dried up external financing"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr06345.pdf",
+            "publisher": "IMF",
+            "title": "Former Yugoslav Republic of Macedonia: Selected Issues (IMF Country Report No. 06/345)",
+            "date": "2006-10",
+            "quote": "Only in 2005 has the export share of GDP returned to its pre-crisis level."
+          }
+        ]
+      },
+      {
+        "title": "Boom, then a slower decade",
+        "text": "Income per person grew by 5 percent or more a year from 2004 to 2008, a period the IMF says was aided by reforms, foreign investment and EU integration. After the global crisis, growth slowed: income per person barely grew in 2009 and dipped in 2012. The IMF links the slowdown to weaker demand abroad and uncertainty in the region.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "In 2001–2008, balanced gains in labor, capital, and TFP supported post‑conflict recovery, aided by reforms, FDI, and EU integration."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "Following robust expansion prior to the Global Financial Crisis—when growth exceeded 5 percent in several years"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "moderated to about 2.4 percent during 2009–2019 in the subsequent decade amid weaker external demand and heightened regional uncertainty"
+          }
+        ]
+      },
+      {
+        "title": "Emigration thins the workforce",
+        "text": "Steady emigration and an ageing population are shrinking the number of workers, and the IMF finds that labor's contribution to growth has turned negative in recent years. The World Bank adds a large gender gap in who works and many young people who are neither working nor studying.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mkd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: North Macedonia (October 2026)",
+            "date": "2026-10",
+            "quote": "Sustained emigration is impacting the availability of workforce, while a large gender participation gap, a high youth not in employment, education, or training rate"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "labor's contribution — weighed down by demographic aging and persistent emigration—has weakened further in recent years and turned negative amid sluggish employment growth"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "reflecting weak productivity growth and rising labor underutilization amid aging and emigration"
+          }
+        ]
+      },
+      {
+        "title": "Weak productivity growth",
+        "text": "In the decade after the global crisis, the IMF finds that productivity's contribution to growth turned negative and adding capital did more of the work. The World Bank finds productivity growth negative since the 2010s, with only a small gain after the pandemic. The IMF notes that tax breaks for export-focused foreign investors in a few industries created few links with local firms.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "the post-GFC decade (2009–2019) marked a significant shift in growth dynamics, as TFP's contribution turned negative, while capital accumulation became a more prominent driver"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mkd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: North Macedonia (October 2026)",
+            "date": "2026-10",
+            "quote": "Total Factor Productivity growth has been negative since the 2010s, and only marginally improved post-pandemic"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mkdea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of North Macedonia: Selected Issues (IMF Country Report No. 26/124)",
+            "date": "2026-06",
+            "quote": "The model centered on generous tax incentives and export oriented FDI—concentrated in a narrow set of industries— generated limited spillovers to the domestic economy"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew by 3.7 percent, the fastest since 2021, as infrastructure investment and household spending lifted demand. The World Bank reports that growth slowed early in 2026 amid geopolitical headwinds, then rebounded in the second quarter, while inflation pressures returned.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mkd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: North Macedonia (October 2026)",
+          "date": "2026-10",
+          "quote": "North Macedonia entered 2026 on the back of a solid 2025, when infrastructure investment and buoyant private consumption propelled economic activity."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mkd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: North Macedonia (October 2026)",
+          "date": "2026-10",
+          "quote": "economic activity slowed in Q1 2026 amid geopolitical headwinds, before rebounding in Q2. Inflationary pressures have resurfaced, eroding purchasing power"
+        }
+      ]
+    },
+    "tension": "The IMF describes growth that lags behind faster Western Balkan peers. The data tell a kinder story: income per person grew 3.1 percent a year from 1999 to 2025, and over 2016–2025 it grew 2.7 percent a year. That is at the convergence expectation and above the Europe and Central Asia median of 2.0. Part of the gap is about what is measured. The sources mostly look at the size of the whole economy, while emigration shrinks the population, so income per person can rise faster than total output. The sources also compare the country with neighbours that grew faster, not with the wider region."
+  }
+}

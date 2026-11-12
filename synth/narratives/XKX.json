@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "XKX",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "XKX",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: WebSearch 'Kosovo IMF Article IV 2025 staff concluding statement growth' (not run: session web search budget used up)",
+        "worldbank.org: WebSearch 'Kosovo World Bank Macro Poverty Outlook 2025 growth remittances diaspora' (not run: session web search budget used up)",
+        "imf.org: country page https://www.imf.org/en/Countries/KOS, 2026 Article IV landing page and full staff report (.pdf.md)",
+        "worldbank.org: Kosovo country overview (undated, not cited), Macro Poverty Outlook October 2026 PDF, Western Balkans Regular Economic Report Fall 2026 page and Kosovo factsheet",
+        "ebrd.com: Kosovo country page and Transition Report 2025-26 SEE country assessment (opened, not cited: no publication date shown)",
+        "critic check: re-opened all four cited URLs with WebFetch (World Bank PDFs text-extracted locally with pypdf)"
+      ],
+      "critic_changes": [
+        "Checked all four cited URLs. The IMF landing page and the IMF .pdf.md staff report were read directly. The two World Bank PDFs came back from WebFetch as binary, so their text was pulled out locally with pypdf. Every quoted passage was found on its page; the line-break hyphen in 'consump-tion' was rejoined. Dates confirmed: MPO 'October 2026', factsheet 'Fall 2026' (kept as 2026), IMF publication page 3 April 2026. The .pdf.md copy of the report shows only a staff-report date of 13 March 2026. Its citations keep the report's publication date, 2026-04-03.",
+        "Thread 'From aid to credit': removed 'investment was 31.9 percent of GDP in 2024'. growth_problem.G6 gives 31.9 for 2024 but the series gives 31.6 for 2024 (NE.GDI.FTOT.ZS 31.645), and the cited passages do not give this figure.",
+        "Thread 'Diaspora money behind spending': the cited passage says the non-tradable FDI comes 'mostly from the diaspora', not 'mostly real estate'. Added the IMF passage on the same page that says about 80 percent of FDI goes to real estate and is financed by the diaspora. Also softened 'supports household spending in many families' to 'reaches many households', because no cited quote mentioned spending.",
+        "Arc: replaced 'diaspora money funds most foreign investment, much of it in real estate' with wording that matches the IMF passage (most FDI goes to real estate, paid for by the diaspora). Replaced 'price pressures linked to the Middle East conflict weighed on early 2026' with 'rising prices weighed on activity in 2026', because the sources tie the Middle East conflict only to fuel prices and to the outlook.",
+        "Thread 'Political stalemate slows reforms': the claim about February 2025 elections was not backed by any cited passage. Added the IMF staff report passage on the impasse that followed the inconclusive February 2025 elections.",
+        "Thread 'Price shocks squeeze households': the claim that wages and remittances kept household spending going was not backed by any cited passage. Added the MPO passage that says so. Reworded 'pushed prices up again' to 'added to price pressures', since the fuel passage looks ahead, and changed 'highest in the series' to 'highest since the series began in 2003'.",
+        "Thread 'Services and metal exports': removed 'Exports are still lower than expected for Kosovo's income level'. This is the tool's own G10 test, and no cited source says it. Added the MPO passage on goods exports being exposed to commodity price swings, so the commodity-price claim is backed by a citation.",
+        "Checked every number against desk/data/XKX.json: 5.1, 4.8, 5.4, 0.9, -5.4, 11.0, 4.7, 9.4, 10.4, 37.3 (2015), 65.6 (2025), CPI 11.6 (2022, the series maximum) and 'more than double its 2008 level' (5,898.6 vs 2,543.6) all match. No banned phrases. Three distinct recent tier 1 sources: the IMF 2026 Article IV, the WB MPO for October 2026 and the WBRER factsheet for Fall 2026. All 5 threads kept."
+      ]
+    },
+    "headline": "Kosovo's income per person has grown 5.1 percent a year since 2009, carried by diaspora money, household spending and credit, and is at its highest yet.",
+    "arc": "Since 2009, Kosovo's income per person has grown 5.1 percent a year on average with no lasting break, and in 2025 it reached its highest level yet, more than double its 2008 level. Growth averaged 4.8 percent a year over 2009 to 2015 and 5.4 percent over 2016 to 2025. It dipped to 0.9 percent in 2012, fell 5.4 percent in 2020 and rebounded 11.0 percent in 2021. The World Bank describes a shift away from aid toward growth driven by consumption, infrastructure investment and fast-growing credit, and domestic credit to the private sector rose from 37.3 percent of GDP in 2015 to 65.6 percent in 2025. Money from Kosovars abroad sits under much of this: remittances support household spending, and most foreign investment goes into real estate paid for by the diaspora. Growth in income per person slowed to 4.7 percent in 2025, a year of political stalemate after the February elections, and rising prices weighed on activity in 2026.",
+    "threads": [
+      {
+        "title": "Diaspora money behind spending",
+        "about": "present",
+        "text": "Money sent home by Kosovars abroad reaches many households. The IMF says the gap in the current account has been paid for by borrowing and by investment from the diaspora in sectors that do not trade abroad, most of it in real estate.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1kosea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+            "date": "2026-04-03",
+            "quote": "Remittances amount to about 13 percent of GDP, reaching about 20-25 percent of households (World Bank, 2022)."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1kosea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+            "date": "2026-04-03",
+            "quote": "The larger CAD was financed by borrowing and FDI in the non-tradable sector, mostly from the diaspora."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1kosea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+            "date": "2026-04-03",
+            "quote": "About 80 percent of FDI is for real estate operations, financed by diaspora."
+          }
+        ]
+      },
+      {
+        "title": "From aid to credit",
+        "about": "present",
+        "text": "World Bank staff describe an economy moving away from aid toward growth driven by consumption, infrastructure investment and a deeper financial sector. Domestic credit to the private sector rose from 37.3 percent of GDP in 2015 to 65.6 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Kosovo continued to shift from aid dependence toward a model driven by consumption, infrastructure investment, and financial deepening."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "The financial sector remained stable, with robust credit growth supporting consumption and investment."
+          }
+        ]
+      },
+      {
+        "title": "Political stalemate slows reforms",
+        "about": "present",
+        "text": "The February 2025 elections were followed by a year-long stalemate that held back reforms. A new government formed in February 2026, but the World Bank says the political impasse still weighs on putting reforms in place.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1kosea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+            "date": "2026-04-03",
+            "quote": "The prolonged impasse since the inconclusive February 2025 elections held back reforms"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/04/02/republic-of-kosovo-2026-article-iv-consultation-press-release-staff-report-and-statement-575164",
+            "publisher": "IMF",
+            "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+            "date": "2026-04-03",
+            "quote": "A year-long political stalemate ended with the formation of a new government in February."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "the domestic political impasse continues to weigh on reform implementation."
+          }
+        ]
+      },
+      {
+        "title": "Price shocks squeeze households",
+        "about": "present",
+        "text": "Consumer prices rose 11.6 percent in 2022, the highest since the series began in 2003. In 2026, higher fuel prices that followed the conflict in the Middle East added to price pressures, while wages and remittances kept household spending going.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Intensifying price pressures weighed on activity, but wages and remittances continued to support consumption."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Higher fuel prices and the effects on other CPI components following the conflict in the Middle East could weigh further on activity."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d2c11b80dd0f36a52b7768ae60b15be2-0080012026/original/WBRER-FACTSHEETS-KOSOVO-ENG.pdf",
+            "publisher": "World Bank",
+            "title": "Western Balkans Regular Economic Report No. 30, Fall 2026: Country Factsheet, Kosovo",
+            "date": "2026",
+            "quote": "Intensifying price pressures are weighing on activity eroding purchasing power, especially for the most vulnerable"
+          }
+        ]
+      },
+      {
+        "title": "Services and metal exports",
+        "about": "present",
+        "text": "Exports of services, led by travel, information technology and business services, kept growing in 2026. Goods exports jumped in the first half of 2026 as higher world nickel prices drew out stockpiled metal, which leaves them exposed to swings in world commodity prices.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d2c11b80dd0f36a52b7768ae60b15be2-0080012026/original/WBRER-FACTSHEETS-KOSOVO-ENG.pdf",
+            "publisher": "World Bank",
+            "title": "Western Balkans Regular Economic Report No. 30, Fall 2026: Country Factsheet, Kosovo",
+            "date": "2026",
+            "quote": "Continued service exports growth at 13 percent YoY, dominated by travel, information and communication technology, and other business services"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Goods exports rose by 19 percent YoY in the first half of the year, as higher global nickel prices encouraged increased export of stockpiled metals."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+            "publisher": "World Bank",
+            "title": "Kosovo, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "goods exports show signs of improvement but remain subject to international commodity price fluctuations as well as increasing input costs."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth in income per person slowed from 10.4 percent in 2024 to 4.7 percent in 2025, a year of political stalemate after the February elections. A new government formed in February 2026, and the World Bank's October 2026 update says activity held up in early 2026 despite continued uncertainty and rising prices.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-xkx.pdf",
+          "publisher": "World Bank",
+          "title": "Kosovo, Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Following a modest slowing of growth to 3.6 percent in 2025, the first quarter of 2026 signaled resilience amid continued uncertainty."
+        },
+        {
+          "url": "https://www.imf.org/en/publications/cr/issues/2026/04/02/republic-of-kosovo-2026-article-iv-consultation-press-release-staff-report-and-statement-575164",
+          "publisher": "IMF",
+          "title": "Republic of Kosovo: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Kosovo",
+          "date": "2026-04-03",
+          "quote": "A year-long political stalemate ended with the formation of a new government in February."
+        }
+      ]
+    },
+    "tension": "The sources describe steady, moderate growth in total output in recent years and a modest slowing in 2025. The data show income per person growing much faster, by 9.4 percent in 2023 and 10.4 percent in 2024. Income per person can only grow faster than total output if the number of people counted fell. The sources read here do not discuss population change, so they do not explain this gap."
+  }
+}

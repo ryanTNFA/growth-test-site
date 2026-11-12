@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "iso3": "VGB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VGB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "WebSearch allowed_domains=tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): 'British Virgin Islands economic review growth 2024'",
+        "WebSearch allowed_domains=caribank.org: 'Caribbean Development Bank Virgin Islands country economic review'",
+        "WebSearch allowed_domains=caribank.org, imf.org, worldbank.org: 'Virgin Islands economic review 2024 2025 tourism financial services incorporations'",
+        "Opened: imf.org IMF Country Report No. 24/55 (British Virgin Islands AML/CFT Detailed Assessment Report, February 12, 2024)",
+        "Opened: caribank.org Caribbean Economic Review and Outlook 2025-2026 (PDF)",
+        "Opened: caribank.org Country Economic Review 2022 - British Virgin Islands (PDF)",
+        "Opened: documents1.worldbank.org Prosperity Data360 Economy Snapshot Tourism British Virgin Islands (generated 2025-10-08)",
+        "Critic: re-opened all four cited PDFs (WebFetch, then local text extraction) and checked every quote, date and number"
+      ],
+      "critic_changes": [
+        "Checked all citations against the documents (WebFetch could not parse the PDFs, and the 2025-26 CDB review was over its size limit, so I saved each PDF and extracted the text locally). All nine original quotes appear on their pages and are kept. IMF date 2024-02-12 is printed in the report. CDB 2022 review: no date is printed, but the PDF was created 2023-11-24 and it carries 2023 estimates, so '2023' is kept. CDB 2025-26 review: data as at 16 February 2026, file dated 2026-04-20, so '2026-04' is kept. The World Bank snapshot says 'generated on 2025-10-08'.",
+        "Numbers: VGB.json has empty series and no G1, G3 or G4 values, so the prose has no data figures. Every non-year figure now appears only inside a quoted passage.",
+        "Thread 'Company registry at the core': 'two pillars' became 'two main sectors', and I added the IMF passage that says this directly ('primary sectors ... tourism and corporate and financial services'), which the draft's quotes did not.",
+        "Thread 'The 2017 hurricanes': the cited passages did not support 'much of the tourism base was destroyed'. I reworded it to the IMF's own claim (the tourism sector's land and sea infrastructure suffered severe destruction) and added that passage as a citation. Arc changed to match.",
+        "Thread 'Pandemic closure, partial rebound': changed 'just as tourism was rebuilding' to 'while tourism was still recovering from the storms', which is what the IMF says (restrictions hampered the recovery after the 2017 hurricanes).",
+        "Thread 'Global rules reshape finance': 'global tax rules' was not in any cited passage. I replaced the incorporations quote with the CDB sentence naming the causes (sanctions on Russian assets, international standards, risks in source markets) and reworded the text to match. Spelled out '2024 evaluation' as a review of money-laundering controls.",
+        "Thread 'Tourism still the other pillar': dropped 'even as cruise visits rose across much of the region' because no cited passage covers cruise arrivals (the review in fact shows cruise arrivals rising in the Virgin Islands too). Added the World Bank tourism-share-of-GDP line to support 'large share of output'.",
+        "since_last_year: 'tourist arrivals dipped' became 'stayover arrivals fell', since cruise arrivals to the Virgin Islands rose. Dropped 'again after earlier falls': the 13.8% rise is against the previous year, and no source shows registrations fell in 2024. 'A year of slow growth' had no citation, so I replaced it with the review's own words (rebound had largely run its course) and added that passage and the stayover passage as citations.",
+        "Arc: replaced 'the latest regional review shows little growth', which gave no figure for the Virgin Islands, with what the review actually says, and replaced 'company registries' with 'centres for registering companies' to stay close to the IMF wording.",
+        "Headline: 'still climbing back slowly' became 'recovering unevenly since', to match 2025 (registrations up, stayovers down).",
+        "Recency: four distinct tier 1 sources dated 2023 or later survive, so the story stays tier 1. No banned phrases and no recommendation language were found.",
+        "Edited by hand (9 November 2026): \"two category 5 hurricanes\" reworded as \"two of the strongest hurricanes on record\"."
+      ]
+    },
+    "headline": "A territory built on company registration and tourism, knocked down by the 2017 hurricanes and the pandemic, and recovering unevenly since.",
+    "arc": "The data file holds no record of income per person for the British Virgin Islands, so the tool finds no eras and cannot classify the growth problem. The sources tell the story instead: since the late 1970s the territory has built one of the world's leading centres for registering companies, and with tourism this is one of the economy's two main sectors. In September 2017 two of the strongest hurricanes on record, Irma and Maria, did damage larger than a full year's output and badly damaged the tourism sector's land and sea infrastructure. The pandemic then closed the borders in 2020; output fell again in 2021 and recovered only in part in 2022 as tourism and rebuilding picked up, while new company registrations dropped. In 2025 company registrations rose but stayover arrivals fell, and the latest regional review says the post-pandemic tourism rebound across the Caribbean had largely run its course.",
+    "threads": [
+      {
+        "title": "Company registry at the core",
+        "text": "Registering and managing companies for clients overseas is one of the two main sectors of the economy, alongside tourism. The firms that form and manage these companies also pay for much of the government: they bring in more than half of public revenue.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "The primary sectors of the economy are tourism and corporate and financial services"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "the VI today is one of the world’s leading corporate and financial centers"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "the TCSP sector is one of the most significant sectors in the economy and generates more than half of VI public revenues."
+          }
+        ]
+      },
+      {
+        "title": "The 2017 hurricanes",
+        "text": "In September 2017 hurricanes Irma and Maria struck one after the other. The damage was larger than the whole economy's output that year, and the tourism sector's land and sea infrastructure was badly destroyed.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "In September 2017, the VI was struck consecutively by the two category 5 hurricanes Irma and Maria, causing extreme flooding and extensive destruction"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "Total damages to the VI were assessed at US$2.3 billion, significantly exceeding the VI’s 2017 GDP of US$1.3 billion."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "Land- and sea- based infrastructure of the tourism sector suffered severe destruction with the total cost estimated at US$1.1 billion."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic closure, partial rebound",
+        "text": "The borders closed in 2020 while tourism was still recovering from the storms. Output shrank sharply in 2021 and grew again in 2022 once restrictions ended, with tourism and construction leading, but visitor numbers stayed below their old levels.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1vgbea2024001.pdf",
+            "publisher": "IMF",
+            "title": "British Virgin Islands: Detailed Assessment Report on Anti-Money Laundering and Combating the Financing of Terrorism (IMF Country Report No. 24/55)",
+            "date": "2024-02-12",
+            "quote": "Tourism had declined by 72 percent in December 2020 and has still not reached pre-pandemic levels."
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20British%20Virgin%20Islands%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "CDB",
+            "title": "Country Economic Review 2022 - British Virgin Islands",
+            "date": "2023",
+            "quote": "This upturn follows an estimated contraction of 12.4% in 2021 as the pandemic continued to weigh heavily on the economy"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20British%20Virgin%20Islands%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "CDB",
+            "title": "Country Economic Review 2022 - British Virgin Islands",
+            "date": "2023",
+            "quote": "Real GDP grew by an estimated 2.8% in 2022 as COVID-19 closures and restrictions were discontinued by July."
+          }
+        ]
+      },
+      {
+        "title": "Global rules reshape finance",
+        "text": "Sanctions on Russian assets, tighter international standards and risks in client markets weighed on company business, and new registrations fell in 2022. The authorities have since been working through an action plan on the gaps found in a 2024 review of their controls on money laundering.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20British%20Virgin%20Islands%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "CDB",
+            "title": "Country Economic Review 2022 - British Virgin Islands",
+            "date": "2023",
+            "quote": "sanctions and the freezing of Russian assets, compliance with international standards, and heightened macroeconomic risks in key source markets, new company incorporations fell by 22.4%"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+            "publisher": "CDB",
+            "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+            "date": "2026-04",
+            "quote": "In the Virgin Islands, authorities continued implementing a strategic action plan to address AML/CFT gaps identified in the 2024 MER."
+          }
+        ]
+      },
+      {
+        "title": "Tourism still the other pillar",
+        "text": "Tourism is a large share of output and of jobs. In 2025 stayover arrivals to the territory fell.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099203010162542850/pdf/IDU-20647323-5151-4600-8738-dc49dfe76062.pdf",
+            "publisher": "World Bank",
+            "title": "Prosperity Data360 Economy Snapshot: Tourism, British Virgin Islands",
+            "date": "2025-10-08",
+            "quote": "Tourism contribution to GDP (%) 36.8 (2024)"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099203010162542850/pdf/IDU-20647323-5151-4600-8738-dc49dfe76062.pdf",
+            "publisher": "World Bank",
+            "title": "Prosperity Data360 Economy Snapshot: Tourism, British Virgin Islands",
+            "date": "2025-10-08",
+            "quote": "Tourism contribution to employment (%) 47.0 (2024)"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+            "publisher": "CDB",
+            "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+            "date": "2026-04",
+            "quote": "but fell in Antigua and Barbuda, the Virgin Islands, Grenada, Montserrat, Saint Lucia, and Turks and Caicos Islands."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 the two pillars moved apart: new company registrations rose, while stayover arrivals fell. The regional review says the strong post-pandemic rebound in tourism had largely run its course across the Caribbean.",
+      "citations": [
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "CDB",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04",
+          "quote": "New incorporations also rose by 13.8% in the Virgin Islands, compared with the previous year."
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "CDB",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04",
+          "quote": "but fell in Antigua and Barbuda, the Virgin Islands, Grenada, Montserrat, Saint Lucia, and Turks and Caicos Islands."
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "CDB",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04",
+          "quote": "During 2025, the development landscape became more challenging, as the strong post-pandemic rebound, rooted in the revival of tourism, had largely run its course."
+        }
+      ]
+    },
+    "tension": "The sources describe a deep fall after the 2017 storms and the pandemic, then a partial recovery, but the data file holds no income per person series for any year, so none of these swings can be checked against the tool's own record or turned into eras."
+  }
+}

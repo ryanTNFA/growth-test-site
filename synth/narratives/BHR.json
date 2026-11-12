@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "iso3": "BHR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BHR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Bahrain Article IV consultation staff report 2025",
+        "imf.org, worldbank.org and other tier 1 domains: Bahrain Macro Poverty Outlook growth non-oil",
+        "imf.org, worldbank.org and other tier 1 domains: Bahrain Fiscal Balance Program GCC financial support oil price decline 2014 growth",
+        "imf.org, worldbank.org and other tier 1 domains: Bahrain population growth expatriate workers 2000s per capita GDP",
+        "imf.org: Bahrain Article IV 2024 staff report nonhydrocarbon growth diversification",
+        "opened: imf.org press release 26/023 (2026-01-27)",
+        "opened: imf.org press release 24/445 (2024-11-27)",
+        "opened: imf.org press release 23/175 (2023-05-24)",
+        "opened: thedocs.worldbank.org Bahrain MPO October 2026",
+        "opened: thedocs.worldbank.org Bahrain MPO October 2021",
+        "opened: worldbank.org Bahrain Economic Update April 2019",
+        "opened: thedocs.worldbank.org Central Bank of Bahrain paper on international workers (2023)",
+        "critic re-opened all six cited URLs (imf.org x2, worldbank.org x1, thedocs.worldbank.org PDFs x3, text extracted locally)"
+      ],
+      "critic_changes": [
+        "All six cited URLs were re-opened. The PDFs were read from their extracted text. Every quoted passage appears on its page, and every date and number checks out against desk/data/BHR.json: eras 3.2/-1.5/1.2, about 25,400 in 2000, about 22,200 in 2009, -5.2 in 2020, 4.8 in 2022, the 2000 level first passed in 2024, and the peak of about 26,600 in 2025.",
+        "Thread 'Oil price shock and Gulf support': 'launched' became 'announced', the word the April 2019 Update uses. The 2019 quote was lengthened to the page's own wording so that it names the program. A second MPO 2021 passage was added ('whose implementation was halted...') so the claim that the pandemic halted the program has a quote behind it. 'Pushed the budget and external accounts deep into deficit' became 'worsened', because the source says 'deteriorated'.",
+        "Thread 'Non-oil sectors lead growth': dropped 'while oil output shrank in some years', since none of the cited passages says so.",
+        "Thread 'Deficits and rising public debt' was renamed 'Rising public debt'. The claim that large budget deficits continued was dropped because no cited passage supports it. The text now covers only the debt passing its 2020 peak in 2024, debt being higher in 2025, and the reliance on central bank overdrafts, all from the quotes.",
+        "Thread 'Regional conflict in 2026': 'restricted shipping through the Strait of Hormuz' became 'restricted maritime traffic', since the cited passages don't name Hormuz. The claim that non-oil sectors keep growing was cut back to what the page supports (they grew in Q1 2026), and a third MPO October 2026 citation was added for it.",
+        "since_last_year: the claims about shipping disruption, damaged plants and the expected 2026 contraction were backed by only one quote. Two passages from the same October 2026 MPO were added, one on damage to refining and aluminum infrastructure and one on Strait of Hormuz bottlenecks. 'Cut oil output and damaged key plants' became 'damaged refining and aluminum plants', matching those quotes.",
+        "Arc: 'opened wide budget and external deficits' became 'worsened', and 'led by financial services' became 'with financial services prominent' (the 2023 IMF passage lists public, financial and hospitality services and manufacturing). 'Large deficits and steadily rising public debt' became 'high and rising public debt', since the deficit claim is not in the cited passages.",
+        "Tension: removed the unsourced inference that imported labor 'spread output over many more people'. It now says only that the sources point to population growth and do not explain how much it weighed on income per person.",
+        "Remittances paper: the publisher was relabelled as a World Bank–hosted paper by a Central Bank of Bahrain economist, because the paper says its views are not the Central Bank's. The document has no date line; '2023' is kept based on its 2023 references and the 2023 code in the URL.",
+        "tier1_recent_found changed from 5 to 4: the cited, verified tier 1 sources from 2023 or later are IMF PR 26/023, IMF PR 23/175, the World Bank MPO of October 2026 and the 2023 paper. PR 24/445 is listed as opened but is not cited and was not verified.",
+        "No banned phrases and no recommendation or verdict language were found. Five threads, all with citations, and at least three distinct recent tier 1 sources remain, so the story stays tier 1.",
+        "Edited by hand (12 November 2026): rounded income levels replaced with the exact figures from the data."
+      ]
+    },
+    "headline": "Bahrain's income per person slid through the 2000s, then crept up to a new high in 2025 on non-oil growth, just before regional conflict struck in 2026.",
+    "arc": "Since 1990 Bahrain's growth has run in three eras: income per person grew 3.2 percent a year in 1990–2000, fell 1.5 percent a year in 2001–2009, and grew 1.2 percent a year in 2010–2025. In the 2000s, building projects multiplied, foreign investment rose and Bahrain brought in many foreign workers, so the population grew sharply while income per person slid from 25,408 dollars in 2000 to 22,207 in 2009. Growth returned after 2010, but the 2014 fall in oil prices worsened the budget and external deficits, and the 2020 pandemic cut income per person by 5.2 percent. Non-oil activity, with financial services prominent, drove the recovery: income per person rose 4.8 percent in 2022, passed its 2000 level only in 2024, and reached a new peak of 26,592 dollars in 2025. That rise came alongside high and rising public debt, and conflict in the region in early 2026 cut oil output and exports.",
+    "threads": [
+      {
+        "title": "Imported labor, fast population growth",
+        "text": "From 2000 onward, foreign investment rose and large building projects multiplied, and Bahrain met the demand for labor by bringing in foreign workers. The population grew sharply, and income per person fell in most years from 2001 to 2009.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/0ad4db430c3a237c698a4d0af61d09d4-0280032023/original/c-transformation.pdf",
+            "publisher": "World Bank (hosted paper by a Central Bank of Bahrain economist)",
+            "title": "The Short-and Long-Run Effects of International Workers Remittances on Financial Sector Development and Growth: Evidence from a Regional Financial Centre",
+            "date": "2023",
+            "quote": "the number of megaprojects such as building new cities, malls, roads and residential areas multiplied. Consequently, Bahrain relied on imports of foreign labor"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/0ad4db430c3a237c698a4d0af61d09d4-0280032023/original/c-transformation.pdf",
+            "publisher": "World Bank (hosted paper by a Central Bank of Bahrain economist)",
+            "title": "The Short-and Long-Run Effects of International Workers Remittances on Financial Sector Development and Growth: Evidence from a Regional Financial Centre",
+            "date": "2023",
+            "quote": "Bahrain witnessed a sharp increase in population growth"
+          }
+        ]
+      },
+      {
+        "title": "Oil price shock and Gulf support",
+        "text": "The 2014 fall in oil prices worsened the budget and external deficits. In 2018 the government announced a Fiscal Balance Program backed by financial support from its Gulf neighbors, but the pandemic and a second oil price drop halted it in 2020.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/62eb666e0f2cdab1bf7c38a4e4f7aff7-0280012021/original/2-mpo-am21-bahrain-bhr-0926-kcm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2021)",
+            "date": "2021-10",
+            "quote": "the fiscal and external deficits deteriorated following the 2014 oil price shock, and remained weak, notwithstanding progress under the 2018 Fiscal Balance Program (FBP)"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/62eb666e0f2cdab1bf7c38a4e4f7aff7-0280012021/original/2-mpo-am21-bahrain-bhr-0926-kcm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2021)",
+            "date": "2021-10",
+            "quote": "whose implementation was halted due to the pandemic and related oil price shock."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/gcc/publication/bahrain-economic-update-april-2019",
+            "publisher": "World Bank",
+            "title": "Bahrain: Economic Update - April 2019",
+            "date": "2019-05-01",
+            "quote": "The government Fiscal Balance program (FBP) announced in 2018 accompanied by US$10 billion in GCC financial support"
+          }
+        ]
+      },
+      {
+        "title": "Non-oil sectors lead growth",
+        "text": "Since the pandemic, growth has come mostly from non-oil activity such as financial, public and hospitality services and manufacturing. Non-oil sectors now make up most of the economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/27/pr-26023-the-kingdom-of-bahrain-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with The Kingdom of Bahrain",
+            "date": "2026-01-27",
+            "quote": "nonhydrocarbon sector expanded by 3.7 percent in 2024, with financial services the largest contributor."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+            "date": "2026-10",
+            "quote": "Bahrain’s economy witnessed solid growth (3.5 percent) in 2025, driven by non-oil sectors (4.1 percent), which accounted for over 85 percent of GDP."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/05/24/pr23175-kingdom-of-bahrain-imf-staff-completes-2023-art-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2023 Article IV Mission to The Kingdom of Bahrain",
+            "date": "2023-05-24",
+            "quote": "Non-hydrocarbon growth was driven by public, financial, and hospitality services and manufacturing."
+          }
+        ]
+      },
+      {
+        "title": "Rising public debt",
+        "text": "Government debt kept rising through the recent recovery. In 2024 it passed the peak it reached in the 2020 recession, and it was higher still in 2025, with the government relying mostly on overdrafts from the central bank.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/27/pr-26023-the-kingdom-of-bahrain-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with The Kingdom of Bahrain",
+            "date": "2026-01-27",
+            "quote": "Government gross debt to GDP increased to 134 percent in 2024, above the 2020 recession peak."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+            "date": "2026-10",
+            "quote": "The level of public debt is high (141.4 percent of GDP in 2025), with the government mostly relying on Central Bank overdraft financing."
+          }
+        ]
+      },
+      {
+        "title": "Regional conflict in 2026",
+        "text": "Conflict in the Middle East in early 2026 restricted maritime traffic and hit Bahrain's oil sector and exports. The World Bank expects the economy to shrink in 2026, though non-oil sectors kept growing early in the year.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+            "date": "2026-10",
+            "quote": "real GDP contracted by 3.8 percent (y-o-y) in Q1 2026 when restrictions on maritime traffic hit the oil sector and export capacity."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+            "date": "2026-10",
+            "quote": "Real GDP is projected to contract by 2.9 percent in 2026, under pressure from a severe 40 percent contraction in the oil sector"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+            "date": "2026-10",
+            "quote": "Despite the shock, non-oil sectors grew by 2.2 percent (y-o-y) with financial and insurance sectors recording the highest growth."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth was solid in 2025, and income per person reached a new high. Then conflict in the Middle East in early 2026 disrupted shipping through the Strait of Hormuz and damaged refining and aluminum plants. The World Bank now counts Bahrain among the hardest-hit Gulf economies and expects the economy to shrink in 2026. The data end in 2025, so they do not yet show this turn.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+          "date": "2026-10",
+          "quote": "Bahrain faces severe shocks from the conflict in the Middle East, making it one of the hardest-hit Gulf Cooperation Council economies."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+          "date": "2026-10",
+          "quote": "direct damage to domestic refining and aluminum infrastructure, and depressed tourism revenues are predicted to push the economy into contraction in 2026"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-bhr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bahrain (October 2026)",
+          "date": "2026-10",
+          "quote": "Recent bottlenecks and security challenges in the Strait of Hormuz have compounded these pressures"
+        }
+      ]
+    },
+    "tension": "The sources describe the 2000s as a time of megaprojects, rising foreign investment and heavy hiring of foreign workers, yet income per person fell 1.5 percent a year over 2001–2009. The sources point to fast population growth driven by imported labor, but they do not say how much this weighed on income per person, and they do not explain the fall in full."
+  }
+}

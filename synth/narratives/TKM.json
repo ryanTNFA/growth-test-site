@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "TKM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TKM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Turkmenistan Article IV staff report economy growth",
+        "worldbank.org (tier 1 list): Turkmenistan Macro Poverty Outlook economic update 2025",
+        "tier 1 list: Turkmenistan 1990s gas exports halted output decline transition economy",
+        "tier 1 list: Turkmenistan gas pipeline to China 2009 exports growth Galkynysh",
+        "Opened: imf.org 2026 Article IV mission press release (2026-06-22)",
+        "Opened: imf.org 2024 Article IV mission press release (2024-04-15)",
+        "Opened: imf.org 2013 Article IV press release (2013-08-06)",
+        "Opened: imf.org 2017 Article IV press release (2017-06-15)",
+        "Opened: thedocs.worldbank.org Macro Poverty Outlook Turkmenistan (October 2026)",
+        "Opened: documents1.worldbank.org Turkmenistan Economic Report (December 2024)",
+        "Opened: ebrd.com Transition Report 2025-26 Turkmenistan country assessment",
+        "Opened: oecd.org Development Centre Working Paper 212, Central Asia since 1991 (July 2003)",
+        "Tried, not readable: elibrary.imf.org 1999 staff country report (HTTP 403)",
+        "Critic re-opened every cited URL: imf.org pr13301 (2013), imf.org pr26218 (2026), thedocs.worldbank.org mpo-tkm.pdf, documents1.worldbank.org Turkmenistan Economic Report PDF, ebrd.com TR 2025-26 Turkmenistan PDF, oecd.org WP 212 PDF (PDF text extracted locally)"
+      ],
+      "critic_changes": [
+        "Re-opened all six cited URLs (PDF text extracted locally). All twelve original quotes appear on their pages, and every date matches its document: MPO October 2026, WB Economic Report December 2024, OECD WP 212 July 2003, IMF PR 13/301 6 August 2013, IMF PR 26/218 22 June 2026, EBRD TR 2025-26.",
+        "Tension: removed 'The World Bank also notes how unusually little growth has varied'. No opened World Bank page says this. Replaced it with the supported point that the World Bank (MPO: 'limited data transparency'; Economic Report: 'concerns about the reliability of Turkmenistan's official statistics') and the EBRD (quality and transparency of public data) flag weak official data.",
+        "Tension and since_last_year: 'IMF ... says gas output shrank' changed to 'the hydrocarbon sector shrank'. The IMF page speaks of a 'smaller contraction in the hydrocarbon sector' and of real hydrocarbon GDP falling in 2024 and 2025, not of gas output. Also dropped 'lower' before 'estimates' and added an IMF citation that supports the claim about its own estimates ('hard to reconcile with other available data').",
+        "Thread 'The 2015 gas price fall': dropped 'Spending by the state and its firms was cut back'. No cited passage supports it. Added a World Bank Economic Report quote on the Gazprom dispute and the 2015 export fall, because the existing quotes did not mention Gazprom.",
+        "Thread 'Gas sold to one buyer': renamed 'Gas sold to one market' to match the source ('a single market (China)'). 'Most of it now goes to China' became 'its exports go mainly to one market, China'. Added an EBRD quote on the landlocked position and transit corridors to support the pipeline-route sentence.",
+        "Thread 'A state-led building boom': renamed 'A state-led investment boom'. 'Spent heavily on construction' is reworded, since the IMF passages speak of state-led and public investment, not construction.",
+        "Thread 'A large state, two exchange rates': removed 'both the IMF and the EBRD describe it as a drag on firms outside the state sector' and 'State firms still dominate'. The cited passages speak of the state footprint and resource misallocation, so the text now says only that.",
+        "Arc: 'growth has since averaged 4.1 percent a year against 8.2 in the decade before' is split to match the data windows. The 2015-2025 era is 4.1 (G4), and 2016-2025 averages 4.1 against 8.2 for 2006-2015 (G1). 'Outside observers doubted the official figures' became 'found the national accounts of that time very opaque', matching the OECD paper ('The actual accounts are extremely opaque'). 'Supply was halted from 1997' became 'between 1997 and 1999'.",
+        "since_last_year: 'strong official growth in early 2026' changed to 'the first half of 2026', the period the MPO reports.",
+        "Checked every number against desk/data/TKM.json: -3.6, 4.9, 8.7 and 4.1 (G4 eras); 4.1 and 8.2 (G1); the 2025 peak (G3); investment 18.6 (2007), 48.3 (2012), 47.3 (2015) and 16.5 (2025) from the NE.GDI.FTOT.ZS series; income per person growth of 3.6 to 4.6 in 2015-2025 from NY.GDP.PCAP.KD.ZG. All match. Figures not in the data appear only inside quoted passages.",
+        "No banned phrases, no recommendations, no 'per head'. Four distinct recent tier 1 sources survive (WB MPO 2026, IMF 2026, EBRD 2025, WB Economic Report 2024), and all five threads survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Turkmenistan's gas-fed, state-led boom gave way to slower growth after 2015, and the official figures that show steady gains are hard to check.",
+    "arc": "In 1990-1997 income per person shrank by 3.6 percent a year: after the Soviet Union ended, Turkmenistan's gas could flow only to former Soviet buyers, those buyers ran up unpaid bills, and supply was halted between 1997 and 1999. Growth returned at 4.9 percent a year in 1998-2005, though outside observers found the national accounts of that time very opaque. The boom came in 2006-2014 at 8.7 percent a year, built on gas, state-led investment and new gas exports to China, with investment rising from 18.6 percent of GDP in 2007 to 48.3 percent in 2012. In 2015 gas prices fell, a dispute with Russia's Gazprom cut export earnings and the manat was devalued, and growth slowed to 4.1 percent a year in 2015-2025. Over 2016-2025 it averaged 4.1 percent a year, against 8.2 in the decade before. On the official numbers, income per person reached its highest level yet in 2025, while investment has fallen back to 16.5 percent of GDP.",
+    "threads": [
+      {
+        "title": "Gas sold to one market",
+        "about": "present",
+        "text": "Growth still rests on natural gas, and its exports go mainly to one market, China. That ties output to China's demand. It also ties output to the few transit routes out of a landlocked country.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-tkm.pdf",
+            "publisher": "World Bank",
+            "title": "Turkmenistan: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Turkmenistan's economic growth remains heavily dependent on hydrocarbon production and exports, particularly natural gas, with export concentration in a single market (China)"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Asia/transition-report-2025-26-CA-Turkmenistan.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26, Country Assessment: Turkmenistan",
+            "date": "2025",
+            "quote": "Risks to the outlook include commodity price volatility and the country's dependence on demand from China"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Asia/transition-report-2025-26-CA-Turkmenistan.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26, Country Assessment: Turkmenistan",
+            "date": "2025",
+            "quote": "the country's landlocked position, reliance on politically sensitive transit corridors and lack of progress on regional projects"
+          }
+        ]
+      },
+      {
+        "title": "Soviet pipelines, unpaid gas bills",
+        "about": "history",
+        "text": "After independence, Turkmenistan's gas could only flow to former Soviet buyers, and they ran up unpaid bills. Turkmenistan stopped supplying them between 1997 and 1999, which shows in the collapse of the 1990s.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2003/07/central-asia-since-1991_g17a1648/738202560358.pdf",
+            "publisher": "OECD",
+            "title": "Central Asia since 1991: The Experience of the New Independent States (Development Centre Working Paper No. 212)",
+            "date": "2003-07",
+            "quote": "The economic strategy was however undermined by the inherited infrastructure, which directed energy exports exclusively to the CIS."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2003/07/central-asia-since-1991_g17a1648/738202560358.pdf",
+            "publisher": "OECD",
+            "title": "Central Asia since 1991: The Experience of the New Independent States (Development Centre Working Paper No. 212)",
+            "date": "2003-07",
+            "quote": "Turkmenistan eventually addressed by the drastic measure of ceasing supply between 1997 and 1999"
+          }
+        ]
+      },
+      {
+        "title": "A state-led investment boom",
+        "about": "history",
+        "text": "In 2006-2014 growth came from gas and heavy state-led investment, while new gas exports to China opened up. Investment rose from 18.6 percent of GDP in 2007 to 48.3 percent in 2012.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr13301",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2013 Article IV Consultation with Turkmenistan",
+            "date": "2013-08-06",
+            "quote": "Economic growth has been based on the hydrocarbon sector and state-led investment."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr13301",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2013 Article IV Consultation with Turkmenistan",
+            "date": "2013-08-06",
+            "quote": "12 percent in 2013 and 10.4 percent in 2014, reflecting increased public investment and growing gas exports to China."
+          }
+        ]
+      },
+      {
+        "title": "The 2015 gas price fall",
+        "about": "history",
+        "text": "Lower gas prices and a dispute with Russia's Gazprom cut export earnings in 2015, and the manat was devalued. Growth slowed after the boom years, and investment fell from 47.3 percent of GDP in 2015 to 16.5 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099128103032587161/pdf/IDU-b4ab627d-35bd-42fb-925e-2099142740bd.pdf",
+            "publisher": "World Bank",
+            "title": "Turkmenistan Economic Report",
+            "date": "2024-12",
+            "quote": "Following a dispute between Turkmengas and Russian-owned Gazprom and the decline in gas prices, export values fell by 20 percent in 2015"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099128103032587161/pdf/IDU-b4ab627d-35bd-42fb-925e-2099142740bd.pdf",
+            "publisher": "World Bank",
+            "title": "Turkmenistan Economic Report",
+            "date": "2024-12",
+            "quote": "As the balance of payments deteriorated, Turkmenistan devalued the manat to partly offset real appreciation in the previous years."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099128103032587161/pdf/IDU-b4ab627d-35bd-42fb-925e-2099142740bd.pdf",
+            "publisher": "World Bank",
+            "title": "Turkmenistan Economic Report",
+            "date": "2024-12",
+            "quote": "Less favorable terms of trade and lower foreign direct investment (FDI) inflows slowed real GDP growth from over 9 percent in 2004–14"
+          }
+        ]
+      },
+      {
+        "title": "A large state, two exchange rates",
+        "about": "present",
+        "text": "The state still has a large footprint in the economy, which the IMF links to persistent inefficiencies. The EBRD says the wide gap between the official and the market exchange rate leads money and resources to the wrong uses.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26218-turkmenistan-imf-staff-completes-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Turkmenistan",
+            "date": "2026-06-22",
+            "quote": "persistent structural inefficiencies associated with the large state footprint in the economy"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Asia/transition-report-2025-26-CA-Turkmenistan.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26, Country Assessment: Turkmenistan",
+            "date": "2025",
+            "quote": "The wide gap between the official rate and the parallel market rate creates serious resource misallocations in the economy."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The two main lenders now tell different stories. In June 2026, IMF staff said the official growth figures are hard to square with other data, used their own estimates instead, reported that the hydrocarbon sector shrank again in 2025, and expected growth to slow in 2026. In October 2026, the World Bank reported strong official growth in the first half of 2026 and expected it to stay strong, helped by a new phase of the Galkynysh gas field launched in April 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26218-turkmenistan-imf-staff-completes-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Turkmenistan",
+          "date": "2026-06-22",
+          "quote": "the narrative underlying official GDP growth estimates is hard to reconcile with other available data"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26218-turkmenistan-imf-staff-completes-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Turkmenistan",
+          "date": "2026-06-22",
+          "quote": "Growth is projected to moderate to about 2.4 percent in 2026 and remain subdued over the medium term"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-tkm.pdf",
+          "publisher": "World Bank",
+          "title": "Turkmenistan: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Growth is expected to remain strong in 2026, supported by the Galkynysh gas field expansion (Phase IV launched in April 2026"
+        }
+      ]
+    },
+    "tension": "The data follow official figures, which show income per person growing between 3.6 and 4.6 percent every year from 2015 to 2025, even through the 2020 pandemic and swings in gas prices. IMF staff find the official growth story hard to square with other data, use their own estimates, and report that the hydrocarbon sector shrank in 2024 and 2025. The World Bank and the EBRD also point to limited or unreliable official data. So the steady era since 2015, and the 2025 peak, may overstate what happened. Doubts about Turkmenistan's accounts go back to the 1990s."
+  }
+}

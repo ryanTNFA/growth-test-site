@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "iso3": "BRN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BRN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Brunei Darussalam Article IV consultation staff report'",
+        "tier 1 domains: 'Brunei economy oil and gas production decline diversification growth'",
+        "imf.org: 'IMF Brunei Darussalam 2025 Article IV press release'",
+        "imf.org, worldbank.org, adb.org: 'IMF staff concludes visit Brunei Darussalam 2026'",
+        "imf.org: '\"Brunei Darussalam: 2026 Article IV Consultation\"' (listed, but elibrary pages returned 403 and guessed PDF URLs 404, so not cited)",
+        "imf.org: 'IMF Executive Board concludes 2026 Article IV consultation with Brunei Darussalam'",
+        "imf.org: 'Brunei Darussalam 2026 Article IV staff report Middle East conflict hydrocarbon price fiscal deficit structural imbalances'",
+        "adb.org: 'Brunei Darussalam Asian Development Outlook 2025 economy growth oil gas'",
+        "worldbank.org, oecd.org: 'Brunei Darussalam economic update growth 2025 hydrocarbon' (OECD country note returned 403)",
+        "imf.org, worldbank.org, adb.org: 'Brunei 2019 Article IV oil price decline 2014 recession fiscal deficit pdf'",
+        "Critic check, opened and text-extracted: imf.org CR 24/301 PDF, imf.org 2019 Article IV page, adb.org ADO April 2026 Brunei chapter PDF, adb.org ADO September 2026 Developing Southeast Asia PDF"
+      ],
+      "critic_changes": [
+        "Verified all citations against extracted text of the opened pages: every quote in the IMF CR 24/301 PDF, the IMF 2019 Article IV page, and the ADB April 2026 and September 2026 PDFs appears verbatim; dates match (CR 24/301 dated September 2024, press release 24 September 2024; 2019 report 10 October 2019). Three distinct recent tier 1 sources survive, so the story stays tier 1.",
+        "Ageing oil fields thread: replaced the ADB April quote on 'rising maintenance costs' (about costs, not interrupted production) with the ADB September 2026 passage on outages and maintenance from ageing infrastructure, and reworded the text from 'keeps interrupting production' to what the ADB says (could hold back production); dropped 'from late 2023' for Salman, which this thread's quote does not support.",
+        "Refining thread: the claim that the second phase finishes at the end of 2028 had no supporting quote; added the ADB April 2026 passage on end-of-2028 completion of Refinery and Petrochemical Plant Phase II. Trimmed the IMF quote so it includes 'boosted by the petrochemical plant's phase 1 venture', which supports the refinery claim, while staying under 25 words.",
+        "Stop-start thread: removed 'as the Salman field started early' (not in the cited passage) and replaced 'grew strongly in 2024' with the data's 3.2 percent growth in income per person in 2024.",
+        "History thread: reworded 'The IMF dates the long slide to...' to what the 2019 report says, since the 2024 report dates the oil decline to 2006 and the 2019 one to 2010.",
+        "Arc: dropped 'from 2006' from the oil decline (sources differ on the start year) and changed 'new fields' to 'a new oil field' (only Salman is named); changed maintenance stoppages to 'from late 2024 into 2025' to match the ADB dating (Q4 2024 to Q3 2025).",
+        "Large state thread: changed 'the government is a large employer' to 'the state is large: its wage bill is high', since the passage is about the wage bill, not employment.",
+        "since_last_year: removed 'the Middle East conflict raised oil prices' (no cited passage supports it) and 'through most of 2025' (changed to 'into the second half of 2025'); replaced one ADB September quote with the passage that states the 2026 forecast was downgraded, which supports the forecast-cut claim.",
+        "Tension: removed 'a more resilient economy', which no cited passage supports; changed 'flat since 2016' to 'barely moved since 2016'. Numbers 38,595 (2003) and 29,531 (2025) checked against the series.",
+        "Numbers checked against desk/data/BRN.json: 69.4, 1979, 1974, era means -2.1, 0.7, -2.5, 0.0, 2025 growth -0.1 and 2024 growth 3.2 all match. No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Brunei's income per person sits far below its 1979 peak, as ageing oil fields have kept growth flat or falling despite a push into refining.",
+    "arc": "Income per person in Brunei peaked in 1979. By 2025 it was 69.4 percent below that peak, and lower even than in 1974, the first year of the record. From 1990 to 1998 it fell by 2.1 percent a year on average, and the sources we found do not explain this era; from 1999 to 2006 it edged up by 0.7 percent a year. From 2007 to 2016 it fell by 2.5 percent a year: oil output declined as offshore fields aged, and oil and gas prices dropped after 2014. Since 2017 it has been flat, at 0.0 percent a year, as a new oil field and a large refinery and petrochemical plant lifted output at times, while recessions in 2021 and 2022 and maintenance stoppages from late 2024 into 2025 pulled it back.",
+    "threads": [
+      {
+        "title": "Ageing offshore oil fields",
+        "text": "The IMF says oil output has been falling since 2006 as the offshore fields age. The new Salman field has only partly offset the decline, and the ADB warns that outages and maintenance on ageing facilities could hold back production.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1brnea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2024 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 24/301)",
+            "date": "2024-09",
+            "quote": "The production from the new Salman oilfield offered some partial relief to the decline in oil production since 2006 as offshore O&G fields mature."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1174871/developing-southeast-asia-ado-september-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook September 2026: Developing Southeast Asia",
+            "date": "2026-09",
+            "quote": "Unplanned outages or maintenance caused by aging infrastructure could constrain oil and gas production"
+          }
+        ]
+      },
+      {
+        "title": "Falling output, then falling prices",
+        "text": "In 2019 the IMF described an economy adjusting to falling oil production since 2010 and lower oil and gas prices since 2014. Both fall within the 2007 to 2016 era, when income per person fell by 2.5 percent a year on average.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2019/10/10/brunei-darussalam-2019-article-iv-consultation-press-release-and-staff-report-48728",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2019 Article IV Consultation-Press Release and Staff Report",
+            "date": "2019-10-10",
+            "quote": "Brunei’s economy has been adjusting to declining oil production since 2010 and lower oil and gas (O&G) prices since 2014"
+          }
+        ]
+      },
+      {
+        "title": "Refining and the Wawasan 2035 plan",
+        "text": "The long-term plan, Wawasan 2035 (Vision 2035), backs downstream oil and gas, food, tourism, ICT and services. The first phase of a large refinery and petrochemical plant helped raise the non-oil share of output, and its second phase is due to finish at the end of 2028.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1brnea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2024 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 24/301)",
+            "date": "2024-09",
+            "quote": "increased from 20 percent in 2003 to 53.6 percent in 2023, boosted by the petrochemical plant’s phase 1 venture"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/bru-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook April 2026: Brunei Darussalam",
+            "date": "2026-04",
+            "quote": "Wawasan 2035, the long-term development agenda, prioritizes downstream oil and gas, food, tourism, ICT, and services."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/bru-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook April 2026: Brunei Darussalam",
+            "date": "2026-04",
+            "quote": "These include the expected end-of-2028 completion of the Refinery and Petrochemical Plant Phase II project"
+          }
+        ]
+      },
+      {
+        "title": "Stop-start production since 2021",
+        "text": "The economy shrank in 2021 and 2022 and recovered in 2023, mainly on the non-oil economy. Income per person grew by 3.2 percent in 2024, but maintenance on gas and LNG plants then pushed output down again from late 2024 into 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1brnea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2024 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 24/301)",
+            "date": "2024-09",
+            "quote": "Brunei’s real GDP rose by 1.4 percent in 2023 after two years of recession, mainly driven by the non-oil and gas (O&G) sector"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/bru-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook April 2026: Brunei Darussalam",
+            "date": "2026-04",
+            "quote": "due in part to maintenance-related disruptions to natural gas and Liquefied Natural Gas (LNG) production"
+          }
+        ]
+      },
+      {
+        "title": "Large state, scarce private jobs",
+        "text": "The state is large: its wage bill is high compared with its neighbours. The IMF lists job creation, youth unemployment and the size of the public sector among the challenges of diversification.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1brnea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2024 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 24/301)",
+            "date": "2024-09",
+            "quote": "Brunei’s large public footprint is evident in the high public wage bill to GDP vis-à-vis its regional peers, ASEAN-5 countries."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1brnea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Brunei Darussalam: 2024 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 24/301)",
+            "date": "2024-09",
+            "quote": "However, challenges remain in addressing job creation and youth unemployment"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The economy shrank from late 2024 into the second half of 2025 as gas and LNG plants went down for maintenance, and income per person slipped by 0.1 percent in 2025. In early 2026 oil and gas output kept growing, but the non-oil economy shrank in the first quarter, and in September the ADB cut its growth forecast for 2026.",
+      "citations": [
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/bru-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook April 2026: Brunei Darussalam",
+          "date": "2026-04",
+          "quote": "Brunei Darussalam’s economy contracted sharply from Q4 2024 through Q3 2025."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/developing-southeast-asia-ado-september-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook September 2026: Developing Southeast Asia",
+          "date": "2026-09",
+          "quote": "The growth forecast for 2026 is downgraded to 1.2% as the weakness in non-oil activity persisted beyond the start of the year"
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/developing-southeast-asia-ado-september-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook September 2026: Developing Southeast Asia",
+          "date": "2026-09",
+          "quote": "By contrast, the non-oil and gas sector contracted by 3.0%."
+        }
+      ]
+    },
+    "tension": "The IMF describes progress in diversification, with the non-oil share of output rising sharply since 2003. Over the same years income per person fell, from 38,595 in 2003 to 29,531 in 2025 (constant dollars), and it has barely moved since 2016. A larger non-oil share can come from a shrinking oil sector as well as a growing non-oil one, so the sources' story of progress and the data's story of a long decline can both be partly true."
+  }
+}

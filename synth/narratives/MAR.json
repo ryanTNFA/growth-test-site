@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "MAR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MAR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Morocco Article IV consultation 2025 growth drought\"",
+        "same tier 1 domains: \"Morocco Economic Update World Bank 2025 growth\"",
+        "opened: worldbank.org press release 2026-07-23 (Morocco Economic Update, summer 2026)",
+        "opened: imf.org press release PR26/086, 2026-03-23 (2026 Article IV)",
+        "opened: documents1.worldbank.org, Scaling the Atlas: Growth and Jobs for a Prosperous Morocco (April 2026)",
+        "critic: re-opened all three cited URLs; PDF text extracted and every quoted passage checked against it"
+      ],
+      "critic_changes": [
+        "Opened all three cited URLs; the PDF was extracted to text and every quoted passage was found on it (spacing differences in the PDF text such as 'take -off' and 'COVID -19' are extraction artifacts). The dates and titles match: World Bank report April 2026, World Bank press release 2026-07-23, IMF PR26/086 2026-03-23.",
+        "Rain thread: removed the 2016 example (income per person fell 0.7 percent). No source ties that fall to drought. Softened 'the main source of year-to-year swings' to 'a large share of the ups and downs', because the passage gives 37 percent of output variance over the medium term. Replaced the rural-employment quote with the same sentence's clause that supports 'faster than the rest of the economy could take them in' (the original quote did not cover that part), and changed 'towns and cities' to 'the rest of the economy' to match the source.",
+        "Arc: 'the harvest drove wild swings' in the 1990s is now 'growth swung widely from year to year'. No cited passage attributes the 1990s swings to the harvest. Rephrased so the World Bank is said to link the 2010s slowdown to fading reform momentum only, and to describe capital-heavy growth separately, as the source does.",
+        "Reforms thread: 'kept public finances and inflation in check' is now 'kept the economy stable through repeated shocks', which is what the quote supports. Added a third citation (the privatization passage) to support 'sold some state firms'.",
+        "Reform momentum thread: added a citation for the policy shift after the global financial crisis, which the draft stated without a supporting quote. 'Schooling' is now 'skills' and 'social protection' is now 'social safety net' to match the passage.",
+        "Capital thread: dropped 'much of it public' (not in the cited passages). 'Output per worker has grown slowly' is now 'limited gains in productivity', and a citation with the source's 'limited productivity gains' wording was added in place of support that was missing.",
+        "Pandemic/World Cup thread: added the World Bank July 2026 citation that names the 2030 World Cup. The IMF quote alone does not mention it.",
+        "Numbers checked against desk/data/MAR.json: 2.3 (G4 era mean 2.26), 3,644 (G3 peak 3643.8, level first reached 2025), 8.9/-6.9/10.6 (1994–1996), 3.0 (avg_prior_10y), 1.6 (avg_10y), -8.1 (2020), 7.1 (2021), 2.8 (2024), 3.6 (2025). All correct. The 0.7 figure was dropped with the 2016 example.",
+        "Checked against banned phrases and for recommendation or verdict language: none found."
+      ]
+    },
+    "headline": "Morocco's income per person has climbed at about 2.3 percent a year since 1990, through droughts, a 2020 slump and a new burst of public building.",
+    "arc": "Morocco's income per person has risen since 1990 with no lasting change of pace: growth averaged 2.3 percent a year over 1990–2025, and income per person reached its highest level yet, about 3,644 dollars in constant terms, in 2025. In the 1990s growth swung widely from year to year, from 8.9 percent in 1994 to minus 6.9 in 1995 and 10.6 in 1996. The World Bank credits market-oriented reforms from the late 1990s and a stable policy framework with steadier growth after 2000, and income per person grew 3.0 percent a year over 2006–2015. Growth then eased to 1.6 percent a year over 2016–2025, which the World Bank links to fading reform momentum; it also finds that growth has leaned more and more on capital rather than on higher productivity. That decade includes a fall of 8.1 percent in 2020, when the pandemic struck alongside a severe drought, and a climb to 3.6 percent in 2025 on a harvest recovery and large public works.",
+    "threads": [
+      {
+        "title": "Rain sets the yearly pace",
+        "about": "present",
+        "text": "Climate shocks and water scarcity account for a large share of the ups and downs in Morocco's output, and drought remains a risk to farming. Repeated droughts have also pushed people out of farm work faster than the rest of the economy could take them in.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "the country's severe exposure to climate shocks and water scarcity, which explain an estimated 37 percent of the variance in Morocco's output"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "increasingly frequent and severe droughts displaced agricultural workers faster than the broader economy could absorb them"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/07/23/public-investment-powers-morocco-s-strongest-growth-in-a-decade",
+            "publisher": "World Bank",
+            "title": "Public Investment Powers Morocco's Strongest Growth in a Decade — with Digital Transformation as the Next Horizon",
+            "date": "2026-07-23",
+            "quote": "recurrent drought poses a continued risk to agricultural output and water-dependent sectors"
+          }
+        ]
+      },
+      {
+        "title": "Reforms steady the 2000s",
+        "about": "history",
+        "text": "After the turbulent 1980s and 1990s, Morocco opened its economy to trade, sold some state firms and kept the economy stable through repeated shocks. The World Bank credits these reforms with the faster, steadier growth of the 2000s.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "After the turbulent periods of the 1980s and 1990s, Morocco adopted a policy framework that has maintained macroeconomic stability through multiple shocks"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "especially the opening of the economy to external markets, significantly contributed to the growth take-off of the 2000s."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "including trade liberalization, the privatization of some public enterprises and the partial deregulation of the banking, energy, and telecommunication sectors"
+          }
+        ]
+      },
+      {
+        "title": "Reform momentum fades",
+        "about": "history",
+        "text": "After the global financial crisis, policy turned toward the social safety net, living standards, consumption and skills, and market-opening reforms slowed. The World Bank ties the slower growth of the 2010s to this loss of momentum.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "the loss of momentum in growth-enhancing reforms that had characterized the early 2000s contributed to the economic deceleration of the 2010s."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "Moroccan public policies shifted toward strengthening the social safety net, critically improving living standards, sustaining domestic consumption, and building Morocco's human capital"
+          }
+        ]
+      },
+      {
+        "title": "Capital up, productivity flat",
+        "about": "present",
+        "text": "Growth has leaned more and more on building up capital, with limited gains in productivity. Jobs have not kept up with a growing working-age population.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "one that has relied heavily on capital accumulation while generating limited productivity gains"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "capital accumulation accounted for 68 percent of growth in the 2000s and 85 percent since 2010"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "On average, the economy generated 215,000 fewer jobs per year than needed to keep the employment rate unchanged year on year."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic slump, World Cup build-out",
+        "about": "present",
+        "text": "Income per person fell 8.1 percent in 2020, when the pandemic, a severe drought and then a global price surge hit together, and bounced back 7.1 percent in 2021. Since 2023 growth has picked up again, reaching 3.6 percent in 2025, as farm output recovered and large public works for the 2030 World Cup got under way.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099042726151542692/pdf/P501282-154a850a-45ed-46c2-abcd-659a2b18e103.pdf",
+            "publisher": "World Bank",
+            "title": "Scaling the Atlas: Growth and Jobs for a Prosperous Morocco",
+            "date": "2026-04",
+            "quote": "the COVID-19 pandemic, which, compounded by a severe drought and the global inflationary surge, triggered Morocco's only recession of the century"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/23/pr26086-morocco-imf-concludes-2026-aiv-consultation-and-mid-term-rev-under-fcl-arrangement",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation, and Mid-Term Review Under the Flexible Credit Line Arrangement with Morocco",
+            "date": "2026-03-23",
+            "quote": "2025 rebound in agricultural output and surge in large-scale infrastructure projects."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/07/23/public-investment-powers-morocco-s-strongest-growth-in-a-decade",
+            "publisher": "World Bank",
+            "title": "Public Investment Powers Morocco's Strongest Growth in a Decade — with Digital Transformation as the Next Horizon",
+            "date": "2026-07-23",
+            "quote": "driven by a surge in public investment linked to the preparations for the 2030 FIFA World Cup and a nascent recovery in agriculture"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth in income per person rose to 3.6 percent in 2025, up from 2.8 percent in 2024, and income per person reached a new high. The World Bank's July 2026 update puts this down to public building for the 2030 World Cup and an early recovery in farming.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/07/23/public-investment-powers-morocco-s-strongest-growth-in-a-decade",
+          "publisher": "World Bank",
+          "title": "Public Investment Powers Morocco's Strongest Growth in a Decade — with Digital Transformation as the Next Horizon",
+          "date": "2026-07-23",
+          "quote": "driven by a surge in public investment linked to the preparations for the 2030 FIFA World Cup and a nascent recovery in agriculture"
+        }
+      ]
+    },
+    "tension": "The World Bank describes separate phases: a take-off in the 2000s, a slowdown in the 2010s and a pickup from 2023. In the data, income per person did grow faster over 2006–2015 (3.0 percent a year) than over 2016–2025 (1.6). But the tool's break test finds no lasting shift since 1990, only one era averaging 2.3 percent, because growth jumps so much from year to year. The World Bank also calls 2025 the strongest year in a decade. For income per person, the 3.6 percent of 2025 is below the 7.1 percent rebound of 2021."
+  }
+}

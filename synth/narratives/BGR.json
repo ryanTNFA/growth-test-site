@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "iso3": "BGR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BGR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Bulgaria Article IV staff concluding statement 2025 euro adoption growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: OECD Economic Survey Bulgaria 2025",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Bulgaria 1996-1997 banking crisis hyperinflation currency board boom capital inflows 2008 bust",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Bulgaria Article IV 2009 2010 end of capital inflow boom credit growth recession EU accession",
+        "Opened: IMF 2025 Article IV concluding statement (2025-09-23); IMF PR 25/384 (2025-11); World Bank Macro Poverty Outlook Bulgaria (October 2026); EBRD Bulgaria diagnostic (September 2025); IMF PIN 97/15 (1997-07-29); IMF 2010 Article IV concluding statement (2010-03-03)",
+        "OECD 2026 survey press release returned HTTP 403 and was not cited",
+        "Critic re-opened every cited URL (IMF PIN 97/15, IMF 2010 concluding statement, IMF PR 25/384, World Bank MPO October 2026 PDF, EBRD diagnostic September 2025 PDF) and checked every quote against the page text"
+      ],
+      "critic_changes": [
+        "Every cited URL was re-opened. All quoted passages appear on their pages and all dates match: the World Bank MPO PDF footer reads 'Macro Poverty Outlook / October 2026' and the EBRD diagnostic is dated September 2025.",
+        "Arc: 'brought stable prices' removed. No cited passage says the currency board stabilised prices; the IMF 1997 notice places the fall in inflation before the board began. The sentence now says the board began tight budgets and low public debt, as the EBRD says.",
+        "Arc: 'bank collapse' changed to 'bank failures', now supported by an added IMF 1997 citation on bank closures. 'Repeated crises' and the central-planning framing were dropped because no cited passage supports them.",
+        "Arc: 'When those inflows stopped' changed to 'contracted', the IMF 2010 wording. 'Growth since then has averaged 2.9' changed to 'from 2009 to 2025', because the 2.9 era includes 2009.",
+        "Arc: the claim that low productivity and a shrinking population 'kept the catch-up slower' was a causal link no source makes. These are now stated side by side, with 'household spending' changed to 'domestic demand' (World Bank MPO wording).",
+        "Thread 'The crises of the 1990s': 'unstable policy' was unsupported and was replaced with the data's falls in 1990–1993. The EBRD's 'lingering gap' is the gap with regional peers in context, not 'the income gap with the EU', so it was corrected. An IMF citation on bank closures was added.",
+        "Thread 'Currency board and budget discipline': 'credit it with ending the crisis' and 'the stable base for the 2000–2008 boom' were dropped because no cited passage supports them.",
+        "Thread 'An inflow boom and its end': 'output fell for the first time since 1996–97' was dropped. It conflicts with the data, which show income per person falling 7.9 percent in 1999. The IMF '5.1 percent' citation was replaced with the IMF passage saying capital inflows contracted sharply. 'The run-up to and joining of the EU in 2007' was simplified to the EBRD's 'boost from joining the EU'.",
+        "Thread 'A shrinking population': 'workforce keeps shrinking' had no supporting citation. An EBRD passage on continued declines in the working-age population was added.",
+        "Thread 'Wage-led catch-up, slow productivity': 'strong household spending' was dropped because no passage in this thread supports it. The World Bank quote was shortened to remove its 'constraints on productivity and investment' clause, so the story does not imply a verdict on which constraint holds back growth.",
+        "since_last_year: 'strong household spending' changed to 'strong domestic demand' to match the source. A World Bank citation was added for the spring 2026 rise in inflation from the Middle East energy shock.",
+        "Tension: notes that the sources and the data compare Bulgaria with different groups of countries. All numbers checked against BGR.json: -2.8, 13.6, 6.9, 2.7, 2.9, 2.2, 8.5, 3.7, 3.4, rank 3 of 11, peak 2025.",
+        "tier1_recent_found kept at 4 as the drafter reported. Three distinct recent tier 1 sources are cited and verified: IMF PR 25/384 (2025-11), World Bank MPO (2026-10) and EBRD diagnostic (2025-09). The IMF 2025 concluding statement was opened by the drafter but not cited."
+      ]
+    },
+    "headline": "Bulgaria's income per person shrank in the 1990s, boomed after a 1997 currency board, then grew more slowly but steadily as its population fell.",
+    "arc": "Income per person shrank by 2.8 percent a year in 1990–1999, a decade that ended in bank failures and hyperinflation in 1996–97; income per person fell 13.6 percent in 1997 alone. A currency board set up in July 1997 began a long run of tight budgets and low public debt, and from 2000 to 2008 income per person grew 6.9 percent a year, in a boom that sources tie to large capital inflows and the pull of joining the EU. When those inflows contracted, income per person fell 2.7 percent in 2009, and from 2009 to 2025 growth averaged 2.9 percent a year, with a fall of 2.2 percent in 2020 and a rebound of 8.5 percent in 2021. Over 2016–2025 growth averaged 3.7 percent a year, up from 3.4 in 2006–2015, and income per person reached a new high in 2025. Sources say recent growth has rested on strong domestic demand, fast wage gains and looser budgets, while productivity growth has lagged, the population keeps shrinking and the catch-up with EU incomes has been slower than in many regional peers.",
+    "threads": [
+      {
+        "title": "The crises of the 1990s",
+        "text": "Income per person fell every year from 1990 to 1993. In 1996 the weakest banks were closed, and in early 1997 hyperinflation struck, making 1997 the worst year in the data. The EBRD traces Bulgaria's lingering gap with its regional peers mainly to the crises of the 1990s.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn9715",
+            "publisher": "IMF",
+            "title": "Press Information Notice: IMF Concludes Article IV Consultation with Bulgaria",
+            "date": "1997-07-29",
+            "quote": "By end-year the worst banks, representing almost one-third of total deposits, had been closed."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn9715",
+            "publisher": "IMF",
+            "title": "Press Information Notice: IMF Concludes Article IV Consultation with Bulgaria",
+            "date": "1997-07-29",
+            "quote": "hyperinflation in February 1997 with monthly inflation reaching 243 percent"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "The lingering gap is primarily attributable to crises experienced during the 1990s"
+          }
+        ]
+      },
+      {
+        "title": "Currency board and budget discipline",
+        "text": "In July 1997 Bulgaria pegged its currency to the German mark under a currency board. The EBRD says this began a long habit of tight budgets that kept public debt low.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn9715",
+            "publisher": "IMF",
+            "title": "Press Information Notice: IMF Concludes Article IV Consultation with Bulgaria",
+            "date": "1997-07-29",
+            "quote": "CBA established on July 1 with the lev pegged at 1,000 per DM."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "Following the establishment of a currency board in 1997, Bulgaria had a culture of fiscal discipline, which kept public debt low"
+          }
+        ]
+      },
+      {
+        "title": "An inflow boom and its end",
+        "text": "Before the global financial crisis, large flows of foreign money and the boost from joining the EU drove a boom in spending. When the inflows contracted sharply and exports fell, the boom ended, income per person fell in 2009, and growth since has been slower.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs030110",
+            "publisher": "IMF",
+            "title": "Bulgaria—2010 Article IV Consultation, Concluding Statement",
+            "date": "2010-03-03",
+            "quote": "Large capital inflows prior to the global crisis generated a domestic demand boom"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs030110",
+            "publisher": "IMF",
+            "title": "Bulgaria—2010 Article IV Consultation, Concluding Statement",
+            "date": "2010-03-03",
+            "quote": "Capital inflows contracted sharply and exports fell due to recessions in trading partners."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "After a strong boost from EU accession and the economic boom that preceded the global financial crisis"
+          }
+        ]
+      },
+      {
+        "title": "A shrinking population",
+        "text": "Bulgaria's population has fallen steadily since 1989, and its working-age population is expected to keep shrinking. Fewer people means income per person can rise even when total output grows slowly, and sources see the pressure from ageing growing stronger.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "The country’s population has declined substantially since the early 1990s, falling from nearly 9 million in 1989 to under 7 million by 2019."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "projections indicating continued declines in the working-age population (15-64) until at least 2030 due to elevated retirement rates"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bulgaria",
+            "date": "2026-10",
+            "quote": "As demographic pressures intensify and dividends from earlier reforms fade"
+          }
+        ]
+      },
+      {
+        "title": "Wage-led catch-up, slow productivity",
+        "text": "The IMF says fast wage growth has driven the recent catch-up while productivity growth lags. The World Bank notes that Bulgaria's catch-up with EU incomes has lagged many peers in Central and Eastern Europe, and the EBRD points to short-lived governments and frequent policy changes.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/21/pr-25384-bulgaria-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Bulgaria",
+            "date": "2025-11",
+            "quote": "High wage growth has driven income convergence; productivity growth is lagging."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bulgaria",
+            "date": "2026-10",
+            "quote": "Yet the pace of convergence has lagged many Central and Eastern European peers"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/bulgaria/EBRD-Bulgaria-diagnostic-September-2025.pdf",
+            "publisher": "EBRD",
+            "title": "Bulgaria diagnostic",
+            "date": "2025-09",
+            "quote": "the short lifespans of governments, which have led to frequent policy changes"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Bulgaria adopted the euro in January 2026. Growth held up through 2025 and early 2026 on strong domestic demand, despite political instability and weak exports. A wider budget deficit led the EU to open an Excessive Deficit Procedure, and an energy price shock linked to conflict in the Middle East pushed inflation up in spring 2026.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bulgaria",
+          "date": "2026-10",
+          "quote": "The policy drive to anchor Bulgaria more firmly at the core of the EU culminated in eurozone accession from January 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bulgaria",
+          "date": "2026-10",
+          "quote": "Real GDP growth remained robust at 3.1 percent in 2025 and 2.9 percent in Q1 2026, despite global uncertainty, domestic political instability, and weak exports."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bulgaria",
+          "date": "2026-10",
+          "quote": "The weaker fiscal stance prompted the Council of the European Union to launch an Excessive Deficit Procedure for Bulgaria"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-bgr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bulgaria",
+          "date": "2026-10",
+          "quote": "After rising in March–May amid the Middle East crisis and fuel price spike, headline HICP inflation slowed to 4.1 percent year-on-year in July 2026"
+        }
+      ]
+    },
+    "tension": "The sources stress that Bulgaria's catch-up has lagged many regional peers and that productivity growth is weak. The data look stronger: income per person grew 3.7 percent a year over 2016–2025, ranked 3 of 11 among structural peers, and reached a new high in 2025. Part of the gap is the shrinking population: the EBRD's average for total output growth since 2015 is well below the data's growth in income per person, because output is shared among fewer people each year. The sources and the data also compare Bulgaria with different groups of countries."
+  }
+}

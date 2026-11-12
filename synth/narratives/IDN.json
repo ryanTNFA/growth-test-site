@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "iso3": "IDN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IDN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Indonesia 2025 Article IV consultation IMF press release",
+        "worldbank.org: World Bank Indonesia Economic Prospects 2025 growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, oecd.org, adb.org: Indonesia nickel downstreaming commodity boom growth slowdown productivity",
+        "imf.org, worldbank.org, adb.org: Indonesia 1997-98 crisis IMF banking collapse output contraction recovery",
+        "imf.org, worldbank.org, oecd.org, adb.org: Indonesia commodity boom end growth slowed 2012 2015 coal palm oil prices",
+        "opened: imf.org press releases 26/010 (Jan 2026) and 25/375 (Nov 2025)",
+        "opened: imf.org 2000 issues brief on recovery from the Asian crisis",
+        "opened: worldbank.org press releases Dec 2025 and Jun 2026",
+        "opened: documents1.worldbank.org Indonesia Country Growth and Jobs Report (Jan 2026)",
+        "opened: adb.org Constraints to Indonesia's Economic Growth (Dec 2015)",
+        "failed to open: openknowledge.worldbank.org IEP June 2026 (403), worldbank.org IEQ March 2015 feature (404)",
+        "critic re-opened and verified: imf.org/external/np/exr/ib/2000/062300.htm, adb.org ino-paper-10-2015.pdf (text extracted), documents1.worldbank.org P180900 report (text extracted), worldbank.org press releases 2025-12 and 2026-06, imf.org pr-26010"
+      ],
+      "critic_changes": [
+        "Arc: removed the claim that sources trace fast growth back to the late 1960s; no cited passage supports it, and the IMF 2000 brief says nothing about the 1960s.",
+        "Arc: replaced 'bank closures and political turmoil slowed the recovery' with 'political turmoil and poor policy', matching the IMF passage. The IMF links bank closures to the onset of the crisis, not to a slow recovery.",
+        "Arc: replaced 'high investment kept it up after commodity prices fell' with a sentence the World Bank report supports (investment stayed high, much of it in lower-value work); the sources do not say investment sustained growth after the boom.",
+        "Thread 'The 1998 crash': dropped the claims about insolvent bank closures and a collapse in private spending turning a currency crisis into a fall in output. The IMF brief makes the spending point only for all crisis countries together. Added the verified IMF passage on Indonesia's more severe and drawn-out currency collapse.",
+        "Thread 'A commodity boom, then its end': changed 'eased after 2011' to 'eased from 2011'. ADB says growth peaked in 2010 and declined steadily from 2011. All three quotes were checked against the PDF text.",
+        "Thread 'High investment, slowing productivity': changed 'slowing productivity growth is the main reason' to 'one of the reasons'. The quoted passage lists four drivers and does not rank them. Added a verified World Bank passage to support the claim that investment has stayed high.",
+        "Thread 'Nickel and the export ban': replaced the vague 'the policy has come with costs' citation with the World Bank passages that name the lost ore earnings and the WTO dispute. Dropped 'foreign money' and the exports claim, which the cited passages did not cover.",
+        "Thread 'Jobs in low-paying work': corrected the World Bank press release date from 2025-12-16 (the URL) to 2025-12-17 (the page's dateline 'JAKARTA, December 17, 2025'). Added a World Bank report passage that supports 'trade and farming'. The middle-class quote was verified verbatim.",
+        "since_last_year: removed 'The IMF credits interest-rate cuts'. The IMF release says only 'support from fiscal and monetary policies' and does not mention rate cuts. Replaced 'expected growth to ease in 2026' with the World Bank's actual wording that outside pressures weigh on investment and exports, because the page does not say growth eases.",
+        "Headline: replaced 'two decades' with 'since 2006' so the headline uses only years and data figures.",
+        "tier1_recent_found: changed from 5 to 4. That is the number of distinct 2023-or-later tier 1 sources cited and verified (World Bank Jan 2026 report, World Bank Dec 2025 and Jun 2026 press releases, IMF Jan 2026 press release). The IMF Nov 2025 release was neither cited nor verified.",
+        "Numbers checked against desk/data/IDN.json: 5.1 (1990-97), -14.5 (1998), 0.6 (1998-2005), 3.8 (2006-2025), -2.9 (2020), 4.5/4.2/4.2/4.3 (2022-25), 4.9 (2010), 3.7 (2015), 10-year averages 4.3 and 3.3, and the 2025 level peak (G3 at_peak). All match."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Indonesia: fast growth to 1997, a deep crash in 1998, then steady gains in income per person since 2006 that sources say lean on lower-value work",
+    "arc": "From 1990 to 1997 income per person grew 5.1 percent a year, near the end of a long run of fast growth. The Asian financial crisis ended it: income per person fell 14.5 percent in 1998, and the 1998–2005 era averaged just 0.6 percent a year as political turmoil and poor policy slowed the recovery. From 2006 growth settled into one long, steady era at 3.8 percent a year. A commodity boom lifted it first, and after commodity prices fell investment stayed high, though the World Bank finds much of it went into lower-value work. After a 2.9 percent drop in 2020, income per person grew 4.5 percent in 2022, 4.2 percent in 2023 and 2024 and 4.3 percent in 2025, reaching its highest level yet. The sources call recent growth resilient but see its trend edging down, with new jobs mostly in low-value sectors.",
+    "threads": [
+      {
+        "title": "The 1998 crash",
+        "about": "history",
+        "text": "The Asian financial crisis hit Indonesia harder than its neighbours. Its currency collapse was deeper and lasted longer, and political turmoil and poor policy implementation slowed the recovery.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/exr/ib/2000/062300.htm",
+            "publisher": "IMF",
+            "title": "Recovery from the Asian Crisis and the Role of the IMF",
+            "date": "2000-06",
+            "quote": "In the event, Korea's GDP dropped by 7 percent in 1998, Thailand's by 6 percent, and Indonesia's by 14 percent."
+          },
+          {
+            "url": "https://www.imf.org/external/np/exr/ib/2000/062300.htm",
+            "publisher": "IMF",
+            "title": "Recovery from the Asian Crisis and the Role of the IMF",
+            "date": "2000-06",
+            "quote": "The collapse in its currency was much more severe and drawn-out than in the other countries."
+          },
+          {
+            "url": "https://www.imf.org/external/np/exr/ib/2000/062300.htm",
+            "publisher": "IMF",
+            "title": "Recovery from the Asian Crisis and the Role of the IMF",
+            "date": "2000-06",
+            "quote": "In Indonesia, where political turmoil and poor policy implementation impeded recovery,"
+          }
+        ]
+      },
+      {
+        "title": "A commodity boom, then its end",
+        "about": "history",
+        "text": "Rising world prices for Indonesia's commodity exports lifted growth in the second half of the 2000s. Growth eased from 2011 as those prices fell. The World Bank also finds that the boom pulled resources into commodity processing and low-skilled industries.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/178041/ino-paper-10-2015.pdf",
+            "publisher": "ADB",
+            "title": "Constraints to Indonesia's Economic Growth (ADB Papers on Indonesia No. 10)",
+            "date": "2015-12",
+            "quote": "From 2005 to 2011, growth increased to an average of 6% per annum on the back of a strong recovery in global commodity prices"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/178041/ino-paper-10-2015.pdf",
+            "publisher": "ADB",
+            "title": "Constraints to Indonesia's Economic Growth (ADB Papers on Indonesia No. 10)",
+            "date": "2015-12",
+            "quote": "The slowdown is attributed to falling global commodity prices, volatile global financial conditions, fiscal and monetary tightening, and steadily weakening competitiveness."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "But post-AFC, a commodity boom and market restrictions concentrated resources in commodity processing and low-skilled industries."
+          }
+        ]
+      },
+      {
+        "title": "High investment, slowing productivity",
+        "about": "present",
+        "text": "Investment has stayed high for years, but the World Bank finds that productivity has not kept pace. Manufacturing has become less productive since the early 1990s, and slowing productivity growth is one of the reasons its long-run projection shows growth easing.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "Indonesia has achieved enviably high levels of investment, averaging over 30 percent of GDP annually for the past 15 years."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "Manufacturing productivity has fallen by an estimated 20–30 percent since the early 1990s"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "driven by slowing productivity growth (from 1.5 to 0.8 percent over 25 years), reduced investment efficiency, slower human capital gains, and an aging population"
+          }
+        ]
+      },
+      {
+        "title": "Nickel and the export ban",
+        "about": "present",
+        "text": "Since a 2014 ban on exporting raw nickel ore, the number of working nickel smelters has grown fast. The World Bank also records costs, including lost earnings from ore and a trade dispute.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "The number of operational nickel smelters reached 44 in 2023, up from only two before the entry into force of the ban in 2014."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "It reduced foreign exchange earnings from nickel ore, caused short-term market disruptions, and contributed to a sharp rise in global nickel prices"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "The ban has triggered a World Trade Organization (WTO) dispute settlement case challenging the policy."
+          }
+        ]
+      },
+      {
+        "title": "Jobs in low-paying work",
+        "about": "present",
+        "text": "The economy keeps creating jobs, but mostly in low-value sectors such as trade and farming. The share of middle-class jobs shrank after the pandemic.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/16/indonesia-s-economy-maintains-resilience-amid-global-uncertainty",
+            "publisher": "World Bank",
+            "title": "Indonesia's Economy Maintains Resilience Amid Global Uncertainty",
+            "date": "2025-12-17",
+            "quote": "The economy is creating jobs for most labor entrants, but it is doing so mostly in low-value added sectors"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "Job creation has been concentrated in low-paying sectors, notably wholesale and retail trade and agriculture"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099012326005030218/pdf/P180900-719ea266-fcef-4269-8fcb-4fb184482031.pdf",
+            "publisher": "World Bank",
+            "title": "Running Faster, for Longer: Structural Transformation, Productivity, and Good Jobs (Indonesia Country Growth and Jobs Report)",
+            "date": "2026-01",
+            "quote": "These challenges have intensified since COVID-19 with the share of middle-class jobs falling from 14 percent in 2019 to 8.4 percent in 2023."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF expected growth to hold steady in 2025 and 2026, with support from government spending and monetary policy. By June 2026 the World Bank saw outside pressures weighing on investment and exports in 2026. In the data, income per person grew 4.3 percent in 2025, reaching its highest level yet.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/01/21/pr-26010-indnonesia-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Indonesia",
+          "date": "2026-01-21",
+          "quote": "Growth is expected to remain steady at 5.0 percent in 2025 and 5.1 percent in 2026, reflecting support from fiscal and monetary policies."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/13/indonesia-s-growth-remains-resilient-but-productivity-reforms-are-key-to-creating",
+          "publisher": "World Bank",
+          "title": "Indonesia's Growth Remains Resilient, but Productivity Reforms Are Key to Creating Jobs and Sustaining Momentum",
+          "date": "2026-06-13",
+          "quote": "growth is projected to reach 5.0 percent in 2026, as external pressures weigh on investment and exports"
+        }
+      ]
+    },
+    "tension": "The sources describe a commodity boom up to 2011 and a slowdown afterwards. The income-per-person data show only a gentle easing, from 4.9 percent in 2010 to 3.7 percent in 2015, and the tool finds no break, treating 2006–2025 as one era at 3.8 percent. The sources also say growth has slowed. In the data, the drop in the 10-year average, from 4.3 to 3.3 percent, comes mostly from the 2.9 percent fall in 2020: in 2023–2025 income per person grew 4.2 to 4.3 percent a year, about the pace of 2006–2015."
+  }
+}

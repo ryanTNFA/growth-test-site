@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "iso3": "LKA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LKA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org: Sri Lanka Article IV staff report 2025 economic crisis recovery growth",
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Sri Lanka Development Update 2025 World Bank growth",
+        "imf.org: Sri Lanka Rapid Financing Instrument Cyclone Ditwah IMF December 2025",
+        "imf.org, worldbank.org, adb.org: Sri Lanka request extended arrangement 2023 staff report causes crisis tax cuts 2019 fertilizer ban debt default",
+        "imf.org: Sri Lanka Easter Sunday attacks 2019 tax cuts loss of market access crisis IMF",
+        "tier 1: Sri Lanka end of civil war 2009 growth construction boom non-tradable debt-financed growth",
+        "imf.org: IMF Executive Board approves extended arrangement Sri Lanka March 2023 press release",
+        "opened: worldbank.org/en/country/srilanka/publication/development-update",
+        "opened: worldbank.org press release 2025-10-07",
+        "opened: imf.org PR 25/335, PR 26/172, PR 26/318, PR 23/79",
+        "opened: imf.org IMF Country Report 22/91 (PDF)",
+        "opened: imf.org IMF Country Report 25/339 (PDF)",
+        "opened: adb.org copy of IMF Country Report 26/111 (PDF)",
+        "opened: documents1.worldbank.org Sri Lanka Systematic Country Diagnostic 2015 (PDF)",
+        "critic re-opened: all 5 cited URLs (WB Development Update page, WB press release 2025-10-07, IMF CR 22/91, IMF CR 26/111 on adb.org, WB SCD 2015); PDF quotes checked against extracted text"
+      ],
+      "critic_changes": [
+        "Checked all 15 cited quotes against the pages: every one appears near-verbatim, and every date and title matches (WB Development Update page shows 2026-10-06; CR 22/91 March 2022; CR 26/111 May 2026; SCD October 2015; press release 2025-10-07). No citation dropped.",
+        "Arc: cut from 8 sentences to 6 (rule is 4 to 6). Corrected '1990 to 2002, the last years of a 30-year internal conflict': the conflict ran to 2009, so 1990-2002 was not its last years. Reworded 'The IMF links the slowdown to...': the IMF passage says the 2019 attacks and tax cuts made the country more exposed, not that they caused the slowdown.",
+        "Thread 'Peace and a building boom': the sector list (construction, transport, trade, finance) had no supporting quote, so I added the SCD passage naming the four non-tradable sectors and matched the wording to it (domestic trade; banking, insurance and real estate).",
+        "Thread 'Attacks, tax cuts and pandemic': 'thin reserves and high public debt' had no supporting quote, so I added the IMF passage on inadequate external buffers and debt-sustainability risk and softened the wording to 'risky public debt'. Dropped 'April 2019', which no cited passage gives. Added the 2019 fall (0.8 percent, from series).",
+        "Thread 'Default and the 2022 collapse': 'shortages of fuel, food and medicine' had no supporting quote, so I added the verbatim World Bank passage on depleted reserves and shortages from the same page.",
+        "Thread 'Recovery after restructuring': added that investment rose to 20.8 percent of GDP in 2025 (series), so the 2023 low of 18.2 does not read as the latest figure.",
+        "Thread 'Cyclone and Middle East war': 'November 2025' is not in any cited source (the IMF says late 2025), so I changed it to 'late 2025'. 'The war darkened the outlook' and 'fuel prices and tourist arrivals' had no supporting quote: I replaced the IMF quote with the passage on room to respond and the worsened outlook, and added the IMF passage on tourist arrivals and fuel prices.",
+        "since_last_year: 'late November 2025' changed to 'late 2025' (IMF wording). 'Growth continued all the same' cut as unsupported.",
+        "Tension: tightened. It now adds that the World Bank said in October 2025 that output was still below 2018 levels. It keeps the per-person versus whole-economy growth gap without quoting outside figures.",
+        "Every number checked against desk/data/LKA.json: 3.1, -3.1 (2001), 5.6, 0.1, -7.5 (2022), -1.4 (2023), -5.1 (2020), 5.6 (2024), 5.7 (2025), 1.2 below the 2018 peak, level first reached in 2017, 1.0 vs 6.0, and investment 31.6 (2017) and 18.2 (2023) all match. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Sri Lanka's post-war boom gave way to tax cuts, shocks and a 2022 default; income per person has recovered but is still below its 2018 peak.",
+    "arc": "From 1990 to 2002, during a long internal conflict, income per person grew 3.1 percent a year, with a fall of 3.1 percent in 2001. Growth rose to 5.6 percent a year from 2003 to 2017, and the World Bank says much of the boom after the conflict ended in 2009 came from public investment to rebuild, led by construction, transport and other sectors that do not sell abroad. Since 2018 growth has averaged 0.1 percent a year: the IMF says the Easter Sunday attacks and large tax cuts in 2019 left the country exposed, and it lost access to foreign bond markets when the pandemic hit. In 2022 reserves ran out, the country stopped paying its external debt, and income per person fell 7.5 percent. With budget repair, exchange rate reform and debt restructuring under an IMF program, income per person grew 5.6 percent in 2024 and 5.7 percent in 2025. Even so, in 2025 it was still 1.2 percent below its 2018 peak, about where it first was in 2017, and the last decade averaged 1.0 percent a year against 6.0 in the decade before.",
+    "threads": [
+      {
+        "title": "Peace and a building boom",
+        "about": "history",
+        "text": "The end of the internal conflict in 2009 brought what the World Bank called a peace dividend, and growth sped up. Much of it came from public investment to rebuild, and the sectors that grew most were construction, transport, domestic trade, and banking, insurance and real estate, none of which sell abroad. Income per person grew 5.6 percent a year from 2003 to 2017.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/363391467995349383/pdf/103246-SCD-P152526-PUBLIC-NON-BOARD-VERSION-SriLankaCompleteFinal-122515lr-2.pdf",
+            "publisher": "World Bank",
+            "title": "Sri Lanka: Ending Poverty and Promoting Shared Prosperity. A Systematic Country Diagnostic",
+            "date": "2015-10",
+            "quote": "A substantial portion of this growth was driven by public investment to rebuild after the end of its 30-year internal conflict in 2009."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/363391467995349383/pdf/103246-SCD-P152526-PUBLIC-NON-BOARD-VERSION-SriLankaCompleteFinal-122515lr-2.pdf",
+            "publisher": "World Bank",
+            "title": "Sri Lanka: Ending Poverty and Promoting Shared Prosperity. A Systematic Country Diagnostic",
+            "date": "2015-10",
+            "quote": "the top four sectors (accounting for half of total growth) being all non-tradable sectors: construction, transport, domestic trade and banking, insurance and real estate"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/363391467995349383/pdf/103246-SCD-P152526-PUBLIC-NON-BOARD-VERSION-SriLankaCompleteFinal-122515lr-2.pdf",
+            "publisher": "World Bank",
+            "title": "Sri Lanka: Ending Poverty and Promoting Shared Prosperity. A Systematic Country Diagnostic",
+            "date": "2015-10",
+            "quote": "the average growth rate accelerated to 7.5 percent between 2010 and 2013, reflecting a peace dividend and an aggressive policy thrust towards growth"
+          }
+        ]
+      },
+      {
+        "title": "Attacks, tax cuts and pandemic",
+        "about": "history",
+        "text": "Before the pandemic the country already had thin reserves and risky public debt. The IMF says the Easter Sunday attacks and large tax cuts in late 2019 made this worse, and when the pandemic hit Sri Lanka lost access to foreign bond markets. Income per person fell 0.8 percent in 2019 and 5.1 percent in 2020.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1lkaea2022001.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: 2021 Article IV Consultation (IMF Country Report No. 22/91)",
+            "date": "2022-03",
+            "quote": "the country was highly vulnerable to external shocks owing to inadequate external buffers and high risks to public debt sustainability"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1lkaea2022001.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: 2021 Article IV Consultation (IMF Country Report No. 22/91)",
+            "date": "2022-03",
+            "quote": "exacerbated by the Easter Sunday terrorist attacks in 2019 and major policy changes including large tax cuts at late 2019."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1lkaea2022001.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: 2021 Article IV Consultation (IMF Country Report No. 22/91)",
+            "date": "2022-03",
+            "quote": "Sri Lanka lost access to international sovereign bond market at the onset of the pandemic."
+          }
+        ]
+      },
+      {
+        "title": "Default and the 2022 collapse",
+        "about": "history",
+        "text": "After years of budget deficits and unsustainable debt, depleted reserves caused severe shortages of fuel, food and medicine in 2022, and in April the country stopped paying its external debt. Income per person fell 7.5 percent in 2022 and another 1.4 percent in 2023.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+            "publisher": "World Bank",
+            "title": "Sri Lanka Development Update",
+            "date": "2026-10-06",
+            "quote": "After years of fiscal imbalances and unsustainable debt, the country suspended external debt service in April"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+            "publisher": "World Bank",
+            "title": "Sri Lanka Development Update",
+            "date": "2026-10-06",
+            "quote": "Sri Lanka’s economic crisis deepened in 2022, as depleted reserves caused severe shortages of fuel, food, and medicine"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+            "publisher": "World Bank",
+            "title": "Sri Lanka Development Update",
+            "date": "2026-10-06",
+            "quote": "Sri Lanka’s longstanding structural weaknesses plunged the country into a severe economic crisis in 2022."
+          }
+        ]
+      },
+      {
+        "title": "Recovery after restructuring",
+        "about": "present",
+        "text": "Budget repair, exchange rate reform and debt restructuring under an IMF program brought growth back, and income per person rose 5.6 percent in 2024 and 5.7 percent in 2025. The recovery is still incomplete: poverty remains high, and investment fell from 31.6 percent of GDP in 2017 to 18.2 in 2023 before rising to 20.8 in 2025. The IMF says private business and foreign investment are still well below their potential.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+            "publisher": "World Bank",
+            "title": "Sri Lanka Development Update",
+            "date": "2026-10-06",
+            "quote": "reflecting the benefits of macroeconomic stabilization, fiscal consolidation, exchange rate reforms, and debt restructuring."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/07/sri-lanka-s-economic-recovery-remains-incomplete-as-key-challenges-remain",
+            "publisher": "World Bank",
+            "title": "Sri Lanka’s Economic Recovery Remains Incomplete as Key Challenges Remain",
+            "date": "2025-10-07",
+            "quote": "Sri Lanka’s economic output is still below 2018 levels. Poverty, although declining, remains twice as high as in 2019."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/project-documents/56281/56281-002-ld-1180826-en.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/111)",
+            "date": "2026-05",
+            "quote": "Private sector development and foreign investment remain well below potential."
+          }
+        ]
+      },
+      {
+        "title": "Cyclone and Middle East war",
+        "about": "present",
+        "text": "Cyclone Ditwah hit in late 2025, and in 2026 war in the Middle East raised fuel prices and cut tourist arrivals. The IMF says the country had room to respond to both shocks, but the war worsened the outlook.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+            "publisher": "World Bank",
+            "title": "Sri Lanka Development Update",
+            "date": "2026-10-06",
+            "quote": "Cyclone Ditwah flooded nearly a fifth of the country, resulted in over 600 deaths, and created an estimated US$3.4 billion in recovery needs."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/project-documents/56281/56281-002-ld-1180826-en.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/111)",
+            "date": "2026-05",
+            "quote": "provided room to respond to cyclone Ditwah and the Middle East war. The latter, however, has significantly worsened Sri Lanka's economic outlook"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/project-documents/56281/56281-002-ld-1180826-en.pdf",
+            "publisher": "IMF",
+            "title": "Sri Lanka: Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/111)",
+            "date": "2026-05",
+            "quote": "The impact of the Middle East conflict was mainly visible in tourist arrivals and fuel prices."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Cyclone Ditwah struck in late 2025. In 2026 the war in the Middle East pushed up fuel prices and cut tourist arrivals, and the IMF called it the largest outside shock since the 2022 crisis. Even so, in October 2026 the World Bank reported that real GDP was back at pre-crisis levels.",
+      "citations": [
+        {
+          "url": "https://www.adb.org/sites/default/files/project-documents/56281/56281-002-ld-1180826-en.pdf",
+          "publisher": "IMF",
+          "title": "Sri Lanka: Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/111)",
+          "date": "2026-05",
+          "quote": "The Middle East conflict poses the most significant external shock to Sri Lanka since the 2022 economic crisis"
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/project-documents/56281/56281-002-ld-1180826-en.pdf",
+          "publisher": "IMF",
+          "title": "Sri Lanka: Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/111)",
+          "date": "2026-05",
+          "quote": "The impact of the Middle East conflict was mainly visible in tourist arrivals and fuel prices."
+        },
+        {
+          "url": "https://www.worldbank.org/en/country/srilanka/publication/development-update",
+          "publisher": "World Bank",
+          "title": "Sri Lanka Development Update",
+          "date": "2026-10-06",
+          "quote": "Sri Lanka has reached an important milestone in its recovery from the 2022 crisis, with real GDP returning to pre-crisis levels."
+        }
+      ]
+    },
+    "tension": "In October 2026 the World Bank said real GDP is back at pre-crisis levels, a year after saying output was still below 2018 levels. The data show income per person in 2025 still 1.2 percent below its 2018 peak, about where it first was in 2017. The data also show income per person growing 5.6 percent in 2024 and 5.7 percent in 2025, faster than the World Bank's growth estimates for the whole economy. That would mean a shrinking population, or that the two data releases differ."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "AFG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AFG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "worldbank.org (tier 1): Afghanistan Economic Monitor World Bank 2025",
+        "worldbank.org (tier 1): Afghanistan Development Update World Bank economy returnees",
+        "imf.org, worldbank.org, adb.org (tier 1): Afghanistan growth slowdown 2014 security transition withdrawal international troops aid decline",
+        "imf.org, worldbank.org, adb.org (tier 1): Afghanistan August 2021 aid suspension economy contracted Afghanistan Development Update 2023",
+        "imf.org, worldbank.org, adb.org (tier 1): Afghanistan aid-driven growth 2002-2012 services construction",
+        "Opened: thedocs.worldbank.org Spring ADU May 2026; worldbank.org press releases of 2023-10-03 and 2025-12-10; thedocs.worldbank.org ADU October 2022; thedocs.worldbank.org Policy Notes 2020; documents1.worldbank.org Afghanistan's Development Gains policy note (not cited); blogs.worldbank.org 2018 blog (not cited)",
+        "Critic check: re-opened all five cited URLs (the three PDFs read from their extracted text) and checked every quote against the page"
+      ],
+      "critic_changes": [
+        "Headline: rewrote the two sentences as one, as the rule asks (now 131 characters).",
+        "Arc: the source does not tie the 2002 and 2009 jumps to the weather, so the arc now gives the jumps and the weather point side by side without saying one caused the other.",
+        "Arc: dropped 'Output started growing again in 2023'. The 2023 World Bank release expected the economy to 'hover around no-growth territory' that year, and no opened source says output grew in 2023.",
+        "Arc: dropped the claim that returnees caused the 1.0 percent fall in 2024. The sources tie returnees to falling income per person only for FY2025, so the arc now says the 2024 fall happened while large numbers were returning.",
+        "Thread 'Aid built a services boom': added the Policy Notes passage on weather-driven, volatile farm growth, which backs the farm sentence the services quote did not cover.",
+        "Thread 'Shrinking aid and rising insecurity': changed 'after about 2012' to 'after 2011', matching the source ('rapidly declined over the past decade from ... 2011').",
+        "Thread 'The 2021 aid stop': added the ADU October 2022 passage on unpaid civil servants and the end of development spending to back that sentence.",
+        "Thread 'Returnees outpace output': changed 'since late 2023 ... sent back' to 'since September 2023 ... returned', and added the December 2025 release passage that dates the returns to September 2023 to July 2025.",
+        "Thread 'Women shut out of work': removed 'narrow the workforce and the skills', which the passages do not say. The thread now says the restrictions hold back human capital and lower growth prospects, as the sources do.",
+        "since_last_year: the returns peaked in July 2025 inside the Afghan fiscal year to March 2026, not 'through 2025', so the timing now says that. Changed 'forcing trade onto longer routes' to 'other routes through Iran and Central Asia', as the ADU says. Replaced the December 2025 aid quote with three May 2026 ADU passages covering falling income per person, aid, drought, the border closure and lower farm output.",
+        "Tension: 'growing again since 2023' is not supported (the 2023 release expected no growth), so it now says the World Bank describes growth in 2024 and 2025.",
+        "Verified: all quotes appear on their pages, dates match the documents, all domains are tier 1, and every number appears in growth_problem or series (5.3, -3.7, 22.0, 17.0, 22.6, 7.6, 0.1, 1.0, 35.5). There are 3 distinct recent tier 1 sources: the 2023-10-03 and 2025-12-10 press releases and the 2026-05 ADU."
+      ]
+    },
+    "headline": "Aid lifted income per person to a 2013 peak; it drifted down as aid fell, collapsed in 2021 and is now about where it was in 2006.",
+    "arc": "From 2001 to 2013, Afghanistan's income per person grew 5.3 percent a year on average, as civilian and security grants drove fast growth in services. Growth swung widely from year to year, with jumps such as 22.0 percent in 2002 and 17.0 percent in 2009, and farm output depended heavily on the weather. From 2014 to 2024 the average was -3.7 percent a year: grants shrank, insecurity spread and disputed elections hurt confidence, so income per person slipped a little in most years up to 2019. The collapse came after the August 2021 political crisis, when international aid stopped suddenly and income per person fell 22.6 percent in 2021 and another 7.6 percent in 2022. It was flat in 2023 and fell 1.0 percent in 2024, while large numbers of Afghans returned from Iran and Pakistan, leaving it 35.5 percent below the 2013 peak and about where it first was in 2006.",
+    "threads": [
+      {
+        "title": "Aid built a services boom",
+        "text": "After 2001, civilian and security grants poured in and the service economy grew fast. Farm output grew quickly too but swung with the weather, so growth rose and fell sharply from year to year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/8033eefca38ca8af7b653869a3469087-0310012021/original/Policy-Notes-report-Jan-12-2021-Final-version-2.pdf",
+            "publisher": "World Bank",
+            "title": "Policy Notes: Priorities for Inclusive Development in Afghanistan",
+            "date": "2020",
+            "quote": "Civilian and security grant inflows spurred rapid expansion of the service economy, which experienced consistent double-digit growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/8033eefca38ca8af7b653869a3469087-0310012021/original/Policy-Notes-report-Jan-12-2021-Final-version-2.pdf",
+            "publisher": "World Bank",
+            "title": "Policy Notes: Priorities for Inclusive Development in Afghanistan",
+            "date": "2020",
+            "quote": "Agriculture also experienced rapid but volatile growth, with output heavily dependent on weather conditions."
+          }
+        ]
+      },
+      {
+        "title": "Shrinking aid and rising insecurity",
+        "text": "International grants declined rapidly after 2011, fighting intensified, and disputed presidential elections in 2014 and 2019 harmed confidence. Income per person stopped rising and slipped slightly in most years between 2014 and 2019.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/8033eefca38ca8af7b653869a3469087-0310012021/original/Policy-Notes-report-Jan-12-2021-Final-version-2.pdf",
+            "publisher": "World Bank",
+            "title": "Policy Notes: Priorities for Inclusive Development in Afghanistan",
+            "date": "2020",
+            "quote": "Insecurity has intensified, and the disputed outcomes of the 2014 and 2019 presidential elections have harmed confidence."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d7d49962c0c44fd6bb9ba3bfe1b6de1f-0310062022/original/Afghanistan-Development-Update-October-2022.pdf",
+            "publisher": "World Bank",
+            "title": "Afghanistan Development Update October 2022: Adjusting to the New Realities",
+            "date": "2022-10",
+            "quote": "Reflecting decreased grant support and heightened political instability, real growth in the gross domestic product (GDP) declined"
+          }
+        ]
+      },
+      {
+        "title": "The 2021 aid stop",
+        "text": "After the August 2021 political crisis, international aid stopped suddenly, civil servants went unpaid, development spending ended and a crisis of confidence hit banks and firms. Income per person fell 22.6 percent in 2021 and 7.6 percent in 2022, and the economy settled at a much lower level of demand.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d7d49962c0c44fd6bb9ba3bfe1b6de1f-0310062022/original/Afghanistan-Development-Update-October-2022.pdf",
+            "publisher": "World Bank",
+            "title": "Afghanistan Development Update October 2022: Adjusting to the New Realities",
+            "date": "2022-10",
+            "quote": "The sudden stop of international aid and the confidence crisis culminated in three inter-related simultaneous shocks."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d7d49962c0c44fd6bb9ba3bfe1b6de1f-0310062022/original/Afghanistan-Development-Update-October-2022.pdf",
+            "publisher": "World Bank",
+            "title": "Afghanistan Development Update October 2022: Adjusting to the New Realities",
+            "date": "2022-10",
+            "quote": "civil servants stopped receiving their salaries, development spending ended abruptly, and basic public services were disrupted."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2023/10/03/afghanistan-s-contracted-economy-faces-uncertainty-afghan-families-are-struggling",
+            "publisher": "World Bank",
+            "title": "Afghanistan's Contracted Economy Faces Uncertainty, Afghan Families Are Struggling",
+            "date": "2023-10-03",
+            "quote": "contracting by 25% since August 2021 and adjusting to significantly lower demand"
+          }
+        ]
+      },
+      {
+        "title": "Returnees outpace output",
+        "text": "Since September 2023, millions of Afghans have returned from Iran and Pakistan. Their demand lifts services and industry, but the population is growing faster than output, so income per person keeps falling.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/10/afghan-economy-expands-amid-persistent-challenges",
+            "publisher": "World Bank",
+            "title": "Afghan Economy Expands Amid Persistent Challenges",
+            "date": "2025-12-10",
+            "quote": "one of its largest waves of returns in recent history, with an estimated 4 to 4.7 million individuals returning between September 2023 and July 2025"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/10/afghan-economy-expands-amid-persistent-challenges",
+            "publisher": "World Bank",
+            "title": "Afghan Economy Expands Amid Persistent Challenges",
+            "date": "2025-12-10",
+            "quote": "This expansion is largely driven by demand from more than two million recent returnees from Iran and Pakistan"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e8eeba3d8d46fccafe273e30dff8f595-0310012026/original/Spring-ADU-May-26-2026-Final.pdf",
+            "publisher": "World Bank",
+            "title": "Afghanistan Development Update",
+            "date": "2026-05",
+            "quote": "The return of around 3.7 million people pushed population growth to about 11 percent in FY2025"
+          }
+        ]
+      },
+      {
+        "title": "Women shut out of work",
+        "text": "Restrictions imposed by the Taliban administration on women's education and work hold back the country's human capital. The World Bank said in 2023, and again in 2025, that they lower growth prospects.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2023/10/03/afghanistan-s-contracted-economy-faces-uncertainty-afghan-families-are-struggling",
+            "publisher": "World Bank",
+            "title": "Afghanistan's Contracted Economy Faces Uncertainty, Afghan Families Are Struggling",
+            "date": "2023-10-03",
+            "quote": "the interim Taliban administration’s restrictive policies on women’s education and work will further lower Afghanistan’s growth prospects"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/10/afghan-economy-expands-amid-persistent-challenges",
+            "publisher": "World Bank",
+            "title": "Afghan Economy Expands Amid Persistent Challenges",
+            "date": "2025-12-10",
+            "quote": "restrictions on women’s economic participation and education continue to undermine human capital development and future growth prospects."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In the Afghan fiscal year to March 2026, returns from Iran and Pakistan peaked in mid-2025, and the World Bank estimates that population growth outpaced output, so income per person fell again. Aid kept falling, drought cut farm output, and the border with Pakistan has been closed since October 2025, pushing trade onto other routes through Iran and Central Asia.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e8eeba3d8d46fccafe273e30dff8f595-0310012026/original/Spring-ADU-May-26-2026-Final.pdf",
+          "publisher": "World Bank",
+          "title": "Afghanistan Development Update",
+          "date": "2026-05",
+          "quote": "However, rapid population growth has outpaced economic expansion, leading to falling incomes per person."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e8eeba3d8d46fccafe273e30dff8f595-0310012026/original/Spring-ADU-May-26-2026-Final.pdf",
+          "publisher": "World Bank",
+          "title": "Afghanistan Development Update",
+          "date": "2026-05",
+          "quote": "A sharp decline in foreign aid, successive natural disasters —including drought and earthquakes—and the prolonged Afghanistan–Pakistan border closure since October 2025"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e8eeba3d8d46fccafe273e30dff8f595-0310012026/original/Spring-ADU-May-26-2026-Final.pdf",
+          "publisher": "World Bank",
+          "title": "Afghanistan Development Update",
+          "date": "2026-05",
+          "quote": "agricultural output contracted in FY2025 due to drought conditions, despite relatively resilient performance in irrigated wheat."
+        }
+      ]
+    },
+    "tension": "The World Bank describes an economy that grew in 2024 and 2025, but in the data income per person was flat in 2023 at 0.1 percent and fell 1.0 percent in 2024. The sources put the gap down to people: returnees made the population grow faster than output, so a growing economy still meant falling income per person."
+  }
+}

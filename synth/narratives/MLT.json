@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "MLT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MLT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Malta Article IV consultation staff report 2025",
+        "imf.org: IMF Malta Article IV 2024 growth population foreign workers",
+        "imf.org: Malta selected issues IMF population growth foreign workers productivity",
+        "imf.org: Malta Article IV 2005 restructuring manufacturing textiles shipyards growth slow IMF",
+        "imf.org: IMF Malta concluding statement 2016 strong growth gaming financial services energy",
+        "imf.org, worldbank.org, oecd.org (tier 1 list): Malta 2026 economy growth",
+        "opened: imf.org 2025 Article IV report PDF (CR 26/29), 2025 concluding statement, January 2025 press release, November 2024 concluding statement, 2005 Article IV PDF (CR 05/381), 2015 Article IV PDF (CR 16/20), 2016 concluding statement, 2018 IMF blog",
+        "critic re-opened: CR 26/29 PDF, CR 05/381 PDF, CR 16/20 PDF (text extracted and searched), 2025 concluding statement page"
+      ],
+      "critic_changes": [
+        "Checked every citation against the page text. All quoted passages appear on their pages, and the dates match: CR 05/381 is October 2005, CR 16/20 is January 2016, CR 26/29 is February 2026 with the press release dated 6 February 2026, and the concluding statement is 15 December 2025.",
+        "Corrected the title of CR 26/29 to the page's wording, 'Press Release and Staff Report' (no semicolon).",
+        "Thread 'Shocks to chips and tourism': the market-share quote did not back the shocks to tourism and chips or the EU import levies. I replaced it with two passages from the same report: the 2001 tourism and semiconductor shocks, and the accession-related removal of import levies. I dropped the sentence on losing market share to Asia and Central and Eastern Europe, since no remaining citation supports it. I also reworded the factory sentence to match the source: food and drink sales fell and clothing losses sped up.",
+        "Thread 'A crowded island': removed 'tourists' and 'roads'. The cited passages say foreign workers and population growth strained infrastructure, housing and public services.",
+        "Thread 'Energy prices held fixed': added a 2026 passage on lower energy subsidies, with a sentence saying the support continues and its cost has fallen. This keeps the thread tied to the present.",
+        "since_last_year: the draft's 'expects growth to ease further' is not what the IMF says. It projects growth of about its potential rate after the 2025 estimate of 3.9 percent. I reworded it to 'settle at a slower pace' and added the press release passage on labor-led expansion moderating and gaming and tourism reaching saturation, which supports the sentence.",
+        "Tension: removed 'nearly doubling', a figure that is not in the data file's growth_problem or series. Kept the US dollar point, which the 2026 report supports (per capita income from US$25 thousand in 2013 to US$45 thousand in 2024).",
+        "Numbers in the headline, arc, threads, since_last_year and tension checked against MLT.json: eras 5.5, 1.5, 4.8 and 2.8; 2020 at -5.6 and 2021 at 12.8; 3.4 and 3.5; peak in 2025; 2.0 in 2025 and 3.2 in 2024; 2022 at 0.1, described as 'barely grew'; inflation 6.2 in 2022 and 5.1 in 2023 from series FP.CPI.TOTL.ZG. All match.",
+        "No recommendation or verdict language, and no banned phrases found. Five threads and two distinct recent tier 1 sources survive (the CR 26/29 package and the 2025 concluding statement), so the story stays tier 1."
+      ]
+    },
+    "headline": "Malta grew on online gaming, tourism and foreign workers, but income per person rose more slowly than the economy as the population swelled.",
+    "arc": "Malta's income per person grew 5.5 percent a year in 1990–2000. It then slowed to 1.5 percent in 2001–2009. The IMF links that slowdown to shocks to tourism and chip-making from 2001, weaker trading partners, and old factories shrinking after trade barriers fell for EU entry. Growth picked up to 4.8 percent in 2010–2017, as online gaming, professional services and tourism expanded, new energy projects were built and workers arrived from abroad. In 2018–2025 it eased to 2.8 percent, with a fall of 5.6 percent in 2020 and a rebound of 12.8 percent in 2021. Over 2016–2025 income per person grew 3.4 percent a year, close to the 3.5 percent of the decade before, and in 2025 it was at its highest level yet.",
+    "threads": [
+      {
+        "title": "Shocks to chips and tourism",
+        "about": "history",
+        "text": "The IMF traces the weak 2000s to shocks in tourism and chip-making from 2001, made worse by slower growth in Malta's main trading partners. Joining the EU removed old import levies, and makers of food and drink sold less while clothing factories lost ground faster.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05381.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2005 Article IV Consultation - Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Malta",
+            "date": "2005-10",
+            "quote": "had begun in 2001 with shocks to the key sectors of tourism and semiconductors"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05381.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2005 Article IV Consultation - Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Malta",
+            "date": "2005-10",
+            "quote": "The low growth pattern was triggered by shocks to key sectors, and reinforced by the slowing of its main trading partners"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05381.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2005 Article IV Consultation - Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Malta",
+            "date": "2005-10",
+            "quote": "The manufacturing sector restructuring—in part following the accession-related dismantling of import levies—resulted in declining sales of processed food products and beverages"
+          }
+        ]
+      },
+      {
+        "title": "Services and energy remake growth",
+        "about": "history",
+        "text": "In the 2010s Malta kept growing through the euro area crisis. The IMF credited strong home demand and big building projects, including a new gas terminal, a power plant switched to gas and a power cable to Sicily. Online gaming grew into a larger source of growth than construction.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1620.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2015 Article IV Consultation - Press Release; and Staff Report",
+            "date": "2016-01",
+            "quote": "Real GDP growth has been one of the highest in the euro area since the beginning of the crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1620.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2015 Article IV Consultation - Press Release; and Staff Report",
+            "date": "2016-01",
+            "quote": "Energy sector projects include construction of a regasification plant and conversion of the Delimara power plant to natural gas."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "construction contributed about 3 percent of total economic growth while gaming added three times as much."
+          }
+        ]
+      },
+      {
+        "title": "Growth built on foreign workers",
+        "about": "present",
+        "text": "Workers from abroad have been arriving since the early 2000s, and the flow became much larger after 2013. The IMF says most new jobs since then went to foreign workers, and the population grew quickly as a result.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1620.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2015 Article IV Consultation - Press Release; and Staff Report",
+            "date": "2016-01",
+            "quote": "Malta has experienced large inflows since the early 2000s."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "In the decade up to 2024, Malta's population grew by 26 percent to over half a million inhabitants."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "Foreign workers accounted for three-quarters of the rise in employment numbers since 2013 and now comprise 39 percent of the workforce"
+          }
+        ]
+      },
+      {
+        "title": "A crowded island",
+        "about": "present",
+        "text": "The IMF says the fast rise in foreign workers has strained infrastructure, housing and public services. It expects growth that relies on adding people to slow over the longer run.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "Malta cannot rely indefinitely on population growth to maintain momentum."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "The influx of foreign workers that fueled economic activity in the past has also strained infrastructure and public services"
+          }
+        ]
+      },
+      {
+        "title": "Energy prices held fixed",
+        "about": "present",
+        "text": "When world energy prices jumped in 2022, the government froze the prices that homes and firms pay for power and fuel. Even so, inflation rose to 6.2 percent in 2022 and 5.1 percent in 2023, and income per person barely grew in 2022. The cost of the energy support has since fallen as world prices eased.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "In response to the global energy price shock in 2022, the government opted to freeze retail electricity and fuel prices."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+            "date": "2026-02",
+            "quote": "including lower energy subsidies thanks to lower global oil prices"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF's latest review, published in February 2026, says growth slowed in 2025. It expects growth to settle at a slower pace as the inflow of workers moderates and gaming and tourism reach saturation. In the data, income per person grew 2.0 percent in 2025, down from 3.2 percent in 2024.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+          "date": "2026-02-06",
+          "quote": "GDP growth is estimated to have slowed to 3.9 percent in 2025, which is still considerably higher than the EU average."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mltea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Malta: 2025 Article IV Consultation - Press Release and Staff Report",
+          "date": "2026-02-06",
+          "quote": "as labor-led expansion, supported by immigration, moderates, and gaming and tourism sectors reach saturation."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/15/cs-malta-staff-concluding-statement-of-the-2025-article-iv-consultation-mission",
+          "publisher": "IMF",
+          "title": "Malta: Staff Concluding Statement of the 2025 Article IV Consultation Mission",
+          "date": "2025-12-15",
+          "quote": "6.8 percent in 2024"
+        }
+      ]
+    },
+    "tension": "The IMF describes a decade of very fast growth, with income per person rising quickly since 2013. In the data, income per person grew 3.4 percent a year in 2016–2025, about the same as the 3.5 percent of the decade before. Much of the gap is people: the whole economy grew far faster because the population and workforce grew fast too. The IMF's income per person figure is also in US dollars, while the data here take out price changes."
+  }
+}

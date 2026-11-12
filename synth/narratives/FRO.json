@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "iso3": "FRO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "FRO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Faroe Islands economy growth fisheries salmon aquaculture\"",
+        "imf.org, oecd.org: \"Denmark Article IV Faroe Islands\"",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: \"\\\"Faroe Islands\\\" economic outlook 2024 2025\"",
+        "tier 1 (all domains), extended: \"Faroese economy salmon farming exports growth report\"",
+        "imf.org: \"\\\"Faroe\\\" Article IV staff report 2024 2025 growth Faroese\"",
+        "imf.org: \"IMF Kingdom of Denmark Faroe Islands staff report Article IV discussions\"",
+        "tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"Faroe Islands economy\"",
+        "unctad.org, un.org, undp.org, unece.org: \"Faroe Islands fisheries aquaculture economy development\"",
+        "Opened (blocked, HTTP 403): elibrary.imf.org/view/journals/002/2026/029/article-A000-en.xml, elibrary.imf.org/view/journals/002/2023/192/article-A002-en.xml"
+      ],
+      "critic_changes": [],
+      "reason": "No IMF, World Bank, OECD or UN document from 2023 or later analyses the Faroe Islands' economy; the searches found only data tables and passing mentions."
+    }
+  }
+}

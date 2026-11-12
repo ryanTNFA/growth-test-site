@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "iso3": "NRU",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NRU",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org (tier 1): Nauru Article IV consultation staff report",
+        "imf.org, worldbank.org, adb.org and other tier 1 domains: Nauru economy regional processing centre revenue fishing licence",
+        "imf.org, worldbank.org, adb.org: Nauru 2025 Article IV staff report regional processing center growth",
+        "worldbank.org, adb.org: Nauru Macro Poverty Outlook",
+        "imf.org, worldbank.org, adb.org, oecd.org: Nauru phosphate depletion economic collapse 1990s 2000s Bank of Nauru trust fund",
+        "imf.org, worldbank.org, adb.org: Nauru economy 2026 growth outlook regional processing",
+        "Critic check: re-opened IMF CR 23/376, IMF 2025 Article IV concluding statement, World Bank MPO October 2024, World Bank Pacific Economic Update May 2026, ADB Pacific Economic Monitor August 2023, ADB Country Economic Report Nauru 2007"
+      ],
+      "critic_changes": [
+        "Checked every cited URL. All pages exist on tier 1 domains (adb.org, imf.org, worldbank.org subdomains), and all quoted passages appear on them. The PDFs were read from their extracted text.",
+        "Banking thread: removed the claim that the Bendigo Bank agency opened in 2015, because no cited page says so. Removed 'said in 2023', because the quote does not carry it. Added an IMF 2023 passage that supports 'Nauru's only bank'.",
+        "Trust funds thread: removed 'could then neither service foreign loans nor fully pay for services' and 'elected in 2004', because no cited passage covers them. Reworded 'stopped working and closed for good in 2006' to 'closed in 2006' to match the ADB passage. The ADB 2007 report dates the bank's halt to 1998, and the IMF dates its liquidation to 2016.",
+        "Processing centre thread: the ADB passage cited only showed that a contraction was avoided, not that centre revenue was the main source of public money. Lengthened it (to 25 words) to include RPC revenue enabling the spending and its share of revenues and grants. The text now says this held by FY2022–FY2023.",
+        "World Bank MPO citation: corrected the title. The URL is the full October 2024 Macro Poverty Outlook (Annual Meetings 2024), not a standalone Central Pacific Islands note. Date 2024-10 confirmed, and the quote was found in the Central Pacific Islands section.",
+        "Revenue base thread: dropped 'donor grants' from the list of revenue sources, because the IMF passage names fishing licence fees, residual phosphate processing and the RPC. Lengthened the World Bank 2026 passage so it supports the cause of the surplus fall (rising social costs as well as falling fishing licence and grant revenue), and the text now says so.",
+        "Headline: 'two decades of decline' became 'decades of decline', because income per person fell every year from 1976 to 2002. 'Revived income per person after 2012' became a mining restart plus the processing centre, because the 8.4 percent era starts in 2008 and the ADB dates the mining restart to FY2007.",
+        "Tension: softened 'growth in FY2022 driven by strong phosphate production' to 'helped growth', because the IMF says phosphate production and fiscal support partly offset a weak transport sector.",
+        "Numbers: every figure in the headline, arc, threads, since_last_year and tension matches NRU.json growth_problem or series: 80.9, 1975, 1970, -11.8, -5.1, 8.4, 22.3 (2012), 13.4 (2014), 0.8, 5.4, 1.5 (2025), -0.8 (2022), -1.3 (2023), and falls every year 1976–2002. No change was needed.",
+        "tier1_recent_found: set to 5, the distinct recent tier 1 documents verified here: IMF CR 23/376 (2023-11), ADB PEM (2023-08), World Bank MPO (2024-10), IMF 2025 concluding statement, and World Bank PEU (2026-05). The draft's 7 counted documents that were opened but not cited, which this check could not verify.",
+        "No banned phrases or recommendation language were found in the story."
+      ]
+    },
+    "headline": "Phosphate wealth collapsed into decades of decline; a mining restart and a refugee processing centre lifted income per person, but growth has slowed since 2016.",
+    "arc": "Income per person peaked in 1975 on phosphate exports and is now 80.9 percent below that peak, lower even than in 1970. From 1990 to 1998 it fell 11.8 percent a year as phosphate mining declined and the government borrowed against its trust funds to pay running costs until the assets ran out. The fall slowed to 5.1 percent a year in 1999–2007, years of a failed national bank, a sovereign default in 2004 and an Australian-funded refugee processing centre under a 2002 agreement. Growth turned to 8.4 percent a year in 2008–2015, after phosphate mining restarted on a small scale in FY2007 and Australia set up a regional processing centre in 2012, with jumps of 22.3 percent in 2012 and 13.4 in 2014. Since 2016 growth has averaged 0.8 percent a year, against 5.4 in the decade before, as income came to rest on the processing centre, fishing licence fees and donor grants.",
+    "threads": [
+      {
+        "title": "Phosphate wealth runs out",
+        "about": "history",
+        "text": "Phosphate exports built large offshore assets, but mining began to decline in the late 1980s and the deposits were largely used up by the late 1990s. Income per person fell every year from 1976 to 2002.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/33611/files/cer-nau-2007.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Country Economic Report: Nauru",
+            "date": "2007-11",
+            "quote": "a decline in phosphate mining that began in the late 1980s, combined with poor management of the country's offshore assets and public expenditure"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "economic collapse after the depletion of phosphate deposits in the late-1990s, culminating in a sovereign default in 2004"
+          }
+        ]
+      },
+      {
+        "title": "Trust funds, bank and default",
+        "about": "history",
+        "text": "The government borrowed against its phosphate trust funds to pay running costs until the assets were gone. The Bank of Nauru, the national bank, closed in 2006. A reform government then cut public wages and jobs.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/33611/files/cer-nau-2007.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Country Economic Report: Nauru",
+            "date": "2007-11",
+            "quote": "Assets held in public trust funds were run down by the Government as it borrowed against them and used the proceeds to fund recurrent expenditure."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "Bank of Nauru provided domestic banking services until its closure in 2006."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/33611/files/cer-nau-2007.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Country Economic Report: Nauru",
+            "date": "2007-11",
+            "quote": "implemented significant wage cuts and a large-scale redundancy for public sector employees"
+          }
+        ]
+      },
+      {
+        "title": "The processing centre economy",
+        "about": "present",
+        "text": "Australia set up a regional processing centre for asylum seekers in September 2012. By FY2022–FY2023 its revenue made up most of government revenue and grants, and it paid for the higher spending that kept the economy from shrinking during the pandemic. The centre was due to go on standby in 2023 but was renewed in 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nurea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Republic of Nauru",
+            "date": "2023-11",
+            "quote": "Australia established a regional processing center in Nauru (in September 2012) for the purpose of processing asylum seekers' international protection claims."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "contraction was avoided due to higher government spending. The spending was mainly enabled by RPC revenue, which accounted for almost 70% of revenues and grants"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099345310142441749/txt/IDU1f65e654e15bce1426818068130b6ab9c31e7.txt",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Country-by-country Analysis and Projections for the Developing World (Annual Meetings 2024)",
+            "date": "2024-10",
+            "quote": "The RPC was to be placed on standby in 2023, but was renewed in 2024"
+          }
+        ]
+      },
+      {
+        "title": "A narrow, volatile revenue base",
+        "about": "present",
+        "text": "Apart from the centre, public revenue rests on fishing licence fees and what is left of phosphate processing. Mining has degraded much of the island and pushed people onto a narrow coastal strip. In the latest year, rising social spending and falling fishing licence and grant revenue cut the budget surplus sharply.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nurea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Republic of Nauru",
+            "date": "2023-11",
+            "quote": "A narrow and volatile revenue base comprises fishing license fees, residual phosphate processing revenue, and revenue from the Regional Processing Center (RPC)"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nurea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Republic of Nauru",
+            "date": "2023-11",
+            "quote": "Phosphate mining has resulted in widespread land degradation, forcing the population to inhabit in a narrow coastal area"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+            "publisher": "World Bank",
+            "title": "Pacific Economic Update: Pacific Jobs Pathway",
+            "date": "2026-05",
+            "quote": "due to rising health, education, and social protection costs, coupled with declining fishing license and grant revenues"
+          }
+        ]
+      },
+      {
+        "title": "Banking links under strain",
+        "about": "present",
+        "text": "Nauru's only bank, an agency of Australia's Bendigo Bank, was due to leave by December 2024. A move to the Commonwealth Bank of Australia was on track by mid-2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nurea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Republic of Nauru",
+            "date": "2023-11",
+            "quote": "Nauru has only one agency of an Australian bank, Bendigo Bank Agency, which provides financial services"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nurea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: 2023 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Republic of Nauru",
+            "date": "2023-11",
+            "quote": "Bendigo Bank Agency will exit Nauru by December 2024."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/07/11/mcs-7112025-nauru-concluding-statement-of-the-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Nauru: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-11",
+            "quote": "Transition from Bendigo Bank to Commonwealth Bank of Australia (CBA) on track"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In July 2025 the IMF said a treaty with Australia, concluded in late 2024, had improved the medium-term budget outlook. In May 2026 the World Bank described growth as modest but positive, helped by port and solar projects, and projected a sharp slowdown as processing-centre revenue declines. Income per person grew 1.5 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/News/Articles/2025/07/11/mcs-7112025-nauru-concluding-statement-of-the-2025-art-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Nauru: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-07-11",
+          "quote": "Medium-term fiscal outlook improved following the Nauru-Australia Treaty concluded in late 2024"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+          "publisher": "World Bank",
+          "title": "Pacific Economic Update: Pacific Jobs Pathway",
+          "date": "2026-05",
+          "quote": "Nauru's growth remained modest but positive, reflecting progress on the Aiwo Port and solar energy projects that ease structural bottlenecks."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+          "publisher": "World Bank",
+          "title": "Pacific Economic Update: Pacific Jobs Pathway",
+          "date": "2026-05",
+          "quote": "Nauru's growth is projected to fall by about 3.3 percentage points due to declining regional processing center"
+        }
+      ]
+    },
+    "tension": "The sources describe processing-centre revenue rising steeply into FY2022–FY2023, and the IMF says strong phosphate production helped growth in FY2022. Yet income per person fell in 2022 and 2023 (-0.8 and -1.3 percent) and grew only 0.8 percent a year over 2016–2025. The sources mostly track government revenue and total output by fiscal year, while the data track income per person by calendar year, so a revenue boom shows up only weakly in the series."
+  }
+}

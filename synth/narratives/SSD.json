@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "iso3": "SSD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SSD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: South Sudan IMF Article IV staff report 2025 oil pipeline Sudan war",
+        "same tier 1 domains: South Sudan Macro Poverty Outlook World Bank economic update",
+        "worldbank.org: South Sudan Macro Poverty Outlook October 2026 oil exports growth FY26",
+        "opened: imf.org press release PR 25/200 (2025-06-20)",
+        "opened: imf.org Country Report 24/160, 2023 Article IV (June 2024), full PDF text extracted and checked",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook South Sudan (October 2026), full PDF text extracted and checked"
+      ],
+      "critic_changes": [
+        "All three cited pages opened; both PDFs' full text was extracted and every quoted passage was found verbatim. Dates confirmed: IMF Country Report 24/160 (Board date June 7, 2024), World Bank MPO 'October 2026', IMF PR June 20, 2025. All on tier 1 domains; 3 distinct recent tier 1 sources.",
+        "Every number checked against desk/data/SSD.json: 9.7, 48.4, 9.0, 2.7, 9.8 (series NY.GDP.PCAP.KD.ZG), 52.9 (G3 shortfall_pct), -8.0 (G1 avg_prior_10y, 7 observations 2009-2015), peak 2010, first level 2008, G4.eras empty. All correct; none changed.",
+        "Arc: 'near-total reliance on oil for exports and government revenue' softened to 'heavy reliance', since the cited passage gives nearly 90 percent of revenue, not near-total.",
+        "Thread 'Sudan's war cuts the pipeline': the claim that all South Sudan's oil goes through the Sudan pipeline was not in the cited passage; added an IMF citation from the same report that says the pipeline 'carries all of South Sudan's oil'. Also reworded 'damaged it in February 2024' so the date sits with the export fall the passages support.",
+        "Thread 'Civil war, 2013 to 2018': dropped 'peace deal' and 'years of', which the cited passages do not state; kept the 2013-18 span the IMF gives.",
+        "Thread 'Printed money, falling currency': reworded so each institution is credited with what its passage says (IMF: currency depreciation since the civil war ended; World Bank: exchange-rate pressure and inflation), instead of saying both tie it to inflation since the war ended.",
+        "since_last_year: 'Oil exports restarted ... after the pipeline was repaired' changed to 'Oil production resumed ... after the pipeline reopened', matching the IMF wording; the sources do not say it was repaired.",
+        "Tension: 'cannot show the war years' changed to 'the later war years', because the data do cover 2013-2015, the first years of the civil war.",
+        "Oil wealth thread: 'output rises and falls' changed to 'the economy rises and falls'. This is a light inference from the 95 percent of exports figure."
+      ]
+    },
+    "headline": "South Sudan's income per person fell by more than half after the 2012 oil shutdown and civil war, and oil still drives its sharpest swings.",
+    "arc": "South Sudan's record of income per person is short, running only from 2008 to 2015, too few years for the tool to mark separate eras. Income per person barely moved in 2009 and 2010, peaked in 2010, slipped 9.7 percent in 2011, the year of independence, and then fell 48.4 percent in 2012, when the government shut down oil production. It recovered 9.0 percent in 2013 and 2.7 percent in 2014, but civil war, which began in 2013, and a fall in oil prices and production in 2014 were followed by a drop of 9.8 percent in 2015. By 2015, the last year in the data, income per person was 52.9 percent below its 2010 peak and below its 2008 level, and growth averaged -8.0 percent a year over the seven years recorded. The sources link this record to heavy reliance on oil for exports and government revenue, and to overlapping crises since independence that held back institutions, infrastructure and skills.",
+    "threads": [
+      {
+        "title": "Oil shutdown after independence",
+        "text": "South Sudan became independent in 2011, and in 2012 the government shut down oil production. The IMF records that foreign exchange earnings fell then and again in 2014, when oil prices and output dropped. In the data, income per person fell 48.4 percent in 2012.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "foreign exchange receipts fell; first during the 2012 government’s shutdown of oil production and then again when oil prices and production fell in 2014"
+          }
+        ]
+      },
+      {
+        "title": "Civil war, 2013 to 2018",
+        "text": "Civil war broke out in 2013 and lasted until 2018, driving many people from their homes. The World Bank says overlapping crises since independence have held back basic institutions, infrastructure and skills.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "Many of these arrivals are South Sudanese returnees who fled from the civil war during 2013-18"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ssd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: South Sudan",
+            "date": "2026-10",
+            "quote": "Since independence, South Sudan has faced overlapping crises that have hindered the development of basic institutions, infrastructure, and human capital."
+          }
+        ]
+      },
+      {
+        "title": "Sudan's war cuts the pipeline",
+        "text": "All of South Sudan's oil reaches world markets through a pipeline across Sudan. Fighting in Sudan damaged it, and from February 2024 exports fell sharply until the pipeline reopened in early 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "The conflict in Sudan has compromised the oil pipeline to Port Sudan––which carries all of South Sudan’s oil to international markets."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "As a result of damages to the pipeline, oil exports have since mid-February 2024 declined to about one-third of their previous level."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ssd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: South Sudan",
+            "date": "2026-10",
+            "quote": "driven by the recovery of oil production following the year-long disruption to the Dar Blend pipeline (February 2024–February 2025)"
+          }
+        ]
+      },
+      {
+        "title": "Oil wealth, weak institutions",
+        "text": "Oil provides almost all exports and most government revenue, so the economy rises and falls with the oil flow. The World Bank says weak institutions and poor governance have kept oil money from turning into investment, public services or savings.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "given that oil exports account for nearly 90 percent of fiscal revenues and 95 percent of exports"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ssd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: South Sudan",
+            "date": "2026-10",
+            "quote": "Weak institutions, poor governance, and limited accountability have prevented oil wealth from translating into productive investment, better public services, or fiscal buffers"
+          }
+        ]
+      },
+      {
+        "title": "Printed money, falling currency",
+        "text": "The central bank has repeatedly financed government spending by creating money. The IMF ties this to the currency's fall since the civil war ended, and the World Bank calls it the main source of pressure on the exchange rate and of inflation.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ssd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: South Sudan",
+            "date": "2026-10",
+            "quote": "Monetary financing of on- and off-budget spending remains the main source of macroeconomic instability, fueling exchange-rate pressures and inflation."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ssdea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of South Sudan: 2023 Article IV Consultation, and First and Second Reviews under the Staff-Monitored Program with Board Involvement (Country Report No. 24/160)",
+            "date": "2024-06",
+            "quote": "Periodic monetary financing has been a major contributor to the depreciation of the SSP since the formal end of South Sudan’s civil war."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil production resumed in 2025 after the pipeline through Sudan reopened. The World Bank estimates a large one-off rebound in output in the 2026 fiscal year, and it expects growth to slow again in 2027 and 2028 as the rebound fades.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ssd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: South Sudan",
+          "date": "2026-10",
+          "quote": "Growth is projected to slow in 2027 and 2028 after the one-off oil production rebound"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/06/20/pr-25200-south-sudan-imf-and-south-sudan-reach-agreement-on-9-month-staff-monitored-program",
+          "publisher": "IMF",
+          "title": "IMF and South Sudan Reach Staff-Level Agreement on a Nine-Month Staff-Monitored Program",
+          "date": "2025-06-20",
+          "quote": "oil production has resumed from the oil pipeline damaged in February 2024"
+        }
+      ]
+    },
+    "tension": "The sources describe a strong oil-led rebound in 2026, but the data record of income per person stops in 2015, so it cannot show the later war years, the pipeline shutdown or the rebound. The World Bank also expects most people to stay in extreme poverty despite the rebound, because oil creates few jobs."
+  }
+}

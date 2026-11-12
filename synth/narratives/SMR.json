@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "iso3": "SMR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SMR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org (tier 1): WebSearch 'San Marino Article IV 2025 staff report' and 'San Marino IMF Article IV 2024 banking crisis growth', not run because the shared web search budget for this turn was used up",
+        "imf.org/en/Countries/SMR (IMF country page, fetched directly)",
+        "imf.org/en/publications/cr/issues/2025/11/24/republic-of-san-marino-2025-article-iv-consultation-press-release-staff-report-and-572046 (landing page)",
+        "imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf (IMF Country Report 25/312, read in full; re-fetched by the critic and every quote checked against the extracted text)",
+        "imf.org/-/media/files/publications/cr/2025/english/1smrea2025002-source-pdf.pdf (IMF Country Report 25/313, Selected Issues, read in full; re-fetched by the critic and every quote checked against the extracted text)",
+        "imf.org 2024 Article IV PDF paths tried directly (404, not used)",
+        "Tier 2 (UN) domains not searched: tier 1 gave 2 recent sources"
+      ],
+      "critic_changes": [
+        "Checked all ten quoted passages against the text of IMF Country Reports 25/312 and 25/313. WebFetch could not decode the PDFs, so the critic extracted their text locally. Every passage appears near-verbatim, the dates (November 2025) match the documents, and both sources are tier 1 and recent. All citations kept.",
+        "Checked every number against desk/data/SMR.json. These all match as rounded: 2.7, -4.4 and 2.4 (eras); 14.1 (2009); 6.9 (2020); 15.6 (2021); 9.5 (2022); 0.1 (2023); 18.2 (shortfall); 1998 (level first reached). The claim that income fell every year from 2008 to 2012 also matches the series.",
+        "Pandemic thread: the draft called both 2021 and 2022 'the fastest growth in the series', but only 2021 (15.6) is the series high; 1999 (7.7) and 2022 (9.5) are lower. Reworded so the claim applies only to 2021.",
+        "Bank clean-up and public debt thread: the eurobond's 2027 due date was not in any cited passage, so a third citation from CR 25/312 that names the 2027 maturity was added. 'But remains high' was dropped because no cited passage supported it.",
+        "Workers thread: 'Jobs are at record highs' was not supported by the only citation, so a CR 25/312 passage on record employment was added. 'Commute daily from nearby Italian regions' was changed to 'foreign workers who commute in daily' to match the quoted passage.",
+        "Tension: the IMF's 'booming' description refers to 2024-25, while the data end in 2023. The text now dates the IMF's view to late 2025 and says the data end in 2023, so the two periods are not run together. 'Commuters from Italy' was changed to 'workers who commute in from abroad' to match the cited wording.",
+        "No banned phrases or recommendation or verdict language found. 5 threads and 2 distinct recent tier 1 sources survive, so the story stays tier 1. The process note that WebSearch was not run is kept in sources_searched."
+      ]
+    },
+    "headline": "San Marino's income per person fell hard after its oversized banks hit crisis in 2009; a shift to factories and tourism has won back only part of the loss.",
+    "arc": "Income per person in San Marino grew 2.7 percent a year from 1998 to 2007, when it reached its peak, at a time when the country carried a financial sector the IMF later called oversized. From 2008 to 2015 it shrank 4.4 percent a year: the global financial crisis hit that sector, a banking crisis began in 2009, and income per person fell 14.1 percent in 2009 alone. Since 2016 growth has averaged 2.4 percent a year, as the economy moved away from finance toward manufacturing, exports of nonfinancial services and tourism. That era included a fall of 6.9 percent in 2020 with the pandemic, then gains of 15.6 percent in 2021 and 9.5 percent in 2022. Even so, income per person in 2023 was still 18.2 percent below the 2007 peak and about where it first was in 1998.",
+    "threads": [
+      {
+        "title": "Oversized banks meet crisis",
+        "about": "history",
+        "text": "Before 2008 San Marino's banks were large for so small an economy. The global financial crisis hit that sector hard and a banking crisis began in 2009, and income per person fell every year from 2008 to 2012.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: Selected Issues (IMF Country Report No. 25/313)",
+            "date": "2025-11",
+            "quote": "since the Global Financial Crisis (GFC), largely because of its deleterious effect on San Marino’s then oversized financial sector"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "the previously oversized banking sector deleveraged following the banking crisis that started in 2009, while manufacturing and nonfinancial services exports expanded"
+          }
+        ]
+      },
+      {
+        "title": "A new mix: factories and tourism",
+        "about": "present",
+        "text": "As the banks shrank, the IMF says, manufacturing and exports of nonfinancial services grew. After the pandemic and energy shocks, factories kept market share won as buyers moved supply closer to home, and tourism boomed.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: Selected Issues (IMF Country Report No. 25/313)",
+            "date": "2025-11",
+            "quote": "San Marino’s economy, relying on a new growth model that diversified away from financial services after the Global Financial Crisis"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "the manufacturing sector retained the market share gained through nearshoring, and the tourism sector flourished"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic drop and rebound",
+        "about": "history",
+        "text": "Income per person fell 6.9 percent in 2020 with the pandemic. It then jumped 15.6 percent in 2021, the fastest growth in the series, and 9.5 percent in 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "San Marino’s economy maintained positive growth following the post-pandemic recovery as its new growth model proved to be resilient to successive shocks."
+          }
+        ]
+      },
+      {
+        "title": "Bank clean-up and public debt",
+        "about": "present",
+        "text": "Banks have cut their bad loans faster than expected, but some are still thinly capitalized. Public debt has fallen, and the state's eurobond falls due in 2027.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "The NPL reduction has exceeded expectations, but the capitalization in some banks is still tight."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "The debt to GDP ratio declined from 68.3 in 2023 to 62.8 in 2024, mostly driven by the amortization of remaining eurobond and primary surplus."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "heightened global financial market volatility could increase rollover costs of the eurobond maturing in 2027"
+          }
+        ]
+      },
+      {
+        "title": "Workers from across the border",
+        "about": "present",
+        "text": "Jobs are at record highs, and much of the work is done by foreign workers who commute in daily. For that reason the IMF treats output per worker as a better gauge of living standards than output per resident.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+            "date": "2025-11",
+            "quote": "Total employment has reached record highs, with cross-border workers accounting for over 80 percent of new hires."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of San Marino: Selected Issues (IMF Country Report No. 25/313)",
+            "date": "2025-11",
+            "quote": "GDP per worker metrics—a better indicator of aggregate productivity and living standards, given San Marino’s large reliance on daily-commuting foreign workers"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In its November 2025 review the IMF said growth picked up modestly in 2024. Services and tourism carried it, while weak foreign demand for goods held back manufacturing. Signing of the association agreement with the European Union had been delayed by a disagreement among EU member states over how the agreement should be treated.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+          "date": "2025-11",
+          "quote": "San Marino’s economic growth picked up modestly in 2024."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1smrea2025001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Republic of San Marino: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of San Marino (IMF Country Report No. 25/312)",
+          "date": "2025-11",
+          "quote": "Recently, the signature of the EU association agreement was delayed due to differing views among EU Member States"
+        }
+      ]
+    },
+    "tension": "The IMF's late-2025 review describes a booming economy, with record employment and strong wage growth. But in the data, which end in 2023, income per person grew just 0.1 percent that year and was still 18.2 percent below its 2007 peak, about where it first was in 1998. Part of the gap may lie in what is counted: many jobs are held by workers who commute in from abroad, which is why the IMF prefers output per worker to output per resident as a gauge."
+  }
+}

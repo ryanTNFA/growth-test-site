@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "iso3": "PHL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PHL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Philippines Article IV 2025 staff report growth'",
+        "same tier 1 domains: 'Philippines Economic Update 2025 World Bank growth'",
+        "same tier 1 domains: 'Philippines boom-bust growth 1980s 1990s power crisis Asian financial crisis critical development constraints'",
+        "opened: worldbank.org press release 2025-12-09; thedocs.worldbank.org MPO Philippines October 2026; documents1.worldbank.org Running Uphill (2025); worldbank.org results page 2025-10-13; imf.org press release 25/322 (2025-10-01); adb.org Critical Development Constraints (2007); assets.mcc.gov Philippines Constraints Analysis (2011)",
+        "critic re-opened and checked every cited URL: adb.org cdc-philippines.pdf, assets.mcc.gov Philippines_CA_withCover.pdf, documents1.worldbank.org Running Uphill PDF, worldbank.org press release 2025-12-09, thedocs.worldbank.org mpo-phl.pdf"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/PHL.json. All of them match the data and are rounded correctly: -9.7 (1984), -9.4 (1985), 1982 level first passed in 2004, 0.6 (1990–2002), -3.0 (1998), 3.6 (2003–2025), 3.6 (2006–2015), 3.5 (2016–2025), -10.5 (2020), 6.8 (2022), 2022 above 2019 level, 3.6 (2025, slowest since 2020), 4.5 (2004), 4.7 (2007), peak in 2025.",
+        "Arc: the draft linked the World Bank's causes to the whole 2003–2025 era. The report credits them to growth since 2010, so the arc now says 'for the years since 2010'. Dropped 'money sent home by workers abroad keeping spending strong': no cited passage ties remittances to spending, and the source links them to a stronger peso.",
+        "Thread 'Debt crisis, disasters and blackouts': the draft cited passages that did not mention the debt crisis, the earthquake or Pinatubo. Replaced two of them with ADB passages, checked on the page, that cover the 1983 debt moratorium and lost decade and the 1990 earthquake and 1991 Pinatubo eruption. Kept the ADB 'defused in 1994' passage. Dropped the MCC citation: its passage is verified (MCC, 2011-06-02) but only repeats the ADB's point, and a thread may carry at most 3 citations.",
+        "Thread 'Steadier policy, more investment': removed 'inflation targeting, a floating peso and tax reforms'. These appear only as labels in a figure, not in any cited passage. Both World Bank passages were verified.",
+        "Thread 'Remittances and a strong peso': removed 'call-centre and tourism earnings' and 'export industries have lost ground'. Neither is in the cited passages, because the quote stops before them. Both passages were verified.",
+        "Thread 'Stalled public works, costly energy': changed 'a jump in global energy prices' to 'higher energy prices' to match the cited MPO passage. The press release passage was verified on the page.",
+        "Tension: the draft said the World Bank puts the speed-up after the '2008–09 global financial crisis'. The report's own wording is 'post-2010 growth surge' and 'Since 2010', so the tension now cites that.",
+        "All remaining citations were opened and verified: the quotes match the pages and the dates match (ADB 2007; World Bank Running Uphill 2025; press release 2025-12-09; MPO October 2026). There are 3 distinct recent tier 1 sources among the citations, so the story stays tier 1. tier1_recent_found keeps the drafter's count of 4: the IMF press release and the World Bank results page were opened but not cited and were not re-checked.",
+        "No banned phrases and no recommendation language were found."
+      ]
+    },
+    "headline": "The Philippines shook off two decades of crises and has grown steadily since 2003; income per person hit a new high in 2025 even as growth slowed.",
+    "arc": "After the debt crisis of the early 1980s, income per person fell 9.7 percent in 1984 and 9.4 percent in 1985, and it did not pass its 1982 level again until 2004. From 1990 to 2002 growth in income per person averaged only 0.6 percent a year, as an earthquake, a volcanic eruption, a long power crisis and then the 1997 Asian financial crisis hit in turn; income per person fell 3.0 percent in 1998. From 2003 to 2025 growth averaged 3.6 percent a year; for the years since 2010 the World Bank credits pro-investment reforms, steadier economic management and a surge in public and private investment. The pace has held: 3.6 percent a year in 2006–2015 and 3.5 percent in 2016–2025, despite a 10.5 percent fall in 2020 during the pandemic. Income per person reached its highest level yet in 2025, though growth eased to 3.6 percent that year as delayed public works and weaker investment held the economy back.",
+    "threads": [
+      {
+        "title": "Debt crisis, disasters and blackouts",
+        "about": "history",
+        "text": "The early 1980s debt crisis left a lost decade. The 1990s then brought an earthquake, the Mt. Pinatubo eruption and a power crisis that lasted until 1994, and recovery was cut short by the 1997 Asian financial crisis. Growth in income per person averaged 0.6 percent a year from 1990 to 2002.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29274/cdc-philippines.pdf",
+            "publisher": "ADB",
+            "title": "Philippines: Critical Development Constraints (Country Diagnostics Studies)",
+            "date": "2007",
+            "quote": "The entire 1980s were a lost decade for Philippine growth: the Government declared a moratorium on foreign debt servicing in 1983"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29274/cdc-philippines.pdf",
+            "publisher": "ADB",
+            "title": "Philippines: Critical Development Constraints (Country Diagnostics Studies)",
+            "date": "2007",
+            "quote": "A major earthquake hit the central and northern Philippines hard in 1990, followed by the eruption of Mt. Pinatubo in 1991."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29274/cdc-philippines.pdf",
+            "publisher": "ADB",
+            "title": "Philippines: Critical Development Constraints (Country Diagnostics Studies)",
+            "date": "2007",
+            "quote": "The crisis was defused in 1994, allowing economic recovery to gain strength until 1997, when the Asian financial crisis broke."
+          }
+        ]
+      },
+      {
+        "title": "Steadier policy, more investment",
+        "about": "present",
+        "text": "Careful management of public finances won the country investment-grade credit ratings in 2013. The World Bank credits pro-investment reforms, a stable economy and rising public and private investment for the faster growth that followed.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071425163025586/pdf/P501984-3dd1e5be-b4ad-4575-a025-c4cd497c5f39.pdf",
+            "publisher": "World Bank",
+            "title": "Running Uphill: Growth, Jobs, and the Quest for Productivity – Philippines",
+            "date": "2025",
+            "quote": "Growth was fueled by pro-investment reforms, macroeconomic stability, and surging public and private investment."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071425163025586/pdf/P501984-3dd1e5be-b4ad-4575-a025-c4cd497c5f39.pdf",
+            "publisher": "World Bank",
+            "title": "Running Uphill: Growth, Jobs, and the Quest for Productivity – Philippines",
+            "date": "2025",
+            "quote": "Prudent fiscal management enabled the country to achieve investment-grade ratings in 2013, reducing borrowing costs and enhancing investor confidence."
+          }
+        ]
+      },
+      {
+        "title": "Remittances and a strong peso",
+        "about": "present",
+        "text": "Money sent home by Filipinos working abroad has pushed up the peso since the early 2000s. The World Bank finds that recent growth has leaned toward construction, retail and other home-market services.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071425163025586/pdf/P501984-3dd1e5be-b4ad-4575-a025-c4cd497c5f39.pdf",
+            "publisher": "World Bank",
+            "title": "Running Uphill: Growth, Jobs, and the Quest for Productivity – Philippines",
+            "date": "2025",
+            "quote": "The REER has appreciated since the early 2000s (Figure 13) on the back of high remittance inflows,"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/09/stronger-investment-and-reforms-can-help-ph-sustain-growth-and-create-more-jobs",
+            "publisher": "World Bank",
+            "title": "Stronger Investment and Reforms Can Help the Philippines Sustain Growth and Create More Jobs",
+            "date": "2025-12-09",
+            "quote": "The Philippines’ recent growth has tilted toward “non-tradables”—such as construction, domestic services, and retail."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic slump and rebound",
+        "about": "history",
+        "text": "Income per person fell 10.5 percent in 2020 during the COVID-19 pandemic. It grew 6.8 percent in 2022 and was back above its 2019 level that year.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071425163025586/pdf/P501984-3dd1e5be-b4ad-4575-a025-c4cd497c5f39.pdf",
+            "publisher": "World Bank",
+            "title": "Running Uphill: Growth, Jobs, and the Quest for Productivity – Philippines",
+            "date": "2025",
+            "quote": "Post-pandemic, the country's economic growth has become among the highest in Asia and the world's emerging economies."
+          }
+        ]
+      },
+      {
+        "title": "Stalled public works, costly energy",
+        "about": "present",
+        "text": "In 2025 typhoons, floods and governance concerns delayed public works, and investment weakened. In 2026 higher energy prices added to the drag, according to the World Bank.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/09/stronger-investment-and-reforms-can-help-ph-sustain-growth-and-create-more-jobs",
+            "publisher": "World Bank",
+            "title": "Stronger Investment and Reforms Can Help the Philippines Sustain Growth and Create More Jobs",
+            "date": "2025-12-09",
+            "quote": "domestic shocks—from typhoon- and flood-related disruptions to governance concerns that have delayed public investments."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-phl.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Philippines",
+            "date": "2026-10",
+            "quote": "The economy slowed due to higher energy prices and weak public investment, weighing on employment and domestic activity."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed. Income per person grew 3.6 percent in 2025, its slowest since 2020, as typhoons, floods and governance concerns held up public works and investment fell. The World Bank reports that in 2026 higher energy prices and stalled infrastructure projects slowed the economy further; that year is not yet in the data.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/09/stronger-investment-and-reforms-can-help-ph-sustain-growth-and-create-more-jobs",
+          "publisher": "World Bank",
+          "title": "Stronger Investment and Reforms Can Help the Philippines Sustain Growth and Create More Jobs",
+          "date": "2025-12-09",
+          "quote": "The Philippine economy slowed in 2025 as domestic shocks, weaker investment, and soft global demand weighed on growth."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-phl.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Philippines",
+          "date": "2026-10",
+          "quote": "Infrastructure delays weakened investment and private sector confidence"
+        }
+      ]
+    },
+    "tension": "The World Bank dates the growth surge to the years after 2010. The data put the break earlier, in 2003: income per person was already growing 4.5 percent in 2004 and 4.7 percent in 2007, and the 2006–2015 average (3.6) is a little higher than the 2016–2025 average (3.5)."
+  }
+}

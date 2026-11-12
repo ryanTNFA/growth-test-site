@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "KHM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KHM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 8,
+      "sources_searched": [
+        "imf.org: Cambodia Article IV consultation 2025 staff report growth",
+        "worldbank.org: Cambodia Economic Update 2025 World Bank growth tariffs",
+        "tier 1 domains: Cambodia Economic Update 2026 World Bank",
+        "tier 1 domains: Cambodia two decades of high growth garments tourism construction agriculture drivers history",
+        "imf.org, worldbank.org, adb.org: Cambodia credit boom construction real estate private debt NPLs IMF",
+        "worldbank.org: Cambodia Economic Update June 2026 demographic transition",
+        "opened: imf.org press release 2025-11-25 (2025 Article IV)",
+        "opened: imf.org press release 2025-01-27 (2024 Article IV)",
+        "opened: imf.org IMF Country Report 25/318 Selected Issues",
+        "opened: worldbank.org press releases 2025-12-11 and 2026-06-09",
+        "opened: worldbank.org Cambodia country overview",
+        "opened: documents1.worldbank.org Cambodia Economic Update December 2025 and June 2026",
+        "opened: adb.org Economics Working Paper 331 (2013)",
+        "critic re-opened and text-checked every cited URL (ADB WP 331, IMF CR 25/318, WB CEU Dec 2025 and Jun 2026, IMF PR 25/394, WB press release 2026-06-09, WB country overview)"
+      ],
+      "critic_changes": [
+        "Re-opened every cited URL; all seven pages exist on tier 1 domains, and every quoted passage, title and date matched the document (ADB WP 331 dated January 2013; IMF CR 25/318 dated December 2025; WB updates December 2025 and June 2026; IMF PR 25 November 2025; WB press release 9 June 2026; WB country overview last updated October 2026).",
+        "Headline: replaced 'as those engines cooled' with 'as property cooled and new shocks piled up', because the June 2026 sources say goods exports remain strong, so garments have not cooled.",
+        "Arc: wrote the 1990-1998 era as 'averages -4.7 percent a year' instead of 'falls ... by -4.7' (double negative); softened 'credit boom ... carried much of that decade' to 'ran through that decade', since the IMF passage links credit to property but does not say it carried growth.",
+        "Thread 'Peace opens the door': removed 'almost three decades' (a figure not in the data file) in favour of 'decades of conflict'; changed 'aid and private capital inflows' to 'public and private capital inflows' to match the quoted passage.",
+        "Thread 'A narrow base': extended the World Bank country overview quote to the page's full list of drivers (tourism, export-oriented manufacturing, real estate, construction) so it supports the sentence on construction and property.",
+        "Thread 'The credit and property boom ends': removed 'close to two decades' (a figure not in the data file) from the prose; added an IMF CR 25/318 passage on credit growth surging and then falling sharply in 2024 to support the claim that lending slowed; changed 'property investment and prices are falling' to 'property prices are falling' to match the cited passage, which is about the Property Price Index.",
+        "Thread 'Border conflict and returning workers': removed 'nearly one million' from the prose (a figure not in the data file); it stays inside the quoted World Bank passage.",
+        "since_last_year: replaced 'new US tariffs' with 'rising trade restrictions' and added the December 2025 World Bank passage that names the property downturn, the border conflict and trade restrictions; dropped the unsupported foreign investment claim and backed 'goods exports have stayed strong' with a quoted sentence from the 9 June 2026 World Bank press release.",
+        "Checked every number against desk/data/KHM.json (era means -4.7, 8.4, 5.5, 3.4; 1994 -39.2 with 845 to 514; 499 in 1998, 1,030 in 2007; 2.4 in 2009; -5.0 in 2020, 1.6 in 2021; 4.7 in 2024, 4.1 in 2025; peak 2,273 in 2025; 4.0 against 6.0): all match.",
+        "No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Cambodia's peace-era boom, built on garments, tourism and a credit-fed building surge, has slowed since 2018 as property cooled and new shocks piled up.",
+    "arc": "In the data, income per person in the 1990–1998 era averages -4.7 percent a year, but nearly all of that comes from one year, 1994, at -39.2. From 1999 to 2007 growth averaged 8.4 percent a year as peace and security returned after decades of conflict, aid and private money flowed in, and the economy opened up, with garment exports and tourism leading; income per person rose from 499 in 1998 to 1,030 in 2007. Growth eased to 5.5 percent a year over 2008–2017, after a dip to 2.4 in 2009 when Western demand for garments and tourism fell, while a long credit boom tied to construction and property ran through that decade. Since 2018 growth has averaged 3.4 percent a year: the pandemic cut income per person by 5.0 percent in 2020, and the recovery has been held back by a property slump, the end of the credit boom, the 2025 border conflict with Thailand and higher fuel prices in 2026. Even so, income per person reached a new high of 2,273 in 2025, and growth over 2016–2025 averaged 4.0 percent a year against 6.0 in the decade before.",
+    "threads": [
+      {
+        "title": "Peace opens the door",
+        "text": "Growth took off once peace and security returned in the late 1990s, after decades of conflict. Large public and private capital inflows and an open economy followed, and income per person roughly doubled between 1998 and 2007.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30140/economics-wp331-cambodia-rapid-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Cambodia: Rapid Growth with Institutional Constraints (ADB Economics Working Paper No. 331)",
+            "date": "2013-01",
+            "quote": "driven by the credible restoration of peace and security, large public and private capital inflows, economic openness"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30140/economics-wp331-cambodia-rapid-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Cambodia: Rapid Growth with Institutional Constraints (ADB Economics Working Paper No. 331)",
+            "date": "2013-01",
+            "quote": "the real rapid growth occurred during the period 1998–2007, when per capita GDP doubled."
+          }
+        ]
+      },
+      {
+        "title": "A narrow base of garments and tourism",
+        "text": "Growth rested on a few sectors: garment exports and tourism, then construction and property. Because garments and tourism sell mostly to Western buyers, the 2009 world recession hit hard, and growth in income per person fell to 2.4 percent that year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30140/economics-wp331-cambodia-rapid-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Cambodia: Rapid Growth with Institutional Constraints (ADB Economics Working Paper No. 331)",
+            "date": "2013-01",
+            "quote": "The real economy was affected by a sharp slowdown in the garments and tourism industries, that are both heavily dependent on western markets"
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/cambodia",
+            "publisher": "World Bank",
+            "title": "Cambodia (World Bank country overview)",
+            "date": "2026-10",
+            "quote": "Real GDP growth averaged 8.2 percent a year between 2000 and 2019, driven by tourism, export-oriented manufacturing, real estate, construction"
+          }
+        ]
+      },
+      {
+        "title": "The credit and property boom ends",
+        "text": "For many years, bank lending grew very fast, much of it tied to construction and property. That boom has turned: property prices are falling after heavy building before the pandemic, and lending growth has dropped sharply.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1khmea2025003-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Cambodia: Selected Issues (IMF Country Report No. 25/318)",
+            "date": "2025-12",
+            "quote": "A substantial portion of this credit boom was associated with the real estate and construction boom"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1khmea2025003-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Cambodia: Selected Issues (IMF Country Report No. 25/318)",
+            "date": "2025-12",
+            "quote": "Private credit growth surged to over 25 percent annually for nearly two decades and sharply fell to a log single-digit growth in 2024."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120925230526322/pdf/P506814-9a11e079-5d26-4705-8bea-74124a125170.pdf",
+            "publisher": "World Bank",
+            "title": "Cambodia Economic Update December 2025: Coping with Shocks",
+            "date": "2025-12",
+            "quote": "This decline is driven by market saturation resulting from pre-pandemic overinvestment, coupled with weakening demand"
+          }
+        ]
+      },
+      {
+        "title": "The pandemic break",
+        "text": "The pandemic ended the long run of fast growth. Income per person fell 5.0 percent in 2020 and grew only 1.6 percent in 2021, and growth has not returned to its pre-2020 pace since.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/ext/en/country/cambodia",
+            "publisher": "World Bank",
+            "title": "Cambodia (World Bank country overview)",
+            "date": "2026-10",
+            "quote": "The pandemic interrupted this trajectory, with output contracting by 3.6 percent in 2020"
+          }
+        ]
+      },
+      {
+        "title": "Border conflict and returning workers",
+        "text": "The 2025 border conflict with Thailand sent large numbers of Cambodian migrant workers home, cutting the money they send back to families and hitting tourism and trade. The IMF links its lower growth forecast to these losses.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120925230526322/pdf/P506814-9a11e079-5d26-4705-8bea-74124a125170.pdf",
+            "publisher": "World Bank",
+            "title": "Cambodia Economic Update December 2025: Coping with Shocks",
+            "date": "2025-12",
+            "quote": "the Cambodian-Thai border conflict has worsened economic challenges by disrupting labor markets, remittance flows, tourism, and supply chains."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060826021523553/pdf/P506814-10b627b2-862d-4011-b5f4-7d13dd9d522b.pdf",
+            "publisher": "World Bank",
+            "title": "Cambodia Economic Update June 2026: Navigating Shocks",
+            "date": "2026-06",
+            "quote": "the return of nearly one million migrant workers from Thailand in mid-2025 has sharply reduced remittance income"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/25/pr25394-cambodia-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Cambodia",
+            "date": "2025-11-25",
+            "quote": "The downward revision from the 2024 Article IV staff report reflects remittance losses and a tourism slowdown"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Since mid-2025, several shocks have arrived at once: the border conflict with Thailand and the return of migrant workers, rising trade restrictions, a deeper property slump and, in 2026, a jump in fuel prices from the Middle East conflict. Income per person grew 4.1 percent in 2025, down from 4.7 in 2024. Goods exports have stayed strong.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099120925230526322/pdf/P506814-9a11e079-5d26-4705-8bea-74124a125170.pdf",
+          "publisher": "World Bank",
+          "title": "Cambodia Economic Update December 2025: Coping with Shocks",
+          "date": "2025-12",
+          "quote": "an ongoing property market downturn, the Cambodian-Thai border conflict, and rising trade restrictions"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099060826021523553/pdf/P506814-10b627b2-862d-4011-b5f4-7d13dd9d522b.pdf",
+          "publisher": "World Bank",
+          "title": "Cambodia Economic Update June 2026: Navigating Shocks",
+          "date": "2026-06",
+          "quote": "domestic demand is weakening amid simultaneous pressure from rising fuel prices, declining remittances, and constrained credit."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/09/strong-policy-action-key-to-protecting-cambodia-s-jobs-and-livelihoods-amid-shocks",
+          "publisher": "World Bank",
+          "title": "Strong Policy Action Key to Protecting Cambodia's Jobs and Livelihoods Amid Shocks",
+          "date": "2026-06-09",
+          "quote": "conflict in the Middle East has transmitted an oil price shock to the Kingdom"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/09/strong-policy-action-key-to-protecting-cambodia-s-jobs-and-livelihoods-amid-shocks",
+          "publisher": "World Bank",
+          "title": "Strong Policy Action Key to Protecting Cambodia's Jobs and Livelihoods Amid Shocks",
+          "date": "2026-06-09",
+          "quote": "Goods exports also remain strong, growing by 17.7 percent in the first quarter of 2026."
+        }
+      ]
+    },
+    "tension": "The sources describe growth as rapid from the early 1990s, once the national accounts were rebuilt. The data instead show the 1990–1998 era averaging -4.7 percent a year. That average rests almost entirely on one year, 1994, when income per person drops 39.2 percent, from 845 to 514. The sources describe no fall of that size; the setbacks they name for the 1990s are the July 1997 political fighting and the 1997–1998 Asian crisis. So the era's average says more about how the data series was built than about events the sources describe."
+  }
+}

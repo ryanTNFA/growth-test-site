@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "iso3": "MDA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MDA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Moldova Article IV staff report 2025 growth\"",
+        "same tier 1 domains: \"Moldova Macro Poverty Outlook 2025 economic update\"",
+        "same tier 1 domains: \"Moldova systematic country diagnostic remittance-driven growth model transition collapse 1990s\"",
+        "same tier 1 domains: \"Moldova 2014 bank fraud one billion IMF 2016 program\"",
+        "same tier 1 domains: \"Moldova 1990s output collapse independence Transnistria loss of Soviet markets transition\"",
+        "Opened: imf.org (2025 Article IV concluding statement, Dec 2025; Board press release, Feb 2026; Country Report 16/343, Nov 2016)",
+        "Opened: worldbank.org (Macro Poverty Outlook Oct 2026; Moldova Economic Update May 2026; Country Economic Memorandum June 2023; Country Assistance Evaluation Oct 2004)",
+        "Critic re-opened every cited URL on imf.org and worldbank.org and checked each quoted passage against the extracted document text"
+      ],
+      "critic_changes": [
+        "Re-opened all seven cited URLs (CAE 2004, CEM 2023, IMF CR 16/343, MEU May 2026, MPO Oct 2026, IMF 2025 Article IV concluding statement). Every quoted passage was found in the document text, and every date matches: the CAE is dated 22 October 2004, the CEM June 2023, CR 16/343 November 2016, the MEU May 2026 and the MPO October 2026. The IMF page shows 'Published: December 17, 2025', although its URL says 12/16.",
+        "Headline: 'income per person is at its peak' became 'the highest since 1990'. The series starts in 1990, so 'highest ever' overstated what the data show. The headline was rewritten to stay within 160 characters (now 159).",
+        "Arc: 'highest level ever' became 'highest level since 1990'. The vague 'only in recent years has it climbed back above its 1990 level' was replaced with the series year: 2023 is the first year above the 1990 value.",
+        "Arc: added 2012 to the falls since 2009, because the series shows -0.6 in 2012.",
+        "Arc: 'farm workers moved into trade, transport and other services' was not in the sources. It now matches the CEM: as farms grew more productive, workers moved out of farming into low-skill manufacturing and services.",
+        "Arc: 'the old model ran out of steam' was reworded to what the CEM says, that the growth model has increasingly failed to raise productivity. 'Money from workers abroad has fallen since 2007' became 'declined since its 2007 peak'.",
+        "Post-Soviet collapse thread: the Transnistria claim had no citation, so a CAE passage supporting it was added. The first quote was swapped for the CAE line on the end of subsidies and of the defense industries, which also covers the loss of cheap energy. 'Soviet-era trade' became 'guaranteed Soviet markets', which is the CAE's wording.",
+        "Remittances thread: 'From around 2000' was not supported and became 'By the early 2000s rural poverty had pushed', following the CAE. 'Paid for much of the 2000s boom in household spending' overstated the sources and was softened to 'a major source of household income and spending'.",
+        "Bank fraud thread: added a second IMF CR 16/343 citation to support 'confidence collapsed' and 'donor money froze', which the single quote did not cover. Said three banks were closed, as the report states.",
+        "Shocks thread: removed 'droughts in 2020 and 2022' because the cited CEM passage names severe droughts but not their years. Added an MEU citation for the halt of Russian gas transit via Ukraine.",
+        "Emigration thread: 'helps explain why Moldova has grown more slowly than other EU candidates' overstated the IMF passage and was reworded to match it. Dropped 'total output is shared among fewer residents', which no cited passage supports; the point stays in the tension as an observation about the data.",
+        "since_last_year: 'strong harvest' became 'better-than-expected harvest' to match the IMF. Added an MEU citation for the Middle East energy-price shock pushing inflation up in 2026.",
+        "Tension: 'a modest, fragile recovery in 2025 after a weak 2024' was not in the sources' words. It was rewritten as output barely growing in 2024 and recovering in 2025, which the IMF statement and the MEU support. 'Highest ever' became 'highest since 1990'.",
+        "All numbers in the prose were checked against desk/data/MDA.json: -10.1, 6.2, 3.6, 4.0, 3.8, 15.7, -7.3, -2.1, 0.4, 2.6 and 4.2, plus the 2025 peak and 2023 as the first year above the 1990 level. No banned phrases were found."
+      ]
+    },
+    "headline": "After a 1990s collapse and a remittance-fed 2000s boom, Moldova has grown slower and less steadily since 2009, yet income per person is the highest since 1990.",
+    "arc": "Income per person shrank by 10.1 percent a year on average from 1991 to 1999. Independence ended Soviet energy subsidies and guaranteed markets, the defense industries collapsed, the Transnistria region broke away, and Russia's 1998 crisis cut short a brief recovery. From 2000 to 2008 it grew 6.2 percent a year, as many workers left for jobs abroad and sent money home, and as farms grew more productive, workers moved out of farming into low-skill manufacturing and services. Since 2009 growth has slowed to 3.6 percent a year and swung hard, with falls in 2009, 2012, 2020 and 2022, a near-stall after the 2014 bank fraud, and a jump of 15.7 percent in 2021. The World Bank says the old growth model has increasingly failed to raise productivity, money from workers abroad has declined since its 2007 peak, and emigration and ageing have shrunk the workforce. Even so, growth over 2016 to 2025 averaged 4.0 percent a year, a little above the 3.8 of 2006 to 2015, and income per person rose back above its 1990 level in 2023 and reached its highest level since 1990 in 2025.",
+    "threads": [
+      {
+        "title": "Post-Soviet collapse",
+        "about": "history",
+        "text": "Independence ended cheap Soviet energy and guaranteed Soviet markets, the defense industries collapsed, and the breakaway Transnistria region took much of the country's modern industry and most of its power plant capacity. Growth turned positive in 1997, but Russia's 1998 financial crisis cut that recovery short.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/409081468774294715/pdf/289810MD.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova: Country Assistance Evaluation (Report No. 28981-MD)",
+            "date": "2004-10-22",
+            "quote": "Independence ended the subsidies as well as Moldova's relatively sophisticated defense industries and livestock production."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/409081468774294715/pdf/289810MD.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova: Country Assistance Evaluation (Report No. 28981-MD)",
+            "date": "2004-10-22",
+            "quote": "The defacto Transnistria secession removed much of Moldova's modern industries."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/409081468774294715/pdf/289810MD.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova: Country Assistance Evaluation (Report No. 28981-MD)",
+            "date": "2004-10-22",
+            "quote": "turned positive in 1997 before being completely derailed in 1998 and 1999 because of the Russian financial crisis"
+          }
+        ]
+      },
+      {
+        "title": "Remittances rose, then faded",
+        "about": "history",
+        "text": "By the early 2000s rural poverty had pushed many Moldovans to work abroad, and the money they sent home became a major source of household income and spending. The World Bank says these flows have declined steadily since their 2007 peak, and links this to slower growth after 2009.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/409081468774294715/pdf/289810MD.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova: Country Assistance Evaluation (Report No. 28981-MD)",
+            "date": "2004-10-22",
+            "quote": "Remittances from these emigrants has become a major factor in the economy."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112024082570311/pdf/P179866-9eaed92d-1e4f-46ce-9700-c4b409c2e612.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova Country Economic Memorandum: Achieving the European Union's Standard of Living within a Generation",
+            "date": "2023-06",
+            "quote": "remittances, which was previously an important source of income and consumption for many households, declined steady since its peak in 2007."
+          }
+        ]
+      },
+      {
+        "title": "The 2014 bank fraud",
+        "about": "history",
+        "text": "In late 2014 a large fraud was exposed in the banking system, and three banks were closed at great public cost. Confidence collapsed and donor money largely froze, and income per person grew only 0.4 percent in 2015.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16343.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Moldova: Requests for an Extended Arrangement Under the Extended Fund Facility and an Arrangement Under the Extended Credit Facility (Country Report No. 16/343)",
+            "date": "2016-11",
+            "quote": "the massive and well-orchestrated fraud in the banking system, stemming from opaque shareholder structures, bank governance failures, and weak supervision"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16343.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Moldova: Requests for an Extended Arrangement Under the Extended Fund Facility and an Arrangement Under the Extended Credit Facility (Country Report No. 16/343)",
+            "date": "2016-11",
+            "quote": "During the following period, confidence collapsed, external concessional financing largely froze, and international reserves fell by one-third"
+          }
+        ]
+      },
+      {
+        "title": "Shocks in quick succession",
+        "about": "present",
+        "text": "Since 2020 the pandemic, severe droughts, Russia's war in Ukraine and an energy crisis have hit one after another, so income per person fell 7.3 percent in 2020, rose 15.7 percent in 2021 and fell 2.1 percent in 2022. In early 2025 a severe energy crisis, after Russian gas stopped flowing through Ukraine, stalled the economy again.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112024082570311/pdf/P179866-9eaed92d-1e4f-46ce-9700-c4b409c2e612.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova Country Economic Memorandum: Achieving the European Union's Standard of Living within a Generation",
+            "date": "2023-06",
+            "quote": "Moldova has been beset by multiple shocks in recent years, from the COVID-19 pandemic to severe droughts."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d8cc3b5592213880b333f31ad0da3097-0080012026/original/Banca-Mondiala-MEU-spring-edition.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova Economic Update, May 2026",
+            "date": "2026-05",
+            "quote": "After stalling in early 2025 amid a severe domestic energy crisis that disrupted industrial output"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d8cc3b5592213880b333f31ad0da3097-0080012026/original/Banca-Mondiala-MEU-spring-edition.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova Economic Update, May 2026",
+            "date": "2026-05",
+            "quote": "after the halt of Russian gas transit via Ukraine, raising costs for households and firms"
+          }
+        ]
+      },
+      {
+        "title": "Emigration and a shrinking workforce",
+        "about": "present",
+        "text": "Sustained emigration and ageing have cut the number of people of working age. The IMF says growth has lagged other EU candidates and that high emigration weighs on the workforce and on growth.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d8cc3b5592213880b333f31ad0da3097-0080012026/original/Banca-Mondiala-MEU-spring-edition.pdf",
+            "publisher": "World Bank",
+            "title": "Moldova Economic Update, May 2026",
+            "date": "2026-05",
+            "quote": "the working-age population has already shrunk markedly and is projected to fall further by 2050"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/16/cs-republic-of-moldova-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Moldova: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-12-17",
+            "quote": "Growth has lagged EU accession peers; high emigration pressures the labor force and hampers growth"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mda.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Moldova (October 2026)",
+            "date": "2026-10",
+            "quote": "Poverty remains elevated, especially in rural areas, as aging and outmigration constrain labor supply."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "After the energy crisis stalled the economy in early 2025, a better-than-expected harvest and more spending by households and firms brought a recovery later in the year, and income per person grew 4.2 percent in 2025. In 2026 the conflict in the Middle East pushed energy prices and inflation up again. The World Bank reports that growth slowed sharply in the first half of 2026 and expects a weaker year than 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/16/cs-republic-of-moldova-staff-concluding-statement-of-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Moldova: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-12-17",
+          "quote": "recovery driven by a better-than-expected harvest and strong consumption and investment"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d8cc3b5592213880b333f31ad0da3097-0080012026/original/Banca-Mondiala-MEU-spring-edition.pdf",
+          "publisher": "World Bank",
+          "title": "Moldova Economic Update, May 2026",
+          "date": "2026-05",
+          "quote": "Following the conflict in Middle East and the consequent oil and gas price shock pushed inflation up again in 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mda.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Moldova (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP growth slowed sharply to 0.6 percent in H1 2026 year-on-year."
+        }
+      ]
+    },
+    "tension": "The IMF says Moldova's growth has lagged other EU candidates, and the IMF and World Bank describe total output barely growing in 2024 and recovering in 2025. Yet in the data income per person grew 2.6 percent in 2024 and 4.2 percent in 2025, and is at its highest since 1990. Much of the gap is the shrinking population the sources describe: with steady emigration, slow growth in total output becomes faster growth in income per person."
+  }
+}

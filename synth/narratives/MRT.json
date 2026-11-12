@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "iso3": "MRT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MRT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Mauritania Article IV 2025 staff report growth gas GTA",
+        "worldbank.org: Mauritania Macro Poverty Outlook economic update growth",
+        "tier 1 domains: Mauritania Systematic Country Diagnostic growth history commodity boom iron ore 2014 slowdown",
+        "imf.org, worldbank.org, afdb.org: Mauritania 2006 oil production Chinguetti growth IMF 2008 coup",
+        "Opened: thedocs.worldbank.org MPO Mauritania (October 2026); imf.org IMF Country Report 26/27 (February 2026); documents1.worldbank.org Country Growth & Jobs Report 2025; imf.org IMF Survey (22 November 2010); worldbank.org/ext/en/country/mauritania (undated, not cited)",
+        "Critic re-opened all four cited URLs (PDF text extracted locally) and checked every quote, date and number"
+      ],
+      "critic_changes": [
+        "All four cited URLs re-opened (PDF text extracted locally); every quote found verbatim and every date confirmed: IMF Survey 22 Nov 2010, IMF CR 26/27 dated February 2026, MPO footer 'October 2026', WB Country Growth & Jobs Report 2025.",
+        "All numbers in headline, arc, threads, since_last_year and tension checked against desk/data/MRT.json (eras -1.3 / 1.4, 2006 15.4, declines 2007-2010, avg 1.0 vs prior 1.1, 2022-2025 3.7/3.7/3.3/1.2, shortfall 7.1, peak 1970, level first reached 1968); all match.",
+        "Arc: 'The second era opened with the start of oil production in 2006' changed to 'In the second era, oil production began in 2006', since the era starts in 2003, not 2006.",
+        "Arc: 'Gold, copper and iron ore mining' changed to 'Oil, copper, gold and iron mining' to match the World Bank's own list of drivers (oil, copper and gold production 2005-2014; iron mining expanding in the early 2010s).",
+        "Thread 'A coup amid global crises': the only cited passage supported the coup, not the food/fuel crisis or the global recession; added the IMF page's exact list items 'food and fuel crisis' and 'global economic crisis (2008–09)' as citations and reworded the text to the page's terms.",
+        "Thread 'Mining boom, then the bust': 'when commodity prices fell after 2014' reworded to 'when the commodity boom ended', matching the cited passage (the cited quote speaks of the end of the super cycle, not a date).",
+        "Thread 'Extractives still set the pace': the Greater Tortue Ahmeyim gas reference was not supported by either cited passage; reworded to say the sector now includes gas since production started, and added the MPO passage on 'the start of gas production' as a citation.",
+        "Thread 'A young, fast-growing population': the claim that mining employs few people had no supporting citation; added the World Bank passage on capital-intensive extractive industries providing 1.2 percent of total jobs.",
+        "since_last_year: the inflation quote cited supply constraints in livestock and fisheries, not food and fuel costs as the text said; replaced with the MPO's exact passage on rising food and energy prices, and 'steady services' changed to 'resilient services' to match the source.",
+        "Tension: 'strong growth in total output in 2023 and 2024' cut to 2024, the only year a cited source gives (IMF: 6.3 percent in 2024); 'than the data file does' reworded to 'than the figures used here' for readers. The World Bank's lower 2025 figure is confirmed in the MPO (0.7 percent per capita versus 1.2 in the data)."
+      ]
+    },
+    "headline": "Mauritania's income per person is about where it was in 1968: oil and mining brought booms that faded, and a fast-growing population shares the gains.",
+    "arc": "Since 1990, Mauritania's growth has run in two eras: income per person fell by 1.3 percent a year from 1990 to 2002, then rose by 1.4 percent a year from 2003 to 2025. The sources say little about the 1990s, and the World Bank links weak growth in the early 2000s to the global slowdown and bad weather. In the second era, oil production began in 2006 and income per person jumped 15.4 percent, but oil output fell within months and income per person declined every year from 2007 to 2010, through a military coup in 2008 and the global crisis. Oil, copper, gold and iron mining and a surge in public investment carried growth until commodity prices fell after 2014; since then growth has eased, with income per person rising 1.0 percent a year over 2016 to 2025 against 1.1 in the decade before. After falls in 2020 and 2021, income per person grew 3.7 percent in 2022 and in 2023 and 3.3 in 2024, then 1.2 in 2025 as extractive output contracted. In 2025 income per person was still 7.1 percent below its 1970 peak and about where it first was in 1968.",
+    "threads": [
+      {
+        "title": "Oil arrives, then fades",
+        "text": "Oil production began in 2006 and income per person jumped 15.4 percent that year. Output fell sharply within months, and income per person then declined for four years in a row.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/socar112210a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Mauritania Shows Signs of Recovery After Series of Setbacks",
+            "date": "2010-11-22",
+            "quote": "Oil production fell from close to 75,000 barrels per day (bpd) in early 2006 to 23,000 by end-2006."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112425051530164/pdf/P500498-af5e76a5-cddf-40d6-a83e-3673282ed694.pdf",
+            "publisher": "World Bank",
+            "title": "Beyond Extractives: Unlocking Mauritania's Potential for a Sustained, Inclusive and Resilient Growth (Country Growth & Jobs Report 2025)",
+            "date": "2025",
+            "quote": "notably since oil production began in 2006 and gold and iron mining expanded in the early 2010s"
+          }
+        ]
+      },
+      {
+        "title": "A coup amid global crises",
+        "text": "An August 2008 military coup came amid the food and fuel crisis and the global economic crisis of 2008 and 2009. Income per person fell in 2008, 2009 and 2010.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/socar112210a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Mauritania Shows Signs of Recovery After Series of Setbacks",
+            "date": "2010-11-22",
+            "quote": "domestic political difficulties (including an August 2008 military coup)"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/socar112210a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Mauritania Shows Signs of Recovery After Series of Setbacks",
+            "date": "2010-11-22",
+            "quote": "food and fuel crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/socar112210a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Mauritania Shows Signs of Recovery After Series of Setbacks",
+            "date": "2010-11-22",
+            "quote": "global economic crisis (2008–09)"
+          }
+        ]
+      },
+      {
+        "title": "Mining boom, then the bust",
+        "text": "Gold and iron mining expanded in the early 2010s, and public investment surged on extractive revenues and debt relief. When the commodity boom ended, extractive revenues fell and public investment was cut back sharply.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112425051530164/pdf/P500498-af5e76a5-cddf-40d6-a83e-3673282ed694.pdf",
+            "publisher": "World Bank",
+            "title": "Beyond Extractives: Unlocking Mauritania's Potential for a Sustained, Inclusive and Resilient Growth (Country Growth & Jobs Report 2025)",
+            "date": "2025",
+            "quote": "surged five-fold between 2004 and 2015, supported by a boom in extractives and debt relief."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112425051530164/pdf/P500498-af5e76a5-cddf-40d6-a83e-3673282ed694.pdf",
+            "publisher": "World Bank",
+            "title": "Beyond Extractives: Unlocking Mauritania's Potential for a Sustained, Inclusive and Resilient Growth (Country Growth & Jobs Report 2025)",
+            "date": "2025",
+            "quote": "following the end of the commodity super cycle and a decline in extractive revenues, fiscal consolidation led to a sharp reduction in investment"
+          }
+        ]
+      },
+      {
+        "title": "Extractives still set the pace",
+        "text": "Growth still rises and falls with the extractive sector, which now includes gas since production started. Extractive output fell in 2025, which slowed growth that year.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mrtea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Mauritania: Fifth Reviews Under the Arrangements Under the Extended Credit Facility and the Extended Fund Facility (IMF Country Report No. 26/27)",
+            "date": "2026-02",
+            "quote": "Economic growth and external sector dynamics remain dependent on the extractive sector."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mrtea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Mauritania: Fifth Reviews Under the Arrangements Under the Extended Credit Facility and the Extended Fund Facility (IMF Country Report No. 26/27)",
+            "date": "2026-02",
+            "quote": "economic activity in 2025 is expected to have decelerated to 4.2 percent, due to a contraction in the extractive sector"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mrt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mauritania",
+            "date": "2026-10",
+            "quote": "While the start of gas production and recent investments in energy and infrastructure have opened new opportunities"
+          }
+        ]
+      },
+      {
+        "title": "A young, fast-growing population",
+        "text": "The population has grown many times over since independence and is still growing fast, so growth in total output turns into much slower growth in income per person. Mining employs few people, and the sources describe limited creation of productive jobs.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112425051530164/pdf/P500498-af5e76a5-cddf-40d6-a83e-3673282ed694.pdf",
+            "publisher": "World Bank",
+            "title": "Beyond Extractives: Unlocking Mauritania's Potential for a Sustained, Inclusive and Resilient Growth (Country Growth & Jobs Report 2025)",
+            "date": "2025",
+            "quote": "By 2025, Mauritania’s population is expected to reach five million, a five-fold increase since independence in 1960"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112425051530164/pdf/P500498-af5e76a5-cddf-40d6-a83e-3673282ed694.pdf",
+            "publisher": "World Bank",
+            "title": "Beyond Extractives: Unlocking Mauritania's Potential for a Sustained, Inclusive and Resilient Growth (Country Growth & Jobs Report 2025)",
+            "date": "2025",
+            "quote": "capital-intensive extractive industries provide limited employment—just 1.2 percent of total jobs"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mrt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mauritania",
+            "date": "2026-10",
+            "quote": "limited economic diversification and a narrow private sector constrain the creation of productive jobs for a rapidly growing population."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed in 2025 as extractive output contracted, then picked up in early 2026 on higher gold and gas production and resilient services. Inflation rose sharply in 2026 as food and energy prices climbed, and insecurity on the border with Mali has grown.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mrt.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mauritania",
+          "date": "2026-10",
+          "quote": "economic activity rebounded, growing at 9.0 percent y/y in Q1-2026, driven by resilient services activity and higher gold and gas production."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mrt.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mauritania",
+          "date": "2026-10",
+          "quote": "Rising food and energy prices pushed inflation sharply higher, eroding household purchasing power."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mrtea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Islamic Republic of Mauritania: Fifth Reviews Under the Arrangements Under the Extended Credit Facility and the Extended Fund Facility (IMF Country Report No. 26/27)",
+          "date": "2026-02",
+          "quote": "Amid further escalation of the security incidents and the extension of the influence of the jihadist groups at the borders with Mali"
+        }
+      ]
+    },
+    "tension": "The sources describe two decades of resource-led growth that lifted Mauritania to lower-middle-income status, and strong growth in total output in 2024. Yet income per person in 2025 was about where it first was in 1968 and still below its 1970 peak, as a fast-growing population shares the gains and each boom has been followed by falls. The World Bank also puts growth in income per person in 2025 lower than the figures used here."
+  }
+}

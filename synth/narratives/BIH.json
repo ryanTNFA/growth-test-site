@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "iso3": "BIH",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BIH",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "query: Bosnia and Herzegovina IMF Article IV 2025 staff concluding statement",
+        "query: Bosnia and Herzegovina Macro Poverty Outlook World Bank 2025",
+        "query: Bosnia and Herzegovina emigration shrinking population labor shortages growth",
+        "query: Bosnia and Herzegovina post-war reconstruction 1996 1998 growth recovery Dayton World Bank",
+        "query: Bosnia and Herzegovina 2009 recession global financial crisis Stand-By Arrangement IMF",
+        "opened: imf.org 2026 Article IV concluding statement (2026-06-16), 2025 Article IV press release (2025-08-29), IMF Country Report 26/205 (2026-07), IMF Country Report 10/101 (2010-04)",
+        "opened: worldbank.org MPO October 2025 ECA, International Mobility country report (2024-06), OED post-conflict reconstruction evaluation (2004-09)",
+        "critic: re-opened all five cited PDFs (worldbank.org x3, imf.org x2) and verified quotes and dates against the extracted text",
+        "tier 2 (UN) not searched: tier 1 gave 3 verified recent sources"
+      ],
+      "critic_changes": [
+        "Opened all five cited PDFs and checked every quote against the extracted text. All 15 quotes appear on their pages, and all dates match the documents (OED first edition September 2004; IMF CR 10/101 April 2010; mobility report June 2024; MPO October 2025; IMF CR 26/205 July 2026).",
+        "Tension: the draft said the series shows 'only small falls in 1991 and 1992', but the data show a 9.5 percent fall in 1991 and 1.5 percent in 1992. Replaced it with those figures. Also reworded the 15.3 percent point: that average mostly reflects fast growth from 1994 to 1998.",
+        "Tension: the claim that 'the IMF and the World Bank call overall growth weak and too slow to catch up' now rests on a cited World Bank passage (Average real income growth of just 3 percent per year since 2015 has been insufficient to close the gap with the EU27 average). That passage was added to the 'Stable anchors' thread.",
+        "Stable anchors thread: 'Both the IMF and the World Bank say growth is too slow to close the income gap with the EU' is now credited to the World Bank alone, using the new MPO citation. The IMF medium-term convergence citation was dropped to stay within three citations. The political fragmentation claim is now credited explicitly to the IMF.",
+        "MPO title corrected: the PDF is the Europe and Central Asia regional volume ('Macro Poverty Outlook 10/2025, Europe and Central Asia, Country-by-country Analysis and Projections for the Developing World'), not a Bosnia-only note.",
+        "Emigration thread: 'first to flee the war, and since the 2000s mostly for jobs' was supported by only one citation. The claim that the labor supply shrank faster was not supported by any cited passage. Replaced the 'economic factors' citation with the page's own sentence on the labor supply shrinking faster, and cut the motive claim. 'The IMF counts aging and emigration among the pressures on growth and public finances' went beyond the cited passage, which covers dependency and long-term risks to government finances. Narrowed it to that.",
+        "Consumption thread: the draft said growth was lifted by benefit and wage increases since 2022. The IMF passage says those increases raised public debt, so the text now says that. 'Fast-rising labor costs' is now supported by extending the IMF quote to the page's words 'alongside sharply rising unit labor costs' (24 words).",
+        "War thread: 'destroyed much of the country's industry and infrastructure' and 'Donors then paid for' were not in the quoted passages. Reworded to what the quotes support: output fell to a small fraction of its pre-war level, and a large rebuilding program followed.",
+        "Boom thread retitled from 'Credit-fed boom, then crisis' to 'Boom with imbalances, then crisis'. The sources do not call the boom credit-fed. The credit figures 47.8 and 65.6 come from the data series (FS.AST.PRVT.GD.ZS) and are kept.",
+        "Arc: removed the currency board as a source of recent growth. The World Bank names it as an anchor of stability, not of growth. All arc numbers (15.3, 47.8, 5.7, 1.3, 3.4, 1.7, 9.2, 4.1, 3.8) match the data file.",
+        "tier1_recent_found set to 3, not 5. Only three distinct recent tier 1 sources were verified here: the World Bank mobility report (2024-06), the MPO (2025-10) and IMF CR 26/205 (2026-07). The two other IMF pages the draft lists were opened but not cited, so they could not be checked."
+      ]
+    },
+    "headline": "A war-wrecked economy rebuilt fast, then settled into slower, steadier growth as emigration shrank the population and reforms stalled.",
+    "arc": "The 1992–1995 war wrecked the economy, and donor-funded rebuilding after the Dayton peace drove a rebound: income per person grew 15.3 percent a year over 1991–1998, with a peak of 47.8 percent in 1996. From 1999 to 2008 growth slowed to 5.7 percent a year as rebuilding gave way to an expansion that the IMF later said came with growing external and internal imbalances. The global crisis ended that era: income per person fell 1.3 percent in 2009, and growth has averaged 3.4 percent a year since, with another dip of 1.7 percent in 2020 and a 9.2 percent rebound in 2021. In recent years growth has leaned on household spending, lifted by wage and benefit rises, while heavy emigration has shrunk the population. Income per person reached a new high in 2025, and growth over 2016–2025 averaged 4.1 percent a year, up from 3.8 percent over 2006–2015.",
+    "threads": [
+      {
+        "title": "War and donor-led rebuilding",
+        "about": "history",
+        "text": "During the 1992–1995 war, output fell to a small fraction of its pre-war level. A large rebuilding program followed, and by 2000 most housing, roads and power supplies had been restored. Even so, the World Bank found that output in 1999 was still well short of where it had been before the war.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/415151468742482736/pdf/302270PAPER0Bi1flict0reconstruction.pdf",
+            "publisher": "World Bank",
+            "title": "Bosnia and Herzegovina: Post-Conflict Reconstruction and the Transition to a Market Economy (An OED Evaluation of World Bank Support)",
+            "date": "2004-09",
+            "quote": "By 1994 the gross domestic product (GDP) and GDP per capita had plummeted to less than 20 percent of the pre-war level"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/415151468742482736/pdf/302270PAPER0Bi1flict0reconstruction.pdf",
+            "publisher": "World Bank",
+            "title": "Bosnia and Herzegovina: Post-Conflict Reconstruction and the Transition to a Market Economy (An OED Evaluation of World Bank Support)",
+            "date": "2004-09",
+            "quote": "By 2000 most housing, schools, water supply systems, roads, telecommunications, and electric power supplies had been reconstructed to near pre-war standards"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/415151468742482736/pdf/302270PAPER0Bi1flict0reconstruction.pdf",
+            "publisher": "World Bank",
+            "title": "Bosnia and Herzegovina: Post-Conflict Reconstruction and the Transition to a Market Economy (An OED Evaluation of World Bank Support)",
+            "date": "2004-09",
+            "quote": "by 1999 the gross domestic product (GDP) had recovered to only about 60 percent of pre-war output"
+          }
+        ]
+      },
+      {
+        "title": "Boom with imbalances, then crisis",
+        "about": "history",
+        "text": "Growth in the 2000s was strong but came with growing imbalances, and credit to the private sector climbed from 47.8 to 65.6 percent of GDP between 2006 and 2008. When the global crisis hit, demand for exports dropped and foreign investment dried up, pulling down private investment. Income per person fell 1.3 percent in 2009 and growth stayed slower afterwards.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10101.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: Staff Report for the First Review Under the Stand-By Arrangement (IMF Country Report No. 10/101)",
+            "date": "2010-04",
+            "quote": "Following several years of strong growth increasingly accompanied by external and internal imbalances, economic activity in Bosnia and Herzegovina (BiH) began to decelerate"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10101.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: Staff Report for the First Review Under the Stand-By Arrangement (IMF Country Report No. 10/101)",
+            "date": "2010-04",
+            "quote": "The precipitous drop in demand for BiH’s exports and the drying up of foreign direct investment triggered a sharp decline in private investment."
+          }
+        ]
+      },
+      {
+        "title": "Emigration and a shrinking workforce",
+        "about": "present",
+        "text": "Emigration has cut the population sharply: the World Bank finds that net outflows have shrunk it a great deal since 2001, and because those who leave are mostly of working age, the labor supply has shrunk even faster. The IMF says the departure of young workers has left a high share of dependents, a long-term risk to public finances.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062524135521479/pdf/P18132015d007e0a19e711d8853a43f168.pdf",
+            "publisher": "World Bank",
+            "title": "International Mobility as a Development Strategy: Bosnia and Herzegovina Country Report",
+            "date": "2024-06",
+            "quote": "Net migration outflows have reduced the population in Bosnia and Herzegovina by 21 percent since 2001"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062524135521479/pdf/P18132015d007e0a19e711d8853a43f168.pdf",
+            "publisher": "World Bank",
+            "title": "International Mobility as a Development Strategy: Bosnia and Herzegovina Country Report",
+            "date": "2024-06",
+            "quote": "Since the migrant population tends to be of working age, these outflows have led to an even faster reduction in the labor supply."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+            "date": "2026-07",
+            "quote": "Long-term risks are driven by the high dependency ratio in Bosnia and Herzegovina as a result of the migration of the working age young."
+          }
+        ]
+      },
+      {
+        "title": "Consumption and public spending",
+        "about": "present",
+        "text": "Household spending has carried recent growth, lifted by minimum wage rises, while investment and exports have been weak. Since 2022, large increases in social benefits and public wages have raised public debt. The IMF reports falling industrial output and export capacity alongside sharply rising labor costs.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099752310032530741/pdf/IDU-1874dba2-30e3-4a23-b88e-51dc6b16ef39.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2025: Europe and Central Asia (Country-by-country Analysis and Projections for the Developing World)",
+            "date": "2025-10",
+            "quote": "Stronger consumption, fueled by minimum wage hikes, couldn’t offset weak investment and exports"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+            "date": "2026-07",
+            "quote": "Since 2022, expansionary policies—driven by large increases in untargeted social benefits and public wages—have raised public debt"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+            "date": "2026-07",
+            "quote": "Since 2022, the weakening of industrial production, employment in tradable sectors, and export capacity points to eroding competitiveness alongside sharply rising unit labor costs"
+          }
+        ]
+      },
+      {
+        "title": "Stable anchors, stalled reforms",
+        "about": "present",
+        "text": "A currency board tied to the euro, efficient collection of indirect taxes and the prospect of joining the EU have kept the economy stable since the war. The IMF says political division has slowed reforms, including those tied to EU accession. The World Bank says growth since 2015 has been too slow to close the income gap with the EU.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099752310032530741/pdf/IDU-1874dba2-30e3-4a23-b88e-51dc6b16ef39.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2025: Europe and Central Asia (Country-by-country Analysis and Projections for the Developing World)",
+            "date": "2025-10",
+            "quote": "macroeconomic stability has been underpinned by three factors: a currency board linked to the euro, efficient indirect tax collection and the prospect of EU membership"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+            "date": "2026-07",
+            "quote": "Political fragmentation is limiting reform progress, including on EU accession, weighing on the business climate."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099752310032530741/pdf/IDU-1874dba2-30e3-4a23-b88e-51dc6b16ef39.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2025: Europe and Central Asia (Country-by-country Analysis and Projections for the Developing World)",
+            "date": "2025-10",
+            "quote": "Average real income growth of just 3 percent per year since 2015 has been insufficient to close the gap with the EU27 average"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed in 2025. In its July 2026 report, the IMF says higher energy costs and weaker demand abroad, both linked to the Middle East conflict, outweighed strong consumption and public spending, and it expects inflation to rise in 2026. In the data, income per person grew 2.9 percent in 2025, down from 3.9 percent in 2024.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+          "date": "2026-07",
+          "quote": "after slowing to 2.1 percent in 2025, as the Middle East conflict—through higher energy costs and weaker external demand—offset strong consumption and fiscal support"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bihea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Bosnia and Herzegovina: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/205)",
+          "date": "2026-07",
+          "quote": "Driven by higher fuel prices and expansionary fiscal policy, inflation is projected to rise to 5.4 percent in 2026 from 4 percent in 2025."
+        }
+      ]
+    },
+    "tension": "There are two gaps. First, the World Bank says output by 1994 had fallen far below its pre-war level, but the data series shows income per person in 1994 above its 1990 level, after falls of 9.5 percent in 1991 and 1.5 percent in 1992. The series may miss much of the wartime collapse, and the 15.3 percent average for 1991–1998 mostly reflects fast growth from 1994 to 1998, from a very low starting point. Second, the data show income per person growing 4.1 percent a year over 2016–2025 and reaching a new high in 2025, while the World Bank calls growth since 2015 too slow to close the gap with the EU, and the IMF calls growth weak. Their figures are for the whole economy, and part of the gap is the shrinking population: when people leave, income per person can rise even if the economy as a whole grows slowly."
+  }
+}

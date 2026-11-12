@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "iso3": "LTU",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LTU",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Lithuania Article IV consultation 2025 staff report",
+        "oecd.org/imf.org/worldbank.org (tier 1 list): OECD Economic Survey Lithuania 2024 growth productivity",
+        "worldbank.org (tier 1 list): Lithuania Macro Poverty Outlook 2025",
+        "imf.org/worldbank.org/oecd.org/ebrd.com: Lithuania 2009 crisis boom bust internal devaluation Baltic",
+        "imf.org: Lithuania export-led recovery after global financial crisis convergence",
+        "imf.org/worldbank.org/oecd.org/ebrd.com: Lithuania transition 1990s output collapse EU accession",
+        "imf.org/worldbank.org/oecd.org/ebrd.com: Lithuania 1992 1993 output decline trade former Soviet Union energy prices",
+        "Opened by drafter: imf.org 2026 Article IV press release (2026-07-29), 2026 mission concluding statement (2026-05-26), 2025 Article IV press release, 2024 Selected Issues (CR 24/243), 2003 concluding statement, 2010 Baltic adjustment working paper page; documents1.worldbank.org 1992 Country Economic Report",
+        "oecd.org pages (Economic Survey 2025, Economic Outlook note) returned 403 and were not cited",
+        "Critic re-opened: imf.org CR 24/243 PDF (text extracted and searched), imf.org 2026 Article IV press release, imf.org 2025 Article IV press release, documents1.worldbank.org 1992 Country Economic Report"
+      ],
+      "critic_changes": [
+        "since_last_year: dropped the claim that a second wave of pension withdrawals helped 2025 growth, and its citation; the 2026 IMF press release links that second wave to a projected pickup in 2028, not to 2025.",
+        "Thread 'War, energy and defense': 2025 press release date corrected from 2025-09 to 2025-09-17 (the page's date line reads September 17, 2025); 'a lasting pressure on public finances' reworded to match the page, which groups defense increases with ageing-related long-term spending needs.",
+        "Thread 'EU accession boom and bust': removed 'borrowing and spending ran ahead of the economy' and 'rather than the currency', which the cited passages do not state; replaced with the page's own description (real exchange rate appreciation, loss of competitiveness, widening current account deficit).",
+        "Thread 'Productivity-led catch-up': 'closed much of its income gap' softened to 'caught up fast', and 'exports held up' reworded to the export-led recovery holding up, as the page says; the page reports a loss of export market share after the 2015 sanctions.",
+        "Thread 'Shrinking, ageing workforce': the population shrinking since 1991 is not stated in the cited passage, which covers the workforce, so the text now says the workforce shrank since 1991; 'limits on the economy' changed to the page's own term, 'structural constraints', attributed to the IMF.",
+        "Headline: 'collapsed in the 1990s' changed to 'the early 1990s', because the data show growth fell every year in 1991–1994 and then rose in 1995–1998.",
+        "Arc: 'a boom the IMF links to large imbalances' reworded to 'a boom during which, the IMF says, large imbalances built up', which is what the passage says; 'strong productivity growth' trimmed to 'productivity growth'; internal devaluation explained in plain words.",
+        "Tension: the IMF counts a shrinking workforce, not population, since 1991; the sentence now uses the IMF's 'shrinking and aging society' wording and does not attribute a population count to the IMF.",
+        "tier1_recent_found lowered from 4 to 3: the critic verified CR 24/243 (2024-07), the 2025 press release and the 2026 press release, but could not re-open the uncited 2026 mission concluding statement.",
+        "All numbers checked against desk/data/LTU.json: -2.8, -21.2, 8.7, -13.9, 3.0, 3.3, 4.2, 1.6, -0.7, 2.4, 2.9, the 1991–1994 declines and the 2025 peak all match. All remaining quoted passages were confirmed on the pages."
+      ]
+    },
+    "headline": "Lithuania's income per person collapsed in the early 1990s, boomed after 2000, crashed in 2009 and has since grown more slowly to a new peak in 2025.",
+    "arc": "After independence, trade with the former Soviet republics broke down and energy import prices jumped, and income per person shrank by 2.8 percent a year over 1991–1999, with the worst fall in 1992 (-21.2). From 2000 to 2007 it grew 8.7 percent a year, a boom during which, the IMF says, large imbalances built up after Lithuania joined the EU in 2004. The boom ended abruptly: income per person fell 13.9 percent in 2009, and a painful fall in costs and prices, which the IMF calls an internal devaluation, set up an export-led recovery. Since 2008 growth has averaged 3.0 percent a year, with 3.3 over 2016–2025 against 4.2 in the decade before, and the IMF credits productivity growth for fast catch-up with the euro area until Russia's invasion of Ukraine in 2022. Income per person slipped in 2023 (-0.7), grew 2.4 percent in 2024 and 2.9 percent in 2025, and reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Soviet trade collapse",
+        "text": "At independence, Lithuania lost its old markets in the former Soviet Union and had to pay far more for Russian oil and gas. The World Bank tied the early output fall mainly to these trade disruptions, and income per person fell every year from 1991 to 1994.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/188411676267338662/txt/Lithuania-Country-Economic-Report.txt",
+            "publisher": "World Bank",
+            "title": "Lithuania Country Economic Report, Volume I",
+            "date": "1992-07-06",
+            "quote": "The output contraction is to a large extent due to disruptions in trade with the former Soviet republics."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/188411676267338662/txt/Lithuania-Country-Economic-Report.txt",
+            "publisher": "World Bank",
+            "title": "Lithuania Country Economic Report, Volume I",
+            "date": "1992-07-06",
+            "quote": "a dramatic increase in the price of oil and other energy imports from Russia"
+          }
+        ]
+      },
+      {
+        "title": "EU accession boom and bust",
+        "text": "After EU entry in 2004, the IMF says large imbalances built up: the real exchange rate rose, competitiveness slipped and the current account deficit widened. When the boom ended, wages and prices fell instead, and the IMF says this painful adjustment laid the base for an export-led recovery.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "After the EU accession in 2004 and before the GFC, there was a built up of large imbalances"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "The painful but sizeable internal devaluation after the GFC set the basis for a strong export-led recovery"
+          }
+        ]
+      },
+      {
+        "title": "Productivity-led catch-up",
+        "text": "From the 2009 crash until 2022, the IMF says Lithuania caught up fast with the euro area, mainly through rising productivity and a strong export performance, especially in services. The export-led recovery held up even after trade sanctions on Russia in 2015 cost it export market share.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "Lithuania achieved fast income convergence towards the eurozone largely driven by productivity growth until the recent energy shock."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "the first set of trade sanctions imposed on Russia in 2015, which resulted in a 10 percent loss of export market share"
+          }
+        ]
+      },
+      {
+        "title": "War, energy and defense",
+        "text": "Russia's invasion of Ukraine in 2022 brought an energy shock, and income per person grew only 1.6 percent in 2022 and fell in 2023. Defense spending is now rising sharply, and the IMF counts it, with ageing, among the long-term pressures on public spending.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "The positive performance of the Lithuanian economy was interrupted by Russia's invasion of Ukraine in early 2022."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/15/pr-25299-lithuania-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Lithuania",
+            "date": "2025-09-17",
+            "quote": "Defense expenditure reached 2.8 percent of GDP in 2024 and is expected to rise to 5 percent of GDP for 2026-30"
+          }
+        ]
+      },
+      {
+        "title": "Shrinking, ageing workforce",
+        "text": "Low birth rates and years of net emigration have shrunk the workforce since 1991, and the population is ageing fast. The IMF's 2026 review lists population ageing, skills mismatches and shortages among Lithuania's structural constraints.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1ltuea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Lithuania: Selected Issues (IMF Country Report No. 24/243)",
+            "date": "2024-07",
+            "quote": "Demographic headwinds, along with net emigration, have reduced the size of the workforce by 20.6 percent from 1.9 million in 1991"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26264-lithuania-imf-concludes-2026-aiv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Republic of Lithuania",
+            "date": "2026-07-29",
+            "quote": "population aging, skills mismatches and shortages"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth held up in 2025: income per person rose 2.9 percent, its second year of recovery after the 2023 dip, and reached a new high. The IMF's 2026 review says spending at home and a build-up of stocks drove the gain.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26264-lithuania-imf-concludes-2026-aiv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Republic of Lithuania",
+          "date": "2026-07-29",
+          "quote": "Growth remained steady at 2.9 percent in 2025, driven by domestic demand and inventory accumulation."
+        }
+      ]
+    },
+    "tension": "The IMF writes of a remarkable performance since the 2008 crisis and rapid catch-up with the euro area. The data tell a rougher story: the era since 2008 averages 3.0 percent a year against 8.7 in 2000–2007, it opens with a 13.9 percent fall in 2009, and the tool classes Lithuania's growth as volatile. The IMF also describes a shrinking and ageing society, so part of the rise in income per person comes from fewer people rather than more output."
+  }
+}

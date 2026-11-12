@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "iso3": "CRI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CRI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Costa Rica Article IV staff report 2025 growth\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"OECD Economic Survey Costa Rica 2025\"",
+        "worldbank.org, iadb.org, oecd.org: \"Costa Rica economy overview free trade zones dual economy growth\"",
+        "imf.org: \"Costa Rica 2026 Article IV staff report pdf free trade zones growth outside\"",
+        "Critic re-opened every cited URL: imf.org CR 26/116 PDF (June 2026), imf.org CR 25/108 PDF (May 2025), imf.org 2026 mission concluding statement (2026-03-10), worldbank.org Costa Rica country page (last updated 2026-10-06), worldbank.org 2021 'Unleashing Central America's Growth Potential: Costa Rica' PDF; all quotes found verbatim"
+      ],
+      "critic_changes": [
+        "Headline: the 2.7 percent since 1990 was described as 'led by exporters in free trade zones', which the sources only say of recent years; reworded to 'lately free trade zone exports lead'.",
+        "Arc: 'That record grew out of the debt crisis' softened to 'followed' (no source makes that causal claim); 'whose investment built up manufacturing in the free trade zones' replaced with 'which brought in more foreign investment' since the World Bank passage mentions Intel and more FDI but not free trade zones; 'The IMF and the World Bank ... they find growth in the rest of the economy much slower' corrected, as only the IMF makes the inside/outside comparison.",
+        "Thread 'Opening up after the debt crisis': the claim that Intel's investment 'built the free trade zone manufacturing that leads exports today' was not supported by its citations; replaced with the World Bank's dual-economy point and added that passage (verified verbatim) as a third citation.",
+        "Thread 'Two economies, two speeds': the jobs and local-spillover claim had no supporting quote; replaced the World Bank 2021 dual-economy citation (moved to the history thread) with the IMF 2026 passage 'growth is less employment-intensive and has limited spillovers to the domestic economy', and dropped the sentence about the World Bank's 2021 description; removed 'from the free trade zones' from the export sentence because the IMF 2025 passage does not say it.",
+        "Thread 'Fiscal repair under a rule': 'Through the 2010s' changed to 'In much of the 2010s' (the passage covers 2010-2017); the claim that lower public spending held back non-zone growth had no supporting quote, so added the IMF 2026 passage on reduced fiscal outlays; 'held spending down' dropped in favour of the IMF's 'strict adherence to the fiscal rule'.",
+        "Thread 'Rising crime' retitled 'Crime and violence' and 'Homicides have risen' changed to 'Homicide rates have been relatively high for the past three years', matching what the IMF passage says.",
+        "Thread 'Short, sharp shocks': 'part of the fast run' changed to 'the start of the fast run', since the IMF passage counts from 2021.",
+        "since_last_year: timing corrected, as the March 2026 IMF statement cites tariffs and closures in the zones but not oil prices; oil appears only in the June 2026 report.",
+        "IMF 2026 report title given in full as printed on the cover (adds '—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica').",
+        "tier1_recent_found set to 4: the distinct recent tier 1 sources cited and verified (IMF CR 26/116, IMF CR 25/108, IMF March 2026 concluding statement, World Bank country page). The draft's 5 included uncited press releases.",
+        "All numbers checked against desk/data/CRI.json: 2.7 (1990-2025 era mean), -9.8 (1982), -2.2 (2009), -4.8 (2020), 7.7 (2021), 3.1 (2006-2015), 3.0 (2016-2025), 4.1 (2025) and the 2025 peak all match. No banned phrases found."
+      ]
+    },
+    "headline": "Costa Rica's income per person has grown a steady 2.7 percent a year since 1990; lately free trade zone exports lead while the rest of the economy lags.",
+    "arc": "Since 1990, Costa Rica's income per person has grown at about 2.7 percent a year with no lasting shift in pace, and in 2025 it reached its highest level yet. That record followed the debt crisis of the early 1980s, when income per person fell 9.8 percent in 1982. Afterwards the country opened to trade, and from the late 1990s it drew high-tech foreign firms such as Intel, which brought in more foreign investment. Downturns since then have been short: income per person fell 2.2 percent in 2009 and 4.8 percent in 2020, then grew 7.7 percent in 2021. The pace has barely changed from one decade to the next, at 3.1 percent a year over 2006–2015 and 3.0 percent over 2016–2025. The World Bank links recent strength to exports of medical devices and services, and the IMF finds growth outside the free trade zones much slower than inside them.",
+    "threads": [
+      {
+        "title": "Opening up after the debt crisis",
+        "about": "history",
+        "text": "After the debt crisis of the early 1980s, Costa Rica opened its economy to trade. From the late 1990s it went after high-tech foreign firms such as Intel. The World Bank says this also helped create a dual economy: a strong export sector beside smaller firms that could not keep up.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/840121623663348387/pdf/Unleashing-Central-Americas-Growth-Potential-Costa-Rica.pdf",
+            "publisher": "World Bank",
+            "title": "Unleashing Central America's Growth Potential: Costa Rica",
+            "date": "2021",
+            "quote": "The commercial opening expanded in the 1980s as a way to recover from the debt crisis."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/840121623663348387/pdf/Unleashing-Central-Americas-Growth-Potential-Costa-Rica.pdf",
+            "publisher": "World Bank",
+            "title": "Unleashing Central America's Growth Potential: Costa Rica",
+            "date": "2021",
+            "quote": "During the second half of the 1990s, Costa Rica began a more aggressive policy of attracting investments from high-tech companies such as Intel"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/840121623663348387/pdf/Unleashing-Central-Americas-Growth-Potential-Costa-Rica.pdf",
+            "publisher": "World Bank",
+            "title": "Unleashing Central America's Growth Potential: Costa Rica",
+            "date": "2021",
+            "quote": "this process also contributed to creating a dual economy, with a dynamic and competitive export sector and another less-competitive sector"
+          }
+        ]
+      },
+      {
+        "title": "Two economies, two speeds",
+        "about": "present",
+        "text": "Exports of medical devices and business services now outweigh the older farm and tourism exports. In 2025 the IMF found that the free trade zones grew far faster than the rest of the economy, so growth created fewer jobs and spread less to local firms.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1criea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2025-05",
+            "quote": "This has been particularly true for advanced manufacturing (notably medical devices) and business services, which now exceed the more traditional agricultural and tourism exports."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "Growth outside of the FTZs has been more restrained (3 percent y/y in 2025 compared with 12.7 percent y/y for the FTZs)"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "In this context, growth is less employment-intensive and has limited spillovers to the domestic economy."
+          }
+        ]
+      },
+      {
+        "title": "Short, sharp shocks",
+        "about": "history",
+        "text": "Downturns since 1990 have been brief. Income per person fell 2.2 percent in 2009 and quickly recovered, and after a 4.8 percent fall in 2020 it grew 7.7 percent in 2021, the start of the fast run the IMF describes.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/840121623663348387/pdf/Unleashing-Central-Americas-Growth-Potential-Costa-Rica.pdf",
+            "publisher": "World Bank",
+            "title": "Unleashing Central America's Growth Potential: Costa Rica",
+            "date": "2021",
+            "quote": "During the 2009 global crisis, real GDP per capita contracted by 2.3 percent, but quickly returned to its upward trajectory"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1criea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2025-05",
+            "quote": "Growth has averaged over 5 percent since 2021, outpacing regional peers and contributing to improvements in social indicators."
+          }
+        ]
+      },
+      {
+        "title": "Fiscal repair under a rule",
+        "about": "present",
+        "text": "In much of the 2010s the government ran the largest budget deficit in Central America. The IMF credits strict adherence to a fiscal rule with lowering borrowing costs, and says lower public spending helped hold back growth outside the free trade zones in 2025.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/840121623663348387/pdf/Unleashing-Central-Americas-Growth-Potential-Costa-Rica.pdf",
+            "publisher": "World Bank",
+            "title": "Unleashing Central America's Growth Potential: Costa Rica",
+            "date": "2021",
+            "quote": "Costa Rica has the largest general budget deficit in Central America, averaging 5.4 percent of GDP in 2010-2017"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "Strong growth, combined with strict adherence to the fiscal rule, lowered sovereign spreads and cuts in the policy rate have supported activity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "in part due to a reduction in fiscal outlays on goods, services, and transfers."
+          }
+        ]
+      },
+      {
+        "title": "Crime and violence",
+        "about": "present",
+        "text": "Homicide rates have been relatively high for the past three years, linked to organized crime and drug trafficking. The IMF says this has already hurt tourism and spending at home.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "recorded relatively high homicide rates over the past three years linked to disputes among organized crime groups and drug trafficking"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+            "date": "2026-06",
+            "quote": "This has had an impact on tourism and domestic demand."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 4.1 percent and reached a new high, driven by exports of medical devices and services. Since March 2026 the IMF has expected slower growth, pointing to US tariffs, the closure of several key businesses in the free trade zones and, by June, higher oil prices.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/ext/en/country/costarica",
+          "publisher": "World Bank",
+          "title": "Costa Rica (country overview)",
+          "date": "2026-10-06",
+          "quote": "Growth accelerated to 4.6 percent in 2025, driven by exports, particularly medical devices and services."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/10/mcs-03102026-costa-rica-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Costa Rica: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-03-10",
+          "quote": "the closure of several key businesses operating in the free trade zones"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1criea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Costa Rica: Staff Report for the 2026 Article IV Consultation and Review under the Flexible Credit Line Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Costa Rica",
+          "date": "2026-06",
+          "quote": "Growth is projected to moderate to 3.6 percent in 2026, as headwinds from higher oil prices and tariffs more-than-offset rising investment and strong export performance."
+        }
+      ]
+    },
+    "tension": "The sources describe a boom, with fast growth since 2021 and output in the free trade zones surging in 2025. The data show something steadier. Income per person grew 3.0 percent a year over 2016–2025, no faster than the 3.1 percent of 2006–2015, and part of the recent speed made up for the 4.8 percent fall in 2020. The IMF itself finds growth outside the zones much slower than the headline."
+  }
+}

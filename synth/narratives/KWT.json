@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "iso3": "KWT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KWT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "Kuwait Article IV consultation staff report 2025",
+        "Kuwait Macro Poverty Outlook World Bank Gulf Economic Update Kuwait",
+        "IMF Executive Board concludes 2024 Article IV consultation with Kuwait OPEC+ cuts contraction",
+        "Kuwait 2014 oil price decline growth expatriate population public sector employment Kuwaitis",
+        "Kuwait Iraqi invasion 1990 liberation oil fields reconstruction economy recovery",
+        "Kuwait 2009 recession global financial crisis oil production cut investment companies IMF",
+        "Kuwait 2017 Article IV IMF real GDP contracted OPEC agreement oil prices decline 2014",
+        "Pages opened and re-checked by the critic: imf.org PR 24/452 (9 Dec 2024), imf.org PR 26/61 (24 Feb 2026), imf.org 2025 Article IV staff concluding statement (18 Dec 2025), imf.org 2017 concluding statement (15 Nov 2017), imf.org WP/14/100 (June 2014), imf.org CR 10/239 (July 2010), worldbank.org Kuwait Economic Outlook Oct 2018, thedocs.worldbank.org Kuwait MPO (October 2026)"
+      ],
+      "critic_changes": [
+        "Headline: was 162 characters, so shortened to fit 160. It now dates the war, oil slump and OPEC+ causes to 'since 1990', because no source explains the fall from the 1971 peak through the 1970s and 1980s.",
+        "Arc, 1998–2007 sentence: the draft said a world boom drove the 14.6 percent jump in 2003. IMF CR 10/239 dates the boom to 'since 2004', so the 2003 jump is now stated without a cause and the boom (plus the calmer region and rising oil prices the report names) starts in 2004.",
+        "Arc, 1990–1997 and 2009: 'oilfields were brought back quickly' is now 'oil infrastructure was quickly restored', the WP/14/100 wording. The 2009 cause now reads 'lower oil prices and output', following CR 10/239's 'decline in oil prices and production'.",
+        "Thread 'OPEC+ quotas set the pace': dropped 'Since 2017', which no cited passage supports. Corrected the IMF PR 24/452 date from 2024-12 to 2024-12-09, the date the page shows.",
+        "Thread 'Invasion and a quick oil rebound': the second WP/14/100 quote was 30 words, over the 25-word limit. Replaced it with the paper's 24-word sentence on income per person and population, and added a quote on oil infrastructure being quickly restored. Text changed to 'above its pre-war level within two years' to match the quotes.",
+        "Thread 'Boom, crash and oil slump': the passages do not mention a credit boom or the crisis hitting investment companies, so both claims were removed. Replaced the 2004–08 growth quote with CR 10/239's passage on real estate and stock market prices, which supports the thread directly.",
+        "Thread 'Jobs split by nationality': removed the unsupported inference that hiring of foreign workers makes the population grow and weighs on income per person. Replaced it with what the MPO says about Q1 2026 employment, and added the MPO passage on falling employment among Kuwaitis.",
+        "Thread 'Conflict closes the oil route': 'Kuwait's main export route' became 'holding back oil exports' (the MPO says only 'limited number of routes'). Added the MPO passage on damage to the airport and refineries, and dropped 'public finances', which the cited passages here do not cover.",
+        "since_last_year: 'shut' became 'closed', matching the MPO's 'closure of the Strait of Hormuz'. Straightened the curly apostrophe in the quote to match the page.",
+        "Tension: removed the IMF's '7 percent' average growth figure for 2004–08, which is not in the data file and appeared outside a quoted passage. Every other number in the headline, arc and tension was checked against KWT.json series and growth_problem and matches.",
+        "All 8 cited pages were opened. The PDF quotes (WP/14/100, CR 10/239, MPO) were checked against the extracted text, and the dates (2014-06, 2010-07, 2026-10) match the documents. Four distinct tier 1 sources dated 2023 or later remain: PR 24/452, the Dec 2025 concluding statement, PR 26/61 and the Oct 2026 MPO."
+      ]
+    },
+    "headline": "Kuwait's income per person is 63.7 percent below its 1971 peak; since 1990, war, oil slumps and OPEC+ output cuts have kept knocking back its oil economy.",
+    "arc": "Kuwait's income per person peaked in 1971, and in 2025 it was 63.7 percent below that level and lower than in 1970, the first year of the record. The 1990–1997 era averaged 7.8 percent a year, but it was mostly a rebound: Iraq's invasion cut income per person by 26.5 percent in 1991, then oil infrastructure was quickly restored and the population shrank, so it jumped 51.1 percent in 1992. The 1998–2007 era averaged 2.6 percent: income per person jumped 14.6 percent in 2003, and from 2004 a world boom, a calmer region and rising oil prices lifted the economy, though the gains per person had faded by 2007. The 2008–2017 era averaged -4.0 percent: the global financial crisis and lower oil prices and output brought an 11.9 percent fall in 2009, lower oil prices later strained public finances, and OPEC+ output cuts led to an 8.2 percent fall in 2017. Since 2018 the average has been -0.9 percent, with new OPEC+ cuts behind a 7.0 percent fall in 2023 and their unwinding behind a 3.4 percent rise in 2025.",
+    "threads": [
+      {
+        "title": "OPEC+ quotas set the pace",
+        "text": "Kuwait's oil output follows quotas agreed with other OPEC+ producers, so its growth swings with those joint decisions. Cuts pulled the economy down in 2017 and 2023, and unwinding them drove the 2025 recovery.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/12/06/pr24452-kuwait-imf-executive-board-concludes-2024-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Kuwait",
+            "date": "2024-12-09",
+            "quote": "Oil sector real GDP contracted by 4.3 percent in 2023, driven by an OPEC+ production cut."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/23/pr-26061-kuwait-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Kuwait",
+            "date": "2026-02-24",
+            "quote": "Recovery is underway despite lower oil prices; rebound driven by unwinding of OPEC+ production cuts and robust non-oil growth."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/gcc/publication/kuwait-economic-outlook-october-2018",
+            "publisher": "World Bank",
+            "title": "Kuwait's Economic Outlook, October 2018",
+            "date": "2018-10-03",
+            "quote": "the economy contracted by 3.5 percent in 2017 weighed down by OPEC related oil production cuts"
+          }
+        ]
+      },
+      {
+        "title": "Invasion and a quick oil rebound",
+        "text": "Iraq's 1990 invasion halted production, and more than half of the oil wells were set on fire. Output came back fast once oil infrastructure was restored, and a sharp fall in population lifted income per person above its pre-war level within two years.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2014/wp14100.pdf",
+            "publisher": "IMF",
+            "title": "Economic Impact of Selected Conflicts in the Middle East: What Can We Learn from the Past? (WP/14/100)",
+            "date": "2014-06",
+            "quote": "Over 60 percent of the existing oil wells were set on fire."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2014/wp14100.pdf",
+            "publisher": "IMF",
+            "title": "Economic Impact of Selected Conflicts in the Middle East: What Can We Learn from the Past? (WP/14/100)",
+            "date": "2014-06",
+            "quote": "Oil sector infrastructure was quickly restored; the financial system rapidly resumed operations"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2014/wp14100.pdf",
+            "publisher": "IMF",
+            "title": "Economic Impact of Selected Conflicts in the Middle East: What Can We Learn from the Past? (WP/14/100)",
+            "date": "2014-06",
+            "quote": "real GDP per capita was well above its pre-war level two years after the war ended due to the significant contraction in its population"
+          }
+        ]
+      },
+      {
+        "title": "Boom, crash and oil slump",
+        "text": "High oil prices and a world boom lifted property and share prices in the mid-2000s. The global financial crisis ended it with a steep fall in those prices, and lower oil prices later in the decade weakened public finances.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10239.pdf",
+            "publisher": "IMF",
+            "title": "Kuwait: Financial System Stability Assessment—Update (IMF Country Report No. 10/239)",
+            "date": "2010-07",
+            "quote": "Improvements in fundamentals and abundant liquidity supported strong increases in real estate and stock market prices."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10239.pdf",
+            "publisher": "IMF",
+            "title": "Kuwait: Financial System Stability Assessment—Update (IMF Country Report No. 10/239)",
+            "date": "2010-07",
+            "quote": "The crisis triggered a steep fall in real estate and equity prices and weakened the financial balance sheets of the public and private sectors."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2017/11/15/ms111517-2017-article-iv-consultation-with-kuwait-imf-concluding-statement",
+            "publisher": "IMF",
+            "title": "2017 Article IV Consultation with Kuwait: IMF Concluding Statement",
+            "date": "2017-11-15",
+            "quote": "Lower oil prices have weakened fiscal and external positions and generated large fiscal financing needs."
+          }
+        ]
+      },
+      {
+        "title": "Jobs split by nationality",
+        "text": "Kuwaiti citizens mostly work for the state, while foreign workers fill most private jobs. In early 2026 total employment still rose, driven by foreign workers, while employment of Kuwaitis fell.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/18/cs-kuwait-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kuwait: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-12-18",
+            "quote": "Kuwaitis largely prefer public sector jobs while expatriates fill most private sector jobs."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+            "date": "2026-10",
+            "quote": "Total employment increased by 3.1 percent year-on-year in calendar year Q1 2026, driven by non-Kuwaiti workers, whose employment rose by 4.8 percent."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+            "date": "2026-10",
+            "quote": "In contrast, employment among Kuwaiti nationals declined by 3.3 percent across sectors, including within the government sector."
+          }
+        ]
+      },
+      {
+        "title": "Conflict closes the oil route",
+        "text": "The Middle East conflict of 2026 disrupted shipping through the Strait of Hormuz, holding back oil exports, and damaged refineries, ports and the airport. It shows again how much growth rests on oil sold abroad.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+            "date": "2026-10",
+            "quote": "Disruptions to shipping in the Strait of Hormuz have constrained oil exports and inflated import costs."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+            "date": "2026-10",
+            "quote": "The current conflict, however, has led to substantial damage to key infrastructure, including Kuwait International Airport, the Mina Al Ahmadi and Mina Abdullah refineries"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/23/pr-26061-kuwait-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Kuwait",
+            "date": "2026-02-24",
+            "quote": "Heavy dependence on oil implies main risks stem from oil-price and OPEC+ production developments."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 the economy recovered as OPEC+ output cuts were unwound, and income per person rose 3.4 percent. Then the 2026 Middle East conflict closed shipping through the Strait of Hormuz and damaged key infrastructure. The World Bank now expects a deep contraction in 2026, and in September 2026 the government allowed borrowing from its Future Generations Fund for the first time in decades.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+          "date": "2026-10",
+          "quote": "Kuwait's economy is expected to contract by 14.6 percent in calendar year 2026, reflecting the heavy toll of conflict"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-kwt.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Kuwait (October 2026)",
+          "date": "2026-10",
+          "quote": "the government's decision to issue a decree in early September 2026 authorizing borrowing from the Future Generations Fund (FGF) for the first time since 1990"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/23/pr-26061-kuwait-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Kuwait",
+          "date": "2026-02-24",
+          "quote": "Recovery is underway despite lower oil prices; rebound driven by unwinding of OPEC+ production cuts and robust non-oil growth."
+        }
+      ]
+    },
+    "tension": "The IMF describes 2004–08 as a time of strong economic growth, fed by a world boom and rising oil prices. Income per person tells a weaker story. It rose 7.8 percent in 2004 and 6.7 in 2005, was flat by 2007 (-0.1) and fell 3.1 percent in 2008, because the population was growing fast too and shared the gains. The early 1990s run the other way. The IMF says the economy as a whole took seven years to regain its pre-war size, yet income per person was above its pre-war level within two years because the population shrank. So the 7.8 percent average for 1990–1997 reflects a rebound and fewer people, not a long boom."
+  }
+}

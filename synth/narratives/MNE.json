@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "iso3": "MNE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MNE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 list, all searches)",
+        "query: Montenegro Article IV 2025 staff report concluding statement",
+        "query: Montenegro Macro Poverty Outlook 2025 tourism growth",
+        "query: Montenegro credit boom 2007 2008 bust banking crisis FDI independence",
+        "query: Montenegro COVID-19 tourism collapse 2020 GDP contraction highway Bar-Boljare debt",
+        "opened: World Bank Macro Poverty Outlook Montenegro (October 2026); World Bank Country Partnership Framework FY25-29 (August 2024); IMF Country Report 25/304 (November 2025); IMF 2025 Article IV staff concluding statement (September 2025, opened, not cited); World Bank Montenegro After the Crisis (January 2012); IMF Country Report 13/271 (August 2013)",
+        "critic check: all five cited PDFs re-fetched from thedocs.worldbank.org, documents1.worldbank.org and imf.org, text extracted, every quote and date matched against the page text",
+        "tier 2 (UN) not searched: tier 1 gave 4 recent sources"
+      ],
+      "critic_changes": [
+        "Every cited URL was re-fetched and its text extracted. All five documents exist on tier 1 domains, and every quote was found on its page. All dates match: MPO October 2026, CPF August 14, 2024, IMF CR 25/304 November 2025, WB Report 65909-ME January 2012, IMF CR 13/271 August 2013.",
+        "Thread 1 quote: changed 'more than 40 percent of GDP' to the page's wording, 'more than 40 per cent of GDP'.",
+        "since_last_year IMF quote: changed '2021-23' to the page's en dash, '2021–23'.",
+        "Thread 3: dropped 'From 2015'. No cited source dates the start of the highway work, so it now says 'In the late 2010s', the period the CPF passage describes.",
+        "Thread 4: dropped 'ties each year's growth to the summer season', which no source supports. The draft also credited the influx of newcomers for 2021 and 2022, while the cited passage covers only 2023. 2021 is now credited to the tourism recovery, with a new verified CPF quote, and the influx is described with the sources' booming-tourism wording.",
+        "Thread 5: dropped 'more on household spending than on exports'. The cited passage says only that growth is increasingly consumption driven.",
+        "since_last_year: 'describes a pick-up in 2026' changed to 'expects a pick-up in 2026', because the MPO figure is a projection. Dropped the claim that the tourist season strengthened, to keep the text within the cited passages. Replaced the general 'resilient but uneven' quote with verified MPO passages on regaining momentum toward the 2028 accession target, the Pljevlja electricity rebound and the fading wage impulse, so every claim has a cited passage.",
+        "Tension: rephrased so it rests on arithmetic from the data and the sources' reported output growth: per-capita growth no slower than output growth means no population growth in the data. The speculation about population counts is kept only as a hedged 'may'.",
+        "Arc: small rewording ('When a real-estate bubble burst just as the global financial crisis hit') to match the source's description. Every number in the headline, arc, threads, since_last_year and tension was checked against desk/data/MNE.json (G4 eras 3.1/1.0/3.4, G5 sd 5.8, G3 peak 2025, and series values 8.4, -6.2, -2.7, -15.0, 13.3, 8.0, 6.5, 4.7, 4.3, 3.2, 2.8, credit 8.1/86.6/49.5, investment 39.0/24.9/29.8). All match.",
+        "No banned phrases and no recommendation language. 5 threads and 3 distinct recent tier 1 cited sources survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Montenegro's income per person is at a record high after a credit boom, a long bust, a highway build and a pandemic swing; tourism still sets the pace.",
+    "arc": "From 1998 to 2008 income per person grew 3.1 percent a year. The era ended in a boom after independence in 2006, when foreign investment and bank credit poured in and growth reached 8.4 percent in 2006. When a real-estate bubble burst just as the global financial crisis hit, income per person fell 6.2 percent in 2009, and 2009 to 2016 averaged only 1.0 percent a year, with a second fall of 2.7 percent in 2012 after a harsh winter and a slump in aluminum output. From 2017 growth picked up to 3.4 percent a year, first on highway building and private investment in tourism and energy, then through a pandemic swing: a fall of 15.0 percent in 2020 and a tourism-led rebound of 13.3 percent in 2021. Growth has since eased, to 3.2 percent in 2024 and 2.8 percent in 2025, yet income per person is at its highest level so far. Over the last 20 years growth has swung more than in most economies, with a standard deviation of 5.8.",
+    "threads": [
+      {
+        "title": "Independence, credit boom and bust",
+        "about": "history",
+        "text": "After independence in 2006, foreign money and bank credit flooded in: private credit rose from 8.1 percent of GDP in 2002 to 86.6 percent in 2008, and investment reached 39.0 percent of GDP in 2008. Much of the boom went into real estate, and when that bubble burst as the global crisis hit, income per person fell 6.2 percent in 2009.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/700301468060528401/pdf/659090ESW0P1200C0disclosed060220120.pdf",
+            "publisher": "World Bank",
+            "title": "Montenegro After the Crisis: Towards a Smaller and More Efficient Government (Public Expenditure and Institutional Review)",
+            "date": "2012-01",
+            "quote": "At the height of the boom in 2007, gross FDI had represented more than 40 per cent of GDP"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/700301468060528401/pdf/659090ESW0P1200C0disclosed060220120.pdf",
+            "publisher": "World Bank",
+            "title": "Montenegro After the Crisis: Towards a Smaller and More Efficient Government (Public Expenditure and Institutional Review)",
+            "date": "2012-01",
+            "quote": "Against the background of the bursting real-estate bubble, the global financial crisis made the recession deeper and more prolonged than in neighboring countries"
+          }
+        ]
+      },
+      {
+        "title": "A slow decade of repair",
+        "about": "history",
+        "text": "Firms and households were left with heavy debts after the bust, and private credit shrank to 49.5 percent of GDP by 2016. Growth stayed weak, and output fell again in 2012 when a harsh winter and a slump at the troubled aluminum plant hit.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13271.pdf",
+            "publisher": "IMF",
+            "title": "Montenegro: 2013 Article IV Consultation (IMF Country Report No. 13/271)",
+            "date": "2013-08",
+            "quote": "Montenegro's recovery from the collapse of the lending boom in 2008 has been slowed by the debt overhang that remains in the private sector."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13271.pdf",
+            "publisher": "IMF",
+            "title": "Montenegro: 2013 Article IV Consultation (IMF Country Report No. 13/271)",
+            "date": "2013-08",
+            "quote": "Output contracted in 2012 because of unusually severe winter weather early in the year, as well as a sharp decline in aluminum production"
+          }
+        ]
+      },
+      {
+        "title": "Highway and tourism build-out",
+        "about": "history",
+        "text": "In the late 2010s the state built the first section of the Bar-Boljare highway, while private money went into tourism and energy. Investment rose from 24.9 percent of GDP in 2016 to 29.8 percent in 2018, and income per person grew 4.7 percent in 2018 and 4.3 percent in 2019. The highway, paid for with a Chinese loan, also pushed public debt up.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082024155559792/pdf/BOSIB11ef4456f06d1be84124abeb6f1340.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Montenegro for the Period FY25-29",
+            "date": "2024-08-14",
+            "quote": "Strong economic performance was driven by large public infrastructure projects and robust private investment in the tourism and energy sectors."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082024155559792/pdf/BOSIB11ef4456f06d1be84124abeb6f1340.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Montenegro for the Period FY25-29",
+            "date": "2024-08-14",
+            "quote": "public debt increased steadily, owing largely to the highway construction project financed by a US$1 billion loan from the Export-Import Bank of China"
+          }
+        ]
+      },
+      {
+        "title": "Tourism sets the swings",
+        "about": "present",
+        "text": "Tourism leaves growth exposed to shocks abroad: the pandemic cut income per person by 15.0 percent in 2020, and a tourism recovery lifted it 13.3 percent in 2021. Booming tourism and an influx of newcomers, mainly Russian and Ukrainian citizens, kept growth strong at 8.0 percent in 2022 and 6.5 percent in 2023.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082024155559792/pdf/BOSIB11ef4456f06d1be84124abeb6f1340.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Montenegro for the Period FY25-29",
+            "date": "2024-08-14",
+            "quote": "The economy bounced back swiftly, however, recording 13 percent growth in 2021, driven by solid tourism recovery"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082024155559792/pdf/BOSIB11ef4456f06d1be84124abeb6f1340.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Montenegro for the Period FY25-29",
+            "date": "2024-08-14",
+            "quote": "Strong growth continued into 2023, at 6 percent, supported by booming tourism and an influx of foreigners, primarily Russian and Ukrainian citizens"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mne.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Montenegro (October 2026)",
+            "date": "2026-10",
+            "quote": "Montenegro's small, open, and euroized economy is exposed to external demand, energy, tourism, and financing shocks."
+          }
+        ]
+      },
+      {
+        "title": "Wage reforms and home spending",
+        "about": "present",
+        "text": "Since 2022 the Europe Now reforms have raised net wages and pensions and cut taxes on work, which lifted incomes and formal jobs. Growth has come to rest more on household spending.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mne.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Montenegro (October 2026)",
+            "date": "2026-10",
+            "quote": "Europe Now reforms raised net wages and pensions and reduced labor taxation, supporting incomes, formal employment, and living standards."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mneea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Montenegro: 2025 Article IV Consultation, Press Release and Staff Report (IMF Country Report No. 25/304)",
+            "date": "2025-11",
+            "quote": "Montenegro's economy is heavily dependent on tourism, while growth is increasingly consumption driven."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth kept slowing. Income per person rose 2.8 percent in 2025 after 3.2 percent in 2024, and the IMF said in November 2025 that public finances had begun to weaken again. The World Bank's October 2026 update expects a pick-up in 2026, as electricity output recovered after an upgrade of the Pljevlja power plant, while the lift to incomes from the wage reforms faded and EU accession talks moved toward a 2028 target.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mne.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Montenegro (October 2026)",
+          "date": "2026-10",
+          "quote": "Economic growth is regaining momentum as the EU accession enters a decisive phase ahead of the 2028 target."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mne.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Montenegro (October 2026)",
+          "date": "2026-10",
+          "quote": "driven by a 95.4 percent rebound in electricity output after the environmental upgrade of the Pljevlja thermal power plant"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-mne.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Montenegro (October 2026)",
+          "date": "2026-10",
+          "quote": "The real-income impulse from the minimum-wage and social-contribution reforms faded after average real net wages rose by 11.3 percent in 2025."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mneea2025002-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Montenegro: 2025 Article IV Consultation, Press Release and Staff Report (IMF Country Report No. 25/304)",
+          "date": "2025-11",
+          "quote": "Following a substantial improvement from 2021–23, the fiscal position has begun to weaken once again."
+        }
+      ]
+    },
+    "tension": "The sources credit part of the 2022 to 2023 surge to an influx of foreigners, mainly from Russia and Ukraine. More residents would normally make income per person grow more slowly than total output. Yet in the data income per person rose 8.0 percent in 2022 and 6.5 percent in 2023, no slower than the output growth the sources report, as if the population had not grown at all. The population counts behind the data may not capture the newcomers."
+  }
+}

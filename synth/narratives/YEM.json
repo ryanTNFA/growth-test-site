@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "YEM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "YEM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Yemen economic monitor 2025 World Bank\"",
+        "same tier 1 domains: \"Yemen Article IV IMF staff 2025 press release\"",
+        "same tier 1 domains: \"Yemen 2011 political crisis economy contracted oil pipeline attacks\"",
+        "opened: worldbank.org press releases 2025-06-02 and 2026-05-21; imf.org 2025 Article IV concluding statement (2025-10-09), Board press release (2026-04-03), SMP press release (2026-10-07), IMF Program Note on Yemen, 2013 Article IV staff report (cr13246.pdf)",
+        "critic: re-opened all seven cited URLs (imf.org, worldbank.org); 2013 staff report PDF read as extracted text"
+      ],
+      "critic_changes": [
+        "Thread 'An oil economy in slow decline': text said the IMF expected oil output to keep falling 'even before the crisis', but the cited 2013 staff report was written after the 2011 crisis and projects oil to resume its long-term decline once sabotage eases; reworded to match. Quote extended to the page's words 'but would thereafter resume...'.",
+        "Thread 'The 2011 political crisis': 'Unrest in 2011' replaced with 'A political crisis in 2011' to match the cited passage; added a citation from the 2013 staff report ('oil production declined further, due to continued sabotage of the pipelines') because no cited passage supported the pipeline-sabotage sentence.",
+        "Thread 'War since 2015': the claim that both the World Bank and the IMF name the conflict as the reason for the fall was not supported by the World Bank passage, which gives only the decline since 2015; reworded so only the IMF attributes the fall to the conflict.",
+        "Thread 'Oil exports stopped in 2022': the IMF concluding statement quote extended to the page's full sentence ('After the Houthis' attacks...'); the causal link to recession is now attributed to the IMF.",
+        "Thread 'A divided economy, shrinking aid': quote extended to the page's words ('The country's deepening division into two economic zones').",
+        "since_last_year: the World Bank credits the rial's stabilization to central bank measures and external inflows including Saudi support, not Saudi support alone; reworded and the quote extended. Added the IMF Board press release citation, which supports the resumption of Article IV reviews after a long break but was not cited. 'The IMF approved' changed to 'IMF management approved', as the press release states.",
+        "All numbers checked against desk/data/YEM.json: 1.6 (1991-2010 era), -15.3 (2011), -30.2 (2015), -8.7 (2011-2018 era), 54.2 (shortfall from 2010 peak), and level first reached 1990 all match; the 2016-2018 declines confirm 'kept falling every year to 2018'. No figures outside the data appear outside quoted passages.",
+        "All seven cited URLs re-opened; all on tier 1 domains, dates match the documents, five distinct recent (2023 or later) tier 1 sources confirmed. No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Twenty years of slow growth ended in 2011; political crisis, then war from 2015, left income per person in 2018 below its 1990 level.",
+    "arc": "From 1991 to 2010 income per person in Yemen grew 1.6 percent a year on average, in an economy the IMF described as heavily dependent on oil, with oil output on a long downward trend. The 2011 political crisis broke that run: unrest and sabotage of oil pipelines cut output, and income per person fell 15.3 percent that year. After a brief steadying, armed conflict began in March 2015 and income per person fell 30.2 percent in a single year. Across 2011 to 2018 growth averaged -8.7 percent a year, and by 2018 income per person was 54.2 percent below its 2010 peak and lower than in 1990. The data stop in 2018, but the sources describe further decline since then, as attacks on oil facilities halted oil exports in 2022, the country split into two economic zones and aid fell.",
+    "threads": [
+      {
+        "title": "An oil economy in slow decline",
+        "text": "From 1991 to 2010 income per person grew 1.6 percent a year on average. The IMF described an economy heavily exposed to oil, and in 2013 it expected oil output, once sabotage eased, to go back to its long-term decline.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/country/notes/yemen.htm",
+            "publisher": "IMF",
+            "title": "IMF Program Note on the Republic of Yemen",
+            "date": "2016-04-07",
+            "quote": "high dependence on hydrocarbon resources exposes the economy to external shocks"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13246.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Yemen: 2013 Article IV Consultation, Staff Report",
+            "date": "2013-07",
+            "quote": "but would thereafter resume its long term declining trend"
+          }
+        ]
+      },
+      {
+        "title": "The 2011 political crisis",
+        "text": "A political crisis in 2011 led to a political transition and a sharp fall in output: income per person fell 15.3 percent that year. Sabotage of oil pipelines kept oil output falling into 2012, even as the wider economy steadied.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13246.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Yemen: 2013 Article IV Consultation, Staff Report",
+            "date": "2013-07",
+            "quote": "In 2011, Yemen experienced a political crisis that triggered a political transition process and led to a decline in economic output."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13246.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Yemen: 2013 Article IV Consultation, Staff Report",
+            "date": "2013-07",
+            "quote": "On the other hand, oil production declined further, due to continued sabotage of the pipelines."
+          },
+          {
+            "url": "https://www.imf.org/external/np/country/notes/yemen.htm",
+            "publisher": "IMF",
+            "title": "IMF Program Note on the Republic of Yemen",
+            "date": "2016-04-07",
+            "quote": "The 2011 political crisis aggravated the already difficult economic situation."
+          }
+        ]
+      },
+      {
+        "title": "War since 2015",
+        "text": "Armed conflict from March 2015 brought a collapse: income per person fell 30.2 percent in 2015 and kept falling every year to 2018, the last year in the data. The IMF says the internal conflict caused a marked fall in income per person, and the World Bank reports a steep decline since 2015.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/country/notes/yemen.htm",
+            "publisher": "IMF",
+            "title": "IMF Program Note on the Republic of Yemen",
+            "date": "2016-04-07",
+            "quote": "With the onset of armed conflict in March 2015, real activity collapsed"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/02/economic-fragmentation-and-external-shocks-hamper-yemen-s-recovery-path",
+            "publisher": "World Bank",
+            "title": "Economic Fragmentation and External Shocks Hamper Yemen's Recovery Path",
+            "date": "2025-06-02",
+            "quote": "real GDP per capita has declined by 58 percent since 2015"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/02/pr-26106-yemen-imf-executive-board-concludes-2025-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Yemen",
+            "date": "2026-04-03",
+            "quote": "The internal conflict caused a marked decrease in income per capita"
+          }
+        ]
+      },
+      {
+        "title": "Oil exports stopped in 2022",
+        "text": "Attacks on oil facilities halted oil exports in 2022, and Yemen became an oil importer; the IMF describes a deep recession after the halt. In 2026 the World Bank reported that the exports were still blocked.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/09/imf-cs-yemen-2025-imf-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Yemen: Concluding Statement of the 2025 IMF Article IV Mission",
+            "date": "2025-10-09",
+            "quote": "After the Houthis' attacks on oil facilities halted oil exports in 2022, Yemen became an oil importer."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/02/pr-26106-yemen-imf-executive-board-concludes-2025-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Yemen",
+            "date": "2026-04-03",
+            "quote": "the deep recession following the suspension of oil exports in 2022"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+            "publisher": "World Bank",
+            "title": "Economic Strain Deepens in Yemen as Regional Risks Intensify",
+            "date": "2026-05-21",
+            "quote": "Oil exports are still blocked"
+          }
+        ]
+      },
+      {
+        "title": "A divided economy, shrinking aid",
+        "text": "The World Bank describes a country splitting into two economic zones, with separate institutions, monetary authorities and exchange rates. At the same time, donor money has fallen, which the World Bank expects to hold back activity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/02/economic-fragmentation-and-external-shocks-hamper-yemen-s-recovery-path",
+            "publisher": "World Bank",
+            "title": "Economic Fragmentation and External Shocks Hamper Yemen's Recovery Path",
+            "date": "2025-06-02",
+            "quote": "The country's deepening division into two economic zones"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/02/economic-fragmentation-and-external-shocks-hamper-yemen-s-recovery-path",
+            "publisher": "World Bank",
+            "title": "Economic Fragmentation and External Shocks Hamper Yemen's Recovery Path",
+            "date": "2025-06-02",
+            "quote": "decreases in donor financing and sanctions compliance risks are expected to constrain economic activity"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In August 2025 the rial in Aden rose sharply and then held steady, helped by central bank measures and money from abroad, including Saudi support. In April 2026 the IMF resumed its regular reviews of Yemen's economy after a long break, and in October 2026 IMF management approved a staff-monitored program. Both lenders say the war in the Middle East has darkened the outlook, and the IMF now expects output to shrink again in 2026.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/05/21/economic-strain-deepens-in-yemen-as-regional-risks-intensify",
+          "publisher": "World Bank",
+          "title": "Economic Strain Deepens in Yemen as Regional Risks Intensify",
+          "date": "2026-05-21",
+          "quote": "The Yemeni rial in Aden appreciated sharply in August 2025 and has since stabilized, supported by Central Bank measures"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/02/pr-26106-yemen-imf-executive-board-concludes-2025-article-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Yemen",
+          "date": "2026-04-03",
+          "quote": "The IMF resumed Article IV consultations with Yemen after an 11-year hiatus."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26324-imf-management-approves-a-staff-monitored-program-with-yemen",
+          "publisher": "IMF",
+          "title": "IMF Management Approves a Staff-Monitored Program with Yemen",
+          "date": "2026-10-07",
+          "quote": "Real GDP is projected to contract for a fifth consecutive year, declining by 1.5 percent in 2026"
+        }
+      ]
+    },
+    "tension": "The data file stops in 2018, when income per person was 54.2 percent below its 2010 peak. The sources describe more years of decline after that, including the halt of oil exports in 2022, so the gap shown here probably understates where income per person stands today. The sources also differ among themselves on recent years: the IMF and the World Bank give different estimates of how much output fell in 2025."
+  }
+}

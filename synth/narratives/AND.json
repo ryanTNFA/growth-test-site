@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "iso3": "AND",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AND",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: Andorra IMF Article IV staff concluding statement (tier 1 domain list)",
+        "imf.org, worldbank.org, oecd.org and other tier 1 domains: Andorra economy global financial crisis recession 2009 2012 banking real estate Spain IMF",
+        "imf.org: Principality of Andorra 2026 Article IV Consultation staff report country report",
+        "Opened: IMF 2026 Article IV concluding statement (2026-03-09), IMF press release PR26/134 (2026-05-04), IMF Country Report 26/88 staff report PDF, IMF Country Report 25/93 Selected Issues PDF, IMF 2023 Article IV concluding statement (2023-12-18), IMF 2025 Article IV country report landing page",
+        "Critic re-opened: imf.org IMF Country Report 25/93 PDF and IMF Country Report 26/88 PDF (text extracted and every quote checked)"
+      ],
+      "critic_changes": [
+        "Verified all 13 quoted passages against text extracted from the two IMF PDFs (CR 25/93, dated April 2025; CR 26/88, dated May 2026). All appear verbatim, and both dates match the documents. No citation dropped.",
+        "Checked every number against desk/data/AND.json: the 1.6 percent shortfall from the 1970 peak, the era averages 0.1, 3.4, -1.5 and 1.6, the falls of 7.4 percent (2008), 5.7 percent (2009) and 12.2 percent (2020, the lowest in the series), the rises of 6.9 percent (2021) and 7.7 percent (2022), and growth of 2.5 percent (2024) and 2.7 percent (2025). All are correct.",
+        "Property bust thread: the draft said the 2015 banking crisis alone halved the financial sector's share of growth. The source puts the halving over the last 20 years and ties it to the 2015 crisis together with changes in global banking, so the sentence now says that.",
+        "Growth from more people thread: the old first quote (population up 12,000) did not support 'most of the rise came from immigration'. It is replaced by the page's next sentence (89 percent from net migration).",
+        "Narrow base thread: removed 'real estate' from the low-productivity sectors, because the cited passage names only tourism and retail trade. Added a third CR 25/93 citation (Monaco, Luxembourg, Switzerland) to support the comparison with peers, which the draft's quotes did not cover. Kept '50 years' out of the prose because it is not a data-file number.",
+        "since_last_year: the old quote did not mention the sectors named in the text. It is replaced by the staff report's sentence naming financial services, real estate and construction. The 3.9 percent figure, which appeared only inside a quote, is dropped.",
+        "Tension: 'above potential in 2024 and 2025' was more specific than the source, which says 'in recent years'. It now says that, and that growth beat expectations in both years (per CR 26/88). 'Because' is softened to 'partly because', since the IMF does not attribute the gap to population in so many words.",
+        "No banned phrases or recommendation language found. tier1_recent_found stays at the drafter's count of 5; the critic re-verified 2 distinct recent tier 1 sources, which still meets the minimum of 2."
+      ]
+    },
+    "headline": "Andorra's income per person is still just below its 1970 level, after a long slide, a finance and ski boom, a property bust and a recent upswing.",
+    "arc": "Income per person in Andorra was highest in 1970, the first year of the record, and in 2025 it was still 1.6 percent below that level; the IMF describes decades in which growth barely kept pace with a growing population. From 1990 to 1997 growth averaged 0.1 percent a year, as falls in 1991 to 1993 were followed by a strong recovery from 1995. From 1998 to 2005 it averaged 3.4 percent, as the economy turned towards banking and financial services and expanded winter tourism, with higher investment and productivity. From 2006 to 2013 it averaged -1.5 percent, as the global financial crisis brought a real estate crisis and a retreat of financial services. Since 2014 growth has averaged 1.6 percent, through a banking crisis in 2015 and a collapse of 12.2 percent in 2020, with the recent upswing carried by tourism, real estate, construction, financial services and fast population growth from immigration.",
+    "threads": [
+      {
+        "title": "Finance and ski boom",
+        "about": "history",
+        "text": "From the mid-1990s until the global financial crisis, the long stagnation turned around. The IMF links this to a shift towards banking and financial services and to more winter tourism, with higher investment and productivity. In the data, growth averaged 3.4 percent a year from 1998 to 2005.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "This trend was reversed between the mid-1990s and the great financial crisis (GFC), with higher investment and productivity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "The Andorran economy experienced structural changes towards banking and financial services and expanded winter tourism."
+          }
+        ]
+      },
+      {
+        "title": "Property bust, banking retreat",
+        "about": "history",
+        "text": "After the global financial crisis, Andorra went through a real estate crisis while its banks pulled back as the world turned against financial secrecy. Income per person fell 7.4 percent in 2008 and 5.7 percent in 2009. Over the last two decades the financial sector's contribution to growth halved, after the 2015 banking crisis and changes in global banking.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "the economy adjusted to a real estate market crisis and a retrenchment of financial services"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "the contribution of the financial and insurance sector halved, following the 2015 banking crisis and structural changes in global banking and financial secrecy."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse and rebound",
+        "about": "history",
+        "text": "Income per person fell 12.2 percent in 2020, the deepest drop in the record, then rose 6.9 percent in 2021 and 7.7 percent in 2022. The IMF describes a strong recovery from the pandemic.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "The country has strongly recovered from the pandemic and has accumulated foreign reserves."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+            "date": "2026-05",
+            "quote": "Rapid recovery from the pandemic enabled swift reduction in debt."
+          }
+        ]
+      },
+      {
+        "title": "Growth from more people",
+        "about": "present",
+        "text": "Recent growth has leaned on new arrivals: most of the rise in population since 2016 came from immigration, and from the building that followed. Tourism and real estate investment also drew money in. The IMF expects this push to fade as immigration and construction slow.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "The majority of this increase—89 percent—was driven by net migration, which added 10,700 people to the country."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+            "date": "2026-05",
+            "quote": "growth is expected to slow toward its potential as momentum from inbound immigration and related construction moderates"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+            "date": "2026-05",
+            "quote": "Andorra remains an attractive destination for tourism and real estate investment, supporting growth above potential in recent years"
+          }
+        ]
+      },
+      {
+        "title": "A narrow, low-productivity base",
+        "about": "present",
+        "text": "The IMF describes an economy with a small home market that still leans on tourism and retail trade, sectors where output per worker is low. It contrasts Andorra's flat income per person with small European neighbours such as Monaco, Luxembourg and Switzerland, where income rose strongly over the same decades.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+            "date": "2026-05",
+            "quote": "Andorra’s small market size and reliance on low productivity sectors such as tourism and retail trade limit potential growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "In the last 50 years, growth in Andorra barely matched population growth, resulting in a stagnating GDP per capita."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1andea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Andorra: Selected Issues (IMF Country Report No. 25/93)",
+            "date": "2025-04",
+            "quote": "During the last 50 years, income in Monaco and Luxembourg doubled, while in Switzerland it increased by 70 percent."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF's May 2026 review found that growth in 2025 beat expectations for a second year running, led by financial services, real estate and construction. In the data, income per person rose 2.7 percent in 2025. The IMF expects the war in the Middle East to slow growth and push up prices in 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+          "date": "2026-05",
+          "quote": "Growth in 2025 surprised on the upside for the second consecutive year driven by strong activity in financial services, real estate, and construction."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1andea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Principality of Andorra: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/88)",
+          "date": "2026-05",
+          "quote": "The war in the Middle East will weigh on growth and put upward pressure on inflation in the near term."
+        }
+      ]
+    },
+    "tension": "The IMF describes growth running above potential in recent years and beating expectations in both 2024 and 2025, but income per person rose a more modest 2.5 and 2.7 percent in those years, partly because the population grew fast through immigration. Even after the recent upswing, income per person in 2025 was still 1.6 percent below its 1970 level."
+  }
+}

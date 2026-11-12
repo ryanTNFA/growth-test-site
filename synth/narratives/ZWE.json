@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "iso3": "ZWE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ZWE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Zimbabwe Article IV consultation 2025 staff concluding statement",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Zimbabwe economic update World Bank 2025 growth drought ZiG currency",
+        "imf.org, worldbank.org, afdb.org: IMF Zimbabwe Staff-Monitored Program 2026 press release",
+        "worldbank.org: Zimbabwe Country Growth and Jobs Report 2026 growing without transforming",
+        "Opened and verified by the critic: thedocs.worldbank.org MPO Zimbabwe (October 2026); documents1.worldbank.org Zimbabwe Country Growth and Jobs Report (2026); imf.org PR 25/323 (2025-10-02); imf.org PR 26/122 (2026-04-16); imf.org PR 26/325 (2026-10-07)"
+      ],
+      "critic_changes": [
+        "Opened all five cited documents (both World Bank PDFs extracted to text locally, three IMF press releases); every quoted passage was found verbatim or near-verbatim and every date matches (CGJR: (c) 2026; MPO footer: October 2026; IMF PRs 2025-10-02, 2026-04-16, 2026-10-07).",
+        "MPO citations: title changed from 'Macro Poverty Outlook for Zimbabwe: Annual Meetings 2026' to 'Macro Poverty Outlook: Zimbabwe', because 'Annual Meetings 2026' does not appear in the document; the document's own footer says 'Macro Poverty Outlook / October 2026'.",
+        "Thread 1: added a third citation from the same report on hyperinflation, because the two cited passages did not support 'hyperinflation followed'.",
+        "Thread 2: lengthened the 'Previous episodes of stabilization' quote (24 words) to include the reason the opening did not last, and dropped 'and deeper reforms did not follow' because the shortened quote does not cover it.",
+        "Thread 3: retitled from 'Paper dollars and new shocks' to 'Electronic dollars and new shocks', because the source describes electronic balances, not paper money. Added the report's passage on electronic dollar balances that could not be turned into cash, since no cited passage supported that claim.",
+        "Thread 4: added the MPO passage on dependence on rain-fed agriculture, and replaced the IMF quote with a passage from the same sentence that names the severe drought, because the original quote did not mention drought.",
+        "Thread 5: the claims about the ZiG launch, the end of central bank lending and tight money had no supporting passage. Replaced the inflation quote with the report's passage on the April 2024 ZiG launch and the suspension of quasi-fiscal operations, plus the MPO passage on tight monetary policy and disinflation. Kept the arrears quote. Dropped 'held steady' and reworded the text to match the passages.",
+        "Numbers: every figure in the headline, arc, threads, since_last_year and tension matches desk/data/ZWE.json: era means 1.1/-8.1/7.2/1.1; shortfall 16.0 percent from the 1998 peak; level first reached in 1970; avg_10y 0.9 for 2016–2025; annual growth of -7.8 (2019), -9.3 (2020), -0.1 (2024) and 6.1 (2025). Also confirmed 2001 (+0.8) was the only positive year in 2000–2008 and that 2013–2016 growth was near zero. No numbers changed.",
+        "No banned phrases or recommendation language found. Five distinct recent tier 1 sources survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Zimbabwe's income per person collapsed in the 2000s, rebounded after 2009, then stalled; in 2025 it was still 16.0 percent below its 1998 peak.",
+    "arc": "Income per person grew 1.1 percent a year in 1990–1999 and reached its peak in 1998. From 2000 to 2008 it shrank 8.1 percent a year, as land reform disrupted farming and the central bank printed money to cover the budget gap, ending in hyperinflation. Switching to the US dollar in 2009 stopped the money printing, and income per person grew 7.2 percent a year in 2009–2016, though almost all of that came in 2009–2012. Since 2017 growth has averaged 1.1 percent a year, as new money creation, drought, a cyclone in 2019 and the pandemic brought deep falls in 2019 and 2020 before a rebound. A new currency, the ZiG, in April 2024 and an end to central bank lending to the state have since brought prices under control. Even so, income per person in 2025 was still 16.0 percent below its 1998 peak, about where it first was in 1970.",
+    "threads": [
+      {
+        "title": "Land reform and hyperinflation",
+        "text": "The land reform program that began in 2000 cut farm output and shook business confidence. The central bank covered the budget gap by printing money, and hyperinflation followed. Income per person fell in every year but one from 2000 to 2008.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "The land reform program from 2000 disrupted agricultural production and investor confidence, widening the fiscal deficit."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "Rather than adjusting spending, the RBZ financed the gap through money creation."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "The combined effect resulted in hyperinflation peaking at an estimated 90,000 percent in 2008, collapsing real incomes, destroying savings, and contracting formal employment."
+          }
+        ]
+      },
+      {
+        "title": "Dollar stability, short-lived",
+        "text": "Using the US dollar from 2009 took away the central bank's power to print money and brought quick stability. Income per person grew fast from 2009 to 2012, then barely moved from 2013 to 2016. The World Bank says that opening did not last because the wider framework stayed fragile.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "Full dollarization in 2009 removed RBZ’s ability to print money."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "Previous episodes of stabilization in Zimbabwe (between 2009 and 2014) created similar openings that ultimately proved short-lived, as the underlying macroeconomic framework remained fragile"
+          }
+        ]
+      },
+      {
+        "title": "Electronic dollars and new shocks",
+        "text": "A drought in 2015–16 and spending before the 2018 election widened the budget gap, while the central bank created electronic dollars that could not be turned into cash. Cyclone Idai in 2019 and the pandemic followed, and income per person fell 7.8 percent in 2019 and 9.3 percent in 2020.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "High spending pressures from a severe drought in 2015-16 and fiscal expansion ahead of the 2018 elections widened the fiscal deficit"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "the RBZ began creating electronic dollar balances (“nostro dollars”) that were treated as equivalent to real US dollars but inconvertible into cash"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "This period saw the cyclone Idai shock in 2019 and global COVID pandemic in 2020-2021."
+          }
+        ]
+      },
+      {
+        "title": "Rain-fed farming drives swings",
+        "text": "The economy leans heavily on rain-fed farming, so the weather moves growth from year to year. A drought in 2024 cut growth, and income per person slipped 0.1 percent. A strong maize and tobacco harvest in 2025 lifted it 6.1 percent.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-zwe.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zimbabwe",
+            "date": "2026-10",
+            "quote": "Zimbabwe's high dependence on rain-fed agriculture makes the economy structurally vulnerable to climate shocks"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/02/pr-25323-zimbabwe-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Zimbabwe",
+            "date": "2025-10-02",
+            "quote": "a sharp slowdown from 5 percent in 2023 to 1.7 percent in 2024, driven by a severe drought, lower agricultural and hydro‑power electricity production"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-zwe.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zimbabwe",
+            "date": "2026-10",
+            "quote": "The agricultural recovery was the dominant driver: overall sector growth of 22.8 percent was led by maize (up 157 percent) and tobacco (up 53 percent)."
+          }
+        ]
+      },
+      {
+        "title": "A new currency, old debts",
+        "text": "The ZiG, launched in April 2024, together with an end to central bank lending to the government and tight money, brought prices down quickly. But large debts to foreign lenders remain unpaid, and they keep low-cost loans out of reach.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090226030010924/pdf/P512930-4ebf2401-e24e-459b-9b56-b00c30f983fc.pdf",
+            "publisher": "World Bank",
+            "title": "Zimbabwe Country Growth and Jobs Report",
+            "date": "2026",
+            "quote": "Introduction of Zimbabwe Gold (ZiG) in April 2024, combined with the suspension of quasi-fiscal operations, and a commitment to fiscal discipline produced rapid disinflation."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-zwe.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zimbabwe",
+            "date": "2026-10",
+            "quote": "Exchange rate stability and a tight monetary policy helped soften inflationary pressures from the Middle East conflict and supported significant disinflation"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-zwe.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zimbabwe",
+            "date": "2026-10",
+            "quote": "External arrears of approximately US$7.4 billion continue to block access to concessional financing"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up and prices calmed. Income per person rose 6.1 percent in 2025 on a strong harvest and mining. In April 2026 the IMF approved a program that tracks the government's policies without lending money, and by October 2026 the government had met all of its end-June targets. Local currency inflation fell to single digits.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/16/pr-26122-zimbabwe-imf-management-approves-a-staff-monitored-program",
+          "publisher": "IMF",
+          "title": "IMF Management Approves a Staff Monitored Program for Zimbabwe",
+          "date": "2026-04-16",
+          "quote": "The SMP is intended to help Zimbabwe establish a credible track record of policy implementation"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26325-imf-approves-completion-of-the-second-review-zimbabwe-staff-monitored-prgm",
+          "publisher": "IMF",
+          "title": "IMF Management Approves Completion of the Second Review under Zimbabwe’s Staff-Monitored Program",
+          "date": "2026-10-07",
+          "quote": "All end-June quantitative targets, structural benchmarks, and continuous commitments were met."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-zwe.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Zimbabwe",
+          "date": "2026-10",
+          "quote": "with annual ZiG inflation rate declining to 3.2 percent in July 2026, from 95.8 percent in July 2025"
+        }
+      ]
+    },
+    "tension": "The sources describe a solid recovery since 2021, but income per person grew only 1.1 percent a year over 2017–2025 and 0.9 percent a year over 2016–2025. In 2025 it was still 16.0 percent below its 1998 peak. Part of the gap is that the sources measure total output, which also grows as the population grows, and the deep falls in income per person in 2019 and 2020 still weigh on the average."
+  }
+}

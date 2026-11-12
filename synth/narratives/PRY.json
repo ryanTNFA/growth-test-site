@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "PRY",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PRY",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: Paraguay Article IV consultation 2025 IMF staff report growth",
+        "worldbank.org (tier 1 list): Paraguay Macro Poverty Outlook World Bank 2025 growth drought hydropower",
+        "tier 1 list: Paraguay growth history 1990s banking crises stagnation 2002 crisis recovery soybean",
+        "worldbank.org: From Landlocked to Land of Opportunity Paraguay Country Economic Memorandum",
+        "Opened: imf.org PR 26/280 (2026-08-28), imf.org 2026 Article IV concluding statement (2026-06-29), thedocs.worldbank.org MPO Paraguay (October 2026), blogs.worldbank.org (2026-04-15), documents1.worldbank.org Paraguay CEM executive summary (2024), imf.org CR 14/60 (2014-02), imf.org CR 19/112 Selected Issues (2019-04)",
+        "Critic re-opened: imf.org CR 19/112, imf.org CR 14/60, documents1.worldbank.org CEM executive summary, thedocs.worldbank.org MPO Paraguay October 2026, blogs.worldbank.org Lessons from Paraguay"
+      ],
+      "critic_changes": [
+        "Opened all five cited URLs (PDFs extracted locally); every kept quote was found on its page. All numbers in headline, arc, threads, since_last_year and tension match PRY.json (eras -0.1 and 2.6, prior decade 3.5, last decade 1.8, regional median 1.3, 2025 growth 5.4 as the fastest since 2013, falls in 1998-2002, 2009, 2012, 2019, 2020, 2022, G3 peak in 2025).",
+        "IMF CR 19/112 date made more precise: 2019 -> 2019-04 (the cover says April 2019). IMF CR 14/60 date made more precise: 2014 -> 2014-02 (the cover says February 2014).",
+        "Thread 'The 1990s banking crisis': the text said 'new democratic governments' freed up finance 'in the early 1990s' and that the crisis 'choked off credit'; no cited passage says any of this, so it was removed. The quote was swapped for the CR 19/112 sentence that names the causes (rapid liberalization, lax entry rules, weak supervision), which the text now follows.",
+        "Thread 'Soy, beef and the commodity boom': 'rising farm incomes' changed to 'rising incomes from the boom' to match the CEM passage on disposable incomes and services, and 'good weather' changed to 'mostly good weather' to match 'largely favorable weather patterns'.",
+        "Thread 'Weather and price swings': 'about twice as volatile' is a figure that is not in the data file, so the text now says 'more volatile than the region's average' (the figure stays only inside the quote). Added a CEM citation on the drought-induced recession of 2022 to support the drought claim.",
+        "Thread 'Stalled productivity, informal jobs': the claim that investment went into buildings rather than machinery was not in any cited passage, so a CEM citation with that passage was added. The text now says 'most new investment', following the CEM's 90 percent figure.",
+        "Thread 'Stable policy and cheap power': removed 'a fiscal rule', which no cited passage supports (the blog's Fiscal Responsibility Law was not cited). Removed the interpretive line 'a stable place to invest by the region's standards'. The credit ratings are now credited to recent reforms, as the blog says, instead of to 'that record'.",
+        "Arc: 'closed about half the banks' changed to 'wiped out about half the banks' (the IMF wording); 'a leading exporter' changed to 'one of the biggest exporters' (CEM); 'drought' changed to 'droughts' (the CEM speaks of recurring droughts). Every other cause in the arc is supported: the 2012 severe drought (CR 14/60), the pandemic and productivity stall since 2013 (CEM), and improved macroeconomic stability (CR 19/112, CEM).",
+        "since_last_year: the claim that the arrears clearance widens the fiscal deficit was not in the quoted passage, so the MPO passage 'expected to weigh on the fiscal deficit in the near term' was added and the text now uses that wording.",
+        "Tension: the draft called Paraguay 'one of the fastest-growing' economies in the region, which no opened source says; it now reads 'a resilient economy that keeps beating growth forecasts' (the MPO wording).",
+        "tier1_recent_found stays at 5 as the drafter reported. The two IMF 2026 items (PR 26/280 and the concluding statement) are not cited and were not re-opened by the critic. The three cited recent tier 1 sources are the CEM 2024, the MPO 2026-10 and the blog of 2026-04-15."
+      ]
+    },
+    "headline": "Paraguay climbed out of a lost decade on soy, beef and steadier policy; income per person is at a record high, but its growth slowed after 2015.",
+    "arc": "From 1990 to 2002 income per person went nowhere, averaging -0.1 percent a year, and it fell every year from 1998 to 2002 after a banking crisis in the second half of the 1990s wiped out about half the banks. From 2003 the record turned: growth averaged 2.6 percent a year through 2025, carried by a commodity boom that made Paraguay one of the biggest exporters of soy and beef, and by steadier economic policy. The fastest stretch was 2006 to 2015, at 3.5 percent a year, but it was never smooth, with falls in 2009 and 2012, the second after a severe drought, and big rebounds in 2010 and 2013. From 2016 to 2025 growth slowed to 1.8 percent a year, with falls in 2019, 2020 and 2022 as droughts and the pandemic hit and as productivity growth stalled after 2013. A strong 2025, at 5.4 percent, left income per person at its highest level yet.",
+    "threads": [
+      {
+        "title": "The 1990s banking crisis",
+        "about": "history",
+        "text": "Rapid financial liberalization, with loose entry rules for banks and weak supervision, led to a severe banking crisis in the second half of the 1990s. The crisis wiped out about half the banks, and income per person stagnated through the decade.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1pryea2019002.pdf",
+            "publisher": "IMF",
+            "title": "Paraguay: Selected Issues (IMF Country Report No. 19/112)",
+            "date": "2019-04",
+            "quote": "The crisis was the result of rapid financial liberalization, combined with lax entry requirements for financial institutions and weak banking sector supervision."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr1460.pdf",
+            "publisher": "IMF",
+            "title": "Paraguay: 2013 Article IV Consultation—Staff Report; Press Release (IMF Country Report No. 14/60)",
+            "date": "2014-02",
+            "quote": "In the 1990s, a deep financial crisis wiped out about half of the banks and per capita GDP stagnated."
+          }
+        ]
+      },
+      {
+        "title": "Soy, beef and the commodity boom",
+        "about": "history",
+        "text": "From the early 2000s soy prices soared, driven largely by demand from China, and mostly good weather helped farm output. Paraguay became one of the world's biggest exporters of soy and beef, and rising incomes from the boom also lifted services.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070124083017092/pdf/P1781081a858bd09c186ea1819462abe525.pdf",
+            "publisher": "World Bank",
+            "title": "From Landlocked to Land of Opportunity: Paraguay Country Economic Memorandum, Executive Summary",
+            "date": "2024",
+            "quote": "Between 2002 and 2013, a boom in international commodity prices, largely favorable weather patterns, and high global demand supported the growth of these exports."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1pryea2019002.pdf",
+            "publisher": "IMF",
+            "title": "Paraguay: Selected Issues (IMF Country Report No. 19/112)",
+            "date": "2019-04",
+            "quote": "The soybean export price in dollars tripled between 2003 and 2013, largely driven by the increasing demand from China"
+          }
+        ]
+      },
+      {
+        "title": "Weather and price swings",
+        "about": "present",
+        "text": "Natural resources make up a large share of output and exports, so droughts and commodity price swings still move growth sharply from year to year; a drought pushed the economy into recession in 2022. Growth is steadier than it once was, but still more volatile than the region's average.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070124083017092/pdf/P1781081a858bd09c186ea1819462abe525.pdf",
+            "publisher": "World Bank",
+            "title": "From Landlocked to Land of Opportunity: Paraguay Country Economic Memorandum, Executive Summary",
+            "date": "2024",
+            "quote": "Although Paraguay’s growth is less volatile now than in the past, it remains twice as volatile as the average Latin America and Caribbean (LAC) country"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070124083017092/pdf/P1781081a858bd09c186ea1819462abe525.pdf",
+            "publisher": "World Bank",
+            "title": "From Landlocked to Land of Opportunity: Paraguay Country Economic Memorandum, Executive Summary",
+            "date": "2024",
+            "quote": "In 2022, extreme poverty and inequality temporarily increased as a drought‑induced recession and inflation above the Central Bank of Paraguay’s benchmark (4 percent) disproportionately …"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Paraguay",
+            "date": "2026-10",
+            "quote": "Despite the expected net positive effect of El Niño on agriculture, an extreme event could disrupt economic activity"
+          }
+        ]
+      },
+      {
+        "title": "Stalled productivity, informal jobs",
+        "about": "present",
+        "text": "The World Bank finds that productivity growth has been close to zero since 2013, with most new investment going into buildings rather than machinery. Most workers remain in informal jobs, and that share has barely moved.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070124083017092/pdf/P1781081a858bd09c186ea1819462abe525.pdf",
+            "publisher": "World Bank",
+            "title": "From Landlocked to Land of Opportunity: Paraguay Country Economic Memorandum, Executive Summary",
+            "date": "2024",
+            "quote": "this increase in investment had gone into structures (buildings), rather than productive assets such as machinery and transport equipment."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070124083017092/pdf/P1781081a858bd09c186ea1819462abe525.pdf",
+            "publisher": "World Bank",
+            "title": "From Landlocked to Land of Opportunity: Paraguay Country Economic Memorandum, Executive Summary",
+            "date": "2024",
+            "quote": "total factor productivity growth has been practically nil since 2013, dragging overall GDP growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Paraguay",
+            "date": "2026-10",
+            "quote": "Labor informality stood at 61.7 percent in the second quarter of 2026, little changed from 61.4 percent in 2024 reflecting limited creation of quality jobs."
+          }
+        ]
+      },
+      {
+        "title": "Stable policy and cheap power",
+        "about": "present",
+        "text": "The World Bank counts a credible monetary regime and low public debt among Paraguay's strengths, and cheap hydropower from the Itaipú and Yacyretá dams gives its industry a lasting cost advantage. Recent reforms helped Paraguay earn two investment-grade credit ratings in quick succession, the only country in Latin America to do so this decade.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Paraguay",
+            "date": "2026-10",
+            "quote": "a credible monetary regime, low public debt, and growing capacity to attract investment."
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/voices/growth-jobs-and-poverty-reduction-lessons-from-paraguay",
+            "publisher": "World Bank",
+            "title": "Growth, jobs, and poverty reduction: Lessons from Paraguay",
+            "date": "2026-04-15",
+            "quote": "Abundant and clean hydropower from the Itaipú and Yacyretá dams gives Paraguayan industry an enduring cost advantage"
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/voices/growth-jobs-and-poverty-reduction-lessons-from-paraguay",
+            "publisher": "World Bank",
+            "title": "Growth, jobs, and poverty reduction: Lessons from Paraguay",
+            "date": "2026-04-15",
+            "quote": "these reforms helped Paraguay earn two investment-grade credit ratings in just eighteen months—the only country in Latin America to do so this decade."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 5.4 percent in 2025, the fastest since 2013, and reached a new high; the World Bank says household spending and broad investment kept growth going into 2026. Since April 2026 the government has been paying off arrears to suppliers left from the pandemic years, which the World Bank expects to weigh on the fiscal deficit in the near term.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Paraguay",
+          "date": "2026-10",
+          "quote": "household consumption and broad-based investment expansion (spanning construction, machinery and equipment, and motor vehicles) have been the primary drivers of growth."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Paraguay",
+          "date": "2026-10",
+          "quote": "Since April 2026, the government has been clearing an estimated US$1.2 billion (2.5 percent of GDP) in pandemic-era arrears to pharmaceutical and construction suppliers."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pry.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Paraguay",
+          "date": "2026-10",
+          "quote": "but is expected to weigh on the fiscal deficit in the near term."
+        }
+      ]
+    },
+    "tension": "The sources describe a resilient economy that keeps beating growth forecasts, and against the regional median of 1.3 percent a year Paraguay does well. But the data show income per person growing 1.8 percent a year in 2016 to 2025, about half the 3.5 percent of the decade before, with three years of decline; the sources' headline growth figures are for total output in a growing population, not income per person."
+  }
+}

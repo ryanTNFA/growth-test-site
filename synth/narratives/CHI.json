@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "iso3": "CHI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CHI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Jersey Guernsey economy IMF 2024\"",
+        "tier 1 domains: \"Channel Islands Jersey Guernsey economic growth finance sector\"",
+        "tier 1 domains (extended): \"Jersey economy 2023 2024 OECD OR IMF report Crown Dependencies\"",
+        "tier 1 domains: \"Guernsey economy 2025\"",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: \"Jersey Guernsey GDP growth financial services 2023 assessment\"",
+        "cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org (extended): \"Jersey Guernsey Channel Islands economy\"",
+        "opened (HTTP 403, unread): elibrary.imf.org/subject/JE and elibrary.imf.org/subject/GG listings sorted by date"
+      ],
+      "critic_changes": [],
+      "reason": "Neither tier 1 nor tier 2 had any source from 2023 or later that explains the Channel Islands economy: IMF reports date from 2011 or earlier, recent OECD items cover only tax rules, and the UN pages hold data alone."
+    }
+  }
+}

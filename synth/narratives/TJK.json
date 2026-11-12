@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "TJK",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TJK",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch (tier 1 domains): not run by drafter, session web search budget exhausted; drafter opened pages directly",
+        "imf.org/en/Countries/TJK and document listing; imf.org/en/countries/resrep/tjk (no Tajikistan documents listed)",
+        "imf.org 2025 Article IV staff report PDF (1tjkea2025002-source-pdf.pdf), IMF Country Report No. 25/169: re-opened and text-searched by critic",
+        "worldbank.org/en/country/tajikistan/publication/economic-update-2025: re-opened by critic",
+        "worldbank.org/en/country/tajikistan/overview (opened, not cited: no publication date)",
+        "adb.org/where-we-work/tajikistan/economy (opened, not cited: undated page)",
+        "adb.org Asian Development Outlook September 2026, Caucasus and Central and West Asia chapter PDF: re-opened and text-searched by critic",
+        "Tier 2 (UN) not searched: tier 1 gave 3 recent sources"
+      ],
+      "critic_changes": [
+        "IMF citations (all): date changed from 2025-07-08 to 2025-07. The PDF's cover shows only 'July 2025' (its press release is dated June 24, 2025); 8 July does not appear in the document. All five IMF passages were found word for word in the PDF text.",
+        "Gold thread: swapped the 'more than doubled since 2018' quote for the IMF Box 1 sentence on the new large mining operation opened in 2022 (footnote marker removed), because no cited passage supported the text's claim about a 2022 mine. 'Mining now adds a visible share of each year's growth' became 'made up a visible part of growth in 2024', because the source gives the mining share for 2024 only.",
+        "Remittances thread: 'the biggest force' became 'a main force' and 'pays for much of household spending' became 'propped up household and other spending at home', because the World Bank says only that domestic demand 'was supported by' remittances. 'Far above' became 'well above' to match the IMF wording.",
+        "Covid thread: the first IMF quote now starts at 'Growth has remained above potential...', so the passage supports the 'above what the economy can keep up' claim. It is still verbatim and at most 25 words.",
+        "Russia thread: 'the sources name Russia's migration rules and its war in Ukraine as the main risks' became 'the World Bank lists Russia's rules on migrant labor among the risks', because the World Bank names them as one of several downside risks, not the main one. The fuel-import sentence is still backed by the ADB quote.",
+        "Exports thread: dropped 'Exports equal 14.9 percent of GDP, below what is typical for its income level'. The 14.9 comes from G10, a growth_problem field outside those the rules allow (classification, statement, G1, G3, G4.eras), and it is not in series.",
+        "Checked every other number against desk/data/TJK.json and kept it: -14.4 (1990-1997), 1,313 (1990), 370 (1996), 5.3 (1998-2025), 4.5 (2006-2015), 5.2 (2016-2025), above 6 in 2023-2025 (6.1, 6.3, 6.4), the 1988 level (1,491) passed in 2024 (1,496), the 2025 peak of 1,593, 2.1 (2020), 7.0 (2021), 6.3 (2024) and 6.4 (2025). Slowdowns in 2009 (1.8) and 2020 (2.1) confirmed.",
+        "Opened every cited URL and found each quoted passage verbatim. World Bank page: publication date July 30, 2025 confirmed; the tension's claim that sources expected slower 2025 growth as remittances normalize is confirmed on the same page. ADB chapter dated September 2026; both quotes confirmed. No banned phrases and no recommendation language found."
+      ]
+    },
+    "headline": "After a deep collapse in the 1990s, Tajikistan has grown every year since 1998, lately carried by money from migrant workers and a gold mining boom.",
+    "arc": "Tajikistan's income per person collapsed in the early 1990s: from 1990 to 1997 it shrank by 14.4 percent a year, falling from 1,313 to 370 constant US dollars between 1990 and 1996. Since 1998 it has grown every year, by 5.3 percent a year on average, with only short slowdowns in 2009 and 2020. Growth picked up from 4.5 percent a year in 2006-2015 to 5.2 percent in 2016-2025, and was above 6 percent in each year from 2023 to 2025. Income per person passed its 1988 level in 2024 and reached a new peak of 1,593 in 2025. The IMF and the World Bank tie the recent pace to the rebound after Covid-19, to very large remittances from Tajiks working abroad, and to fast growth in gold and other mining.",
+    "threads": [
+      {
+        "title": "Remittances from work abroad",
+        "about": "present",
+        "text": "Money sent home by Tajiks working abroad is a main force behind recent growth. It has propped up household and other spending at home, and it has stayed well above its level before 2022 because demand for migrant workers has been strong.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/tajikistan/publication/economic-update-2025",
+            "publisher": "World Bank",
+            "title": "Tajikistan Economic Update 2025",
+            "date": "2025-07-30",
+            "quote": "Domestic demand was supported by large remittance inflows—peaking at 49% of GDP in 2024 compared to 39% in 2023—and higher public sector wages."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Remittances in 2024 remained well above pre-2022 levels, in line with developments in the Central Asia region, reflecting strong demand for migrant labor"
+          }
+        ]
+      },
+      {
+        "title": "A gold mining boom",
+        "about": "present",
+        "text": "Gold output has risen fast, especially since a large new mine opened in 2022, and mining is mostly run as joint ventures with Chinese investors. Mining made up a visible part of growth in 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Annual production reached about 14.2 tons in 2024 following the opening of a new large mining operation in 2022."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Gold mining is carried out primarily through joint ventures with investors from China"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "The contribution of mining to overall GDP growth accounted for about 12 percent in 2024."
+          }
+        ]
+      },
+      {
+        "title": "The bounce back after Covid-19",
+        "about": "present",
+        "text": "Growth of income per person slowed to 2.1 percent in 2020 and jumped to 7.0 percent in 2021. The IMF says growth has since run above what the economy can keep up, lifted by the rebound and a surge of money from abroad, and it expects growth to slow over the medium term.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Growth has remained above potential during this period due to the strong economic rebound from the Covid-19 lows, the post-Covid surge in remittances"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Real GDP growth is expected to moderate to 4.5 percent over the medium-term"
+          }
+        ]
+      },
+      {
+        "title": "Exposure to Russia",
+        "about": "present",
+        "text": "Because so much income comes from work abroad, the World Bank lists Russia's rules on migrant labor among the risks to growth. In 2026 Russia's escalating war in Ukraine disrupted fuel imports into Tajikistan.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/tajikistan/publication/economic-update-2025",
+            "publisher": "World Bank",
+            "title": "Tajikistan Economic Update 2025",
+            "date": "2025-07-30",
+            "quote": "Economic outlook faces several downside risks that stem from Russia’s labor migration policies, global policy instability, and ongoing regional conflicts."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1174871/caucasus-central-west-asia-ado-september-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook September 2026: Caucasus and Central and West Asia",
+            "date": "2026-09",
+            "quote": "The ADO reduces Tajikistan’s 2026 growth forecast as Russia’s war in Ukraine has escalated, disrupting fuel imports and constraining near-term activity."
+          }
+        ]
+      },
+      {
+        "title": "Few exports beyond gold",
+        "about": "present",
+        "text": "Apart from gold, Tajikistan sells little abroad, and exports fell in 2024 when shipments of precious metals and cotton dropped.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tjkea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Tajikistan: 2025 Article IV Consultation and Second Review under the Policy Coordination Instrument and Request for Modification of a Reform Target-Press Release; Staff Report; and Statement by the Executive Director for Republic of Tajikistan",
+            "date": "2025-07",
+            "quote": "Non-gold exports averaged 11 percent of GDP during 2020-2024."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/tajikistan/publication/economic-update-2025",
+            "publisher": "World Bank",
+            "title": "Tajikistan Economic Update 2025",
+            "date": "2025-07-30",
+            "quote": "Higher consumption and investment compensated for a 20.5% drop in exports, mainly due to reduced shipments of precious metals and cotton."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth stayed strong into 2026. In September 2026 the Asian Development Bank reported fast growth in the first half of the year, led by manufacturing, food processing and metallurgy, but it lowered its forecast for the year as Russia's war in Ukraine escalated and disrupted fuel imports.",
+      "citations": [
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/caucasus-central-west-asia-ado-september-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook September 2026: Caucasus and Central and West Asia",
+          "date": "2026-09",
+          "quote": "Tajikistan’s growth remained strong at 8.2% in the first half, led by expansion in manufacturing, food processing, and metallurgy, and strong retail-driven services."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/caucasus-central-west-asia-ado-september-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook September 2026: Caucasus and Central and West Asia",
+          "date": "2026-09",
+          "quote": "The ADO reduces Tajikistan’s 2026 growth forecast as Russia’s war in Ukraine has escalated, disrupting fuel imports and constraining near-term activity."
+        }
+      ]
+    },
+    "tension": "The sources' headline growth rates are for the whole economy and are much higher than growth in income per person, which was 6.3 percent in 2024, because the population keeps growing. The sources also expected growth to slow in 2025 as remittances settled down, yet income per person grew a little faster in 2025, at 6.4 percent. None of the sources read here explains the collapse of 1990-1997; the story of that era rests on the data alone."
+  }
+}

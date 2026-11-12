@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "iso3": "TGO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TGO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Togo IMF Article IV 2025 staff report growth'",
+        "same tier 1 domains: 'Togo World Bank Macro Poverty Outlook economic update 2025'",
+        "same tier 1 domains: 'Togo political crisis 1990s suspension of donor aid economic decline arrears reengagement 2008'",
+        "opened: imf.org press release PR26/230 (2026-06-29)",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Togo (October 2026)",
+        "opened: documents1.worldbank.org Togo Economic Update (August 2025)",
+        "opened: documents1.worldbank.org Togo Systematic Country Diagnostic (2016-09-19)",
+        "opened but not cited: imf.org Country Report 08/144 (Togo interim PRSP, government-authored)",
+        "critic: re-opened all four cited URLs and extracted the three PDFs' text to check every quote, date and number"
+      ],
+      "critic_changes": [
+        "Verified all 12 original citations: each URL opens on an allowed tier 1 domain, each quote appears on its page, and each date matches the document (SCD 2016-09-19, Economic Update August 2025, MPO October 2026, IMF PR 2026-06-29). Every number was checked against TGO.json: 0.5, -1.9, 3.0, 1.8, 2.4, -14.1 (1993), 10.6 (1997), -7.0 (2005), 4.0 (2025), four years at 4.0 or more (2022-2025), and passing the 1980 level first in 2021. All are correct.",
+        "Thread 'Arrears, then partners return': removed 'the year of a violent presidential election'. The SCD says this, but none of the thread's cited passages do, and the thread already has its maximum of three citations.",
+        "Thread 'Lomé as a shipping hub': renamed it 'The port and trade services' and dropped the claim that the port 'grew into a hub for regional shipping', which no cited passage supports. Changed 'expanded from 2011' to 'expanded in 2011' to match the quote.",
+        "Thread 'Public investment, then tighter budgets': replaced the MPO quote with the exact passage that supports 'only a few large private projects', since the original quote ended before that clause. Dropped the word 'large' before 'public investment programs' because the source does not say it.",
+        "Thread 'Insecurity spilling from the Sahel': removed 'has reached Togo's north', which the cited passages do not say. Softened 'among the main risks' to 'among the risks', to match the MPO's list of downside risks.",
+        "since_last_year: changed 'with services and the port leading' to 'led by services', matching the IMF quote. The draft also said the World Bank ties the early-2026 slowdown to tighter budgets, weaker demand and rising prices, but the MPO attaches those reasons to its projected 2026 moderation. Reworded the sentence and added that MPO passage as a third citation.",
+        "Tension: kept it. The Economic Update states that per capita growth since the mid-2000s was well below this data's 20-year average of 2.4 percent. No outside figure appears in the prose.",
+        "No banned phrases and no recommendation language were found. Three distinct recent tier 1 sources and five threads survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "After years of political crisis and frozen aid, Togo's income per person has grown steadily since 2008 and reached a new high in 2025.",
+    "arc": "Togo's income per person barely moved from 1990 to 1997, growing 0.5 percent a year: a political crisis from 1991 cut aid, and a steep fall in 1993 gave way to a short rebound after the 1994 devaluation. From 1998 to 2007 it shrank by 1.9 percent a year, as donors stayed away, Togo fell into arrears with the World Bank in 2002 and debt piled up. A 2006 political accord and 2007 elections brought partners back, debt relief followed in 2010, and growth turned positive from 2008. Since then income per person has grown 3.0 percent a year (2008 to 2025), helped by an expanded port at Lomé, trade and transport services and heavy public investment. Growth has also picked up within this era, to 3.0 percent a year over 2016 to 2025 against 1.8 in the decade before, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "A decade of political crisis",
+        "about": "history",
+        "text": "From 1991 Togo went through a long political crisis, and aid fell through 2002. Income per person dropped 14.1 percent in 1993. The 1994 devaluation of the CFA franc brought a short burst of growth, reaching 10.6 percent in 1997, that then faded.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/179631474899157168/pdf/Togo-SCD-Final-2016-09222016.pdf",
+            "publisher": "World Bank",
+            "title": "Togo Systematic Country Diagnostic (Report No. 108184-TG)",
+            "date": "2016-09-19",
+            "quote": "by 1991 Togo had entered a prolonged period of political crisis. Official development assistance fell from 1992 to 2002"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/179631474899157168/pdf/Togo-SCD-Final-2016-09222016.pdf",
+            "publisher": "World Bank",
+            "title": "Togo Systematic Country Diagnostic (Report No. 108184-TG)",
+            "date": "2016-09-19",
+            "quote": "Following devaluation, the economy enjoyed a 3-year growth spurt."
+          }
+        ]
+      },
+      {
+        "title": "Arrears, then partners return",
+        "about": "history",
+        "text": "In 2002 Togo could no longer pay its debts, and the World Bank joined other donors in halting support. Income per person fell in most years up to 2007, including by 7.0 percent in 2005. A 2006 political accord and 2007 elections brought partners back, and debt relief followed in 2010.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/179631474899157168/pdf/Togo-SCD-Final-2016-09222016.pdf",
+            "publisher": "World Bank",
+            "title": "Togo Systematic Country Diagnostic (Report No. 108184-TG)",
+            "date": "2016-09-19",
+            "quote": "In 2002, when the country could no longer pay its debts, the World Bank joined other donors in suspending its assistance."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/179631474899157168/pdf/Togo-SCD-Final-2016-09222016.pdf",
+            "publisher": "World Bank",
+            "title": "Togo Systematic Country Diagnostic (Report No. 108184-TG)",
+            "date": "2016-09-19",
+            "quote": "These moves brought optimism regarding the government’s commitment to fundamental reform and the full reengagement of development partners."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/179631474899157168/pdf/Togo-SCD-Final-2016-09222016.pdf",
+            "publisher": "World Bank",
+            "title": "Togo Systematic Country Diagnostic (Report No. 108184-TG)",
+            "date": "2016-09-19",
+            "quote": "debt relief under the Heavily Indebted Poor Countries (HIPC) initiative in 2010"
+          }
+        ]
+      },
+      {
+        "title": "The port and trade services",
+        "about": "present",
+        "text": "The port of Lomé was expanded in 2011. Trade, transport, logistics and port activities were still the main engine of growth in 2025.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082825143034715/pdf/P507241-6b3a945f-1fd9-4e65-8351-4e992bcd3c42.pdf",
+            "publisher": "World Bank",
+            "title": "Togo's Economic Update: Boosting Growth and Restoring Fiscal Space in Uncertain Times",
+            "date": "2025-08",
+            "quote": "Major investments included the US$ 700 million Port of Lomé expansion in 2011"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tgo.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Togo",
+            "date": "2026-10",
+            "quote": "Services remained the main engine of growth, supported by trade, transport, logistics, and port-related activities"
+          }
+        ]
+      },
+      {
+        "title": "Public investment, then tighter budgets",
+        "about": "present",
+        "text": "Growth over the past decade leaned heavily on public investment programs, with only a few large private projects. A turn to tighter budgets, along with weaker world demand for exports, has been slowing the economy.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tgo.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Togo",
+            "date": "2026-10",
+            "quote": "it relied heavily on public investment programs, with only a few large private-sector projects generating productive jobs for youth"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082825143034715/pdf/P507241-6b3a945f-1fd9-4e65-8351-4e992bcd3c42.pdf",
+            "publisher": "World Bank",
+            "title": "Togo's Economic Update: Boosting Growth and Restoring Fiscal Space in Uncertain Times",
+            "date": "2025-08",
+            "quote": "This deceleration reflects the transition from expansionary to contractionary fiscal policies, a drop in global demand for exports"
+          }
+        ]
+      },
+      {
+        "title": "Insecurity spilling from the Sahel",
+        "about": "present",
+        "text": "Armed conflict spilling over from the Sahel has brought refugees and displaced people into Togo. The World Bank counts regional security among the risks to growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082825143034715/pdf/P507241-6b3a945f-1fd9-4e65-8351-4e992bcd3c42.pdf",
+            "publisher": "World Bank",
+            "title": "Togo's Economic Update: Boosting Growth and Restoring Fiscal Space in Uncertain Times",
+            "date": "2025-08",
+            "quote": "Conflicts in the Sahel and their spillover effects into Togo pose significant risks, particularly with the influx of refugees and internally displaced people"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tgo.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Togo",
+            "date": "2026-10",
+            "quote": "Downside risks remain substantial, including the possibility of an escalating conflict in the Middle East, heightened regional security challenges"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 4.0 percent in 2025, the fourth year in a row at 4.0 percent or more, led by services. Activity slowed in early 2026, and the World Bank expects growth to ease this year amid tighter budgets, weaker global demand and price pressures.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/29/pr26230-togo-imf-completes-the-combined-3rd-and-4th-reviews-under-ecf-arrangement",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility Arrangement with Togo",
+          "date": "2026-06-29",
+          "quote": "Real GDP grew by about 6 percent in 2025, led by services, while inflation eased."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tgo.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Togo",
+          "date": "2026-10",
+          "quote": "Signs of slowing activity at the start of 2026 were confirmed by initial real GDP growth estimates dropping to 3.8 percent year-on-year"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tgo.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Togo",
+          "date": "2026-10",
+          "quote": "Against the backdrop of continued fiscal consolidation, weakening global demand and global price pressures, GDP growth is projected to moderate to 5.2 percent in 2026"
+        }
+      ]
+    },
+    "tension": "The sources describe a decade of robust growth, but a growing population absorbed much of it: income per person rose 3.0 percent a year over 2016 to 2025, and it passed its 1980 high only in 2021. A 2025 World Bank update also puts growth in income per person since the mid-2000s well below this data's 20-year average of 2.4; the sources do not explain the gap."
+  }
+}

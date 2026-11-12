@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "GBR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GBR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: United Kingdom Article IV consultation 2025 staff concluding statement growth productivity",
+        "same tier 1 domains: OECD Economic Surveys United Kingdom 2024 productivity investment Brexit",
+        "imf.org: IMF United Kingdom 2024 Article IV staff concluding statement energy price shock inflation soft landing",
+        "Opened: imf.org 2026 and 2025 and 2024 Article IV concluding statements, imf.org 2024 and 2025 Executive Board press releases, oecd.org Economic Survey of the United Kingdom 2024 (PDF; the HTML pages and the 2026 survey returned 403)",
+        "Critic check: reopened all five cited URLs (imf.org 2024, 2025 and 2026 concluding statements; imf.org 2024 Executive Board press release; oecd.org 2024 Economic Survey PDF, text extracted locally and searched for each quoted passage)"
+      ],
+      "critic_changes": [
+        "All five cited pages reopened; every quoted passage was found on its page and every date matches (IMF 2024 concluding statement 2024-05-21, IMF 2025 concluding statement 2025-05-27, IMF 2024 Board press release 2024-07-08, IMF 2026 concluding statement 2026-05-18, OECD survey September 2024). The OECD PDF was checked by local text extraction; its 'productivity-enhancing' passage is split across a line break in the PDF but reads as quoted.",
+        "Headline: replaced 'Brexit uncertainty' with 'weak productivity and investment, then by the pandemic and an energy shock', so the headline rests on claims the threads cite directly.",
+        "Arc: 'stalled again after the 2016 Brexit referendum' changed to 'whose recovery stalled', matching the OECD passage; the energy sentence now says energy prices were 'made worse by' Russia's war, which is now cited (OECD); 'was flat (0.0) in 2024' changed to 'was flat in 2024' because the series value is -0.02 and the printed '0.0' hid the sign.",
+        "Productivity thread: 'main drag' changed to 'main obstacle' and a citation added for the IMF 2025 sentence calling weak productivity 'the primary obstacle', which the existing R&D quote did not cover.",
+        "Brexit thread: dropped the uncited claims that uncertainty 'about future rules grew' and that leaving the single market and customs union 'added new costs to trade'; added the OECD passage that policy uncertainty has weighed on business investment to support the uncertainty point.",
+        "Pandemic and energy thread: added the OECD passage tying high energy prices to Russia's war and a cost-of-living crisis, which the draft asserted with no supporting quote.",
+        "Labour thread: 'more people have left work' changed to 'dropped out of the workforce' (inactivity); added the OECD passage that the rise in inactivity since the pandemic is mostly long-term sickness, since the IMF quote did not say 'since the pandemic'.",
+        "since_last_year: added the IMF 2026 passage that the economy grew at its potential rate in 2025, which the text claims but neither draft citation showed.",
+        "Tension: 'soft landing in 2023–2024' changed to the IMF's 'soft landing after a mild recession in 2023'; removed the claim that the IMF links population growth to migration (the IMF quote is about inactivity offset by migration) and restated the population point as an inference from the gap between whole-economy growth and income per person.",
+        "All numbers in headline, arc, threads, since_last_year and tension checked against desk/data/GBR.json growth_problem and series (1.4, 5.3, 0.5, 0.8, 10.2, 8.2, 4.1, 1.0, 1.1, 2-point threshold, 2018 level); no banned phrases found."
+      ]
+    },
+    "headline": "UK income per person has grown slowly since the 2008 crisis, held back by weak productivity and investment, then by the pandemic and an energy shock.",
+    "arc": "The data show one long era since 1990: income per person grew 1.4 percent a year on average over 1990–2025, with no lasting shift of 2 points or more. Inside that era the pace slowed after the 2008 financial crisis: income per person fell 5.3 percent in 2009, and growth averaged 0.5 percent a year over 2006–2015 and 0.8 percent over 2016–2025. The IMF and the OECD trace the slowdown to a sharp fall in productivity growth after the crisis, and to weak business investment, whose recovery stalled after the 2016 Brexit referendum. The pandemic cut income per person by 10.2 percent in 2020, followed by rebounds of 8.2 percent in 2021 and 4.1 percent in 2022. Then high energy prices, made worse by Russia's war against Ukraine, squeezed household incomes: income per person fell 1.0 percent in 2023 and was flat in 2024. Growth returned to 1.1 percent in 2025, when income per person reached its highest level yet, though only about where it first stood in 2018.",
+    "threads": [
+      {
+        "title": "Productivity slowdown after 2008",
+        "about": "present",
+        "text": "Since the 2008 financial crisis, output per worker has grown much more slowly than before. The IMF still describes weak productivity as the main obstacle to growth and living standards, and links it to low investment and low private research spending.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/20/mcs052124-united-kingdom-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "United Kingdom: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-05-21",
+            "quote": "Labor productivity growth fell from around 2 percent pre-GFC to around ½ percent thereafter."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/05/27/cs-uk-aiv-2025",
+            "publisher": "IMF",
+            "title": "United Kingdom: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-27",
+            "quote": "Persistently weak productivity is the primary obstacle to lifting growth and living standards."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/05/27/cs-uk-aiv-2025",
+            "publisher": "IMF",
+            "title": "United Kingdom: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-27",
+            "quote": "Contributing factors include chronic under-investment, low private R&D"
+          }
+        ]
+      },
+      {
+        "title": "Brexit, uncertainty and investment",
+        "about": "present",
+        "text": "Business investment was already weak, and its recovery stalled after the 2016 referendum to leave the EU. The OECD says policy uncertainty has weighed on business investment, and in 2024 the IMF noted that firms trading with the EU were still adapting to the new arrangements.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "the recovery in business investment stalled with the Brexit referendum in 2016"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "Policy uncertainty has been weighing on business investment"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/07/03/pr-24259-uk-imf-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with the United Kingdom",
+            "date": "2024-07-08",
+            "quote": "UK firms trading with the EU are still adapting to the post‑Brexit arrangement."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, then an energy shock",
+        "about": "history",
+        "text": "The pandemic brought the deepest fall in income per person in the series, in 2020. After a quick rebound, high energy prices made worse by Russia's war against Ukraine fed a cost-of-living crisis and activity stalled in 2023, before inflation fell back as energy prices eased.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "Economic activity slowed after recovering to pre-pandemic levels in late 2021, and came to a standstill in 2023."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "High energy prices, aggravated by Russia's war of aggression against Ukraine, were passed through to consumers, contributing to a cost-of-living crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/07/03/pr-24259-uk-imf-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with the United Kingdom",
+            "date": "2024-07-08",
+            "quote": "reversal of the energy price shock and demand impact of tight monetary policy"
+          }
+        ]
+      },
+      {
+        "title": "More workers, not more output",
+        "about": "present",
+        "text": "Between 2010 and 2019, growth came mostly from more people working, not from higher output per worker. Since the pandemic, more people have dropped out of the workforce because of long-term illness, which higher migration has only partly offset.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "Labour supply largely drove GDP growth between 2010 and 2019, but was not met with productivity-enhancing investments"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-united-kingdom-2024_82b39666/709e70b8-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United Kingdom 2024",
+            "date": "2024-09",
+            "quote": "The large and persistent increase in economic inactivity since the pandemic is mostly driven by the rise in long-term sickness"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/07/03/pr-24259-uk-imf-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with the United Kingdom",
+            "date": "2024-07-08",
+            "quote": "Somewhat higher than expected inactivity levels due to long term illness, only partly offset by higher migration numbers."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In May 2026 the IMF said the economy grew at its potential rate in 2025; in the data, income per person grew 1.1 percent that year. The IMF expects growth to slow in 2026, with higher energy prices pushing inflation up for a time.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/18/pr26154-united-kingdom-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "United Kingdom: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-18",
+          "quote": "Economy grew at its potential rate of 1.4 percent in 2025."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/18/pr26154-united-kingdom-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "United Kingdom: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-18",
+          "quote": "Growth is projected to slow to 1.0 percent in 2026"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/18/pr26154-united-kingdom-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "United Kingdom: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-18",
+          "quote": "Higher energy prices are expected to push inflation up temporarily"
+        }
+      ]
+    },
+    "tension": "The sources date a sharp productivity slowdown to the 2008 crisis, but the data find no lasting break since 1990, because the drop in income-per-person growth (to 0.5 percent over 2006–2015 and 0.8 percent over 2016–2025) stays below the tool's 2-point threshold. The IMF also described a soft landing after a mild recession in 2023 and growth at its potential rate in 2025, while income per person fell 1.0 percent in 2023, was flat in 2024 and grew 1.1 percent in 2025. Part of that gap is a growing population: the whole economy grew faster than income per person, and the IMF notes higher migration numbers."
+  }
+}

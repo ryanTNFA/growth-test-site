@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "iso3": "PNG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PNG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Papua New Guinea Article IV 2025 staff report growth\"",
+        "tier 1 domains: \"Papua New Guinea Economic Update World Bank 2025\"",
+        "tier 1 domains: \"Papua New Guinea LNG construction boom growth slowdown after 2014 foreign exchange shortages\"",
+        "tier 1 domains: \"Papua New Guinea economy 1990s Bougainville Panguna closure 1997 drought economic crisis 1998 2002\"",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook PNG (October 2026)",
+        "opened: worldbank.org press release 2026-07-02",
+        "opened: worldbank.org PNG Economic Update brief June 2025",
+        "opened: imf.org Country Report 25/134 (June 2025)",
+        "opened: imf.org press releases 25/197 (2025-06-13) and 25/332 (2025-10-07)",
+        "opened: imf.org press release 17/523 (2017-12-29)",
+        "opened: adb.org Papua New Guinea: Critical Development Constraints (2012)",
+        "critic re-opened: adb.org 2012 PDF, imf.org CR 25/134 PDF, imf.org PR 17/523, thedocs.worldbank.org MPO October 2026 PDF, worldbank.org press release 2026-07-02"
+      ],
+      "critic_changes": [
+        "Tension: the claim that income per person only clearly passed its 1994 level (2,570) in 2025 is wrong. The data show 2,585 in 2017 and 2,573 in 2019, both above 1994. Rewrote it to compare 2024 (2,567) with the 2017 level (2,585), which 2025 (2,665) was the first year to pass. Also changed 'among the best years in the Pacific' to the press release's wording ('one of the strongest performances in the Pacific').",
+        "Arc: removed 'as the gas project's construction ended' from the 2017–2025 era. The IMF ties the project's completion to the 2015–16 slowdown, which falls in the 2006–2016 era, not to the years since 2017.",
+        "Arc: changed 'A rebound since 2022, helped by the reopened Porgera gold mine' so that Porgera and easier access to foreign exchange are tied to 2025, as the sources do, not to the whole period since 2022. Growth was 1.9 percent in 2023.",
+        "Thread 'New mines, then a crisis': added an ADB citation for the severe drought in 1997, which the two existing quotes did not cover. Checked the 1992 quote against the PDF and it is verbatim; the two-column layout only made it look split.",
+        "Thread 'The gas project boom': the IMF 2017 quote stopped mid-phrase ('falls in major'). Replaced it with the page's words, which name the completion of the PNG LNG pipeline project and the fall in export commodity prices. Changed the text from 'building work ended' to 'the project was completed' to match.",
+        "Thread 'Shocks and scarce foreign exchange': changed 'Since 2017' to 'Over the last decade' to match the IMF's 'past decade' framing of the shocks.",
+        "Thread 'Growth with few jobs': added a Macro Poverty Outlook citation on formal jobs lagging working-age population growth and about 80 percent of people relying on informal and subsistence work. The existing quotes did not support the working-age population and 'most people' claims.",
+        "Checked every other number against desk/data/PNG.json: 0.7, 2.1, -2.5, 2.9, 0.5, 9.9, 14.0, -7.3, 2,311 (1997), 1,822 (2004), 10.6, -2.6, -5.2, 3.8, 2,567, 2,585, 2,665, 2025 as the peak, and 'fastest since 2015' (3.9 in 2015). All match.",
+        "Checked every cited URL. All are on tier 1 domains, and every quoted passage appears on its page, with only small differences caused by the PDF layout. The ADB PDF says Published 2012; the IMF report is dated June 2025 (CR 25/134); the Macro Poverty Outlook says October 2026; the press releases are dated 2017-12-29 and 2026-07-02.",
+        "tier1_recent_found is left at 6 from the draft. Only 3 of those recent sources were checked here: IMF CR 25/134, the October 2026 Macro Poverty Outlook and the 2026-07-02 press release."
+      ]
+    },
+    "headline": "Mines and gas have lifted Papua New Guinea's output in bursts, but income per person grew only 0.7 percent a year over the last decade.",
+    "arc": "Since 1990 Papua New Guinea's income per person has moved in four eras, each tied to its mines, oil and gas. In 1990–1997 it grew 2.1 percent a year: new gold mines and oil fields lifted growth to 9.9 percent in 1992 and 14.0 in 1993, before heavy borrowing ran down foreign exchange reserves and a severe drought hit in 1997. In 1998–2005 it fell 2.5 percent a year as drought, the Asian financial crisis, loose control of spending and low commodity prices took hold, and income per person dropped from 2,311 dollars in 1997 to 1,822 in 2004. In 2006–2016 higher commodity prices and the PNG LNG gas project, which came on stream in 2014, lifted growth to 2.9 percent a year, with a jump of 10.6 percent in 2014. Since 2017 growth has averaged 0.5 percent a year, as low commodity prices, droughts, earthquakes, COVID-19 and long shortages of foreign exchange hit, with a fall of 5.2 percent in 2020. Growth picked up from 2022 and reached 3.8 percent in 2025, helped by more output from the reopened Porgera gold mine and easier access to foreign exchange, which took income per person to its highest level yet.",
+    "threads": [
+      {
+        "title": "New mines, then a crisis",
+        "about": "history",
+        "text": "New gold mines and oil fields opened in mid-1992, and income per person grew 9.9 percent in 1992 and 14.0 in 1993. Spending financed by heavy domestic borrowing then ran down foreign exchange reserves after oil prices fell in 1994, and a severe drought followed in 1997, when income per person fell 7.3 percent.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "Real GDP expanded significantly in 1992 due to developments in the mineral subsector"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "With the decline in oil prices in 1994, the expansionary policies fueled by heavy domestic borrowing led to depletion of foreign exchange reserves"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "a number of internal shocks and constraints in 1997, including a severe drought, the Aitape cyclone"
+          }
+        ]
+      },
+      {
+        "title": "Drought, Asian crisis, lost years",
+        "about": "history",
+        "text": "From 1998 to 2005 income per person fell 2.5 percent a year. Drought, the Asian financial crisis and weak control of government spending brought large budget deficits, and commodity prices stayed low into the early 2000s.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "the government’s weak control of its spending, a drought, and the Asian financial crisis led to large budget deficits and inflationary pressures"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "The first half of the decade witnessed low commodity prices and poor economic performance."
+          }
+        ]
+      },
+      {
+        "title": "The gas project boom",
+        "about": "history",
+        "text": "Higher commodity prices from the mid-2000s and the PNG LNG gas project lifted growth to 2.9 percent a year in 2006–2016, with a 10.6 percent jump in 2014 when the project began operating. Once the project was completed and export prices fell, growth slowed in 2015–16 and the economy leaned more on gas and mining exports.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29776/png-critical-development-constraints.pdf",
+            "publisher": "ADB",
+            "title": "Papua New Guinea: Critical Development Constraints",
+            "date": "2012",
+            "quote": "A rebound in the commodity prices and strong performance by the nonmining activities, however, led to high levels of growth in the economy."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1pngea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Papua New Guinea: 2025 Article IV Consultation, Fourth Reviews Under the Extended Arrangement Under the Extended Fund Facility and the Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/134)",
+            "date": "2025-06",
+            "quote": "its dependence on hydrocarbon and mining exports has risen in recent years, particularly after the PNG Liquified Natural Gas (LNG) project became operational in 2014"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/12/29/pr17523-imf-executive-board-concludes-2017-article-iv-consultation-with-papua-new-guinea",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2017 Article IV Consultation with Papua New Guinea",
+            "date": "2017-12-29",
+            "quote": "slowed sharply, to under 3 percent, in response to falls in major export commodity prices, the completion of the huge PNG LNG pipeline project"
+          }
+        ]
+      },
+      {
+        "title": "Shocks and scarce foreign exchange",
+        "about": "present",
+        "text": "Over the last decade low commodity prices, droughts, earthquakes and COVID-19 have hit growth, and income per person fell 2.6 percent in 2018 and 5.2 percent in 2020. Firms and households could not get enough foreign exchange for years, which held back private investment and spending; exchange rate and market reforms have since eased the shortages.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1pngea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Papua New Guinea: 2025 Article IV Consultation, Fourth Reviews Under the Extended Arrangement Under the Extended Fund Facility and the Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/134)",
+            "date": "2025-06",
+            "quote": "including low commodity prices, severe droughts, earthquakes, and the COVID-19 pandemic, all of which adversely affected growth, contributed to persistent foreign exchange (FX) shortages"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1pngea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Papua New Guinea: 2025 Article IV Consultation, Fourth Reviews Under the Extended Arrangement Under the Extended Fund Facility and the Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/134)",
+            "date": "2025-06",
+            "quote": "FX shortages continued to weigh on activity by constraining private sector investment and consumption and posing high uncertainty."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-png.pdf",
+            "publisher": "World Bank",
+            "title": "Papua New Guinea, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Nonetheless, FX availability improved during the year, reflecting the combined impact of exchange rate adjustment, FX market reforms, and Bank of PNG (BPNG) interventions."
+          }
+        ]
+      },
+      {
+        "title": "Growth with few jobs",
+        "about": "present",
+        "text": "Mining and gas earn most export income but employ few people, and formal jobs have not kept pace with a fast-growing working-age population. Most people still live from informal work and subsistence farming, so strong output growth has done less for living standards.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-png.pdf",
+            "publisher": "World Bank",
+            "title": "Papua New Guinea, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Resource-led growth remains capital-intensive and enclave-based, generating fewer jobs relative to its contribution to output and exports."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-png.pdf",
+            "publisher": "World Bank",
+            "title": "Papua New Guinea, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Formal job creation continues to lag growth in the working-age population, leaving around 80 percent of the population reliant on informal and subsistence activities."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/07/02/papua-new-guinea-s-economy-grows-but-jobs-gap-remains",
+            "publisher": "World Bank",
+            "title": "Papua New Guinea's Economy Grows, but Jobs Gap Remains",
+            "date": "2026-07-02",
+            "quote": "formal employment per capita has declined, with most new workers entering subsistence farming and informal work rather than secure, formal jobs."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 3.8 percent, the fastest since 2015. The World Bank credits more output from the reopened Porgera gold mine and easier access to foreign exchange after exchange rate and market reforms. In October 2026 it expected growth to slow in 2026 as the Porgera boost fades and El Niño weighs on activity.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-png.pdf",
+          "publisher": "World Bank",
+          "title": "Papua New Guinea, Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "In 2026, growth is estimated to slow to 3.5 percent as Porgera’s boost fades and El Niño weighs on activity."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/07/02/papua-new-guinea-s-economy-grows-but-jobs-gap-remains",
+          "publisher": "World Bank",
+          "title": "Papua New Guinea's Economy Grows, but Jobs Gap Remains",
+          "date": "2026-07-02",
+          "quote": "This was supported by strong gold and LNG production, alongside exchange rate reforms, which improved the business environment beyond the resource sector."
+        }
+      ]
+    },
+    "tension": "The sources describe strong, resource-driven growth, with 2025 one of the strongest years in the Pacific. Yet income per person in 2024, at 2,567 dollars, was still below its 2017 level of 2,585, and only in 2025, at 2,665, did it pass it. The World Bank notes that this growth creates few jobs while the working-age population grows fast."
+  }
+}

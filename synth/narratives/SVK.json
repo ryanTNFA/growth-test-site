@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "iso3": "SVK",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SVK",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "WebSearch imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'Slovak Republic Article IV 2025 staff concluding statement growth' and 'OECD Economic Surveys Slovak Republic 2024 growth productivity convergence'. Neither search ran because the shared web search budget for this turn was used up.",
+        "Opened directly with WebFetch: imf.org/en/Countries/SVK and its index.md/index.json, which led to the IMF 2026 Article IV report page and PDF (Country Report No. 26/65, press release dated 2026-03-26), the source cited",
+        "oecd.org: OECD Economic Surveys Slovak Republic 2024 page and the economic snapshot page both returned HTTP 403 and were not cited",
+        "ebrd.com: Transition Report 2025-26 page, its country-assessments page and the CEB page, which led to the Slovak Republic country assessment PDF, the source cited",
+        "Critic check: both cited PDFs re-opened with WebFetch and their text extracted with pdftotext; every quoted passage found on the page",
+        "Tier 2 (UN) was not searched: tier 1 gave 2 recent sources"
+      ],
+      "critic_changes": [
+        "All seven IMF passages and the EBRD passages were found verbatim in the opened PDFs, and every number in the prose matches desk/data/SVK.json (growth_problem and series).",
+        "EBRD citation dates changed from 2025-11-25 to 2025-11. The PDF does not print a day, its metadata gives a November 2025 date, and the publication page could not be re-opened to confirm the 25th, so the day is not guessed.",
+        "Arc and the 'Transition and EU gains fade' thread: removed the claim that the IMF links the 2001–2008 catch-up to the market transition and EU entry, and the claim that this era 'came after' joining the EU (EU entry fell in the middle of the era). The text now says the era covers the years around EU entry and gives the IMF's actual point: the gains from transition and EU entry are largely used up.",
+        "Shortened the first IMF quote in that thread to drop 'further income convergence depends on structural reforms', which is prescriptive.",
+        "'Ageing and slower productivity' thread: added the IMF passage 'Slovakia is particularly exposed to the challenges of an aging population', because no cited passage supported the claim that Slovakia is especially exposed.",
+        "'Car exports meet tariffs' thread: 'main export engine' changed to 'a key export engine', the EBRD's words. The IMF passage ties the automotive capacity expansion to rising imports, not to export growth, so the text now says exports grew strongly while imports rose as car plants added capacity.",
+        "'Energy dependence on Russia' thread: dropped the 2022–2023 consumer price figures. The data hold them, but no cited passage links inflation to energy dependence, so the sentence implied a cause the sources do not give.",
+        "since_last_year: replaced the EBRD quote ('The momentum of early 2025 has waned...') with the passage that actually names higher taxes and tariffs on the car industry, since the old quote did not support the claim. 'Budget cuts' became 'budget tightening', and 'household spending' became 'spending', to match 'fiscal consolidation' and 'consumption'.",
+        "Tension: dropped the sentence that the sources do not explain the 2009 drop. It describes a gap in the sources, not a disagreement between the sources and the data."
+      ]
+    },
+    "headline": "Slovakia caught up fast in the 2000s, but since 2009 income per person has grown 1.9 percent a year as gains from transition and EU entry faded.",
+    "arc": "Income per person fell 14.6 percent in 1991 and 6.8 percent in 1992, and despite a recovery in the middle of the decade the 1991–2000 era averaged just 0.7 percent a year. Growth then sped up to 6.2 percent a year over 2001–2008, the years around EU entry, peaking at 10.8 percent in 2007. Income per person fell 5.6 percent in 2009, and over 2009–2025 growth averaged 1.9 percent a year, with another dip of 2.7 percent in 2020. The IMF says catch-up with richer EU countries has slowed because the gains from the move to a market economy and from EU entry are largely used up, and that an ageing population and weaker productivity growth now weigh on growth. Growth averaged 2.0 percent a year over 2016–2025, down from 3.8 over 2006–2015, though income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Transition and EU gains fade",
+        "text": "Growth averaged 6.2 percent a year over 2001–2008, the years around EU entry. The IMF says the gains from the move to a market economy and from joining the EU are now largely used up, and that slowing growth has made it harder to close the income gap with richer EU countries.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "With the benefits of the transition to market economy and EU accession largely exhausted"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "Declining economic growth has stymied efforts to reduce the fiscal deficit and narrow the income gap to advanced EU countries."
+          }
+        ]
+      },
+      {
+        "title": "Ageing and slower productivity",
+        "text": "The IMF says a shrinking working-age population and weaker productivity growth are holding back growth over the next few years. It sees Slovakia as especially exposed to an ageing population.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "Structural headwinds related to adverse demographic trends and weaker total factor productivity are weighing on medium-term growth"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "The working age population is projected to decline by 0.7 percent per year, consistent with pre-pandemic trends."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "Slovakia is particularly exposed to the challenges of an aging population"
+          }
+        ]
+      },
+      {
+        "title": "Car exports meet tariffs",
+        "text": "The car industry is a key export engine for Slovakia. In 2025 new US tariffs and weaker demand in Europe hit it, though exports still grew strongly, while imports rose as car plants added capacity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Europe-Baltic/transition-report-2025-26-CA-Slovak-Republic.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country assessments, Slovak Republic",
+            "date": "2025-11",
+            "quote": "The automotive sector, a key export engine, faced headwinds from new tariffs imposed by the United States of America"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "net exports rebounded as strong export growth more than offset an increase in imports linked to capacity expansion in the automotive sector"
+          }
+        ]
+      },
+      {
+        "title": "Energy dependence on Russia",
+        "text": "Slovakia uses a lot of energy for what it produces and still relies heavily on Russian oil and gas. The EBRD says efforts to move away from Russian gas have stalled.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+            "date": "2026-03-26",
+            "quote": "Slovakia remains among the most energy-intensive economies in Europe and is highly dependent on oil and gas imports from Russia"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Europe-Baltic/transition-report-2025-26-CA-Slovak-Republic.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country assessments, Slovak Republic",
+            "date": "2025-11",
+            "quote": "Efforts to cut dependence on Russian gas have faltered."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed in 2025: income per person rose 1.0 percent, after 2.0 percent in 2024. The IMF links the slowdown to budget tightening and weak consumer confidence, which held back spending. The EBRD adds higher taxes and US tariffs that hit the car industry.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svkea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Slovak Republic: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/65)",
+          "date": "2026-03-26",
+          "quote": "the economy slowed in 2025, to 0.8 percent from 1.9 percent in 2024, as fiscal consolidation and subdued consumer confidence restrained consumption"
+        },
+        {
+          "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Central-Europe-Baltic/transition-report-2025-26-CA-Slovak-Republic.pdf",
+          "publisher": "EBRD",
+          "title": "Transition Report 2025-26: Country assessments, Slovak Republic",
+          "date": "2025-11",
+          "quote": "Higher taxes and trade tensions have weakened demand, with tariffs adversely affecting the car industry, in particular."
+        }
+      ]
+    },
+    "tension": "The sources call 2025 a sharp slowdown, and the EBRD says the economy is stalling. The data still show income per person rising 1.0 percent that year to its highest level yet: slow growth, not a fall."
+  }
+}

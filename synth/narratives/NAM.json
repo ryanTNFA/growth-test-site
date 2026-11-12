@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "NAM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NAM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'Namibia IMF Article IV 2025 staff report growth diamonds uranium'",
+        "tier 1 domains: 'Namibia economic update World Bank Macro Poverty Outlook 2025'",
+        "tier 1 domains: 'Namibia recession 2016 2019 fiscal consolidation construction drought slowdown'",
+        "opened: imf.org 2026 Article IV Executive Board press release (2026-06-11)",
+        "opened: imf.org 2026 Article IV staff mission press release (2026-03-27)",
+        "opened: thedocs.worldbank.org Namibia Macro Poverty Outlook (October 2026)",
+        "opened: documents1.worldbank.org Namibia Country Partnership Framework FY25-FY29 (2024-12-03)",
+        "attempted: imf.org 2016 Article IV press release (HTTP 429, not cited)",
+        "attempted: documents1.worldbank.org Namibia MPO April 2017 (unreadable, not cited)",
+        "critic: re-opened all four cited URLs (PDFs text-extracted locally) to verify passages and dates"
+      ],
+      "critic_changes": [
+        "All four cited documents opened and checked. All quoted passages appear on their pages, and all dates match (CPF dated December 3, 2024; MPO October 2026; IMF press releases March 27 and June 11, 2026). Every number in the prose matches desk/data/NAM.json.",
+        "Headline: 'a decade of shrinking income per person' changed to 'income per person fell over the next decade'. Income per person rose from 2021 to 2024, so it did not shrink in every year of the decade.",
+        "Arc and thread 2: 'big mine projects were finished' / 'large mine construction projects ended' changed to 'major investment projects were completed'. The CPF says 'major investment projects', not mine construction.",
+        "Arc and thread 2: 'cutting spending' changed to 'tightening the budget'. The source says 'fiscal consolidation', which does not specifically mean spending cuts. Thread title changed to 'Boom ends, drought, budget tightening'.",
+        "Arc: 'partial recovery after 2021' changed to 'from 2021'. The CPF credits diamond and uranium demand for the 2021 and 2022 rebound. Also, 'since 2016 ... averaged -1.6' now reads 'from 2016 to 2025', which matches the data window.",
+        "Thread 1: added a second CPF citation ('favored by the commodity super cycle, which spurred mining investment...'). The first quote did not support the claim about mining investment.",
+        "Thread 3: replaced the 'sharp COVID-induced contraction' quote with the CPF passage on the rebound 'driven by increased global demand for diamonds and uranium'. The old quote was cut off before the diamonds and uranium cause it was used to support. Spacing errors from PDF extraction ('3. 6', 'respec tively') were fixed to the page's words.",
+        "Thread 4: dropped 'as demand for natural stones weakened'. No cited passage in the thread supported it. Also softened 'the IMF names this as the main reason growth slowed in 2025' to 'a drag on growth in 2025', because the IMF lists diamonds alongside gold, livestock and oil exploration as drags.",
+        "Thread 5: dropped 'squeezed what the government can spend elsewhere', which the quoted passage does not support. Changed 'fell sharply in 2025' to 'widened the deficit in the 2025/26 budget year' and extended the IMF quote to the full clause on the FY25/26 deficit, so the passage supports the claim.",
+        "since_last_year: dropped 'Offshore oil exploration ... kept foreign investment high'. The IMF Board release reports 'a slowdown in oil exploration' in 2025, and no cited page says 'offshore'. Replaced it with the MPO passage saying FDI was concentrated in mining and energy and financed most of the current account deficit (citation added).",
+        "Tension: 'job creation barely outpaces population growth' is a World Bank projection to 2028, so it is now framed as what the World Bank 'expects'. 'Because the population grew' was changed to 'as the population grew'."
+      ]
+    },
+    "headline": "Namibia's commodity boom ended in 2016; income per person fell over the next decade, and a diamond slump keeps the recovery slow.",
+    "arc": "Namibia's income per person barely grew from 1990 to 2001, at 0.3 percent a year. From 2002 to 2015 it rose 3.3 percent a year, as a global commodity boom drew mining investment and public spending expanded quickly. Growth stopped in 2016 when the commodity cycle ended, big investment projects were completed, a severe drought hit and the government began tightening the budget to slow rising debt; income per person shrank every year from 2016 to 2019 and fell 10.7 percent in the 2020 pandemic. Demand for diamonds and uranium drove a partial recovery from 2021, but from 2016 to 2025 income per person averaged -1.6 percent a year. In 2025 it slipped 0.3 percent as the diamond slump deepened, leaving it 15.8 percent below its 2015 peak and about where it first stood in 2007.",
+    "threads": [
+      {
+        "title": "Commodity boom and spending surge",
+        "text": "From 2002 to 2015 income per person grew 3.3 percent a year. The World Bank links this to a global commodity boom that spurred mining investment and exports, together with a fast rise in public spending.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "Driven by the global commodity super cycle and a rapid expansion in public expenditure, Namibia embarked upon a rapid growth acceleration between 2000 and 2015"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "favored by the commodity super cycle, which spurred mining investment and associated services and boosted exports"
+          }
+        ]
+      },
+      {
+        "title": "Boom ends, drought, budget tightening",
+        "text": "In 2016 several blows landed at once: the commodity cycle turned, major investment projects were completed, and a severe drought struck. The government also began tightening the budget after the debt ratio had more than doubled. Income per person fell in each year from 2016 to 2019.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "Growth came to a halt in 2016 as the commodity cycle ended, major investment projects were completed, and a severe drought took its course."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "the government initiated a process of fiscal consolidation to address the rapidly rising debt ratio which more than doubled from 2010 to 2015"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic shock and partial rebound",
+        "text": "The pandemic cut income per person by 10.7 percent in 2020. A rebound followed on global demand for diamonds and uranium, but public debt rose sharply as the government supported households.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "the economy rebounded, growing at 3.6 percent and 5.3 percent in 2021 and 2022, respectively, driven by increased global demand for diamonds and uranium"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099120624152542709/pdf/BOSIB-ed4c1a31-3d9c-479d-93be-6778f1de50dd.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Namibia for the Period FY25-FY29",
+            "date": "2024-12-03",
+            "quote": "Debt increased markedly during the pandemic as spending increased to support households."
+          }
+        ]
+      },
+      {
+        "title": "Diamond slump, uranium strength",
+        "text": "Diamond output has fallen as lab-grown diamonds compete with natural stones, and the IMF names a deep and prolonged weakness in diamonds as a drag on growth in 2025. Uranium output has held up, while gold output dipped as the two largest mines moved underground.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/11/pr-26198-namibia-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Namibia",
+            "date": "2026-06-11",
+            "quote": "Economic growth slowed to 1.7 percent in 2025, reflecting deep and prolonged weakness in the diamond sector"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-nam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Namibia, October 2026",
+            "date": "2026-10",
+            "quote": "diamond output declined amid growing competition from lab-grown diamonds, while gold production fell during the transition of the two largest mines to underground mining"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/11/pr-26198-namibia-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Namibia",
+            "date": "2026-06-11",
+            "quote": "Uranium: strong output supporting growth."
+          }
+        ]
+      },
+      {
+        "title": "Customs revenue and budget strain",
+        "text": "The budget leans on payments from the Southern African Customs Union, and a sharp fall in these widened the deficit in the 2025/26 budget year. Years of deficits paid for by borrowing have raised interest costs.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/27/pr-26092-namibia-imf-staff-completes-2026-article-iv-mission-to-namibia",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Namibia",
+            "date": "2026-03-27",
+            "quote": "The fiscal deficit is estimated to have widened markedly in FY25/26, driven primarily by a sharp decline in SACU revenues"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-nam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Namibia, October 2026",
+            "date": "2026-10",
+            "quote": "Persistent fiscal deficits, driven by high spending and volatile SACU revenues and financed by public borrowing, have increased the burden of interest payments."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth stayed slow through 2025 and into early 2026 as diamond output kept falling, and income per person slipped 0.3 percent in 2025. A sharp drop in customs union revenue widened the budget deficit, while stronger uranium and gold exports narrowed the current account deficit. Foreign investment, concentrated in mining and energy, paid for most of that deficit, and the World Bank sees petroleum and green hydrogen as possible future gains.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-nam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Namibia, October 2026",
+          "date": "2026-10",
+          "quote": "Following growth of 1.7 percent in 2025, the slowest since 2021, real GDP growth remained modest at 2.0 percent year-on-year in Q1 2026"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/27/pr-26092-namibia-imf-staff-completes-2026-article-iv-mission-to-namibia",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Namibia",
+          "date": "2026-03-27",
+          "quote": "stronger uranium and gold exports that more than offset lower SACU revenues and the downturn in the diamond sector"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-nam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Namibia, October 2026",
+          "date": "2026-10",
+          "quote": "The deficit was financed mainly by foreign direct investment (FDI) inflows equivalent to 9.4 percent of GDP, concentrated in the mining and energy sectors"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-nam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Namibia, October 2026",
+          "date": "2026-10",
+          "quote": "the successful development of major petroleum and green hydrogen projects could significantly boost FDI, growth, and fiscal revenues over the next five years"
+        }
+      ]
+    },
+    "tension": "The sources describe a recovery since 2021, with total output growing every year, but in the data income per person rose only 1.7 and 1.5 percent in 2023 and 2024 and fell 0.3 percent in 2025, as the population grew almost as fast as the economy. The World Bank expects job creation to \"barely outpace population growth.\" It also cites notable gains in GDP per capita since independence, yet in 2025 income per person was about where it first stood in 2007."
+  }
+}

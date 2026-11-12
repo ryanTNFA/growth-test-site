@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "iso3": "LBR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LBR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains)",
+        "query: Liberia IMF Article IV 2025 staff report growth",
+        "query: Liberia Macro Poverty Outlook World Bank economic update 2025",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Liberia (October 2026)",
+        "opened: documents1.worldbank.org Liberia Country Economic Memorandum (March 2025)",
+        "opened: imf.org IMF Country Report No. 25/290, 2025 Article IV and Second ECF Review (November 2025)",
+        "opened: imf.org press release PR25/325 (October 2025, not cited)",
+        "critic: re-opened all three cited PDFs with WebFetch, extracted their text and checked every quote, date and title against the page"
+      ],
+      "critic_changes": [
+        "Verified all three cited documents by opening them and extracting their text: every existing quote appears on its page, and the dates (MPO October 2026, CEM March 2025, IMF CR 25/290 November 2025) and titles match. Every number in the headline, arc, threads, since_last_year and tension matches desk/data/LBR.json (peak 1972, eras -6.0/3.6/-0.4, trough 1995, 2003 fall, 684 in 2025, below 2013 and 1960 levels, 2013 below 2000, -0.1 vs 2.6, 1.8 and 2.8 in 2024-2025, 2.8 the fastest since 2013). No banned phrases or recommendation language found.",
+        "Headline: changed 'wrecked by war and then by Ebola and a commodity slump' to 'wrecked by war and hit again by Ebola and a commodity slump'. The data show war, not the later shocks, wrecked income per person.",
+        "Thread 'Civil war and collapse': changed 'late 1970s' to 'mid-1970s' to match the source. Added a CEM citation ('lost its middle-income status') because the original quote did not support the middle-income claim.",
+        "Thread 'The post-war peace dividend': added a CEM citation on export-oriented production with minimal domestic value addition. The original quote did not support the claim that growth came from enclaves that added little at home.",
+        "Thread 'A run of shocks after 2014': changed 'hit at once' to 'Between 2014 and 2020', because the shocks were spread over those years. Replaced 'a large source of spending' with the source's 'a key source of foreign exchange and consumer demand' and added the CEM passage that supports it.",
+        "Thread 'Mining-led growth with few jobs': dropped 'low-paid' and 'farming', which the cited passages did not support, in favour of the source's low-productivity informal jobs. Added the MPO passage on iron ore and gold exports to support 'gold and iron ore mining'.",
+        "Thread 'Aid cuts and a fiscal squeeze': replaced the general USAID quote with the IMF passage stating that nearly all active USAID projects were cancelled in February 2025, and changed 'early 2025' to 'February 2025' and 'aid projects' to 'USAID projects'.",
+        "since_last_year: dropped 'after the US aid cuts', because the MPO links lower grants to lower capital spending but not explicitly to the US cuts. Added MPO citations for farming slowing and for lower grants trimming public investment."
+      ]
+    },
+    "headline": "Liberia's income per person, wrecked by war and hit again by Ebola and a commodity slump, has edged up since 2021 but is still below its 1960 level.",
+    "arc": "Liberia's income per person peaked in 1972 and slid through the 1980s, and civil war then wrecked the economy: the 1990 to 1997 era averaged -6.0 percent a year, with income per person bottoming out in 1995. Growth returned from 1998 to 2013 at 3.6 percent a year, despite a sharp fall in 2003 before peace took hold; the World Bank ties the post-war decade to high rubber and iron ore prices, aid and foreign money flowing into mines and plantations. Since 2014 growth has averaged -0.4 percent a year, as the Ebola epidemic, a slump in iron ore and rubber prices, the exit of UN peacekeepers and COVID-19 pushed income per person down through most of 2014 to 2020. Growth has picked up since 2021, led by gold and iron ore mining, but income per person reached only 684 dollars in 2025, still below its 2013 level and below 1960, the first year of the record. Over the last decade it averaged -0.1 percent a year, against 2.6 in the decade before.",
+    "threads": [
+      {
+        "title": "Civil war and collapse",
+        "text": "A long decline from the mid-1970s ended in civil war in the 1990s and early 2000s. Income per person fell to its lowest point in 1995, and Liberia lost the middle-income status it once had.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "From its peak in 1974 to its lowest point in 1995 during the civil war, per-capita income plummeted by an astonishing 93 percent."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "Real GDP per capita collapsed and Liberia lost its middle-income status."
+          }
+        ]
+      },
+      {
+        "title": "The post-war peace dividend",
+        "text": "After peace in 2003, high prices for rubber and iron ore, a wave of aid and foreign money into mines and plantations drove a decade of recovery. That growth came from export enclaves that added little at home.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "driven by surging commodity prices (such as for rubber and iron ore), an influx of foreign aid as part of the “peace dividend,”"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "predominantly fueled by foreign direct investment (FDI), which supported export-oriented production with minimal domestic value addition."
+          }
+        ]
+      },
+      {
+        "title": "A run of shocks after 2014",
+        "text": "Between 2014 and 2020 a string of blows hit: the Ebola epidemic, falling iron ore and rubber prices, the departure of UN peacekeepers, who had been a key source of foreign exchange and consumer demand, and then COVID-19. Income per person fell in 2019 and 2020 and has not regained its 2013 level.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "several external shocks, including the Ebola virus outbreak, a collapse in global iron ore and rubber prices, the withdrawal of UN peacekeeping forces"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099030725074063020/pdf/P179202-781e2660-5d8a-48b9-8a52-1118c2384c89.pdf",
+            "publisher": "World Bank",
+            "title": "Liberia Country Economic Memorandum",
+            "date": "2025-03",
+            "quote": "the withdrawal of UN peacekeepers in 2018 which removed a key source of foreign exchange and consumer demand"
+          }
+        ]
+      },
+      {
+        "title": "Mining-led growth with few jobs",
+        "text": "Recent growth rests on gold and iron ore mining, which has created few jobs. Most workers remain in informal jobs where output per worker is low, so faster output has not meant broad gains.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Liberia",
+            "date": "2026-10",
+            "quote": "Mining expansion has generated few employment opportunities, leaving most workers in low-productivity informal jobs and perpetuating poverty despite headline growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Liberia",
+            "date": "2026-10",
+            "quote": "Real GDP expanded by 5.1 percent in 2025, up from 4.0 percent in 2024, driven by a 17 percent surge in mining output"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Liberia",
+            "date": "2026-10",
+            "quote": "Strong iron ore and gold exports and resilient private consumption supported demand, while fiscal consolidation weighed on public spending."
+          }
+        ]
+      },
+      {
+        "title": "Aid cuts and a fiscal squeeze",
+        "text": "The government cut spending sharply in 2024 to shrink a large deficit, which held growth back. In February 2025 the United States cancelled nearly all its USAID projects, and lower grants have since cut into public investment.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lbrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Liberia: 2025 Article IV Consultation and Second Review Under the Extended Credit Facility Arrangement (IMF Country Report No. 25/290)",
+            "date": "2025-11",
+            "quote": "Growth reached 4 percent in 2024, slightly below earlier projections due to delays in mining projects and significant fiscal tightening."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lbrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Liberia: 2025 Article IV Consultation and Second Review Under the Extended Credit Facility Arrangement (IMF Country Report No. 25/290)",
+            "date": "2025-11",
+            "quote": "In February 2025, nearly all active USAID projects — totaling US$434 million (about 7 percent of GDP) over the next four years—were permanently canceled."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Liberia",
+            "date": "2026-10",
+            "quote": "However, the decline in capital spending partly reflected lower grants, highlighting the vulnerability of public investment to declining external financing."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 a surge in gold and iron ore output lifted growth, while farming slowed and lower grants trimmed public investment. In the data, income per person grew 2.8 percent in 2025, its fastest pace since 2013.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Liberia",
+          "date": "2026-10",
+          "quote": "Real GDP expanded by 5.1 percent in 2025, up from 4.0 percent in 2024, driven by a 17 percent surge in mining output"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Liberia",
+          "date": "2026-10",
+          "quote": "Agriculture slowed to 2.6 percent and non-mining manufacturing contracted by 2.8 percent, reflecting persistent structural constraints."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Liberia",
+          "date": "2026-10",
+          "quote": "However, the decline in capital spending partly reflected lower grants, highlighting the vulnerability of public investment to declining external financing."
+        }
+      ]
+    },
+    "tension": "The sources describe solid, mining-led growth in 2024 and 2025, but in the data income per person rose only 1.8 and 2.8 percent in those years, because the population keeps growing. The World Bank also describes a strong first post-war decade, yet income per person in 2013 was still below its 2000 level, because the collapse of 2003 came first. And the World Bank dates the old peak to 1974, while the data put it in 1972."
+  }
+}

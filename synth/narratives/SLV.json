@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "SLV",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SLV",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: El Salvador Article IV 2025 IMF staff report growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: El Salvador Macro Poverty Outlook World Bank growth remittances",
+        "worldbank.org: El Salvador Macro Poverty Outlook October 2026 economy accelerated 2025",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, iadb.org: El Salvador civil war dollarization 2001 low growth low investment diagnostic",
+        "imf.org: El Salvador IMF 2026 review extended fund facility growth remittances",
+        "oecd.org: OECD Multi-dimensional Review of El Salvador Strategic Priorities 2023 published (critic check)"
+      ],
+      "critic_changes": [
+        "All cited pages were opened (OECD PDF text extracted locally; World Bank country page; three IMF press releases); every quoted passage was found on its page and every date matches. All numbers in the headline, arc, threads, since_last_year and tension match SLV.json (1979–1989 declines, 1978 level regained in 2012, 2.1 over 1990–2025, -8.1 in 2020, 11.5 in 2021, 2.3 vs 1.8 decade averages, 3.5 in 2025 as the fastest since 2006 apart from 2021, 2.6/2.9/2.1 in 2022–2024).",
+        "Thread 'Remittances drive spending': the IMF passage says 'tighter immigration policies elsewhere' and does not name the United States. 'Tighter US immigration policy' is now 'tighter immigration policies abroad', and the quote is extended to show the subject. Dropped 'mostly from the United States' and 'fed services more than exports', which no cited passage supports.",
+        "Thread 'Crime and the security turn': 'tougher security measures have sharply reduced crime' is now 'crime has fallen sharply'. The sources speak of a decline in crime and improvements in security, not of tougher measures.",
+        "Thread 'War, collapse and peace': 'a private, export-led economy' is now 'an open, export-led economy', and an OECD citation that supports the reform and export-led claim was added.",
+        "Thread 'Slowdown and a dollar economy': added an OECD citation for the 1993 peg and the 2001 dollarization, which had no supporting passage.",
+        "since_last_year: 'faster than the IMF and the World Bank expected' is now 'faster than the IMF expected'. Only the IMF passages say it beat expectations. Dropped 'especially in construction', which no cited passage mentions. The IMF December 2025 quote is extended so it covers record remittances and buoyant investment.",
+        "Arc: 'remittance-financed spending holding growth down throughout' is now 'low investment and crime weighing on growth throughout'. No cited passage says remittances held growth down."
+      ]
+    },
+    "headline": "Steady but modest growth since the civil war ended; income per person hit a new high in 2025 as crime fell and remittances surged",
+    "arc": "Income per person shrank in most years from 1979 to 1989 during the civil war and did not get back to its 1978 level until 2012. Since 1990 the data show a single era: growth averaged 2.1 percent a year over 1990–2025, with no lasting shift of 2 points or more. The sources tell that era in phases: a strong post-peace start led by exports and private investment, a slower stretch after the 1995 Tequila crisis and full dollarization in 2001, and a modest pickup after 2010, with low investment and crime weighing on growth throughout. The pandemic cut income per person by 8.1 percent in 2020 before an 11.5 percent rebound in 2021. Growth averaged 2.3 percent a year over 2016–2025, up from 1.8 in the decade before, and a 3.5 percent rise in 2025 left income per person at its highest level yet. The World Bank and the IMF tie the recent pickup to a sharp fall in crime since 2022, record remittances and rising investment.",
+    "threads": [
+      {
+        "title": "War, collapse and peace",
+        "text": "Income per person fell in most years from 1979 to 1989 as civil war spread. Growth returned in the early 1990s after the 1992 peace accords, as reforms built an open, export-led economy.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "Following strong growth rates during most of the 1970s, economic activity collapsed in the 1980s due to the civil war."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "Real GDP then accelerated in the 1990s with the signing of the peace agreements."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "since the end of its civil war three decades ago, including major institutional reforms, the establishment of an open, export-led economic model"
+          }
+        ]
+      },
+      {
+        "title": "Slowdown and a dollar economy",
+        "text": "After the 1995 Tequila crisis, growth slowed through the late 1990s and the 2000s. The colón was pegged to the US dollar in 1993 and the economy became fully dollarized in 2001. The OECD links the slow years to low foreign and domestic investment and weak productivity growth.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "Following the external shock of the Tequila crisis in 1995, economic growth slowed to 1.5% during the 2000s"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "the national currency (the colón) was pegged to the US dollar in 1993, and the economy became fully dollarised in 2001."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "It has been mired by low levels of both foreign and domestic investment, low investment in education, and low productivity growth."
+          }
+        ]
+      },
+      {
+        "title": "Remittances drive spending",
+        "text": "Money sent home by Salvadorans abroad pays for much of household spending on goods and local services. The World Bank says investment, exports and productivity have lagged behind, and the IMF warns that tighter immigration policies abroad could hit remittances and growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/ext/en/country/elsalvador",
+            "publisher": "World Bank",
+            "title": "El Salvador",
+            "date": "2026-10-06",
+            "quote": "Economic activity has largely depended on consumption financed by remittances, while investment, exports, and productivity have lagged."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "large inflows of remittances that sustain the consumption of final goods and non-tradable services by households in El Salvador"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/27/imf-concludes-2025-article-iv-consultation-and-first-review-under-the-eff-for-el-salvador",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV consultation and First Review Under the Extended Fund Facility for El Salvador",
+            "date": "2025-06-27",
+            "quote": "tighter immigration policies elsewhere could negatively impact remittances and growth."
+          }
+        ]
+      },
+      {
+        "title": "Crime and the security turn",
+        "text": "For decades crime and violence raised costs for people and firms and cut the returns on investment. Since 2022 crime has fallen sharply, and the World Bank and the IMF credit this with lifting confidence and economic activity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "Crime and violence have long imposed a high cost on citizens and firms, limiting the profitability of investment"
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/elsalvador",
+            "publisher": "World Bank",
+            "title": "El Salvador",
+            "date": "2026-10-06",
+            "quote": "Since 2022, the sharp decline in crime, together with the government’s commitment to reducing macro-fiscal imbalances, has strengthened market and investor confidence."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/10/01/pr26316-el-salvador-imf-concludes-2nd-and-3rd-reviews-under-the-eff",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes the Second and Third Reviews Under the Extended Fund Facility for El Salvador",
+            "date": "2026-10-01",
+            "quote": "Economic activity has exceeded expectations, supported by sustained improvements in security and rising investor confidence"
+          }
+        ]
+      },
+      {
+        "title": "The pandemic swing",
+        "text": "The COVID-19 shock cut income per person by 8.1 percent in 2020. It bounced back by 11.5 percent in 2021, and growth then returned to its earlier pace.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/multi-dimensional-review-of-el-salvador_b6acb561/2f3d5e1f-en.pdf",
+            "publisher": "OECD",
+            "title": "Multi-dimensional Review of El Salvador: Strategic Priorities for Robust, Inclusive and Sustainable Development",
+            "date": "2023-04",
+            "quote": "GDP contracted by 8.6% in real terms in 2020 but recovered by growing at a rate of 10.8% in 2021"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth ran faster than the IMF expected. Income per person rose 3.5 percent in 2025, the fastest since 2006 apart from the 2021 rebound. The sources credit improved confidence, record remittances and buoyant investment. In October 2026 the IMF completed two more reviews of its lending program.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/ext/en/country/elsalvador",
+          "publisher": "World Bank",
+          "title": "El Salvador",
+          "date": "2026-10-06",
+          "quote": "Combined with record remittance inflows, these developments helped accelerate economic growth from 2.6 percent in 2024 to 3.9 percent in 2025,"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/22/pr25440-el-salvador-imf-staff-statement-on-el-salvador",
+          "publisher": "IMF",
+          "title": "IMF Staff Statement on El Salvador",
+          "date": "2025-12-22",
+          "quote": "The economy is expanding at a faster than anticipated pace on the back of improved confidence, record remittances, and buoyant investment."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/01/pr26316-el-salvador-imf-concludes-2nd-and-3rd-reviews-under-the-eff",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes the Second and Third Reviews Under the Extended Fund Facility for El Salvador",
+          "date": "2026-10-01",
+          "quote": "Economic activity has exceeded expectations, supported by sustained improvements in security and rising investor confidence"
+        }
+      ]
+    },
+    "tension": "The sources describe a turn after crime fell in 2022, but income per person grew 2.6, 2.9 and 2.1 percent in 2022–2024, close to the decade average of 2.3; only 2025, at 3.5, stands clearly above it. The sources also tell the 1990s, 2000s and 2010s as distinct phases, while the data find one era since 1990 with no lasting shift of 2 points or more."
+  }
+}

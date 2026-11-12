@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "iso3": "TLS",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TLS",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Timor-Leste Article IV 2025 staff report petroleum fund Bayu-Undan\"",
+        "same tier 1 domains: \"Timor-Leste economic report 2025 growth World Bank\"",
+        "same tier 1 domains: \"Timor-Leste Bayu-Undan oil production decline GDP contraction 2022 2023\"",
+        "same tier 1 domains: \"Timor-Leste 2006 crisis independence 2002 growth history petroleum fund spending boom 2007-2012\"",
+        "opened: imf.org PR 25/315 (2025 Article IV, Executive Board); imf.org PR 25/232 (2025 Article IV mission); imf.org SIP/2024/042 How Has Dollarization Served Timor-Leste So Far?; documents1.worldbank.org Macro Poverty Outlook Timor-Leste April 2026; documents1.worldbank.org Timor-Leste Economic Report April 2026; documents1.worldbank.org Timor-Leste Economic Report July 2024; documents1.worldbank.org Timor-Leste Systematic Country Diagnostic 2018",
+        "critic: re-opened every cited URL (PDF text extracted locally) and checked every quote, date and number against desk/data/TLS.json",
+        "tier 2 (UN) domains not searched: tier 1 gave 6 recent sources"
+      ],
+      "critic_changes": [
+        "Arc, first sentence: the draft said the 1991–2000 era 'ended in 1999'; the data's era runs to 2000, and its 8.3 percent average is lifted by a 77.1 percent rebound in 2000 (series). Rewrote it to say the era mixes steady growth, the 27.1 percent fall in 1999 and the 2000 rebound; 'departing forces' became 'withdrawing forces' to match the source.",
+        "Arc, third sentence: growth picked up from 2007, before the 2009–2016 era starts (7.2 and 8.4 percent in 2007–2008), so 'growth picked up to 3.2 percent a year in 2009–2016' became 'growth picked up, averaging 3.2 percent a year in 2009–2016'.",
+        "Thread 'Destruction and a fragile start': the claim about 2006 violence had no quoted support. Added a third citation from the same World Bank SCD page (attempted coup in 2006) and named the coup in the text.",
+        "Thread 'Oil savings fund a spending surge': 'unlike in most countries leaving conflict' became 'unlike in other countries leaving conflict', as the IMF passage says 'other post-conflict countries'. Fixed the quote's dash to the page's em dash.",
+        "Thread 'Political impasse and repeated shocks': lengthened the first quote to include 'and global price increases', so it supports 'rising world prices'. Dropped 'wages' from the text because the quote (kept within 25 words) covers only labour productivity.",
+        "Thread 'The oil runs out': removed 'the field that paid for most of the state', which no cited passage supports. It now reads 'the main oil and gas field'.",
+        "Thread 'Growth rests on the Petroleum Fund': removed 'household spending supported by government transfers', which the cited passages do not support.",
+        "Verified: every other quote appears verbatim on its opened page, the dates match (SCD 2018; World Bank economic report July 2024 and April 2026; MPO April 2026; IMF SIP December 2024; IMF PR September 2025), and every number in the prose matches TLS.json (8.3, 27.1, 77.1, -0.6, 3.2, 0.2, 39.8, peak 2021, level first reached 2001, 21.6, 19.0, 10.2, 21.8, 29.2, 5.6). 'Mid-2025' in since_last_year is on the MPO page. The tension's claim that the economy grew every year from 2022 to 2025 is supported by the July 2024 report (2022, 2023), the IMF PR (2024) and the MPO (2025).",
+        "Five distinct recent tier 1 sources are cited and all verified, and 5 threads survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Oil savings paid for Timor-Leste's new state and a spending-led recovery, but as the oil ran out income per person fell back to its 2001 level.",
+    "arc": "Income per person in Timor-Leste grew 8.3 percent a year in 1991–2000, an average that mixes steady growth with a 27.1 percent fall in 1999, the year of the independence vote, when withdrawing forces destroyed most government buildings, and a 77.1 percent rebound in 2000. In 2001–2008 growth averaged -0.6 percent a year: the new state lacked people, institutions and money, and unrest built up to an attempted coup in 2006. From 2007 the government spent well beyond what its oil savings could sustain, and growth picked up, averaging 3.2 percent a year in 2009–2016, though it tailed off after 2012 once spending levelled off. Since 2017 growth has averaged 0.2 percent a year, as a political impasse, COVID-19 and a cyclone hit the economy and the Bayu-Undan oil and gas field ran down and closed. Income per person peaked in 2021 and by 2025 was 39.8 percent below that peak, about where it first was in 2001.",
+    "threads": [
+      {
+        "title": "Destruction and a fragile start",
+        "text": "The country began with almost nothing: most public buildings, power and phone networks were destroyed around the 1999 vote. Between independence in 2002 and 2006 the new state struggled to get going, and growing discontent ended in an attempted coup in 2006.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/524131528837983427/pdf/TL-SCD-0228B-lowres-03212018.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Systematic Country Diagnostic: Pathways for a New Economy and Sustainable Livelihoods",
+            "date": "2018",
+            "quote": "Action by withdrawing Indonesian forces meant that 70 percent of government buildings were destroyed immediately after the vote for independence"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/524131528837983427/pdf/TL-SCD-0228B-lowres-03212018.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Systematic Country Diagnostic: Pathways for a New Economy and Sustainable Livelihoods",
+            "date": "2018",
+            "quote": "From 2002 to 2006, the nation struggled to accelerate development progress, lacking much of the state apparatus, capacity and resources needed to do so."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/524131528837983427/pdf/TL-SCD-0228B-lowres-03212018.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Systematic Country Diagnostic: Pathways for a New Economy and Sustainable Livelihoods",
+            "date": "2018",
+            "quote": "sporadic outbreaks of violence continued, and dissatisfaction with government grew, culminating in an attempted coup in 2006"
+          }
+        ]
+      },
+      {
+        "title": "Oil savings fund a spending surge",
+        "text": "From 2007 the government drew on its Petroleum Fund to raise public spending far above what the fund could sustain. Growth picked up with that spending, unlike in other countries leaving conflict, and slowed once spending stopped rising after 2012.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/524131528837983427/pdf/TL-SCD-0228B-lowres-03212018.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Systematic Country Diagnostic: Pathways for a New Economy and Sustainable Livelihoods",
+            "date": "2018",
+            "quote": "The incoming government in 2007 took the decision to scale up spending beyond what the ESI could finance to speed up the pace of development."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2024/english/sipea2024042.pdf",
+            "publisher": "IMF",
+            "title": "How Has Dollarization Served Timor-Leste So Far?",
+            "date": "2024-12",
+            "quote": "the growth pickup coincided with a rapid increase in government spending—unlike the experience of other post-conflict countries"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/524131528837983427/pdf/TL-SCD-0228B-lowres-03212018.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Systematic Country Diagnostic: Pathways for a New Economy and Sustainable Livelihoods",
+            "date": "2018",
+            "quote": "this high growth tailed off once public spending stabilized at a new level, evident in falling average growth rates since 2012"
+          }
+        ]
+      },
+      {
+        "title": "Political impasse and repeated shocks",
+        "text": "A political impasse in 2017 was followed by COVID-19, Cyclone Seroja and rising world prices. Output per person outside oil fell, along with labour productivity, and the World Bank says it is still below its level before COVID-19.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081924034016683/pdf/P5007761acec3703b1ba7b173a4d24731fb.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveraging WTO Accession for Economic Transformation",
+            "date": "2024-07",
+            "quote": "Between 2017 and 2021, the country faced a series of challenges including political instability, the COVID-19 pandemic, Tropical Cyclone Seroja, and global price increases"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081924034016683/pdf/P5007761acec3703b1ba7b173a4d24731fb.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveraging WTO Accession for Economic Transformation",
+            "date": "2024-07",
+            "quote": "The decline in non-oil per capita GDP since the political impasse in 2017 has been reflected in both a decrease in labor productivity"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099041526055538891/pdf/P513278-2731b35e-378d-4386-ac80-2602afbc0633.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveling Up—How ASEAN Membership Can Support Timor-Leste's Economic Transformation",
+            "date": "2026-04",
+            "quote": "Non-oil GDP per capita remains below pre-COVID-19 levels"
+          }
+        ]
+      },
+      {
+        "title": "The oil runs out",
+        "text": "Output from Bayu-Undan, the main oil and gas field, wound down and stopped, and oil income collapsed. World Bank reports date the end differently, to 2023 in one and to 2025 in a later one.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081924034016683/pdf/P5007761acec3703b1ba7b173a4d24731fb.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveraging WTO Accession for Economic Transformation",
+            "date": "2024-07",
+            "quote": "Petroleum production from Bayu-Undan ceased in 2023."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099539108062634486/pdf/Bulk-d074820b-f04e-4687-b9ce-1842a4cf52f4.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Timor-Leste",
+            "date": "2026-04",
+            "quote": "Oil production ended in 2025, shifting Timor-Leste into a post-oil phase"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099041526055538891/pdf/P513278-2731b35e-378d-4386-ac80-2602afbc0633.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveling Up—How ASEAN Membership Can Support Timor-Leste's Economic Transformation",
+            "date": "2026-04",
+            "quote": "oil receipts declined from an annual average of US$667 million in 2019–23 to US$85 million in 2024"
+          }
+        ]
+      },
+      {
+        "title": "Growth rests on the Petroleum Fund",
+        "text": "The economy outside oil keeps growing, but mainly on household consumption and public spending. Withdrawals from the oil savings fund pay for most of that public spending.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099041526055538891/pdf/P513278-2731b35e-378d-4386-ac80-2602afbc0633.pdf",
+            "publisher": "World Bank",
+            "title": "Timor-Leste Economic Report: Leveling Up—How ASEAN Membership Can Support Timor-Leste's Economic Transformation",
+            "date": "2026-04",
+            "quote": "Growth remains heavily dependent on household consumption and public spending financed by Petroleum Fund withdrawals."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099539108062634486/pdf/Bulk-d074820b-f04e-4687-b9ce-1842a4cf52f4.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Timor-Leste",
+            "date": "2026-04",
+            "quote": "Petroleum resources have funded roughly three-quarters of spending each year"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/25/pr-25315-timor-leste-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation for Timor-Leste",
+            "date": "2025-09",
+            "quote": "Growth is estimated to have risen to 4.1 percent in 2024, supported by fiscal expansion and strong credit growth."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil production ended in mid-2025, so the country now lives on its savings, not on new oil income. The economy outside oil still grew in 2025, helped by high public spending and more tourists, and Timor-Leste joined ASEAN in 2025 after joining the WTO in 2024. In the data, income per person rose 5.6 percent in 2025 after three years of decline.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099539108062634486/pdf/Bulk-d074820b-f04e-4687-b9ce-1842a4cf52f4.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Timor-Leste",
+          "date": "2026-04",
+          "quote": "Growth reached 4.5 percent in 2025 on high public spending and a rebound in tourism"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099539108062634486/pdf/Bulk-d074820b-f04e-4687-b9ce-1842a4cf52f4.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Timor-Leste",
+          "date": "2026-04",
+          "quote": "Association of Southeast Asian Nations (ASEAN) membership in 2025 and World Trade Organization (WTO) accession in 2024"
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe an economy that grew in every year from 2022 to 2025, led by public spending. The data instead show income per person falling 21.6 percent in 2022, 19.0 percent in 2023 and 10.2 percent in 2024. The data's measure seems to include offshore oil output, which the sources leave out when they track the economy outside oil, so the fall follows the run-down of Bayu-Undan rather than what happened on shore. The same gap shows earlier: the data have income per person jumping 21.8 percent in 2019 and 29.2 percent in 2020, years the sources describe as political instability and COVID-19."
+  }
+}

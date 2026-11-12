@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "iso3": "GAB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GAB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch (tier 1 domains: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Gabon Article IV staff report 2025 oil growth\"",
+        "WebSearch (tier 1 domains): \"Gabon Macro Poverty Outlook World Bank 2025\"",
+        "WebSearch (tier 1 domains): \"Gabon oil production peaked 1997 decline growth per capita stagnation diversification\"",
+        "Opened: thedocs.worldbank.org Gabon Macro Poverty Outlook (October 2026)",
+        "Opened: documents1.worldbank.org Gabon Economic Update 2026 (September 2026)",
+        "Opened: imf.org IMF Country Report No. 24/145 Gabon Selected Issues (May 2024)",
+        "Opened: documents1.worldbank.org Report No. 82538-GA Report on Growth and Employment (June 2013)",
+        "Tried, blocked (403): elibrary.imf.org Gabon's Diversification Journey; elibrary.imf.org Oil Wealth in Central Africa ch. 12",
+        "Critic: re-fetched all four cited PDFs (imf.org, documents1.worldbank.org x2, thedocs.worldbank.org) and checked every quote against the extracted text"
+      ],
+      "critic_changes": [
+        "Population thread: the World Bank Economic Update quote was wrong. The page reads \"as population growth absorbed almost the entire arithmetic gain from a declining rate\", not \"...from the country's upper-middle-income status\". I replaced it with the page's words and changed the text to match what it supports: the number of poor barely fell from 2017 to 2024.",
+        "Arc, sentence 4: I removed \"offset gains in wood, manganese and public works\". The 2026 sources say wood and manganese shrank or underperformed in 2025, and none of them describes gains in those sectors. The sentence now names the shocks and what they hit (reserves and public debt), which the IMF passage supports. I also reworded \"-0.6 over 2016-2025\" to say income per person shrank 0.6 percent a year, which matches G1 avg_10y.",
+        "Arc, sentence 2: I changed \"debt and political unrest slowed reforms\". The 2013 World Bank report says foreign debt and arrears built up and that unrest weakened the adjustment programs. It does not say debt slowed reforms.",
+        "Arc, sentence 5: I changed \"led by public building while oil, mining and timber underperformed\" to the MPO's own terms: large infrastructure projects, with oil, manganese and wood exports underperforming. I also tied the sentence to 2025.",
+        "Headline: I replaced \"kept growth near zero\", which is wrong for the 1999-2009 era at -3.1, with \"held growth back\".",
+        "Oil fields thread: the text says reserves shrank and exploration was limited, but the cited quote only supports the 1997 peak. I added a second IMF passage that names maturing fields, dwindling reserves and limited exploration.",
+        "Oil price shocks thread: the old IMF quote listed the crises but did not support \"hit reserves and public debt\". I swapped it for a 22-word passage from the same page that names the impact on reserves and public debt. I also removed 2008-2009 from the thread text because the new quote no longer covers it.",
+        "Adjustment thread: no quote backed \"deep cuts to public building\". I added the 2013 World Bank passage on large cuts to capital spending and changed the wording to \"public investment\".",
+        "Spending thread: I removed \"2023-2025 political transition\" because the sources give no dates for it, and replaced \"state-led building push\" with the MPO's \"surge in public investment\".",
+        "since_last_year: I added citations for the claims that had none: the MPO passage on the oil-backed loan and Eurobond, and the World Bank Economic Update passage on 2025 oil output. I also changed \"unpaid bills\" to \"arrears\", the word the MPO uses.",
+        "Tension: I kept it because the 2013 report does call 2003-2010 a recovery with GDP per capita rising. I replaced the 2024/2025 point. The World Bank's own 2025 per-capita estimate is higher than the data file's 0.3, so the real disagreement is between the two figures, not about output versus per-capita growth. I quoted no number that is absent from the data file.",
+        "Verified: all four cited PDFs open on tier 1 domains. The dates match the documents: IMF CR 24/145 dated May 10, 2024; Economic Update September 2026; MPO October 2026; Report 82538-GA June 2013. Every other quote matches the page text, with the IMF's curly apostrophes kept. All growth figures (55.2, 1976, 1972, 1.1, -3.1, 0.4, -0.6, 0.3) match growth_problem and series. There are 3 recent tier 1 sources and 5 threads, and no banned phrases."
+      ]
+    },
+    "headline": "Gabon's income per person is still 55.2 percent below its 1976 oil-boom peak, as aging oil fields and repeated oil price shocks held growth back.",
+    "arc": "Gabon's income per person peaked in 1976, at the height of an oil boom, and is still 55.2 percent below that peak, about where it first was in 1972. From 1990 to 1998 it grew 1.1 percent a year as oil output rose toward its 1997 peak, while foreign debt and arrears built up and political unrest weakened reform programs. From 1999 to 2009 it shrank 3.1 percent a year, as oil production fell from that peak with the fields aging, and the 2008-2009 crisis hit an economy tied to oil. Since 2010 it has grown only 0.4 percent a year, and it shrank 0.6 percent a year over 2016-2025, as the 2014-2016 commodity slump, the 2020 pandemic and falling oil output hit reserves and public debt. The World Bank describes growth in 2025 as led by large infrastructure projects, while oil, manganese and wood exports underperformed.",
+    "threads": [
+      {
+        "title": "Oil fields past their peak",
+        "about": "present",
+        "text": "Gabon's oil output peaked in 1997 and has drifted down since, as fields aged, reserves shrank and exploration was limited. Oil output fell again in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1gabea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Gabon: Selected Issues (IMF Country Report No. 24/145)",
+            "date": "2024-05",
+            "quote": "Gabon’s oil fields are maturing, with oil production starting in the late 1950s and peaking in 1997."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1gabea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Gabon: Selected Issues (IMF Country Report No. 24/145)",
+            "date": "2024-05",
+            "quote": "Gabon’s oil production has been on a declining trend due to the maturing oil fields, dwindling oil reserves, and limited investment in exploration activities."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099102526143532234/pdf/P512960-6681a191-8a38-41c7-b257-7f2ae412862a.pdf",
+            "publisher": "World Bank",
+            "title": "Gabon Economic Update 2026: Investing in Education and Skills for More and Better Jobs and Inclusive Growth",
+            "date": "2026-09",
+            "quote": "Oil production fell by 2.9 percent due to aging oilfields and technical incidents"
+          }
+        ]
+      },
+      {
+        "title": "Oil price shocks",
+        "about": "history",
+        "text": "Swings in the oil price have repeatedly knocked income back. The 1986 price collapse ended the boom years, and later collapses, including in the 2014-2016 commodity slump and the 2020 pandemic, hit reserves and public debt hard.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/463031468273903723/pdf/825380WP00PUBL0nglish0version0final.pdf",
+            "publisher": "World Bank",
+            "title": "Gabonese Republic: Report on Growth and Employment - Paving the way toward inclusive growth (Report No. 82538-GA)",
+            "date": "2013-06",
+            "quote": "In 1986, international oil prices, which increased at an average of 4 percent annually between 1983 and 1985, fell by 50 percent."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1gabea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Gabon: Selected Issues (IMF Country Report No. 24/145)",
+            "date": "2024-05",
+            "quote": "the 2014-2016 commodity crisis, and the 2020 COVID-19 pandemic with especially severe impacts on the country’s international reserves and public debt ratios"
+          }
+        ]
+      },
+      {
+        "title": "Adjustment and unrest in the 1990s",
+        "about": "history",
+        "text": "After the 1986 crash Gabon went through several adjustment programs with deep cuts to public investment. From 1990 the move to multiparty politics brought unrest that weakened those programs.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/463031468273903723/pdf/825380WP00PUBL0nglish0version0final.pdf",
+            "publisher": "World Bank",
+            "title": "Gabonese Republic: Report on Growth and Employment - Paving the way toward inclusive growth (Report No. 82538-GA)",
+            "date": "2013-06",
+            "quote": "Economic policies developed within adjustment programs were mainly characterized by large cuts in the capital budget expenditure."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/463031468273903723/pdf/825380WP00PUBL0nglish0version0final.pdf",
+            "publisher": "World Bank",
+            "title": "Gabonese Republic: Report on Growth and Employment - Paving the way toward inclusive growth (Report No. 82538-GA)",
+            "date": "2013-06",
+            "quote": "since 1990 attempts to implement structural adjustment programs were weakened by political and social unrest resulting from the transition to multiparty political system."
+          }
+        ]
+      },
+      {
+        "title": "Spending with the oil cycle",
+        "about": "present",
+        "text": "Public spending has tended to rise and fall with oil prices, so little oil wealth was saved and debt was high by 2023. After the political transition, a surge in public investment widened the budget deficit sharply in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1gabea2024002.pdf",
+            "publisher": "IMF",
+            "title": "Gabon: Selected Issues (IMF Country Report No. 24/145)",
+            "date": "2024-05",
+            "quote": "Overall, the procyclical and expansionary policies resulted in little saving of the oil wealth and a high debt level by end-2023."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gab.pdf",
+            "publisher": "World Bank",
+            "title": "Gabon: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "The fiscal deficit widened significantly to an estimated 12 percent of GDP in 2025, mainly driven by a public investment surge."
+          }
+        ]
+      },
+      {
+        "title": "A fast-growing population",
+        "about": "present",
+        "text": "The population is growing quickly, so total output growth turns into much smaller gains in income per person. The World Bank finds the number of poor people barely fell between 2017 and 2024, as population growth absorbed almost all of the fall in the poverty rate.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099102526143532234/pdf/P512960-6681a191-8a38-41c7-b257-7f2ae412862a.pdf",
+            "publisher": "World Bank",
+            "title": "Gabon Economic Update 2026: Investing in Education and Skills for More and Better Jobs and Inclusive Growth",
+            "date": "2026-09",
+            "quote": "as population growth absorbed almost the entire arithmetic gain from a declining rate"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gab.pdf",
+            "publisher": "World Bank",
+            "title": "Gabon: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "yet due to population growth the number of poor would rise to 825,000 by 2028"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 oil output fell again and a surge in public investment widened the budget deficit sharply, while public debt and arrears rose. In March 2026 the government asked the IMF for a program, and an oil-backed loan and a costly Eurobond issued in 2026 eased short-term cash pressures.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gab.pdf",
+          "publisher": "World Bank",
+          "title": "Gabon: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "The Government formally requested an IMF program to strengthen the fiscal situation in March 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gab.pdf",
+          "publisher": "World Bank",
+          "title": "Gabon: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Meanwhile, an oil-backed loan and a seven-year, costly USD 920-million Eurobond issued in 2026 eased liquidity pressures"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099102526143532234/pdf/P512960-6681a191-8a38-41c7-b257-7f2ae412862a.pdf",
+          "publisher": "World Bank",
+          "title": "Gabon Economic Update 2026: Investing in Education and Skills for More and Better Jobs and Inclusive Growth",
+          "date": "2026-09",
+          "quote": "Oil production fell by 2.9 percent due to aging oilfields and technical incidents"
+        }
+      ]
+    },
+    "tension": "The World Bank's 2013 growth report calls 2003-2010 a recovery in which income per person rose steadily, helped by high commodity prices and reforms, but the data file shows income per person falling in most of those years, inside a 1999-2009 era that averaged -3.1 percent a year. For 2025 the World Bank's 2026 update also reports income per person rising faster than the 0.3 percent in the data file."
+  }
+}

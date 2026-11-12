@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "iso3": "MHL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MHL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: Marshall Islands Article IV consultation staff report 2025",
+        "imf.org, worldbank.org, adb.org and other tier 1 domains: Marshall Islands economy Compact of Free Association growth outlook",
+        "worldbank.org, adb.org: Marshall Islands economic update fisheries revenue growth emigration",
+        "adb.org, imf.org, worldbank.org: Marshall Islands growth 2019 fisheries construction Asian Development Outlook",
+        "Opened and verified: imf.org 2025 Article IV press release (2025-12-04)",
+        "Opened and verified: imf.org 2025 Article IV concluding statement (2025-09-10)",
+        "Opened and verified: imf.org 2023 Article IV press release (2023-09-21)",
+        "Opened and verified: imf.org 2021 Article IV press release (2021-05-27)",
+        "Opened and verified (PDF text extracted): imf.org Country Report 16/260 (2016-07)",
+        "Opened and verified (PDF text extracted): imf.org Country Report 06/95 (2006-03)",
+        "Opened and verified: worldbank.org energy crisis press release (2026-06-09)",
+        "Opened and verified: adb.org Marshall Islands economy page (ADO September 2026)",
+        "Could not open (403): imf.org Country Report 23/349; World Bank openknowledge Marshall Islands report and Pacific Economic Update August 2023"
+      ],
+      "critic_changes": [
+        "Headline: dropped 'US grants' as a driver of the 2017–2025 era. No opened source credits US grants for that boom, and the sources name fishing and construction. Changed 'after 2016' to the era's years, 2017–2025.",
+        "Arc: the draft said the IMF links the 2009–2016 growth to record fishing licence fees. The IMF ties the record fees to the budget surplus and ties growth to delayed infrastructure projects, so the sentence now says what the IMF says. Changed 'shrinking US Compact grants' to 'shrinking grants', since the 2006 report says 'declining grant flows'. 'Stalled in 2020' became 'barely grew in 2020 as COVID travel limits hit', which the IMF 2021 press release supports.",
+        "Thread 1: replaced the '30 percent' quote with the IMF sentence that gives the cause (declining grant flows and repaying debt borrowed against future Compact revenues), which the thread text claims. Text now says 'nearly a decade', as the source does.",
+        "Thread 2: fixed the quote to the page's wording ('FY2014–15' with an en dash, not a hyphen). The dates and passages were checked in the extracted PDF text.",
+        "Thread 3: the Micronesian Games quote did not support 'a strong fishing rebound'. Replaced it with the IMF bullet 'Strong rebound in fisheries.' and reworded the text so the drivers match the quote. Labelled the 2019 output claim as FY2019.",
+        "Thread 4: the draft called the Extraordinary Needs Distribution a 'special cash payout'. No source describes it that way, so it is now named as a second cash scheme. Added the IMF passage that confirms the August 2025 approval and the funding from the Compact Trust Fund.",
+        "Thread 5: extended the 2016 quote to include the wage-differential clause and matched the text to 'without a separate permit', as the source says.",
+        "since_last_year: the claim about one of the world's most fuel-import-dependent economies was not in any cited passage, so it was reworded. Added a citation for the IMF's December 2025 expectation of faster FY2026 growth. Added the World Bank passage on FY26 growth slowing. Changed 'slower growth' from the ADB to 'only modest growth', since the ADB page gives figures without a comparison.",
+        "Tension: made the population explanation more cautious, since the data file has no population series to confirm a decline. Noted the IMF's FY2020 contraction against the small rise in income per person in 2020 and the possible difference in data releases.",
+        "Every number in the headline, arc, threads, since_last_year and tension was checked against desk/data/MHL.json: 0.1, 2.9, 5.2, 1.4, -11.2, -7.4, 13.7, 0.2, 2.5, -2.3, 6.8, 5.9, the 2025 peak and the 50.2 investment share in 2019. All match.",
+        "All 9 cited URLs were opened. The two IMF PDFs were checked from their extracted text. The publication dates match the documents: CR 06/95 March 2006, CR 16/260 July 2016, and the World Bank release dated 9 June 2026 on the page."
+      ]
+    },
+    "headline": "Income per person in the Marshall Islands, flat from 1990 to 2008, grew 5.2 percent a year in 2017–2025, led by fishing and construction.",
+    "arc": "Income per person in the Marshall Islands barely moved from 1990 to 2008, growing 0.1 percent a year, and it ended that era about where it began. The IMF ties the mid-1990s slump, with falls of 11.2 percent in 1996 and 7.4 percent in 1997, to shrinking grants and the need to repay debt the government had borrowed against future Compact money. Growth rose to 2.9 percent a year in 2009–2016, when, the IMF says, delayed infrastructure projects got going and fishing licence fees reached record highs. From 2017 to 2025 it reached 5.2 percent a year, against 1.4 percent in the decade to 2015, led by fishing and construction: income per person jumped 13.7 percent in 2019, barely grew in 2020 as COVID travel limits hit, and dipped 2.3 percent in 2023. It rose 6.8 percent in 2024 and 5.9 percent in 2025, reaching its highest level so far.",
+    "threads": [
+      {
+        "title": "Grant cuts and the 1990s slump",
+        "about": "history",
+        "text": "After nearly a decade of growth following independence in 1986, the economy shrank in the mid-1990s as grants fell and the government repaid debt it had borrowed against future Compact money. Income per person dropped 11.2 percent in 1996 and 7.4 percent in 1997, and by 2008 it was no higher than in 1990.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr0695.pdf",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: 2005 Article IV Consultation—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for the Republic of the Marshall Islands",
+            "date": "2006-03",
+            "quote": "After nearly a decade of growth following independence in 1986, economic activity declined markedly in the mid-1990s."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr0695.pdf",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: 2005 Article IV Consultation—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for the Republic of the Marshall Islands",
+            "date": "2006-03",
+            "quote": "This was a result of declining grant flows and the need to retire public debt, incurred through external commercial borrowing by the government against …"
+          }
+        ]
+      },
+      {
+        "title": "Fishing licence money arrives",
+        "about": "history",
+        "text": "In the 2009–2016 era, fees paid by foreign fleets to fish in Marshallese waters climbed to record highs and pushed the budget into surplus. Growth also leaned on Compact-funded infrastructure projects that had been delayed and then got under way.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16260.pdf",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of the Marshall Islands",
+            "date": "2016-07",
+            "quote": "The fiscal balance is estimated to have recorded a surplus of about 3 percent of GDP in FY2014–15, due to record-high fishing license fees."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16260.pdf",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of the Marshall Islands",
+            "date": "2016-07",
+            "quote": "After several years of growth rebound fueled by the delayed implementation of infrastructure projects"
+          }
+        ]
+      },
+      {
+        "title": "Fishing and construction drive the boom",
+        "about": "present",
+        "text": "Strong fishing and construction lifted growth in FY2019, and in 2019 investment jumped to 50.2 percent of GDP. Output fell in FY2022 after a domestic firm sold a fishing vessel, and the IMF names a strong rebound in fishing among the drivers of the return to growth in FY2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/05/27/pr21142-marshall-islands-imf-executive-board-concludes-2021-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2021 Article IV Consultation with the Republic of the Marshall Islands",
+            "date": "2021-05-27",
+            "quote": "Real GDP is estimated to have increased by around 6.5 percent in FY2019 (October 1-September 30), driven by strong fishery and construction activities."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2023/09/21/pr23319-marshall-islands-imf-executive-board-concludes-article-iv-consultation-marshall-islands",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with the Republic of the Marshall Islands",
+            "date": "2023-09-21",
+            "quote": "due to lower fisheries production arising from the sale of a fishing vessel by a domestic operator"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/04/pr-25406-republic-of-the-marshall-islands-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of the Marshall Islands",
+            "date": "2025-12-04",
+            "quote": "Strong rebound in fisheries."
+          }
+        ]
+      },
+      {
+        "title": "A larger new Compact",
+        "about": "present",
+        "text": "A new 20-year Compact with the United States began in FY2024 with more money than the last one. In August 2025 a universal basic income and a second cash scheme, the Extraordinary Needs Distribution, were approved, both paid for from the Compact Trust Fund, and the IMF expects them to lift growth in FY2026.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/10/cs-091025-republic-of-the-marshall-islands-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-09-10",
+            "quote": "The new Compact provides US$2.3 billion over 20 years starting in FY2024 (54 percent higher than under the previous Compact)."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/10/cs-091025-republic-of-the-marshall-islands-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-09-10",
+            "quote": "UBI and END approved in August 2025 by the Trust Fund Committee (TFC); both schemes financed by now permitted annual drawdowns from the CTF."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/10/cs-091025-republic-of-the-marshall-islands-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-09-10",
+            "quote": "supported by the expected rollout of the UBI scheme and the Extraordinary Needs Distribution (END)"
+          }
+        ]
+      },
+      {
+        "title": "People keep leaving",
+        "about": "present",
+        "text": "Under the Compact, Marshallese can work and study in the United States without a separate permit, and the pull of higher wages there has long thinned the pool of skilled workers at home. The IMF expects continued emigration of workers to hold back growth in the years ahead.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16260.pdf",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of the Marshall Islands",
+            "date": "2016-07",
+            "quote": "shortage of skilled workers, aggravated by ongoing migration of workers to the United States, reflecting the wage differential"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/10/cs-091025-republic-of-the-marshall-islands-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of the Marshall Islands: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-09-10",
+            "quote": "reflecting structural constraints including continued labor outmigration"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/04/pr-25406-republic-of-the-marshall-islands-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of the Marshall Islands",
+            "date": "2025-12-04",
+            "quote": "Medium-term growth: expected to moderate due to structural challenges and ongoing labor emigration."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The new cash schemes were approved in August 2025, and in December 2025 the IMF expected growth to speed up in FY2026. Then disruption in world energy markets in 2026 tripled fuel costs and sharply raised the fuel import bill. In June 2026 the World Bank said fishing, the largest source of export earnings and government revenue, was expected to decline and that growth in FY2026 would now slow. The ADB's September 2026 outlook expects only modest growth in 2026 and 2027.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/04/pr-25406-republic-of-the-marshall-islands-imf-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of the Marshall Islands",
+          "date": "2025-12-04",
+          "quote": "Scheduled fiscal expansion supports acceleration in FY2026."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/04/world-bank-provides-additional-support-to-help-marshall-islands-respond-to-energy-crisis",
+          "publisher": "World Bank",
+          "title": "World Bank Provides Additional Support to Help Marshall Islands Respond to Energy Crisis",
+          "date": "2026-06-09",
+          "quote": "Fuel costs have tripled, the fuel import bill has increased by around US$40 million, equivalent to 11.5 percent of GDP,"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/04/world-bank-provides-additional-support-to-help-marshall-islands-respond-to-energy-crisis",
+          "publisher": "World Bank",
+          "title": "World Bank Provides Additional Support to Help Marshall Islands Respond to Energy Crisis",
+          "date": "2026-06-09",
+          "quote": "Fishing activity, the country's largest source of export earnings and government revenue, is expected to decline."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/04/world-bank-provides-additional-support-to-help-marshall-islands-respond-to-energy-crisis",
+          "publisher": "World Bank",
+          "title": "World Bank Provides Additional Support to Help Marshall Islands Respond to Energy Crisis",
+          "date": "2026-06-09",
+          "quote": "growth in FY26 is now expected to slow from a pre-crisis baseline of 4.1 percent to 2.0 percent."
+        },
+        {
+          "url": "https://www.adb.org/where-we-work/marshall-islands/economy",
+          "publisher": "ADB",
+          "title": "Marshall Islands: Economy",
+          "date": "2026-09",
+          "quote": "The Marshall Islands' GDP growth is expected at 2.2% in 2026 and 2.0% in 2027"
+        }
+      ]
+    },
+    "tension": "The IMF describes total output shrinking in FY2020 under COVID travel limits, falling in FY2022 and FY2023, and growing modestly in FY2024. The data instead show income per person edging up in 2020, rising 2.5 percent in 2022, falling only 2.3 percent in 2023 and rising 6.8 percent in 2024. The IMF's estimate of total output growth in FY2019 is also well below the 13.7 percent rise in income per person that year. Fiscal and calendar years differ, and the figures may come from different data releases. The ongoing emigration the IMF describes would also let income per person rise faster than total output, so part of the climb since 2017 may reflect fewer people rather than much more output."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "iso3": "NIC",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NIC",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Nicaragua Article IV staff report 2025 IMF\"",
+        "tier 1 domains: \"Nicaragua Macro Poverty Outlook World Bank\"",
+        "tier 1 domains: \"Nicaragua 2018 sociopolitical crisis pandemic hurricanes Eta Iota economy recovery\"",
+        "tier 1 domains: \"Nicaragua 1990s hyperinflation civil war Hurricane Mitch HIPC debt relief growth\"",
+        "tier 1 domains: \"Nicaragua Venezuela oil cooperation ALBA growth 2010s CAFTA exports\"",
+        "opened: imf.org IMF Country Report No. 26/14 (2025 Article IV, Jan 2026)",
+        "opened: imf.org press release PR26/15 (Jan 2026)",
+        "opened: imf.org 2025 Article IV staff concluding statement (18 Nov 2025)",
+        "opened: imf.org IMF Country Report No. 23/53 (2022 Article IV, Jan 2023) and press release PR23/22",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Nicaragua (Oct 2026)",
+        "opened: documents1.worldbank.org Performance and Learning Review FY18-FY22 (Feb 2022)",
+        "opened: documents1.worldbank.org Systematic Country Diagnostic (Jun 2017)",
+        "critic re-opened all five cited PDFs (WebFetch, text extracted locally) and checked each passage",
+        "tier 2 (UN) not needed: tier 1 gave 5 recent sources"
+      ],
+      "critic_changes": [
+        "Opened all five cited documents (World Bank SCD 2017, World Bank PLR Feb 2022, IMF CR 26/14, IMF CR 23/53, World Bank MPO Oct 2026); text extracted from the PDFs and every quoted passage found on the page. All dates match the documents (SCD dated June 18, 2017; PLR February 23, 2022; CR 26/14 January 2026; CR 23/53 January 2023; MPO footer 'Macro Poverty Outlook / October 2026'). All numbers checked against desk/data/NIC.json: 16.4, 1977, 1965, 1.3, 1993, 4.7 (2009), 3.7, three falls in 2018-2020, 1.0, 9.1 (2021), 3.6 (2025), 1.4, 2.7, and income per person first passing its 2017 level in 2023 are all correct.",
+        "Arc: replaced 'close ties between government and business, strong foreign investment' with what the World Bank passage says (a strong working relationship, rising investment and exports); 'strong foreign investment' was not in the source. Dated the stabilization program to 'the early 1990s' (the source gives 1991-1992).",
+        "Thread 1: 'freed money for public spending' changed to 'freed money for social and infrastructure spending', the source's own words; 'in 1991' changed to 'in the early 1990s'.",
+        "Thread 2: 'faded as Venezuela's own economy collapsed, shortly before the 2018 crisis' corrected. The source says the flows fell to 0.2 percent of GDP in 2018 because of the 'deterioration' in Venezuela's economy, so not 'collapse' and not before 2018. 'Tied to oil deals' changed to 'oil cooperation', the source's word.",
+        "Thread 4 (remittances): the claim that the money comes mostly from the United States and that growth depends on U.S. immigration policy had no citation. Added the IMF CR 26/14 passage that supports both, in place of the overlapping World Bank MPO passage. Reworded 'drives household spending more than exports do' to match the IMF passage: remittances support consumption and exports are no longer the main growth driver.",
+        "Thread 5: 'exiled citizens' corrected to 'citizens stripped of their nationality' (the IMF's 'denaturalized citizens'). The property transfers are dated 'since 2022' as the source says, not since 2018. Added the IMF passage naming the U.S., E.U., U.K. and Canada sanctions since 2018, which the thread stated without a citation.",
+        "since_last_year: 'higher U.S. tariffs' changed to 'higher tariffs' to match the cited passage. 'More migrants came back from the United States' had no citation; it is now supported by an added IMF passage (returning migrants, with fewer departures to the U.S.) and reworded to match it.",
+        "Tension: dropped the unsourced causal claim 'partly because the population kept growing' and said instead that income per person also counts a growing population. Confirmed the IMF CR 23/53 sentence that real GDP passed its pre-crisis (end-March 2018) value by the end of 2021, and the IMF 2025 Article IV statement that the economy 'weathered well multiple shocks since 2018'.",
+        "No banned phrases or recommendation language found. Five threads and three distinct recent tier 1 sources survive (IMF CR 26/14, IMF CR 23/53, World Bank MPO October 2026), so the story stays tier 1; tier1_recent_found is left at the drafter's 5, which also counts the IMF press release and concluding statement it opened."
+      ]
+    },
+    "headline": "Nicaragua's income per person grew fastest in 2010–2017, fell in the 2018 crisis and now rests on remittances, yet stays below its 1977 peak.",
+    "arc": "Income per person in Nicaragua peaked in 1977 and is still 16.4 percent below that level, about where it first was in 1965, after war, debt and hyperinflation in the 1980s. From 1990 to 2009 it grew 1.3 percent a year: it kept falling until 1993, then recovered after a stabilization program in the early 1990s and, in the mid-2000s, debt relief, before dropping 4.7 percent in 2009. From 2010 to 2017 growth rose to 3.7 percent a year, a time when, the World Bank says, government and business worked closely, investment and exports were rising, and oil deals with Venezuela brought in large flows of money. The 2018 political crisis, then the pandemic and two hurricanes in 2020, cut income per person three years in a row, and the 2018–2025 era averages 1.0 percent a year. Since 2021 the recovery has been carried by money sent home by emigrants and by high prices for gold, coffee and beef, with income per person up 3.6 percent in 2025. Over the last decade growth averaged 1.4 percent a year, against 2.7 in the decade before.",
+    "threads": [
+      {
+        "title": "War, hyperinflation and debt relief",
+        "text": "The 1980s left Nicaragua deep in debt, with hyperinflation and a weak economy after years of conflict. A stabilization program in the early 1990s brought inflation down, and debt relief in the mid-2000s freed money for social and infrastructure spending, helping the slow recovery of the 1990–2009 era.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/365991498843795990/pdf/Nicaragua-SCD-Copyedit-final-jun-20-06272017.pdf",
+            "publisher": "World Bank",
+            "title": "Nicaragua: Paving the Way to Faster Growth and Inclusion (Systematic Country Diagnostic)",
+            "date": "2017-06-18",
+            "quote": "At the end of the decade, Nicaragua was one of the most highly indebted countries in the world"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/365991498843795990/pdf/Nicaragua-SCD-Copyedit-final-jun-20-06272017.pdf",
+            "publisher": "World Bank",
+            "title": "Nicaragua: Paving the Way to Faster Growth and Inclusion (Systematic Country Diagnostic)",
+            "date": "2017-06-18",
+            "quote": "With an IMF supported program, inflation was brought down to single digits by the second half of 1991"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/365991498843795990/pdf/Nicaragua-SCD-Copyedit-final-jun-20-06272017.pdf",
+            "publisher": "World Bank",
+            "title": "Nicaragua: Paving the Way to Faster Growth and Inclusion (Systematic Country Diagnostic)",
+            "date": "2017-06-18",
+            "quote": "debt relief from the Heavily Indebted Poor Countries (HIPC) Initiative and the Multilateral Debt Relief Initiative (MDRI) in the mid-2000s played a critical role"
+          }
+        ]
+      },
+      {
+        "title": "Venezuelan oil money and business ties",
+        "text": "The faster growth of 2010–2017 came with a close working relationship between the government and private firms, and with large flows from oil cooperation with Venezuela. Those flows had nearly dried up by 2018 as Venezuela's own economy worsened.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/604631650378197877/pdf/Nicaragua-Performance-and-Learning-Review-for-the-Country-Partnership-Framework-for-the-Period-FY18-FY22.pdf",
+            "publisher": "World Bank",
+            "title": "Performance and Learning Review of the Country Partnership Framework for the Republic of Nicaragua for the Period FY18-FY22",
+            "date": "2022-02-23",
+            "quote": "the government and the private sector had established a strong working relationship, and an increasingly pro-business environment was attracting investment and boosting exports"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/604631650378197877/pdf/Nicaragua-Performance-and-Learning-Review-for-the-Country-Partnership-Framework-for-the-Period-FY18-FY22.pdf",
+            "publisher": "World Bank",
+            "title": "Performance and Learning Review of the Country Partnership Framework for the Republic of Nicaragua for the Period FY18-FY22",
+            "date": "2022-02-23",
+            "quote": "These exceptional flows averaged 5.3 percent of GDP between 2010 and 2014, but declined to 0.2 percent of GDP in 2018"
+          }
+        ]
+      },
+      {
+        "title": "The 2018 crisis and 2020 shocks",
+        "text": "Protests over pension reforms in April 2018 turned into a political crisis that drove money out of banks and the country. The pandemic and two hurricanes followed in 2020, so income per person fell in 2018, 2019 and 2020 before rebounding 9.1 percent in 2021.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/604631650378197877/pdf/Nicaragua-Performance-and-Learning-Review-for-the-Country-Partnership-Framework-for-the-Period-FY18-FY22.pdf",
+            "publisher": "World Bank",
+            "title": "Performance and Learning Review of the Country Partnership Framework for the Republic of Nicaragua for the Period FY18-FY22",
+            "date": "2022-02-23",
+            "quote": "a series of pension reforms announced by the GoN sparked social protests. The ensuing socio-political crisis prompted capital flight."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "The 2018-19 socio-political crisis led to deposit flight, a sudden stop in capital inflows, and capital outflows"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nicea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2022 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Nicaragua (IMF Country Report No. 23/53)",
+            "date": "2023-01",
+            "quote": "was interrupted by the socio-political crisis in 2018, two major hurricanes in 2020, and the pandemic"
+          }
+        ]
+      },
+      {
+        "title": "Remittances from emigrants",
+        "text": "Emigration rose sharply from mid-2021, and most of the money emigrants send home comes from the United States. Remittances now support household spending, and exports are no longer the main driver of growth, which leaves the economy exposed to changes in U.S. immigration policy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "exports are no longer the main GDP growth driver, with remittances increasing strongly and supporting private consumption"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "The U.S. remains Nicaragua’s primary source of remittances and main trading partner (text charts), exposing the economy to changes in U.S. immigration and trade policies"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1nicea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2022 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Nicaragua (IMF Country Report No. 23/53)",
+            "date": "2023-01",
+            "quote": "emigration increased significantly since mid-2021"
+          }
+        ]
+      },
+      {
+        "title": "Sanctions, seizures and fading investment",
+        "text": "Since 2018 the U.S., the EU, the UK and Canada have placed targeted sanctions on some officials and state bodies. Since 2022 the state has taken over more property from closed non-profit groups, citizens stripped of their nationality and some companies, and net foreign investment has been falling as a share of the economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "Sanctions—imposed by the U.S., E.U., U.K., and Canada since 2018—have included asset-blocking for selected officials and some state entities"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "The economy is operating under targeted international sanctions, transfers of private property to the state, geopolitical reorientation of official foreign inflows"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+            "date": "2026-01",
+            "quote": "Net FDI flows as a share of GDP have been declining since 2022, with inflows consisting mostly of reinvested earnings."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 3.6 percent in 2025, helped by high world prices for gold, coffee and beef and by rising remittances. Exporters began absorbing higher tariffs from April 2025, and more migrants came home while fewer left for the United States. The World Bank's October 2026 outlook expects growth to slow as remittances and foreign investment fall with shifts in U.S. policy.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-nic.pdf",
+          "publisher": "World Bank",
+          "title": "Nicaragua, Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "The economy grew by 4.9 percent in 2025, supported by a terms-of-trade windfall from higher gold, coffee, and beef prices"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-nic.pdf",
+          "publisher": "World Bank",
+          "title": "Nicaragua, Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "The slowdown is primarily driven by expected declines in remittance and foreign direct investment inflows"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+          "date": "2026-01",
+          "quote": "Exporters have been adapting to higher tariffs through margins compression since April 2025, in particular for non-agricultural products."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nicea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Nicaragua: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/14)",
+          "date": "2026-01",
+          "quote": "returning migrants—alongside fewer departures to the U.S.—will increase the labor force"
+        }
+      ]
+    },
+    "tension": "The IMF wrote that real GDP had passed its pre-crisis level by the end of 2021, but income per person, which also counts a growing population, did not pass its 2017 level until 2023. The IMF also says the economy weathered the shocks since 2018 well, yet the 2018–2025 era averages 1.0 percent a year, the slowest of the three eras since 1990."
+  }
+}

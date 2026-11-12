@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "iso3": "NOR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NOR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains): \"Norway Article IV 2025 staff concluding statement mainland economy\"",
+        "tier 1 allowed_domains: \"OECD Economic Survey Norway 2025 productivity growth\"",
+        "imf.org: \"Norway 2026 Article IV staff concluding statement\" (none found for 2026)",
+        "imf.org, oecd.org, worldbank.org: \"Norway 2014 oil price fall mainland economy slowdown petroleum investment IMF\" (not run: web search budget used up)",
+        "Opened: IMF 2025 Article IV staff concluding statement; IMF 2024 Article IV staff concluding statement; OECD Economic Surveys: Norway 2026 (PDF); OECD Economic Surveys: Norway 2024 (PDF)",
+        "Critic: re-opened all four cited URLs (IMF pages via WebFetch; OECD PDFs via WebFetch, text extracted locally) and checked every quoted passage"
+      ],
+      "critic_changes": [
+        "All four cited URLs were re-opened. Every quoted passage was found on its page, and every date matches the document (IMF pages dated 26 June 2025 and 28 June 2024; the OECD surveys dated June 2026 and June 2024). Every number in the headline, arc, threads and tension was checked against desk/data/NOR.json and is correct (2.6, 0.5, -2.8 in 2009, -1.9 in 2020, 0.4 and 0.8 decade averages, 3.6, 3.1, -0.8, 0.5, 0.4, 0.4 in 2016, level first reached in 2022, peak in 2025).",
+        "Headline: 'until 2007, then 0.5 as ...' became 'in 1990–2007, then 0.5 from 2008, while ...' (157 characters). The sources do not directly attribute the 2008 break to these causes, so the headline no longer states that link as cause and effect.",
+        "Arc: 'The sources tie the slower era to ...' and 'oil price swings ... moving the totals' became a description of what the sources say. No cited passage says oil prices moved the totals. The OECD passage does support the 2015 collapse and the post-2022 price surge that lifted exports for a time.",
+        "Productivity thread: dropped the sentence linking the slowdown to rules that hinder new, innovative firms. No cited passage contained it (it comes from the next sentence of the OECD 2026 survey), and it leaned towards a constraint verdict. Replaced it with the IMF's comparison with other Nordic countries, which the IMF 2024 quote supports.",
+        "Productivity thread, OECD 2026 quote: the page's curly apostrophe was normalised. The page text is otherwise identical.",
+        "Oil fund thread: dropped 'Oil and gas revenue goes into a sovereign wealth fund' because no cited passage supports it. The text now says what the OECD passage says: a steadily rising share of mainland public spending is paid for with withdrawals from the fund.",
+        "2015 thread: changed 'the krone fell to a new, lower level' to 'the krone moved to a new level after an earlier period of overvaluation'. The passage says the krone 'adjusted to a new equilibrium' but does not say 'lower'. The quote's hyphen in 'oil-price' was kept as on the page.",
+        "since_last_year: added an OECD 2026 citation for the unwinding export boom after Russia's invasion of Ukraine, which was not cited before. Dropped 'pushed energy prices up again', which was not in a cited passage. Extended the Middle East quote to include the page's next sentence on inflation staying above target (20 words), so the inflation claim is now supported.",
+        "Tension: 'Most of the sources track the mainland economy' became 'Several of the cited passages describe the mainland economy'. The IMF also reports total output. Dropped 'divide it by a growing population' because the data file has no population series to support it."
+      ]
+    },
+    "headline": "Norway's income per person grew 2.6 percent a year in 1990–2007, then 0.5 from 2008, while productivity growth slowed and oil and gas output passed its peak.",
+    "arc": "From 1990 to 2007 Norway's income per person grew 2.6 percent a year. Since 2008 it has grown 0.5 percent a year, with falls of 2.8 percent in 2009 and 1.9 percent in 2020. Growth averaged 0.4 percent a year over 2006–2015 and 0.8 over 2016–2025, helped by a rebound of 3.6 in 2021 and 3.1 in 2022, but income per person fell 0.8 in 2023 and rose only 0.5 in 2024 and 0.4 in 2025. The sources point to productivity growth that has slowed for two decades and to oil and gas output that likely peaked as early as 2001; they also describe an oil price collapse in 2015 and an oil and gas price surge after Russia's invasion of Ukraine that lifted exports for a time. In 2025 income per person was at its highest yet, but only a little above the level it first reached in 2022.",
+    "threads": [
+      {
+        "title": "Oil and gas past their peak",
+        "text": "The OECD judges that Norway's oil and gas output likely peaked as early as 2001. Gas still moves the totals: the IMF says record gas extraction lifted total output in 2024.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Norway 2026",
+            "date": "2026-06",
+            "quote": "\"Peak petroleum\" was likely reached as early as 2001"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/25/norway-staff-concluding-statement-for-the-2025-article-iv-consultation-mission",
+            "publisher": "IMF",
+            "title": "Norway: Staff Concluding Statement for the 2025 Article IV Consultation Mission",
+            "date": "2025-06-26",
+            "quote": "Overall real GDP grew by 2.1 percent in 2024, driven by record-high natural gas extraction."
+          }
+        ]
+      },
+      {
+        "title": "Slower productivity growth",
+        "text": "Productivity growth has slowed over the past two decades, and Norway's lead over other rich countries has narrowed. The IMF says it has slowed faster than in other Nordic countries.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Norway 2026",
+            "date": "2026-06",
+            "quote": "Productivity growth has slowed, and Norway's lead relative to other OECD countries has narrowed over the past two decades."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/06/27/mcs-06272024-norway-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Norway: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-06-28",
+            "quote": "Despite high levels of labor productivity, productivity growth has slowed faster than in other Nordic countries."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/06/oecd-economic-surveys-norway-2024_2ee46983/cb13475f-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Norway 2024",
+            "date": "2024-06",
+            "quote": "Productivity growth has been much below the OECD average over the past decade or so"
+          }
+        ]
+      },
+      {
+        "title": "Spending from the oil fund",
+        "text": "Norway draws on its sovereign wealth fund to pay for a steadily rising share of mainland public spending. The IMF says higher public spending drove most of the mainland economy's small growth in 2024.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Norway 2026",
+            "date": "2026-06",
+            "quote": "The steadily rising share of mainland public spending financed by withdrawals from the sovereign wealth fund"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/25/norway-staff-concluding-statement-for-the-2025-article-iv-consultation-mission",
+            "publisher": "IMF",
+            "title": "Norway: Staff Concluding Statement for the 2025 Article IV Consultation Mission",
+            "date": "2025-06-26",
+            "quote": "Mainland GDP expanded by 0.6 percent in 2024, primarily due to increased public spending."
+          }
+        ]
+      },
+      {
+        "title": "The 2015 oil price collapse",
+        "text": "Oil prices collapsed in 2015, and the krone moved to a new level after an earlier period of overvaluation. Income per person grew only 0.4 percent in 2016.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Norway 2026",
+            "date": "2026-06",
+            "quote": "after the 2015 oil-price collapse, as the krone adjusted to a new equilibrium following an earlier overvaluation"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The OECD says the mainland economy picked up in 2025 as household incomes grew fast, while the lift to exports from the oil and gas price surge after Russia's invasion of Ukraine was unwinding. The OECD expects the conflict in the Middle East to raise oil revenues again and inflation to stay above target.",
+      "citations": [
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Norway 2026",
+          "date": "2026-06",
+          "quote": "The mainland economy picked up in 2025, driven by rapidly growing household disposable income"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Norway 2026",
+          "date": "2026-06",
+          "quote": "The oil and gas price surge following Russia's war of aggression against Ukraine temporarily boosted exports, but this has been unwinding"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-norway-2026_a4156dfb/5cc02644-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Norway 2026",
+          "date": "2026-06",
+          "quote": "The conflict in the Middle East will boost oil revenues again. Inflation is likely to edge up, remaining above target."
+        }
+      ]
+    },
+    "tension": "The sources describe record gas extraction in 2024 and a pickup in the mainland economy in 2025, but income per person rose only 0.5 percent in 2024 and 0.4 in 2025. Several of the cited passages describe the mainland economy, without oil and gas, while the data cover the whole economy, oil and gas included, measured per person."
+  }
+}

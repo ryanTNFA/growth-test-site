@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "CZE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CZE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, oecd.org, ebrd.com and the other tier 1 domains: Czech Republic Article IV 2025 staff concluding statement growth",
+        "tier 1: OECD Economic Surveys Czechia 2025 productivity convergence",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Czechia energy price shock 2022 2023 recession real wages EBRD regional economic prospects",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Czech Republic 1997 currency crisis koruna transition recession 1990s privatization",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Czech Republic 2012 2013 recession euro area fiscal consolidation IMF",
+        "Opened: imf.org 2026 concluding statement (2026-02-03), 2026 Board press release (2026-03-27), 2024 concluding statement (2024-11-26), 2023 concluding statement (2023-11-22), 2013 concluding statement, F&D September 2000 supplement; oecd.org Economic Surveys Czechia 2025 PDF and Czech Republic 1999-2000 PDF; ebrd.com Transition Report 2022-23 Czech Republic (opened, not cited)",
+        "Critic: re-opened every cited URL (imf.org pages via WebFetch; both oecd.org PDFs fetched and text-extracted locally) and checked each quote, date and number against desk/data/CZE.json"
+      ],
+      "critic_changes": [
+        "Arc: 'Output fell sharply ... (11.4 percent in 1991)' was wrong. The -11.4 in the data is income per person, not output, so the sentence now says income per person fell 11.4 percent in 1991.",
+        "Arc: 'a correction of built-up imbalances' was rewritten as 'a response to built-up imbalances', which follows the OECD passage ('a natural response to the internal and external imbalances').",
+        "Arc and threads: 'energy shock' became 'price surge'. The cited passages speak of surging prices and falling real wages; none of them says 'energy'. The thread title changed from 'Energy shock and real wages' to 'Price shock and real wages'.",
+        "Arc: 'foreign firms, above all car makers, tied the country into global supply chains' was rewritten to follow the OECD: integration into global value chains, especially in the automotive sector, with FDI inflows into manufacturing.",
+        "Headline: 'car exports' became 'car making'. The source names the automotive sector and global value chains, not exports. The headline is still under 160 characters.",
+        "Thread 'Slower productivity, fewer workers' and arc: 'an ageing population' became 'demographics'. The 2026 IMF passage says 'constrained by demographics', and the 2024 statement mentions ageing only as a spending pressure.",
+        "Thread 'Price shock and real wages': added an OECD 2025 passage on growth resuming in late 2023 and 2024 on household consumption and positive real wage growth. It supports the 'since then' sentence, which the old citations did not. The sentence now says 'rising real wages and household spending'.",
+        "Thread 'Transition and the 1997 crisis': added the F&D passage on 'imprudent lending by largely state-owned banks' to support the claims about bank lending and wages. The F&D citation title now uses the article's own title, 'Czech Republic: Recent Developments and Current Outlook'.",
+        "Tension: 'A growing population explains the difference' was softened to 'The gap points to a growing population'. No cited source states that explanation. 'Strong convergence over three decades' became the OECD's own wording, 'impressive strides toward OECD living standards in the three decades since Czechia joined'.",
+        "Verified unchanged: every other quote matches its page near-verbatim, and the dates match (2000-09, 2000-02, 2013-05-20, 2023-11-22, 2024-11-26, 2025-03, 2026-02-03, 2026-03-27). Every number matches CZE.json: eras 0.2/4.3/1.3; -5.3 in 2009; falls in 1997, 1998, 2012 and 2013; -1.7 in 2023; 2.8 in 2025, the best since 2021; 1.6 over the last decade and 1.8 over the one before; peak level in 2025. There are 5 distinct recent tier 1 sources (IMF 2023, 2024, Feb 2026, Mar 2026; OECD 2025). The text has no banned phrases and no recommendations."
+      ]
+    },
+    "headline": "Czechia caught up fast in the 2000s on foreign investment and car making; since 2008, shocks and stalling productivity have cut growth to 1.3 percent a year.",
+    "arc": "Since 1991, Czechia's growth has run in three eras. From 1991 to 1999, income per person grew only 0.2 percent a year. It fell 11.4 percent in 1991 at the start of the transition, and a currency crisis in 1997 led to a recession that the OECD saw as a response to built-up imbalances. From 2000 to 2007, growth jumped to 4.3 percent a year as the country joined global supply chains, above all in car making, with large foreign investment in manufacturing. Since 2008 it has averaged 1.3 percent a year, broken by the global crisis in 2009, a long recession in 2012-2013 that the IMF linked to the euro area slump, the pandemic in 2020 and the price surge that followed Russia's war in Ukraine. The sources describe productivity growth that slowed after the global financial crisis and stalled after the pandemic, while labour shortages and demographics weigh on the outlook; over the last decade income per person grew 1.6 percent a year, close to the 1.8 of the decade before, and in 2025 it reached its highest level so far.",
+    "threads": [
+      {
+        "title": "Transition and the 1997 crisis",
+        "about": "history",
+        "text": "In the 1990s, voucher privatisation left firms with scattered owners, and largely state-owned banks kept lending to them, which pushed up wages and the current account deficit. A currency crisis followed in 1997, and the tight policy after it brought a recession; income per person fell in both 1997 and 1998.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/09/suppleme.htm",
+            "publisher": "IMF",
+            "title": "Czech Republic: Recent Developments and Current Outlook (Finance & Development, September 2000 special supplement)",
+            "date": "2000-09",
+            "quote": "resulting from the diffuse structure of ownership that emerged from the voucher privatization program"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/09/suppleme.htm",
+            "publisher": "IMF",
+            "title": "Czech Republic: Recent Developments and Current Outlook (Finance & Development, September 2000 special supplement)",
+            "date": "2000-09",
+            "quote": "imprudent lending by largely state-owned banks permitted excessive wage increases and labor hoarding"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2000/01/oecd-economic-surveys-czech-republic-2000_g1ghg63c/eco_surveys-cze-2000-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czech Republic 1999-2000",
+            "date": "2000-02",
+            "quote": "a natural response to the internal and external imbalances that provoked the 1997 currency crisis"
+          }
+        ]
+      },
+      {
+        "title": "Foreign investment drives catch-up",
+        "about": "history",
+        "text": "From 2000 to 2007, income per person grew 4.3 percent a year, the fastest era in the data. The OECD links that era's strong productivity growth to joining global supply chains, much of it in car making, along with large foreign investment in manufacturing.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/03/oecd-economic-surveys-czechia-2025_be8bcafe/7a70af5c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czechia 2025",
+            "date": "2025-03",
+            "quote": "Strong productivity growth in the period before the global financial crisis was mainly driven by the integration into global value chains"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/03/oecd-economic-surveys-czechia-2025_be8bcafe/7a70af5c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czechia 2025",
+            "date": "2025-03",
+            "quote": "especially downstream activities in the automotive sector, and accompanied by significant FDI inflows into manufacturing."
+          }
+        ]
+      },
+      {
+        "title": "Euro area slump after 2008",
+        "about": "history",
+        "text": "The global crisis cut income per person by 5.3 percent in 2009. A second downturn followed: income per person fell in 2012 and 2013, which the IMF tied to the euro area slump and weak spending at home, at a time of heavy budget tightening.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/52/mcs052013",
+            "publisher": "IMF",
+            "title": "Czech Republic-2013 Article IV Consultation Concluding Statement",
+            "date": "2013-05-20",
+            "quote": "the economy is in the midst of a prolonged recession because of the euro area slump and weak domestic demand"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/52/mcs052013",
+            "publisher": "IMF",
+            "title": "Czech Republic-2013 Article IV Consultation Concluding Statement",
+            "date": "2013-05-20",
+            "quote": "Structural consolidation of around 4.5 percent of GDP over 2010-2013."
+          }
+        ]
+      },
+      {
+        "title": "Price shock and real wages",
+        "about": "present",
+        "text": "After Russia's war in Ukraine, prices surged, real wages fell and households cut spending; income per person dropped 1.7 percent in 2023. Since then, rising real wages and household spending have been the main support for growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2023/11/21/mcs112123-czech-republic-staff-concluding-statement-of-the-2023-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Czech Republic: Staff Concluding Statement of the 2023 Article IV Mission",
+            "date": "2023-11-22",
+            "quote": "a decline in household consumption amid a significant fall in real wages"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/03/oecd-economic-surveys-czechia-2025_be8bcafe/7a70af5c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czechia 2025",
+            "date": "2025-03",
+            "quote": "GDP was flat in 2023 as global demand cooled and private consumption contracted on the back of surging prices and tight financial conditions."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/03/oecd-economic-surveys-czechia-2025_be8bcafe/7a70af5c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czechia 2025",
+            "date": "2025-03",
+            "quote": "Moderate GDP growth resumed in late 2023 and continued in 2024 driven mainly by increased household consumption supported by positive real wage growth."
+          }
+        ]
+      },
+      {
+        "title": "Slower productivity, fewer workers",
+        "about": "present",
+        "text": "Productivity growth slowed after the global financial crisis and stalled after the pandemic. The IMF also points to labour shortages and demographics, and expects growth to ease as these forces weigh on it.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/03/oecd-economic-surveys-czechia-2025_be8bcafe/7a70af5c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Czechia 2025",
+            "date": "2025-03",
+            "quote": "Productivity growth has slowed down significantly since the global financial crisis and has stalled since the pandemic"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/27/pr-26094-czech-republic-imf-concludes-2026-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the Czech Republic",
+            "date": "2026-03-27",
+            "quote": "growth easing toward 1.8 percent potential, constrained by demographics and modest productivity gains."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/11/26/mcs-112624-czech-republic-staff-concluding-statement-of-2024-aiv-mission",
+            "publisher": "IMF",
+            "title": "Czech Republic: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-11-26",
+            "quote": "weighed down by weak productivity growth and structural labor shortages."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up in 2025. Income per person rose 2.8 percent, the best year since 2021, as real wages kept recovering and households spent more. Exports and private investment were softer, held back by global uncertainty and rising trade barriers.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/03/pr26031-czech-republic-2026-article-iv-concluding-statement",
+          "publisher": "IMF",
+          "title": "Czech Republic: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-02-03",
+          "quote": "Real wages continued to recover from their post-pandemic decline, supporting household consumption."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/27/pr-26094-czech-republic-imf-concludes-2026-art-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the Czech Republic",
+          "date": "2026-03-27",
+          "quote": "private investment and exports softened amid global policy uncertainty and rising trade barriers."
+        }
+      ]
+    },
+    "tension": "The OECD describes the economy as flat in 2023, and the IMF estimated only a small fall in output, but income per person in the data fell 1.7 percent that year. The gap points to a growing population: the OECD reports a large inflow of refugees from Ukraine. The OECD also describes impressive strides toward OECD living standards in the three decades since Czechia joined, while income per person has grown only 1.3 percent a year since 2008."
+  }
+}

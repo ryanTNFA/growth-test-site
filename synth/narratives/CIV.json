@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "CIV",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CIV",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Côte d'Ivoire Article IV staff report 2025 growth\"",
+        "same tier 1 domains: \"Côte d'Ivoire Macro Poverty Outlook economic update World Bank\"",
+        "same tier 1 domains: \"Côte d'Ivoire post-electoral crisis 2011 recovery decade of conflict growth\"",
+        "imf.org: \"IMF Côte d'Ivoire 2026 press release staff-level agreement review\"",
+        "Opened: thedocs.worldbank.org MPO Côte d'Ivoire (October 2026); imf.org country focus (2025-01-14); imf.org PR 13/515 (2013 Article IV); documents1.worldbank.org Systematic Country Diagnostic (2015-06-30); imf.org PR 26/222 (2026-06-24, opened, not cited)",
+        "Critic re-opened every cited URL: imf.org PR 13/515, imf.org country focus 2025-01-14, thedocs.worldbank.org MPO (October 2026, text extracted from the PDF), documents1.worldbank.org SCD (text extracted from the PDF)"
+      ],
+      "critic_changes": [
+        "I opened all four cited URLs. Every quoted passage appears on its page. The World Bank PDFs (the MPO and the SCD) were read from their extracted text, and I confirmed the MPO edition as October 2026 and the SCD date as 2015-06-30. Every number in the headline, arc, threads, since_last_year and tension matches growth_problem or series in desk/data/CIV.json.",
+        "IMF PR 13/515: the date is now 2013-12-16, the exact date the page shows (it was 2013-12).",
+        "Thread 'Cocoa shocks and mounting debt': its only citation (stagnation from 1981 to 1992) did not support the claims about the CFA zone ruling out a devaluation or about debt and service cuts. I added two exact SCD passages that do. 'From the mid-1980s' is now 'From 1985', and 'public services were cut' is now 'public jobs and social services were cut', both to match the source's words.",
+        "Thread 'Coup, war, a divided country': the 1999 coup had no cited support, so I added the SCD passage on the first coup in 1999. I also added 'until 2007', which comes from the cited passage.",
+        "Thread 'Peace and a public investment push': the source says the government is 'focused on reunification', not that it 'reunited the country'. I reworded this to 'turned to reuniting the country and reviving growth'.",
+        "Thread 'A decade of steady growth': the draft said both the IMF and the World Bank call Côte d'Ivoire one of Africa's most consistent performers. Only the World Bank says that, so I reworded it. The claim that stability held through global shocks had no quote, so I added the exact IMF passage from the opened page.",
+        "Thread 'Cocoa prices and debt now': I replaced 'Public debt, which had risen every year since 2012, has started to fall' with 'Public debt has posted its first fall since 2012', because the source says only 'first decline since 2012'. I also replaced 'larger cocoa harvests' with 'larger cocoa volumes' and placed the offset in the first half of 2026, as the source does.",
+        "Arc: 'a recovery in cocoa' had no support in the cited sources, so I removed it from the causes of the post-2012 rebound. That rebound is now tied to the end of the crisis, public investment and returning confidence, as the IMF and SCD passages say. I added 'until 2007' to the split-country clause to match the source. 'The pace has held' is now 'Growth has stayed strong'.",
+        "since_last_year: the draft said the drop in cocoa prices would slow growth in 2026, but the MPO links the 2026 slowdown only to softer outside demand from the Middle East conflict (it links lower cocoa prices to the budget deficit). I removed the cocoa cause and added the exact MPO passage on the 2026 projection.",
+        "Tension: 'more modest gains' is now 'smaller gains' (wording only). The numbers and the population point are unchanged and consistent with the data and the cited GDP growth figures.",
+        "I found no banned phrases and no recommendation or verdict language. Five threads survive, and there are two distinct recent tier 1 sources (World Bank MPO October 2026 and IMF 2025-01-14), so the story stays tier 1."
+      ]
+    },
+    "headline": "After cocoa shocks and civil war, income per person in Côte d'Ivoire has grown 4.1 percent a year since 2012, but is still below its 1978 peak.",
+    "arc": "Income per person in Côte d'Ivoire peaked in 1978, and in 2025 it was still 18.5 percent below that peak, about where it first was in 1971. From 1990 to 2003 it fell 2.1 percent a year: the sources trace this to falling cocoa prices and mounting debt, and then to a political crisis that brought a coup in 1999 and civil war in 2002; a rebound after the 1994 CFA franc devaluation (growth of 3.0 to 5.5 percent in 1995–1997) did not last. From 2004 to 2011 income per person was flat, at -0.1 percent a year, while the country stayed split in two until 2007, and the post-election conflict of 2010–2011 cut it by 7.4 percent in 2011. Since 2012 it has grown 4.1 percent a year, with 8.6 percent in 2013, as the end of the crisis, a surge in public investment and returning business and consumer confidence drove a rebound. Growth has stayed strong: 3.2 percent a year over 2016–2025 against 2.5 over 2006–2015, with one dip, -1.8 percent in 2020.",
+    "threads": [
+      {
+        "title": "Cocoa shocks and mounting debt",
+        "text": "From 1985, falling world cocoa prices hit an economy built on cocoa exports, and membership of the CFA franc zone ruled out a devaluation to soften the blow. Debt became unmanageable and public jobs and social services were cut, and income per person slid from its 1978 peak through the 1980s and into the 1990s.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "Côte d’Ivoire’s membership in the CFA zone ruled out a devaluation to offset the price shock."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "The deteriorating economic situation and unmanageable debt led the Government to slash public employment and social services"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "Yet, from 1981 to 1992, following a series of economic shocks, annual GDP growth stagnated and Côte d’Ivoire slipped into the low-income group."
+          }
+        ]
+      },
+      {
+        "title": "Coup, war, a divided country",
+        "text": "Political tensions led to the country's first coup in 1999 and to an armed rebellion in 2002 that split the country in two until 2007. Income per person fell in each year from 1999 to 2003 and stayed flat while the division lasted.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "These continued tensions drove the country into its first coup in 1999."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "In 2002, a mutiny-turned-rebellion led to an open armed conflict that ultimately split the country in two, and lasted until 2007"
+          }
+        ]
+      },
+      {
+        "title": "Peace and a public investment push",
+        "text": "After the post-election conflict ended in 2011, the new government turned to reuniting the country and reviving growth. The sources tie the rebound that followed to a surge in public investment and to returning business and consumer confidence.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/640251467986253436/pdf/98178-CAS-P147907-IDA-SecM2015-0151-IFC-SecM2015-0108-MIGA-SecM2015-0064-Box391505B-PUBLIC-disclosed-7-16-15.pdf",
+            "publisher": "World Bank",
+            "title": "Côte d'Ivoire: From Crisis to Sustained Growth. Priorities for Ending Poverty and Boosting Shared Prosperity (Systematic Country Diagnostic)",
+            "date": "2015-06-30",
+            "quote": "With the end of the immediate crisis, the Government is now focused on reunification and stimulating economic growth."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr13515",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes the 2013 Article IV Consultation with Côte d'Ivoire",
+            "date": "2013-12-16",
+            "quote": "Rebounded growth supported by surge in public investment and improved business and consumer confidence."
+          }
+        ]
+      },
+      {
+        "title": "A decade of steady growth",
+        "text": "The World Bank describes Côte d'Ivoire as one of Africa's most consistent performers over the past decade, and the IMF notes that stability held through major global shocks. Income per person has grown every year since 2012 except 2020.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+            "date": "2026-10",
+            "quote": "Côte d'Ivoire has been among Africa's most consistent economic performers over the past decade"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/14/cf-cote-d-ivoire-fostering-economic-transformation-and-adapting-to-climate-change",
+            "publisher": "IMF",
+            "title": "Côte d’Ivoire: Fostering Economic Transformation and Adapting to Climate Change",
+            "date": "2025-01-14",
+            "quote": "GDP growth averaged 6.4 percent over the past decade."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/14/cf-cote-d-ivoire-fostering-economic-transformation-and-adapting-to-climate-change",
+            "publisher": "IMF",
+            "title": "Côte d’Ivoire: Fostering Economic Transformation and Adapting to Climate Change",
+            "date": "2025-01-14",
+            "quote": "The country has maintained macroeconomic stability despite major global shocks."
+          }
+        ]
+      },
+      {
+        "title": "Cocoa prices and debt now",
+        "text": "Cocoa still swings the accounts: in the first half of 2026, higher gold prices, refined-oil receipts and larger cocoa volumes partly offset a steep fall in cocoa prices. Public debt has posted its first fall since 2012.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+            "date": "2026-10",
+            "quote": "with higher gold prices, refined-oil receipts, and cocoa volumes partly offsetting the 59 percent fall in cocoa prices"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+            "date": "2026-10",
+            "quote": "Public debt posted its first decline since 2012, moderating to 57.6 percent of GDP from 60.2 percent in 2024."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 4.0 percent in 2025, close to the pace of the past decade, with strong investment and household spending behind it. In its October 2026 update the World Bank reports that public debt fell for the first time since 2012, and expects growth to slow slightly in 2026 as outside demand softens because of the Middle East conflict.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+          "date": "2026-10",
+          "quote": "Growth was robust at 6.5 percent in 2025 (4.0 percent per capita), underpinned by strong investment and private consumption"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+          "date": "2026-10",
+          "quote": "is projected to moderate to 6.2 percent in 2026 amid softer external demand due to the Middle East conflict"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-civ.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Côte d'Ivoire (October 2026)",
+          "date": "2026-10",
+          "quote": "Public debt posted its first decline since 2012, moderating to 57.6 percent of GDP from 60.2 percent in 2024."
+        }
+      ]
+    },
+    "tension": "The sources describe a decade of fast total growth and one of Africa's most consistent performers. The data show smaller gains in income per person, 3.2 percent a year over 2016–2025, because a fast-growing population takes a large share of total growth. And after 14 years of recovery, income per person in 2025 was still 18.5 percent below its 1978 peak, about where it first was in 1971."
+  }
+}

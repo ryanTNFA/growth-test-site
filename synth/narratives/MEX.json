@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "iso3": "MEX",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MEX",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Mexico Article IV 2025 staff concluding statement growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Mexico Macro Poverty Outlook 2025 World Bank growth",
+        "oecd.org: OECD Economic Surveys Mexico 2024 productivity informality growth",
+        "imf.org: Mexico 2026 Article IV mission concluding statement",
+        "imf.org, worldbank.org, oecd.org, iadb.org: Mexico 2009 recession deepest United States manufacturing exports collapse IMF",
+        "critic: opened all 5 cited URLs (oecd.org 2024 survey PDF, imf.org CR 09/302 PDF, thedocs.worldbank.org MPO October 2026 PDF, imf.org 2025 Article IV press release, imf.org 2026 Article IV concluding statement in Spanish) and checked each quote against the page text"
+      ],
+      "critic_changes": [
+        "All 5 cited URLs opened; every quoted passage was found on its page (the three PDFs were checked from their extracted text), and the dates match the documents (OECD survey February 2024; IMF CR 09/302 October 2009; World Bank MPO October 2026; IMF press release 27 October 2025; IMF concluding statement 2 October 2026). No citation was dropped.",
+        "Every number in the headline, arc, threads, since_last_year and tension checked against desk/data/MEX.json: 0.8 (1990–2025 era mean), 7.6 (1995), 7.7 (2009), 9.1 (2020), 5.3 (2021), 0.5 (2024), 0.3 (2025 fall and 2016–2025 average), 0.6 (prior decade), 0.4 (shortfall from the 2018 peak), level first reached in 2016. All are correct; no number changed.",
+        "Arc: dropped 'and steadily', because three falls of 7 to 9 percent are not steady growth; replaced 'US demand for Mexican factory goods collapsed' with 'factory output collapsed through its close ties to the United States' to match the IMF passage, which speaks of linkages, not demand; replaced 'productivity that has long stood still' with 'long-standing low productivity', since the sources say low or weak productivity, not stagnant; dropped 'with the United States' from the 2025 trade uncertainty, since the IMF passage does not name the US.",
+        "Thread 1: removed 'governments have kept to cautious fiscal policy since', which the cited passage does not support; reworded the 2009 cause the same way as the arc.",
+        "Thread 3: retitled from 'Productivity that has stood still' to 'Weak productivity and investment' (the sources do not say productivity stood still); removed the claim of a 'split between productive northern states and poorer southern ones', which no cited passage supports (the World Bank page speaks only of regions tied into North American value chains and lagging regions); credited the list of obstacles to the World Bank only, since the OECD passage does not give it.",
+        "Thread 4: removed 'US tariffs', which none of the cited passages mention; reworded it as trade uncertainty, including doubts over the North American trade agreement, which the IMF and World Bank passages support.",
+        "since_last_year: replaced 'Output picked up in the first half of 2026' with what the cited World Bank passage says (real incomes and earlier rate cuts supported domestic demand; trade uncertainty and fiscal restraint weighed on investment).",
+        "tier1_recent_found set to 4 from 5: the story cites four distinct tier 1 sources dated 2023 or later (OECD 2024, IMF October 2025, World Bank October 2026, IMF October 2026), and a fifth could not be verified."
+      ]
+    },
+    "headline": "Mexico's income per person has crept up 0.8 percent a year since 1990, knocked back by three deep crises, and in 2025 stood near its 2016 level.",
+    "arc": "Mexico's income per person has grown slowly since 1990, at 0.8 percent a year on average over 1990–2025, with no lasting change of pace in the data. Three deep falls broke that slow climb: 7.6 percent in 1995 in the tequila crisis, 7.7 percent in 2009 when factory output collapsed through its close ties to the United States, and 9.1 percent in 2020 in the pandemic. Income per person came back each time, but gains between shocks were modest, and the sources link this to long-standing low productivity and weak investment. Growth slowed to 0.3 percent a year over 2016–2025, from 0.6 in the decade before; income per person peaked in 2018 and in 2025 was 0.4 percent below that peak, about where it first was in 2016. After a rebound of 5.3 percent in 2021, growth faded to 0.5 percent in 2024 and income per person fell 0.3 percent in 2025, as fiscal tightening, tight monetary policy and trade uncertainty weighed on the economy.",
+    "threads": [
+      {
+        "title": "Debt and tequila crises, then 2009",
+        "about": "history",
+        "text": "The 1982 debt crisis and the 1995 tequila crisis left Mexico with high deficits and debt; income per person fell 7.6 percent in 1995. In 2009 income per person fell 7.7 percent as factory output collapsed through Mexico's close ties to the United States, including car production.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/02/oecd-economic-surveys-mexico-2024_da38dd2d/b8d974db-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Mexico 2024",
+            "date": "2024-02",
+            "quote": "Mexico struggled with high fiscal deficits and high public debt resulting from two major economic crises, the 1982 debt crisis and the 1995 “tequila” crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr09302.pdf",
+            "publisher": "IMF",
+            "title": "Mexico: Review Under the Flexible Credit Line Arrangement—Staff Report and Press Release on the Executive Board Discussion (IMF Country Report No. 09/302)",
+            "date": "2009-10",
+            "quote": "industrial production and manufacturing related services collapsed, especially reflecting strong linkages to the U.S., including for automobile production."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic fall, slow recovery",
+        "about": "history",
+        "text": "Income per person fell 9.1 percent in 2020, the deepest drop in the record since 1990, and rebounded 5.3 percent in 2021. The OECD describes the recovery from the pandemic as slow.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/02/oecd-economic-surveys-mexico-2024_da38dd2d/b8d974db-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Mexico 2024",
+            "date": "2024-02",
+            "quote": "After a slow recovery from the pandemic, the Mexican economy has navigated well the global environment"
+          }
+        ]
+      },
+      {
+        "title": "Weak productivity and investment",
+        "about": "present",
+        "text": "The OECD and World Bank both describe low productivity and weak investment as long-running features of the economy. The World Bank points to gaps in infrastructure and energy, insecurity, regulatory uncertainty, limited finance and skills.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-mex.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mexico (October 2026)",
+            "date": "2026-10",
+            "quote": "Mexico’s long-term growth has averaged 2 percent over the past three decades, reflecting weak productivity and investment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-mex.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mexico (October 2026)",
+            "date": "2026-10",
+            "quote": "infrastructure and energy bottlenecks, insecurity, regulatory uncertainty, limited finance, and skills gaps constrain private investment"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/02/oecd-economic-surveys-mexico-2024_da38dd2d/b8d974db-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Mexico 2024",
+            "date": "2024-02",
+            "quote": "low productivity and high inequalities, which have prevented so far Mexico from being a high-growth economy"
+          }
+        ]
+      },
+      {
+        "title": "Nearshoring hopes, US trade doubts",
+        "about": "present",
+        "text": "In 2024 the OECD saw firms moving supply chains closer to the United States as a new opening for Mexico. Since 2025, trade uncertainty, including doubts over the North American trade agreement, has weighed on investment, alongside tighter fiscal and monetary policy.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/02/oecd-economic-surveys-mexico-2024_da38dd2d/b8d974db-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Mexico 2024",
+            "date": "2024-02",
+            "quote": "Mexico has started to benefit from nearshoring"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/27/pr-25350-mexico-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Mexico",
+            "date": "2025-10-27",
+            "quote": "growth is constrained in 2025 by needed fiscal consolidation, restrictive monetary policy, and trade uncertainty"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-mex.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mexico (October 2026)",
+            "date": "2026-10",
+            "quote": "Foreign direct investment inflows are expected to remain slightly below 2 percent of GDP amid the United States-Mexico-Canada Agreement (USMCA)-related uncertainty."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person fell 0.3 percent in 2025 as the economy slowed. In 2026, rising real incomes from work and earlier interest-rate cuts supported spending at home, while trade uncertainty and fiscal restraint held back investment. In October 2026 the IMF expected growth to stay limited, mainly by uncertainty abroad, including the review of the trade agreement with the United States and Canada.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-mex.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mexico (October 2026)",
+          "date": "2026-10",
+          "quote": "Rising real labor incomes and earlier monetary easing supported domestic demand, but trade uncertainty and fiscal restraint weighed on investment."
+        },
+        {
+          "url": "https://www.imf.org/es/news/articles/2026/10/02/cs-mexico-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "México: Declaración del personal técnico al término de la misión del Artículo IV correspondiente a 2026",
+          "date": "2026-10-02",
+          "quote": "Se proyecta que el crecimiento alcance 1.5% en 2026 y 1.8% en 2027, aunque seguiría limitado, principalmente por la incertidumbre externa."
+        }
+      ]
+    },
+    "tension": "The sources' growth figures are for the whole economy and look modest but steady; income per person grew far more slowly, 0.8 percent a year over 1990–2025, because the population kept growing. And while the OECD described nearshoring as a new opening in 2024, income per person in 2025 was still 0.4 percent below its 2018 peak and about where it first was in 2016."
+  }
+}

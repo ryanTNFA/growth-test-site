@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "iso3": "SXM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SXM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org: Curaçao and Sint Maarten Article IV staff report Sint Maarten growth (tier 1 domain list)",
+        "imf.org: IMF 2024 Article IV Curaçao Sint Maarten press release Executive Board concludes",
+        "imf.org: Curaçao and Sint Maarten 2026 Article IV concluding statement",
+        "worldbank.org: Sint Maarten Recovery Reconstruction Resilience Trust Fund Hurricane Irma damage GDP",
+        "worldbank.org: \"Caught Between Storms\" Sint Maarten World Bank",
+        "worldbank.org: Sint Maarten Trust Fund annual report 2024 economy growth tourism airport terminal",
+        "Critic re-opened every cited URL: imf.org cr16276.pdf (text extracted, cover dated August 2016); documents1.worldbank.org ICR00481 PDF (text extracted, dated December 17, 2025); worldbank.org 2024-06-20 feature; imf.org 2025-06-24 concluding statement; imf.org 2023 Article IV publication page (published 2023-07-28); imf.org 2024-09-17 press release 24/330; imf.org 2025-09-09 press release 25/290"
+      ],
+      "critic_changes": [
+        "All 7 cited URLs re-opened; the two PDFs were text-extracted. Every quoted passage was found on its page, with the dates and titles matching (2016 report cover dated August 2016; ICR dated December 17, 2025; 2023 IMF page published July 2023). No citation was dropped.",
+        "Hurricane thread: 'including the airport, homes and hotels' was cut because no cited passage lists hotels. A third citation from the ICR ('Just thirteen days later, Hurricane Maria...') was added to support 'two hurricanes within two weeks'.",
+        "Arc: 'wrecked most of the island's buildings and infrastructure' became 'damaged most of the island's infrastructure', because the sources speak of infrastructure, not buildings. The IMF private-investment remark is now limited to 2015, which is what the 2016 report says.",
+        "Arc and pandemic thread: 'the pandemic halted travel' and 'lost most of its visitors' became 'air travel/air traffic collapsed', which is what the ICR passage supports. 'As travel returned' was dropped as unsupported.",
+        "Trust Fund thread: the claim that the fund closes in 2028 was dropped because no citation in the thread quotes it. 'Dutch-financed ... managed by the World Bank' and 'stayover tourism' were dropped because the thread's own quotes do not state them. The 2023 IMF remark about pre-Irma levels is now dated in the text ('In 2023 the IMF said...') rather than stated as current.",
+        "since_last_year: 'growth was strong in 2024 and will slow over the medium term' was cut because the cited passage covers only the Trust Fund closure risk. 'Passenger growth' became 'growth in demand' to match the quote.",
+        "Every number was checked against desk/data/SXM.json (10.2, -1.2, 0.9, 9.3, 8.5, 9.1, 14.6, 12.4, 1.6 to 2.3, -0.7, -2.0, 1.6) and all are correct. No banned phrases and no recommendations were found."
+      ]
+    },
+    "headline": "Hurricanes in 2017 and the pandemic in 2020 cut income per person deeply; a tourism-led rebuild has lifted it, but not back to its 2011 peak.",
+    "arc": "Income per person in Sint Maarten peaked in 2011, and in 2025 it was still 10.2 percent below that peak and lower than in 2009, the first year of the record. From 2010 to 2017 growth averaged -1.2 percent a year: after gains in 2010 and 2011, income per person slipped every year, and the IMF described years of weak growth, with little private investment in 2015 beyond an airport expansion. That era ended with Hurricanes Irma and Maria in September 2017, which damaged most of the island's infrastructure; income per person fell 9.3 percent in 2017 and 8.5 percent in 2018. Since 2018 growth has averaged 0.9 percent a year, in large swings: a 9.1 percent rebound in 2019, a 14.6 percent fall in 2020 when air travel collapsed in the pandemic, and a 12.4 percent jump in 2022. Since 2023 growth has been steadier, between 1.6 and 2.3 percent a year, carried by stayover tourism and by rebuilding paid for through a Trust Fund financed by the Netherlands, including a new airport terminal.",
+    "threads": [
+      {
+        "title": "Weak years before the storms",
+        "about": "history",
+        "text": "Before 2017 the economy was already stalling. The IMF described years of weak growth that trailed the island's neighbours, with no major private investment in 2015 apart from an airport expansion.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16276.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Curaçao and Sint Maarten: 2016 Article IV Consultation Discussions—Press Release; Staff Report and Informational Annex",
+            "date": "2016-08",
+            "quote": "For several years now, both countries have experienced lackluster growth, trailing behind regional peers."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16276.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Curaçao and Sint Maarten: 2016 Article IV Consultation Discussions—Press Release; Staff Report and Informational Annex",
+            "date": "2016-08",
+            "quote": "With the exception of the recent expansion project at the Princess Juliana International Airport, there was no major private investment in 2015"
+          }
+        ]
+      },
+      {
+        "title": "Hurricanes Irma and Maria",
+        "about": "history",
+        "text": "In September 2017 two hurricanes struck within two weeks and damaged most of the island's infrastructure. Income per person fell 9.3 percent in 2017 and 8.5 percent in 2018.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099122325151513606/pdf/BOSIB-73028624-0e23-49c6-81b6-5c7eb266c203.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion and Results Report: Sint Maarten Airport Terminal Reconstruction Project (P167974)",
+            "date": "2025-12-17",
+            "quote": "Just thirteen days later, Hurricane Maria compounded the destruction, bringing heavy rainfall and further flooding."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099122325151513606/pdf/BOSIB-73028624-0e23-49c6-81b6-5c7eb266c203.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion and Results Report: Sint Maarten Airport Terminal Reconstruction Project (P167974)",
+            "date": "2025-12-17",
+            "quote": "The economic impact was severe and long-lasting, causing GDP to contract by an estimated 12 percent over 2017 and 2018."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/feature/2024/06/20/amplifying-results-in-sint-maarten",
+            "publisher": "World Bank",
+            "title": "Amplifying Results in Sint Maarten",
+            "date": "2024-06-20",
+            "quote": "US$2.73 billion in damages and losses, with over 90 percent of infrastructure affected."
+          }
+        ]
+      },
+      {
+        "title": "The pandemic stops air travel",
+        "about": "history",
+        "text": "A tourism economy still rebuilding from the storms saw air traffic collapse in 2020, and income per person fell 14.6 percent. It then jumped 12.4 percent in 2022.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099122325151513606/pdf/BOSIB-73028624-0e23-49c6-81b6-5c7eb266c203.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion and Results Report: Sint Maarten Airport Terminal Reconstruction Project (P167974)",
+            "date": "2025-12-17",
+            "quote": "kept PJIAE solvent during the COVID-19 collapse of air traffic and associated revenues"
+          }
+        ]
+      },
+      {
+        "title": "Rebuilding through the Trust Fund",
+        "about": "present",
+        "text": "Recent growth has come from tourism and from rebuilding paid for by the Trust Fund set up after Hurricane Irma, including the new airport. The IMF expects this rebuilding to wind down and be replaced by private and government building. In 2023 the IMF said the island still had further to go to reach its levels from before Irma.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/24/kingdom-of-the-netherlands-sint-maarten-staff-concluding-statement-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Sint Maarten: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-24",
+            "quote": "Tourism-related transportation services and construction, including of the new airport, further fueled economic activity"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/24/kingdom-of-the-netherlands-sint-maarten-staff-concluding-statement-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Sint Maarten: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-24",
+            "quote": "Unwinding Trust Fund reconstruction activity is expected to be gradually replaced by private real estate and government infrastructure investments"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2023/07/27/kingdom-of-the-netherlands-curaao-and-sint-maarten-2023-article-iv-consultation-discussions-537067",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands-Curaçao and Sint Maarten: 2023 Article IV Consultation Discussions-Press Release; and Staff Report",
+            "date": "2023-07",
+            "quote": "Sint Maarten has further to go to reach levels seen before hurricane Irma in 2017."
+          }
+        ]
+      },
+      {
+        "title": "Power cuts and political strain",
+        "about": "present",
+        "text": "Since mid-2024, rolling power cuts and unstable government have clouded the outlook. The IMF says the electricity crisis briefly set back stayover tourism.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/09/17/pr-24330-curacao-and-sint-maarten-imf-board-concludes-2024-article-iv-consultation-discussions",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation Discussions with the Kingdom of the Netherlands—Curaçao and Sint Maarten",
+            "date": "2024-09-17",
+            "quote": "Electricity load shedding since June and political instability threaten the near-term outlook."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/24/kingdom-of-the-netherlands-sint-maarten-staff-concluding-statement-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Sint Maarten: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-24",
+            "quote": "Stayover tourism grew remarkably despite a short-lived setback caused by the electricity crisis"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In September 2025 the IMF board ended its 2025 review, pointing to doubts about how well the government can carry out projects once the Trust Fund closes. In December 2025 the World Bank closed its airport rebuilding project, saying the restored terminal leaves room for years of growth in demand.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/09/09/pr-25290-the-kingdom-of-the-netherlands-imf-concludes-2025-article-iv-consultation-discussions",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Curaçao and Sint Maarten",
+          "date": "2025-09-09",
+          "quote": "uncertainty about government capacity to execute projects after the Trust Fund's closure."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099122325151513606/pdf/BOSIB-73028624-0e23-49c6-81b6-5c7eb266c203.pdf",
+          "publisher": "World Bank",
+          "title": "Implementation Completion and Results Report: Sint Maarten Airport Terminal Reconstruction Project (P167974)",
+          "date": "2025-12-17",
+          "quote": "This capacity provides the headroom needed to accommodate 5–10 years of demand growth without major additional works."
+        }
+      ]
+    },
+    "tension": "The IMF reports the economy as a whole growing in 2014, 2015 and 2024, but in the data income per person fell 0.7 percent in 2014 and 2.0 percent in 2015, and rose only 1.6 percent in 2024. The sources do not explain the gap. It may come from population growth or from revisions to the figures."
+  }
+}

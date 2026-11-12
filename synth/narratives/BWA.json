@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "iso3": "BWA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BWA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Botswana Article IV 2025 diamond downturn growth\"",
+        "same tier 1 domains: \"Botswana economic update diamond diversification World Bank\"",
+        "opened: imf.org 2025 Article IV mission press release (2025-09-26)",
+        "opened: imf.org 2025 Article IV staff report page (2025-12-08)",
+        "opened: worldbank.org Botswana Economic Update page (2026-07-15) and PDF (July 2026)",
+        "opened: worldbank.org Botswana Systematic Country Diagnostic Update 'At a Crossroads' PDF (2023)",
+        "critic re-opened: imf.org PR 25/317, worldbank.org Botswana Economic Update page, documents1.worldbank.org Botswana Economic Update PDF (text extracted), documents1.worldbank.org SCD Update PDF (text extracted)"
+      ],
+      "critic_changes": [
+        "Verified all citations: the IMF press release and World Bank update page were fetched directly; the two World Bank PDFs were fetched and their text extracted locally. Every quoted passage appears verbatim, and the dates match (IMF 2025-09-26; Economic Update page 2026-07-15, PDF July 2026; SCD Update copyright 2023). No citation was dropped.",
+        "Checked every number against desk/data/BWA.json: 2.7, 0.4, 15.9 (2009), 3.3, 6.2 (2015), 0.4, 10.0 (2020), 10.3 (2021), the 2023 peak, 4.4 (2024), 2.3 (2025), 6.6 below peak, level first reached 2017, 7.8 (2010), 5.7 (2016) and 9.4 (2013) all match G4.eras, G3 or the series. No corrections needed.",
+        "Arc: changed 'the World Bank and IMF see this diamond downturn as deeper and longer than past ones' to say only the World Bank sees it as structural rather than a passing slump like past ones. The cited IMF passage gives no view on how this downturn compares with past ones.",
+        "Thread 'Fiscal buffers run down': the claim that debt 'climbed quickly since 2023' was not supported by the IMF quote, which gives no start year. Added a verified World Bank passage on the 2023–2025 debt rise. Also changed 'steady spending' to 'spending that did not adjust', closer to the source's 'fiscal policy inertia'.",
+        "Thread 'Exports still mostly diamonds': dropped 'Growth has created few jobs' because the cited passages support only high unemployment.",
+        "Thread 'Shocks, then a brief boom': softened the claim that strong diamond revenue 'lifted income per person to its 2023 peak' to say the two happened at the same time. The source links the revenue to fiscal results, not to the income peak.",
+        "since_last_year: changed 'diamond output kept falling' to 'diamond revenues weakened' to match the cited World Bank passage. The PDF confirms that growth was projected to rebound in 2026."
+      ]
+    },
+    "headline": "Botswana's diamond-led growth has swung hard; after falls in 2024 and 2025, income per person is back about where it first was in 2017.",
+    "arc": "Income per person in Botswana grew 2.7 percent a year in 1990–1999, while diamonds drove the economy. Growth slowed to 0.4 percent a year in 2000–2009, an average dragged down by a fall of 15.9 percent in 2009, when a diamond slump came with the global financial crisis. The 2010–2017 era ran at 3.3 percent a year, helped by the bounce back from 2009, though income per person fell 6.2 percent in 2015 in a year of recession and drought. Since 2018 growth has averaged 0.4 percent: income per person fell 10.0 percent in 2020, rose 10.3 percent in 2021 as diamond sales recovered, peaked in 2023, then fell 4.4 percent in 2024 and 2.3 percent in 2025 as diamond output dropped. It now sits 6.6 percent below that peak, about where it first was in 2017, and the World Bank sees this diamond downturn as structural rather than a passing slump like past ones.",
+    "threads": [
+      {
+        "title": "A diamond slump that may last",
+        "text": "Demand for natural diamonds has weakened as lab-grown stones and other suppliers compete, and the World Bank sees diamond revenues as structurally weaker than in past slumps. The IMF tied the 2025 contraction mainly to a further fall in diamond production.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "Today, diamond revenues appear structurally weaker, reflecting intensified global competition, changing consumer preferences, and the rapid growth of lab-grown diamonds."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/26/pr-25317-botswana-imf-staff-completes-2025-article-iv-mission-to-botswana",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to Botswana",
+            "date": "2025-09-26",
+            "quote": "Botswana’s economic activity is expected to contract by about 1 percent in 2025, owing primarily to a further decline in diamond production"
+          }
+        ]
+      },
+      {
+        "title": "Fiscal buffers run down",
+        "text": "Years of weak diamond exports and spending that did not adjust have used up the savings that once cushioned slumps. Public debt has climbed quickly since 2023.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "the government has largely exhausted its fiscal buffers after years of underperforming diamond exports and fiscal policy inertia"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "Public debt surged from 22 percent of GDP to nearly 40 percent of GDP between 2023 and 2025"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/26/pr-25317-botswana-imf-staff-completes-2025-article-iv-mission-to-botswana",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to Botswana",
+            "date": "2025-09-26",
+            "quote": "Public debt has increased to more than 30 percent of GDP."
+          }
+        ]
+      },
+      {
+        "title": "Exports still mostly diamonds",
+        "text": "Despite years of diversification plans, diamonds still make up most exports, much as they did in the early 1990s, with copper and tourism the only other large earners abroad. Unemployment has stayed high.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "diamonds accounted for 72 percent in 2025, virtually unchanged from 71 percent in 1992"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "diamonds continue to dominate exports, revenues, and foreign exchange earnings, with copper mining and tourism the only other significant tradable sectors"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "the unemployment rate has consistently remained above 20 percent"
+          }
+        ]
+      },
+      {
+        "title": "Past slumps were cushioned",
+        "text": "Diamond downturns during the global financial crisis and in the mid-2010s were sharp but short, and savings built up in boom years absorbed them. That fits the deep falls in 2009 and 2015 and the quick rebounds of 7.8 percent in 2010 and 5.7 percent in 2016.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "Earlier slumps, such as during the global financial crisis and again in the mid-2010s, were largely cyclical and absorbed by substantial fiscal savings"
+          }
+        ]
+      },
+      {
+        "title": "Shocks, then a brief boom",
+        "text": "Beyond diamonds, the World Bank lists recession, droughts, floods and COVID-19 as shocks that slowed growth after 2015. A short run of strong diamond revenue after the pandemic, helped by disrupted Russian supply, came as income per person rose to its 2023 peak.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099112023112034378/pdf/BOSIB-56106b90-ef06-4566-a7d8-68fe9cad99f2.pdf",
+            "publisher": "World Bank",
+            "title": "At a Crossroads: Reigniting Efficient and Inclusive Growth, Botswana Systematic Country Diagnostic Update",
+            "date": "2023",
+            "quote": "a recession in 2015, droughts in 2015 and 2019, damaging floods in 2017, the 2020 COVID-19 pandemic"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+            "publisher": "World Bank",
+            "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+            "date": "2026-07",
+            "quote": "the post-COVID-19 recovery and a temporary disruption in Russian supply related to the conflict in the Ukraine"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The economy shrank for a second year in 2025 as diamond revenues weakened and fiscal pressure grew. By mid-2026 the World Bank reported diamond mining recovering in the first quarter of 2026 and expected growth to return that year.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/country/botswana/publication/botswana-economic-update-seizing-the-moment-how-botswana-can-turn-crisis-into-opportunity",
+          "publisher": "World Bank",
+          "title": "Botswana Economic Update - Seizing the Moment: How Botswana Can Turn Crisis into Opportunity",
+          "date": "2026-07-15",
+          "quote": "contracted by 2.8% in 2024 and a further 0.7% in 2025, reflecting the combined impact of weaker diamond revenues, widening fiscal pressures"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099070826083510696/pdf/P508942-f08a6f2c-7c97-43fb-8d55-025555d2a1fb.pdf",
+          "publisher": "World Bank",
+          "title": "Botswana Economic Update, First Edition: Seizing the Moment, How Botswana Can Turn Crisis into Opportunity",
+          "date": "2026-07",
+          "quote": "Diamond mining recovered in Q1 2026, with production up by 27 percent relative to its average level in 2025, providing early support to the recovery."
+        }
+      ]
+    },
+    "tension": "The World Bank describes much faster total GDP growth in the 1990s than the 2.7 percent a year that income per person shows for 1990–1999; the gap is growth spread across a growing population. The 2023 World Bank review also says growth has trended down since 2010, while the data show 2010–2017 as the fastest era at 3.3 percent, an average lifted by the rebound from the 2009 fall and a jump of 9.4 percent in 2013."
+  }
+}

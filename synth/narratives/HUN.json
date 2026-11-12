@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "iso3": "HUN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "HUN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Hungary 2025 Article IV consultation IMF staff report growth",
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: OECD Economic Survey Hungary 2024 productivity growth",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Hungary 2008 Stand-By Arrangement IMF financial crisis fiscal adjustment",
+        "imf.org, ebrd.com, worldbank.org: Hungary 2026 Article IV mission concluding statement IMF",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Hungary transition recession early 1990s output fall privatization foreign direct investment growth late 1990s",
+        "critic: re-opened every cited URL (EBRD 2005 strategy PDF, IMF 2008/2024/2025 press releases, IMF 2025 concluding statement, OECD 2024 and 2026 surveys)"
+      ],
+      "critic_changes": [
+        "Arc: removed 'budget tightening began in 2006'. None of the cited passages supports it (the EBRD source dates from 2005).",
+        "Thread 'Deficits and the 2008 crash': removed 'tightening began only in 2006, as growth slowed' for the same reason. Changed 'needed an IMF-led rescue' to 'turned to the IMF for a loan', which matches the IMF press release on the Stand-By Arrangement. Changed 'fell behind for years afterwards' to 'began to fall behind that of the G7', which is what the OECD passage says.",
+        "Thread 'Transition and EU entry': the cited passages did not support 'moved quickly ... open to trade and foreign investment' or 'carrying the 1998-2005 era'. Reworded the text and added a third EBRD citation (verified on the page): 'Over the last 15 years Hungary has made remarkable progress in transition'.",
+        "Thread 'Inflation shock since 2022': removed 'eroding real incomes', which the cited passages do not say. Reworded the causes to match the IMF passage (pandemic, war in Ukraine, crisis-related stimulus).",
+        "Thread 'Blocked EU funds, falling investment': the rule-of-law claim had no cited passage in this thread, so added the OECD 2026 passage on funds blocked since 2022 over rule-of-law concerns.",
+        "Thread 'Foreign factories, shrinking workforce': the old quote stopped before the words on sourcing inputs abroad, so it did not back 'buy most of their inputs abroad'. Replaced it with the OECD passage on FDI's limited spillovers and foreign firms' 80% share of goods exports (23 words), and reworded the text to match.",
+        "since_last_year: changed 'investment still falling' to 'investment had not begun to recover', in line with the OECD's 'has not yet started to rebound'.",
+        "Tension: 'highest level ever' became 'highest level on record' (the series starts in 1960), and the population clause became conditional, because the data file has no population trend.",
+        "Verified on each opened page: all cited quotes and dates. The EBRD strategy was approved on 15 November 2005. The IMF Stand-By Arrangement press release is dated 6 November 2008. The OECD 2024 survey is dated March 2024 and the OECD 2026 survey July 2026. The IMF releases are dated 2 August 2024 and 29 August 2025, and the IMF concluding statement 20 June 2025. Fixed small differences to match the page's own words, e.g. the OECD 2026 passage has no comma before 'and has remained low'.",
+        "Numbers: every figure in the headline, arc, threads, since_last_year and tension matches growth_problem or series in HUN.json (-1.2, 4.4, 0.5, 3.0 era means; -11.9 in 1991; -6.6 in 2009; 7.7 in 2021; -0.7 in 2023; 1.0 in 2024 and 2025; 2.8 and 1.3 decade averages; peak in 2025). No verdict or recommendation language and no banned phrases. 5 distinct recent tier 1 sources survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Hungary caught up fast after 1998, stalled after the 2008 crisis, boomed again from 2014, and has barely grown since an inflation shock in 2022.",
+    "arc": "Income per person fell during the break from central planning, at -1.2 percent a year over 1990-1997, with the steepest drop of 11.9 percent in 1991. From 1998 to 2005 it grew 4.4 percent a year, as market reforms, foreign investment and the run-up to EU entry in 2004 lifted output, though budget deficits stayed large. Growth slowed to 0.5 percent a year over 2006-2013: the global financial crisis hit Hungary early and hard, and income per person fell 6.6 percent in 2009. From 2014 to 2025 growth averaged 3.0 percent a year, strong until 2019 and back up to 7.7 in 2021 after the pandemic dip, before an inflation surge in 2022 and blocked EU funds left growth weak: -0.7 in 2023 and 1.0 in each of 2024 and 2025. Over the last decade growth averaged 2.8 percent a year, up from 1.3 in the decade before, and income per person is at its peak in 2025.",
+    "threads": [
+      {
+        "title": "Transition and EU entry",
+        "about": "history",
+        "text": "After 1990 Hungary moved from central planning to a market economy, and the EBRD dates most of its gains in competitiveness to 1992-2000. EU entry in May 2004 then lifted output growth and trade.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/hungary/archive/2005-11-15,_Strategy_for_Hungary-_English_web.pdf",
+            "publisher": "EBRD",
+            "title": "Strategy for Hungary",
+            "date": "2005-11-15",
+            "quote": "Over the last 15 years Hungary has made remarkable progress in transition"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/hungary/archive/2005-11-15,_Strategy_for_Hungary-_English_web.pdf",
+            "publisher": "EBRD",
+            "title": "Strategy for Hungary",
+            "date": "2005-11-15",
+            "quote": "Hungary made most of its substantial gains in competitiveness between 1992 and 2000."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/hungary/archive/2005-11-15,_Strategy_for_Hungary-_English_web.pdf",
+            "publisher": "EBRD",
+            "title": "Strategy for Hungary",
+            "date": "2005-11-15",
+            "quote": "The accession of Hungary to the EU in May 2004 has positively influenced output growth and trade, agricultural incomes and infrastructure investment."
+          }
+        ]
+      },
+      {
+        "title": "Deficits and the 2008 crash",
+        "about": "history",
+        "text": "Large budget deficits ran through the early 2000s. When the global financial crisis struck, Hungary was hit early and turned to the IMF for a loan in November 2008; income per person fell 6.6 percent in 2009, and labour productivity began to fall behind that of the G7.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/hungary/archive/2005-11-15,_Strategy_for_Hungary-_English_web.pdf",
+            "publisher": "EBRD",
+            "title": "Strategy for Hungary",
+            "date": "2005-11-15",
+            "quote": "The persistent fiscal deficit remains the main macroeconomic problem."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr08275",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves 12.3 Billion Euro Stand-By Arrangement for Hungary",
+            "date": "2008-11-06",
+            "quote": "Hungary faced early and significant fallout from the global financial crisis"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/03/oecd-economic-surveys-hungary-2024_aa6e8628/795451e5-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2024",
+            "date": "2024-03",
+            "quote": "labour productivity was catching with G7 economies between the mid-1990s and the mid-2000s, but then started falling behind after the Great Financial Crisis"
+          }
+        ]
+      },
+      {
+        "title": "Inflation shock since 2022",
+        "about": "present",
+        "text": "After a quick rebound from the pandemic, growth turned down in the second half of 2022. The pandemic, the war in Ukraine and crisis-era stimulus pushed inflation into double digits, and output has been close to flat since.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/08/02/pr-24300-hungary-imf-executive-board-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Hungary",
+            "date": "2024-08-02",
+            "quote": "crisis-related stimulus widened fiscal and external imbalances and triggered double-digit inflation in 2022"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "GDP growth abruptly turned down in the second half of 2022 and has remained low since then."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/08/29/pr-25286-hungary-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Hungary",
+            "date": "2025-08-29",
+            "quote": "The Hungarian economy has experienced stagnant output over the past 3 years"
+          }
+        ]
+      },
+      {
+        "title": "Blocked EU funds, falling investment",
+        "about": "present",
+        "text": "EU funds were blocked from 2022 over rule-of-law concerns, cutting public investment just as private firms held back. Investment has fallen sharply since 2022 and had not begun to recover by early 2026.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "public investment as EU funds got blocked, and private investment as business confidence and capacity utilisation declined."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "Investment declined by 18% between 2022 Q1 and 2026 Q1 and has not yet started to rebound."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "have been blocked since 2022 due to concerns related to the rule of law and academic freedom"
+          }
+        ]
+      },
+      {
+        "title": "Foreign factories, shrinking workforce",
+        "about": "present",
+        "text": "Foreign-owned firms make most of Hungary's goods exports, but the large stock of foreign investment brings only limited gains to local firms. The IMF finds that repeated industrial policies have done little for lasting productivity growth, while the working-age population is shrinking.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "The large stock of Foreign Direct Investment (FDI) generates only limited spillovers for Hungary. Foreign-owned firms produce 80% of Hungarian exports of goods"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/20/hungary-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Hungary: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-20",
+            "quote": "Repeated waves of industrial policies have had elusive impact on sustained productivity growth"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Hungary 2026",
+            "date": "2026-07",
+            "quote": "The working-age population is declining and the employment rate is plateauing"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth stayed weak in 2025, with income per person up 1.0 percent, the same as in 2024. The OECD's July 2026 survey found that investment had not begun to recover, but it expected the EU funds blocked since 2022 to be released soon and growth to pick up from 2026.",
+      "citations": [
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Hungary 2026",
+          "date": "2026-07",
+          "quote": "blocked since 2022 due to concerns related to the rule of law and academic freedom are expected to be released soon"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-hungary-2026_ce78a709/1d93d51d-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Hungary 2026",
+          "date": "2026-07",
+          "quote": "Growth is projected to progressively pick up from 2026, in part due to the weakening of the fiscal stance."
+        }
+      ]
+    },
+    "tension": "The IMF and OECD describe output as stagnant since 2022, yet the data put income per person at its highest level on record in 2025. The gap is small: after a fall of 0.7 percent in 2023, growth of 1.0 percent in each of 2024 and 2025 only just took income per person past its 2022 level, and income per person can edge up while total output is nearly flat if the population is shrinking."
+  }
+}

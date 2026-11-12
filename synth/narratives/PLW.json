@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "iso3": "PLW",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PLW",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Palau Article IV consultation staff report\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Palau economic outlook tourism recovery 2025\"",
+        "imf.org: \"Palau 2023 Article IV press release IMF Executive Board concludes\"",
+        "imf.org, worldbank.org, adb.org: \"Palau economy Chinese tourist arrivals decline 2017 contraction\"",
+        "imf.org, worldbank.org, adb.org: \"Palau economy 1990s Asian financial crisis tourism decline Compact funds 1999\"",
+        "Opened: imf.org press releases of 2026-01-30, 2023-12-21, 2019-02-06 and 2002-03-28; IMF Country Report 16/328 (PDF); adb.org news of 2024-04-18; ADB Private Sector Assessment for Palau 2017 (PDF). IMF eLibrary staff reports for 2023 and 2025 returned 403 and were not used.",
+        "Critic check: reopened every cited URL with WebFetch (imf.org x5, adb.org x2); the two PDFs were text-extracted locally to verify the quotes"
+      ],
+      "critic_changes": [
+        "Tourist thread: the cited 2019 IMF press release does not mention charter flights, and no cited passage mentioned water and waste strain, so the charter-flight limit was unsupported. Added a 2016 IMF Country Report 16/328 passage that does say it, which the page shows, and changed 'strained water and waste systems' to 'strained infrastructure' to match.",
+        "Tourist thread: moved the 2026 IMF citation and the claim that tourist arrivals and building work drive growth today into the pandemic thread to keep within 3 citations. The tourist thread now covers 2015 to 2017 only, so it was relabelled from 'present' to 'history' and retitled 'Tourist boom and charter limits'.",
+        "Pandemic thread: dropped the 'emerged from the pandemic with significant output loss' citation to make room for the 2026 IMF growth-drivers citation. Changed 'closing the border' to 'border restrictions', which the 2023 IMF passage supports. Also made the same wording change in the arc.",
+        "ADB citation: extended the quote to the page's exact clause 'flights from Taipei,China and Macau'. The draft cut it at 'Taipei', which changed its meaning. The thread text now reads 'Taipei, China and Macau'.",
+        "2023 IMF press release: date tightened from 2023-12 to 2023-12-21, the date the page shows. The URL contains 2023/12/20.",
+        "2001 IMF notice: title corrected to the page's own title, which begins 'Public Information Notice:'.",
+        "Tension: softened 'points to fewer people sharing it' to 'could mean fewer people sharing it', because no source opened discusses population.",
+        "Checked every number in the headline, arc, threads, since_last_year and tension against desk/data/PLW.json: the era means -0.8/1.8/-0.2, the yearly rates for 1999, 2000, 2008, 2009, 2015, 2017, 2020, 2021, 2024 and 2025, the 3.5 percent shortfall, the 2015 first-reached level, regaining the 2007 level in 2014 and being back at the 2019 level in 2025. All match.",
+        "Checked all other quotes against the pages as they stand. The 2016 IMF and 2017 ADB PDFs were text-extracted locally. Three distinct recent tier 1 sources remain: IMF 2023-12-21, ADB 2024-04-18 and IMF 2026-01-30. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Palau's income per person rises and falls with its tourists: a 2016 peak, a pandemic collapse, and a rebound that has not yet regained the lost ground.",
+    "arc": "Palau's income per person has moved in three eras since 1990. From 1990 to 2000 it shrank by 0.8 percent a year on average, with deep falls in the early 1990s and again in 1999 and 2000, after the Asian crisis cut tourist visits. From 2001 to 2016 it grew 1.8 percent a year, carried by tourism and by building paid for with Compact grants from the United States; the global crisis cut it by 4.1 percent in 2008 and 4.7 percent in 2009, and a surge of visitors from China lifted it 8.2 percent in 2015 before the 2016 peak. Since 2017 it has shrunk by 0.2 percent a year on average: arrivals fell after the authorities limited charter flights, and pandemic border restrictions cut income per person by 6.0 percent in 2020 and 11.9 percent in 2021. Reopening, returning flights and new building brought rebounds of 12.2 percent in 2024 and 6.5 percent in 2025. Even so, income per person in 2025 was 3.5 percent below its 2016 peak and about where it first stood in 2015.",
+    "threads": [
+      {
+        "title": "Tourist boom and charter limits",
+        "about": "history",
+        "text": "In 2015 a surge of tourists, mostly from China, lifted income per person 8.2 percent. The rush strained infrastructure and leaned towards low-budget visitors, so the authorities limited charter flights. Income per person fell 3.5 percent in 2017 as arrivals dropped.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16328.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Palau: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Palau (IMF Country Report No. 16/328)",
+            "date": "2016",
+            "quote": "Tourist arrivals surged by 34 percent in FY2015, with the bulk coming from China."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16328.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Palau: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Palau (IMF Country Report No. 16/328)",
+            "date": "2016",
+            "quote": "rise in tourism activity strained infrastructure and was tilted towards low budget tourists, which led the authorities to limit the number of charter flights"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2019/02/06/pr1932-imf-executive-board-concludes-2018-article-iv-consultation-with-the-republic-of-palau",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2018 Article IV Consultation with the Republic of Palau",
+            "date": "2019-02-06",
+            "quote": "GDP contracted by 3.7 percent in FY2017, driven by tourist arrivals dropping sharply by 17 percent."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and a slow reopening",
+        "about": "present",
+        "text": "Pandemic border restrictions hit hard: income per person fell 6.0 percent in 2020 and 11.9 percent in 2021. Recovery was slow after the border fully reopened in July 2022, held back by a lack of flights, and visitor numbers climbed again once flights from Taipei, China and Macau resumed. Tourist arrivals and building work are now the main drivers of growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/12/20/pr23467-palau-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with Palau",
+            "date": "2023-12-21",
+            "quote": "Slow recovery in tourism since fully lifting border restrictions in July 2022, reflecting lack of flights"
+          },
+          {
+            "url": "https://www.adb.org/news/palau-growth-outlook-tourism-climbs-adb",
+            "publisher": "ADB",
+            "title": "Palau Growth Outlook Up As Tourism Climbs",
+            "date": "2024-04-18",
+            "quote": "visitor arrivals grew in the 2023 fiscal year by 279.1%, buoyed by the resumption of flights from Taipei,China and Macau"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/30/pr-26027-republic-of-palau-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Palau",
+            "date": "2026-01-30",
+            "quote": "Main growth drivers: tourism arrivals and robust construction activity, improved confidence, and fiscal space."
+          }
+        ]
+      },
+      {
+        "title": "Compact money from Washington",
+        "about": "present",
+        "text": "Since independence in 1994, grants under the Compact of Free Association with the United States have paid for infrastructure, budget support and a trust fund. A renewed agreement signed in May 2023 came on better financial terms.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16328.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Palau: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Republic of Palau (IMF Country Report No. 16/328)",
+            "date": "2016",
+            "quote": "As part of a 50-year Compact of Free Association, the United States provided US$580 million in financial aid to Palau during 1994-2009"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/12/20/pr23467-palau-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with Palau",
+            "date": "2023-12-21",
+            "quote": "CRA-23 signed on May 22, 2023, under better financial terms, improving macroeconomic prospects"
+          }
+        ]
+      },
+      {
+        "title": "The Asian crisis",
+        "about": "history",
+        "text": "Tourism lost ground after the Asian crisis of 1997, and income per person fell 7.3 percent in 1999 and 4.0 percent in 2000. The sources opened do not explain the sharp falls of 1992 and 1993.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn0236",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2001 Article IV Consultation with the Republic of Palau",
+            "date": "2002-03-28",
+            "quote": "Tourist activity has not recovered since the Asian crisis"
+          }
+        ]
+      },
+      {
+        "title": "Global financial crisis",
+        "about": "history",
+        "text": "The global crisis hit Palau hard: income per person fell 4.1 percent in 2008 and 4.7 percent in 2009, and it did not pass its 2007 level again until 2014.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/230131/palau-psa-2017.pdf",
+            "publisher": "ADB",
+            "title": "Private Sector Assessment for Palau: Policies for Sustainable Growth Revisited",
+            "date": "2017",
+            "quote": "real gross domestic product (GDP) falling by a total of around 15% across FY2008–FY2009, as the economy was severely buffeted by the global financial crisis"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The rebound carried on into 2025: income per person grew 6.5 percent after 12.2 percent in 2024. In January 2026 the IMF described the recovery as led by tourist arrivals and strong building work, with inflation falling back.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/01/30/pr-26027-republic-of-palau-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Republic of Palau",
+          "date": "2026-01-30",
+          "quote": "FY2025: growth estimated at 6.7 percent; inflation declined to 0.2 percent."
+        }
+      ]
+    },
+    "tension": "The IMF expects Palau's total output to pass its pre-pandemic level only in FY2026, yet income per person in the data was already back at its 2019 level in 2025. Income per person recovering faster than total output could mean fewer people sharing it, but none of the sources opened discuss population change."
+  }
+}

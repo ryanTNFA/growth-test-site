@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "iso3": "SLE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SLE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "Sierra Leone IMF Article IV 2025 staff report press release growth inflation",
+        "Sierra Leone Macro Poverty Outlook World Bank economic update 2025",
+        "Sierra Leone Ebola iron ore price collapse 2014 2015 economy contraction",
+        "Sierra Leone civil war 1991-2002 economic collapse post-conflict recovery growth",
+        "Opened: thedocs.worldbank.org MPO Sierra Leone (October 2026); imf.org PR 26/194 (10 June 2026); imf.org PR 25/425 (16 December 2025); imf.org PR 24/432 (21 November 2024); documents1.worldbank.org Systematic Country Diagnostic (6 February 2018)",
+        "Check pass: every cited URL re-opened; both PDFs text-extracted and searched for each quoted passage",
+        "Tier 2 (UN) not searched: tier 1 gave 4 recent sources"
+      ],
+      "critic_changes": [
+        "Re-opened all five cited URLs. Both PDFs (the 2018 SCD and the October 2026 MPO) were text-extracted and searched: every quoted passage in the draft appears on its page, all on tier 1 domains.",
+        "IMF PR 24/432 date set from 2024-11 to 2024-11-21, the date the page shows. IMF PR 26/194 date set from 2026-06 to 2026-06-10, the date the page shows (the URL path says 06/09).",
+        "MPO quote: kept 'pass-through'. The PDF breaks the word across a line ('pass-' / 'through'), so the hyphen is original.",
+        "Thread 'Inflation, then a hard reset': 'In 2022 and 2023 prices rose very fast' became 'inflation peaking in late 2023', because the cited passages cover only October 2023 onward. 'The IMF ties the low growth and high inflation of those years' became 'IMF directors link low growth and high inflation', because the page's diagnosis is not tied to particular years.",
+        "Thread 'Civil war and its end': swapped the citation with the 3.4/5.9 percent passage for two SCD passages that support the text directly, on contraction leading to grievances and war, and on 2001-2014 being the longest stretch of rising income since independence. The blood-diamonds citation stays.",
+        "Thread 'Farms and iron ore': added an SCD citation on farmers returning to their land and increasing the area under cultivation. Before this, nothing cited supported that clause.",
+        "Thread 'A narrow, exposed economy': added an MPO citation on heavy imports of food, fuel and fertilizer. Before this, nothing cited supported that clause.",
+        "since_last_year: 'the IMF and World Bank both expect growth to slow in 2026' was not supported, because the IMF passage projects 2026 growth without saying it slows. The text now says the World Bank expects a slowdown (new MPO citation) and the IMF notes spillovers from the war.",
+        "Every number in the headline, arc, threads and tension was checked against desk/data/SLE.json (G1, G3, G4.eras and the NY.GDP.PCAP.KD.ZG series): 3.4, 17.5, 19.4, 5.1, 10.0, 6.6, 0.2, 1.9, 3.5, 3.3, 3.0, 2.5 and the years 1974, 1982, 1990-2025 all match. No corrections were needed.",
+        "The arc's cause for the pre-1990 slide (diamond revenues and a weakened state) is backed by the SCD passage on Kono diamond depletion in the 1980s, so it was kept. No banned phrases or recommendation language were found.",
+        "4 distinct recent tier 1 sources remain: IMF 24/432, IMF 25/425, IMF 26/194 and the World Bank MPO of October 2026. All 5 threads keep their citations, and both present threads have sources from 2023 or later."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Sierra Leone's income per person shrank through war, surged with peace, crashed with Ebola and iron ore, and is back near its 1982 peak.",
+    "arc": "Income per person in Sierra Leone peaked in 1982, then slid as diamond revenues dwindled and the state weakened. From 1990 to 2001 it shrank 3.4 percent a year as the civil war that began in 1991 brought brutal fighting and mass displacement, and it fell 17.5 percent in 1992 alone. Peace in 2002 brought a rebound of 19.4 percent that year, and from 2002 to 2013 income per person grew 5.1 percent a year, led by farming and, from 2011, two large iron ore mines. That run ended abruptly when Ebola struck and iron ore prices collapsed, shutting the mines: income per person fell 10.0 percent in 2014 and 6.6 percent in 2015, so the era from 2014 to 2025 averages only 0.2 percent a year. Since then the recovery has been steady but modest, at 1.9 percent a year over 2016 to 2025, through a fall of 3.5 percent in 2020 and a bout of very high inflation that peaked in 2023. Income per person is now 3.3 percent below its 1982 peak and about where it first was in 1974.",
+    "threads": [
+      {
+        "title": "Civil war and its end",
+        "text": "Years of economic decline and grievance ended in a civil war in 1991 that lasted more than a decade, fuelled by diamonds. Peace in 2002 opened the longest stretch of rising income per person since independence.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "severe economic contraction paved the way to increased grievances, culminating in the 1991-2002 civil war"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "The conflict that followed continued for 11 years, fueled by notorious ‘blood diamonds’, and was characterized by acts of extreme brutality"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "Sierra Leone experienced a steady increase in income per capita from 2001 to 2014, its longest period since independence in 1961."
+          }
+        ]
+      },
+      {
+        "title": "Farms and iron ore",
+        "text": "The postwar recovery was led by agriculture, as farmers returned and planted more land. From 2011 two large iron ore mines added a burst of growth that shows in the data for 2012 and 2013.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "Economic growth was driven mainly by agriculture."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "farmers returning to their land and steadily increasing the area under cultivation"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "Industry was the second largest contributor to growth, driven mainly by two large-scale iron ore mining projects that began production in 2011."
+          }
+        ]
+      },
+      {
+        "title": "Ebola and the iron ore bust",
+        "text": "In 2014 and 2015 the Ebola epidemic and a slump in iron ore prices hit at the same time. Both iron ore mines stopped producing, and growth in the rest of the economy nearly stalled.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "The economy contracted by more than 20 percent due to the spread of the Ebola epidemic and after both iron ore mining operations ceased production"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/152711522893772195/pdf/SIERRA-LEONE-SCD-02132018.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Sierra Leone: Priorities for Sustainable Growth and Poverty Reduction, Systematic Country Diagnostic",
+            "date": "2018-02-06",
+            "quote": "Iron production declined by 84 percent in 2014 and growth in the rest of the economy slowed to near zero"
+          }
+        ]
+      },
+      {
+        "title": "Inflation, then a hard reset",
+        "text": "Prices rose very fast, with inflation peaking in late 2023. IMF directors link low growth and high inflation to outside shocks combined with weak policy and governance. Tight policy brought inflation down sharply by late 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/11/22/pr-24432-sierra-leone-imf-concludes-2024-aiv-consultation-approves-req-38-month-arr-under-ecf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Sierra Leone and Approves Request for a 38-Month Arrangement under the Extended Credit Facility",
+            "date": "2024-11-21",
+            "quote": "External shocks, paired with suboptimal policies and weak governance, contributed to low growth, high inflation,"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/11/22/pr-24432-sierra-leone-imf-concludes-2024-aiv-consultation-approves-req-38-month-arr-under-ecf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Sierra Leone and Approves Request for a 38-Month Arrangement under the Extended Credit Facility",
+            "date": "2024-11-21",
+            "quote": "Inflation declined from 55 percent y-o-y in October 2023 to 25 percent in August 2024."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/16/pr-25425-sierra-leone-imf-completes-1st-and-2nd-reviews-arrangement-under-ecf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the First and Second Reviews of Sierra Leone’s Arrangement Under the Extended Credit Facility",
+            "date": "2025-12-16",
+            "quote": "Inflation declined to 4.4 percent in October 2025 amid ambitious macroeconomic policy tightening and a stable leone."
+          }
+        ]
+      },
+      {
+        "title": "A narrow, exposed economy",
+        "text": "The economy still relies on a narrow set of exports and heavy imports of food, fuel and fertilizer, which leaves it exposed to price shocks. Most jobs are informal, and nearly half of workers farm at low productivity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-sle.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Sierra Leone",
+            "date": "2026-10",
+            "quote": "the economy continues to rely heavily on imports of food, fuel, and fertilizer."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-sle.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Sierra Leone",
+            "date": "2026-10",
+            "quote": "High import dependence, a narrow export base, policy uncertainty, low reserves, and debt-service pressures leave the economy particularly susceptible to shocks."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-sle.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Sierra Leone",
+            "date": "2026-10",
+            "quote": "Poverty is widespread and structural: nearly half of workers are in low-productivity agriculture, only one in six earns a wage, and most jobs are informal."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Sierra Leone ended 2025 with stronger growth and low inflation, but the war in the Middle East has since raised fuel, food and shipping costs. Inflation climbed again through mid-2026. The World Bank expects growth to slow in 2026, and the IMF notes spillovers from the war.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-sle.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Sierra Leone",
+          "date": "2026-10",
+          "quote": "Headline inflation rose from 4.3 percent in December 2025 to 15.7 percent in August 2026, driven by the pass-through of higher fuel prices"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-sle.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Sierra Leone",
+          "date": "2026-10",
+          "quote": "Growth is projected to slow to 4.0 percent in 2026 as higher input and transport costs weaken agricultural, industry, and trade-related services."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/09/pr-26194-sierra-leone-imf-reaches-agreement-on-3rd-rev-under-ecf-arrang-and-arrang-under-rsf",
+          "publisher": "IMF",
+          "title": "Sierra Leone: IMF Staff Reaches Staff-Level Agreement on the Third Review Under the Extended Credit Facility (ECF) Arrangement and an Arrangement under the Resilience and Sustainability Facility (RSF)",
+          "date": "2026-06-10",
+          "quote": "Growth is projected at 4.0 percent in 2026 despite negative spillovers from the war in the Middle East."
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe solid GDP growth in 2022, 2023 and 2025, but income per person grew 3.0, 3.4 and 2.5 percent in those years, because the population keeps growing. More than two decades after peace, and after an era of 5.1 percent growth a year, income per person is still 3.3 percent below its 1982 peak."
+  }
+}

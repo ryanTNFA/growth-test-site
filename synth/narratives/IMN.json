@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "iso3": "IMN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IMN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Isle of Man economy growth\"",
+        "tier 1: \"\\\"Isle of Man\\\" economic outlook 2024 2025\"",
+        "tier 1: \"Isle of Man IMF assessment financial sector report\"",
+        "tier 1: \"Isle of Man OECD peer review 2023 2024\"",
+        "tier 1: \"Isle of Man crown dependency economy financial services population decline\"",
+        "tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"Isle of Man economy growth\"",
+        "tier 2: \"\\\"Isle of Man\\\" economic report 2024\""
+      ],
+      "critic_changes": [],
+      "reason": "No IMF, World Bank, OECD or UN document from 2023 or later explains the Isle of Man's growth; the allowed domains offer only data pages, tax-transparency peer reviews and financial-sector assessments from 2003 to 2009."
+    }
+  }
+}

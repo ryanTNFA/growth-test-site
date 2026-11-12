@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "iso3": "THA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "THA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 7,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Thailand Article IV consultation 2025 IMF growth",
+        "same tier 1 domains: Thailand Economic Monitor World Bank 2025",
+        "imf.org, worldbank.org, oecd.org, adb.org: Thailand economy 2026 growth outlook tariffs political",
+        "tier 1 domains: Thailand 1997 Asian financial crisis baht growth before crisis",
+        "tier 1 domains: Thailand growth slowed since Asian financial crisis aging population productivity middle-income",
+        "worldbank.org: \"Building Thailand's Future Today\" World Bank report",
+        "worldbank.org, imf.org, adb.org: Thailand Macro Poverty Outlook 2026 Middle East conflict energy tourism",
+        "Opened: imf.org press releases of 2025-11-13 and 2026-02-13; worldbank.org Thailand Economic Monitor list, February 2026 press release, September 2026 press release, country overview, July 2024 Thailand Economic Monitor PDF, Building Thailand's Future Today PDF, October 2026 Macro Poverty Outlook PDF; oecd.org pages returned 403 and were not used",
+        "Critic pass: re-opened all four cited URLs (Building Thailand's Future Today PDF, Thailand Economic Monitor July 2024 PDF, World Bank press release 2026-02-11, Macro Poverty Outlook October 2026 PDF) and checked every quote against the extracted text"
+      ],
+      "critic_changes": [
+        "Opened all four cited documents and checked every quote against the extracted text. All quotes were found. Dates also match: Building Thailand's Future Today is 2026, the Thailand Economic Monitor is July 2024, the press release is 11 February 2026, and the Macro Poverty Outlook footer reads October 2026.",
+        "Changed straight apostrophes to the curly ones the pages use in the 'Manufacturing was Thailand’s key growth driver' and 'continue to support Thailand’s economy' quotes.",
+        "Thread 'A debt-fuelled boom, then a crash': none of the citations supported 'growth rode on manufacturing exports and foreign investment'. Added a quote from the same report on foreign direct investment, trade, industry and exports in the 1980s and 1990s, and reworded the sentence to match it.",
+        "Thread 'Investment never fully came back': the cited passage did not support 'investment stayed low ... rebounded only a little since'. Added the report's passage on investment's contribution to growth, which declined starkly after 1996 and has since only rebounded slightly. Reworded the text to say investment 'added far less to growth' rather than 'stayed low'.",
+        "Thread 'The export engine slows after 2008': no citation supported the slower growth of world trade, the political instability or the 2011 floods. Replaced the political-instability quote with the report's sentence on slower global trade after the crisis, and dropped the floods and instability claims from the thread. Both still appear in the arc, where the same report supports them. Also dropped 'barely grew in 2011', since without the floods it had no context.",
+        "Thread 'Growing old before growing rich': dropped 'lower long-run growth potential', which no cited passage supports. The thread now says only that the World Bank links aging to slower productivity growth.",
+        "Thread 'Pandemic and a slow recovery': the press-release quote gives reasons for the projected slowdown in 2026, not for the whole post-pandemic recovery. Reworded so those reasons are tied to the World Bank's early-2026 expectation of slower growth.",
+        "since_last_year: the first Macro Poverty Outlook quote did not say that growth would slow. Extended it to the page's 25-word passage, which includes the estimated slowdown.",
+        "Checked every number against desk/data/THA.json and all match: 5.3 and 2.3 era means, -4.0 (1997), -8.8 (1998), -1.4 (2009), -6.2 (2020, -6.249), 2.5 (2025), 1.8 and 2.7 decade averages, peak in 2025, and income per person first passing its 1996 level in 2002. No recommendation language or banned phrases were found."
+      ]
+    },
+    "headline": "Thailand's 1990s boom ended in the 1997 crisis; since 1998 income per person has grown 2.3 percent a year, and just 1.8 over the last decade.",
+    "arc": "From 1990 to 1997 income per person in Thailand grew 5.3 percent a year, carried by manufacturing exports and foreign investment, with part of the boom fuelled by debt. The 1997 Asian Financial Crisis ended it: income per person fell 4.0 percent in 1997 and 8.8 percent in 1998. Since 1998 growth has averaged 2.3 percent a year, as investment stayed low, the manufacturing engine slowed after the 2008 global financial crisis, political instability grew and the workforce began to age. Shocks broke up the era, from the 2009 downturn and the 2011 floods to the pandemic, when income per person fell 6.2 percent in 2020. Income per person reached its highest level yet in 2025, but growth slowed to 1.8 percent a year over 2016–2025, from 2.7 in the decade before.",
+    "threads": [
+      {
+        "title": "A debt-fuelled boom, then a crash",
+        "text": "In the 1990s foreign investment, industry and exports drove growth, but the World Bank says part of it was fuelled by debt-driven investment. The 1997 crisis brought a deep fall: income per person shrank 4.0 percent in 1997 and 8.8 percent in 1998, and did not pass its 1996 level again until 2002.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "attract foreign direct investment and lower trade barriers in the 1980s and 1990s led to rapid investment, industrialization, formal job creation and export growth"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "part of this growth was fueled by high levels of debt-driven capital investments, which contributed to the imbalances that led to the Asian Financial Crisis"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "The Asian Financial Crisis resulted in a severe contraction in Thailand, followed by a prolonged recovery."
+          }
+        ]
+      },
+      {
+        "title": "Investment never fully came back",
+        "text": "After the crisis, investment added far less to growth than before, and it has rebounded only a little since. The World Bank says most of it went to keeping existing plant and equipment running rather than adding new capacity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "declined starkly from 77 percent from 1991 to 1996 to only 20 percent from 1999 to 2008 and has since only rebounded slightly"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "most of the investment in Thailand has been allocated to maintaining the current capital stock, rather than to expanding productive capacity"
+          }
+        ]
+      },
+      {
+        "title": "The export engine slows after 2008",
+        "text": "Manufacturing drove growth through the 1990s and 2000s but slowed after the 2008 global financial crisis. World trade then grew more slowly, cutting demand for Thailand's main exports, and China became a strong rival in the same goods. Income per person fell 1.4 percent in 2009.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "Manufacturing was Thailand’s key growth driver in the 1990s and into the 2000s but the manufacturing sector slowed after the Global Financial Crisis"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "After the Global Financial Crisis global trade growth and expansion of global value chains slowed, lowering demand for Thailand’s key export products."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "Thailand started to face growing competition from China in electronics, machinery, chemicals and eventually electric vehicles."
+          }
+        ]
+      },
+      {
+        "title": "Growing old before growing rich",
+        "text": "Thailand is aging fast for its income level, and the labor force has begun to shrink. The World Bank links this to slower productivity growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "Thailand has been growing old before it has grown rich, with aging approaching levels seen in high-income countries"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062924133030977/pdf/P50100914f725005f1b9211803e7e17020a.pdf",
+            "publisher": "World Bank",
+            "title": "Thailand Economic Monitor July 2024: Unlocking the Growth Potential of Secondary Cities",
+            "date": "2024-07",
+            "quote": "The slowdown in TFP growth is expected to persist, partly due to a less productive, aging, and shrinking labor force"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and a slow recovery",
+        "text": "Tourism had grown into a large part of the economy by 2019, so the pandemic hit hard: income per person fell 6.2 percent in 2020. The recovery since has been slow, and early in 2026 the World Bank expected growth to slow again because of weaker world trade, high household debt and a slow return of tourists.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "with tourism contributing 18 percent of GDP at its peak in 2019"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090126231031160/pdf/P509945-66f89b76-d5fe-4ab6-a7a9-2ce3f3bb74f5.pdf",
+            "publisher": "World Bank",
+            "title": "Building Thailand's Future Today",
+            "date": "2026",
+            "quote": "The recovery since the COVID-19 pandemic has been particularly sluggish"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/02/11/thailand-s-next-phase-of-growth-depends-on-industries-of-the-future",
+            "publisher": "World Bank",
+            "title": "Thailand's Next Phase of Growth Depends on Industries of the Future",
+            "date": "2026-02-11",
+            "quote": "Thailand’s economic growth is projected to slow to 1.6 percent in 2026, reflecting weaker global trade, high household debt, and slower tourism recovery."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.5 percent in 2025. In 2026 the Middle East conflict pushed up the cost of imported energy, and the World Bank expects growth to slow. Exports and investment tied to artificial intelligence and data centers have softened the blow.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-tha.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Thailand",
+          "date": "2026-10",
+          "quote": "GDP growth is estimated to slow from 2.4 percent in 2025 to 2.0 percent in 2026, as the Middle East conflict raised imported energy costs"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-tha.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Thailand",
+          "date": "2026-10",
+          "quote": "Artificial Intelligence (AI)-related exports and data center investment continue to support Thailand’s economy, cushioning the impact of the oil shock."
+        }
+      ]
+    },
+    "tension": "The World Bank says Thailand's catch-up with high-income countries has gone into reverse since 2019. Yet the data show income per person at its highest level ever in 2025. Both are true: income per person is still rising, at 1.8 percent a year over the last decade, but more slowly than the high-income bar and Thailand's faster neighbours. The data also show a single era since 1998, while the sources describe steps down within it, after the 2008 crisis and again after the pandemic. The decade averages fit that story: 2.7 in 2006–2015, then 1.8."
+  }
+}

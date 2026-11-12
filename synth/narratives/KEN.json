@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "KEN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KEN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Kenya IMF Article IV 2025 staff report press release growth (tier 1 domain list)",
+        "worldbank.org: Kenya Economic Update World Bank 2025 (tier 1 domain list)",
+        "worldbank.org: Kenya Macro Poverty Outlook 2026 (tier 1 domain list)",
+        "imf.org/worldbank.org: Kenya economic growth 2026 IMF program debt Eurobond (tier 1 domain list)",
+        "imf.org: Kenya IMF 2026 staff-level agreement new program Article IV consultation",
+        "worldbank.org: Kenya growth 1990s stagnation recovery 2003 Economic Recovery Strategy country economic memorandum (tier 1 domain list)",
+        "Opened: worldbank.org press release 2025-11-24; documents1.worldbank.org Kenya Economic Update No. 33 (July 2026); documents1.worldbank.org Kenya CEM (March 2016); documents1.worldbank.org Country Assistance Evaluation (May 2004); documents1.worldbank.org Report 28064-KE (March 2004); imf.org Country Report 24/316 (Nov 2024); imf.org press releases 25/66 (Mar 2025), 25/337 (Oct 2025), 26/071 (Mar 2026); worldbank.org/ext Kenya country page (undated, not cited)",
+        "Check pass: re-opened all six cited URLs (PDFs text-extracted locally) and verified every quote, date and number against desk/data/KEN.json"
+      ],
+      "critic_changes": [
+        "tier1_recent_found: 6 -> 4. Only four distinct cited sources are dated 2023 or later: IMF CR 24/316 (Nov 2024), the World Bank press release (24 Nov 2025), KEU No. 33 (July 2026) and IMF PR 26/071 (Mar 2026). That is still at least 2, so the story stays tier 1.",
+        "Headline: 'risen steadily since 2004' overstated the record, since income per person fell in 2008 and 2020. Now 'has grown since 2004 through repeated shocks'. Still under 160 characters.",
+        "Arc: dropped 'World Bank reviews from that time'. The CEM that describes the stagnation dates from 2016, not the 1990s. Linked governance to 'development', which is the evaluation's own word, not 'growth'.",
+        "Arc: the old sentence implied the 2007 election violence caused the 1990 level to be regained in 2010, so it was reworded. The series confirms 2010 is the first year above the 1990 level.",
+        "Arc: 'energy price shock' replaced with 'new pressure from conflict in the Middle East'. The cited passages say conflict and pressure but do not name an energy price shock.",
+        "Thread 'Long stagnation, weak governance': the evaluation calls governance the obstacle 'to Kenya's development', not to growth. Text corrected and the quote extended to the page's words.",
+        "Thread 'The turn after 2002': the CEM attributes the jump in new firms to the post-Moi climate, not 'a better climate for new firms'. Text reworded. 'Mobile banking' changed to 'mobile telecoms and banking', and the CEM passage that supports it was added as a citation.",
+        "Thread 'Shocks that break the run': dropped 'together with the global crisis', which no cited passage supports. Added 'percent' to the bare numbers -2.8, -2.2 and 5.6 (all checked against the series).",
+        "Thread 'Shocks that break the run': the IMF quote was swapped for the passage on the same page that names COVID-19, import prices and droughts, so the pandemic claim is supported.",
+        "Thread 'Debt and a squeezed budget': dropped 'Public debt has climbed'. No cited passage says debt rose. Also dropped 'meant to raise taxes': the IMF text says the bill aimed to correct a revenue shortfall. Text rewritten to match the IMF passage.",
+        "Thread 'Debt and a squeezed budget': the World Bank quote was trimmed to drop its prescriptive tail, 'underscoring the urgency of credible fiscal consolidation'.",
+        "Thread 'Jobs mostly informal': trailing comma removed from the quote. Both quotes verified.",
+        "since_last_year: 'pushed up fuel and food prices' and 'lowered its growth forecast' were not supported by the quoted passages. The 'deteriorated' quote was replaced with KEU's passage on a 0.6 point downward revision because of the Middle East conflict, and the text now says the conflict weighed on the economy.",
+        "since_last_year: the IMF quote ('including potential spillovers from') did not support the program claim, so it was replaced with the passage on the 'authorities' program request'. 'New program' became 'the program Kenya has requested', since the page does not say 'new'. The date was corrected from 2026-03 to 2026-03-05 (the date the page shows).",
+        "Verified unchanged: all era, decade and peak numbers (-0.9, 2.3, 2.0, 2.5, 2.6 in 2025, peak 2025). The CEM date (March 2016), the evaluation date (2004-05-21), IMF CR 24/316 (Nov 2024) and KEU No. 33 (July 2026) were confirmed from the documents. The tension's claim that output grew faster is backed by KEU's 2025 real GDP growth of 4.6 percent."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "After shrinking from 1990 to 2003, Kenya's income per person has grown since 2004 through repeated shocks, as debt strain and informal work weigh on gains.",
+    "arc": "Kenya's record since 1990 falls into two eras. From 1990 to 2003 income per person fell by 0.9 percent a year, and the World Bank describes a long stagnation that never became a collapse, with donors agreeing that weak economic governance was the main obstacle to development. From 2004 to 2025 it grew by 2.3 percent a year, after what the World Bank calls a move onto a path of accelerating growth after 2002, led by modern services such as mobile telecoms and banking. Shocks broke the run, starting with the violence after the 2007 election, and income per person did not climb back above its 1990 level until 2010. Growth has edged up, from 2.0 percent a year in 2006–2015 to 2.5 in 2016–2025, and income per person reached a new high in 2025. The sources say this steadier growth now sits alongside heavy public debt, a mostly informal job market and, in 2026, new pressure from conflict in the Middle East.",
+    "threads": [
+      {
+        "title": "Long stagnation, weak governance",
+        "text": "Income per person drifted down from 1990 to 2003, and by 2003 it was lower than in 1990. The World Bank describes a stagnation that never turned into a crash, and its evaluators recorded donor agreement that poor economic governance was the main obstacle to Kenya's development.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/763771468197384854/pdf/103822-WP-Kenya-Country-Economic-Memorandum-PUBLIC.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Country Economic Memorandum: From Economic Growth to Jobs and Shared Prosperity",
+            "date": "2016-03",
+            "quote": "GDP per capita stagnated during 1984-2003, but never crashed."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/262091468773702080/pdf/Kenya-Country-assistance-evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "The Republic of Kenya Country Assistance Evaluation",
+            "date": "2004-05-21",
+            "quote": "Donor consensus that poor economic governance was the most important obstacle to Kenya's development"
+          }
+        ]
+      },
+      {
+        "title": "The turn after 2002",
+        "text": "Growth picked up after 2002, and income per person rose every year from 2004 to 2007. The World Bank finds a clear jump in new firms in the 2000s, which it ties to the changed economic climate after the end of the Moi era, and points to new services in mobile telecoms and banking.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/763771468197384854/pdf/103822-WP-Kenya-Country-Economic-Memorandum-PUBLIC.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Country Economic Memorandum: From Economic Growth to Jobs and Shared Prosperity",
+            "date": "2016-03",
+            "quote": "Following two decades of stagnation in per capita income and high volatility of economic activity, Kenya's economy moved to a path of accelerating growth …"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/763771468197384854/pdf/103822-WP-Kenya-Country-Economic-Memorandum-PUBLIC.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Country Economic Memorandum: From Economic Growth to Jobs and Shared Prosperity",
+            "date": "2016-03",
+            "quote": "which is likely to capture the change in the economic environment after the end of the Moi regime"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/763771468197384854/pdf/103822-WP-Kenya-Country-Economic-Memorandum-PUBLIC.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Country Economic Memorandum: From Economic Growth to Jobs and Shared Prosperity",
+            "date": "2016-03",
+            "quote": "Beginning in the 2000s, the country demonstrated the capacity for innovative services (especially in mobile telecom and banking)"
+          }
+        ]
+      },
+      {
+        "title": "Shocks that break the run",
+        "text": "The violence after the 2007 election brought growth to a halt, and income per person growth fell to -2.8 percent in 2008. The pandemic brought -2.2 percent in 2020 before a 5.6 percent rebound in 2021, and the IMF also points to severe droughts and higher import prices.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/763771468197384854/pdf/103822-WP-Kenya-Country-Economic-Memorandum-PUBLIC.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Country Economic Memorandum: From Economic Growth to Jobs and Shared Prosperity",
+            "date": "2016-03",
+            "quote": "Since 2007, the economy has been hit by several shocks, starting with the postelection violence in January 2008, which brought GDP growth to a halt"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1kenea2024003-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kenya: Seventh and Eighth Reviews Under the Extended Fund Facility and Extended Credit Facility Arrangements (IMF Country Report No. 24/316)",
+            "date": "2024-11",
+            "quote": "preceded by large exogenous shocks (COVID-19, global developments impacting import price and affordable access to market finance, and severe multi-season droughts)"
+          }
+        ]
+      },
+      {
+        "title": "Debt and a squeezed budget",
+        "text": "In 2024 a tax shortfall, and protests that forced the government to withdraw a finance bill, set back efforts to narrow the budget gap. Interest payments take a large share of revenue, and the World Bank still rates Kenya at high risk of debt distress.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1kenea2024003-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kenya: Seventh and Eighth Reviews Under the Extended Fund Facility and Extended Credit Facility Arrangements (IMF Country Report No. 24/316)",
+            "date": "2024-11",
+            "quote": "fiscal consolidation efforts have faced headwinds following a sizable tax revenue shortfall in FY2023/24 and withdrawal of the 2024 Finance Bill after widespread public protests"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/11/24/kenya-shows-economic-resilience-sustained-progress-depends-on-procompetitive-reforms",
+            "publisher": "World Bank",
+            "title": "Kenya Shows Economic Resilience, But Sustained Progress Depends on Accelerating Procompetitive Reforms",
+            "date": "2025-11-24",
+            "quote": "The country remains at high risk of debt distress"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826101539235/pdf/P507067-ed3bc07d-76cc-4dee-90e4-9f0e343f51a7.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Economic Update, Edition No. 33: Sustaining Macroeconomic Gains, Advancing Fiscal Reforms",
+            "date": "2026-07",
+            "quote": "interest service payments remain high at 35.5 percent of total revenue and grants as at Q3 FY2025/26"
+          }
+        ]
+      },
+      {
+        "title": "Jobs mostly informal",
+        "text": "Employment keeps growing, but the World Bank finds that most new jobs are informal. Formal jobs remain a small share of the total, and real wages have been falling.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099070826101539235/pdf/P507067-ed3bc07d-76cc-4dee-90e4-9f0e343f51a7.pdf",
+            "publisher": "World Bank",
+            "title": "Kenya Economic Update, Edition No. 33: Sustaining Macroeconomic Gains, Advancing Fiscal Reforms",
+            "date": "2026-07",
+            "quote": "Employment growth remained strong in 2025, but most jobs are still created in the informal sector."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/11/24/kenya-shows-economic-resilience-sustained-progress-depends-on-procompetitive-reforms",
+            "publisher": "World Bank",
+            "title": "Kenya Shows Economic Resilience, But Sustained Progress Depends on Accelerating Procompetitive Reforms",
+            "date": "2025-11-24",
+            "quote": "Labor market weaknesses persist, with formal employment remaining at 15% of total jobs and real wages falling"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.6 percent in 2025, though the World Bank says a severe drought late in the year held back farming. Since early 2026, conflict in the Middle East has weighed on the economy, and the World Bank has lowered its growth forecast for 2026. IMF staff visited Nairobi in early 2026 to advance talks on the program Kenya has requested.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099070826101539235/pdf/P507067-ed3bc07d-76cc-4dee-90e4-9f0e343f51a7.pdf",
+          "publisher": "World Bank",
+          "title": "Kenya Economic Update, Edition No. 33: Sustaining Macroeconomic Gains, Advancing Fiscal Reforms",
+          "date": "2026-07",
+          "quote": "Growth was weighed down by a severe drought in the final quarter of the year, which contracted agriculture value added by 1.3 percent"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099070826101539235/pdf/P507067-ed3bc07d-76cc-4dee-90e4-9f0e343f51a7.pdf",
+          "publisher": "World Bank",
+          "title": "Kenya Economic Update, Edition No. 33: Sustaining Macroeconomic Gains, Advancing Fiscal Reforms",
+          "date": "2026-07",
+          "quote": "a downward revision of about 0.6 percentage points relative to pre-conflict projections published in late 2025, reflecting the impact of the Middle East Conflict"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/03/04/pr-26071-kenya-imf-staff-concludes-visit-to-kenya",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Kenya",
+          "date": "2026-03-05",
+          "quote": "further advance technical discussions in the context of the authorities' program request"
+        }
+      ]
+    },
+    "tension": "The sources report total output growing much faster than the 2.6 percent rise in income per person the data show for 2025. The gap is population growth, so the gains spread thinner than the headline growth figures suggest. The sources also describe years of fiscal strain, tax protests and new shocks. Yet the data show income per person growing every year since 2021 and reaching a new high in 2025."
+  }
+}

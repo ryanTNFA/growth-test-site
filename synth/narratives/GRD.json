@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "iso3": "GRD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GRD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Grenada Article IV staff concluding statement 2025\"",
+        "tier 1 domains: \"Grenada Hurricane Beryl economy growth Citizenship by Investment\"",
+        "tier 1 domains: \"Grenada Hurricane Ivan 2004 damage percent of GDP debt restructuring\"",
+        "tier 1 domains: \"Grenada home-grown structural adjustment program Extended Credit Facility 2014 Fiscal Responsibility Act growth recovery\"",
+        "worldbank.org: \"Grenada Macro Poverty Outlook 2025 growth construction tourism\"",
+        "imf.org, worldbank.org, caribank.org, iadb.org: \"Grenada growth 2014-2019 tourism construction St. George's University recovery after ECF program\"",
+        "opened: imf.org 2025 Article IV concluding statement; imf.org Press Release 26/011; thedocs.worldbank.org MPO Grenada October 2026; imf.org WP/17/171; imf.org Country Report 22/134",
+        "critic re-opened all five cited URLs (PDFs text-extracted locally) and verified every quote"
+      ],
+      "critic_changes": [
+        "Checked all 5 cited URLs. Every quote in the draft appears on its page (the PDFs were text-extracted to check), and every date matches: WP/17/171 July 2017, CR 22/134 May 2022, MPO footer October 2026, concluding statement 29 Oct 2025, PR 26/011 21 Jan 2026.",
+        "Arc: removed 'tourism kept growing' in 1998–2005. WP/17/171 says growth slowed and became more volatile in 1999–2004. Kept the borrowing for capital projects, which the paper supports.",
+        "Arc: removed the claim that rebuilding drove 12.9 percent growth in 2005. No opened source says this, so the arc now says only that the hurricanes caused unprecedented damage and that the first restructuring ran 2004–06.",
+        "Arc: changed 'medical university closed its classrooms' to the source's wording (St George's University stopped in-person classes). Changed 'tourism stopped' to 'collapsed'. Added the fiscal responsibility framework, supported by CR 22/134. CR 22/134 also supports the 2014–19 drivers (agriculture, tourism, construction).",
+        "Thread 1: replaced 'wrecked homes, hotels and farms' and 'once the rebuilding surge of 2005 passed', which are unsupported, with neutral data (-1.0 in 2004, 12.9 in 2005, -4.3 in 2006, all in the series). Moved the 'two debt restructurings 2004–06 and 2013–15' citation here, because this thread states the first restructuring.",
+        "Thread 2: replaced the 'reversed the already weak recovery' quote with the WP passage on tourism and construction collapsing, which matches the text. Added the WP passage on countercyclical fiscal policies to support the claim that spending added to fiscal gaps. 'Growth returned' is now 'in the years of growth that followed'.",
+        "Thread 3: 'a large source of local spending' is now 'a key part of local activity', which matches the cited 'key contributor to activity'. Title changed to 'Pandemic and the university'.",
+        "Thread 4: removed 'this is the main reason growth swings so much', a verdict on the cause of volatility that no source supports. Rephrased 'less than its size suggests' to match the IMF's 'muted' impact on GDP potential.",
+        "Thread 5: the IMF credits CBI savings with a comfortable fiscal position, not with paying for public projects, and the text now says so.",
+        "since_last_year: removed 'which struck in 2024' and attributed the 2025 drivers to the World Bank, adding farming as the MPO lists it. Replaced the weak 'in the aftermath of Hurricane Beryl' and the IMF 4.4 percent growth citations with MPO passages on the drivers, CBI inflows normalising and the suspended primary balance rule, plus the IMF passage on returning to the floor from 2027. 'Fiscal rules' is now singular, matching the sources.",
+        "Tension: the IMF paper calls the trend 'relatively robust' for whole-economy growth over the decades after independence, not 'growth before 2000 robust'. Reworded to match.",
+        "Headline: says 'two debt restructurings' rather than 'a debt crisis', and makes clear that the 2.8 percent is income per person growth since 2014 (158 characters).",
+        "Checked all numbers against GRD.json: 1.2, 5.3, -0.7, 2.8 (G4 eras); 2.1, 8 of 11 (G1); 13.5 FDI and 21.8 current account (G7, 2025); series values -1.0 (2004), 12.9 (2005), -4.3 (2006), -6.9 (2009), 2008 level not regained until 2015, -14.0 (2020, record low), 4.4 (2021), 7.1 (2022), 2.3 (2024), 4.3 (2025); G3 peak 2025. All correct.",
+        "No banned phrases or recommendation language. Three distinct recent tier 1 sources (MPO Oct 2026, IMF concluding statement Oct 2025, IMF PR 26/011 Jan 2026). Five threads survive, and both present threads have 2025–26 citations."
+      ]
+    },
+    "headline": "Hurricanes, two debt restructurings and tourism's swings shaped Grenada's growth; income per person has grown 2.8 percent a year since 2014, to a record high.",
+    "arc": "Grenada's income per person grew 1.2 percent a year in 1990–1997 and 5.3 percent in 1998–2005, a fast but uneven era in which the government borrowed heavily for capital projects. Hurricanes Ivan in 2004 and Emily in 2005 caused unprecedented damage, and the first of two debt restructurings ran from 2004 to 2006. From 2006 to 2013 growth averaged -0.7 percent: the global financial crisis hit tourism and construction before the economy had recovered from the storms, and public debt became unsustainable. After a second debt restructuring in 2013–15 and a new fiscal responsibility framework, growth averaged 2.8 percent over 2014–2025, led by tourism, construction and farming. That era also held the deepest fall in the record, 14.0 percent in 2020, when tourism collapsed and St George's University stopped in-person classes, but income per person recovered and reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Hurricanes and a debt build-up",
+        "text": "In the early 2000s the government borrowed to pay for capital projects, and debt rose fast. Then two hurricanes, Ivan in 2004 and Emily in 2005, caused unprecedented damage, and a first debt restructuring followed in 2004–06. Income per person fell 1.0 percent in 2004, jumped 12.9 percent in 2005 and fell 4.3 percent in 2006.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17171.pdf",
+            "publisher": "IMF",
+            "title": "Sovereign Debt Restructurings in Grenada: Causes, Processes, Outcomes, and Lessons Learned (IMF Working Paper WP/17/171)",
+            "date": "2017-07",
+            "quote": "Two devastating hurricanes, Ivan in 2004 and Emily in 2005, hit Grenada and caused unprecedented damages."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17171.pdf",
+            "publisher": "IMF",
+            "title": "Sovereign Debt Restructurings in Grenada: Causes, Processes, Outcomes, and Lessons Learned (IMF Working Paper WP/17/171)",
+            "date": "2017-07",
+            "quote": "Expansionary fiscal policy to counteract slowing growth led to a rapid buildup of debt by 2002"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17171.pdf",
+            "publisher": "IMF",
+            "title": "Sovereign Debt Restructurings in Grenada: Causes, Processes, Outcomes, and Lessons Learned (IMF Working Paper WP/17/171)",
+            "date": "2017-07",
+            "quote": "This paper documents the two debt restructurings that Grenada undertook in 2004–06 and 2013–15."
+          }
+        ]
+      },
+      {
+        "title": "Global crisis and a second default",
+        "text": "The global financial crisis hit tourism and construction hard, and income per person fell 6.9 percent in 2009; it did not climb back above its 2008 level until 2015. Government spending meant to cushion the downturn left large fiscal gaps, and a second debt restructuring followed in 2013–15. The IMF credits a fiscal responsibility framework with restoring confidence and cutting public debt in the years of growth that followed.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17171.pdf",
+            "publisher": "IMF",
+            "title": "Sovereign Debt Restructurings in Grenada: Causes, Processes, Outcomes, and Lessons Learned (IMF Working Paper WP/17/171)",
+            "date": "2017-07",
+            "quote": "Grenada’s economy was severely affected by the global financial crisis as the tourism and construction sectors collapsed"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17171.pdf",
+            "publisher": "IMF",
+            "title": "Sovereign Debt Restructurings in Grenada: Causes, Processes, Outcomes, and Lessons Learned (IMF Working Paper WP/17/171)",
+            "date": "2017-07",
+            "quote": "Grenada experienced a subdued post-hurricane economic recovery and accumulated large fiscal imbalances through countercyclical fiscal policies."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1grdea2022002.pdf",
+            "publisher": "IMF",
+            "title": "Grenada: 2022 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Grenada (IMF Country Report No. 22/134)",
+            "date": "2022-05",
+            "quote": "The successful implementation of the Fiscal Responsibility Framework (FRF) helped address fiscal imbalances, boosted confidence, and underpinned an impressive reduction in public debt."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and the university",
+        "text": "Income per person fell 14.0 percent in 2020, the largest drop in the record. Tourism collapsed and St George's University, a key part of local activity, stopped in-person classes. Growth came back at 4.4 percent in 2021 and 7.1 percent in 2022.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1grdea2022002.pdf",
+            "publisher": "IMF",
+            "title": "Grenada: 2022 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Grenada (IMF Country Report No. 22/134)",
+            "date": "2022-05",
+            "quote": "prompted a collapse of tourism-related activities and suspension of in-person classes at Saint George’s University (SGU), a key contributor to activity"
+          }
+        ]
+      },
+      {
+        "title": "Tourism, imports and storms",
+        "text": "Tourism remains the main engine, which leaves growth exposed to downturns abroad and to hurricanes. The IMF finds that the tourism-led model has done less than it could to lift the economy's lasting capacity, because many inputs are imported and local investment has been weak.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-grd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Grenada (October 2026)",
+            "date": "2026-10",
+            "quote": "Grenada is a small tourism-dependent economy, vulnerable to global downturns and natural disasters."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/10/29/cs-grenada-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Grenada: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-10-29",
+            "quote": "The tourism-led growth model’s impact on GDP potential has been muted due to high foreign inputs and weak local investment"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/20/pr-26011-grenada-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Grenada (Press Release No. 26/011)",
+            "date": "2026-01-21",
+            "quote": "High susceptibility to shocks associated with tourism and import dependency."
+          }
+        ]
+      },
+      {
+        "title": "Citizenship sales and foreign investment",
+        "text": "Money from selling citizenship and from foreign direct investment flows in on a large scale. In 2025 net foreign direct investment came to 13.5 percent of GDP while the current account deficit was 21.8 percent of GDP. The IMF credits careful saving of citizenship receipts with keeping public finances comfortable, and lists a halt in these inflows as a risk.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/10/29/cs-grenada-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Grenada: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-10-29",
+            "quote": "prudent savings of recent citizenship-by-investment (CBI) revenues"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/20/pr-26011-grenada-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Grenada (Press Release No. 26/011)",
+            "date": "2026-01-21",
+            "quote": "Disruptions to CBI and FDI inflows."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 4.3 percent in 2025, up from 2.3 percent in 2024, and reached a new high. The World Bank credits rebuilding after Hurricane Beryl, new hotel building and farming, while the number of overnight visitors fell. Citizenship receipts fell back from their recent highs, and the fiscal rule suspended after Beryl is due to return in 2027.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-grd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Grenada (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP increased by 4.9 percent in 2025, underpinned by robust performance in post-Beryl reconstruction, new hotel construction, and agriculture."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-grd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Grenada (October 2026)",
+          "date": "2026-10",
+          "quote": "Tourism remained a key driver despite an estimated 4.4 percent decline in stayover arrivals in 2025"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-grd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Grenada (October 2026)",
+          "date": "2026-10",
+          "quote": "Revenues fell sharply to 33.2 percent of GDP in 2025, as CBI inflows normalized."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-grd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Grenada (October 2026)",
+          "date": "2026-10",
+          "quote": "Hurricane Beryl, which prompted a temporary suspension of the primary balance rule to create fiscal space for reconstruction."
+        },
+        {
+          "url": "https://www.imf.org/en/News/Articles/2025/10/29/cs-grenada-staff-concluding-statement-of-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Grenada: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-10-29",
+          "quote": "Central government is committed to returning to the 1.5 percent of GDP primary balance floor from 2027."
+        }
+      ]
+    },
+    "tension": "The World Bank describes a decade of strong growth that beat most Eastern Caribbean peers, but its average leaves out 2020 and counts the whole economy. With the 14.0 percent fall of 2020 included, income per person grew 2.1 percent a year over 2016–2025, ranking 8 of 11 among structural peers. An IMF paper describes a relatively robust growth trend for the whole economy in the decades after independence, while income per person grew only 1.2 percent a year in 1990–1997."
+  }
+}

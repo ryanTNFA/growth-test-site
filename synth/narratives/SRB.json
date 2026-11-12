@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "iso3": "SRB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SRB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Serbia IMF Article IV 2025 staff concluding statement growth\"",
+        "same tier 1 domains: \"Serbia Macro Poverty Outlook World Bank 2025 growth\"",
+        "opened: imf.org PR 26/140 (May 2026), imf.org PR 25/427 (Dec 2025), imf.org SIP/2025/111 (Aug 2025), thedocs.worldbank.org MPO Serbia (Oct 2026)",
+        "critic re-opened all four cited URLs; the two PDFs were checked from their extracted text"
+      ],
+      "critic_changes": [
+        "All four cited documents re-opened; the two PDFs (IMF SIP/2025/111 and the World Bank MPO) were checked from their extracted text. Every quoted passage was found; publication dates (SIP August 2025, PR 25/427 17 Dec 2025, PR 26/140 6 May 2026, MPO October 2026) match the documents.",
+        "Every number checked against desk/data/SRB.json: 5.2, 0.6 and 4.3 (G4 eras), 2.0 (avg_prior_10y 2006–2015), -10.0 in 1999, 2.6 in 2025, and 5.3/4.4/4.5 in 2022–2024 all match the series; 2025 is the peak and the year the level was first reached.",
+        "Arc: the draft set 4.3 for 2017–2025 against 2.0 for 2006–2015, mixing two windows. It now gives the era rate for 2017–2025 and compares the 2016–2025 decade average (4.3) with 2006–2015 (2.0). 'Boom' became 'strong years', and 'street protests' became 'domestic protests' to match the IMF wording.",
+        "Thread 'Opening up after sanctions': 'stabilized prices' changed to 'steadied its economy', because the source says macroeconomic stabilization, not prices. Added a second citation from the same paper supporting the claim that reform effort stalled from the late 2000s, which the draft's quote did not cover.",
+        "Thread 'Foreign capital and investment': dropped 'public investment climbed even faster', because the cited quote does not mention public investment. The text now says both private and public investment rose, with private investment helped by foreign direct investment.",
+        "Thread 'A shrinking, emigrating population': 'The IMF expects' became 'projects that, without reforms', to match the conditional in the source.",
+        "Thread 'Protests and oil company sanctions': the IMF Dec 2025 quote was extended to the verified wording 'domestic protests and heightened energy-security risks' so it also supports 'raised energy risks'. 'Mass protests' became 'domestic protests'. The May 2026 quote was replaced with the full verified clause, and the document is described as an IMF staff agreement, not a completed review.",
+        "since_last_year: the Dec 2025 citation was changed from the 'Resolving the sanctions ... would further reduce uncertainty' sentence, which reads close to advice, to the descriptive 'Growth has slowed' sentence. The Stellantis quote was extended to the page's own wording. The Middle East quote was extended to the verified clause, and 'the war in the Middle East' became 'a wider conflict in the Middle East' to match the source.",
+        "Tension: the World Bank MPO says 'solid', not 'solid but modest', so 'modest' was removed. The per-person figures are from the series."
+      ]
+    },
+    "headline": "Serbia's income per person grew fast to 2008, nearly stalled after the global crisis, then sped up again to 4.3 percent a year from 2017.",
+    "arc": "Serbia's income per person grew 5.2 percent a year over 1996–2008, with one sharp fall of 10.0 percent in 1999; the IMF links the strong years of the 2000s to quick stabilization, opening up and privatization after a decade of sanctions. Over 2009–2016 growth fell to 0.6 percent a year, as the global financial crisis, the European debt crisis and Serbia's own large imbalances kept income per person almost flat. The IMF credits careful economic policy and broad reforms begun in 2014 for what followed: growth of 4.3 percent a year over 2017–2025, and an average of 4.3 percent over the last decade against 2.0 percent in 2006–2015, with income per person at its highest level yet in 2025. Foreign direct investment, much more public investment, more people in work and faster productivity growth all fed this era, even as the population shrank. Growth slowed to 2.6 percent in 2025 amid domestic protests and sanctions on the main oil company, and the World Bank reports a mild recovery in 2026.",
+    "threads": [
+      {
+        "title": "Opening up after sanctions",
+        "about": "history",
+        "text": "After a decade of sanctions and turmoil in the 1990s, Serbia steadied its economy, opened trade and banking, and sold state firms after 2000. The IMF calls the years before the global crisis a golden period of strong productivity gains, though it says reform effort stalled from the late 2000s.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "At that time, the country emerged from a decade of sanction and quickly restructured the economy with (i) prudent macro policies"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "However, from late 2000s, reforms effort was stagnant by limited microeconomic restructuring in the enterprise sector"
+          }
+        ]
+      },
+      {
+        "title": "Crisis and imbalances, 2008–2015",
+        "about": "history",
+        "text": "The global financial crisis hit an economy that already had large imbalances, and the European debt crisis that followed deepened the blow. Income per person barely moved between 2009 and 2016.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "growth stagnated over 2008–15 as the economic shock of the Global Financial Crisis (GFC) got exacerbated by the European debt crisis"
+          }
+        ]
+      },
+      {
+        "title": "Foreign capital and investment",
+        "about": "present",
+        "text": "From the mid-2010s both private and public investment rose, with private investment helped by large inflows of foreign direct investment. The World Bank reports that foreign direct investment stayed weak in the first half of 2026.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "private investment almost doubled in 2023 compared to its level in 2014, also helped by strong foreign direct investment (FDI) inflows"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-srb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Serbia (October 2026)",
+            "date": "2026-10",
+            "quote": "These factors offset a continued weak performance of foreign direct investment in H1 2026"
+          }
+        ]
+      },
+      {
+        "title": "A shrinking, emigrating population",
+        "about": "present",
+        "text": "Serbia's population is falling and people are leaving, yet more of those who stay have found work, so jobs still added to growth in the last decade. The IMF projects that, without reforms, labor will add less to growth in the years ahead because of the population trend.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "enabling labor to contribute 1 percentage point to growth over 2016–24, despite a shrinking population and net emigration"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2025/english/sipea2025111.pdf",
+            "publisher": "IMF",
+            "title": "Navigating Serbia's Economic Future: The Crucial Role of Productivity (Selected Issues Paper SIP/2025/111)",
+            "date": "2025-08",
+            "quote": "Absent reforms, labor is projected to contribute only 0.5 percent to growth in the medium term given unfavorable demographics."
+          }
+        ]
+      },
+      {
+        "title": "Protests and oil company sanctions",
+        "about": "present",
+        "text": "In 2025 domestic protests and sanctions on NIS, the country's main oil company, slowed growth and raised energy risks. In May 2026 IMF staff still listed delays in settling the NIS case among the risks to growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/17/pr-25427-republic-of-serbia-imf-concludes-the-2nd-rev-under-policy-coor-instrument",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes the Second Review Under the Policy Coordination Instrument for the Republic of Serbia",
+            "date": "2025-12-17",
+            "quote": "Growth has slowed amid domestic protests and heightened energy-security risks"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/pr26140-serbia-imf-staff-reaches-staff-level-agreement-on-the-3rd-review-under-the-pci",
+            "publisher": "IMF",
+            "title": "IMF Staff Reaches Staff-Level Agreement on the Third Review under the Policy Coordination Instrument with Serbia",
+            "date": "2026-05-06",
+            "quote": "a resurgence of domestic political tensions or delays in resolving NIS could further weigh on the economy."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth in income per person slowed to 2.6 percent in 2025, as domestic protests and sanctions on the oil company NIS weighed on the economy. In 2026 the World Bank reports a mild recovery as the oil refinery and the Stellantis car plant started up again and car exports grew. In May 2026 IMF staff named a wider conflict in the Middle East, and the energy market disruption it brings, as a new risk to growth.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/17/pr-25427-republic-of-serbia-imf-concludes-the-2nd-rev-under-policy-coor-instrument",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes the Second Review Under the Policy Coordination Instrument for the Republic of Serbia",
+          "date": "2025-12-17",
+          "quote": "Growth has slowed amid domestic protests and heightened energy-security risks"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-srb.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Serbia (October 2026)",
+          "date": "2026-10",
+          "quote": "there was a restart of production of the oil refinery and operations of the Stellantis (FI- AT) factory"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/06/pr26140-serbia-imf-staff-reaches-staff-level-agreement-on-the-3rd-review-under-the-pci",
+          "publisher": "IMF",
+          "title": "IMF Staff Reaches Staff-Level Agreement on the Third Review under the Policy Coordination Instrument with Serbia",
+          "date": "2026-05-06",
+          "quote": "Downside risks to growth and upside risks to inflation from further escalation of the conflict in the Middle East and associated energy market disruptions"
+        }
+      ]
+    },
+    "tension": "The World Bank describes Serbia's total output growth since 2022 as solid. Income per person grew faster than that, by 5.3, 4.4 and 4.5 percent in 2022–2024, because the population is shrinking and people are emigrating. Part of the recent rise in income per person therefore reflects fewer people, not only more output."
+  }
+}

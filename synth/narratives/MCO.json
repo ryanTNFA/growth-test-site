@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "iso3": "MCO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MCO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Monaco economy growth GDP'",
+        "same tier 1 domains: 'Principality of Monaco economic report 2024 2025'",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: 'Monaco financial sector economy IMF assessment' (only 2003-2008 IMF financial-sector reports)",
+        "cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org: 'Monaco economy tourism real estate growth'",
+        "un.org, undp.org, unece.org, unctad.org: 'Monaco economic development voluntary national review 2017 2024'"
+      ],
+      "critic_changes": [],
+      "reason": "Monaco is not an IMF or World Bank member; tier 1 and tier 2 searches found only data portals and aid or tax-review pages, with no recent source on its growth."
+    }
+  }
+}

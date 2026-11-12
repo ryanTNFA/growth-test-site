@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "PAK",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PAK",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: Pakistan IMF Article IV 2025 Extended Fund Facility review press release growth",
+        "worldbank.org: Pakistan Development Update World Bank 2025 growth",
+        "imf.org: Pakistan Stand-By Arrangement 2023 IMF press release floods crisis reserves",
+        "imf.org: Pakistan 2019 Extended Fund Facility IMF press release imbalances growth",
+        "imf.org: Pakistan 2008 Stand-By Arrangement IMF oil prices food prices balance of payments crisis",
+        "All searches used the tier 1 domain list: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org",
+        "Critic pass: opened all 7 cited URLs (worldbank.org 2025-10-28; imf.org 2008-11-24, 2019-07-03, 2023-07-12, 2024-09-27, 2025-12-08, 2026-05-08)"
+      ],
+      "critic_changes": [
+        "All 7 cited URLs opened; every page exists on a tier 1 domain and every date matches the document.",
+        "Investment thread: the quote was missing a word; corrected to the page's wording 'and an outsized role of the state'. Retitled 'Investment keeps sliding' to 'Investment stays low' and added the 2025 value (12.6 percent of GDP, from the series), because investment rose in 2025 and ending at the 2024 low of 11.5 overstated a continuing slide.",
+        "Exports thread: 'notes recent tariff cuts' changed to describe 'recent tariff reforms' as a step toward openness; the World Bank page speaks of tariff reforms, not cuts.",
+        "Boom-bust thread: 'The IMF described the run-up to 2019 the same way' replaced with what the 2019 IMF release actually says (large deficits, loose money, an overvalued currency); the release does not describe a boom-bust cycle.",
+        "Arc: 'the 2019 slowdown to earlier deficits and an overvalued currency' reworded to 'the strains of 2019 to large deficits, loose money and the defense of an overvalued currency', matching the 2019 release, which calls these legacy misaligned policies.",
+        "Crises thread: added a second citation from the 2008 IMF release ('Adverse security developments') so the claim about security problems in the arc and thread rests on a cited passage.",
+        "Floods thread and since_last_year: dropped 'during the Middle East war' as the cause of higher commodity prices; the May 2026 IMF release mentions the war and higher commodity prices in separate sentences and does not link them. The war is now mentioned only where the release mentions it, in its statement that stability held.",
+        "All numbers checked against desk/data/PAK.json: 1.6 (era mean), 2.0 and 1.4 (G1), 5.2 (2004, 2016), 4.4/0.8/-3.0 (2018-2020), -0.6 (2008), -1.9 (2023), 30.8 (CPI 2023, in series), 17.3/11.5/12.6 (investment), 2.1 (2025), peak 2025; no figure out of place."
+      ]
+    },
+    "headline": "Pakistan's income per person has grown a steady 1.6 percent a year since 1990, but in short booms broken by repeated crises.",
+    "arc": "Since 1990 Pakistan's income per person has grown at a steady but modest pace, averaging 1.6 percent a year over 1990-2025, with no lasting shift up or down. Inside that single era, growth has come in short spurts and sharp stops: fast years such as 5.2 percent in 2004 and in 2016 gave way to falls in 2008, 2010, 2020 and 2023. The IMF ties the 2008 crisis to security problems and oil and food price shocks, the strains of 2019 to large deficits, loose money and the defense of an overvalued currency, and the 2023 fall to floods, a hard world economy and policy missteps. The World Bank links the pattern to growth that leans on debt and on spending funded by money sent home from abroad, while exports have shrunk as a share of the economy. The last decade averaged 2.0 percent a year, up from 1.4 in the decade before, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Boom-bust cycles",
+        "about": "present",
+        "text": "Growth tends to speed up on borrowing and spending, then stop when the money runs short: income per person grew 4.4 percent in 2018, then 0.8 in 2019, and fell 3.0 percent in 2020. The World Bank ties these cycles to growth that depends on debt and on spending of money sent home from abroad. The IMF said the run-up to 2019 brought large deficits, loose money and an overvalued currency.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/27/pakistan-sustained-reforms-needed-for-inclusive-growth-economic-stability-and-flood-recovery",
+            "publisher": "World Bank",
+            "title": "PAKISTAN: Sustained Reforms Needed for Inclusive Growth, Economic Stability and Flood Recovery",
+            "date": "2025-10-28",
+            "quote": "leaving growth dependent on debt and remittance-driven consumption which underlies Pakistan’s recurrent boom-bust cycles"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2019/07/03/pr19264-pakistan-imf-executive-board-approves-39-month-eff-arrangement",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves US$6 billion 39-Month EFF Arrangement for Pakistan",
+            "date": "2019-07-03",
+            "quote": "large fiscal deficits, loose monetary policy, defense of an overvalued exchange rate"
+          }
+        ]
+      },
+      {
+        "title": "Crises of 2008 and 2023",
+        "about": "history",
+        "text": "After strong years in the mid-2000s, income per person fell 0.6 percent in 2008 as security problems and oil and food price shocks hit. It fell again by 1.9 percent in 2023, after the 2022 floods, as inflation reached 30.8 percent and reserves ran low.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr08303",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves US$7.6 Billion Stand-By Arrangement for Pakistan",
+            "date": "2008-11-24",
+            "quote": "Large exogenous price shocks, notably increases in oil and food import prices."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr08303",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves US$7.6 Billion Stand-By Arrangement for Pakistan",
+            "date": "2008-11-24",
+            "quote": "Adverse security developments"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2023/07/12/pr23261-pakistan-imf-exec-board-approves-us3bil-sba",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves US$3 billion Stand-By Arrangement for Pakistan",
+            "date": "2023-07-12",
+            "quote": "A difficult external environment, devastating floods, and policy missteps led to large fiscal and external deficits, rising inflation, and eroded reserve buffers in FY23."
+          }
+        ]
+      },
+      {
+        "title": "Investment stays low",
+        "about": "present",
+        "text": "Investment fell from 17.3 percent of GDP in 1990 to 11.5 in 2024 and was 12.6 in 2025. The IMF calls it very low next to similar economies and points to a hard business climate, weak governance and a large role for the state.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation for Pakistan and Approves 37-month Extended Arrangement",
+            "date": "2024-09-27",
+            "quote": "difficult business environment, weak governance, and an outsized role of the state hinder investment."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation for Pakistan and Approves 37-month Extended Arrangement",
+            "date": "2024-09-27",
+            "quote": "Investment remains very low compared to peers."
+          }
+        ]
+      },
+      {
+        "title": "Exports shrinking",
+        "about": "present",
+        "text": "Exports have fallen as a share of the economy since the 1990s. The World Bank names high tariffs, heavy rules, and costly energy and transport as the reasons, and calls recent tariff reforms a step toward openness.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/27/pakistan-sustained-reforms-needed-for-inclusive-growth-economic-stability-and-flood-recovery",
+            "publisher": "World Bank",
+            "title": "PAKISTAN: Sustained Reforms Needed for Inclusive Growth, Economic Stability and Flood Recovery",
+            "date": "2025-10-28",
+            "quote": "Pakistan’s exports have declined from 16 percent of GDP in the 1990s to around 10 percent in 2024"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/27/pakistan-sustained-reforms-needed-for-inclusive-growth-economic-stability-and-flood-recovery",
+            "publisher": "World Bank",
+            "title": "PAKISTAN: Sustained Reforms Needed for Inclusive Growth, Economic Stability and Flood Recovery",
+            "date": "2025-10-28",
+            "quote": "The chapter cites high tariffs, cumbersome regulations, and costly energy and logistics as key constraints"
+          }
+        ]
+      },
+      {
+        "title": "Floods and world prices",
+        "about": "present",
+        "text": "Weather and world prices keep shaking the economy. Floods in 2025 pushed up food prices, and in 2026 higher global commodity prices fed into energy prices.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/08/pr-25411-pakistan-imf-completes-2nd-rev-of-ext-arrange-eff-and-1st-rev-of-arrange-rsf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes Second Review of the Extended Arrangement under the Extended Fund Facility and First Review of the Arrangement under the Resilience and Sustainability Facility with Pakistan",
+            "date": "2025-12-08",
+            "quote": "Inflation has increased, reflecting the impact of the floods on food prices; this is expected to be temporary."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/08/pr-26147-pakistan-imf-completes-3rd-rev-of-extended-arrangement-under-eff-and-2nd-rev-arrang-rsf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes Third Review of the Extended Arrangement under the Extended Fund Facility and Second Review of the Arrangement under the Resilience and Sustainability Facility with Pakistan",
+            "date": "2026-05-08",
+            "quote": "Inflation has increased as higher global commodity prices have passed through to domestic energy prices."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The recovery from the 2023 slump went on: income per person grew 2.1 percent in 2025 and reached its highest level yet. The 2025 floods and, in 2026, higher world commodity prices pushed inflation up again, though the IMF reported in May 2026 that stability had held despite the Middle East war.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/08/pr-26147-pakistan-imf-completes-3rd-rev-of-extended-arrangement-under-eff-and-2nd-rev-arrang-rsf",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Completes Third Review of the Extended Arrangement under the Extended Fund Facility and Second Review of the Arrangement under the Resilience and Sustainability Facility with Pakistan",
+          "date": "2026-05-08",
+          "quote": "maintained economic stability and improved financing and external conditions despite the Middle East war"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/08/pr-25411-pakistan-imf-completes-2nd-rev-of-ext-arrange-eff-and-1st-rev-of-arrange-rsf",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Completes Second Review of the Extended Arrangement under the Extended Fund Facility and First Review of the Arrangement under the Resilience and Sustainability Facility with Pakistan",
+          "date": "2025-12-08",
+          "quote": "Inflation has increased, reflecting the impact of the floods on food prices; this is expected to be temporary."
+        }
+      ]
+    },
+    "tension": "The sources describe a boom-bust economy, yet the data find no lasting break since 1990: one era averaging 1.6 percent a year. Both hold because the booms and busts are short and cancel out. The sources also report growth of total output, which runs ahead of income per person because the population keeps growing; income per person grew only 2.1 percent in 2025."
+  }
+}

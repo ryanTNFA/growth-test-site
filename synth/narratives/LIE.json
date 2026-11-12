@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "iso3": "LIE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LIE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): \"Liechtenstein Article IV staff report IMF\"",
+        "tier 1 domains: \"Principality of Liechtenstein economy growth 2025 2026 IMF\"",
+        "Opened: IMF 2026 Article IV press release (imf.org news pr26091)",
+        "Opened: IMF 2026 Article IV staff concluding statement (imf.org news, January 2026)",
+        "Opened: IMF Country Report 26/67, 2026 Article IV staff report PDF",
+        "Opened: IMF Selected Issues Paper SIP/2026/033, Productivity Dynamics and Long-Run Growth PDF",
+        "Opened: IMF Country Report 25/76, 2025 Article IV staff report PDF",
+        "Opened: IMF 2025 Selected Issues publication page (GDP-GNI gap)",
+        "Critic: re-opened and text-searched the three cited IMF PDFs (CR 25/76, CR 26/67, SIP/2026/033)"
+      ],
+      "critic_changes": [
+        "Opened all three cited PDFs (CR 25/76, CR 26/67, SIP/2026/033) and text-searched them: every quoted passage was found; URLs and dates hold (press releases inside each report are dated March 27, 2025 and March 27, 2026; the Selected Issues Paper shows April 2026).",
+        "Fixed the 'two decades' quote to the page's full sentence start ('However, productivity growth has been limited for more than two decades, and relative productivity has declined compared with peer economies').",
+        "Arc: removed 'the IMF reports weak growth in 2024'. No cited passage supports it, and the two reports disagree: the 2025 report says growth resumed in 2024, while the 2026 report's table shows -0.3.",
+        "Removed 'a stronger franc weighed on activity' from the arc, the tariff thread and since_last_year. The 2026 report links franc appreciation to low inflation, and mentions it weighing on activity only as a risk. Tariffs weighing on activity and the car-firm job cuts are supported and kept.",
+        "Arc and finance thread: the draft said a strict trust law 'shrank the trust business' within 2000–2009. Reworded to what the source says: the law was enacted in 2008 and the sector has declined since. Dropped 'later' before the tax-information reform, which no cited passage dates.",
+        "Arc and commuters thread: replaced 'commuted in from Austria and Switzerland' with 'from across the border', and 'crowded transport now limits' with 'could limit', to match the passages ('infrastructure constraints, including in transport'; 'could be limited').",
+        "Productivity thread: retitled from 'flat' to 'slow' productivity, because the source says 'limited', not flat. Dropped 'across good years and bad' (unsupported). Added an abstract quote to support 'among the highest in Europe', and changed 'crowded transport' to 'strained infrastructure' (the source says 'infrastructure bottlenecks').",
+        "Tension: replaced 'broadly flat' with 'grown little'. Softened the claim that the measure 'can rise or fall with commuting' to the narrower point that it partly reflects commuters' work.",
+        "Checked every number in the headline, arc, threads and tension against desk/data/LIE.json: 4.3, 1.0, 0.7 (1990), 8.5 (1999), falls in 2001–2003, 7.8 (2006), -1.9 (2009) and 2015 all match. Other figures (57 percent, 25 percent, 1.5 and 2 percent) appear only inside quotes.",
+        "tier1_recent_found changed from 5 to 3: only the three cited recent IMF documents (2025 and 2026) were verified in this check. No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Liechtenstein's income per person grew 4.3 percent a year in the 1990s and 1.0 in the 2000s; the IMF sees output flat in 2025 as U.S. tariffs bite.",
+    "arc": "Liechtenstein is a tiny, very open economy that uses the Swiss franc, and its output swings more than its neighbours' when shocks hit from abroad. In 1990–1999 income per person grew 4.3 percent a year, climbing from 0.7 percent in 1990 to 8.5 percent in 1999, while the share of jobs filled by workers commuting in from across the border kept rising; the sources say little else about that boom. From 2000 to 2009 growth slowed to 1.0 percent a year, with falls in each year from 2001 to 2003, a jump of 7.8 percent in 2006 and a fall of 1.9 percent in 2009; in 2008 a strict trust law was passed, and the trust business has shrunk since. The IMF finds that productivity growth has been limited for more than two decades, and it ties weak long-run growth to an aging population, skills shortages, reliance on commuters and strained infrastructure. The data file has no growth figures after 2009; the IMF estimates growth was flat in 2025 as higher U.S. tariffs weighed on industry and a large car-technology firm cut jobs.",
+    "threads": [
+      {
+        "title": "Workers who commute in",
+        "text": "For decades firms have filled a growing share of jobs with workers who live abroad and cross the border each day. The IMF says this has supported high output per person and high wages, but transport and other infrastructure could limit further growth in commuting.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lieea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 25/76)",
+            "date": "2025-03-27",
+            "quote": "The share of commuters has steadily increased to 57 percent of employment from 25 percent in the 1980s."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2026/english/sipea2026033.pdf",
+            "publisher": "IMF",
+            "title": "Productivity Dynamics and Long-Run Growth, Principality of Liechtenstein (Selected Issues Paper SIP/2026/033)",
+            "date": "2026-04",
+            "quote": "Cross-border commuters are employed across manufacturing and services, including engineering, specialized manufacturing, and financial services, supporting high GDP per capita and a high-wage economic model."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lieea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 25/76)",
+            "date": "2025-03-27",
+            "quote": "Further growth of commuters could be limited by infrastructure constraints, including in transport."
+          }
+        ]
+      },
+      {
+        "title": "Two decades of slow productivity",
+        "text": "Output per worker is among the highest in Europe, but the IMF finds it has grown little for more than twenty years and has slipped against peers. The IMF ties weak long-run growth to an aging population, skills shortages, reliance on commuters and strained infrastructure.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2026/english/sipea2026033.pdf",
+            "publisher": "IMF",
+            "title": "Productivity Dynamics and Long-Run Growth, Principality of Liechtenstein (Selected Issues Paper SIP/2026/033)",
+            "date": "2026-04",
+            "quote": "Despite among the highest labor productivity levels in Europe, growth has been weak over an extended period, leading to declining relative performance."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2026/english/sipea2026033.pdf",
+            "publisher": "IMF",
+            "title": "Productivity Dynamics and Long-Run Growth, Principality of Liechtenstein (Selected Issues Paper SIP/2026/033)",
+            "date": "2026-04",
+            "quote": "However, productivity growth has been limited for more than two decades, and relative productivity has declined compared with peer economies"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2026/english/sipea2026033.pdf",
+            "publisher": "IMF",
+            "title": "Productivity Dynamics and Long-Run Growth, Principality of Liechtenstein (Selected Issues Paper SIP/2026/033)",
+            "date": "2026-04",
+            "quote": "Long-run growth is constrained by demographic pressures, skills shortages, reliance on cross-border commuters, and infrastructure bottlenecks, despite strong private innovation."
+          }
+        ]
+      },
+      {
+        "title": "Finance after the trust law",
+        "text": "A strict trust law passed in 2008, and the trust business has shrunk since. The country also reformed the law on trust companies and joined the automatic exchange of tax information. The sources do not say how much this changed growth in the late 2000s.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lieea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 25/76)",
+            "date": "2025-03-27",
+            "quote": "The trust sector has declined since a strict trust law was enacted in 2008 but remains important."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lieea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 25/76)",
+            "date": "2025-03-27",
+            "quote": "Key measures have included reform of the law governing the fiduciary sector, adherence to automatic exchange of information in tax matters"
+          }
+        ]
+      },
+      {
+        "title": "Tariffs and car parts",
+        "text": "Because the economy is small and very open, its output swings more than Switzerland's or Austria's when shocks hit from abroad. In 2025 higher U.S. tariffs on its goods weighed on industry, and job cuts at a large car-technology firm cooled the job market.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1lieea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 25/76)",
+            "date": "2025-03-27",
+            "quote": "Activity is more volatile than in Switzerland and Austria, as Liechtenstein is more open and susceptible to external shocks"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lieea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/67)",
+            "date": "2026-03-27",
+            "quote": "Goods exports to the United States—an important destination—are now subject to significantly higher effective tariffs, around 25 percent."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lieea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Principality of Liechtenstein: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/67)",
+            "date": "2026-03-27",
+            "quote": "Weaknesses in the European auto sector have spilled over to Liechtenstein through job cuts at a large local automotive technology firm."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "By the IMF's estimate, growth was flat in 2025 as higher U.S. tariffs weighed on industry and car-sector job cuts cooled the job market. In March 2026 the IMF also lowered its estimate of how fast the economy can grow over time, citing the lasting effect of recent shocks.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lieea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Principality of Liechtenstein: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/67)",
+          "date": "2026-03-27",
+          "quote": "Growth is estimated to have been flat 2025."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1lieea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Principality of Liechtenstein: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director (IMF Country Report No. 26/67)",
+          "date": "2026-03-27",
+          "quote": "Potential growth has been revised to 1.5 percent (previously 2 percent) due to the lasting impact of recent shocks."
+        }
+      ]
+    },
+    "tension": "Income per person divides all output by residents only, yet much of the work is done by people who commute in from abroad, so the measure partly reflects their work rather than residents' own incomes; the IMF's own measure, output per worker, has grown little for two decades. The data file's growth record also stops in 2009 and its level series has a single year, 2015, so the 2010s and 2020s that the sources describe are not in the data at all."
+  }
+}

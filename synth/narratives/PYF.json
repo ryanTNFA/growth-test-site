@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "iso3": "PYF",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PYF",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"French Polynesia economy growth\"",
+        "tier 1: \"\\\"French Polynesia\\\" tourism economy report 2024\"",
+        "tier 1 (imf.org, worldbank.org, oecd.org, adb.org): \"\\\"Polynésie française\\\" économie croissance\"",
+        "tier 1: \"\\\"French Polynesia\\\" economic outlook pearl tourism public sector\"",
+        "tier 1 (imf.org, worldbank.org, oecd.org, adb.org): \"Tahiti French Polynesia GDP recession nuclear testing end 1996 economy transfers\"",
+        "tier 1 result: only World Bank data pages and pre-2023 or regional reports; a 2023 World Bank Pacific tourism report says French Polynesia is not covered as it is not a member; OECD Tourism Trends 2026 France page returned 403",
+        "tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"French Polynesia economy\"",
+        "tier 2 (un.org): \"French Polynesia working paper Secretariat Special Committee A/AC.109/2025\"",
+        "opened: documents.un.org A/AC.109/2024/7, A/AC.109/2025/7, A/AC.109/2026/7 (UN Secretariat working papers on French Polynesia)",
+        "critic: re-opened all three documents.un.org PDFs and checked every quoted passage and issue date against the extracted text"
+      ],
+      "critic_changes": [
+        "Verified all three UN working papers (A/AC.109/2024/7 dated 10 January 2024, 2025/7 dated 7 January 2025, 2026/7 dated 5 January 2026) on un.org; every quoted passage appears on its page and all dates match. Three distinct recent tier 2 sources, tier1_recent_found 0, so tier 2 stands.",
+        "Headline: removed 'on tourism'. The sources credit tourism with the rebound after 2022, not with growth since 2014.",
+        "Arc: replaced 'the rebound that followed, with growth of 2.5 percent in 2023' with a separate statement, because the cited passage links tourism to a rebound in jobs and growth around 2022, not to the 2023 figure. Changed 'second source of export income' to 'second-largest resource', the sources' own wording ('second-largest own resource after tourism').",
+        "Tourism thread: lengthened the 2025 quote so it also supports the claim about 2019 visitor numbers, and added a 2026 citation for 'tourism is the territory's main export'.",
+        "Pandemic thread: 'With tourists gone' overstated the source, which says only that the pandemic took a heavy toll on tourism, so it now reads 'The pandemic hit tourism hard'. The 10.6 percent fall in 2020 is the deepest in the whole series (from 1966), not only since 1990, so the wording changed.",
+        "Black pearls thread: 'second source of export income' changed to match the source. Added a citation for that claim (pearls are three quarters of exports of local products in 2023). 'To a high in 2023' changed to 'a high not seen for years', since the page gives a 15-year high, a figure that may appear only inside a quote.",
+        "Small market thread: dropped 'a few', which the source does not say. Changed 'Local industry is small' to what the 2026 passage says about manufacturing: it is held back by the small market and depends on imports.",
+        "Nuclear testing thread: replaced 'the long slide in income per person began in those last years' with the factual timing (the 1986 peak fell in the last decade of testing), to avoid implying a cause the sources do not state.",
+        "Tension: removed the 11.6 percent unemployment estimate for 2025. It comes from G11, which is not among the data-file fields the story may use, and it compares a 2025 modelled estimate with a 2024 local figure, so it is not a real disagreement. Kept the tourism-record and income-level contrast; the 2000 figure of 22,499 dollars is in the series.",
+        "Checked every other number against desk/data/PYF.json and all are correct: 27,814 (1986), 20,847 (2024), 25.1 percent, 1965, -1.3 (1990-2013), 4.6 percent fall (2009), 18,928 (2014 low), 1.0 (2014-2024), -10.6 (2020), 2.5 (2023), 0.9 (2024), 22,499 (2000). No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "French Polynesia's income per person has grown again since 2014, but in 2024 it was still 25.1 percent below its 1986 peak.",
+    "arc": "Income per person in French Polynesia peaked at 27,814 dollars in 1986. By 2024 it was 20,847 dollars, still 25.1 percent below that peak and lower than in 1965, the first year of the record. From 1990 to 2013 it shrank by 1.3 percent a year on average, a slide that included a 4.6 percent fall in 2009, and the UN sources say little about its causes beyond noting that French nuclear testing ended in 1996. Since 2014, when it reached its low of 18,928 dollars, it has grown by 1.0 percent a year, though the pandemic cut it by 10.6 percent in 2020. The sources credit the return of tourists in 2022 with a rebound in jobs and growth, and growth reached 2.5 percent in 2023 before slowing to 0.9 percent in 2024. They describe a small economy that runs mostly on services, led by tourism, with black pearls its second-largest resource.",
+    "threads": [
+      {
+        "title": "Tourism carries the recovery",
+        "text": "Tourism is the territory's main export. Visitor numbers in 2023 passed both their 2019 level and an old record set in 2000, but they barely grew in 2024, the year growth in income per person slowed to 0.9 percent.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+            "date": "2026-01-05",
+            "quote": "Tourism is the leading source of goods and services exported from the Territory."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2025/7)",
+            "date": "2025-01-07",
+            "quote": "more than before COVID-19 (there were 236,600 tourists in 2019) and above its previous all-time record of 252,000 tourists in 2000"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+            "date": "2026-01-05",
+            "quote": "French Polynesia welcomed 264,000 tourists in 2024, a slight increase of 0.7 per cent compared with 2023."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic shock and rebound",
+        "text": "The pandemic hit tourism hard, and income per person fell by 10.6 percent in 2020, the deepest fall in the whole record. The UN papers say the return of tourists in 2022 drove a rebound in jobs and growth.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2024/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2024/7)",
+            "date": "2024-01-10",
+            "quote": "The pandemic took a heavy toll on tourism, but it regained its place in the Polynesian economy in 2022."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2024/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2024/7)",
+            "date": "2024-01-10",
+            "quote": "the recovery in tourist numbers has contributed significantly to a rebound in the labour market and overall growth in the territorial economy"
+          }
+        ]
+      },
+      {
+        "title": "Black pearls after the pandemic",
+        "text": "Cultured black pearls are the territory's second-largest resource after tourism and most of its exports of local goods. The sector came out of the pandemic weakened, but a sudden rise in demand then pushed pearl export prices to a high not seen for years.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2025/7)",
+            "date": "2025-01-07",
+            "quote": "pearl products (the Territory's second-largest own resource after tourism) accounted for three quarters of all revenues from the export of local products in 2023"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2024/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2024/7)",
+            "date": "2024-01-10",
+            "quote": "Nevertheless, the sector remains weakened by the impact of the pandemic."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2025/7)",
+            "date": "2025-01-07",
+            "quote": "has pushed export prices to their highest level in 15 years."
+          }
+        ]
+      },
+      {
+        "title": "Small market, heavy imports",
+        "text": "The economy runs mostly on services, and its small home market is dominated by large public and private firms, notably in energy and retail. Manufacturing is held back by that small market and depends heavily on imported raw materials and energy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2025/7)",
+            "date": "2025-01-07",
+            "quote": "Given the small size of the domestic market, the economy is dominated by large public and private companies, particularly in the energy and retail sectors."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+            "date": "2026-01-05",
+            "quote": "a small domestic market that limits economies of scale and a heavy dependence on imported raw materials and energy products"
+          }
+        ]
+      },
+      {
+        "title": "The end of nuclear testing",
+        "text": "France tested nuclear weapons in the territory from 1966 to 1996, and income per person peaked in 1986, during the last decade of testing. A French parliamentary inquiry published in 2025 looked at the economic legacy, including the state transfers meant to reshape the economy after the tests, but the sources do not measure their effect on growth.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+            "date": "2026-01-05",
+            "quote": "The aim of the report is to examine the consequences of the nuclear tests carried out in French Polynesia between 1966 and 1996"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+            "date": "2026-01-05",
+            "quote": "the effectiveness of the State's financial transfers for economic and structural reorganization at the end of the testing"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The latest UN working paper, from January 2026, shows tourist arrivals almost flat in 2024 after the 2023 record, while the local statistics office reported lower unemployment and higher employment. Growth in income per person slowed to 0.9 percent in 2024.",
+      "citations": [
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+          "date": "2026-01-05",
+          "quote": "French Polynesia welcomed 264,000 tourists in 2024, a slight increase of 0.7 per cent compared with 2023."
+        },
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/7&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "French Polynesia: Working paper prepared by the Secretariat (A/AC.109/2026/7)",
+          "date": "2026-01-05",
+          "quote": "the unemployment and employment rates in 2024 were 8.0 per cent and 58.0 per cent"
+        }
+      ]
+    },
+    "tension": "The sources say visitor numbers in 2023 and 2024 beat the old record set in 2000, yet income per person in 2024 (20,847 dollars) was still below its 2000 level (22,499 dollars), so record tourism has not brought back earlier incomes."
+  }
+}

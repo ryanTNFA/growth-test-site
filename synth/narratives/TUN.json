@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "iso3": "TUN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TUN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "worldbank.org: Tunisia economic monitor 2025 growth (tier 1 domain list)",
+        "worldbank.org, afdb.org, ebrd.com: Tunisia Macro Poverty Outlook 2025",
+        "imf.org: Tunisia Article IV consultation staff report press release",
+        "worldbank.org: Tunisia Unfinished Revolution private sector jobs prosperity",
+        "imf.org, afdb.org, oecd.org: IMF Tunisia 2024 OR 2025 OR 2026 country economic growth debt",
+        "opened: thedocs.worldbank.org MPO Tunisia October 2026; ebrd.com Transition Report 2025-26 Tunisia assessment; worldbank.org press release 2025-11-25; worldbank.org The Unfinished Revolution synthesis (May 2014); imf.org 2021 Article IV page; afdb.org outlook page returned 403",
+        "critic check: re-opened all five cited URLs (PDF text extracted locally for the MPO, EBRD and Unfinished Revolution files; press release HTML read in full) and checked every number against desk/data/TUN.json"
+      ],
+      "critic_changes": [
+        "Tension: removed the quoted '5.1 percent' figure. That number is not in the data file's growth_problem or series, and the tension field carries no citation, so it may not appear there. The point is kept in words: output growth since 2019 matched population growth.",
+        "Thread 'Debt and borrowing at home': the draft's first citation (the public debt figures) did not support the thread's claim that the government leaned on local banks and the central bank. Replaced it with two verified MPO October 2026 passages: domestic financing that 'probably crowded out credit to the private sector', and reliance on domestic sources given limited market access. Added one sentence that ties the credit fall to that passage. Credit figures 67.7 (2020) and 57.7 (2025) checked against FS.AST.PRVT.GD.ZS.",
+        "Thread 'The pandemic blow': the text said the IMF linked the pandemic to older problems with state-owned firms, but the cited passage only covers the size of the contraction. Added the verified IMF passage on 'long-standing vulnerabilities stemming from persistent fiscal and external imbalances' and reworded the sentence to match it (budget and external balance). The claim about state-owned firms was dropped from this thread.",
+        "Thread 'Open coast, closed home market': added a verified Unfinished Revolution passage ('a system based on privileges ... lacking significant political connections') to support the thread's last sentence on privileges.",
+        "Verified unchanged: every other quoted passage appears on its page. The EBRD file spells 'phospate' this way, so the quote keeps the source's spelling. Dates match: Unfinished Revolution May 2014, MPO October 2026, IMF 2021-02-26. The press release URL says 2025-11-25 and its dateline says November 26, 2025, so the date stays 2025-11.",
+        "Numbers checked against desk/data/TUN.json, all correct: eras 3.3 and 0.3, 2011 at -3.1, 2020 at -9.7 (largest fall since 1963's -11.9), 2021 at 4.1, 2024 at 1.0, 2025 at 1.9, 1.7 percent below the 2019 peak, level first reached in 2014, investment 26.0 (2010) and 15.2 (2024; the G6 summary shows 15.8 for 2024, but 15.2 is the series value). No banned phrases. Tier 1 holds with 3 distinct recent sources (MPO Oct 2026, EBRD TR 2025-26, WB press release Nov 2025)."
+      ]
+    },
+    "headline": "Tunisia grew steadily for two decades, then stalled after the 2011 revolution; income per person in 2025 was about where it first was in 2014.",
+    "arc": "From 1990 to 2010 income per person grew 3.3 percent a year, helped by an export sector along the coast that ran under lighter rules while the state kept tight control of the home market. The World Bank later wrote that this model rested on barriers to entry and favours for the well connected, and that too few good jobs for graduates and wide gaps between regions fed the January 2011 revolution. Since 2011 growth has averaged 0.3 percent a year: income per person fell 3.1 percent in 2011, rose slowly to a peak in 2019, then fell 9.7 percent in 2020 with the pandemic. The recovery has been slow, with drought and weak demand in 2023, and in 2025 income per person was 1.7 percent below its 2019 peak and about where it first was in 2014. Recent World Bank and EBRD reports point to high public debt, limited access to foreign markets, heavy borrowing at home, a large role for state-owned firms and low investment.",
+    "threads": [
+      {
+        "title": "Open coast, closed home market",
+        "about": "history",
+        "text": "From the 1970s Tunisia ran an export sector with its own lighter rules beside a home market the state kept closed. In the 1990s and 2000s that export sector drew most private money and new jobs, mostly along the coast, and the economy was widely praised. The World Bank later wrote that the praise hid barriers to entry and privileges that held most firms back.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/MNA/tunisia_report/tunisia_report_the_unfinished_revolution_eng_synthesis.pdf",
+            "publisher": "World Bank",
+            "title": "The Unfinished Revolution: Bringing Opportunity, Good Jobs and Greater Wealth to All Tunisians (Synthesis)",
+            "date": "2014-05",
+            "quote": "In fact this economic model may have reached an impasse earlier had it not been for the growth of the offshore sector."
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/MNA/tunisia_report/tunisia_report_the_unfinished_revolution_eng_synthesis.pdf",
+            "publisher": "World Bank",
+            "title": "The Unfinished Revolution: Bringing Opportunity, Good Jobs and Greater Wealth to All Tunisians (Synthesis)",
+            "date": "2014-05",
+            "quote": "Until 2010 Tunisia appeared to be doing well and was heralded as a role model for other developing countries"
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/MNA/tunisia_report/tunisia_report_the_unfinished_revolution_eng_synthesis.pdf",
+            "publisher": "World Bank",
+            "title": "The Unfinished Revolution: Bringing Opportunity, Good Jobs and Greater Wealth to All Tunisians (Synthesis)",
+            "date": "2014-05",
+            "quote": "supports a system based on privileges, which invites corruption and results in social exclusion of those lacking significant political connections."
+          }
+        ]
+      },
+      {
+        "title": "Revolution without economic change",
+        "about": "history",
+        "text": "Too few good jobs for graduates and wide gaps between regions fed the January 2011 revolution. Politics changed, but three years later the World Bank found the old economic system largely in place. Income per person fell 3.1 percent in 2011 and by 2019 was only modestly above its 2010 level.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/MNA/tunisia_report/tunisia_report_the_unfinished_revolution_eng_synthesis.pdf",
+            "publisher": "World Bank",
+            "title": "The Unfinished Revolution: Bringing Opportunity, Good Jobs and Greater Wealth to All Tunisians (Synthesis)",
+            "date": "2014-05",
+            "quote": "Inadequate creation of jobs, notably for university graduates, and deep regional disparities were a source of increasing frustration"
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/MNA/tunisia_report/tunisia_report_the_unfinished_revolution_eng_synthesis.pdf",
+            "publisher": "World Bank",
+            "title": "The Unfinished Revolution: Bringing Opportunity, Good Jobs and Greater Wealth to All Tunisians (Synthesis)",
+            "date": "2014-05",
+            "quote": "the economic system that existed under Ben Ali has not changed significantly"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tunisia, October 2026",
+            "date": "2026-10",
+            "quote": "Economic growth has slowed markedly, and is lagging behind other middle-income countries."
+          }
+        ]
+      },
+      {
+        "title": "The pandemic blow",
+        "about": "history",
+        "text": "In 2020 income per person fell 9.7 percent, its largest fall since 1963. The IMF said the pandemic made older weaknesses in the budget and in the balance with the rest of the world worse. Income per person rose 4.1 percent in 2021 but had not regained its 2019 peak by 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2021/02/26/tunisia-2020-article-iv-consultation-press-release-staff-report-and-statement-by-the-50128",
+            "publisher": "IMF",
+            "title": "Tunisia: 2021 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Tunisia",
+            "date": "2021-02-26",
+            "quote": "The crisis is expected to induce the largest contraction in real GDP since independence."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2021/02/26/tunisia-2020-article-iv-consultation-press-release-staff-report-and-statement-by-the-50128",
+            "publisher": "IMF",
+            "title": "Tunisia: 2021 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Tunisia",
+            "date": "2021-02-26",
+            "quote": "The pandemic aggravated Tunisia's long-standing vulnerabilities stemming from persistent fiscal and external imbalances"
+          }
+        ]
+      },
+      {
+        "title": "Debt and borrowing at home",
+        "about": "present",
+        "text": "Public debt has stayed high and access to foreign markets limited, so the government has leaned on local banks and the central bank to fund its deficits. The World Bank says this has probably squeezed lending to private firms: credit to private firms fell from 67.7 percent of GDP in 2020 to 57.7 in 2025.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tunisia, October 2026",
+            "date": "2026-10",
+            "quote": "the government tapped into domestic financing from commercial banks and the Central Bank, which has probably crowded out credit to the private sector"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tunisia, October 2026",
+            "date": "2026-10",
+            "quote": "Given Tunisia's limited access to international markets, the authorities are increasingly relying on domestic sources to cover their financing needs"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Southern-&-Eastern-Mediterranean/transition-report-2025-26-CA-Tunisia.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country Assessments, Tunisia",
+            "date": "2025",
+            "quote": "turning to central bank borrowing to address the budget deficit raises concerns about monetary autonomy and risks raising inflation expectations."
+          }
+        ]
+      },
+      {
+        "title": "A state-heavy economy, low investment",
+        "about": "present",
+        "text": "Investment fell from 26.0 percent of GDP in 2010 to 15.2 percent in 2024. Recent reports describe state-owned firms that dominate key sectors, a state that became the employer of last resort as private hiring stalled, and weak investment and productivity.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Southern-&-Eastern-Mediterranean/transition-report-2025-26-CA-Tunisia.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country Assessments, Tunisia",
+            "date": "2025",
+            "quote": "SOEs dominate many important sectors in Tunisia, including electricity, phospate mining and grain procurement."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tunisia, October 2026",
+            "date": "2026-10",
+            "quote": "As private job creation stagnated, the state stepped in as an employer of last resort and price stabilizer through subsidies."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/11/25/strengthening-social-safety-nets-can-reinforce-tunisia-s-economic-recovery",
+            "publisher": "World Bank",
+            "title": "Strengthening Social Safety Nets Can Reinforce Tunisia's Economic Recovery",
+            "date": "2025-11",
+            "quote": "structural constraints—including limited external financing, subdued productivity growth, and low investment—continue to weigh on the medium-term outlook."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 1.9 percent in 2025, up from 1.0 in 2024, as farm output recovered and construction and tourism picked up. In 2026 the conflict in the Middle East raised the energy import bill and widened the external gap, and repaying a maturing foreign bond in July drew reserves down sharply.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/11/25/strengthening-social-safety-nets-can-reinforce-tunisia-s-economic-recovery",
+          "publisher": "World Bank",
+          "title": "Strengthening Social Safety Nets Can Reinforce Tunisia's Economic Recovery",
+          "date": "2025-11",
+          "quote": "supported by stronger agricultural production, a revival in the construction sector, and improving tourism"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Tunisia, October 2026",
+          "date": "2026-10",
+          "quote": "External imbalances are widening due to the impacts of the conflict in the Middle East on energy prices."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-tun.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Tunisia, October 2026",
+          "date": "2026-10",
+          "quote": "Pressure on foreign reserves intensified in mid-July 2026, when reserves fell by 2.47 billion Tunisian dinars in a single day to repay a 2019 Eurobond."
+        }
+      ]
+    },
+    "tension": "The World Bank describes a recovery in which total output finally passed its pre-pandemic level in 2025, but income per person in 2025 was still 1.7 percent below its 2019 peak. The World Bank itself notes why: since 2019 output has grown by about as much as the population."
+  }
+}

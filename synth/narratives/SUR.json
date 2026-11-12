@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "SUR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SUR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Suriname Article IV 2025 IMF staff report press release",
+        "worldbank.org: Suriname Macro Poverty Outlook World Bank 2025 economic growth offshore oil",
+        "imf.org: Suriname IMF extended fund facility 2021 approves economic crisis commodity prices 2015 alumina",
+        "worldbank.org / imf.org: Suriname country economic memorandum systematic country diagnostic growth history gold oil alumina boom 2000s",
+        "Tier 1 domain list used for every search: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org",
+        "Critic pass: opened and text-extracted all four cited PDFs (imf.org cr13340.pdf; documents1.worldbank.org CPF FY25-FY29; imf.org Country Report 26/37; thedocs.worldbank.org mpo-sur.pdf)"
+      ],
+      "critic_changes": [
+        "All four cited PDFs opened and their text extracted; every quoted passage was found verbatim, and the publication dates match the documents (IMF CR 13/340, 2013; WB CPF, 2 September 2024; IMF CR 26/37, February 2026; WB MPO, October 2026).",
+        "Headline: changed '2020 debt crisis' to '2020 fiscal crisis'. The cited World Bank passage describes a fiscal and balance-of-payments crisis.",
+        "Arc and thread 3: replaced 'the only alumina refinery closed' with 'alumina production stopped'. The source says only that alumina production came to a halt.",
+        "Arc and thread 2: replaced 'high gold and oil prices' and 'rising world prices for gold and oil' with 'high commodity prices' plus political stability. The IMF passage says 'buoyant commodity prices' and does not name gold and oil.",
+        "Thread 3: the draft's claim that COVID-19 worsened the crisis had no supporting citation, so I added the CPF passage on COVID-19. I extended the 2020 crisis quote to include the 2017–2019 recovery, which supports 'short recovery'. I dropped 'hitting the goods that made up most exports' because the 25-word quote limit leaves no room for a passage that supports it.",
+        "Thread 4: dropped 'with most debt restructuring now done' and 'that ended in March 2025'. Neither is supported by the cited passages.",
+        "Thread 5: 'kept falling in 2025' became 'stayed weak in the first half of 2025', matching the IMF's 'continued to disappoint'. The smuggling and geology claim was uncited, so I added the IMF passage for it. I removed the claim that oil work is 'already lifting construction and services' because the cited MPO passage did not support it; since_last_year now covers that point with its own citation.",
+        "since_last_year: 'around the May 2025 election' became 'in 2025', matching the quote. I dropped 'while gold output kept falling', which the cited passage does not support. I added the MPO passage on construction, trade and financial services to support that sentence.",
+        "Tension: removed the claims about World Bank dollar figures peaking in 2014 and nearly halving by 2021. Those figures are not in desk/data/SUR.json and no opened source supports them. All remaining numbers (1.0, 3.3, -1.8 era means; 16.9 in 2020; 21.4 shortfall; 1977; 0.8–1.5 since 2022) were checked against growth_problem and series."
+      ]
+    },
+    "headline": "Suriname's gold-led rise ended in 2013; a commodity bust and a 2020 fiscal crisis left income per person 21.4 percent below its peak, with oil due in 2028.",
+    "arc": "Suriname's income per person shrank by 1.0 percent a year over 1990–2000, a decade the IMF links to political turmoil, policy missteps and bouts of near-hyperinflation. From 2001 to 2013 it grew 3.3 percent a year, as stronger policies and political stability met high commodity prices and gold became the main export, and it peaked in 2013. Since 2014 it has fallen 1.8 percent a year: gold and oil prices dropped from 2015, alumina production stopped, and a fiscal and balance-of-payments crisis, made worse by COVID-19, brought a fall of 16.9 percent in 2020. Modest gains since 2022 have left income per person 21.4 percent below its 2013 peak, about where it first was in 1977. Both the IMF and the World Bank now describe an economy waiting on offshore oil, due to start in 2028, while gold output has weakened.",
+    "threads": [
+      {
+        "title": "Turmoil before 2000",
+        "text": "Before 2000, growth swung widely and inflation at times came close to hyperinflation. The IMF ties this to political turmoil and policy mistakes, and income per person shrank 1.0 percent a year over 1990–2000.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13340.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2013 Article IV Consultation (IMF Country Report No. 13/340)",
+            "date": "2013",
+            "quote": "The period prior to 2000 was marred by large swings in GDP growth and episodes of near-hyperinflation, reflecting political turmoil and policy missteps."
+          }
+        ]
+      },
+      {
+        "title": "Gold drives the 2000s boom",
+        "text": "After 2000, stronger policies and political stability met high commodity prices. Gold went from a small share of exports to the dominant one, and income per person grew 3.3 percent a year from 2001 to 2013.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13340.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2013 Article IV Consultation (IMF Country Report No. 13/340)",
+            "date": "2013",
+            "quote": "Since 2000, however, stronger policies and buoyant commodity prices, supported by political stability, have improved macroeconomic performance"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13340.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2013 Article IV Consultation (IMF Country Report No. 13/340)",
+            "date": "2013",
+            "quote": "gold, which currently accounts for about 67 percent of exports compared to only 7 percent ten years ago"
+          }
+        ]
+      },
+      {
+        "title": "Commodity bust, then 2020 crisis",
+        "text": "From 2015 gold and oil prices fell and alumina production stopped; income per person fell in 2014, 2015 and 2016. A short recovery in 2017–2019 gave way to a fiscal and balance-of-payments crisis in 2020, made worse by COVID-19, when income per person fell 16.9 percent.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090924182013594/pdf/BOSIB-7fb0b98d-54b4-47eb-a5da-d723b744f554.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Suriname for the Period FY25-FY29",
+            "date": "2024-09-02",
+            "quote": "The price of gold and oil declined, and alumina production came to a halt, causing a shock to the economy"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090924182013594/pdf/BOSIB-7fb0b98d-54b4-47eb-a5da-d723b744f554.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Suriname for the Period FY25-FY29",
+            "date": "2024-09-02",
+            "quote": "Notwithstanding the positive economic developments between 2017-2019, a severe fiscal and balance of payments crisis began to unfold in Suriname in 2020"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099090924182013594/pdf/BOSIB-7fb0b98d-54b4-47eb-a5da-d723b744f554.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for Suriname for the Period FY25-FY29",
+            "date": "2024-09-02",
+            "quote": "This dire situation was compounded by the COVID-19 pandemic, and the subsequent closure of borders for approximately 18 months"
+          }
+        ]
+      },
+      {
+        "title": "Stabilization, then slippage",
+        "text": "An IMF-supported program rebuilt reserves, brought inflation down and put debt on a sustainable path. Spending ahead of the May 2025 election then undid a large part of the budget tightening.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1surea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Suriname (IMF Country Report No. 26/37)",
+            "date": "2026-02",
+            "quote": "Reserves had been rebuilt, inflation was reduced to single digits, debt was put on a sustainable path"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1surea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Suriname (IMF Country Report No. 26/37)",
+            "date": "2026-02",
+            "quote": "Expenditure rose significantly prior to the May election, unwinding a significant portion of fiscal adjustment that was undertaken as part of the Fund-supported program"
+          }
+        ]
+      },
+      {
+        "title": "Gold fades, oil approaches",
+        "text": "Gold output fell in 2024 and stayed weak in the first half of 2025, with more reported smuggling by small miners and harder geology at large mines. Oil production from the offshore field is expected to begin in 2028.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1surea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Suriname (IMF Country Report No. 26/37)",
+            "date": "2026-02",
+            "quote": "Gold production declined by 8 percent in 2024 and continued to disappoint in the first half of 2025."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1surea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Suriname: 2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Suriname (IMF Country Report No. 26/37)",
+            "date": "2026-02",
+            "quote": "Gold smuggling by small miners has reportedly increased, and large mining companies are facing a less favorable geology."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-sur.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Suriname (October 2026)",
+            "date": "2026-10",
+            "quote": "Growth is projected to improve in 2026–27 and rise substantially in 2028 as oil production begins."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Loose budget and money policy in 2025 weakened the currency and pushed inflation back into double digits. By early 2026 activity had picked up sharply as work on the offshore oil field spread into construction, trade and financial services.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1surea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Suriname: 2025 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Suriname (IMF Country Report No. 26/37)",
+          "date": "2026-02",
+          "quote": "fiscal and monetary slippages in 2025 reduced cash buffers, weakened the currency, and increased inflation back to double digits"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-sur.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Suriname (October 2026)",
+          "date": "2026-10",
+          "quote": "The monthly economic activity index increased by 11.9 percent year-on-year in January–April 2026, compared with 0.2 percent over the same period in 2025."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-sur.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Suriname (October 2026)",
+          "date": "2026-10",
+          "quote": "Construction, trade, and financial services expanded strongly, supported by demand related to oil-project preparations."
+        }
+      ]
+    },
+    "tension": "The sources describe strong activity in early 2026 and a coming oil boom, but through 2025 the data show income per person still 21.4 percent below its 2013 peak, growing only 0.8 to 1.5 percent a year since 2022."
+  }
+}

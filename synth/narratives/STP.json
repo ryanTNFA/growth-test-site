@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "STP",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "STP",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Sao Tome and Principe Article IV 2025 IMF staff report growth",
+        "tier 1 domains: Sao Tome and Principe Macro Poverty Outlook economic update",
+        "tier 1 domains: São Tomé and Príncipe HIPC completion point 2007 oil expectations growth cocoa decline history",
+        "tier 1 domains: São Tomé and Príncipe growth slowdown after 2008 foreign direct investment declined oil exploration systematic country diagnostic",
+        "imf.org: IMF São Tomé and Príncipe 2026 review Extended Credit Facility press release",
+        "critic: opened all six cited URLs (four PDFs read from extracted text, two HTML pages)"
+      ],
+      "critic_changes": [
+        "All six cited URLs were opened. All quoted passages were found on the pages. Dates were confirmed: HIPC paper 26 February 2007; program document 26 April 2013; Economic Update web page 14 August 2025; MPO dated October 2026; IMF press release 22 June 2026.",
+        "tier1_recent_found corrected from 5 to 4. The distinct recent tier 1 sources cited are the Economic Update PDF, its web page (both August 2025), the October 2026 MPO and the June 2026 IMF press release. The PDF and the web page are arguably one document, so the count could be 3. Either way it clears the minimum of 2.",
+        "Thread 1 and arc: removed the claim that debt relief completed in 2007 brought in investment, aid and banking. The cited 2007 paper only proposes the completion point, and no passage ties debt relief to the 2001-2008 boom. The thread was renamed 'Reforms, oil hopes and aid'. A second quote from the same paper was added to support the price-control, trade and privatization reforms (2000-03) and aid-funded public investment. The arc now names aid instead of debt relief, and 'banking and services' instead of 'bank lending'. The source speaks of the banking sector, not lending.",
+        "Thread 1: 'offshore oil' became 'oil'. The cited passage speaks only of potential oil resources.",
+        "Thread 2: the 2013 quote was extended to the source's own words on oil-signature bonuses not fully materializing. This supports the 'signing bonuses fell short' claim, which the original quote did not cover.",
+        "Thread 3: added that investment edged up to 8.7 percent of GDP in 2025 (series NE.GDI.FTOT.ZS), so the 2023 low does not read as the latest value. 25.5 (2010) and 6.1 (2023) were confirmed against the series.",
+        "Thread 4: added a quote that supports the claim about costly diesel plants. The wording 'set off an energy crisis' in 2023 was changed to 'brought fuel shortages and severe power cuts'. The source lists energy crises in 2018 and 2021 as well, so 2023 did not set off the crisis.",
+        "Thread 5: added the MPO passage on emigration reducing the labor force base. It supports the 'shrinking pool of workers' sentence, which the existing quotes did not cover.",
+        "since_last_year: 'The IMF and the World Bank both cut their growth estimates' became 'The IMF cut its growth estimates'. Only the IMF passage states a downward revision. The MPO Middle East quote was extended to its full clause.",
+        "Numbers checked against desk/data/STP.json: eras -0.5, 3.0 and 0.7; last decade 0.5 and prior decade 1.8; 6.2 in 2006; 6.5 percent below the 1979 peak; declines every year 2021-2025, with -1.0 in 2025. All match. No banned phrases or recommendation language found. Headline is 151 characters."
+      ]
+    },
+    "headline": "Income per person in São Tomé and Príncipe is about where it was in 1979: a boom on oil hopes and aid faded after 2008, and power cuts now weigh on it.",
+    "arc": "Income per person in São Tomé and Príncipe fell by 0.5 percent a year from 1990 to 2000, a decade the sources say little about. From 2001 to 2008 it grew 3.0 percent a year, peaking at 6.2 percent in 2006, as market reforms, foreign aid and hopes of oil drew in private investment and lifted banking and services. From 2009 to 2025 growth slowed to 0.7 percent a year, after foreign investment, tourism earnings and aid fell with the global financial crisis and the expected oil bonuses did not fully arrive. The last decade averaged 0.5 percent a year, down from 1.8 in the decade before, and income per person has fallen every year since 2021 amid power cuts and costly fuel. It is now 6.5 percent below its 1979 peak.",
+    "threads": [
+      {
+        "title": "Reforms, oil hopes and aid",
+        "text": "From 2000 to 2003 the country lifted price controls, opened trade and sold state firms. The prospect of oil then lifted private investment, banking and services, while foreign aid paid for public investment. Income per person grew 3.0 percent a year from 2001 to 2008.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/503071468759875031/pdf/Sao-Tome-and-Principe-Debt-Relief-at-the-Heavily-Indebted-Poor-Countries-HIPC-Initiative-Completion-and-Under-the-Multilateral-Debt-Relief-Initiative-MDRI.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of São Tomé and Príncipe: Debt Relief at the Heavily Indebted Poor Countries (HIPC) Initiative Completion Point and Under the Multilateral Debt Relief Initiative (MDRI)",
+            "date": "2007-02-26",
+            "quote": "lifting of domestic price controls, liberalization of external trade and the exchange rate system, and privatization of state enterprises in 2000-03 improved the business climate"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/503071468759875031/pdf/Sao-Tome-and-Principe-Debt-Relief-at-the-Heavily-Indebted-Poor-Countries-HIPC-Initiative-Completion-and-Under-the-Multilateral-Debt-Relief-Initiative-MDRI.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of São Tomé and Príncipe: Debt Relief at the Heavily Indebted Poor Countries (HIPC) Initiative Completion Point and Under the Multilateral Debt Relief Initiative (MDRI)",
+            "date": "2007-02-26",
+            "quote": "the prospects of potential oil resources have boosted private investment and the banking and services sector. Foreign aid supported public investment based on the PRSP."
+          }
+        ]
+      },
+      {
+        "title": "Outside money dries up",
+        "text": "After 2008, foreign investment, tourism earnings and aid all fell at once, and oil signing bonuses fell short of hopes. The sources date the long slowdown to the global financial crisis. Income per person grew only 0.7 percent a year from 2009 to 2025.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/138301468304183810/pdf/732470PGD0P1300isclosed0501001300SD.pdf",
+            "publisher": "World Bank",
+            "title": "Program Document for a Proposed Grant to the Democratic Republic of São Tomé and Príncipe for a Second Governance and Competitiveness Development Policy Operation",
+            "date": "2013-04-26",
+            "quote": "in the face of sharp and simultaneous declines in FDI, tourism receipts and foreign assistance, the impact of which was compounded by the fact …"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099080625083098089/pdf/P508059-54b2a5ca-76bb-497e-b765-46d816bb8cd9.pdf",
+            "publisher": "World Bank",
+            "title": "Sao Tome and Principe Economic Update, 1st Edition: Reforming State-Owned Enterprises for Higher Private Sector-Led Growth and Job Creation",
+            "date": "2025-08",
+            "quote": "the global financial crisis caused growth to drop to an average of 3.5 percent from 2009 to 2018"
+          }
+        ]
+      },
+      {
+        "title": "An aid-financed model fades",
+        "text": "Growth has long leaned on public investment paid for from abroad, and that aid has been shrinking. Investment fell from 25.5 percent of GDP in 2010 to 6.1 in 2023, before edging up to 8.7 in 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099080625083098089/pdf/P508059-54b2a5ca-76bb-497e-b765-46d816bb8cd9.pdf",
+            "publisher": "World Bank",
+            "title": "Sao Tome and Principe Economic Update, 1st Edition: Reforming State-Owned Enterprises for Higher Private Sector-Led Growth and Job Creation",
+            "date": "2025-08",
+            "quote": "São Tomé and Príncipe’s growth model, driven by externally financed public investment, is challenged by the decline in official development assistance inflows"
+          }
+        ]
+      },
+      {
+        "title": "Power cuts and fuel costs",
+        "text": "The state power company runs costly diesel plants and owes large sums to the fuel supplier. In 2023 a fuel import crunch brought fuel shortages and severe power cuts. The crisis deepened in 2025, with outages hitting farms and services.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099080625083098089/pdf/P508059-54b2a5ca-76bb-497e-b765-46d816bb8cd9.pdf",
+            "publisher": "World Bank",
+            "title": "Sao Tome and Principe Economic Update, 1st Edition: Reforming State-Owned Enterprises for Higher Private Sector-Led Growth and Job Creation",
+            "date": "2025-08",
+            "quote": "EMAE, the electricity and water SOE, operates inefficient and costly diesel-powered electricity plants."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099080625083098089/pdf/P508059-54b2a5ca-76bb-497e-b765-46d816bb8cd9.pdf",
+            "publisher": "World Bank",
+            "title": "Sao Tome and Principe Economic Update, 1st Edition: Reforming State-Owned Enterprises for Higher Private Sector-Led Growth and Job Creation",
+            "date": "2025-08",
+            "quote": "In 2023, the end of a preferential agreement to import diesel on credit led to a sudden increase in the value of fuel imports"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-stp.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: São Tomé and Príncipe",
+            "date": "2026-10",
+            "quote": "The energy crisis deepened in 2025 as EMAE’s aging diesel generators, weak collections, and arrears constrained fuel procurement and power generation."
+          }
+        ]
+      },
+      {
+        "title": "Young people leaving",
+        "text": "Too few jobs are being created for a young population, and many young people look for work abroad. The World Bank links this emigration to a shrinking pool of workers.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/saotome/publication/stp-economic-update-august-2025",
+            "publisher": "World Bank",
+            "title": "São Tomé and Príncipe Economic Update: Reforming State-Owned Enterprises for Increased Private Sector-Led Growth and Job Creation",
+            "date": "2025-08-14",
+            "quote": "affecting the already small and weak labor market, thus pushing many young people to search for opportunities abroad"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-stp.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: São Tomé and Príncipe",
+            "date": "2026-10",
+            "quote": "The country's young and growing population is outpacing job creation, leading to increased youth emigration."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-stp.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: São Tomé and Príncipe",
+            "date": "2026-10",
+            "quote": "approximately 6 percent of the population left between 2019 and 2024, reducing the available labor force base"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the power crisis deepened, and in early 2026 the war in the Middle East pushed up the cost of imported fuel. The IMF cut its growth estimates for 2025 and 2026. Income per person fell 1.0 percent in 2025, the fifth straight year of decline.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26217-sao-tome-and-principe-imf-reaches-staff-level-agreement-on-the-third-review-ecf-arrangement",
+          "publisher": "IMF",
+          "title": "IMF Reaches Staff-Level Agreement with São Tomé and Príncipe on the Third Review under the Extended Credit Facility Arrangement",
+          "date": "2026-06-22",
+          "quote": "Growth has been revised down to 1 percent in 2025 and 0.4 percent in 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-stp.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: São Tomé and Príncipe",
+          "date": "2026-10",
+          "quote": "Conditions worsened in early 2026 as the Middle East conflict raised global energy prices, increasing imported fuel."
+        }
+      ]
+    },
+    "tension": "The sources describe output that kept growing at a fair pace for much of the period, even after the 2008 slowdown. Income per person grew far less: 3.0 percent a year in 2001 to 2008 and 0.7 in 2009 to 2025, partly because the population kept growing. The gap shows again in 2025, when the sources report small output growth but income per person fell 1.0 percent."
+  }
+}

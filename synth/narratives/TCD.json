@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "TCD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TCD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Chad Article IV 2025 IMF staff report economy oil",
+        "same tier 1 list: Chad Macro Poverty Outlook World Bank 2025 growth",
+        "imf.org, worldbank.org, afdb.org, oecd.org: Chad 2026 IMF second review Extended Credit Facility oil growth",
+        "imf.org, worldbank.org, afdb.org, oecd.org: Chad economic update oil price shock 2014 2016 recession Glencore debt restructuring",
+        "imf.org, worldbank.org, afdb.org, oecd.org: Chad oil production began 2003 Chad-Cameroon pipeline growth boom",
+        "worldbank.org, imf.org, afdb.org: Chad 2026 economy World Bank Macro Poverty Outlook oil production new fields growth per capita",
+        "critic: opened and text-extracted all five cited documents (World Bank Petroleum Sector Diagnostic 2019, World Bank Chad 2021 Economic Update, IMF Country Report 25/236, World Bank MPO Chad October 2026, IMF press release 25/437)"
+      ],
+      "critic_changes": [
+        "Opened and text-extracted every cited document. All quoted passages appear verbatim and all dates match: Petroleum Sector Diagnostic is dated February 2019 on its cover; the 2021 Economic Update shows only the year 2021; IMF Country Report 25/236 is dated August 2025; the MPO is the October 2026 edition; the press release is dated 19 December 2025 and its title matches the page headline. All are on worldbank.org or imf.org (tier 1). There are 3 distinct recent tier 1 sources.",
+        "Every number checked against desk/data/TCD.json: -1.5, 7.5, -0.2, 27.8 (2004), 14.1 below the 2012 peak, level first reached in 2005, -1.2 over 2016-2025, -7.1 (2016), -4.8 (2017), -0.1 (2024) and 2.0 (2025) all match growth_problem or series. No changes were needed.",
+        "Refugees thread: 'they kept arriving through 2025' was changed to 'more arrived in 2025'. The IMF report, written in mid-2025, supports arrivals only since the start of that year. Added an IMF citation that supports this (280,000 additional refugees since the start of the year).",
+        "Oil and mining thread: the claim about gold and copper mining had no supporting quote, so a World Bank MPO citation was added on gold output rising and copper production starting.",
+        "Political transition thread: the claim that the programme went off track in 2023 had no supporting quote, so the IMF passage saying so was added. 'The transition years brought higher spending' was changed to 'the strains of those years', because the IMF ties the spending increase to the political process and multiple shocks together.",
+        "since_last_year: the draft credited the World Bank with explaining 2025 growth by mining, but the cited passage is about Q1 2026. It was reworded to say the World Bank attributes growth in early 2026 to non-oil activity, especially mining.",
+        "Tension: 'The gap reflects rapid population growth' was softened to 'accounts for much of the gap'. The World Bank mentions rapid population growth in connection with poverty counts and does not offer it as a full explanation.",
+        "Checked for banned phrases and recommendation or verdict language and found none. The 2020 recession in the arc is supported by the 2021 Economic Update ('entered recession in 2020')."
+      ]
+    },
+    "headline": "Oil lifted Chad's income per person in the 2000s; since the 2012 peak, oil shocks, ageing fields and regional crises have left it 14.1 percent lower.",
+    "arc": "Income per person in Chad shrank by 1.5 percent a year from 1990 to 2000, an era the sources we read say little about. From 2001 to 2008 it grew 7.5 percent a year, as oil production began in 2003 and peaked the next year; income per person jumped 27.8 percent in 2004 alone. Since 2009 growth has averaged -0.2 percent a year: income per person peaked in 2012, the 2014-15 oil price crash brought recession in 2016 and 2017, and another recession followed in 2020. By 2025 income per person was 14.1 percent below the 2012 peak, about where it first was in 2005, and over 2016 to 2025 it fell 1.2 percent a year on average. Recent sources add ageing oil fields, a large inflow of refugees from Sudan's war and a long political transition to the story.",
+    "threads": [
+      {
+        "title": "Oil arrives, then peaks early",
+        "text": "Oil production began in 2003 and output from the first fields peaked the following year, which matches the burst of growth in 2004 and 2005. The World Bank describes growth over three decades as dominated by oil, and production from the original fields declined soon after the peak.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/789141591073206166/pdf/Chad-Petroleum-Sector-Diagnostic-Report.pdf",
+            "publisher": "World Bank",
+            "title": "Chad Petroleum Sector Diagnostic Report",
+            "date": "2019-02",
+            "quote": "Production from these three fields reached a peak level in excess of 200,000 Bopd in 2004. However, the peak was short-lived"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/789141591073206166/pdf/Chad-Petroleum-Sector-Diagnostic-Report.pdf",
+            "publisher": "World Bank",
+            "title": "Chad Petroleum Sector Diagnostic Report",
+            "date": "2019-02",
+            "quote": "Over the past three decades, growth and economic performance have been largely dominated by oil and security."
+          }
+        ]
+      },
+      {
+        "title": "The 2014 oil price crash",
+        "text": "When oil prices fell in 2014 and 2015, Chad slid into recession, and income per person fell 7.1 percent in 2016 and 4.8 percent in 2017. The IMF says earlier gains in health, education and poverty reduction have stalled since that shock.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/898361634761728026/pdf/Chad-2021-Economic-Update-Recovering-from-Shocks-Improving-Macro-Fiscal-Sustainability-to-Rebuild-Better.pdf",
+            "publisher": "World Bank",
+            "title": "Chad 2021 Economic Update: Recovering from Shocks: Improving Macro-Fiscal Sustainability to Rebuild Better",
+            "date": "2021",
+            "quote": "The oil price shock in 2014/15 led to a recession between 2016 and 2017"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "Progresses made in early 2000s in health, education, and poverty reduction have stalled since the oil price shock in 2014-15"
+          }
+        ]
+      },
+      {
+        "title": "Refugees from Sudan's war",
+        "text": "War in Sudan has pushed a very large number of refugees into eastern Chad, and more arrived in 2025. The sources link the influx to higher food prices and to strain on public services.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tcd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chad",
+            "date": "2026-10",
+            "quote": "Chad also hosts over 1.5 million refugees, 219,000 internally displaced persons (IDPs), and nearly 94,000 returnees, further straining public services."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "an additional 280,000 refugees have crossed the border since the beginning of the year"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "in part due to global factors, to floods around the lake Chad region, and to the influx of Sudanese refugees in the Eastern provinces"
+          }
+        ]
+      },
+      {
+        "title": "Ageing oil fields, new mines",
+        "text": "Output from Chad's maturing oil fields has been falling, and technical problems followed the nationalisation of an operator's assets in 2023. Oil still supplies much of the state's revenue and exports, while gold and copper mining has become a newer source of activity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "driven by technical issues following the nationalization of an operator's assets in 2023 and gradually declining output from maturing oil fields."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tcd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chad",
+            "date": "2026-10",
+            "quote": "In 2025, oil accounted for 15.1 percent of GDP, 43.8 percent of fiscal revenues, and 54.0 percent of exports."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tcd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chad",
+            "date": "2026-10",
+            "quote": "particularly mining, with gold output rising 132 percent y/y and copper production commencing."
+          }
+        ]
+      },
+      {
+        "title": "A long political transition",
+        "text": "A political transition that began in 2021 ended with senate elections in February 2025. The IMF says the strains of those years brought higher spending and larger budget deficits, and an IMF-supported programme went off track in 2023 before a new arrangement in 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "Recent senatorial elections in February 2025 marked the end of the four-year long political transition."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "During the transition period in 2023, the 2021 ECF-supported program went off-track"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tcdea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Chad: Request for a Four-Year Arrangement Under the Extended Credit Facility (IMF Country Report No. 25/236)",
+            "date": "2025-08",
+            "quote": "These factors necessitated an increase in spending, leading to larger fiscal deficits."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up. Income per person rose 2.0 percent in 2025 after falling 0.1 percent in 2024. The IMF reported in December 2025 that non-oil revenue came in above projections, and the World Bank says growth in early 2026 came from non-oil activity, especially mining, as gold output rose and copper production began.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tcd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Chad",
+          "date": "2026-10",
+          "quote": "Real GDP grew 3.4 percent year-on-year in Q1 2026, driven by non-oil sectors (+4.1 percent), particularly mining"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/19/prr-25437-chad-imf-staff-reaches-agreement-with-chadian-authorities-on-the-1st-rev-under-ecf",
+          "publisher": "IMF",
+          "title": "IMF Staff Reaches Staff-Level Agreement with the Chadian Authorities on the First Review under the Extended Credit Facility (ECF)",
+          "date": "2025-12-19",
+          "quote": "Non-oil revenues exceeded projections, supported by stronger economic activity and ECF-related tax measures."
+        }
+      ]
+    },
+    "tension": "The sources describe solid growth in total output in 2024 and 2025, yet income per person fell 0.1 percent in 2024 and rose only 2.0 percent in 2025. Rapid population growth, which the World Bank also notes, accounts for much of the gap, so strong headline growth has done little to lift income per person back toward its 2012 peak."
+  }
+}

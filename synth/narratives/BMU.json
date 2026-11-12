@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "BMU",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BMU",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Bermuda economy growth",
+        "tier 1: Bermuda reinsurance international business GDP 2024",
+        "tier 1: Bermuda corporate income tax 2023 global minimum tax",
+        "tier 1: Bermuda Caribbean economic outlook tourism recovery 2024",
+        "tier 1: Bermuda recession international business jobs decline construction 2010 2012",
+        "imf.org: Bermuda IMF offshore financial center assessment insurance",
+        "tier 1: Bermuda COVID-19 economy contraction tourism 2020",
+        "imf.org, oecd.org, worldbank.org: Bermuda offshore life reinsurance growth 2024 Global Financial Stability Report",
+        "oecd.org, imf.org, worldbank.org: Bermuda Corporate Income Tax Act 2023 15 percent multinational",
+        "imf.org, worldbank.org, oecd.org, iadb.org, caribank.org: Bermuda economy 2025 GDP outlook",
+        "imf.org: Deciphering the GloBE in a Low-Tax Jurisdiction (landing page opened, no Bermuda text; PDF and elibrary refused access)",
+        "oecd.org: Corporate Tax Statistics 2025 (opened, no narrative on Bermuda)",
+        "imf.org, oecd.org, worldbank.org: Bermuda reinsurers 2025 private credit life insurers offshore",
+        "Pages opened and cited: imf.org cr0598 (2005), imf.org cr08336 (2008), imf.org GFS Note 2023/001, imf.org GFSR April 2024 ch2, oecd.org Bermuda Dispute Resolution Profile (2024)",
+        "Critic pass: all five cited PDFs re-opened with WebFetch and their text extracted to check quotes and dates",
+        "Tier 2 not searched: tier 1 gave 3 recent sources"
+      ],
+      "critic_changes": [
+        "All five cited pages were opened (as PDFs, with the text extracted). Every quoted passage, URL, publisher and date matched the documents: IMF CR 05/98 (March 2005), IMF CR 08/336 (October 2008), IMF GFS Note 2023/001 (December 2023), IMF GFSR April 2024 ch. 2, and the OECD profile (last updated 5 July 2024). The 2008 report was completed on 8 September 2008 but dated October 2008, so 2008-10 is kept.",
+        "Arc: replaced 'IMF assessments link this [1998-2007 growth] to waves of insurance capital'. The 2005 report ties the post-2001 hard market only to growth in the Bermudian insurance market, not the whole economy. The arc now says the IMF describes the two waves of capital and ties the 2006 jump in growth to the second.",
+        "Thread 'Capital that follows disasters': the text said the IMF ties 'the island's growth in the early 2000s' to the post-2001 market. That claim was narrowed to what the 2005 and 2008 reports support. Added a 2008 IMF passage that names both waves of capital directly.",
+        "Thread 'One center carries the economy': dropped 'with tourism second', which no cited passage supports. Dropped the inference that income per person rose with insurance capital. The text now stays with what the passages say about output and jobs. The 2005 quote was lengthened to keep the page's 'with the exception of 2001' (24 words), so the jobs claim is not overstated.",
+        "Thread 'Private equity's life reinsurers': 'Large private equity firms have set up life reinsurers' was corrected to the GFSR's wording (life insurers influenced by private equity set up reinsurers). Added a GFS Note passage that supports the claim that the valuation rules gave insurers an incentive to move business to Bermuda.",
+        "Thread 'Tighter oversight': made the vague 'consulted on changes to how firms may value their liabilities' match the GFS Note. The note says the BMA consulted on requiring prior approval of the scenario-based valuation approach. Added that passage as a citation.",
+        "Thread 'A base with no income tax': removed 'only', which read more into the OECD passage than it says. Removed 'the' before 'taxable periods' in the OECD quote to match the page.",
+        "Tension: 'investment was low at 11.7 percent of GDP' now says 'low for an economy at its income', which matches the data file's comparison. 'No matching recovery' became 'no full recovery', since income per person did grow in 2021 to 2024. Note that 11.7 is the value printed in growth_problem, while series NE.GDI.FTOT.ZS shows 11.0 for 2024. The printed growth_problem figure is kept.",
+        "Numbers checked against desk/data/BMU.json: 0.8, 3.4, -2.9, 1.3, -7.4 (2020), 4.3, 6.1, 4.4 (2021-23), the 2007 peak, the 12.1 percent shortfall in 2024, the level first reached in 2001, and 11.7. All match. Other figures ($1 trillion, 4 percent, over half, almost 30 percent) appear only inside quoted passages.",
+        "No banned phrases and no recommendation or verdict language were found. tier1_recent_found stays at 3 (IMF Dec 2023, IMF Apr 2024, OECD Jul 2024), so the story remains tier 1."
+      ]
+    },
+    "headline": "Bermuda's income per person rose with waves of insurance capital to a 2007 peak, fell until 2015, and in 2024 was still 12.1 percent below that peak.",
+    "arc": "From 1990 to 1997 income per person in Bermuda grew slowly, at 0.8 percent a year. From 1998 to 2007 growth picked up to 3.4 percent a year, and income per person peaked in 2007. IMF assessments describe waves of new insurance capital that came to the island after the September 2001 attacks and the 2005 hurricanes, and tie the jump in growth in 2006 to the second wave. From 2008 to 2015 income per person fell by 2.9 percent a year on average, and the sources we found do not explain this slump in detail. Since 2016 growth has averaged 1.3 percent a year: a fall of 7.4 percent in 2020, then gains of 4.3, 6.1 and 4.4 percent in 2021 to 2023. Even so, income per person in 2024 was still 12.1 percent below its 2007 peak, about where it first was in 2001.",
+    "threads": [
+      {
+        "title": "Capital that follows disasters",
+        "about": "history",
+        "text": "Big insured losses cut the supply of cover and push up insurance prices, and new capital then flows to Bermuda to write that business. The IMF describes such waves after September 2001 and after the 2005 hurricanes, and ties Bermuda's faster growth in 2006 to the capital that arrived after those hurricanes.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/External/Pubs/FT/SCR/2005/cr0598.PDF",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of the Supervision and Regulation of the Financial Sector—Volume I—Review of Financial Sector Regulation and Supervision",
+            "date": "2005-03",
+            "quote": "The cyclical trend towards hardening in the insurance market sharpened following September 11."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08336.pdf",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of Financial Sector Supervision and Regulation",
+            "date": "2008-10",
+            "quote": "Major new influxes of capital followed September 11, 2001—whose insured losses resulted in lower capacity—and the 2005 hurricanes Katrina, Rita, and Wilma."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08336.pdf",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of Financial Sector Supervision and Regulation",
+            "date": "2008-10",
+            "quote": "This growth reflected the inflow of catastrophe reinsurance capital following the 2005 hurricane season."
+          }
+        ]
+      },
+      {
+        "title": "One center carries the economy",
+        "about": "history",
+        "text": "By the mid-2000s the international financial center was the largest part of Bermuda's output and a large share of its jobs. The IMF credits the offshore center with adding jobs every year from 1997 except 2001.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08336.pdf",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of Financial Sector Supervision and Regulation",
+            "date": "2008-10",
+            "quote": "The center contributed over half of real GDP, and almost 30 percent of employment in 2006."
+          },
+          {
+            "url": "https://www.imf.org/External/Pubs/FT/SCR/2005/cr0598.PDF",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of the Supervision and Regulation of the Financial Sector—Volume I—Review of Financial Sector Regulation and Supervision",
+            "date": "2005-03",
+            "quote": "The buoyancy created by the offshore center is also responsible for an increase in the number of jobs every year since 1997, with the …"
+          }
+        ]
+      },
+      {
+        "title": "Private equity's life reinsurers",
+        "about": "present",
+        "text": "Life insurers tied to private equity firms have set up reinsurers in Bermuda, and long-term reinsurance assets on the island grew fast in the years to 2021. The IMF says Bermuda's more generous way of valuing these firms' liabilities has given life insurers a reason to send business there.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/gfs-notes/2023/english/gfsnea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Private Equity and Life Insurers",
+            "date": "2023-12",
+            "quote": "Bermuda long-term reinsurance assets, a proxy for life reinsurance, grew to more than $1 trillion, about 4 percent of total life insurance assets globally"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/gfsr/2024/april/english/ch2.pdf",
+            "publisher": "IMF",
+            "title": "Global Financial Stability Report, April 2024, Chapter 2: The Rise and Risks of Private Credit",
+            "date": "2024-04",
+            "quote": "A significant regulatory difference between Bermuda and the life insurers’ home jurisdictions lies in the discount rates applied when valuing reinsurance liabilities."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/gfs-notes/2023/english/gfsnea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Private Equity and Life Insurers",
+            "date": "2023-12",
+            "quote": "This has created incentives for life insurers to reinsure their portfolios to Bermuda-based insurers"
+          }
+        ]
+      },
+      {
+        "title": "Tighter oversight of reinsurance deals",
+        "about": "present",
+        "text": "Since January 2023 Bermuda's financial regulator has had to approve life reinsurance deals before they go ahead. It has also consulted on requiring its approval before reinsurers start using its more generous method for valuing liabilities.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/gfs-notes/2023/english/gfsnea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Private Equity and Life Insurers",
+            "date": "2023-12",
+            "quote": "since January 2023, the Bermuda Monetary Authority (BMA) requires approval of life reinsurance transactions before execution"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/gfs-notes/2023/english/gfsnea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Private Equity and Life Insurers",
+            "date": "2023-12",
+            "quote": "The BMA consults on changes that would require prior supervisory approval of the use of the SBA only for new reinsurers"
+          }
+        ]
+      },
+      {
+        "title": "A base with no income tax",
+        "about": "present",
+        "text": "Many insurers first came to Bermuda partly because firms could set up quickly and paid no income tax. An OECD tax profile updated in July 2024 says Bermuda has no corporate income tax for tax periods up to and including 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08336.pdf",
+            "publisher": "IMF",
+            "title": "Bermuda: Assessment of Financial Sector Supervision and Regulation",
+            "date": "2008-10",
+            "quote": "chose to incorporate in Bermuda because of the timeliness with which incorporation was possible and the absence of income tax"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/dispute-resolution/bermuda-dispute-resolution-profile.pdf",
+            "publisher": "OECD",
+            "title": "Bermuda Dispute Resolution Profile",
+            "date": "2024-07-05",
+            "quote": "Bermuda does not have corporate income tax taxable periods in or before 2024"
+          }
+        ]
+      }
+    ],
+    "since_last_year": null,
+    "tension": "The IMF sources describe Bermuda's insurance center growing fast, with life reinsurance assets on the island rising sharply in the years to 2021. The data show no full recovery at home: income per person in 2024 was still 12.1 percent below its 2007 peak, and investment was 11.7 percent of GDP, low for an economy at its income. More assets booked in Bermuda have not brought income per person back to its peak."
+  }
+}

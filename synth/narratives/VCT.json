@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "iso3": "VCT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VCT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: St. Vincent and the Grenadines Article IV staff report 2025",
+        "same tier 1 domains: St. Vincent and the Grenadines Hurricane Beryl Argyle airport port growth",
+        "imf.org: St. Vincent and the Grenadines 2025 Article IV press release IMF Executive Board concludes",
+        "worldbank.org: Macro Poverty Outlook St. Vincent and the Grenadines 2025",
+        "imf.org, worldbank.org, caribank.org, iadb.org, oecd.org: St. Vincent and the Grenadines Hurricane Beryl damage economy recovery 2024 2025",
+        "imf.org, worldbank.org, caribank.org, iadb.org: St. Vincent and the Grenadines banana industry decline growth global financial crisis tourism slowdown",
+        "imf.org, worldbank.org, caribank.org: St. Vincent and the Grenadines La Soufriere eruption 2021 COVID-19 economy contraction tourism",
+        "critic check: every cited URL opened (imf.org, worldbank.org, thedocs.worldbank.org); the IMF and World Bank PDFs read in full as text"
+      ],
+      "critic_changes": [
+        "All 9 cited URLs opened; the two IMF PDFs and the World Bank MPO PDF were read as full text. Every kept quote was found on its page and every date matches the document (WP/10/59 March 2010; Country Report 15/259 September 2015; MPO October 2026).",
+        "Headline: 'rebuilding, building and tourism' reordered to 'building, rebuilding and tourism' (155 characters). Its meaning is unchanged.",
+        "Arc: 'once the core of the export trade' changed to 'once a large share of goods exports' to match the IMF paper; 'worst in the floods of December 2013' changed to 'including the floods', because no source ranks the 2013 floods as the worst disaster. All numbers (3.7, 0.7, 3.0, 1.7, -3.7, 6.1, 4.8, 4.1, 2025 peak) checked against growth_problem and series.",
+        "Banana thread: replaced 'long the main export' with 'long a large share of goods exports', added the IMF paper's supporting passage on the banana share of exports and EU preferences as a third citation, and reworded the meta sentence about sources.",
+        "Crisis thread: dropped 'and pushed public debt up', because none of the thread's cited passages mentions debt; the deficit claim is kept.",
+        "Pandemic thread: 'emptied the hotels' softened to 'cut tourism sharply' (the source says tourism fell 70 percent); 'wrecking farms and fisheries' changed to 'hitting farms hard' and supported by a new IMF 2021 citation on agriculture being severely affected. The World Bank eruption quote was trimmed to start at 'explosive eruptions' because the 'In April 2021,' opening could not be confirmed verbatim.",
+        "Rebuilding thread: 'drove the fast growth from 2022' changed to 'drove the recovery after the pandemic and the eruption', because the IMF 2024 release lists recovery drivers, not a 2022 start. The final sentence now matches the cited MPO passage on construction slowing. The 2025 growth-easing claim is kept in since_last_year, where its quote sits.",
+        "Deficit thread: the text now matches its sources (Beryl reconstruction and large public spending), and 'after each shock' was dropped. The MPO 'Post-hurricane reconstruction' citation was replaced with two MPO passages that directly support the deficit since Beryl and the debt rise in 2025.",
+        "since_last_year: removed 'with the war in the Middle East', which was not in the cited passages, and added the IMF June 2026 passage on slower growth from higher oil prices as a citation.",
+        "Tension: removed the inline IMF figure (6.1 percent contraction in 2021) from the prose so no non-data figure appears outside a citation; the passage is now cited in the pandemic thread. 'fastest in the data' narrowed to 'fastest of the three'.",
+        "Recency: 5 distinct tier 1 sources dated 2023 or later (IMF July 2024, World Bank January 2026 x2, IMF June 2026, World Bank MPO October 2026), so the story stays tier 1. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Bananas faded, crisis and disasters stalled growth after 2008, and since 2016 building, rebuilding and tourism have lifted income per person to a new high.",
+    "arc": "From 1990 to 2007 income per person grew 3.7 percent a year, even as the European trade preferences behind banana exports, once a large share of goods exports, lost value from the early 1990s. Growth then stalled at 0.7 percent a year from 2008 to 2015, as the global financial crisis weakened the economy and a run of natural disasters, including the floods of December 2013, kept cutting short the recovery. Since 2016 growth has averaged 3.0 percent a year, well above the 1.7 of the decade before. That era held hard shocks: the pandemic cut income per person by 3.7 percent in 2020, La Soufrière erupted in 2021, and Hurricane Beryl struck in 2024. It still ended with three strong years, 6.1, 4.8 and 4.1 percent from 2023 to 2025, carried by large public and hotel projects, rebuilding and a tourism rebound, and in 2025 income per person reached its highest level on record. The sources describe the same years as ones of wide deficits and fast-rising public debt, with building now slowing as the big projects finish.",
+    "threads": [
+      {
+        "title": "Banana preferences fade",
+        "text": "Bananas sold to Europe under trade preferences were long a large share of goods exports. The value of those preferences peaked in the early 1990s and then fell steeply, and IMF research finds the loss hit growth hardest in the islands that relied on them most, St. Vincent and the Grenadines among them. What kept growth going through 1990 to 2007 is not explained in the sources.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2010/wp1059.pdf",
+            "publisher": "IMF",
+            "title": "Caribbean Bananas: The Macroeconomic Impact of Trade Preference Erosion (IMF Working Paper WP/10/59)",
+            "date": "2010-03",
+            "quote": "The value of such assistance rose until the early 1990s, and has declined precipitously since then."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2010/wp1059.pdf",
+            "publisher": "IMF",
+            "title": "Caribbean Bananas: The Macroeconomic Impact of Trade Preference Erosion (IMF Working Paper WP/10/59)",
+            "date": "2010-03",
+            "quote": "the impact is greatest for St. Lucia, St. Vincent and the Grenadines and Dominica"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2010/wp1059.pdf",
+            "publisher": "IMF",
+            "title": "Caribbean Bananas: The Macroeconomic Impact of Trade Preference Erosion (IMF Working Paper WP/10/59)",
+            "date": "2010-03",
+            "quote": "This vulnerability arises from a large share of bananas in total exports of goods, the high degree of preferential access granted by the European Union"
+          }
+        ]
+      },
+      {
+        "title": "Crisis, floods and an airport",
+        "text": "After 2008 the global financial crisis weakened the economy, and floods, landslides and drought kept cutting short the recovery; income per person fell in 2009, 2010 and 2011. In the same years the government built a new international airport, and its imports, with disaster rebuilding, widened the deficits.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15259.pdf",
+            "publisher": "IMF",
+            "title": "St. Vincent and the Grenadines: 2014 Article IV Consultation—Press Release; Staff Report (IMF Country Report No. 15/259)",
+            "date": "2015-09",
+            "quote": "St. Vincent and the Grenadines’ economic recovery from the global economic crisis has been curbed by a series of significant natural disasters."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15259.pdf",
+            "publisher": "IMF",
+            "title": "St. Vincent and the Grenadines: 2014 Article IV Consultation—Press Release; Staff Report (IMF Country Report No. 15/259)",
+            "date": "2015-09",
+            "quote": "Although a modest recovery had begun in 2011, it has been virtually halted by severe flooding and landslides in December 2013"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15259.pdf",
+            "publisher": "IMF",
+            "title": "St. Vincent and the Grenadines: 2014 Article IV Consultation—Press Release; Staff Report (IMF Country Report No. 15/259)",
+            "date": "2015-09",
+            "quote": "Imbalances have widened due to the shocks as well as the construction of an international airport."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, then a volcano",
+        "text": "The pandemic cut tourism sharply in 2020, and income per person fell 3.7 percent. In April 2021 La Soufrière erupted, forcing mass evacuations on the main island and hitting farms hard, yet income per person still rose 2.8 percent that year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/07/01/pr21205-st-vincent-and-the-grenadines-imf-board-disbursement-address-fallout-from-volcanic-eruption",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves a Disbursement of US$11.6 Million for St. Vincent and the Grenadines to Address the Fallout from the Volcanic Eruption",
+            "date": "2021-07-01",
+            "quote": "The economy is estimated to have contracted in 2020 by 3.8 percent as tourism activity fell 70 percent."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/feature/2026/01/20/rising-from-the-ashes-how-saint-vincent-is-rebuilding-after-a-volcanic-eruption",
+            "publisher": "World Bank",
+            "title": "Rising from the Ashes: How Saint Vincent is Rebuilding After a Volcanic Eruption",
+            "date": "2026-01-20",
+            "quote": "explosive eruptions of the La Soufrière volcano forced more than 22,000 people to evacuate their homes"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/07/01/pr21205-st-vincent-and-the-grenadines-imf-board-disbursement-address-fallout-from-volcanic-eruption",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves a Disbursement of US$11.6 Million for St. Vincent and the Grenadines to Address the Fallout from the Volcanic Eruption",
+            "date": "2021-07-01",
+            "quote": "IMF staff estimate the economy to contract by 6.1 percent in 2021, with agriculture and related sectors severely affected."
+          }
+        ]
+      },
+      {
+        "title": "Rebuilding, hotels and tourists",
+        "text": "Large public and private projects and a strong return of tourists drove the recovery after the pandemic and the eruption. Hurricane Beryl in 2024 wrecked most buildings in the southern Grenadines, and rebuilding added to the building boom. The World Bank expects building to slow as new hotels and public works are finished.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/07/22/pr24285-st-vincent-grenadines-imf-exec-board-concludes-2024-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with St. Vincent and the Grenadines",
+            "date": "2024-07-22",
+            "quote": "Robust recovery of tourism"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/feature/2026/01/20/building-back-better-and-stronger-in-saint-vincent-and-the-grenadines",
+            "publisher": "World Bank",
+            "title": "Building Back Better—and Stronger—in Saint Vincent and the Grenadines",
+            "date": "2026-01-20",
+            "quote": "where over 90 percent of buildings were heavily damaged or destroyed"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-vct.pdf",
+            "publisher": "World Bank",
+            "title": "St. Vincent and the Grenadines, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Construction activity is expected to slow as major projects are gradually completed, including the Beaches Resort, Marriott Hotel"
+          }
+        ]
+      },
+      {
+        "title": "Deficits and debt climb",
+        "text": "Rebuilding after Hurricane Beryl and other large public spending have kept the government deficit wide. Public debt has risen fast since 2019 and kept rising in 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/12/pr-26205-st-vincent-and-the-grenadines-imf-concludes-2026-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with St. Vincent and the Grenadines",
+            "date": "2026-06-12",
+            "quote": "Public debt rose by 45 percentage points of GDP since 2019 to 113 percent of GDP in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-vct.pdf",
+            "publisher": "World Bank",
+            "title": "St. Vincent and the Grenadines, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "The fiscal deficit has remained elevated since Hurricane Beryl in 2024, impacted by large reconstruction and social investment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-vct.pdf",
+            "publisher": "World Bank",
+            "title": "St. Vincent and the Grenadines, Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Elevated financing needs drove a sharp rise in the debt-to-GDP ratio to 113.2 percent of GDP in 2025, from 102.9 percent in 2024."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year growth has eased from its rebuilding peak. The World Bank (October 2026) says growth slowed in 2025 as rebuilding after Beryl and the big projects passed their peak, while tourist arrivals kept rising. The IMF (June 2026) reports a wide deficit and much higher public debt, and expects slower growth as oil prices rise.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-vct.pdf",
+          "publisher": "World Bank",
+          "title": "St. Vincent and the Grenadines, Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "GDP growth moderated to 3.7 percent in 2025 as post-hurricane reconstruction and major capital projects moved past their peak phases"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/12/pr-26205-st-vincent-and-the-grenadines-imf-concludes-2026-art-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with St. Vincent and the Grenadines",
+          "date": "2026-06-12",
+          "quote": "The fiscal deficit was 12 percent of GDP in 2025, 9 percentage points above its 2019 level"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/12/pr-26205-st-vincent-and-the-grenadines-imf-concludes-2026-art-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with St. Vincent and the Grenadines",
+          "date": "2026-06-12",
+          "quote": "Growth is expected to slow in 2026-27, reflecting higher oil prices, a weaker global outlook"
+        }
+      ]
+    },
+    "tension": "The data show income per person rising 2.8 percent in 2021, the year of the eruption, while the IMF at the time expected the economy to shrink deeply that year. The data also show income per person at a record high in 2025 after three strong years, while the sources describe those years as a borrowing-funded building boom that is now winding down. The 1990 to 2007 era is the fastest of the three in the data even though the sources describe it as the time banana preferences were lost."
+  }
+}

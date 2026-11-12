@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "iso3": "NGA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NGA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Nigeria Article IV consultation 2025 IMF staff report press release\"",
+        "tier 1 domains: \"Nigeria Development Update World Bank 2025 reforms growth\"",
+        "tier 1 domains: \"Nigeria growth since 2015 oil price collapse recession per capita income decline stagnation\"",
+        "worldbank.org: \"World Bank Nigeria Development Update October 2026 press release\"",
+        "Opened: imf.org IMF Country Report No. 26/125 (2026 Article IV), worldbank.org Nigeria Country Economic Memorandum (Dec 2022), worldbank.org press releases of 2025-10-08 and 2026-10-08, worldbank.org NDU publication page",
+        "Critic check: re-opened all four cited URLs with WebFetch; the two PDFs were text-extracted locally and every quoted passage was located verbatim"
+      ],
+      "critic_changes": [
+        "Verified all four cited URLs. Both PDFs (World Bank CEM, Dec 2022; IMF Country Report 26/125, June 2026) were text-extracted and every quoted passage found verbatim; the IMF date 2026-06 matches the report cover. The two World Bank press releases (2025-10-08, 2026-10-08) and their quotes were confirmed. All citations kept.",
+        "All numbers checked against desk/data/NGA.json: -0.3 (1990–1999), 4.2 (2000–2014), -0.7 (2015–2025), -4.0 (2016), -8.3 (2020), 8.4 percent below the 2015 peak, level first reached in 2011, 1.9 (2025), and positive growth in every year from 2022 to 2025. All match.",
+        "Headline: changed 'a decade of shrinking income per person followed, and 2023 reforms have brought a slow recovery'. Income per person fell only from 2016 to 2021 and began growing in 2022, before the 2023 reforms. It now says income fell until 2021 and has recovered slowly since, helped by reforms from 2023.",
+        "Arc and thread 'Oil boom and early reforms': 'lowered barriers to investment' and 'reforms in ... economic management' had no support in the cited passages. Rewrote them as 'steadier economic management and reforms in banking and telecoms gave private firms confidence', and added a third CEM citation that names the banking and telecoms reforms and sound macroeconomic policies. 'Services, not oil, drove much of the expansion' was reworded to match the source: private firms, especially in services, grew fast enough to shrink oil's share.",
+        "Thread 'The 2023 reform turn': the claim that reforms raised public revenue was outside the quoted fragment. Added the verified passage 'gross federation revenues increased by 69% in real terms', attributed each claim to the institution that makes it, and changed 'let the exchange rate float' to 'freed the exchange rate' to match the IMF's 'liberalization'.",
+        "since_last_year: 'lifted export earnings' was not supported by any quoted passage. Added the verified World Bank sentence on oil prices and export earnings. Changed 'Growth held up into 2026' to 'Growth picked up into 2026', which matches the page's 'uptick'.",
+        "Tension: changed 'solid rebound' to 'strong reforms and a steadier economy' (the IMF's own framing) and 'well below' to 'much lower than', matching the CEM's wording. The CEM supports the population claim: growth 'much lower than the 2.6 percent population growth' over 2015–2021.",
+        "No banned phrases or recommendation language found. 3 distinct recent tier 1 sources survive (IMF 2026-06, World Bank 2026-10-08, World Bank 2025-10-08), so the story stays tier 1."
+      ]
+    },
+    "headline": "Nigeria's oil-fuelled boom of the 2000s ended in 2015; income per person then fell until 2021 and has recovered slowly since, helped by reforms from 2023.",
+    "arc": "Nigeria's income per person slipped in the 1990s, by -0.3 percent a year over 1990–1999, and the sources used here say little about why. From 2000 to 2014 it grew 4.2 percent a year, as oil prices rose, steadier economic management and reforms in banking and telecoms gave private firms confidence, and services grew fast. That run ended in 2015: oil prices fell, security worsened and earlier reforms were reversed, and income per person shrank by 4.0 percent in 2016 and by 8.3 percent in 2020, when oil slumped again and COVID-19 hit. Across 2015–2025 growth averaged -0.7 percent a year, leaving income per person 8.4 percent below its 2015 peak and about where it first was in 2011. Since 2023, reforms that ended fuel subsidies, freed the exchange rate and stopped central bank financing of the deficit have steadied the economy, and income per person has grown every year since 2022, by 1.9 percent in 2025.",
+    "threads": [
+      {
+        "title": "Oil boom and early reforms",
+        "about": "history",
+        "text": "In the 2000s high oil prices came together with steadier economic management and reforms in banking and telecoms. Private firms, especially in services, grew fast enough to shrink oil's share of the economy, and income per person grew 4.2 percent a year over 2000–2014.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "Nigeria was a rising growth star globally in the 2000s due to the implementation of several structural reforms in a context of increasing oil prices"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "sound macroeconomic policies that helped stabilize the economic environment and first-generation sectoral reforms (in banking and telecommunications), which instilled confidence for private sector development"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "the share of the oil sector relative to GDP contracted from 31 to 10 percent, thanks to strong private sector growth, especially in services."
+          }
+        ]
+      },
+      {
+        "title": "Two oil price crashes",
+        "about": "history",
+        "text": "Oil prices slumped in 2015 and again in 2020, the second time alongside COVID-19. Income per person fell 4.0 percent in 2016 and 8.3 percent in 2020.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "In 2015 and 2020, Nigeria suffered slumping oil prices and in 2020, this was compounded by the adverse effects of the global COVID-19 pandemic."
+          }
+        ]
+      },
+      {
+        "title": "Policy drift after 2015",
+        "about": "history",
+        "text": "The World Bank traces the slowdown not only to oil but to choices at home: reforms were reversed, the exchange rate was mismanaged, trade was restricted and fiscal policy was weak.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "The robust growth performance seen in 2001–2014 ended abruptly in 2015, as oil prices fell, the security situation deteriorated, macroeconomic reforms were reversed"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099020012132216124/pdf/P1761970c336260ce0bd0e0ebd98a53275d.pdf",
+            "publisher": "World Bank",
+            "title": "Nigeria Country Economic Memorandum: Charting a New Course (Synthesis Report)",
+            "date": "2022-12",
+            "quote": "a worsening domestic macroeconomic policy environment—exchange rate mismanagement, trade restrictions, and weak fiscal policy—undermined economic stability and the country’s growth potential."
+          }
+        ]
+      },
+      {
+        "title": "The 2023 reform turn",
+        "about": "present",
+        "text": "Since 2023 the government has ended fuel subsidies, freed the exchange rate and stopped central bank financing of the deficit. The IMF says this has rebuilt buffers, the World Bank says it has raised public revenue, and income per person has grown every year since 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ngaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Nigeria: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Nigeria (IMF Country Report No. 26/125)",
+            "date": "2026-06",
+            "quote": "Ending fuel subsidies and deficit monetization, tightening monetary policy, coupled with the liberalization of the exchange rate, have reduced fiscal vulnerabilities, rebuilt external buffers"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/10/08/higher-revenues-better-lives-strengthening-state-spending-for-growth-jobs-services",
+            "publisher": "World Bank",
+            "title": "From Higher Revenues to Better Lives: Strengthening State Spending for Growth, Jobs, and Services",
+            "date": "2026-10-08",
+            "quote": "gross federation revenues increased by 69% in real terms"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/10/08/higher-revenues-better-lives-strengthening-state-spending-for-growth-jobs-services",
+            "publisher": "World Bank",
+            "title": "From Higher Revenues to Better Lives: Strengthening State Spending for Growth, Jobs, and Services",
+            "date": "2026-10-08",
+            "quote": "largely reflecting exchange-rate reforms, the removal of the petrol subsidy, and stronger revenue administration"
+          }
+        ]
+      },
+      {
+        "title": "Insecurity and hardship",
+        "about": "present",
+        "text": "Violence weighs on investment, farming and oil output. Poverty and food insecurity remain high even as the economy has steadied.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ngaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Nigeria: 2026 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Nigeria (IMF Country Report No. 26/125)",
+            "date": "2026-06",
+            "quote": "Insecurity takes a heavy human toll, and impacts investment, agriculture, and oil production."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/08/positive-economic-momentum-in-nigeria-now-time-to-bring-home-the-gains",
+            "publisher": "World Bank",
+            "title": "Positive Economic Momentum in Nigeria, Now Time to Bring Home the Gains",
+            "date": "2025-10-08",
+            "quote": "Many households continue to face hardship, with poverty and food insecurity remaining high."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up into 2026, and the World Bank said in October 2026 that poverty had stopped rising for the first time since 2019. Higher world oil prices lifted export earnings but paused the fall in inflation that began in early 2025.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/08/higher-revenues-better-lives-strengthening-state-spending-for-growth-jobs-services",
+          "publisher": "World Bank",
+          "title": "From Higher Revenues to Better Lives: Strengthening State Spending for Growth, Jobs, and Services",
+          "date": "2026-10-08",
+          "quote": "The uptick growth stabilized the poverty rate for the first time since 2019."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/08/higher-revenues-better-lives-strengthening-state-spending-for-growth-jobs-services",
+          "publisher": "World Bank",
+          "title": "From Higher Revenues to Better Lives: Strengthening State Spending for Growth, Jobs, and Services",
+          "date": "2026-10-08",
+          "quote": "Higher oil prices strengthened export earnings and contributed to a larger current account surplus."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/08/higher-revenues-better-lives-strengthening-state-spending-for-growth-jobs-services",
+          "publisher": "World Bank",
+          "title": "From Higher Revenues to Better Lives: Strengthening State Spending for Growth, Jobs, and Services",
+          "date": "2026-10-08",
+          "quote": "higher oil prices temporarily stalled the disinflation trend since early 2025"
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe strong reforms and a steadier economy since 2023, yet in the data income per person grew only 1.9 percent in 2025 and is still about where it first was in 2011. The gap is population growth: the World Bank found GDP growth in 2015–2021 much lower than the pace at which the population grew, so headline growth overstates gains per person."
+  }
+}

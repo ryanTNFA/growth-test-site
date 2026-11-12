@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "BGD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BGD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Bangladesh Article IV 2025 staff report press release growth\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Bangladesh Development Update 2025 World Bank growth slowdown\"",
+        "worldbank.org: \"Bangladesh Development Update October 2026 press release\"",
+        "imf.org: \"IMF Bangladesh 2026 review Extended Credit Facility staff-level agreement\"",
+        "worldbank.org: \"Bangladesh Country Economic Memorandum Change of Fabric garments growth export diversification\"",
+        "Opened: imf.org PR 26/029 (2026-01-30); imf.org Country Report 26/24 (2026-01); worldbank.org press releases 2025-10-07 and 2026-10-06; worldbank.org country page (updated 2026-10-25); adb.org ADO April 2026 Bangladesh chapter; worldbank.org PRWP 10150 (2022-08); worldbank.org Change of Fabric CEM (opened, not cited)",
+        "Critic re-opened every cited URL: World Bank PRWP 10150, IMF Country Report 26/24, ADB ADO April 2026 Bangladesh chapter (PDF text extracted and searched), World Bank press release 2026-10-06 and World Bank Bangladesh country page (HTML searched); all quotes found verbatim"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/BGD.json: eras 2.9 (1990-2004) and 5.1 (2005-2025), the 2005-2019 range 4.1 to 7.0, 2.6 in 2020, 6.1 in 2021, 6.0 in 2022, 2.2 in 2025, averages 5.0 (2016-2025) and 5.2 (2006-2015), and the peak in 2025 all match, so no numbers were changed.",
+        "Opened all five cited URLs. Every quoted passage is on its page, and every date and title matches the document.",
+        "'Garments, trade and women's work': the text said export zones helped from 'the 1990s'. The cited passage names trade and FDI 'starting in the late 1990s' and does not mention export zones, so the text now says 'from the late 1990s', drops export zones and attributes each claim to its source.",
+        "'Uprising and political transition': the IMF quote ('summer 2024 uprising exposed deep-rooted...') did not support the claims about uneven gains, banks and public anger, and the ADB quote did not mention floods or tight policies. The draft IMF citation was replaced with two verbatim IMF passages, one on weak governance and uneven gains and one on dissatisfaction leading to the 2024 uprising. The ADB quote was replaced with a passage naming floods and restrictive policies. The interim-government clause had no supporting quote and was dropped, and the thread was retitled 'The 2024 uprising and after'.",
+        "'Banking stress and energy shortages': no cited passage supported the claim that 'once stricter rules showed the damage', so it was dropped. The text now says bad loans kept rising into 2026, which the World Bank NPL quote supports, and the 'lenient rules / weak oversight / historically slow lending' wording stays, backed by the ADB passage.",
+        "'Garment reliance and leaving LDC status': 'Exports still lean heavily on garments' had no supporting quote, so a verbatim IMF passage was added (RMG dominates exports, with the 85 percent figure inside the quote).",
+        "since_last_year: neither cited passage supported 'Elections in February 2026 ended the interim government', so the text now says only that the ADB expected investor confidence to pick up after the February 2026 elections. The claim that poverty rose in FY2026 had no supporting quote, so the verbatim World Bank press-release passage on poverty was added as a citation.",
+        "No recommendation, verdict or banned phrases were found. The headline is 149 characters. All five threads and four distinct recent tier 1 sources (IMF 2026-01, ADB 2026-04, World Bank 2026-10-06, World Bank 2026-10-25) remain, so the story stays tier 1."
+      ]
+    },
+    "headline": "Bangladesh grew fast for two decades on garment exports, but income per person growth has slowed each year since 2021 amid unrest and banking stress.",
+    "arc": "From 1990 to 2004, income per person in Bangladesh grew 2.9 percent a year, as the country opened to trade and foreign investment and garment exports took off. From 2005 to 2025 growth stepped up to 5.1 percent a year, and income per person reached its highest level yet in 2025. A World Bank study finds the step-up after 2005 owed less to new reforms than to earlier gains and a stable economy, and the IMF credits growth driven by the garment industry with more jobs and less poverty. Growth stayed between 4.1 and 7.0 percent a year from 2005 to 2019, dipped to 2.6 in 2020 with the pandemic, and recovered to 6.1 in 2021. Since then it has slowed each year, to 2.2 in 2025, and the IMF, World Bank and ADB point to the 2024 uprising, tight policies, banking stress, energy shortages and weak investment.",
+    "threads": [
+      {
+        "title": "Garments, trade and women's work",
+        "about": "history",
+        "text": "Garment exports were the engine. A World Bank study finds that more openness to trade and foreign investment supported growth from the late 1990s, and the IMF notes that the garment factories drew millions of young women into paid work.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099245308232224257/pdf/IDU0864f5b27096720401c084f70585706522d9d.pdf",
+            "publisher": "World Bank",
+            "title": "Good Enough for Outstanding Growth: The Experience of Bangladesh in Comparative Perspective (Policy Research Working Paper 10150)",
+            "date": "2022-08",
+            "quote": "more openness to trade and FDI played a fundamental role in supporting growth starting in the late 1990s"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bgdea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bangladesh: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Bangladesh (IMF Country Report No. 26/24)",
+            "date": "2026-01",
+            "quote": "Today, Bangladesh is the world's second-largest garment exporter, employing millions of young women thereby significantly boosting female workforce participation."
+          }
+        ]
+      },
+      {
+        "title": "A step-up that held",
+        "about": "history",
+        "text": "The faster growth after 2005 is harder to explain than the gains before it. A World Bank study finds it did not come from new reforms; instead, earlier gains and a stable economy kept growth from fading, as it usually does in fast-growing countries.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099245308232224257/pdf/IDU0864f5b27096720401c084f70585706522d9d.pdf",
+            "publisher": "World Bank",
+            "title": "Good Enough for Outstanding Growth: The Experience of Bangladesh in Comparative Perspective (Policy Research Working Paper 10150)",
+            "date": "2022-08",
+            "quote": "the benefits from previous achievements and a stable macroeconomic and institutional environment were \"good enough\" to prevent the mean reversion of growth"
+          }
+        ]
+      },
+      {
+        "title": "The 2024 uprising and after",
+        "about": "present",
+        "text": "The IMF says weak governance spread the gains of growth unevenly and hurt the banks, and public anger over inequality boiled over in the 2024 uprising. Political unrest, floods and tight policies then slowed growth in the 2025 fiscal year.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bgdea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bangladesh: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Bangladesh (IMF Country Report No. 26/24)",
+            "date": "2026-01",
+            "quote": "weak governance and institutions led to an uneven distribution of the benefits of growth and severely undermined the banking system."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bgdea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bangladesh: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Bangladesh (IMF Country Report No. 26/24)",
+            "date": "2026-01",
+            "quote": "Mounting public dissatisfaction over inequality and exclusion culminated in the 2024 uprising."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/ban-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook (ADO) April 2026: Bangladesh",
+            "date": "2026-04",
+            "quote": "political instability that weakened demand, as well as labor disputes, recurring floods, and restrictive macroeconomic policies"
+          }
+        ]
+      },
+      {
+        "title": "Banking stress and energy shortages",
+        "about": "present",
+        "text": "Years of lenient rules and weak oversight left the banks under heavy strain, and lending to private firms grew at a historically slow pace. Bad loans kept rising into 2026, and the World Bank says energy shortages and weak banks have held down investment.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/ban-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook (ADO) April 2026: Bangladesh",
+            "date": "2026-04",
+            "quote": "Prolonged regulatory forbearance and weak institutional governance have left the banking sector under significant stress, resulting in historically low private credit growth."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/bangladesh-needs-urgent-financial-energy-and-revenue-reforms-to-restore-growth-cre",
+            "publisher": "World Bank",
+            "title": "Bangladesh Needs Urgent Financial, Energy, and Revenue Reforms to Restore Growth, Create Jobs",
+            "date": "2026-10-06",
+            "quote": "The non-performing loan ratio increased to 33.2% in June 2026 from 30.6% in December 2025."
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/bangladesh",
+            "publisher": "World Bank",
+            "title": "Bangladesh",
+            "date": "2026-10-25",
+            "quote": "energy shortages and financial sector vulnerabilities that have suppressed investment"
+          }
+        ]
+      },
+      {
+        "title": "Garment reliance and leaving LDC status",
+        "about": "present",
+        "text": "Exports still lean heavily on garments. As Bangladesh leaves the group of least developed countries, the IMF expects it to lose some of the trade preferences that helped those exports.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bgdea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bangladesh: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Bangladesh (IMF Country Report No. 26/24)",
+            "date": "2026-01",
+            "quote": "Bangladesh's exports are dominated by the RMG sector (85 percent of total exports), leaving the economy vulnerable to global disruptions and price shocks."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bgdea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bangladesh: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Bangladesh (IMF Country Report No. 26/24)",
+            "date": "2026-01",
+            "quote": "Following its anticipated LDC graduation in 2026, Bangladesh is likely to face tariff increases"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The ADB expected investor confidence to pick up after the February 2026 general elections. By October 2026 the World Bank said investment and exports had lost momentum, prices stayed high, and poverty rose in the 2026 fiscal year.",
+      "citations": [
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/ban-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook (ADO) April 2026: Bangladesh",
+          "date": "2026-04",
+          "quote": "investor sentiment strengthens following the general elections in February 2026"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/bangladesh-needs-urgent-financial-energy-and-revenue-reforms-to-restore-growth-cre",
+          "publisher": "World Bank",
+          "title": "Bangladesh Needs Urgent Financial, Energy, and Revenue Reforms to Restore Growth, Create Jobs",
+          "date": "2026-10-06",
+          "quote": "investment activities softened, exports lost momentum, and inflation remained elevated"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/bangladesh-needs-urgent-financial-energy-and-revenue-reforms-to-restore-growth-cre",
+          "publisher": "World Bank",
+          "title": "Bangladesh Needs Urgent Financial, Energy, and Revenue Reforms to Restore Growth, Create Jobs",
+          "date": "2026-10-06",
+          "quote": "In FY26, poverty and inequality increased, with about 2.1 million more people living in poverty than last year."
+        }
+      ]
+    },
+    "tension": "The sources describe a slowdown since 2023, with rising poverty and stalled job creation. The averages in the data hide most of it: growth over 2016–2025 averaged 5.0 percent, close to the 5.2 of 2006–2015, and income per person was at its highest level yet in 2025. Only the yearly figures show the slowdown, with growth falling from 6.0 in 2022 to 2.2 in 2025. The level is still rising, but more slowly, and the World Bank says poverty went up even so."
+  }
+}

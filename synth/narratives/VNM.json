@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "VNM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VNM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Vietnam Article IV consultation 2025 IMF staff report",
+        "worldbank.org (tier 1 list): Viet Nam macro poverty outlook 2025 World Bank growth",
+        "tier 1 list: Viet Nam Doi Moi 1986 reforms growth history World Bank overview",
+        "tier 1 list: Vietnam 2011 macroeconomic instability inflation credit boom stabilization Resolution 11 IMF",
+        "imf.org, worldbank.org, adb.org, oecd.org: Vietnam 2024 Article IV IMF growth slowed 2023 real estate corporate bond market stress",
+        "imf.org: Vietnam IMF 2026 Article IV mission",
+        "imf.org, worldbank.org, adb.org: Vietnam 2021 Delta variant lockdowns growth slowed IMF Article IV 2022 press release",
+        "opened: imf.org PR 25/296 (2025-09-15), imf.org PR 24/347 (2024-09-27), imf.org PR 22/247 (2022-07-05), imf.org Country Report 12/165, documents1.worldbank.org Viet Nam Economic Update May 2026, documents1.worldbank.org Viet Nam 2045 Breaking Through, worldbank.org/ext/en/country/vietnam (not cited: no date shown)",
+        "critic re-opened every cited URL: three imf.org press releases (WebFetch), imf.org cr12165.pdf (text extracted), and the two documents1.worldbank.org PDFs (text extracted)"
+      ],
+      "critic_changes": [
+        "Arc: removed the claim that the sources trace growth to Viet Nam's 'fast entry into world trade'. No opened page says this (the IMF 2012 report mentions WTO accession only as a source of capital inflows). The sentence now credits only Doi Moi, which the World Bank's Viet Nam 2045 report supports ('moved on from the planned economy').",
+        "Thread 'Doi Moi and three decades': changed 'central planning' to 'a planned economy' to match the World Bank's wording. Both quotes checked word for word against the PDF text.",
+        "Thread 'Inflation bouts in 2008 and 2011': date of IMF Country Report 12/165 made more precise, from 2012 to 2012-07, as shown on the report's cover. Both quotes checked word for word.",
+        "Thread 'Property, bonds and bank strain': 'slowed growth to 4.3 percent' now says 'growth of income per person'. The 4.3 figure is the data file's income-per-person rate, while the IMF puts GDP growth near 5 percent, so the wording made clear which rate is meant. 'tight bank liquidity' changed to 'strained bank liquidity' to match the quote.",
+        "Thread 'An export model under pressure': the claim that exports and foreign investment lifted growth 'from 2024' had no quote supporting it. Replaced the IMF quote 'A further escalation in global trade tensions could weaken exports and investment' with the IMF's own sentence on 2024 being 'backed by robust exports, resilient foreign direct investment'. Also replaced the clipped quote 'population aging, tightening global financial conditions, and climate change.' with the fuller one that names the 'export-led growth model' and 'uncertain global trade policies, population aging', which supports the thread's wording directly. Changed 'from 2024' to 'in 2024'.",
+        "Numbers: every figure in the headline, arc, threads, since_last_year and tension checked against desk/data/VNM.json: 5.3, 4.8, 1.7, rank 1 of 11, 4,308, and yearly growth of 7.7 (1995), 3.4 (1999), 3.7 (2008), 4.3 (2012), 1.9 (2020), 1.7 (2021), 7.7 (2022), 4.3 (2023) and 7.4 (2025). Inflation of 23.1 (2008) and 18.7 (2011) comes from the series FP.CPI.TOTL.ZG. Growth stayed above 3 every year from 1991 to 2019, with the lowest at 3.4 in 1999. All match; none changed.",
+        "All other citations checked and kept: the IMF press releases of 2022, 2024 and 2025 (checked through WebFetch) and the World Bank Economic Update of May 2026 (checked in the PDF text). No banned phrases and no recommendation or verdict language found. Recent tier 1 sources: 4."
+      ]
+    },
+    "headline": "Viet Nam's income per person has grown 5.3 percent a year since 1990, with no lasting slowdown through inflation bouts, COVID and a property slump.",
+    "arc": "The data show one long era: income per person grew 5.3 percent a year from 1990 to 2025, with no lasting shift up or down. The World Bank traces this run to the market reforms of Doi Moi, begun in 1986, which moved Viet Nam away from a planned economy. Growth reached 7.7 percent in 1995, eased to 3.4 in 1999 and slowed to 3.7 in 2008, a year when prices rose 23.1 percent; the IMF links that bout of inflation, and another in 2011, to capital inflows after joining the WTO and to loose policy after the global financial crisis. The last ten years averaged 5.3 percent, a little faster than the 4.8 of 2006 to 2015, and Viet Nam ranks first of 11 structural peers, whose median was 1.7. COVID cut growth to 1.9 percent in 2020 and 1.7 in 2021, and turmoil in property and finance held it to 4.3 in 2023. Growth then rose to 7.4 in 2025, when income per person reached 4,308 dollars (constant 2015 prices), its highest level yet.",
+    "threads": [
+      {
+        "title": "Doi Moi and three decades",
+        "text": "Market reforms from 1986 moved Viet Nam away from a planned economy toward a market economy. The World Bank describes the decades since as a run of steady growth and falling poverty that few countries have matched.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099051625142589757/pdf/P178784-496f2dbe-7a22-44eb-bae4-bf91c312d4e6.pdf",
+            "publisher": "World Bank",
+            "title": "Viet Nam 2045: Breaking Through - Institutions for a High-Income Future",
+            "date": "2025",
+            "quote": "The sustained high rate of growth, averaging 5 to 6 percent over three decades, is an achievement that very few countries can match."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099051625142589757/pdf/P178784-496f2dbe-7a22-44eb-bae4-bf91c312d4e6.pdf",
+            "publisher": "World Bank",
+            "title": "Viet Nam 2045: Breaking Through - Institutions for a High-Income Future",
+            "date": "2025",
+            "quote": "Viet Nam has achieved much in the decades since Doi Moi—greatly reduced poverty, economic growth that many countries envy, and improved human development outcomes."
+          }
+        ]
+      },
+      {
+        "title": "Inflation bouts in 2008 and 2011",
+        "text": "Prices rose 23.1 percent in 2008 and 18.7 percent in 2011. The IMF says both bouts began with outside shocks and were made worse by loose policy, the first after capital poured in following WTO entry. Growth of income per person slowed to 3.7 percent in 2008 and 4.3 in 2012, but did not stall.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2012/cr12165.pdf",
+            "publisher": "IMF",
+            "title": "Vietnam: 2012 Article IV Consultation (IMF Country Report No. 12/165)",
+            "date": "2012-07",
+            "quote": "Both episodes appear to have originated with external shocks, but were exacerbated by loose macroeconomic policies."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2012/cr12165.pdf",
+            "publisher": "IMF",
+            "title": "Vietnam: 2012 Article IV Consultation (IMF Country Report No. 12/165)",
+            "date": "2012-07",
+            "quote": "While the 2008 episode was related to large unsterilized capital inflows in the aftermath of WTO accession"
+          }
+        ]
+      },
+      {
+        "title": "COVID and the 2021 outbreak",
+        "text": "Early containment kept growth positive in 2020, at 1.9 percent, but a severe outbreak from April 2021 caused a sharp fall in output, and growth for the year was 1.7. Growth bounced back to 7.7 percent in 2022.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2022/07/05/pr22247-imf-executive-board-concludes-2022-article-iv-consultation-with-vietnam",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2022 Article IV Consultation with Vietnam",
+            "date": "2022-07-05",
+            "quote": "COVID-19 caused major disruptions; successful containment in 2020 made Vietnam the regional top-performing economy"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2022/07/05/pr22247-imf-executive-board-concludes-2022-article-iv-consultation-with-vietnam",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2022 Article IV Consultation with Vietnam",
+            "date": "2022-07-05",
+            "quote": "a severe outbreak in April 2021 produced a historical contraction in 2021Q3"
+          }
+        ]
+      },
+      {
+        "title": "Property, bonds and bank strain",
+        "text": "Turmoil in the property sector, financial distress and a drop in exports slowed growth of income per person to 4.3 percent in 2023. The World Bank still points to very high company debt and strained bank liquidity in 2026.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/09/27/pr24347-vietnam-imf-exec-board-concludes-2024-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Vietnam",
+            "date": "2024-09-27",
+            "quote": "Key headwinds in 2023: turbulence in the real estate sector, financial distress, and a significant drop in exports."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099740005122628080/pdf/IDU-2ee874ce-e0c0-462b-9571-99e553ef83c9.pdf",
+            "publisher": "World Bank",
+            "title": "Viet Nam Economic Update: Sustaining Reforms, Navigating Uncertainty",
+            "date": "2026-05",
+            "quote": "one of the highest corporate leverage ratios among major East Asian economies, alongside liquidity strains in the banking sector."
+          }
+        ]
+      },
+      {
+        "title": "An export model under pressure",
+        "text": "Exports and foreign investment lifted growth again in 2024. The IMF and the World Bank both describe new strain on this export-led model from shifting trade policy, an ageing population and, since March 2026, an oil shock tied to the Middle East conflict.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/15/pr-25296-vietnam-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Vietnam",
+            "date": "2025-09-15",
+            "quote": "The Vietnamese economy rebounded strongly in 2024, growing at 7.1 percent backed by robust exports, resilient foreign direct investment, and supportive policies."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/15/pr-25296-vietnam-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Vietnam",
+            "date": "2025-09-15",
+            "quote": "the economy's export-led growth model faces increasing challenges from rapidly evolving and uncertain global trade policies, population aging"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099740005122628080/pdf/IDU-2ee874ce-e0c0-462b-9571-99e553ef83c9.pdf",
+            "publisher": "World Bank",
+            "title": "Viet Nam Economic Update: Sustaining Reforms, Navigating Uncertainty",
+            "date": "2026-05",
+            "quote": "In scale and scope, the oil shock linked to the Middle East conflict since March 2026 is the largest in decades."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 7.4 percent in 2025, the fastest since 2022, and reached its highest level yet. The World Bank describes a sweeping reorganisation of the state, with a wave of new laws and decrees, and an oil shock since March 2026 that weighs on the outlook.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099740005122628080/pdf/IDU-2ee874ce-e0c0-462b-9571-99e553ef83c9.pdf",
+          "publisher": "World Bank",
+          "title": "Viet Nam Economic Update: Sustaining Reforms, Navigating Uncertainty",
+          "date": "2026-05",
+          "quote": "Since 2025, the authorities have enacted more than 86 laws and 300 decrees through to April 2026 to streamline bureaucracy"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099740005122628080/pdf/IDU-2ee874ce-e0c0-462b-9571-99e553ef83c9.pdf",
+          "publisher": "World Bank",
+          "title": "Viet Nam Economic Update: Sustaining Reforms, Navigating Uncertainty",
+          "date": "2026-05",
+          "quote": "In scale and scope, the oil shock linked to the Middle East conflict since March 2026 is the largest in decades."
+        }
+      ]
+    },
+    "tension": "The sources describe repeated bouts of instability, with prices rising 23.1 percent in 2008 and 18.7 percent in 2011 and turmoil in property and finance in 2023, yet the data show no lasting break: growth of income per person stayed above 3 percent every year from 1991 to 2019 and averaged 5.3 percent over 1990 to 2025. The sources also describe a growth model under strain, while the last ten years (5.3 percent) were faster than the ten before (4.8)."
+  }
+}

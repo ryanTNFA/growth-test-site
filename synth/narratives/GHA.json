@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "iso3": "GHA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GHA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Ghana IMF Article IV 2025 staff report ECF review growth debt restructuring",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Ghana Macro Poverty Outlook World Bank economic update 2025 gold cocoa growth",
+        "imf.org, worldbank.org, afdb.org: Ghana 2015 Extended Credit Facility power crisis fiscal deficits slowdown growth 2014 IMF press release",
+        "imf.org, worldbank.org, afdb.org: Ghana oil production Jubilee 2011 growth 14 percent World Bank",
+        "worldbank.org (critic): Ghana Public Finance Review Building the Foundations for a Resilient and Equitable Fiscal Policy Volume 2 Detailed Analysis",
+        "Opened: imf.org IMF Country Report 26/212 (July 2026); worldbank.org Ghana 10th Economic Update (August 2026); worldbank.org Ghana Public Finance Review Vol. 2 (2025); imf.org Press Release 15/159 (April 2015)"
+      ],
+      "critic_changes": [
+        "Opened all four cited documents; every original quote was found verbatim on its page, and all titles and dates check out (IMF CR 26/212 dated July 10, 2026; WB 10th Economic Update dated AUGUST 2026; IMF PR dated April 3, 2015; the PFR excerpt has no printed date, so year-only 2025 is kept as the release year).",
+        "Arc sentence 2: 'as oil production began' changed to 'as oil production rose'. The PFR says the 2008–2019 boom was fed by rising oil production and the Jubilee field came online in 2011, not that production began in 2006.",
+        "Arc sentence 5: dropped 'helped by record gold prices and a cocoa rebound'. The cited World Bank passage ties gold and cocoa to the current account surplus, not to growth. It now says growth picked up 'while inflation fell and reserves were rebuilt', which the IMF report supports.",
+        "Arc sentence 4: reordered to 'an IMF program approved in 2023 and a debt restructuring'. The IMF report confirms the May 2023 approval.",
+        "Thread 'Oil and a borrowed boom': swapped the heading-style quote 'Starting in 2010...' for two PFR passages that support the text: expansionary fiscal policy and private credit fed by oil, and the Jubilee field set to come online in 2011. The text now says the field 'came online in 2011' (11.3 in 2011 is the series maximum), and 'rising public spending' now matches the source's 'expansionary fiscal policy'.",
+        "Thread 'Debt crisis and repair': dropped 'domestic and foreign' from the restructuring, since the cited passages don't specify it. Added an IMF staff-appraisal citation for the claim that inflation fell and reserves were rebuilt, which was unsupported before.",
+        "Thread 'Gold up, oil fading': removed 'Exports now lean on gold' and 'Recent growth has come mostly from services, farming and mining rather than oil'. No opened passage supports the farming/mining split. The text now says what the quotes say: gold and cocoa drove the external surplus in 2025, and oil output fell as fields matured.",
+        "Thread 'Few jobs, thin investment': added the World Bank passage on gains concentrated in gold and services with limited employment absorption, to support 'sectors that hire few people'. 'Cutting capital spending' became 'spending less than planned on capital projects' to match 'under-execution of capital expenditure'. Removed 'investment fell to 9.7 percent of GDP in 2024' from the thread because it repeats the tension and has no source behind its causal link.",
+        "since_last_year: 'gold drove a large export surplus' became 'record gold prices drove a large external surplus', since the source refers to the current account. 'Closed its lending program' became 'completed its lending program', to match the IMF's 'sixth and final review'.",
+        "Tension: the first claim now rests on an opened source. The IMF 2015 press release opens 'After two decades of strong and broadly inclusive growth', so the vague 'sources describe ... since the early 1990s' became 'In 2015 the IMF described two decades of strong growth'. Dropped 'as capital spending was cut' as a causal claim about the investment fall.",
+        "Number check: every growth figure (1.9, 5.3, 11.3, 2.3, 0.5, -0.2, 3.9, 4.0, 2.8, 4.2) and the 1971/2006 level claim match GHA.json. Flag for the orchestrator: the investment figures in the tension (9.7 in 2024, 27.0 in 2015) come from series NE.GDI.FTOT.ZS, but growth_problem.G6 gives 11.9 percent for 2024 for the same indicator, a different data vintage. If the page shows the G6 figure, readers will see two numbers for 2024 investment, and that needs reconciling in the data.",
+        "No banned phrases, no recommendation language. 3 distinct recent tier 1 sources (IMF 2026, World Bank 2026, World Bank 2025), so the story stays tier 1."
+      ]
+    },
+    "headline": "Ghana's income per person is at its highest yet, after an oil-era boom, a decade of slower growth and a 2022 debt crisis now largely behind it.",
+    "arc": "From 1990 to 2005, income per person in Ghana grew a steady 1.9 percent a year, and only in 2006 did it pass its 1971 high. Growth then sped up to 5.3 percent a year in 2006–2013, peaking at 11.3 percent in 2011, as oil production rose and public spending and private credit expanded. From 2014 growth slowed to 2.3 percent a year: it fell to 0.5 percent in 2014 and -0.2 percent in 2015, when the IMF pointed to large budget and external deficits and acute power shortages. A recovery in 2017–2019 gave way to the pandemic and then a debt crisis in 2022, which led to an IMF program approved in 2023 and a debt restructuring. Growth picked up to 3.9 percent in 2024 and 4.0 percent in 2025 while inflation fell and reserves were rebuilt, and income per person reached its highest level yet in 2025. Over 2016–2025 it averaged 2.8 percent a year, down from 4.2 percent in 2006–2015.",
+    "threads": [
+      {
+        "title": "Oil and a borrowed boom",
+        "text": "From 2008, public spending and private credit expanded on the hope of oil money, and the Jubilee oil field came online in 2011, the year income per person grew fastest. The World Bank says the boom was partly carried by growing budget and external deficits, which built up debt.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060625065035573/pdf/P180112-6879615b-c73c-4cfd-9018-d7a6b3c3a565.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana Public Finance Review: Building the Foundations for a Resilient and Equitable Fiscal Policy, Volume 2: Detailed Analysis",
+            "date": "2025",
+            "quote": "An expansionary fiscal policy and rising private credit—both fueled by soaring oil production—underpinned strong growth between 2008 and 2019."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060625065035573/pdf/P180112-6879615b-c73c-4cfd-9018-d7a6b3c3a565.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana Public Finance Review: Building the Foundations for a Resilient and Equitable Fiscal Policy, Volume 2: Detailed Analysis",
+            "date": "2025",
+            "quote": "owing to rising oil production, with the Jubilee field set to come online in 2011"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060625065035573/pdf/P180112-6879615b-c73c-4cfd-9018-d7a6b3c3a565.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana Public Finance Review: Building the Foundations for a Resilient and Equitable Fiscal Policy, Volume 2: Detailed Analysis",
+            "date": "2025",
+            "quote": "The fast GDP growth of 2008–2019 was partially sustained by growing fiscal and external imbalances, which fueled debt accumulation."
+          }
+        ]
+      },
+      {
+        "title": "Deficits and power cuts",
+        "text": "By 2014 the boom had turned. The IMF linked the slowdown to large budget and external deficits and severe electricity shortages, and Ghana entered an IMF program in 2015.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr15159",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Approves US$918 Million ECF Arrangement to Help Ghana Boost Growth, Jobs and Stability",
+            "date": "2015-04-03",
+            "quote": "large fiscal and external imbalances and acute electricity shortages have led to a growth slowdown"
+          }
+        ]
+      },
+      {
+        "title": "Debt crisis and repair",
+        "text": "After the pandemic, old imbalances and outside shocks tipped Ghana into a debt crisis in 2022. An IMF program approved in 2023 and a debt restructuring followed, and since then inflation has fallen sharply and reserves have been rebuilt.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060625065035573/pdf/P180112-6879615b-c73c-4cfd-9018-d7a6b3c3a565.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana Public Finance Review: Building the Foundations for a Resilient and Equitable Fiscal Policy, Volume 2: Detailed Analysis",
+            "date": "2025",
+            "quote": "In 2022, a confluence of pre-existing imbalances and external shocks pushed Ghana into a macroeconomic crisis."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ghaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Ghana: 2026 Article IV Consultation, Sixth Review under the Arrangement under the Extended Credit Facility, Request for a Waiver of Nonobservance of a Performance Criterion, Financing Assurances Review, and Request for a 36-month Policy Coordination Instrument (IMF Country Report No. 26/212)",
+            "date": "2026-07-10",
+            "quote": "Ghana's ECF program has delivered substantial stabilization and debt-sustainability gains following the 2022 debt crisis."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ghaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Ghana: 2026 Article IV Consultation, Sixth Review under the Arrangement under the Extended Credit Facility, Request for a Waiver of Nonobservance of a Performance Criterion, Financing Assurances Review, and Request for a 36-month Policy Coordination Instrument (IMF Country Report No. 26/212)",
+            "date": "2026-07-10",
+            "quote": "Since the ECF request in May 2023, inflation declined sharply, reserve accumulation exceeded program goals"
+          }
+        ]
+      },
+      {
+        "title": "Gold up, oil fading",
+        "text": "Record gold prices and a cocoa rebound drove a large external surplus in 2025. Oil output, by contrast, is falling as the older fields mature.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082426193065498/pdf/P513207-0a2917c8-a214-428d-9c39-983ba803af29.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana 10th Economic Update: Reset for Growth: Sustaining Macroeconomic Recovery and Unlocking Transport for Transformation",
+            "date": "2026-08",
+            "quote": "The current account surplus surged to 7.9 percent of GDP in 2025, driven primarily by record gold export prices and a cocoa rebound."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ghaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Ghana: 2026 Article IV Consultation, Sixth Review under the Arrangement under the Extended Credit Facility, Request for a Waiver of Nonobservance of a Performance Criterion, Financing Assurances Review, and Request for a 36-month Policy Coordination Instrument (IMF Country Report No. 26/212)",
+            "date": "2026-07-10",
+            "quote": "though oil production fell due to the maturation of existing fields and temporary maintenance shutdowns"
+          }
+        ]
+      },
+      {
+        "title": "Few jobs, thin investment",
+        "text": "The working-age population has grown much faster than jobs, and recent gains have come in gold and services, which hire relatively few people. Budget repair has leaned more on spending less than planned on capital projects than on raising revenue.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082426193065498/pdf/P513207-0a2917c8-a214-428d-9c39-983ba803af29.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana 10th Economic Update: Reset for Growth: Sustaining Macroeconomic Recovery and Unlocking Transport for Transformation",
+            "date": "2026-08",
+            "quote": "Between 2012 and 2023, the working-age population expanded nearly 11 times faster than net job creation"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082426193065498/pdf/P513207-0a2917c8-a214-428d-9c39-983ba803af29.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana 10th Economic Update: Reset for Growth: Sustaining Macroeconomic Recovery and Unlocking Transport for Transformation",
+            "date": "2026-08",
+            "quote": "Economic gains have been concentrated in sectors—notably gold and services—with limited employment absorption capacity"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099082426193065498/pdf/P513207-0a2917c8-a214-428d-9c39-983ba803af29.pdf",
+            "publisher": "World Bank",
+            "title": "Ghana 10th Economic Update: Reset for Growth: Sustaining Macroeconomic Recovery and Unlocking Transport for Transformation",
+            "date": "2026-08",
+            "quote": "Fiscal consolidation has relied more heavily on under-execution of capital expenditure than on structural revenue gains"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Ghana moved from crisis repair to recovery. Income per person grew 4.0 percent in 2025, record gold prices drove a large external surplus, and in July 2026 the IMF completed its lending program, saying the debt restructuring was largely complete and the risk of debt distress was back to moderate.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ghaea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Ghana: 2026 Article IV Consultation, Sixth Review under the Arrangement under the Extended Credit Facility, Request for a Waiver of Nonobservance of a Performance Criterion, Financing Assurances Review, and Request for a 36-month Policy Coordination Instrument (IMF Country Report No. 26/212)",
+          "date": "2026-07-10",
+          "quote": "The comprehensive debt restructuring is largely complete, and Ghana's risk of debt distress has returned to moderate."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099082426193065498/pdf/P513207-0a2917c8-a214-428d-9c39-983ba803af29.pdf",
+          "publisher": "World Bank",
+          "title": "Ghana 10th Economic Update: Reset for Growth: Sustaining Macroeconomic Recovery and Unlocking Transport for Transformation",
+          "date": "2026-08",
+          "quote": "under an IMF program concluded in July 2026"
+        }
+      ]
+    },
+    "tension": "In 2015 the IMF described two decades of strong growth, but income per person rose only 1.9 percent a year in 1990–2005, as fast population growth absorbed much of the gain in total output. And while the sources describe a strong recovery, investment fell to 9.7 percent of GDP in 2024, from 27.0 percent in 2015."
+  }
+}

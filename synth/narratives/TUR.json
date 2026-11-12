@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "TUR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TUR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Türkiye 2025 Article IV consultation staff report (WebSearch, tier 1 domains)",
+        "worldbank.org: Türkiye Macro Poverty Outlook 2025 (WebSearch, tier 1 domains)",
+        "oecd.org: OECD Economic Surveys Türkiye 2025 (WebSearch, tier 1 domains; pages returned 403 and were not cited)",
+        "imf.org / worldbank.org / oecd.org: Turkey 2001 financial crisis reforms growth 2002-2007 (WebSearch, tier 1 domains)",
+        "Opened: imf.org press release PR 26/047 (2026-02-13)",
+        "Opened: imf.org IMF Country Report 26/43 PDF (2026-02)",
+        "Opened: imf.org staff concluding statement 2025 Article IV mission (2025-11-21; not cited)",
+        "Opened: thedocs.worldbank.org Türkiye MPO PDF (October 2026)",
+        "Opened: documents1.worldbank.org Turkey Transitions Overview, Report 90509-TR (December 2014)",
+        "Critic check: re-opened all five cited URLs with WebFetch (2026-11-12) and checked each quoted passage against the PDF text"
+      ],
+      "critic_changes": [
+        "Thread 'Tight policy since 2023': dropped the World Bank MPO citation ('post-2023 stabilization program has improved macro-financial conditions'). The PDF text reads 'macrofinancial', and the passage does not support the thread's claim about interest rates. In its place is the IMF staff report passage 'since May 2023, monetary policy has been gradually tightened.'",
+        "Thread 'Tight policy since 2023': removed 'and the budget tightened' because no cited passage supports it for 2023 to 2025. 'Interest rates have been raised' became 'monetary policy has been gradually tightened' to match the IMF wording, and 'the 2023 earthquakes' became 'the earthquakes' because the cited passage gives no year.",
+        "Thread 'Crisis and regime shift, 2001': 'shut failing banks' and 'gave supervisors and the central bank independence' were reworded to match the source ('intervening insolvent institutions', 'independent supervision by the BRSA', 'an independent central bank'). Added a third World Bank 2014 citation, verified on the page, that supports protecting depositors.",
+        "Thread 'Reform slows after 2008': 'bank credit to the private sector' became 'domestic credit to the private sector' because the data series FS.AST.PRVT.GD.ZS is domestic credit, not bank credit. The 'cheap money' quote was replaced by a 24-word passage from the same sentence that includes the competitiveness point the thread text makes.",
+        "Thread 'Stalled productivity, slower workforce growth': 'weighed on the banks' became 'weighed on the financial sector' to match the IMF press release. The quote now starts with a capital 'The', as on the page.",
+        "Arc: 'After policy tightened' became 'After monetary policy tightened', and 'independent supervisors' was added to match the World Bank passage. The IMF staff report confirms 'since May 2023'.",
+        "since_last_year: added the MPO passage 'Disinflation has continued, but slowly and unevenly.' to support the claim that inflation is still falling only slowly.",
+        "Verified unchanged: all other quotes appear on their pages. The 'Since 2018, Turkiye...' passage matches apart from how the dash renders. Dates match the documents: WB report December 2014, IMF CR 26/43 February 2026, PR 26/047 13 February 2026, MPO October 2026. Every number was checked against desk/data/TUR.json: eras 1.8/4.3, CPI 105.2 (1994), 8.6 (2004), 72.3 (2022), 58.5 (2024), 34.9 (2025), growth -6.6 (2001), -6.2 (2009), 6.9/9.4 (2010/11), -0.1 (2019), 10.8 (2021), 3.1/3.2 (2024/25), peak 15,883 (2025), G1 3.7/3.9, structural median 2.2, credit 33.2 (2008) and 69.3 (2016).",
+        "Tension kept: the IMF staff report (para. 49) says 'The authorities note that TFP has risen since the pandemic', which supports the last sentence. No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "Since the 2001 crisis Türkiye's income per person has grown 4.3 percent a year, rising through repeated shocks and high inflation to a new peak in 2025.",
+    "arc": "From 1990 to 2001 income per person grew only 1.8 percent a year: inflation never fell below 50 percent, peaking at 105.2 in 1994, and output fell sharply in 1994, 1999 and 2001 (-6.6). The World Bank credits the response to the 2001 crisis, a strict clean-up of the banks under independent supervisors and an independent central bank, with a regime shift, and from 2002 to 2025 growth averaged 4.3 percent a year as inflation dropped to 8.6 by 2004. The era held through the 2009 fall (-6.2) with fast rebounds in 2010 and 2011, though the World Bank wrote in 2014 that reform had slowed while cheap global money flowed in. From 2018 a currency crisis, the pandemic and unconventional policy from 2021 to 2023 made growth swing between -0.1 in 2019 and 10.8 in 2021, and inflation reached 72.3 percent in 2022. After monetary policy tightened from May 2023, inflation fell to 34.9 percent in 2025 while growth held at 3.1 in 2024 and 3.2 in 2025, taking income per person to its highest level yet, 15,883 dollars in constant prices. Growth over 2016–2025 averaged 3.7 percent a year, a little below the 3.9 of 2006–2015.",
+    "threads": [
+      {
+        "title": "Crisis and regime shift, 2001",
+        "about": "history",
+        "text": "The 1990s brought high inflation and three deep falls in income per person, ending in the 2001 crisis. The World Bank credits the response, which took over failing banks while protecting depositors and relied on independent bank supervisors and an independent central bank, with a regime shift and an era of faster growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/683981468101383499/pdf/905090ESW0GRAY0IN0IMAGEBANK0ALREADY.pdf",
+            "publisher": "World Bank",
+            "title": "Turkey's Transitions: Integration, Inclusion, Institutions (Report No. 90509-TR, Overview)",
+            "date": "2014-12",
+            "quote": "The response to a major financial crisis in 2001 led to a regime shift and a subsequent era of rapid economic and social advancement"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/683981468101383499/pdf/905090ESW0GRAY0IN0IMAGEBANK0ALREADY.pdf",
+            "publisher": "World Bank",
+            "title": "Turkey's Transitions: Integration, Inclusion, Institutions (Report No. 90509-TR, Overview)",
+            "date": "2014-12",
+            "quote": "A radical macro and financial sector adjustment and restructuring program, implemented in the aftermath of the financial crises during 1999-2001"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/683981468101383499/pdf/905090ESW0GRAY0IN0IMAGEBANK0ALREADY.pdf",
+            "publisher": "World Bank",
+            "title": "Turkey's Transitions: Integration, Inclusion, Institutions (Report No. 90509-TR, Overview)",
+            "date": "2014-12",
+            "quote": "It was based on the strict principle of not bailing out bank shareholders but protecting depositors by quickly intervening insolvent institutions"
+          }
+        ]
+      },
+      {
+        "title": "Reform slows after 2008",
+        "about": "history",
+        "text": "After the 2009 fall, income per person rebounded by 6.9 percent in 2010 and 9.4 in 2011, and domestic credit to the private sector rose from 33.2 percent of GDP in 2008 to 69.3 in 2016. The World Bank wrote in 2014 that reform momentum had slowed and that cheap global money was hiding weak competitiveness.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/683981468101383499/pdf/905090ESW0GRAY0IN0IMAGEBANK0ALREADY.pdf",
+            "publisher": "World Bank",
+            "title": "Turkey's Transitions: Integration, Inclusion, Institutions (Report No. 90509-TR, Overview)",
+            "date": "2014-12",
+            "quote": "The reform momentum has slowed since the global economic and financial crisis and the EU reform anchor has notably weakened."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/683981468101383499/pdf/905090ESW0GRAY0IN0IMAGEBANK0ALREADY.pdf",
+            "publisher": "World Bank",
+            "title": "Turkey's Transitions: Integration, Inclusion, Institutions (Report No. 90509-TR, Overview)",
+            "date": "2014-12",
+            "quote": "flow of cheap money to Turkey in the wake of the global economic and financial crisis, Turkey's underlying competitiveness challenges have not been addressed"
+          }
+        ]
+      },
+      {
+        "title": "Successive shocks, 2018 to 2023",
+        "about": "history",
+        "text": "A currency crisis in 2018, the pandemic in 2020 and expansionary, unconventional policy from 2021 to 2023 that leaned on quantitative controls made growth swing, from -0.1 in 2019 to 10.8 in 2021. Inflation climbed to 72.3 percent in 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1turea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Türkiye: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Türkiye",
+            "date": "2026-02",
+            "quote": "Since 2018, Turkiye was hit by multiple successive shocks—a currency crisis in 2018, COVID in 2020, expansionary and unconventional policies between 2021 and 2023."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1turea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Türkiye: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Türkiye",
+            "date": "2026-02",
+            "quote": "between 2021 and 2023, monetary policy under the Turkish Economic Model (TEM) heavily relied on distortionary quantitative restrictions"
+          }
+        ]
+      },
+      {
+        "title": "Tight policy since 2023",
+        "about": "present",
+        "text": "Since May 2023 monetary policy has been gradually tightened, and inflation fell from 58.5 percent in 2024 to 34.9 in 2025. Growth held up, with spending lifted by gold price gains and investment by rebuilding after the earthquakes.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1turea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Türkiye: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Türkiye",
+            "date": "2026-02",
+            "quote": "since May 2023, monetary policy has been gradually tightened."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1turea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Türkiye: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Türkiye",
+            "date": "2026-02",
+            "quote": "consumption has been supported by high household inflation expectations and wealth effects from gold price increases, while investment has been buoyed by earthquake reconstruction."
+          }
+        ]
+      },
+      {
+        "title": "Stalled productivity, slower workforce growth",
+        "about": "present",
+        "text": "The IMF finds that productivity has stalled in recent years just as growth in the working-age population slows. It also finds that the slow fall in inflation has weighed on the financial sector and on productivity growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1turea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Türkiye: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for the Republic of Türkiye",
+            "date": "2026-02",
+            "quote": "TFP in Türkiye has been stagnant in recent years, at a time when working age population growth is already decelerating"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/13/pr-26047-turkiye-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Türkiye",
+            "date": "2026-02-13",
+            "quote": "The gradual approach to disinflation has weighed on the financial sector and slowed productivity growth."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth has slowed in 2026 under tight policy. The World Bank reports slower growth in the second quarter of 2026, inflation still falling only slowly, and a Middle East conflict from February 2026 that pushed up energy prices and drew down reserves.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-tur.pdf",
+          "publisher": "World Bank",
+          "title": "Türkiye: Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "Real growth slowed to 2.3 percent yoy in 2026-Q2 from 3.5 percent in 2025-Q4."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-tur.pdf",
+          "publisher": "World Bank",
+          "title": "Türkiye: Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "Disinflation has continued, but slowly and unevenly."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-tur.pdf",
+          "publisher": "World Bank",
+          "title": "Türkiye: Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "Net reserves excluding swaps stood at US$55.9 billion in end-August, lower than around US$80 billion before the Middle East conflict in February."
+        }
+      ]
+    },
+    "tension": "The IMF says productivity has stalled in recent years, yet income per person rose every year from 2020 to 2025, reached a new peak in 2025 and grew 3.7 percent a year over 2016–2025, well above the structural-peer median of 2.2. The sources trace recent growth mainly to strong spending, gold price gains and earthquake rebuilding rather than to gains in efficiency. The same IMF report notes that the authorities see it differently and say productivity has risen since the pandemic."
+  }
+}

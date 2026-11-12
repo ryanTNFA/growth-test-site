@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "iso3": "PRT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PRT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains): \"Portugal Article IV 2025 staff concluding statement\"",
+        "tier 1 allowed_domains: \"OECD Economic Survey Portugal 2025 productivity immigration\"",
+        "tier 1 allowed_domains: \"Portugal immigration population growth labor force economic growth IMF selected issues 2025\" (not run: session web-search budget used up)",
+        "tier 1 allowed_domains: \"Portugal 2011 economic adjustment programme euro crisis recession productivity stagnation 2000s\" (not run: session web-search budget used up)",
+        "Opened: imf.org 2026 Article IV concluding statement; imf.org 2026 Article IV country report page; imf.org 2024 Article IV country report PDF (No. 24/308); imf.org 2024 concluding statement and 2024 press release pages",
+        "Tried but blocked (HTTP 403): oecd.org Economic Survey of Portugal 2026, OECD Economic Outlook 2025 Issue 2 Portugal note, OECD pro-productivity institutions report",
+        "Critic re-opened: imf.org 2026 concluding statement (2026-05-06), imf.org 2026 Article IV country report page (published 2026-06-24), imf.org Country Report No. 24/308 PDF (full text extracted, October 2024)"
+      ],
+      "critic_changes": [
+        "Re-opened all three cited URLs. The 2024 report PDF came back as binary, so its full text was extracted locally: every 2024 quote matches the page word for word, and the date (October 2024, press release dated October 2, 2024) is confirmed. The 2026 concluding statement quotes match exactly, dated 2026-05-06. The 2026 country report page quotes match exactly.",
+        "2026 Article IV country report citations: date sharpened from 2026-06 to 2026-06-24, the page's 'Published' date. The URL path shows 06/23.",
+        "Arc: 'Growth ran at 3 to 4 percent a year in the late 1990s' changed to '3.1 to 4.3 percent a year from 1995 to 1999', because 1998 growth was 4.3 percent, above 4.",
+        "Arc: the 3.2 percent fall in 2009 is no longer placed 'during the sovereign debt crisis', since that crisis came in 2011 to 2013. Only the 2012 fall is now tied to it.",
+        "Arc: the IMF's causes for the recent run now match the cited passages: consumption, net exports, EU-funded investment, tourism and net migration. 'Rising net migration' became 'net migration'. 'Labour' changed to 'labor' to match the sources.",
+        "Productivity thread: the claim about small firms, misallocation and weak within-firm productivity had no supporting passage, so a verified quote from the 2024 report's Annex VI was added. The text now follows that quote: small firms and misallocation are partial causes, within-firm productivity the main one.",
+        "Migration thread: the claim that the working-age population will fall faster than the euro area's was unsupported, so a verified 2024 report passage saying so was added.",
+        "EU funds and tourism thread: 'exports including tourism' reworded to net exports plus the IMF's tourism and current-account expectation. The claim that growth eases as EU recovery funds end was unsupported, so the verified RRF passage was added as a citation.",
+        "Public debt thread: two unsupported claims were removed: that budget surpluses caused the debt cut, and 'easing the weight left by the debt crisis'. The text now states the fall alongside three surpluses, and verified quotes on the third surplus and on debt still being high were added.",
+        "Debt crisis thread: 'Portugal's own IMF director' clarified to 'Portugal's executive director at the IMF', which is who wrote the cited statement.",
+        "since_last_year and tension: 'called 2025 a strong year' and 'public debt still falling' were replaced with what the cited passage says: GDP grew faster than the euro area average in 2025.",
+        "All numbers in the headline, arc, threads, since_last_year and tension were checked against desk/data/PRT.json and match the data file. Checked numbers: 1.4 (1990-2025 era), 0.0 (2006-2015), 1.8 (2016-2025), growth of -3.2 (2009), -3.7 (2012), 3.6 (2017), -8.3 (2020), 4.9 (2021), 6.2 (2022), 1.1 (2024) and 0.8 (2025), investment of 28.0 (2000), 14.8 (2013) and 20.7 (2025), peak 2025, and slower growth each year from 2022 to 2025.",
+        "No banned phrases or recommendation language found. The story has 5 threads and 3 distinct recent tier 1 sources, so it stays tier 1."
+      ]
+    },
+    "headline": "After a flat decade and a debt crisis, Portugal's income per person reached a new high in 2025, though its growth has slowed each year since 2022.",
+    "arc": "Since 1990 Portugal's income per person has grown 1.4 percent a year, with no lasting shift in pace, but that single era hides sharp swings. Growth ran at 3.1 to 4.3 percent a year from 1995 to 1999, then stalled in the early 2000s, and the IMF notes that labor productivity has lagged European peers for two decades. Over 2006 to 2015 income per person did not grow at all, averaging 0.0 percent a year: it fell 3.2 percent in 2009 and, during the sovereign debt crisis, 3.7 percent in 2012, while investment dropped from 28.0 percent of GDP in 2000 to 14.8 percent in 2013. The last decade was better, at 1.8 percent a year, with growth of 3.6 percent in 2017, a fall of 8.3 percent in the 2020 pandemic and rebounds of 4.9 and 6.2 percent in 2021 and 2022. The IMF links the recent run to strong consumption, net exports, investment backed by EU funds, tourism and net migration, and income per person reached its highest level yet in 2025, even as its growth slowed to 0.8 percent that year.",
+    "threads": [
+      {
+        "title": "Debt crisis and deep recessions",
+        "text": "Portugal went through two deep recessions in a decade: the sovereign debt crisis of 2011 to 2013 and the 2020 pandemic. In the data, income per person fell in 2011, 2012 and 2013 and dropped 8.3 percent in 2020. Portugal's executive director at the IMF credits the later recovery partly to the adjustments made after the debt crisis.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "two deep recessions that Portugal experienced in the past decade (with a cumulative real GDP contraction of 6.6 percent during 2011–13"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "benefiting from macroeconomic adjustments following the sovereign debt crisis and secular trends, notably in human capital growth."
+          }
+        ]
+      },
+      {
+        "title": "Productivity that lags peers",
+        "text": "The IMF finds that Portugal has trailed its European peers in output per worker for two decades, partly because of many small firms and resources going to less productive firms, but mostly because of weak productivity inside firms. It expects an aging population, low investment and slow productivity growth to hold growth below 2 percent over the medium term.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "Portugal has lagged its European peers in labor productivity over the last two decades, despite recent progress in upskilling the labor force"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "This productivity gap is partially explained by resource misallocation and the predominance of small firms, while weak within- firm productivity remains a dominant factor."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-portugal-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Portugal: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "Over the medium term, population aging, relatively low investment levels, and low productivity growth are expected to keep growth below 2 percent."
+          }
+        ]
+      },
+      {
+        "title": "Migration offsets an aging population",
+        "text": "Portugal's own working-age population is shrinking, but large net migration has more than made up for it, raising hours worked. The IMF still expects the working-age population to fall faster than in the euro area over time.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "Large positive net migration has more than mitigated a shrinking domestic working-age population, resulting in a positive working-age population growth in 2023."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "Increasing labor force participation and net positive migration led to higher hours worked while unemployment remains at historically low levels."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "the rapidly aging population remains an issue as working-age population is projected to decline faster than the EA average"
+          }
+        ]
+      },
+      {
+        "title": "EU funds and tourism",
+        "text": "The IMF ties the post-pandemic run to strong consumption, net exports and investment paid for by EU funds, and expects strong tourism to keep the current account in surplus. Investment in the data has climbed back from 14.8 percent of GDP in 2013 to 20.7 percent in 2025. The IMF expects growth to ease as the EU recovery funds end.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1prtea2024001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "IMF Country Report No. 24/308 Portugal: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2024-10",
+            "quote": "driven by strong private consumption, net exports, and investment supported by EU funds."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-portugal-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Portugal: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "Continued strong tourism inflows are expected to support a current account surplus over the medium term"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-portugal-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Portugal: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "Growth expected to slow to 1.7 percent in 2027, mostly due to the phase-out of RRF funds."
+          }
+        ]
+      },
+      {
+        "title": "Public debt falls fast",
+        "text": "Public debt has fallen sharply since 2020, alongside three budget surpluses in a row. The IMF still describes the debt as high.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/06/23/portugal-2026-article-iv-consultation-press-release-staff-report-and-statement-by-the-577161",
+            "publisher": "IMF",
+            "title": "Portugal: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2026-06-24",
+            "quote": "Public debt was brought below 90 percent of GDP, down from 134 percent in 2020."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/06/23/portugal-2026-article-iv-consultation-press-release-staff-report-and-statement-by-the-577161",
+            "publisher": "IMF",
+            "title": "Portugal: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2026-06-24",
+            "quote": "The budget recorded its third surplus in three years."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/06/23/portugal-2026-article-iv-consultation-press-release-staff-report-and-statement-by-the-577161",
+            "publisher": "IMF",
+            "title": "Portugal: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+            "date": "2026-06-24",
+            "quote": "Public debt is still high despite recent reductions."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF's 2026 review found that GDP grew faster than the euro area average in 2025. It expects growth to ease in 2027 as EU recovery funds end. In the data, growth in income per person slowed to 0.8 percent in 2025, from 1.1 percent in 2024.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-portugal-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Portugal: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-06",
+          "quote": "Growth expected to slow to 1.7 percent in 2027, mostly due to the phase-out of RRF funds."
+        },
+        {
+          "url": "https://www.imf.org/en/publications/cr/issues/2026/06/23/portugal-2026-article-iv-consultation-press-release-staff-report-and-statement-by-the-577161",
+          "publisher": "IMF",
+          "title": "Portugal: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Portugal",
+          "date": "2026-06-24",
+          "quote": "GDP grew faster than the euro area average in 2025."
+        }
+      ]
+    },
+    "tension": "The IMF reports that GDP grew faster than the euro area average in 2025. Yet income per person grew only 0.8 percent in 2025, down from 6.2 percent in 2022, and has slowed every year since. The IMF's 2024 report notes that net migration was enlarging the working-age population, and when the population grows, total output can rise faster than income per person."
+  }
+}

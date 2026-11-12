@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "iso3": "BHS",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BHS",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: The Bahamas 2025 Article IV Consultation Press Release Staff Report 2026 (to find an openable copy, since the elibrary page returned 403)",
+        "Pages opened to verify: imf.org 2025 Article IV staff report PDF (1bhsea2026001-source-pdf.pdf); thedocs.worldbank.org MPO October 2026; documents1.worldbank.org MPO April 2026; imf.org 2016 Article IV press release; imf.org 2001 Public Information Notice; imf.org 2020 Article IV concluding statement; flagships.iadb.org 2020 Q2 bulletin (The Bahamas)",
+        "Draft's searches: imf.org (tier 1): Bahamas Article IV consultation 2025 staff report press release",
+        "Draft's searches: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): The Bahamas economy tourism growth outlook 2024 2025",
+        "Draft's searches: worldbank.org (tier 1): Bahamas Macro Poverty Outlook 2025 tourism growth",
+        "Draft's searches: tier 1 domains: Bahamas Hurricane Dorian 2019 damage economy COVID-19 2020 contraction tourism",
+        "Draft's searches: imf.org, worldbank.org, iadb.org, caribank.org, oecd.org (tier 1): Bahamas Article IV global financial crisis tourism slump weak growth Baha Mar delay",
+        "Draft's searches: imf.org: IMF Executive Board concludes 2016 Article IV consultation The Bahamas press release; Bahamas IMF Public Information Notice Article IV 2009 2010"
+      ],
+      "critic_changes": [
+        "IMF 2025 Article IV citations: the elibrary.imf.org URL returned HTTP 403 and could not be opened, so every passage was checked in the same report's PDF on imf.org (1bhsea2026001-source-pdf.pdf). All four quoted passages appear verbatim there. Each URL was switched to the PDF, and the date became 2026-02, which is what the document shows ('February 2026'). The 6 February date appears only in the publication page's URL, not in the document.",
+        "Thread 'Cruise boom, hotel limits': the draft's 'stayover visitors, who spend far more, have levelled off' was not supported by its cited passages. The text was rewritten to say stayover visitors bring most tourist spending and that growth in their arrivals has slowed. The World Bank October 2026 citation was replaced with two IMF Box 1 passages that support this: the 90 percent of spending figure, and slower arrivals growth with rentals easing hotel limits. 'At peak times' was dropped, because the only source wording for it ('are binding in peak periods') is close to a banned phrase.",
+        "Thread 'A construction wave fades': the IMF passage covers only the first half of 2025, so 'In 2025' became 'In the first half of 2025', and 'as those projects opened' became 'began operating', in line with the World Bank wording.",
+        "Thread 'Tourism investment in the 1990s': the draft quote stopped at 'substantial inflows', so it did not support 'tourism, shipping and construction'. It was split into two verbatim passages from the 2001 IMF notice, each under 25 words, the second naming tourism, shipping and construction.",
+        "Thread 'A decade of shocks to 2016': 'bank lending stayed weak for years' was changed to 'bank lending to the private sector stayed weak' to match the IMF passage. 'Growth stalled in 2015' was kept: the 2016 IMF press release says activity stalled in 2015.",
+        "Arc: 'the delayed opening of the Baha Mar resort' was changed to 'uncertainty over when the Baha Mar resort would open' to match the source, and 'the end of building work' was added from the same passage.",
+        "Since last year: a World Bank October 2026 citation was added for rising arrivals into 2026, and another for the May 2026 re-election, so every claim has a quoted passage. Both appear on the opened MPO PDF.",
+        "Tension: 'over 2006–2025' was changed to 'from 2006 to 2024', the years actually observed for the 0.4 average (G1 years_20y). Every number was checked against BHS.json: -1.2, 1.7, -1.0, 2.0, -5.4 (2009), -20.3 (2020), 17.4 (2021), 10.6 (2022), 0.4, the 2024 peak and the 2002 level-first-reached. All match.",
+        "tier1_recent_found was lowered from 4 to 3. Three distinct recent tier 1 sources were opened and verified: the IMF 2025 Article IV report, the World Bank MPO for April 2026 and the World Bank MPO for October 2026. The 2025 IMF concluding statement the draft listed is not cited, so it was not counted.",
+        "Verified with no change: World Bank April and October 2026 MPO passages (text extracted from the PDFs), the IDB 2020 bulletin passages (it shows no date beyond its 2020 Q2 edition, so 2020 was kept), the 2020 IMF concluding statement (2020-12-02), the 2016 IMF press release (2016-06-10) and the 2001 IMF notice (2001-08-14). No banned phrases and no recommendation language remain."
+      ]
+    },
+    "headline": "Tourism has taken Bahamian income per person to a new high in 2024, but after two decades of shocks it stands little above where it was in 2002.",
+    "arc": "Since 1990, income per person in the Bahamas has moved in four eras, each shaped by how tourism fared. It fell by 1.2 percent a year in 1990–1997, at the end of what the IMF called a decade of low growth. It then rose by 1.7 percent a year in 1998–2006, as private money flowed into tourism, shipping and construction. From 2007 to 2016 it fell by 1.0 percent a year: the global crisis hit in 2009, when income per person dropped 5.4 percent, and in the mid-2010s government belt-tightening, the end of building work and uncertainty over when the Baha Mar resort would open held back spending. Since 2017 it has grown 2.0 percent a year, but that average hides Hurricane Dorian in 2019, a 20.3 percent fall in 2020 when the pandemic stopped tourism, and rebounds of 17.4 percent in 2021 and 10.6 percent in 2022. By 2024 income per person was at its highest yet, though only a little above the level it first reached in 2002.",
+    "threads": [
+      {
+        "title": "Cruise boom, hotel limits",
+        "text": "Recent tourism growth has come mostly from cruise visitors. Stayover visitors bring most tourist spending, but growth in their arrivals has slowed, as hotel rooms run short and short-term rentals fill only part of the gap.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "Cruise arrivals have surged. The Bahamas now leads the cruise segment with around 40 percent of sea arrivals in the Caribbean going to The Bahamas."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "Around 90 percent of tourism expenditure (or 28 percent of GDP) is from stayover visitors."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "After a strong post-pandemic rebound, growth in arrivals has slowed even as hotel capacity constraints have been partly mitigated by short-term rentals."
+          }
+        ]
+      },
+      {
+        "title": "A construction wave fades",
+        "text": "In the first half of 2025, building work on large tourism and energy projects drove much of the growth. As those projects began operating, growth slowed in the second half of the year.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "with construction as a key driver, contributing nearly 2 percentage points and boosted by commercial projects in tourism and energy"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099709508052639685/pdf/Bulk-157f88af-ce8a-4449-bae6-c3607c9735c3.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: The Bahamas (April 2026)",
+            "date": "2026-04",
+            "quote": "Growth moderated in the second half of the year, as projects moved from construction to operation."
+          }
+        ]
+      },
+      {
+        "title": "Dorian, then the pandemic",
+        "text": "Hurricane Dorian struck Grand Bahama and Abaco in September 2019. Months later the pandemic halted tourist arrivals, and income per person fell 20.3 percent in 2020 before rebounding in 2021 and 2022.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://flagships.iadb.org/en/caribbean-region-quarterly-bulletin-2020-q2/the-bahamas",
+            "publisher": "IDB",
+            "title": "Caribbean Region Quarterly Bulletin: Caribbean Economies in the time of Coronavirus - The Bahamas",
+            "date": "2020",
+            "quote": "The Bahamas was overcoming the effects of Hurricane Dorian, a category 5 hurricane which hit the islands of Grand Bahama and Abaco in September 2019"
+          },
+          {
+            "url": "https://flagships.iadb.org/en/caribbean-region-quarterly-bulletin-2020-q2/the-bahamas",
+            "publisher": "IDB",
+            "title": "Caribbean Region Quarterly Bulletin: Caribbean Economies in the time of Coronavirus - The Bahamas",
+            "date": "2020",
+            "quote": "COVID-19 has resulted in a sudden stop in tourism arrivals since March 2020"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2020/12/02/mcs-the-bahamas-staff-concluding-statement-of-the-2020-article-iv-mission",
+            "publisher": "IMF",
+            "title": "The Bahamas: Staff Concluding Statement of the 2020 Article IV Mission",
+            "date": "2020-12-02",
+            "quote": "The Bahamas has been hit hard by COVID-19, compounding recovery from Hurricane Dorian in fall 2019."
+          }
+        ]
+      },
+      {
+        "title": "A decade of shocks to 2016",
+        "text": "After the global crisis, bank lending to the private sector stayed weak. By the mid-2010s, government belt-tightening, the end of building work and doubts over when the Baha Mar resort would open weighed on spending, and growth stalled in 2015.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr16274",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2016 Article IV Consultation with The Bahamas",
+            "date": "2016-06-10",
+            "quote": "Private consumption and investment weighed down by fiscal consolidation, end to construction, and uncertainty over the opening of the Baha Mar megaresort."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "Growth in private sector credit was generally weak in The Bahamas following the GFC and immediately after the pandemic."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bhsea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Bahamas: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-02",
+            "quote": "Following a pre-pandemic decade of low growth and adverse shocks, The Bahamas has staged a robust post-Covid recovery."
+          }
+        ]
+      },
+      {
+        "title": "Tourism investment in the 1990s",
+        "text": "The IMF dated the turn from the slow early 1990s to the mid-1990s, when private money poured into tourism, shipping and construction. That investment lines up with the 1998–2006 era of rising income per person.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn0189",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes Article IV Consultation with The Bahamas",
+            "date": "2001-08-14",
+            "quote": "After a decade of low economic growth, a sustained recovery began in the mid-1990s"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn0189",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes Article IV Consultation with The Bahamas",
+            "date": "2001-08-14",
+            "quote": "driven by substantial inflows of private investment in tourism, shipping and construction"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year, building work and cruise visitors carried growth while stayover visitors dipped, and growth slowed as big projects opened. Into 2026 tourist arrivals kept rising, but higher fuel prices pushed inflation up, and the government was re-elected in May 2026.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099709508052639685/pdf/Bulk-157f88af-ce8a-4449-bae6-c3607c9735c3.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: The Bahamas (April 2026)",
+          "date": "2026-04",
+          "quote": "Cruise arrivals increased 11.6 percent year-on-year through October 2025, while stayover tourists fell 1.9 percent."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bhs.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: The Bahamas (October 2026)",
+          "date": "2026-10",
+          "quote": "Tourism activity remained robust through May 2026, with total visitor arrivals increasing by 14.1 percent y-o-y"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bhs.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: The Bahamas (October 2026)",
+          "date": "2026-10",
+          "quote": "Inflation continued to accelerate in 2026, reaching 4.3 percent y-o-y in June, driven by higher international fuel prices and rising costs of imported goods."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bhs.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: The Bahamas (October 2026)",
+          "date": "2026-10",
+          "quote": "The administration, re-elected in the May 2026 general elections"
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe a strong post-Covid recovery, and growth since 2017 averages 2.0 percent a year. But much of that is ground won back after the 2020 collapse. Income per person in 2024 was only a little above its 2007 level and about where it first stood in 2002, so from 2006 to 2024 it grew just 0.4 percent a year. A smaller gap: the IMF dates a recovery to the mid-1990s, yet the data put 1990–1997 at -1.2 percent a year, because the falls of the early 1990s were deep."
+  }
+}

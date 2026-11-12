@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "iso3": "MLI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MLI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Mali IMF Article IV 2025 staff report growth gold energy crisis",
+        "tier 1 domains: Mali Macro Poverty Outlook World Bank 2025 economic update",
+        "tier 1 domains: Mali 2012 crisis recession coup occupation north growth contracted World Bank IMF",
+        "tier 1 domains: Mali 2020 coup 2022 ECOWAS sanctions economic impact growth per capita AfDB African Economic Outlook Mali",
+        "opened: thedocs.worldbank.org MPO Mali (October 2026); imf.org IMF Country Report 25/255 (2025 Article IV); imf.org PR 25/432 (Dec 2025); documents1.worldbank.org Interim Strategy Note FY14-15 (May 2013)",
+        "critic re-opened all four cited URLs and checked every quoted passage against the extracted page text"
+      ],
+      "critic_changes": [
+        "I opened all four cited URLs. Every quoted passage appears on its page, and every date matches the document: MPO October 2026, IMF CR 25/255 September 2025, PR 25/432 18 December 2025, ISN 20 May 2013. All are on tier 1 domains. Three distinct recent tier 1 sources remain, so the story stays tier 1.",
+        "The draft said income per person 'barely grew' in 2021. The data file shows -0.0 for 2021, so it now says it was flat in 2021 and rose 0.6 percent in 2022.",
+        "The 'Upheaval, sanctions and aid' thread and the arc called 2020 'the start of years of political upheaval', but no cited passage supported that. The thread is renamed 'Pandemic, coup and sanctions'. It now cites IMF passages from the same report that name the COVID-19 pandemic, the 2021 coup and the sanctions. The 'GDP growth improved to 4.7 percent' quote and the aid-flows quote were replaced to keep to three citations. The claim that aid 'kept falling since' was dropped. The arc sentence was reworded to match.",
+        "Gold thread: 'Gold makes up most exports, so output swings with the mines' went further than the sources. It now reads 'Exports are concentrated in gold', with an added MPO citation. The lithium claim now follows the MPO passage, which was lengthened to include the decline in gold export volumes. It is stated as the World Bank's expectation, not as 'now starting to offset'.",
+        "Stable-years thread: 'From the mid-1990s to 2006' changed to 'For 1994 to 2006' to match the cited passage.",
+        "since_last_year: 'insecurity on transport routes' changed to 'attacks', following the IMF release's 'fuel supply disruptions caused by terrorist attacks'. Lithium in 2026 is now tied to export values, as in the MPO, not to growth.",
+        "Arc: 'a fast-growing population absorbs most of the gain' softened to 'much of the gain'. The IMF report says the population grows about 3 percent a year, and output grows around 4 to 5 percent.",
+        "Every number in the headline, arc, threads, since_last_year and tension was checked against MLI.json and matches: 1.1 (1990-2025 and 2016-2025), 0.6 (2006-2015), -3.9 (2012), -4.1 (2020), 0.6 (2022), 2.6 (2025, the fastest since 2016's 2.7), and the 2025 peak. No banned phrases, recommendations or 'per head' found."
+      ]
+    },
+    "headline": "Mali's income per person has grown 1.1 percent a year since 1990, as a fast-growing population and repeated crises absorb most gains from gold and farming.",
+    "arc": "The data show one long era: income per person grew 1.1 percent a year on average over 1990-2025, with no lasting shift up or down. The last decade, 2016-2025, averaged 1.1 percent, up from 0.6 in 2006-2015, and income per person reached its highest level yet in 2025. Under that steady average lie sharp falls: 3.9 percent in 2012, after a coup and the occupation of the north cut aid and tourism, and 4.1 percent in 2020, the year of the COVID-19 pandemic, before a coup in 2021 and regional sanctions in 2022. The sources describe an economy carried by gold exports, rain-fed farming and services, where output often grows briskly but a fast-growing population absorbs much of the gain. In recent years insecurity, a power crisis since late 2022 and the shutdown of the largest gold mine in 2025 have weighed on output, while lithium has begun to add to exports.",
+    "threads": [
+      {
+        "title": "Conflict since 2012",
+        "about": "present",
+        "text": "A coup in March 2012 and the occupation of the north cut aid and tourism, and income per person fell 3.9 percent that year. The insecurity has not ended: the sources say it still disrupts transport routes and fuel supply.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/165011468281401293/pdf/762330ISN0P119070Box377300B00OUO090.pdf",
+            "publisher": "World Bank",
+            "title": "Interim Strategy Note for the Republic of Mali for the Period FY14-15",
+            "date": "2013-05-20",
+            "quote": "The political and security crisis has had a severe economic impact, through the marked reduction of ODA and economic activity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "the country's multidimensional crisis, which has severely impacted its socio-economic fabric since 2012"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mli.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mali",
+            "date": "2026-10",
+            "quote": "Insecurity has further disrupted transport corridors, constraining fuel supply and exacerbating food insecurity."
+          }
+        ]
+      },
+      {
+        "title": "Gold, the mine dispute, lithium",
+        "about": "present",
+        "text": "Exports are concentrated in gold. The largest gold mine shut in January 2025 in a tax dispute tied to the 2023 mining code. The World Bank expects gold export volumes to decline and rising lithium exports to help lift export values.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mli.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mali",
+            "date": "2026-10",
+            "quote": "Mali's economy remains vulnerable to insecurity, climate shocks, and commodity-price fluctuations, with exports concentrated in gold."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "Adding to the strain, the country's largest gold mine shut in January 2025 over a tax dispute tied to the new mining code"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mli.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mali",
+            "date": "2026-10",
+            "quote": "While gold export volumes are expected to decline due to mine depletion, higher gold prices and rising lithium exports are projected to increase export values"
+          }
+        ]
+      },
+      {
+        "title": "Power shortages",
+        "about": "present",
+        "text": "Since late 2022 Mali has had a severe electricity crisis, with repeated outages. The World Bank lists power shortages among the things holding back private firms.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "Since late 2022, the country has been struggling with a severe electricity crisis."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mli.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mali",
+            "date": "2026-10",
+            "quote": "Electricity shortages, infrastructure gaps, and informality constrain private sector development"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, coup and sanctions",
+        "about": "history",
+        "text": "Income per person fell 4.1 percent in 2020, was flat in 2021 and rose 0.6 percent in 2022. The IMF lists insecurity, the COVID-19 pandemic, cuts in budget support and sanctions among the shocks of these years, and says external support fell after the 2021 coup. Regional sanctions in the first half of 2022 cut the government off from the regional bond market.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "several shocks hitting Mali's economy that generated a need for additional financing, including security issues, the COVID-19 pandemic, and reductions in budget support and sanctions"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "political instability and ensuing reduction in external support and foreign investment after the 2021 coup d'état"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mliea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Mali: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Mali (IMF Country Report No. 25/255)",
+            "date": "2025-09",
+            "quote": "The ECOWAS sanctions in the first half of 2022 cut Mali off from the regional securities market"
+          }
+        ]
+      },
+      {
+        "title": "Stable years before 2012",
+        "about": "history",
+        "text": "For 1994 to 2006 the World Bank credits political stability, economic reforms and large aid inflows with steady growth. Even then, the gains in income per person were modest.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/165011468281401293/pdf/762330ISN0P119070Box377300B00OUO090.pdf",
+            "publisher": "World Bank",
+            "title": "Interim Strategy Note for the Republic of Mali for the Period FY14-15",
+            "date": "2013-05-20",
+            "quote": "Despite adverse external shocks in 1994-2006, Mali was able to achieve an average annual GDP growth of 5 percent during the period."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/165011468281401293/pdf/762330ISN0P119070Box377300B00OUO090.pdf",
+            "publisher": "World Bank",
+            "title": "Interim Strategy Note for the Republic of Mali for the Period FY14-15",
+            "date": "2013-05-20",
+            "quote": "This resulted in modest increases in per capita incomes and some improvements in human development."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 attacks disrupted fuel supplies, gold output fell after the largest mine shut, and the IMF expected growth to slow. The World Bank now expects mining and services to lift growth in 2026, with rising lithium exports adding to export values.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/18/pr-25432-mali-imf-approves-1st-rev-of-staff-monitored-program",
+          "publisher": "IMF",
+          "title": "IMF Management Approves the First Review of the Staff-Monitored Program with Mali",
+          "date": "2025-12-18",
+          "quote": "Growth is projected to slow to 4.1 percent in 2025."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mli.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mali",
+          "date": "2026-10",
+          "quote": "GDP growth is expected to accelerate from 4.1 percent in 2025 to 5.0 percent in 2026 (2.0 percent per capita), supported by mining and …"
+        }
+      ]
+    },
+    "tension": "The sources often describe resilient output growth, yet income per person rose only 1.1 percent a year over 2016-2025, because the population grows nearly as fast as the economy. The sources also call 2025 a year of slowdown, while the data file shows income per person growing 2.6 percent in 2025, the fastest since 2016."
+  }
+}

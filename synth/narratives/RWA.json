@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "iso3": "RWA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "RWA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Rwanda IMF Article IV 2025 staff report press release growth'",
+        "same tier 1 domains: 'Rwanda Economic Update World Bank 2025 growth'",
+        "same tier 1 domains: 'Rwanda 1994 genocide economic recovery growth since 2000 public investment aid-financed Future Drivers of Growth'",
+        "Opened by drafter: imf.org press release PR25/405 (2025-12-04); imf.org IMF Country Report No. 25/319 PDF; thedocs.worldbank.org Macro Poverty Outlook Rwanda (October 2026); worldbank.org Rwanda country page (undated, not cited); documents1.worldbank.org Rwanda Systematic Country Diagnostic (2019); elibrary.imf.org 2020 departmental paper (403, not read)",
+        "Critic re-opened and text-searched: imf.org IMF Country Report No. 25/319 (December 2025); thedocs.worldbank.org mpo-rwa.pdf (Macro Poverty Outlook, October 2026); documents1.worldbank.org Rwanda Systematic Country Diagnostic (June 25, 2019)"
+      ],
+      "critic_changes": [
+        "Checked all three cited documents by extracting the full text. IMF Country Report No. 25/319 is dated December 2025, the World Bank Macro Poverty Outlook is dated October 2026, and the World Bank Systematic Country Diagnostic is dated June 25, 2019. Every original quoted passage appears word for word on its page, every date matches and every domain is tier 1. All citations were kept.",
+        "Checked every number against desk/data/RWA.json: -0.4 (1990–1997 era), 41.5 (1994), 61.9 (1995), 5.0 (1998–2025 era), 5.1 (avg_prior_10y), 4.5 (avg_10y), 4.9 (2020), 7.0 (2025), and 3.2, 2.3 and 5.6 (2016–2018). All are correct and none needed changing.",
+        "Arc: the draft said the IMF links the slowdown from 2006–2015 to 2016–2025 to fading productivity and public investment crowding out private activity. The IMF passage is about its Period II (2010–2015). The sentence now says the IMF links the slowdown to the 2010s.",
+        "Thread 'Shocks, an airport and debt': removed the claim that borrowing for 'rebuilding' pushed debt up, which the cited passages do not support. Changed 'has pushed public debt up' to say that the IMF expects NKIA borrowing to push debt higher, which matches the passage's 'is expected to'. Changed 'Marburg virus' to the source's 'Marburg disease'.",
+        "Thread 'Collapse and genocide in the 1990s': added a third citation from the same SCD page ('trade links were ruptured ... institutions of governance required rebuilding') to support the claim that the genocide destroyed institutions and trade links.",
+        "Thread 'Jobs that lag growth': added a second MPO citation ('with youth, women, and rural workers facing particularly weak labor-market outcomes'), because the original quote did not cover the claim about young people, women and rural workers.",
+        "since_last_year: replaced the Q1 2026/9.4 percent quote with the MPO's 'Growth was broad-based ...' sentence, which supports 'broad growth led by industry, services and farming'. Added the MPO's Middle East inflation sentence to support the Middle East claim, and kept the policy-rate quote.",
+        "Tension: removed 'likely because Rwanda recently revised how it measures GDP'. No opened source gives a cause for the gap, so it was speculation. The sentence now says only that the World Bank's 2016–2025 average is slightly higher than the data's 4.5 (the MPO says 4.6).",
+        "Checked for banned phrases and recommendation language: none found. The story still has 5 threads and 2 distinct recent tier 1 sources (IMF 2025-12 and World Bank MPO 2026-10), so it stays tier 1."
+      ]
+    },
+    "headline": "After the 1994 genocide, Rwanda grew fast for almost three decades on aid and public building; now debt is rising and good jobs lag.",
+    "arc": "From 1990 to 1997 income per person shrank by 0.4 percent a year on average: falling coffee, tea and mineral prices had already weakened the economy, civil war began in 1990, and the 1994 genocide cut income per person by 41.5 percent in one year before a 61.9 percent rebound in 1995. From 1998 to 2025 growth averaged 5.0 percent a year, as the state led the rebuilding through large public projects paid for mostly by foreign aid. The pace eased a little, from 5.1 percent a year in 2006 to 2015 to 4.5 percent in 2016 to 2025, and the IMF says growth slowed in the 2010s as productivity gains faded and public investment took the place of private activity. Covid brought the one sharp fall of this later era, 4.9 percent in 2020, but growth came back quickly and reached 7.0 percent in 2025. Income per person stood at its highest level yet in 2025, while the IMF and World Bank describe growth still carried by construction and public investment, with big projects such as a new airport paid for more and more with debt.",
+    "threads": [
+      {
+        "title": "Collapse and genocide in the 1990s",
+        "about": "history",
+        "text": "Falling world prices for coffee, tea and minerals had already slowed the economy before civil war began in 1990. The 1994 genocide destroyed lives, institutions and trade links, and income per person fell by 41.5 percent that year.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/219651563298568286/pdf/Rwanda-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Rwanda Systematic Country Diagnostic",
+            "date": "2019-06-25",
+            "quote": "But as world market prices fell for minerals, coffee, and tea, and fiscal difficulties increased, the economy began to falter."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/219651563298568286/pdf/Rwanda-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Rwanda Systematic Country Diagnostic",
+            "date": "2019-06-25",
+            "quote": "Within a year the country’s GDP fell, from an already low base, by half and Rwanda became the second poorest country in the world"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/219651563298568286/pdf/Rwanda-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Rwanda Systematic Country Diagnostic",
+            "date": "2019-06-25",
+            "quote": "The social and physical infrastructure was devastated, trade links were ruptured, businesses and agricultural assets dwindled, and institutions of governance required rebuilding."
+          }
+        ]
+      },
+      {
+        "title": "Aid-financed rebuilding led by the state",
+        "about": "history",
+        "text": "With almost no private sector left, the state led the recovery through large public projects, mostly paid for by foreign aid. For the 2000s the IMF also credits productivity gains and private investment drawn in by foreign firms and privatization, especially in phones and internet.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/219651563298568286/pdf/Rwanda-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Rwanda Systematic Country Diagnostic",
+            "date": "2019-06-25",
+            "quote": "In the absence of a viable private sector, the state led the economic recovery efforts through large public investments, mostly financed through external assistance."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rwaea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Rwanda: 2025 Article IV Consultation and Sixth Review Under the Policy Coordination Instrument—Press Release; and Staff Report",
+            "date": "2025-12",
+            "quote": "Growth was driven by productivity gains and private investment spurred by FDI and privatization, particularly in ICT"
+          }
+        ]
+      },
+      {
+        "title": "Public building, fading private investment",
+        "about": "present",
+        "text": "From the 2010s the IMF describes public investment taking the place of private activity, above all in construction, as productivity gains faded. It finds that the share of growth coming from private investment kept falling through 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rwaea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Rwanda: 2025 Article IV Consultation and Sixth Review Under the Policy Coordination Instrument—Press Release; and Staff Report",
+            "date": "2025-12",
+            "quote": "Growth eased as productivity gains waned, public investment increasingly substituted for private activity, particularly in the construction sector."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rwaea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Rwanda: 2025 Article IV Consultation and Sixth Review Under the Policy Coordination Instrument—Press Release; and Staff Report",
+            "date": "2025-12",
+            "quote": "construction-driven public investments, although the contribution of private investment continued to decline"
+          }
+        ]
+      },
+      {
+        "title": "Shocks, an airport and debt",
+        "about": "present",
+        "text": "Covid, floods in 2023 and a Marburg disease outbreak in 2024 came in quick succession. Public debt is high, and the IMF expects borrowing for the New Kigali International Airport to push it higher.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rwaea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Rwanda: 2025 Article IV Consultation and Sixth Review Under the Policy Coordination Instrument—Press Release; and Staff Report",
+            "date": "2025-12",
+            "quote": "including navigating the post-COVID-19 pandemic era, the 2023 floods, the 2024 Marburg disease outbreak, and other global disruptions"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rwaea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Rwanda: 2025 Article IV Consultation and Sixth Review Under the Policy Coordination Instrument—Press Release; and Staff Report",
+            "date": "2025-12",
+            "quote": "Nevertheless, borrowing for the NKIA project is expected to push public debt near 80 percent of GDP by 2027."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Rwanda",
+            "date": "2026-10",
+            "quote": "Public debt remains elevated, at about 73 percent in 2025"
+          }
+        ]
+      },
+      {
+        "title": "Jobs that lag growth",
+        "about": "present",
+        "text": "The World Bank finds that job creation has broadly kept pace with the growing working-age population. But most new jobs are informal, short-term and low-paid, and young people, women and rural workers fare worst.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Rwanda",
+            "date": "2026-10",
+            "quote": "broadly keeping pace with growth in the working-age population, most new jobs are informal, temporary, and low-paid"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Rwanda",
+            "date": "2026-10",
+            "quote": "with youth, women, and rural workers facing particularly weak labor-market outcomes"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth sped up again: income per person rose 7.0 percent in 2025 in the data, and the World Bank reports broad growth into early 2026, led by industry, services and a recovery in farming. Prices then rose faster in the first half of 2026, partly because of the conflict in the Middle East, and the central bank raised its policy rate.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Rwanda",
+          "date": "2026-10",
+          "quote": "Growth was broad-based, led by industry, services, and a recovery in agriculture."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Rwanda",
+          "date": "2026-10",
+          "quote": "Inflation pressures partly driven by the conflict in Middle East had built up in the first half of 2026"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-rwa.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Rwanda",
+          "date": "2026-10",
+          "quote": "In response, the central bank raised the policy rate by a cumulative 200 bps, bringing it to 8.75 percent in August 2026."
+        }
+      ]
+    },
+    "tension": "The IMF says demand and supply shocks caused a recession in 2016 to 2018, but in the data income per person kept growing in each of those years: 3.2 percent in 2016, 2.3 in 2017 and 5.6 in 2018. The World Bank's figure for average growth in income per person over 2016 to 2025 is also slightly higher than the data's 4.5."
+  }
+}

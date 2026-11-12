@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "TUV",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TUV",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Tuvalu Article IV consultation 2025",
+        "imf.org, worldbank.org, adb.org and the other tier 1 domains: Tuvalu economy fishing license revenue growth outlook",
+        "imf.org, worldbank.org, adb.org and the other tier 1 domains: Tuvalu fishing license revenues vessel day scheme increase since 2013 growth",
+        "worldbank.org, imf.org, adb.org and the other tier 1 domains: Tuvalu economic update World Bank Pacific 2025 2026",
+        "Opened: imf.org press release 25/293 (2025-09-12); imf.org IMF Country Report 25/257 (2025-09); adb.org Asian Development Outlook April 2025, Central Pacific Economies; thedocs.worldbank.org Pacific Economic Update May 2026; imf.org IMF Country Report 18/209 (2018-07); imf.org IMF Country Report 14/253 (2014-08)",
+        "Check pass: re-opened all five cited URLs (imf.org cr14253, cr18209, cr25/257; adb.org cpe-ado-april-2025; thedocs.worldbank.org PEU May 2026) and searched their full text for every quoted passage"
+      ],
+      "critic_changes": [
+        "All 11 citations checked against the full text of the five opened PDFs (IMF CR 14/253, 18/209, 25/257; ADB ADO April 2025 Central Pacific chapter; World Bank PEU May 2026). Every quoted passage appears verbatim, and every title and date matches the document (2014-08, 2018-07, 2025-09, 2025-04, 2026-05).",
+        "Headline: changed 'donor-funded' to 'externally financed', the IMF 2025 report's own term. No cited passage calls the summit projects donor-funded.",
+        "Arc: the IMF 2014 report says remittances 'have not recovered' to pre-crisis levels, not that they fell sharply, so 'a sharp fall in remittances' was corrected. 'Multiplied' became 'more than doubled', following the IMF 2014 wording. 'Donor-funded' became 'externally financed'. 'At the end of the pandemic closure' became 'the last year of the pandemic closure', since the reopening was at end-2022.",
+        "Thread 'Fishing fees transform the budget': dropped the claim that fishing money 'paid for much of the spending behind the 2013–2025 era', which no cited passage supports. It now says only that the money arrived as that era began, which is a matter of timing.",
+        "Thread 'A lost decade of remittances' renamed 'Weak growth, fading remittances'. The IMF did not link the weakness to remittances; it described the two side by side, so 'The IMF linked the weakness to...' was rewritten to match. Added a third citation from the same IMF 2014 report ('falling remittances from seafarers') because the draft mentioned seafarers but no cited passage did.",
+        "Thread 'Growth built by donor projects' renamed 'Growth built by big projects'. Dropped the claim that summit building 'came before the 15.3 percent jump in 2019': the IMF passage ties the summits to growth in 2017, and the link to 2019 was an inference. Swapped the IMF 2025 citation about 2025–26 projections for the same report's passage on reliance on externally financed projects, which supports 'financed from abroad'. The coastal adaptation claim now rests on the World Bank passage, which refers to 2025.",
+        "Thread 'Pandemic shock and rebound': narrowed 'fishing income dipped' to 2024, the year the ADB passage covers. Kept the 'present' tag (IMF 2025-09, ADB 2025-04). All data figures check against the series: -1.3 (2020), -9.1 (2022), 5.4 (2023), 5.2 (2024), 3.3 (2025).",
+        "Thread 'Shifting tuna and departing workers' renamed 'Shifting tuna, departing workers'. Removed 'a large share of national income rises and falls with the weather', an overreach; the IMF names tuna migration only as 'one of the contributing factors' to lower fees, and the text now says that.",
+        "since_last_year: the draft said the World Bank expects growth to slow as large projects taper off, but its only World Bank citation said nothing about slowing. Added the World Bank passage on tapering. The text now describes it accurately as a comparison of the 2020s with the 2010s, which is how the report frames it. Changed 'Since mid-2025' to 'In mid-2025'. The ballot (June–July 2025) falls within the 18-month window.",
+        "Tension: the draft implied income per person first passed its 2019 level in 2025. The series shows it already above 2019 in 2024 (and in 2021), the period the IMF's 2025 statement covers, so the text now says 'above its 2019 level by 2024' and dates the IMF's claim to 2025.",
+        "Numbers in the arc checked against TUV.json: eras 4.6, -0.5 and 3.6; G1 avg_10y 3.2 and avg_prior_10y 1.6; growth of 15.3 in 2019 and -9.1 in 2022; G3 peak and first reached in 2025. All correct. No banned phrases and no recommendation language were found."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Tuvalu's income per person stalled from 1999 to 2012, then rose on fishing fees and externally financed building to a new high in 2025, in big swings.",
+    "arc": "Since 1990, Tuvalu's income per person has grown in three eras: 4.6 percent a year in 1990–1998, -0.5 in 1999–2012 and 3.6 in 2013–2025. The sources say little about what drove the 1990s. For the middle era, the IMF in 2014 described weak, volatile growth and remittances from seafarers that had not recovered since the global financial crisis. The turn came as fishing license fees more than doubled under a regional scheme that sells fishing days, and externally financed building followed, from housing for regional summits to coastal defences. Growth averaged 3.2 percent a year over 2016–2025, up from 1.6 over 2006–2015, and income per person reached a new high in 2025, but the path swung hard: up 15.3 percent in 2019 and down 9.1 in 2022, the last year of the pandemic closure. The sources now describe an economy carried by grants, fishing fees and public works, with more people leaving.",
+    "threads": [
+      {
+        "title": "Fishing fees transform the budget",
+        "about": "history",
+        "text": "From the early 2010s, a regional scheme that sells days of tuna fishing, plus joint ventures with Asian fishing firms, more than doubled what Tuvalu earned from fishing licenses. By 2017 the IMF counted fishing revenue as a far larger share of the economy than in 2011. This new money arrived as the faster 2013–2025 era began.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14253.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2014 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 14/253)",
+            "date": "2014-08",
+            "quote": "Owing to the introduction of the Vessel Day Scheme and the establishment of fishing joint ventures with Asian companies"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18209.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2018 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 18/209)",
+            "date": "2018-07",
+            "quote": "Fishing revenue increased substantially over the past several years to 50 percent of GDP in 2017 from 15 percent of GDP in 2011"
+          }
+        ]
+      },
+      {
+        "title": "Weak growth, fading remittances",
+        "about": "history",
+        "text": "Through the 1999–2012 era, income per person fell by 0.5 percent a year on average. In 2014 the IMF described a decade of volatile, weak growth, and remittances from Tuvaluan seafarers that had not recovered to their level before the global financial crisis.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14253.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2014 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 14/253)",
+            "date": "2014-08",
+            "quote": "Real GDP growth has been volatile averaging only 1 percent in the past decade"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14253.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2014 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 14/253)",
+            "date": "2014-08",
+            "quote": "remittances have not recovered to the level prevailing before the global financial crisis mainly as a result of limited human capacity"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14253.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2014 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 14/253)",
+            "date": "2014-08",
+            "quote": "as indicated by the falling remittances from seafarers"
+          }
+        ]
+      },
+      {
+        "title": "Growth built by big projects",
+        "about": "present",
+        "text": "Large building projects drive many of the swings. The IMF tied growth in 2017 to housing and infrastructure for two regional summits, and says the economy leans heavily on projects financed from abroad. Coastal adaptation and other public works carried growth in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18209.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2018 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Tuvalu (IMF Country Report No. 18/209)",
+            "date": "2018-07",
+            "quote": "large infrastructure and housing projects, in preparation for the Polynesian Leaders' Summit in 2018 and the Pacific Forum Secretariat Summit in 2019"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tuvea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Directors for Tuvalu (IMF Country Report No. 25/257)",
+            "date": "2025-09",
+            "quote": "reflecting the significant scarring from the pandemic due to the economy's high reliance on externally-financed infrastructure projects"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+            "publisher": "World Bank",
+            "title": "Pacific Economic Update: Water as an Essential Foundation for Jobs",
+            "date": "2026-05",
+            "quote": "Tuvalu's growth, near 3 percent, was underpinned by coastal adaptation and public works."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic shock and rebound",
+        "about": "present",
+        "text": "Income per person fell 1.3 percent in 2020 and 9.1 percent in 2022, while the borders were shut. After the reopening at the end of 2022 it grew 5.4 percent in 2023, 5.2 in 2024 and 3.3 in 2025, as building restarted, though fishing income dipped in 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tuvea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Directors for Tuvalu (IMF Country Report No. 25/257)",
+            "date": "2025-09",
+            "quote": "Following an economic contraction of cumulative 15 percent during 2020-22, GDP has been rebounding since the country's reopening at end-2022"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1044336/cpe-ado-april-2025.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook April 2025: Central Pacific Economies (Kiribati, Nauru, Tuvalu)",
+            "date": "2025-04",
+            "quote": "GDP grew by 3.1% in 2024 as fishing revenues declined and public infrastructure projects neared completion"
+          }
+        ]
+      },
+      {
+        "title": "Shifting tuna, departing workers",
+        "about": "present",
+        "text": "Fishing fees depend on where the tuna swim, and the IMF names tuna moving with climate conditions such as El Niño as one reason the fees fell recently. At the same time, more Tuvaluans are leaving, which the IMF says deepens shortages of workers and skills.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tuvea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Directors for Tuvalu (IMF Country Report No. 25/257)",
+            "date": "2025-09",
+            "quote": "Tuna migration due to climate conditions including the El Nino Southern Oscillation is considered one of the contributing factors to the lower fishing license fees."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tuvea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Tuvalu: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Directors for Tuvalu (IMF Country Report No. 25/257)",
+            "date": "2025-09",
+            "quote": "Rising emigration intensifies labor shortages and capacity constraints."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In mid-2025 the first ballot opened for the new treaty route to move to Australia, and most of the population signed up for it. Income per person grew 3.3 percent in 2025, with coastal adaptation and public works behind it. The World Bank expects slower growth in the 2020s than in the 2010s, as large projects financed from abroad taper off.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1tuvea2025001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Tuvalu: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Directors for Tuvalu (IMF Country Report No. 25/257)",
+          "date": "2025-09",
+          "quote": "The Treaty ballot opened between June 16 and July 18, 2025, and over 80 percent of Tuvalu's population registered for the ballot."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+          "publisher": "World Bank",
+          "title": "Pacific Economic Update: Water as an Essential Foundation for Jobs",
+          "date": "2026-05",
+          "quote": "Tuvalu's growth, near 3 percent, was underpinned by coastal adaptation and public works."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+          "publisher": "World Bank",
+          "title": "Pacific Economic Update: Water as an Essential Foundation for Jobs",
+          "date": "2026-05",
+          "quote": "Tuvalu's growth drops by roughly 3.5 percentage points amid small-economy constraints, the tapering of large externally financed projects, and limited absorptive capacity"
+        }
+      ]
+    },
+    "tension": "The data put income per person above its 2019 level by 2024 and at a new high in 2025. But the IMF, writing in 2025, says the economy as a whole has not recovered: \"real GDP has not yet reached its pre-pandemic level\". Income per person also grew faster in 2023 and 2024 (5.4 and 5.2 percent) than the total growth the sources report. Both gaps fit a shrinking population, which matches the rising emigration the IMF describes, but no source reconciles the two measures."
+  }
+}

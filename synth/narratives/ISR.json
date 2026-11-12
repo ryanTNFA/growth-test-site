@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "iso3": "ISR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ISR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): \"Israel Article IV staff report 2025 war economy growth\"",
+        "tier 1 domains: \"OECD Economic Surveys Israel 2025\"",
+        "tier 1 domains: \"Israel 2001-2003 recession intifada high-tech bust 2003 stabilization program IMF\"",
+        "Opened: imf.org 2026 Article IV concluding statement (Feb 2026); imf.org IMF Country Report No. 26/161 (July 2026); oecd.org OECD Economic Surveys: Israel 2025 PDF; imf.org IMF Country Report No. 09/57 (Feb 2009); imf.org IMF Country Report No. 05/134 (Apr 2005)",
+        "Refused (403), not cited: oecd.org survey landing page and press release, oecd.org Economic Outlook Dec 2025 Israel note, elibrary.imf.org 2003 Article IV",
+        "Critic check: re-opened all four cited PDFs with WebFetch, extracted their text and matched every quoted passage and date"
+      ],
+      "critic_changes": [
+        "Checked all four cited PDFs (IMF CR 26/161, OECD Survey 2025, IMF CR 09/57, IMF CR 05/134): every quoted passage appears on its page, and the dates (2026-07, 2025-04, 2009-02, 2005-04) match the documents. All numbers in the prose (1.9, 2.1, 2.0, 1.7, -1.2, -3.5, 7.5, -1.0, -0.6, 1.7, the 2022 level and the 2025 high) match desk/data/ISR.json.",
+        "Arc: 'The IMF and the OECD credit the economy's resilience to a strong high-tech sector and sound policies' rewritten so the credit goes to the OECD, which gives those reasons ('sound fiscal position before the war ... vibrant high-tech sector'). The IMF is cited only for labor shortages and low work rates.",
+        "Arc and dot-com thread: added the intifada beside the dot-com bust, and added an IMF CR 09/57 citation that names both as causes of the 2001–03 recession. The draft's cited passages never mentioned the dot-com bust. Changed 'backed by fiscal rules' to 'alongside fiscal rules'.",
+        "Dot-com thread: removed 'reforms that widened the financial system' because no cited passage supports it.",
+        "Repeated wars thread: the OECD quote was a fragment that stopped before the reason. Swapped it for a passage that includes 'thanks to its sound fiscal position before the war'. Extended the IMF construction quote to include 'a collapse in tourism', which supports 'tourism collapsed'.",
+        "High-tech thread: the draft said the sector 'kept exporting and drawing investment', which no cited passage supported. Replaced the AI-leadership quote with the IMF's 'resilient high-tech exports' passage and added the OECD passage that foreign direct investment in high-tech was robust in 2024.",
+        "Fast-growing groups thread: 'Both the IMF and the OECD say this weighs more on growth' became an IMF-only claim, because the OECD citation covers fertility only. Changed 'highest birth rate' to 'highest fertility rate' to match the OECD wording.",
+        "Immigration thread and arc: 'grew in most years of that decade' became 'every year', since growth was positive in every year from 1990 to 1999. Changed 'the labor market absorbed them quickly' to match the IMF's point that the swift absorption suggests a flexible labor market.",
+        "since_last_year: 'in July 2026 the IMF cut its growth forecast' became 'the IMF report published in July 2026 cut its growth forecast'. The staff report was finished on 10 June 2026 and the press release is dated 1 July 2026.",
+        "Tension: 'The IMF notes that output grew in 2024 while income per person fell' overstated the source, which reports only GDP growth in 2024. It now says the IMF reports output growth in 2024, a year in which income per person fell (the second half comes from the data). Changed 'birth rate' to 'fertility rate'."
+      ]
+    },
+    "headline": "Israel's income per person grew steadily for three decades, but wars since 2023 and a fast-growing population have held it close to its 2022 level.",
+    "arc": "Since 1990 Israel's income per person has grown at a steady 1.9 percent a year, with no lasting shift in pace, and it nearly doubled over the period. In the early 1990s the economy took in a large wave of immigrants from the former Soviet Union, and income per person grew in every year of that decade. After income per person fell by 2.1 percent in both 2001 and 2002, as the dot-com bubble burst and the intifada hit, IMF staff describe a strong rebound alongside fiscal rules that brought public debt down. Growth averaged 2.0 percent a year in 2006–2015 and 1.7 percent in 2016–2025, with dips in 2009 (-1.2 percent) and 2020 (-3.5 percent) and a 7.5 percent jump in 2021. The war that began in October 2023 hit construction, tourism and spending; income per person fell 1.0 percent in 2023 and 0.6 percent in 2024, then grew 1.7 percent in 2025 to a new high only just above its 2022 level. The OECD credits the economy's resilience to sound public finances before the war and a lively high-tech sector, while the IMF points to labor shortages from military call-ups and the loss of Palestinian workers, and to low work rates among Haredi men and Arab-Israelis, as weights on growth.",
+    "threads": [
+      {
+        "title": "Repeated wars since October 2023",
+        "about": "present",
+        "text": "The October 2023 attacks and the war that followed cut output sharply, as construction lost its Palestinian workers and tourism collapsed. The economy bounced back after each shock, but the IMF says repeated conflicts, including the June 2025 escalation with Iran and the war that began in February 2026, have kept output below its pre-war path.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "Economic activity rebounded after each shock, but repeated disruptions have hindered a durable recovery, leaving output about 9 percent below its pre-October 2023 trend."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "a collapse in tourism, a drop in construction due to the loss of Palestinian workers, and weakened private consumption"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-israel-2025_18e45b04/d6dd02bc-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Israel 2025",
+            "date": "2025-04",
+            "quote": "resilient to the shock of the 7 October terror attacks and subsequent war, thanks to its sound fiscal position before the war"
+          }
+        ]
+      },
+      {
+        "title": "Fast-growing groups outside work",
+        "about": "present",
+        "text": "Israel has the highest fertility rate in the OECD. The IMF says Haredi men and Arab-Israelis work less and have weaker skills than others, and that this will weigh more on productivity as these groups grow faster than the rest of the population.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "Labor force participation and skill levels remain low for some groups, particularly Haredi men and Arab-Israelis, weighing on potential growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "As these populations are growing faster than the other groups, such disparities are likely to increasingly weigh on productivity"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-israel-2025_18e45b04/d6dd02bc-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Israel 2025",
+            "date": "2025-04",
+            "quote": "With the highest total fertility rate (TFR) among OECD countries, Israel experiences strong population growth."
+          }
+        ]
+      },
+      {
+        "title": "High-tech and the rest",
+        "about": "present",
+        "text": "Israel's high-tech sector is world-class, and its exports and the foreign investment it draws held up through the war. The rest of the economy is far less productive, which the IMF says leaves Israel exposed to shocks that hit particular sectors.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "the dual structure of the economy, with world-class high-tech sectors alongside lower productivity in other industries, exposes Israel to sectoral shocks."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+            "date": "2026-07",
+            "quote": "in part reflecting resilient high-tech exports and their strong linkages with the U.S. economy."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-israel-2025_18e45b04/d6dd02bc-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Israel 2025",
+            "date": "2025-04",
+            "quote": "halting the rally in high-tech shares, even if foreign direct investment in high-tech was robust in 2024."
+          }
+        ]
+      },
+      {
+        "title": "Dot-com bust and fiscal repair",
+        "about": "history",
+        "text": "Income per person fell in 2001 and 2002 as the dot-com bubble burst and the intifada pushed the economy into recession. The IMF describes a strong rebound after the 2001–03 slump, and fiscal rules that brought public debt down.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr0957.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2008 Article IV Consultation—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Israel (IMF Country Report No. 09/57)",
+            "date": "2009-02",
+            "quote": "The burst of the dotcom bubble in the early 2000s—compounded by the intifada—pushed the Israeli economy into a recession."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr0957.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2008 Article IV Consultation—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Israel (IMF Country Report No. 09/57)",
+            "date": "2009-02",
+            "quote": "Real GDP growth rebounded strongly from the 2001–03 slump, averaging over 5 percent since then"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr0957.pdf",
+            "publisher": "IMF",
+            "title": "Israel: 2008 Article IV Consultation—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Israel (IMF Country Report No. 09/57)",
+            "date": "2009-02",
+            "quote": "public debt was lowered from 100 percent of GDP in 2003. This was secured by adoption and adherence to fiscal rules"
+          }
+        ]
+      },
+      {
+        "title": "Immigration from the former Soviet Union",
+        "about": "history",
+        "text": "In the early 1990s Israel took in a very large wave of immigrants from the former Soviet Union, and the IMF reads their swift absorption as a sign of a flexible labor market. Income per person grew in every year of that decade.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05134.pdf",
+            "publisher": "IMF",
+            "title": "Israel: Selected Issues (IMF Country Report No. 05/134)",
+            "date": "2005-04",
+            "quote": "The swift absorption of almost 1 million immigrants from the former Soviet Union in the early 1990s"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "An escalation with Iran in June 2025 briefly interrupted the recovery, and growth came back strongly in the second half of the year; income per person grew 1.7 percent in 2025. A wider war in the Middle East that began on 28 February 2026 brought a sharp fall in output in early 2026, and the IMF report published in July 2026 cut its growth forecast for the year.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+          "date": "2026-07",
+          "quote": "with a brief interruption from the June 2025 Iran escalation and a strong rebound in H2 2025."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1isrea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Israel: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Israel (IMF Country Report No. 26/161)",
+          "date": "2026-07",
+          "quote": "Growth forecasts for 2026 have been revised down to 3.5 percent from 4.8 percent before the war in the Middle East, reflecting a sharp contraction"
+        }
+      ]
+    },
+    "tension": "The sources describe a resilient economy whose total output kept growing through the war. Income per person tells a weaker story: it fell 1.0 percent in 2023 and 0.6 percent in 2024, and in 2025 it was only just above its 2022 level. Fast population growth explains much of the gap. The IMF reports that output grew in 2024, a year in which income per person fell, and the OECD notes that Israel has the highest fertility rate in the OECD."
+  }
+}

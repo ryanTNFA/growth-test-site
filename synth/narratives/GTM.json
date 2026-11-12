@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "iso3": "GTM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GTM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Guatemala Article IV consultation 2025 IMF",
+        "worldbank.org (tier 1 list): Guatemala Macro Poverty Outlook World Bank growth remittances",
+        "tier 1 domains: Guatemala peace accords 1996 growth history civil war economy",
+        "tier 1 domains: Guatemala 1980s economic crisis decline per capita income recovery",
+        "opened: imf.org PR 26/269 (2026-07-29), imf.org 2025 Article IV concluding statement (2025-06-23), thedocs.worldbank.org MPO Guatemala (October 2026), worldbank.org Guatemala country page (economy section updated 2026-10-06), assets.mcc.gov Guatemala Constraints Analysis (2013), documents1.worldbank.org Guatemala Country Assistance Evaluation (2002-12-11)",
+        "critic re-opened every cited URL; imf.org PR 24/301 link could not be re-found (404 at the guessed address)"
+      ],
+      "critic_changes": [
+        "All 11 cited passages were re-opened (PDFs text-extracted) and found verbatim on tier 1 pages with matching dates; no citation dropped.",
+        "Thread 'War and the lost 1980s': the text named military rule, a civil war 'that began in 1960' and high inflation, but the cited passages covered only war and mismanagement. Replaced the 'War and economic mismanagement' quote with two passages from the same report: the memorandum line on inflation, decline and civil war, and the line on military rule. Dropped the unsupported 1960 start date.",
+        "Thread 'Peace, then steady slow growth': changed '36 years of conflict' to 'more than three decades'. 36 is not a number in the data file, and the source says three decades.",
+        "Thread 'Remittances drive spending': removed 'reached a record in 2025' and 'keeps the current account in surplus', which its citations did not support (the record stays in since_last_year with its IMF citation). Replaced 'US migration and tax policy are a risk' with the proposed US tax on remittances, because the 2025 IMF passage says nothing about migration.",
+        "Thread 'Stable money, thin investment' was renamed 'Careful management, thin investment'. Its claim that the management was careful had no supporting passage, so added the MPO passage on 'prudent macroeconomic and fiscal management'. The 16.3 percent investment figure was checked against growth_problem G6.",
+        "since_last_year: removed 'on strong household spending' because the cited Q1 2026 passage gives only the speed-up. Reworded the outlook to match the cited passage.",
+        "tier1_recent_found changed from 5 to 4. The recent tier 1 sources confirmed on reopening are IMF PR 26/269, the IMF 2025 concluding statement, the WB MPO for October 2026 and the WB country page (updated 2026-10-06). The draft's IMF PR 24/301 could not be re-found.",
+        "All numbers in the headline, arc, threads, since_last_year and tension were checked against desk/data/GTM.json and match: 1980 level first passed in 2006, falls in every year 1981–1986, 1990–2025 era mean 1.5, 2009 -1.5, 2020 -3.2, 2021 6.6, 2006–2015 1.7, 2016–2025 1.9, peak in 2025, 2025 growth 2.7. No banned phrases. Headline is 151 characters."
+      ]
+    },
+    "headline": "Guatemala: after the lost 1980s, three decades of steady but modest gains, with income per person at a new high in 2025 and remittances carrying demand",
+    "arc": "Income per person in Guatemala fell from 1980 to 1986 and did not pass its 1980 level again until 2006. The World Bank traces that loss to war, inflation and economic mismanagement in the 1980s, and credits peace and better policies with the recovery of the 1990s. Since 1990 the data show one long era with no lasting shift: growth in income per person averaged 1.5 percent a year over 1990–2025. The dips inside it were short, in 2009 during the global financial crisis (-1.5 percent) and in the pandemic year 2020 (-3.2 percent), followed by a 6.6 percent rebound in 2021. Growth edged up from 1.7 percent a year over 2006–2015 to 1.9 percent over 2016–2025, and income per person reached a new peak in 2025. Recent sources tie this pace to careful budget and monetary management and to money sent home by Guatemalans abroad, which now drives household spending.",
+    "threads": [
+      {
+        "title": "War and the lost 1980s",
+        "about": "history",
+        "text": "Military rule, civil war and high inflation pushed income per person down after 1980. It fell every year from 1981 to 1986 and took until 2006 to pass its 1980 level.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/570321468750038363/pdf/Guatemala-Country-Assistance-Evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala Country Assistance Evaluation (Report No. 25212-GT)",
+            "date": "2002-12-11",
+            "quote": "Inflation, economic decline, and civil war impoverished Guatemalans in the 1980s, but good economic performance during the 1990s improved their welfare."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/570321468750038363/pdf/Guatemala-Country-Assistance-Evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala Country Assistance Evaluation (Report No. 25212-GT)",
+            "date": "2002-12-11",
+            "quote": "The last era of military rule (1954-1985) brought some initial prosperity, but ended in misery and intense violence."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/570321468750038363/pdf/Guatemala-Country-Assistance-Evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala Country Assistance Evaluation (Report No. 25212-GT)",
+            "date": "2002-12-11",
+            "quote": "Real GDP per capita in 1985 fell 20 percent below the 1980 peak, which has not been reached again"
+          }
+        ]
+      },
+      {
+        "title": "Peace, then steady slow growth",
+        "about": "history",
+        "text": "The 1996 peace accords ended more than three decades of internal conflict and brought more stability, but growth after them stayed slow and steady rather than fast. Growth was held back again around 2009 by the global financial crisis, and two natural disasters hit in 2010.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/Guatemala-CA_Final.pdf",
+            "publisher": "MCC",
+            "title": "Guatemala Constraints Analysis Report 2013",
+            "date": "2013",
+            "quote": "Following the end of its three decades of internal conflict in 1996, Guatemala has grown steadily but slowly (1.3 percent per capita annually)"
+          },
+          {
+            "url": "https://assets.mcc.gov/content/uploads/Guatemala-CA_Final.pdf",
+            "publisher": "MCC",
+            "title": "Guatemala Constraints Analysis Report 2013",
+            "date": "2013",
+            "quote": "a modest rate in part due to the global financial crisis and two natural disasters in 2010."
+          }
+        ]
+      },
+      {
+        "title": "Remittances drive spending",
+        "about": "present",
+        "text": "Money sent home by Guatemalans living abroad now drives household spending and supports the external accounts. The IMF notes that these inflows also weigh on competitiveness, and it warned in 2025 that a proposed US tax on remittances could disrupt the spending they support.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "At about a fifth of GDP, remittance inflows drive domestic demand and support external balances and reserve accumulation."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26269-guatemala-imf-concludes-2026-aiv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Guatemala",
+            "date": "2026-07-29",
+            "quote": "Large remittance inflows support consumption but complicate monetary management and weigh on competitiveness."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/23/guatemala-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Guatemala: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-23",
+            "quote": "proposed 3.5 percent excise tax on remittances in U.S. policy discussions could disrupt remittance-supported consumption"
+          }
+        ]
+      },
+      {
+        "title": "Careful management, thin investment",
+        "about": "present",
+        "text": "The World Bank credits careful budget and monetary management for the steady record, and public debt stays low. Investment is low for Guatemala's income level, at 16.3 percent of GDP, though the World Bank expects fixed investment to pick up as infrastructure projects move ahead.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Guatemala's economy grew by an average of 3.6 percent annually during 2015–2025, buttressed by prudent macroeconomic and fiscal management"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Public debt remained low at 26.1 percent of GDP."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+            "publisher": "World Bank",
+            "title": "Guatemala: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Fixed investment, however, is forecast to pick up as infrastructure projects advance."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.7 percent in 2025 and reached a new high. Remittances hit a record that year, and growth sped up again in early 2026. The World Bank expects growth to slow over 2026–2028 as spending driven by remittances eases.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26269-guatemala-imf-concludes-2026-aiv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Guatemala",
+          "date": "2026-07-29",
+          "quote": "The 2025 current account surplus reached 4.7 percent of GDP; remittances reached a record-high 21 percent of GDP."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+          "publisher": "World Bank",
+          "title": "Guatemala: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Growth accelerated to 4.5 percent in Q1 2026 from 3.8 percent a year earlier."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-gtm.pdf",
+          "publisher": "World Bank",
+          "title": "Guatemala: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Growth is projected to slow to an average of 3.8 percent over 2026–2028 as remittance-driven private consumption moderates."
+        }
+      ]
+    },
+    "tension": "The World Bank describes a decade of sustained growth for the whole economy, helped by a young and expanding labor force, yet income per person grew only 1.9 percent a year over 2016–2025. A fast-growing population takes a large share of each year's gain, which is why Guatemala's steady growth has closed income gaps slowly."
+  }
+}

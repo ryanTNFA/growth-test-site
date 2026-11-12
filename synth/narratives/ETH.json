@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "ETH",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ETH",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Ethiopia IMF Article IV 2025 staff report reform exchange rate\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Ethiopia Macro Poverty Outlook World Bank growth conflict\"",
+        "worldbank.org: \"Ethiopia Economic Update World Bank 2025 growth slowdown public investment\"",
+        "imf.org: \"Ethiopia IMF 2026 review Extended Credit Facility press release\"",
+        "Opened: imf.org PR 25/234 (2025-07-02), imf.org PR 25/416 (2025-12-10), imf.org Country Report 25/188 PDF, imf.org Country Report 26/174 PDF, imf.org PR 26/235 page, documents1.worldbank.org P515564 PID PDF, documents.worldbank.org MPO April 2024 page (no usable text)",
+        "Critic: re-opened imf.org PR 25/416, imf.org Country Report 25/188 PDF, imf.org Country Report 26/174 PDF and documents1.worldbank.org P515564 PID PDF (text extracted from the fetched PDFs) to verify every quote and date"
+      ],
+      "critic_changes": [
+        "Checked all four cited documents (IMF CR 25/188, IMF CR 26/174, IMF PR 25/416, World Bank P515564 PID). All exist on allowed tier 1 domains, and every draft quote appears verbatim. The dates also hold: CR 25/188 cover says July 2025, CR 26/174 says July 2026, the PID says 09-Jun-2026 and the PR says 10 December 2025.",
+        "Every number checked against desk/data/ETH.json, and all are correct: era means -1.2, 3.7, 7.3 and 4.2. Per-person growth was 2.6 in 2022 (lowest since 2003), 4.9 in 2024 and 7.0 in 2025 (fastest since 2015). Investment was 40.7 percent of GDP at its 2015 peak and 20.1 in 2025, and 2025 is the peak level. No numbers were changed.",
+        "Floating the birr: removed the claim that the IMF reports the switch 'went smoothly', because no opened passage supports it. Replaced 'firms had to wait in line for scarce dollars' with 'dollars were rationed', which matches the quote's 'widespread rationing'. Extended the World Bank quote to include 'Before the floating of the birr against the dollar' (24 words), so the float itself is sourced. Added a World Bank quote that supports the July 2024 date of the reform program.",
+        "Debt thread: dropped 'external debt became unsustainable' and now say 'in debt distress', the exact wording of the cited passage. Added the IMF passage on bilateral agreements with official creditors, because the claim about official-creditor deals had no supporting quote.",
+        "War thread: added IMF passages for the start of the Tigray war (November 2020) and the Pretoria agreement (November 2022), because the original quote did not mention either. Dropped the sentence on continuing unrest in Oromia and Amhara to stay within three citations; the IMF does support it.",
+        "Gold, power and harvests: the draft claimed 'good rains' and 'gold exports' but the single quote did not support either, so added IMF quotes for each. Changed 'more mining and gold exports' to 'more mining, strong gold exports'.",
+        "Arc: removed 'under a state-led model' from the boom sentence. The draft said the model 'left an overvalued currency, foreign exchange shortages and heavy external debt'; it now reads 'built up imbalances, including an overvalued currency and foreign exchange shortages', closer to the IMF wording. The final sentence now names the causes the IMF gives for the 2025 pickup (harvests, gold, electricity) rather than implying the reform alone caused it.",
+        "Tension: removed 'one of Sub-Saharan Africa's fastest-growing economies' and 'headline GDP growth well above anything in this data'. No opened source says the first, and the second is wrong because the data include a 10.2 percent year (2004). It now says only that the IMF describes fast and accelerating GDP growth, which CR 26/174 does. The population explanation and the era numbers are kept.",
+        "No recommendation language or banned phrases found. All 5 threads survive with citations, from 4 distinct recent tier 1 sources, so the story stays tier 1."
+      ]
+    },
+    "headline": "Ethiopia's state-led boom gave way to war, debt distress and slower growth; since the birr was floated in 2024, growth has picked up again.",
+    "arc": "Income per person in Ethiopia fell 1.2 percent a year over 1990–1998, with deep drops in 1991 and 1992; the sources used here do not explain that era. Growth turned positive at 3.7 percent a year over 1999–2006 and then ran at 7.3 percent a year over 2007–2017, a boom the IMF links to public investment in large infrastructure projects. The IMF says the same drive built up imbalances, including an overvalued currency and foreign exchange shortages, and growth slowed to 4.2 percent a year over 2018–2025. The Tigray war of 2020–2022, COVID-19 and drought deepened the slowdown, and income per person growth fell to 2.6 percent in 2022. A reform program launched in July 2024 floated the birr and came with a debt restructuring, and with good harvests, gold and new electricity, growth picked up to 7.0 percent in 2025, when income per person reached its highest level so far.",
+    "threads": [
+      {
+        "title": "A public investment boom",
+        "about": "history",
+        "text": "Over 2007–2017 income per person grew 7.3 percent a year. The IMF credits public investment in large infrastructure projects and says the same drive built up imbalances. In the data, investment peaked at 40.7 percent of GDP in 2015 and fell to 20.1 percent by 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "Although a key driver of growth was public investment in large infrastructure projects, this contributed to macroeconomic imbalances that threatened to undermine progress."
+          }
+        ]
+      },
+      {
+        "title": "War, pandemic and drought",
+        "about": "history",
+        "text": "The Tigray war began in November 2020 and ended with the Pretoria peace agreement of November 2022. It came on top of COVID-19, drought and locusts. Income per person growth fell to 2.6 percent in 2022, its lowest since 2003.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "a combination of shocks (notably the COVID-19 pandemic, conflict, drought and locust infestation) and structural weaknesses from Ethiopia's previous state-led growth model"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "The Tigray civil war that started in November 2020 was one of the bloodiest globally in the past decade"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "The war ended with the signing of the Pretoria peace agreement in November 2022."
+          }
+        ]
+      },
+      {
+        "title": "Floating the birr",
+        "about": "present",
+        "text": "Before the reform the official exchange rate was held well above its market value, and dollars were rationed. The birr was floated as part of a wider reform program launched in July 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "Prior to the FX reform, the significantly overvalued real exchange rate hindered efficient resource allocation by distorting relative price signals, and constrained private sector growth."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060926031036358/pdf/P515564-9ba292c1-c82d-4fcb-bd66-4e3a0557fe6d.pdf",
+            "publisher": "World Bank",
+            "title": "Ethiopia - Building Opportunities for Optimized Trade and Investment for Growth (P515564): Project Information Document, Concept Stage",
+            "date": "2026-06-09",
+            "quote": "Before the floating of the birr against the dollar, distortions and shortages in the foreign exchange market constrained the economy, leading to widespread rationing"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099060926031036358/pdf/P515564-9ba292c1-c82d-4fcb-bd66-4e3a0557fe6d.pdf",
+            "publisher": "World Bank",
+            "title": "Ethiopia - Building Opportunities for Optimized Trade and Investment for Growth (P515564): Project Information Document, Concept Stage",
+            "date": "2026-06-09",
+            "quote": "In July 2024, the government launched a comprehensive reform program"
+          }
+        ]
+      },
+      {
+        "title": "Debt distress and restructuring",
+        "about": "present",
+        "text": "Ethiopia missed a Eurobond interest payment in December 2023 and has been in debt distress since. By mid-2026 it had signed bilateral deals with several official creditors and reached an agreement in principle with its Eurobond holders.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+            "date": "2026-07",
+            "quote": "Following a missed Eurobond interest payment in December 2023, the country is in debt distress."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+            "date": "2026-07",
+            "quote": "Several bilateral agreements have been signed with official creditors, and significant progress has also been made with several external commercial creditors."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+            "date": "2026-07",
+            "quote": "Staff welcome the agreement-in-principle reached with Eurobond holders."
+          }
+        ]
+      },
+      {
+        "title": "Gold, power and harvests",
+        "about": "present",
+        "text": "The recent pickup rests on good rains, more mining, strong gold exports and new electricity from the Grand Ethiopian Renaissance Dam. Income per person grew 4.9 percent in 2024 and 7.0 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+            "date": "2026-07",
+            "quote": "Strong agricultural production due to favorable rains and initiatives to increase irrigated crop production"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+            "date": "2026-07",
+            "quote": "increased mining and electricity output (with the Grand Ethiopian Renaissance Dam coming online) have supported the acceleration in growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1ethea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "The Federal Democratic Republic of Ethiopia: 2025 Article IV Consultation, Third Review Under the Extended Credit Facility Arrangement, and Financing Assurances Review (IMF Country Report No. 25/188)",
+            "date": "2025-07",
+            "quote": "Goods exports are exceeding expectations, driven by exceptionally strong gold and coffee exports."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year growth kept speeding up on gold, electricity and farm output, and income per person grew 7.0 percent in 2025, its fastest since 2015. In 2026 the war in the Middle East raised fuel and fertilizer import costs, which the IMF calls a substantial external shock.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/10/pr-25416-ethiopia-imf-reaches-staff-level-agreement-on-the-4th-review-of-ecf",
+          "publisher": "IMF",
+          "title": "IMF Reaches Staff Level Agreement on the Fourth Review of the Extended Credit Facility for Ethiopia",
+          "date": "2025-12-10",
+          "quote": "Available indicators point to accelerating growth since mid-2024"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ethea2026002.pdf",
+          "publisher": "IMF",
+          "title": "The Federal Democratic Republic of Ethiopia: Fifth Review Under the Extended Credit Facility Arrangement, Request for Rephasing of Access, Modification of Indicative Targets, and Financing Assurances Review (IMF Country Report No. 26/174)",
+          "date": "2026-07",
+          "quote": "While strong macroeconomic performance to date has created resilience, the war in the Middle East represents a substantial external shock."
+        }
+      ]
+    },
+    "tension": "The IMF describes fast and accelerating growth in GDP. Income per person grew more slowly: 4.2 percent a year over 2018–2025, down from 7.3 in 2007–2017. The gap is population: a fast-growing population takes a large share of output growth before it reaches income per person."
+  }
+}

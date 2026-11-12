@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "iso3": "KGZ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KGZ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Kyrgyz Republic Article IV 2025 staff concluding statement growth\"",
+        "same tier 1 domains: \"Kyrgyz Republic Macro Poverty Outlook economic update growth re-exports remittances\"",
+        "same tier 1 domains: \"Kyrgyz Republic systematic country diagnostic growth history 1990s transition Kumtor gold remittances\"",
+        "Opened: imf.org 2026 Article IV press release (2026-06-04) and 2026 staff concluding statement (2026-04-09); thedocs.worldbank.org Macro Poverty Outlook October 2026; documents1.worldbank.org Systematic Country Diagnostic Update (May 2023) and Country Economic Memorandum (2020)",
+        "Critic check: re-opened all five cited URLs (PDFs text-extracted) and matched every quoted passage, title and date",
+        "Tier 2 (UN) not searched: tier 1 gave 4 recent sources"
+      ],
+      "critic_changes": [
+        "Re-opened all five cited URLs (MPO, SCD and CEM PDFs text-extracted): every quoted passage, title and date matches the page. The MPO is the October 2026 edition, the SCD is dated May 2023, and the CEM is dated 2020.",
+        "Arc: merged the first two sentences, because the draft had 7 sentences and the rule allows 4 to 6. All numbers check against KGZ.json (-6.1, 20.1 in 1994, 3.1, the falls in 2002/2005/2010/2012, -9.0 in 2020, 7.0 to 9.7 in 2022-2025, 3.6 vs 3.1, peak in 2025).",
+        "Headline: 'after 2022' changed to 'from 2022', since the boom years in the data begin in 2022.",
+        "Thread 'Transition collapse': 'most of those neighbours' changed to 'most of those economies'. The CEM compares the country with former Soviet countries, not only its neighbours. Checked the claim that income per person first passed its 1990 level in 2022 against the series (1990: 1203.5; 2019: 1201.9; 2022: 1212.2).",
+        "Thread 'Gold and political upheaval': the draft tied the dips to the Kumtor mine, but no cited passage named Kumtor. Added the CEM passage on Kumtor starting operations in 1997, and reworded 'frequent changes of government' to match the source ('major changes in government').",
+        "Thread 'A slowdown, then the 2020 shock': removed 'about 2 percent a year', which is not a figure in the data file. Replaced it with the series range for 2016-2019 (1.5 to 2.6 percent).",
+        "Thread 'Remittances and gold still matter': dropped the claim that remittances 'paid for much of what households buy', which the cited passages do not support. Kept the poverty claim as the SCD states it.",
+        "Thread 'The trade and construction boom': the draft said the IMF expects trade to level off, but the cited concluding-statement passage describes a risk of reversal, not a plateau. The World Bank sanctions claim had no citation. Rewrote both claims to match the sources, kept the IMF risk passage, and replaced the MPO transit-trade passage with the MPO's sanctions-risk sentence. 'Transit and re-export trade' became 'trade flows', matching the IMF wording.",
+        "since_last_year: 'Through 2026' changed to 'more recently', matching the MPO's wording. 9.3 percent in 2025 checks against the series.",
+        "Tension: 'reports from 2020 and 2023 describe a weak and failing growth model' was reattributed. Only the 2023 SCD calls the model failing; the 2020 CEM calls growth 'modest and volatile'. Added '2024' to the 36.6 percent current-account figure, the data file's reference year for it. Softened 'the official figure overstates the shortfall' to what the MPO states: re-exports are under-reported and recorded under errors and omissions."
+      ]
+    },
+    "headline": "After a deep post-Soviet collapse, the Kyrgyz Republic grew unevenly for two decades, then boomed from 2022 on trade, remittances and construction.",
+    "arc": "In 1990–1997, income per person fell by 6.1 percent a year on average, shrinking every year from 1991 to 1995 and by as much as 20.1 percent in 1994. The World Bank dates the bottom of the transition recession to 1995, and growth came back in 1996 and 1997. From 1998 to 2025, growth averaged 3.1 percent a year, but it was uneven: income per person fell in 2002, 2005, 2010 and 2012, years the World Bank links to revolutions and falls in gold output, and it dropped 9.0 percent in 2020 with the pandemic and political turmoil. From 2022 to 2025, growth ran between 7.0 and 9.7 percent a year. The IMF puts this down to bigger trade flows, strong remittance and capital inflows, and a building boom. As a result, the last ten years averaged 3.6 percent against 3.1 in the decade before, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Transition collapse and slow catch-up",
+        "text": "Like other former Soviet economies, the country went through a deep recession in the early 1990s that hit bottom in 1995. The World Bank notes that most of those economies then grew faster than the Kyrgyz Republic. In the data, income per person did not pass its 1990 level until 2022.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/679681585289928309/pdf/Kyrgyz-Republic-Country-Economic-Memorandum.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic Country Economic Memorandum",
+            "date": "2020",
+            "quote": "since the economy bottomed out from the transition recession in 1995"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/679681585289928309/pdf/Kyrgyz-Republic-Country-Economic-Memorandum.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic Country Economic Memorandum",
+            "date": "2020",
+            "quote": "economic growth in most of these countries was faster subsequently than in the Kyrgyz Republic"
+          }
+        ]
+      },
+      {
+        "title": "Gold and political upheaval",
+        "text": "After 1998 growth kept breaking off for a year at a time. The World Bank ties these dips to swings in gold output, which grew in importance after the Kumtor mine opened in 1997, and to the country's revolutions and changes of government.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/679681585289928309/pdf/Kyrgyz-Republic-Country-Economic-Memorandum.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic Country Economic Memorandum",
+            "date": "2020",
+            "quote": "Gold, which plays a significant role in the Kyrgyz economy, has been the main contributor to three of the one-year GDP contractions since 2000."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/679681585289928309/pdf/Kyrgyz-Republic-Country-Economic-Memorandum.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic Country Economic Memorandum",
+            "date": "2020",
+            "quote": "The gold sector's importance in the economy rose in 1997 with the start of operations at the Kumtor gold mine, the country's largest mining project."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/679681585289928309/pdf/Kyrgyz-Republic-Country-Economic-Memorandum.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic Country Economic Memorandum",
+            "date": "2020",
+            "quote": "Two of the four one-year contractions coincided with the country's revolutions, which saw major changes in government."
+          }
+        ]
+      },
+      {
+        "title": "A slowdown, then the 2020 shock",
+        "text": "Growth was already slowing in the late 2010s, with income per person growing between 1.5 and 2.6 percent a year from 2016 to 2019. In 2020 the pandemic and political turmoil came together, remittances fell, and income per person dropped 9.0 percent.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099648309192312499/pdf/IDU01747d51f08729046f0088cf0932a637a1e65.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic: Systematic Country Diagnostic Update. From Vulnerability to Resilience",
+            "date": "2023-05",
+            "quote": "the onset of COVID-19, combined with intensified political turbulence in 2020, saw a sharp drop in GDP, a decline in remittances"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099648309192312499/pdf/IDU01747d51f08729046f0088cf0932a637a1e65.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic: Systematic Country Diagnostic Update. From Vulnerability to Resilience",
+            "date": "2023-05",
+            "quote": "Growth started decelerating even before the sharp contraction of 2020"
+          }
+        ]
+      },
+      {
+        "title": "Remittances and gold still matter",
+        "text": "Since the 2000s, many workers have gone abroad for jobs, mostly to Russia, and the money they send home has helped cut poverty, especially among the poorest households. The World Bank still counts gold exports and remittances among the economy's main supports.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099648309192312499/pdf/IDU01747d51f08729046f0088cf0932a637a1e65.pdf",
+            "publisher": "World Bank",
+            "title": "Kyrgyz Republic: Systematic Country Diagnostic Update. From Vulnerability to Resilience",
+            "date": "2023-05",
+            "quote": "Remittances from outward migration, mainly to Russia, have been a driver of poverty reduction, especially among the poorest households."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kgz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kyrgyz Republic",
+            "date": "2026-10",
+            "quote": "While the economy continues to benefit from gold exports (around 8.5 percent of GDP) and remittances (around 17 percent of GDP)"
+          }
+        ]
+      },
+      {
+        "title": "The trade and construction boom",
+        "text": "Since 2022, trade flows through the country have grown fast, alongside strong inflows of remittances and capital and a building boom. The IMF sees a possible reversal of re-export trade as a risk, and the World Bank sees tighter sanctions on Russia as a risk to trade.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/04/pr26185-kyrgyz-republic-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Kyrgyz Republic",
+            "date": "2026-06-04",
+            "quote": "Since 2022, expanded trade flows, robust remittance and capital inflows, and strong construction activity"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/09/mcs-04092026-kyrgyz-republic-staff-concluding-statement-of-2026-aiv-consultation-mission",
+            "publisher": "IMF",
+            "title": "Kyrgyz Republic: Staff Concluding Statement of the 2026 Article IV Consultation Mission",
+            "date": "2026-04-09",
+            "quote": "potential reversals in re-export trade, volatile commodity prices"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kgz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kyrgyz Republic",
+            "date": "2026-10",
+            "quote": "A tightening of sanctions on Russia, including secondary sanctions on Kyrgyz firms and banks, could disrupt trade and financial activity."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The boom continued: income per person grew 9.3 percent in 2025. The World Bank says that more recently, public and private investment has done more of the work, and the IMF expects growth to ease as re-export trade levels off. Prices rose faster again after fuel supplies from Russia were disrupted in May 2026.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kgz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Kyrgyz Republic",
+          "date": "2026-10",
+          "quote": "More recently, growth has increasingly been supported by public and private investment."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kgz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Kyrgyz Republic",
+          "date": "2026-10",
+          "quote": "Inflation intensified in May 2026 after fuel supply disruptions from Russia caused shortages."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/04/pr26185-kyrgyz-republic-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Kyrgyz Republic",
+          "date": "2026-06-04",
+          "quote": "Growth is expected to moderate as reexport and trade-related activities plateau"
+        }
+      ]
+    },
+    "tension": "A World Bank report from 2023 called the growth model failing, after growth slowed in the late 2010s, and a 2020 report described growth as modest and volatile. The data show something better: growth over the last ten years (3.6 percent a year) beat the decade before (3.1), and income per person is at its peak. Almost all of that gain comes from 2022–2025, after those reports were written. The data also show a current account deficit of 36.6 percent of GDP in 2024. The World Bank notes that re-exports are under-reported in the official figures and show up instead under errors and omissions, so part of the recorded gap reflects trade that is not counted."
+  }
+}

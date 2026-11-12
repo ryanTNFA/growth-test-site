@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "iso3": "HKG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "HKG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: IMF Hong Kong SAR Article IV consultation 2025 staff concluding statement",
+        "same tier 1 domains: Hong Kong SAR Article IV 2026 IMF press release",
+        "same tier 1 domains: Hong Kong Asian financial crisis deflation recession 1998 SARS 2003 recovery IMF",
+        "imf.org: IMF Public Information Notice 2007 Article IV Hong Kong SAR strong growth mainland financial center",
+        "imf.org: IMF Hong Kong SAR 2009 Article IV global financial crisis recession recovery",
+        "critic: every cited imf.org URL reopened with WebFetch (the 2008 staff report PDF read in full text)"
+      ],
+      "critic_changes": [
+        "Headline: replaced 'grew fastest from 2000 to 2007' with the era's 4.7 percent rate. The series starts in 1961, and growth in the 1960s was faster, so 'fastest' was true only of the eras since 1990.",
+        "Tension: removed 'after seven years in which income per person made no net gain'. Income per person in 2025 (46450) was above its 2018 level (45280), so 2018 to 2025 did show a net gain. The sentence now says income per person stayed below its 2018 level from 2019 to 2024, which the series confirms.",
+        "Shocks since 2019 thread: the text's 'long adjustment in the property market' had no supporting quote. Added a citation from the 2024 Article IV concluding statement ('prolonged adjustment in the property sector,'), opened and verbatim, and changed 'market' to 'sector' to match it.",
+        "Shocks since 2019 thread: widened the 2026 concluding-statement quote from 'private investment is weak' to the full verbatim clause, which also supports the 'recovery is still incomplete' claim and the tension.",
+        "since_last_year: changed 'the IMF expected growth to slow' to 'the IMF saw a weaker outlook'. The press release describes a weaker near-term outlook and does not explicitly forecast slower growth.",
+        "Verified with no change: all 7 cited URLs open on imf.org. Every quote appears verbatim, with the 2008 staff report checked against the PDF text, and every date matches its document. SARS in 2003 is supported by IMF Occasional Paper 226. All figures match desk/data/HKG.json (1990s 2.1, 1998 -6.7, 2000-2007 4.7, 2004-2007 between 5.6 and 7.9, 2008-2025 1.4, 2009 -2.7, 2019 -2.4, 2020 -6.2, 2022 -2.8, last decade 1.0 against 2.8 before, 2025 3.8, investment 33.3 in 1997 and 16.1 in 2022). No banned phrases and no recommendation language were found."
+      ]
+    },
+    "headline": "Hong Kong's income per person grew 4.7 percent a year from 2000 to 2007, then 1.4 percent through a run of shocks, reaching a new high only in 2025.",
+    "arc": "In the 1990s income per person grew 2.1 percent a year, and the Asian crisis brought the deepest recession in a generation, with a fall of 6.7 percent in 1998 and years of falling prices after it. From 2000 to 2007 growth sped up to 4.7 percent a year, as factories moved to the mainland and the city used its role as a financial center to become a service economy; after the SARS outbreak of 2003, growth ran between 5.6 and 7.9 percent each year from 2004 to 2007. Since 2008 the pace has been 1.4 percent a year: the global financial crisis hit a city that relies on trade and finance, and income per person fell 2.7 percent in 2009. A run of shocks from 2019 brought falls of 2.4 percent in 2019, 6.2 in 2020 and 2.8 in 2022, so the last decade averaged 1.0 percent a year against 2.8 in the decade before. Income per person passed its 2018 level only in 2025, when it grew 3.8 percent on strong technology-related exports.",
+    "threads": [
+      {
+        "title": "Asian crisis and falling prices",
+        "about": "history",
+        "text": "The Asian crisis brought Hong Kong its deepest recession in a generation, and income per person fell 6.7 percent in 1998. Prices then fell for several years as the economy adjusted under its fixed link to the US dollar.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/nft/op/226/",
+            "publisher": "IMF",
+            "title": "Hong Kong SAR: Meeting the Challenges of Integration with the Mainland (Occasional Paper No. 226)",
+            "date": "2004-02-12",
+            "quote": "the Asian crisis of 1997 brought about the most severe recession in a generation."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn0253",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2002 Article IV Consultation with People's Republic of China - Hong Kong Special Administrative Region",
+            "date": "2002-05-15",
+            "quote": "Deflation has continued for over three years, reflecting adjustment under the linked exchange rate system."
+          }
+        ]
+      },
+      {
+        "title": "From factories to finance",
+        "about": "history",
+        "text": "Almost all of Hong Kong's manufacturing moved across the border to the Pearl River Delta, and the city became a service economy built on its role as a global financial center. Closer ties with the mainland drove this shift and the fast growth of 2000 to 2007.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08369.pdf",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region: 2008 Article IV Consultation Discussions—Staff Report (IMF Country Report No. 08/369)",
+            "date": "2008-12",
+            "quote": "These changes have resulted in almost all manufacturing operations moving to the Pearl River Delta."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn0253",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2002 Article IV Consultation with People's Republic of China - Hong Kong Special Administrative Region",
+            "date": "2002-05-15",
+            "quote": "Growing integration with the Mainland is pushing transformation to a high-value added, service-based economy"
+          }
+        ]
+      },
+      {
+        "title": "Global financial crisis",
+        "about": "history",
+        "text": "Because the city relies so much on trade and finance, the 2008 crisis hit it hard, and income per person fell 2.7 percent in 2009. Growth since 2008 has averaged 1.4 percent a year, well below the pace of the years before.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/52/mcs102009",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region Preliminary Conclusions of the 2009 Article IV Mission",
+            "date": "2009-11-02",
+            "quote": "Hong Kong SAR was hit hard by the global financial crisis due to heavy reliance on trade and financial services"
+          }
+        ]
+      },
+      {
+        "title": "Shocks since 2019",
+        "about": "present",
+        "text": "Several shocks from 2019 on brought three years of recession, followed by a long adjustment in the property sector. The IMF says the recovery is still incomplete and private investment is weak; investment fell from 33.3 percent of GDP in 1997 to 16.1 in 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/06/mcs-011025-peoples-republic-of-china-hong-kong-special-admin-reg-cs-statement-2024-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2025-01-10",
+            "quote": "The territory endured three years of recession since 2019 due to several shocks."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/06/mcs-011025-peoples-republic-of-china-hong-kong-special-admin-reg-cs-statement-2024-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2025-01-10",
+            "quote": "prolonged adjustment in the property sector,"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/13/mcs-05152026-hong-kong-sar-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-15",
+            "quote": "The recovery remains incomplete: economic activity is still below its pre-pandemic trend, private investment is weak,"
+          }
+        ]
+      },
+      {
+        "title": "An ageing, shrinking workforce",
+        "about": "present",
+        "text": "The population is ageing quickly and fewer people, young people in particular, are in the labor force. The IMF expects this to hold back the supply of workers and the economy's growth potential.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/22/pr26168-hong-kong-sar-imf-executive-board-concludes-2026-article-iv-consultation-discussions",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation Discussions with the People's Republic of China—Hong Kong Special Administrative Region",
+            "date": "2026-05-22",
+            "quote": "declining youth labor force participation and population aging are expected to weigh on labor supply and potential growth"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/06/mcs-011025-peoples-republic-of-china-hong-kong-special-admin-reg-cs-statement-2024-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Hong Kong Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2025-01-10",
+            "quote": "rapid aging and slowing labor force growth also pose challenges."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 3.8 percent in 2025 and passed its 2018 level for the first time, helped by strong technology-related exports. In May 2026 the IMF saw a weaker outlook, as the war in the Middle East weakened demand abroad and tightened financial conditions.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/13/mcs-05152026-hong-kong-sar-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "People's Republic of China—Hong Kong Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-15",
+          "quote": "growth in 2025 stronger than expected, supported by robust technology-related exports"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/22/pr26168-hong-kong-sar-imf-executive-board-concludes-2026-article-iv-consultation-discussions",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation Discussions with the People's Republic of China—Hong Kong Special Administrative Region",
+          "date": "2026-05-22",
+          "quote": "weaker external demand and tighter financial conditions amid the war in the Middle East"
+        }
+      ]
+    },
+    "tension": "The data show income per person at its highest level ever in 2025, while the IMF stresses that the recovery is incomplete and activity is still below its pre-pandemic trend. Both can be true: the new high came only after income per person stayed below its 2018 level from 2019 to 2024."
+  }
+}

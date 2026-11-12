@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "iso3": "HND",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "HND",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org: Honduras Article IV consultation 2025 staff report growth",
+        "worldbank.org (and tier 1 list): Honduras Macro Poverty Outlook remittances growth",
+        "imf.org (tier 1 list): Honduras 2023 Article IV press release hurricanes Eta Iota pandemic recovery",
+        "worldbank.org (tier 1 list): Honduras systematic country diagnostic growth decade 2009 political crisis low productivity",
+        "opened: thedocs.worldbank.org MPO Honduras October 2026",
+        "opened: imf.org IMF Country Report No. 26/160 (June 2026)",
+        "opened: imf.org press release PR23/321 (September 2023)",
+        "opened: documents1.worldbank.org Honduras Systematic Country Diagnostic Update (February 2022)",
+        "opened: documents1.worldbank.org Honduras Systematic Country Diagnostic (October 2015)",
+        "critic: re-opened all four cited PDFs with WebFetch and checked every quoted passage against the extracted text"
+      ],
+      "critic_changes": [
+        "Verified all four cited documents (World Bank MPO Oct 2026, IMF Country Report 26/160 June 2026, World Bank SCD Oct 26 2015, World Bank SCD Update Feb 2022): every quoted passage appears verbatim, and the dates and titles match the documents. Two distinct recent tier 1 sources, so the story stays tier 1.",
+        "Checked every number against desk/data/HND.json: 17.7, 4.2 and 1.2 (eras), 1.6 and 1.4 (G1), -4.5 (2009), -10.5 (2020), 8.7 (1998 and 1999), and the 2025 peak all match. No number changed.",
+        "Arc: dropped the claim that money from migrants 'rose fast' in 1998–2007, because no cited passage supports it. Recast CAFTA-DR and the migration after Mitch as things that happened in that era rather than as causes of the 4.2 percent growth. The 2015 diagnostic dates CAFTA-DR to the 2000s and does not tie it to growth.",
+        "Thread 'Storms, droughts and El Niño': swapped the IMF El Niño passage, which mentions only drought and heat, for an MPO passage that supports the claim about farming and hydropower and the 2026 expectation. Changed 'farm exports' to 'farming' and reworded the 2026 sentence to match the source.",
+        "Thread 'The 2009 double crisis': changed 'lingered for a decade after' to 'lingered for years after'. The cited passage links the divisions to 2017 but does not give a ten-year span.",
+        "Thread 'Spending up, productivity flat' was retitled 'Spending up, productivity low', because the source says productivity 'remained low', not that it was flat.",
+        "since_last_year: extended the IMF quote so it also supports the close November 2025 elections ('narrow plurality in the November 30, 2025 elections'). Added an MPO citation for the expected 2026 slowdown from oil prices, slower remittances and El Niño drought, which the original citations did not support. Changed 'the risk of an El Niño drought' to 'an El Niño drought' to match the source.",
+        "Tension: removed 'in the early 1990s', because the World Bank passage does not date the expansion. Dropped the redundant sentence about the early-1990s jump. Changed 'steady GDP growth' to 'solid GDP growth', because the MPO does not call the growth steady."
+      ]
+    },
+    "headline": "Honduras grows slowly but steadily, carried by money sent home by migrants and knocked back again and again by storms and crises.",
+    "arc": "Since 1990 Honduras's growth has run in three eras, each slower than the one before. The data show income per person rising 17.7 percent a year from 1990 to 1997, a pace the sources do not describe; the World Bank says Hurricane Mitch in 1998 abruptly ended a period of expansion. From 1998 to 2007 growth averaged 4.2 percent a year; in these years the country joined the CAFTA-DR trade agreement, and after Mitch Hondurans began moving to the United States in large numbers. Since 2008 it has averaged 1.2 percent: the 2009 global financial crisis, made worse by a political crisis at home, cut income per person by 4.5 percent, and the pandemic and hurricanes Eta and Iota cut it by 10.5 percent in 2020. Growth since then has been steady but moderate, 1.6 percent a year over 2016–2025 against 1.4 in the decade before, carried mostly by household spending paid for by remittances while productivity stayed low, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Remittances carry the economy",
+        "text": "After Hurricane Mitch in 1998, Hondurans began moving to the United States in large numbers, and the money they send home has become the main engine of spending. The World Bank describes growth over the last decade as driven largely by consumption paid for by remittances.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-hnd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Honduras",
+            "date": "2026-10",
+            "quote": "During 2015–2025, Honduras grew by 3.4 percent annually, driven largely by remittance-fueled consumption."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/539771467987912356/pdf/100441-REVISED-IDA-SecM2015-0215-1-PUBLIC-disclosed-12-23-15-11-30p.pdf",
+            "publisher": "World Bank",
+            "title": "Unlocking Economic Potential for Greater Opportunities: Honduras Systematic Country Diagnostic",
+            "date": "2015-10-26",
+            "quote": "The first significant wave of Honduran migrants to the United States left in the aftermath of Hurricane Mitch in 1998."
+          }
+        ]
+      },
+      {
+        "title": "Storms, droughts and El Niño",
+        "text": "Hurricane Mitch in 1998 ended a period of expansion. In 2020 hurricanes Eta and Iota struck with a force like Mitch's, and together with the pandemic they brought the deepest fall in the record. Droughts that come with El Niño weigh on farming and on the power made by dams, and an El Niño drought was expected to do so again in 2026.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/539771467987912356/pdf/100441-REVISED-IDA-SecM2015-0215-1-PUBLIC-disclosed-12-23-15-11-30p.pdf",
+            "publisher": "World Bank",
+            "title": "Unlocking Economic Potential for Greater Opportunities: Honduras Systematic Country Diagnostic",
+            "date": "2015-10-26",
+            "quote": "Hurricane Mitch, the worst disaster in Honduras’ recent history, devastated the country in 1998, abruptly ending a period of economic expansion."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/517481645562029476/pdf/Honduras-Paths-Toward-Building-a-Resilient-Society-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Honduras: Paths Toward Building a Resilient Society (Systematic Country Diagnostic Update)",
+            "date": "2022-02",
+            "quote": "Hurricanes Eta and Iota struck Central America in 2020, each with an impact magnitude comparable to that of Hurricane Mitch in 1998."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-hnd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Honduras",
+            "date": "2026-10",
+            "quote": "oil prices remain elevated, and El Niño-related drought weighs on agriculture and hydropower."
+          }
+        ]
+      },
+      {
+        "title": "The 2009 double crisis",
+        "text": "In 2009 the global financial crisis arrived together with a political crisis at home, and income per person fell 4.5 percent. The World Bank says the gains against poverty made in the mid-2000s were wiped out, and the political divisions of that year lingered for years after.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/539771467987912356/pdf/100441-REVISED-IDA-SecM2015-0215-1-PUBLIC-disclosed-12-23-15-11-30p.pdf",
+            "publisher": "World Bank",
+            "title": "Unlocking Economic Potential for Greater Opportunities: Honduras Systematic Country Diagnostic",
+            "date": "2015-10-26",
+            "quote": "these were wiped out during the final years of the decade, when the impact of the global financial crisis was magnified by domestic political instability."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/517481645562029476/pdf/Honduras-Paths-Toward-Building-a-Resilient-Society-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Honduras: Paths Toward Building a Resilient Society (Systematic Country Diagnostic Update)",
+            "date": "2022-02",
+            "quote": "The political polarization rooted in the unresolved issues of the 2009 political crisis was compounded by the contested presidential reelection in 2017"
+          }
+        ]
+      },
+      {
+        "title": "Spending up, productivity low",
+        "text": "The sources describe growth that rests on household spending more than on workers producing more. Most workers hold informal service jobs, and productivity has stayed low.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-hnd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Honduras",
+            "date": "2026-10",
+            "quote": "However, productivity remained low, with most workers employed in informal services."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/517481645562029476/pdf/Honduras-Paths-Toward-Building-a-Resilient-Society-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Honduras: Paths Toward Building a Resilient Society (Systematic Country Diagnostic Update)",
+            "date": "2022-02",
+            "quote": "Real GDP growth averaged 3.1 percent over the past decade, mainly driven by remittance-fueled private consumption."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 record coffee prices and a surge in remittances lifted growth, and income per person reached a new high. A new government took office in January 2026 after close elections in November 2025. Through 2026 higher oil prices, slower remittances and an El Niño drought were expected to slow growth, and Congress approved a reform of the electricity sector in September 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1hndea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Honduras: Fourth and Fifth Reviews Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 26/160)",
+          "date": "2026-06",
+          "quote": "The Honduran economy has remained resilient, growing 3.8 percent in 2025, supported by record-high coffee prices and surging remittances."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1hndea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Honduras: Fourth and Fifth Reviews Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 26/160)",
+          "date": "2026-06",
+          "quote": "The government of President Nasry Asfura took office in January 2026. Asfura won a narrow plurality in the November 30, 2025 elections"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-hnd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Honduras",
+          "date": "2026-10",
+          "quote": "Growth is projected to slow to 3.4 percent in 2026 as remittances moderate, oil prices remain elevated, and El Niño-related drought"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-hnd.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Honduras",
+          "date": "2026-10",
+          "quote": "The electricity reform approved by Congress in September is expected to reduce losses and strengthen fiscal sustainability."
+        }
+      ]
+    },
+    "tension": "The data show income per person rising 17.7 percent a year from 1990 to 1997, but no source describes a boom of that size: the World Bank speaks only of a period of expansion that Hurricane Mitch ended in 1998, while the data show 1998 and 1999 as strong years, at 8.7 percent each. More recently, the World Bank reports solid GDP growth over 2015–2025, yet income per person grew only 1.6 percent a year over 2016–2025, so a growing population took up much of the gain."
+  }
+}

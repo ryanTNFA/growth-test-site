@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "iso3": "BLZ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BLZ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Belize Article IV consultation 2025 staff report\"",
+        "same tier 1 domains: \"Belize economy growth tourism outlook\"",
+        "worldbank.org: \"Belize Macro Poverty Outlook\"",
+        "imf.org, worldbank.org, iadb.org, caribank.org: \"Belize pandemic tourism collapse 2020 GDP contraction recovery Article IV 2023\"",
+        "opened: imf.org 2025 Article IV press release (2025-09-15)",
+        "opened: imf.org 2025 Article IV concluding statement (2025-07-11), not cited",
+        "opened: imf.org 2023 Article IV concluding statement (2023-02-17)",
+        "opened: imf.org WP/19/24 Reinvigorating Growth in Belize (2019-02)",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Belize (October 2026)",
+        "opened: worldbank.org Belize country overview (undated, not cited)",
+        "iadb.org blog on Belize's rebound returned HTTP 403, not cited",
+        "tier 2 not searched: tier 1 gave enough recent sources",
+        "critic: re-opened every cited URL (IMF WP/19/24 and World Bank MPO PDFs text-extracted; both IMF press pages via WebFetch)"
+      ],
+      "critic_changes": [
+        "Re-opened all five cited documents. Every quoted passage was found on its page, and every date matches the document (WP/19/24: February 2019; 2023 concluding statement: 17 February 2023; 2025 press release: 15 September 2025; MPO: October 2026).",
+        "Pandemic thread: replaced the 2023 IMF quote on the 2020 contraction and 2021 rebound with the same page's 'Key drivers of the rebound...' line. The thread names retail and wholesale trade, tourism and business process outsourcing, and the old quote did not support that claim. Also reworded 'so the pandemic hit hard' as 'output fell sharply in 2020', because no cited passage makes that causal link.",
+        "Debt thread: added the WP/19/24 'two growth spurts... due to tourism inflows and higher investment' passage to support both the thread and the arc's claim that the spurts were tied to tourism and investment. Removed 'during the long slide', which the cited passage does not say.",
+        "Lost-preferences thread: 'lost preferential access' became 'preferential access... eroded', as the source says erosion, not loss. Productivity is now dated 2000 to 2016, as the source has it, instead of 'over the same years' (mid-2000s on).",
+        "Population thread: 'a slide even in years when the economy as a whole expanded' was rewritten to match the source: after 2010 the population grew faster than output, so income per person declined. The data show income per person rose in 2012-2015, so the old wording overstated it.",
+        "Fuel and debt thread: changed 'after its 2020 peak' to 'from 2020 to 2025', since the cited World Bank passage gives the 2020 level, not a peak. Changed 'swings pass through to the economy' to 'exposed to swings in world fuel prices', to match the quote. 'Imports fuel' became 'imports energy' (the source says 'net energy importer').",
+        "Arc: replaced 'growth has since cooled to 1.3 percent in 2025' with the data's year-by-year path: -1.5 in 2023, 2.0 in 2024, 1.3 in 2025. The old wording skipped the 2023 fall. Every other arc number (3.6, -0.8, 1.6, peak 2007, falls in 2008-2011 and 2016-2017, -14.6, 16.6, 7.2, 1.4, 2003) checks against BLZ.json.",
+        "since_last_year: the claim that the hydro purchase 'lifted public debt for a time' was not in the cited quote, so a second MPO passage was added to support it. Also noted that the shares were then sold to the public.",
+        "Tension: dropped 'a fast-growing population takes a share of total growth', which no recent cited source supports for the current era. Added the data's 1.5 percent fall in income per person in 2023, inside the 2021-2023 period the IMF counts as strong expansion. Kept the IMF versus World Bank 2024 disagreement, which the MPO table confirms (no figures restated outside quotes).",
+        "No banned phrases or recommendation language found. Survivors: 5 threads, 3 distinct recent tier 1 sources cited, so the story stays tier 1."
+      ]
+    },
+    "headline": "Belize's income per person is about where it first was in 2003: a debt-fuelled boom, a long slide, then a pandemic collapse and a tourism-led rebound.",
+    "arc": "From 1990 to 2004 income per person grew 3.6 percent a year, in growth spurts the IMF ties to tourism, investment and public spending, the later one paid for with rising foreign public debt. From 2005 to 2017 it shrank 0.8 percent a year: Belize's trade preferences in Europe eroded, natural disasters came more often and the government went through repeated debt restructurings, while the population grew faster than output. Income per person peaked in 2007, fell every year from 2008 to 2011, and fell again in 2016 and 2017. Since 2018 it has grown 1.6 percent a year, but that average hides the pandemic: income per person dropped 14.6 percent in 2020, then rose 16.6 percent in 2021 and 7.2 percent in 2022 as trade, tourism and business services came back. It fell 1.5 percent in 2023 and grew 2.0 percent in 2024 and 1.3 percent in 2025, leaving income per person 1.4 percent below its 2007 peak and about where it first was in 2003.",
+    "threads": [
+      {
+        "title": "Debt-financed booms, then restructurings",
+        "text": "The IMF describes two growth spurts before the mid-2000s, driven by tourism and investment, with the second financed by foreign public debt as private saving fell. That debt was restructured in 2006-2007, 2012-2013 and 2016-2017, which the IMF says hurt the government's credibility and its access to markets.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "Belize has seen two growth spurts in 1986-1993 and in 1999-2002 due to tourism inflows and higher investment"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "Unlike the first boom-bust cycle, the second growth spike was financed by increasing external public debt, as private savings declined."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "a weakened fiscal position resulted into serial debt restructurings (2006-2007, 2012-2013, and 2016-2017) that undermined the government’s credibility"
+          }
+        ]
+      },
+      {
+        "title": "Lost preferences and natural disasters",
+        "text": "From the mid-2000s, the IMF points to outside shocks: Belize's preferential access to European markets eroded, aid declined and natural disasters became more frequent. The IMF also finds that productivity fell from 2000 to 2016, as it did in other Caribbean economies.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "The adverse external shocks include the erosion of preferential trade access to European markets, the decline of official development assistance, and increasingly frequent natural disasters."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "TFP has declined in 2000-2016, as in other Caribbean economies"
+          }
+        ]
+      },
+      {
+        "title": "A population outgrowing output",
+        "text": "Belize's population has grown fast. After 2010 the economy as a whole kept growing, but the IMF estimated that the population grew faster, so income per person declined.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2019/wp1924.pdf",
+            "publisher": "IMF",
+            "title": "Reinvigorating Growth in Belize (IMF Working Paper WP/19/24)",
+            "date": "2019-02",
+            "quote": "With average population growth estimated at about 2.5 percent per year, GDP per capita since 2010 has been declining"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse and tourism rebound",
+        "text": "Services, especially tourism, drive much of Belize's economy, and output fell sharply in 2020. The rebound that followed was led by retail and wholesale trade, tourism and business process outsourcing, and the IMF reports that growth stayed strong through 2024.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/02/17/belize-staff-concluding-statement-of-the-2023-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Belize: Staff Concluding Statement of the 2023 Article IV Mission",
+            "date": "2023-02-17",
+            "quote": "Key drivers of the rebound: retail and wholesale trade, tourism, and business process outsourcing."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/15/pr-25295---belize---imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Belize",
+            "date": "2025-09-15",
+            "quote": "Real GDP expanded by 30.6 percent between 2021 and 2023 and grew by 8.1 percent in 2024."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belize (October 2026)",
+            "date": "2026-10",
+            "quote": "Services, particularly tourism, drive economic activity, while remittances remain an important source of income."
+          }
+        ]
+      },
+      {
+        "title": "Lower debt, exposure to fuel prices",
+        "text": "Public debt fell steeply from 2020 to 2025, helped by strong growth, tighter budgets and the 2021 debt-for-nature swap. Belize still imports energy and ties its currency to the U.S. dollar, which leaves it exposed to swings in world fuel prices.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belize (October 2026)",
+            "date": "2026-10",
+            "quote": "Fiscal discipline, robust growth, and the 2021 debt-for-nature swap reduced public debt from about 103 percent of GDP in 2020 to 69.9 percent in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Belize (October 2026)",
+            "date": "2026-10",
+            "quote": "As a net energy importer operating under a U.S. dollar peg, the country is exposed to global fuel price fluctuations"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed in 2025, which the World Bank ties to weaker outside demand, and income per person rose 1.3 percent. In late 2025 the government bought the hydroelectric plants on the Macal River, which raised public debt for a time before the shares were sold to the public. In 2026 higher food and fuel prices pushed inflation back up.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belize (October 2026)",
+          "date": "2026-10",
+          "quote": "Economic growth slowed to an estimated 2.6 percent in 2025 amid weaker external demand."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belize (October 2026)",
+          "date": "2026-10",
+          "quote": "In late 2025, the government acquired Fortis Inc.'s three hydroelectric plants on the Macal River"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belize (October 2026)",
+          "date": "2026-10",
+          "quote": "causing a temporary increase in public debt before divesting all shares of the newly renamed Hydro Belize Limited to the public"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-blz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Belize (October 2026)",
+          "date": "2026-10",
+          "quote": "rose to 4.6 percent year-on-year in June 2026, driven mainly by higher food and fuel prices"
+        }
+      ]
+    },
+    "tension": "The IMF describes a strong rebound from 2021 through 2024, but in the data income per person in 2025 is still 1.4 percent below its 2007 peak and about where it first was in 2003. Much of the rebound only made up the 14.6 percent fall of 2020, and income per person fell 1.5 percent in 2023, inside the period the IMF counts as strong growth. The sources also disagree with each other: the World Bank's October 2026 figures put 2024 growth well below the IMF's 2025 figure, and the data show income per person grew 2.0 percent that year."
+  }
+}

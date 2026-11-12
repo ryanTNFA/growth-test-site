@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "iso3": "GIN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GIN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Guinea IMF Article IV 2025 staff report Simandou growth",
+        "same tier 1 domains: Guinea Macro Poverty Outlook World Bank 2025 bauxite growth",
+        "imf.org: IMF Guinea press release 2025 OR 2026 economy Simandou bauxite mission",
+        "worldbank.org, imf.org, afdb.org: Guinea bauxite boom since 2016 growth Ebola 2014 economic update",
+        "opened: thedocs.worldbank.org MPO Guinea (October 2026); worldbank.org Guinea Economic Update 2026 page; documents1.worldbank.org Guinea Economic Update September 2024; imf.org PR 26/275 (August 2026); imf.org Country Report 16/95 (March 2016)",
+        "critic: re-opened all five cited URLs (PDF text extracted locally) and checked every quote, date and number against desk/data/GIN.json"
+      ],
+      "critic_changes": [
+        "All five cited URLs re-opened (PDF text extracted locally); every quoted passage found on its page and every date confirmed (MPO October 2026; GEU 2026 page 9 October 2026; GEU first edition September 2024; IMF PR 26/275 11 August 2026; IMF CR 16/95 March 2016). All numbers in headline, arc, threads and tension match GIN.json (1.2, 1.4, 8.0, 7.5, 3.9, 52.4, 15.0, 38.1, 5.0, peak 2025).",
+        "Arc: replaced 'when the World Bank points to construction imports for the Simandou iron ore project' with 'while the Simandou iron ore project was being built'. The MPO links Simandou construction imports to the current account deficit, not to investment, so the original attribution overstated the source.",
+        "Simandou thread: added a second MPO citation (the 9 million tons passage) because the 'third major commodity export' claim was not in the single cited passage.",
+        "Weak-links thread: reworded to 'ties the fall in non-mining exports since 2016 to a rising real exchange rate' (the source dates the export decline, not the appreciation, from 2016). Extended the 2024 GEU quote to include the REER clause so it supports the claim (22 words). Softened 'done less for jobs and poverty than for output' to 'has not brought broad gains in jobs', which the cited passages support.",
+        "History thread: dropped 'around the 2015 election'; the cited passage mentions political uncertainty but not the election.",
+        "since_last_year: added an MPO citation for the food-price inflation claim in 2026H1, which no cited passage supported before.",
+        "Tension: removed 'after a revision to the national accounts'. In the MPO that revision refers to the poverty estimates, not to the 2016-25 growth figure."
+      ]
+    },
+    "headline": "Guinea's income per person grew faster from 2016 on a bauxite boom; Simandou iron ore now opens a second boom, with weak links to jobs beyond mining.",
+    "arc": "From 1990 to 2015, income per person in Guinea grew by 1.2 percent a year on average, and by 1.4 in the decade to 2015. That era ended with the Ebola epidemic, which the IMF says, along with political uncertainty and falling commodity prices, stalled activity in 2014 and 2015. Growth then jumped to 8.0 percent in 2016 and 7.5 in 2017, and averaged 3.9 percent a year over 2016 to 2025, as bauxite output surged and mining exports drove the economy. Investment swung widely, from 52.4 percent of GDP in 2016 to 15.0 in 2021 and back to 38.1 in 2025, while the Simandou iron ore project was being built. Income per person reached its highest level yet in 2025, after growth of 5.0 percent that year, and Simandou began exporting iron ore in November 2025.",
+    "threads": [
+      {
+        "title": "Bauxite carries the boom",
+        "about": "present",
+        "text": "Bauxite exports surged after 2016 and have carried growth since; the World Bank says mining also led growth in 2025. Total output grew much faster than income per person because the population grew fast too.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099091824172037647/pdf/P500463-3faa4fa0-9469-4056-8754-e27a84ed4820.pdf",
+            "publisher": "World Bank",
+            "title": "Guinea Economic Update: Natural Resource Management for Development (First Edition)",
+            "date": "2024-09",
+            "quote": "From 2016 to 2023, the nation’s economy grew at an average rate of 6.7 percent, or 3.8 percent on a per capita basis"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/guinea/publication/guinea-economic-update-2026-beyond-mining-turning-resource-wealth-into-private-sector-growth-and-job-creation",
+            "publisher": "World Bank",
+            "title": "Guinea Economic Update 2026: Beyond Mining - Turning Resource Wealth into Private Sector Growth and Job Creation",
+            "date": "2026-10-09",
+            "quote": "Guinea's economy grew by 7.3% in 2025, driven by increased mining production, particularly of bauxite"
+          }
+        ]
+      },
+      {
+        "title": "Simandou opens a second boom",
+        "about": "present",
+        "text": "Iron ore exports from Simandou began in November 2025, with the first large shipments in the first half of 2026. The World Bank calls this the start of a second mining boom and a third major commodity export.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gin.pdf",
+            "publisher": "World Bank",
+            "title": "Guinea: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Simandou iron ore exports, launched in November 2025, mark the start of a second mining boom with the potential to catalyze private-sector-led, job-rich growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gin.pdf",
+            "publisher": "World Bank",
+            "title": "Guinea: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Simandou iron ore recorded its first significant export of at least 9 million tons in 2026H1, adding a third major commodity export"
+          }
+        ]
+      },
+      {
+        "title": "Weak links beyond mining",
+        "about": "present",
+        "text": "Mining buys little from local firms and has few links to the rest of the economy. The World Bank ties the fall in non-mining exports since 2016 to a rising real exchange rate, and says mining-led growth has not brought broad gains in jobs.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gin.pdf",
+            "publisher": "World Bank",
+            "title": "Guinea: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Limited local procurement, shallow downstream linkages, and a narrow domestic supply base hinder the transmission of mining booms into broad-based employment in labor-intensive sectors."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099091824172037647/pdf/P500463-3faa4fa0-9469-4056-8754-e27a84ed4820.pdf",
+            "publisher": "World Bank",
+            "title": "Guinea Economic Update: Natural Resource Management for Development (First Edition)",
+            "date": "2024-09",
+            "quote": "Non-mining exports have declined in absolute terms since 2016, suggestive of ‘Dutch disease’, whereby REER appreciation makes Guinean non-mining exports more expensive"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/guinea/publication/guinea-economic-update-2026-beyond-mining-turning-resource-wealth-into-private-sector-growth-and-job-creation",
+            "publisher": "World Bank",
+            "title": "Guinea Economic Update 2026: Beyond Mining - Turning Resource Wealth into Private Sector Growth and Job Creation",
+            "date": "2026-10-09",
+            "quote": "Mining-led growth does not automatically translate into more economic opportunities for the population."
+          }
+        ]
+      },
+      {
+        "title": "Ebola and a commodity slump",
+        "about": "history",
+        "text": "Just before the bauxite boom, the Ebola epidemic of 2014 and 2015, political uncertainty and falling commodity prices brought activity to a halt, the IMF reported in 2016.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1695.pdf",
+            "publisher": "IMF",
+            "title": "Guinea: Sixth and Seventh Reviews under the Extended Credit Facility Arrangement (IMF Country Report No. 16/95)",
+            "date": "2016-03",
+            "quote": "Economic activity stalled as political uncertainty and the drop in commodity prices exacerbated the effects of the Ebola disease"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Simandou began exporting iron ore in November 2025, adding a third major mining export alongside bauxite and gold. In the first half of 2026, the World Bank reports, inflation picked up on food prices, and in August 2026 the IMF reached a staff-level agreement with Guinea on a new loan program, saying growth is expected to speed up as mining output rises.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gin.pdf",
+          "publisher": "World Bank",
+          "title": "Guinea: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Simandou iron ore recorded its first significant export of at least 9 million tons in 2026H1, adding a third major commodity export"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gin.pdf",
+          "publisher": "World Bank",
+          "title": "Guinea: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Inflation accelerated to 5.6 percent in 2026H1—up from 3.2 percent in 2025—driven by food prices"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/08/11/pr26275-guinea-imf-completes-2026-aiv-mission-reaches-sla-41-month-ecf-arrangement",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission and Reaches Staff-Level Agreement on a 41-Month Extended Credit Facility Arrangement with Guinea",
+          "date": "2026-08-11",
+          "quote": "Guinea’s economy has remained resilient; growth is expected to accelerate as mining production scales up."
+        }
+      ]
+    },
+    "tension": "The World Bank's October 2026 note puts growth in income per person over 2016 to 2025 well above the 3.9 percent a year in this data. And the IMF described close to zero growth in 2014 and 2015, while this data shows income per person still rising by 1.2 percent in each of those years."
+  }
+}

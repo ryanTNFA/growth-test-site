@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "CAF",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CAF",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Central African Republic IMF Article IV 2025 staff report ECF review growth",
+        "same tier 1 domains: Central African Republic Macro Poverty Outlook World Bank economic update",
+        "imf.org: Central African Republic IMF 2026 Extended Credit Facility review mission press release",
+        "worldbank.org: Central African Republic 2026 macro poverty outlook gold exports growth",
+        "same tier 1 domains: Central African Republic Systematic Country Diagnostic history of coups mutinies 1990s growth decline 2013 crisis GDP contracted",
+        "Opened: IMF Country Report 25/140 (June 2025, PDF and landing page), IMF press release 25/179 (2025-06-04), IMF staff visit press release (2025-04-03), World Bank Macro Poverty Outlook CAR (October 2026), World Bank Country Economic Memorandum (2022), World Bank Systematic Country Diagnostic PDF (opened, not cited)",
+        "Critic: re-opened all three cited PDFs (IMF CR 25/140, World Bank MPO October 2026, World Bank CEM 2022), extracted their text, and checked each quoted passage against it"
+      ],
+      "critic_changes": [
+        "Checked every cited passage against text extracted from the three cited PDFs. All 13 draft quotes are on the pages. The PDF only splits some words across lines ('ar- tisanal', 'per- cent'). Dates confirmed: IMF CR 25/140, June 2025; MPO stamped 'October 2026'; CEM (c) 2022.",
+        "Checked every number against desk/data/CAF.json. These match: 34.7 percent below the 1978 peak; below 1960; eras -1.9, 1.4, -1.8 and 0.2; the 2013 fall of 36.8; 2025 growth in income per person of 1.0. No number needed correcting.",
+        "Arc: changed '1990–2000, a decade of coups and power struggles' to 'a decade in which elections did not end coups and violent changes of power'. That is the CEM's own wording about the 1990s. The CEM does not describe the 1990s as power struggles; it uses that phrase for the early 2010s.",
+        "Arc and thread 2: changed 'recovery began after 2015' and 'Growth returned after 2015' to 'in 2015' / 'from 2015'. The CEM dates the recovery path from 2015, and the data show 4.2 percent growth in 2015.",
+        "Arc: changed 'a short burst of faster growth' to 'a burst of faster growth'. The CEM calls it a growth-acceleration episode and does not call it short.",
+        "Thread 'A history of coups': replaced the 'five coups' quote with the CEM's 'Successive coups led to severe economic and political crises...', which supports the claim that coups set the economy back. Added the CEM's March 2003 overthrow passage to support 'a coup in 2003', which no citation backed. Reworded 'each upheaval set the economy back' to 'successive coups brought economic crises' to match the source.",
+        "Thread 'Fuel, insecurity and fading aid': no citation supported 'borrow at higher cost in the region', so I swapped the CEM pandemic/election quote for the MPO passage on 'expensive short-term regional and domestic borrowing'. The CEM quote is from 2022 and backed nothing in this thread.",
+        "Thread 'Gold without wider gains': replaced the first MPO quote with a 17-word passage that includes 'an enclave sector generating export revenues but little employment', which supports 'employs few people'. Added the MPO passage 'agriculture, where most of the poor work...' to support the farming sentence.",
+        "Thread 'Population outpacing output': changed 'expects income per person to fall again as output growth slips below population growth' to 'fall in 2027 and 2028 because output growth stays below population growth'. That is the MPO outlook years and wording.",
+        "since_last_year: added the MPO passage on 'improved reporting of gold production, record international prices, and the recent rebasing of national accounts'. No citation had supported the record-prices and better-recording claims, and this passage also backs the tension.",
+        "Checked banned phrases and recommendation language: none found. tier1_recent_found stays at 4 as the drafter recorded it. The two cited recent sources (IMF CR 25/140, 2025; World Bank MPO, October 2026) meet the minimum of 2."
+      ]
+    },
+    "headline": "Coups and the 2013 civil war have left income per person below its 1960 level, and a gold-led spurt in 2025 has done little for most households.",
+    "arc": "Income per person in the Central African Republic peaked in 1978. It is now 34.7 percent below that peak and lower than in 1960. Growth averaged -1.9 percent a year in 1990–2000, a decade in which elections did not end coups and violent changes of power, and the World Bank says income per person kept shrinking into the mid-2000s. The 2001–2009 era averaged 1.4 percent a year, with the World Bank dating a burst of faster growth to the years just before the 2013 crisis. The 2013 civil war cut income per person by 36.8 percent in one year, so 2010–2017 averaged -1.8 percent even though recovery began in 2015. Since 2018 growth has averaged 0.2 percent a year, as the pandemic, a political crisis after the December 2020 elections, erratic fuel supply and shrinking aid held activity back.",
+    "threads": [
+      {
+        "title": "A history of coups",
+        "about": "history",
+        "text": "Power has changed hands by force again and again since independence, and successive coups brought economic crises. The World Bank says income per person kept falling from the late 1990s into the mid-2000s, through a coup in 2003.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099950105022238641/pdf/P17499601c00dd03208b990cb1b523b9018.pdf",
+            "publisher": "World Bank",
+            "title": "From Fragility to Accelerated and Inclusive Growth: A Country Economic Memorandum for the Central African Republic",
+            "date": "2022",
+            "quote": "Successive coups led to severe economic and political crises that unraveled the country's social fabric"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099950105022238641/pdf/P17499601c00dd03208b990cb1b523b9018.pdf",
+            "publisher": "World Bank",
+            "title": "From Fragility to Accelerated and Inclusive Growth: A Country Economic Memorandum for the Central African Republic",
+            "date": "2022",
+            "quote": "Between 1999 and 2006 per capita income continued to contract sharply"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099950105022238641/pdf/P17499601c00dd03208b990cb1b523b9018.pdf",
+            "publisher": "World Bank",
+            "title": "From Fragility to Accelerated and Inclusive Growth: A Country Economic Memorandum for the Central African Republic",
+            "date": "2022",
+            "quote": "In March 2003, Patasse was overthrown by a surprise attack headed by Francois Bozize"
+          }
+        ]
+      },
+      {
+        "title": "The 2013 civil war",
+        "about": "present",
+        "text": "The 2013 war wrecked roads and other infrastructure and drove a quarter of the population from their homes. Growth returned from 2015, but income per person has still not regained its level before the war.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1cafea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Central African Republic: Third and Fourth Reviews Under the Extended Credit Facility Arrangement, Requests for Waivers of Nonobservance of Performance Criteria, and Financing Assurances Review (IMF Country Report No. 25/140)",
+            "date": "2025-06",
+            "quote": "This war caused widespread destruction of infrastructure and displaced a quarter of the population."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1cafea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Central African Republic: Third and Fourth Reviews Under the Extended Credit Facility Arrangement, Requests for Waivers of Nonobservance of Performance Criteria, and Financing Assurances Review (IMF Country Report No. 25/140)",
+            "date": "2025-06",
+            "quote": "Two years into the program, economic growth has bounced back though per capita output remains below the levels observed before the 2013 civil war."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099950105022238641/pdf/P17499601c00dd03208b990cb1b523b9018.pdf",
+            "publisher": "World Bank",
+            "title": "From Fragility to Accelerated and Inclusive Growth: A Country Economic Memorandum for the Central African Republic",
+            "date": "2022",
+            "quote": "CAR's economy has been on a relatively sustainable path since 2015, with an average growth rate of 4.1 percent between 2015 and 2019"
+          }
+        ]
+      },
+      {
+        "title": "Fuel, insecurity and fading aid",
+        "about": "present",
+        "text": "Since 2020 growth has stalled. Fuel supply has been erratic, pockets of fighting remain, and grants and cheap loans have shrunk since 2021, pushing the government to borrow at higher cost in the region.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1cafea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Central African Republic: Third and Fourth Reviews Under the Extended Credit Facility Arrangement, Requests for Waivers of Nonobservance of Performance Criteria, and Financing Assurances Review (IMF Country Report No. 25/140)",
+            "date": "2025-06",
+            "quote": "High operating costs, pockets of insecurity, and erratic energy supplies continue to weigh on activity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1cafea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Central African Republic: Third and Fourth Reviews Under the Extended Credit Facility Arrangement, Requests for Waivers of Nonobservance of Performance Criteria, and Financing Assurances Review (IMF Country Report No. 25/140)",
+            "date": "2025-06",
+            "quote": "the loss of grant and concessional financing since 2021"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Central African Republic",
+            "date": "2026-10",
+            "quote": "the government resorted to expensive short-term regional and domestic borrowing, a pressure that intensified as access to concessional and grant financing became increasingly scarce"
+          }
+        ]
+      },
+      {
+        "title": "Gold without wider gains",
+        "about": "present",
+        "text": "Artisanal gold mining now drives exports, but it employs few people and links little to the rest of the economy. Farming, where most poor people work, has grown slowly, so mining gains have not reached most households.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Central African Republic",
+            "date": "2026-10",
+            "quote": "leaving the economy highly dependent on artisanal gold mining, an enclave sector generating export revenues but little employment"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Central African Republic",
+            "date": "2026-10",
+            "quote": "Mining-led growth, coupled with low agriculture growth and negative services growth, has not translated into income growth for the large majority of households"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Central African Republic",
+            "date": "2026-10",
+            "quote": "agriculture, where most of the poor work, grows at 3 percent, below population growth"
+          }
+        ]
+      },
+      {
+        "title": "Population outpacing output",
+        "about": "present",
+        "text": "The population grows fast, so even years of solid output growth add little to income per person. The World Bank expects income per person to fall in 2027 and 2028 because output growth stays below population growth.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Central African Republic",
+            "date": "2026-10",
+            "quote": "Because growth would remain below population growth of 3.4 percent, real per capita income is expected to decline."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth jumped in 2025 on gold, helped by record prices and better recording of gold output. It slowed again in 2026 as gold production weakened, fuel costs rose and the UN peacekeeping mission was reorganized.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Central African Republic",
+          "date": "2026-10",
+          "quote": "After years of hovering around zero, growth peaked at 5.5 percent in 2025."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Central African Republic",
+          "date": "2026-10",
+          "quote": "The exceptional expansion reflected improved reporting of gold production, record international prices, and the recent rebasing of national accounts to 2019."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-caf.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Central African Republic",
+          "date": "2026-10",
+          "quote": "Weaker gold production, higher fuel costs, the MINUSCA reorganization, and subdued investor confidence are weighing on activity"
+        }
+      ]
+    },
+    "tension": "The World Bank describes 2025 as an exceptional gold-driven expansion, but in the data income per person rose only 1.0 percent that year. Fast population growth takes up much of the gain. The World Bank also says its 2025 figure rests partly on better recording of gold output and newly rebased national accounts, which the data series here may not yet reflect."
+  }
+}

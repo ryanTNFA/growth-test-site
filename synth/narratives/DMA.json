@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "iso3": "DMA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "DMA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Dominica Article IV consultation 2025 IMF staff\"",
+        "tier 1 domains: \"Dominica Macro Poverty Outlook economic growth Hurricane Maria\"",
+        "tier 1 domains: \"Dominica Tropical Storm Erika 2015 Hurricane Maria 2017 damage percent of GDP\"",
+        "worldbank.org: \"Dominica macro poverty outlook 2025 tourism infrastructure international airport growth\"",
+        "imf.org, worldbank.org, caribank.org, iadb.org, oecd.org: \"Dominica 2003 fiscal crisis banana preferences decline IMF stand-by arrangement growth\"",
+        "Opened: imf.org 2026 Article IV concluding statement; imf.org 2025 Article IV press release PR25/193; imf.org Country Report 18/265 (2018 Article IV); imf.org PIN 05/149 (2005 Article IV); thedocs.worldbank.org Macro Poverty Outlook Dominica (October 2026); worldbank.org Dominica country page; documents.worldbank.org MPO April 2026 datasheet page (no text)",
+        "Critic re-opened all five cited URLs (both PDFs read from extracted text)"
+      ],
+      "critic_changes": [
+        "Headline: 'lost nearly a decade to storms that ended with Hurricane Maria' dropped. The 2009-2014 stall is not tied to storms in any source, so the headline now says growth stalled, then fell with two storms to 2017.",
+        "Arc: 'large public projects partly paid for by citizenship sales' replaced with 'tourism, rebuilding and large building projects, helped by revenue from citizenship sales'. The sources link the projects to construction and CBI to public revenue, but do not say CBI paid for public projects.",
+        "Thread 'A debt crisis and recovery': 'spending and borrowing' became 'public spending and fast-rising debt' to match the IMF notice's wording (expansionary fiscal policy, rapid public debt accumulation). The citation was verified as is.",
+        "Thread 'Two storms in two years': 'hitting ... hardest' softened to 'above all', matching the 2018 IMF report. Added a second verified citation from the same report supporting that almost every household and sector was hit. Date 2018-08 confirmed on the report's cover.",
+        "Thread 'Rebuilding through big projects': the MPO 4.5 percent growth quote was replaced with an MPO passage that supports the climate-resilient infrastructure and hotel claim. Added the IMF 2026 passage on tourism above pre-pandemic levels, verified as a partial sentence. The 38.7 figure is now marked 'in the data', because the sources give 38 and 37.6.",
+        "Thread 'Citizenship sales and high debt': the claim that CBI paid for rebuilding after Maria had no supporting citation, so a verified 2018 IMF passage was added. 'helped pay for rebuilding ... and for the projects since' was narrowed to 'helped pay the government's bills after Maria and since'.",
+        "Thread 'Exposed to the next storm': 'which have caused its largest losses on record' was not supported by the cited MPO passage, so it now reads 'which caused heavy damage in 2015 and 2017'.",
+        "Tension: 'The sources also call growth since 2021 strong' now names the World Bank MPO, which says 'strong growth' over 2021-2025. All tension numbers were verified against the series: 2001 +0.3, 2002 -3.2, 2018 +3.5. Income per person first passed its 2008 level (8683) in 2023 (8947). The IMF's 2018 projection of a 14 percent fall is confirmed in CR 18/265.",
+        "All other numbers were verified against desk/data/DMA.json: eras 2.7/-0.9/2.5, 2015 -3.4, 2017 -6.0, 2020 -15.3, 2022 11.0, 2025 3.6, 10-year averages 1.6 and 1.2, sd 5.5, peak in 2025, current account -38.7. All cited quotes were checked against the page text, and no banned phrases remain."
+      ]
+    },
+    "headline": "Dominica grew steadily to 2008, stalled and then fell with two storms to 2017, and since 2018 has rebuilt to its highest income per person on record.",
+    "arc": "From 1990 to 2008, income per person grew 2.7 percent a year, despite a debt and liquidity crisis around 2001-02 that the IMF traces to a decade of loose public finances. From 2009 to 2017, it fell 0.9 percent a year: several flat or slightly falling years, then Tropical Storm Erika in 2015 (down 3.4 percent) and Hurricane Maria in 2017 (down 6.0 percent), which the IMF calls the island's worst natural disaster. Since 2018, growth has averaged 2.5 percent a year, through a 15.3 percent collapse in the pandemic year 2020 and an 11.0 percent rebound in 2022, carried by tourism, rebuilding and large building projects, helped by revenue from citizenship sales. Over 2016-2025, growth averaged 1.6 percent a year, against 1.2 over 2006-2015, and in 2025 income per person reached its highest level on record. Growth still swings widely from year to year, with a standard deviation of 5.5 over 20 years, above the 75th percentile of all economies.",
+    "threads": [
+      {
+        "title": "A debt crisis and recovery",
+        "about": "history",
+        "text": "Heavy public spending and fast-rising debt through the 1990s ended in a liquidity and debt crisis in 2001-02, made worse by drought and a slump in tourism after September 2001. A stabilization program began in mid-2002 and a debt exchange in December 2003, and the IMF reported that growth had recovered by 2004-05.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn05149",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Executive Board Concludes 2005 Article IV Consultation with Dominica",
+            "date": "2005-10-25",
+            "quote": "Dominica experienced an economic and financial crisis in 2001-02 when output contracted by 10 percent."
+          }
+        ]
+      },
+      {
+        "title": "Two storms in two years",
+        "about": "history",
+        "text": "Tropical Storm Erika struck in August 2015 and Hurricane Maria in September 2017, while the island was still recovering from the first. Maria hit almost every household and sector, above all public infrastructure, private housing, farming and hotels, and income per person fell 6.0 percent that year.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18265-dominicaartiv.pdf",
+            "publisher": "IMF",
+            "title": "Dominica: 2018 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 18/265)",
+            "date": "2018-08",
+            "quote": "While Erika had caused severe damage, estimated at 96 percent of GDP, Maria was Dominica’s worst natural disaster with damage estimated at US$1.3 billion …"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18265-dominicaartiv.pdf",
+            "publisher": "IMF",
+            "title": "Dominica: 2018 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 18/265)",
+            "date": "2018-08",
+            "quote": "Hurricane Maria affected almost every household and economic sector, most of which were insufficiently insured."
+          }
+        ]
+      },
+      {
+        "title": "Rebuilding through big projects",
+        "about": "present",
+        "text": "Since the storms, growth has rested on building climate-resilient infrastructure and hotels, and on tourism, which is now above its pre-pandemic level. The building drives up imports, and in the data the current account deficit was 38.7 percent of GDP in 2025.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dma.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Dominica (October 2026)",
+            "date": "2026-10",
+            "quote": "Construction activities were underpinned by climate-resilient infrastructure and hotel projects."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/27/mcs-03272026-dominica-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Dominica: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-03-27",
+            "quote": "supported by robust tourism (36 percent above pre-pandemic levels)"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/27/mcs-03272026-dominica-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Dominica: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-03-27",
+            "quote": "Current account (CA) deficit was 38 percent of GDP in 2025, primarily reflecting high construction-related imports."
+          }
+        ]
+      },
+      {
+        "title": "Citizenship sales and high debt",
+        "about": "present",
+        "text": "Selling citizenship to foreign investors helped pay the government's bills after Maria and since, but these revenues swing from year to year and are now falling. Public debt has stayed high through the rebuilding.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18265-dominicaartiv.pdf",
+            "publisher": "IMF",
+            "title": "Dominica: 2018 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 18/265)",
+            "date": "2018-08",
+            "quote": "partially offset by a surge in grants and buoyant Citizenship-by-Investment (CBI) sales revenues."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dma.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Dominica (October 2026)",
+            "date": "2026-10",
+            "quote": "The fiscal position is also recovering from recent shocks, helped by prudent fiscal management and high, but declining, Citizenship by Investment (CBI) revenues."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/11/pr-25193-dominica-imf-concludes-2025-art-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Dominica",
+            "date": "2025-06-11",
+            "quote": "Public debt remains elevated at 100 percent of GDP."
+          }
+        ]
+      },
+      {
+        "title": "Exposed to the next storm",
+        "about": "present",
+        "text": "The island remains highly exposed to storms and floods, which caused heavy damage in 2015 and 2017. The World Bank names an El Niño event expected in 2026/27 as a risk to growth and public finances.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dma.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Dominica (October 2026)",
+            "date": "2026-10",
+            "quote": "Dominica also remains highly vulnerable to natural disasters, including an El Nino event expected in 2026/27, which could adversely affect growth and public finances."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025, income per person grew 3.6 percent and reached its highest level on record, as construction, tourism and farming expanded. Over the past year, citizenship revenues fell under international scrutiny, and the World Bank expects growth to slow as the large infrastructure projects finish.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dma.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Dominica (October 2026)",
+          "date": "2026-10",
+          "quote": "Total revenue decreased to 56.1 percent of GDP in FY2025/26, reflecting lower CBI receipts amid international scrutiny."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dma.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Dominica (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP growth is projected to average 2.8 percent in 2026–28, moderating as major infrastructure projects conclude."
+        }
+      ]
+    },
+    "tension": "The sources describe much deeper falls in some years than the data show. The IMF says output fell sharply in the 2001-02 crisis, but in the data income per person rose 0.3 percent in 2001 and fell 3.2 percent in 2002. In 2018 the IMF expected a large fall after Maria, but the data show income per person rising 3.5 percent that year. The World Bank calls growth since 2021 strong, and it was. But much of it won back lost ground: income per person passed its 2008 level only in 2023."
+  }
+}

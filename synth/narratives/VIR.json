@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "iso3": "VIR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VIR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"U.S. Virgin Islands economy refinery hurricanes growth\"",
+        "tier 1: \"United States Virgin Islands economy 2024\"",
+        "tier 1: \"\\\"U.S. Virgin Islands\\\" OR \\\"USVI\\\" HOVENSA refinery closure economy\"",
+        "tier 1: \"\\\"United States Virgin Islands\\\" economic\"",
+        "tier 1 result: only World Bank and IMF data portals and pre-2023 reports. The IMF and World Bank publish no country reports on the U.S. Virgin Islands, a U.S. territory. The CDB 2025-26 review (caribank.org) covers the British Virgin Islands and was not used",
+        "tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"U.S. Virgin Islands tourism economy hurricanes Irma Maria recovery\"",
+        "tier 2: \"\\\"United States Virgin Islands\\\" economy growth 2023 2024 2025\"",
+        "tier 2: \"United States Virgin Islands working paper prepared by the Secretariat Special Committee decolonization economy\"",
+        "opened: repositorio.cepal.org Economic Survey of the Caribbean 2024 (no mention of the USVI; not cited)",
+        "opened: documents.un.org A/AC.109/2023/16, 2024/16, 2025/16, 2026/16 (UN Secretariat working papers on the United States Virgin Islands)",
+        "opened: documents.un.org A/AC.109/2024/14, 2025/14, 2026/14 (Tokelau; not cited)",
+        "critic pass: re-fetched all four cited UN PDFs with WebFetch, extracted the text locally (pypdf), and checked every quote (whitespace-insensitive), symbol and date against it. Also confirmed the context for the Department of Finance testimony (A/AC.109/2025/16 para 12) and the BEA suspension (2025/16 and 2026/16)",
+        "checks on a scratch copy: synth/check_sources.py OK; synth/validate_numbers.mjs --growth-story OK (64 numbers, all matched)"
+      ],
+      "critic_changes": [
+        "Headline: 'is still 26.3 percent below' became 'was 26.3 percent below ... in 2022'. The data stop in 2022, so the present tense claimed more than the record shows. 'Tourism leads the return' became 'tourism has recovered': the sources show visitor numbers above pre-pandemic levels but no return of income per person. The headline is now 157 characters.",
+        "Arc: 'paused its GDP estimates' became 'suspended', the word in the source (A/AC.109/2025/16 and 2026/16: the Bureau 'was temporarily suspending the production of GDP statistics'). All other arc numbers (1.2, 3.3 to 4.0, 6.6, 1.9, 8.1, 14.7, 2.1, 3.2, 1.2, 1.4, 26.3, below the 2002 level) were checked against growth_problem and series and are unchanged.",
+        "Thread 'Tourism back above pre-pandemic': the first sentence ('Tourism is the main engine of the economy') had no supporting quote. A third citation was added from A/AC.109/2026/16: 'the tourism industry remains the primary economic engine of the Territory'.",
+        "Thread 'An older population' was renamed 'More dependants per worker' and reworded. The dependency ratio covers children as well as people over 65, so 'The population has grown older since 2000' is not supported by the cited passage. The text now says only that there are more children and older people for each person of working age than in 2000.",
+        "since_last_year: 'offers tax relief to investors' became 'is expected to give investors relief from federal capital gains tax', matching the page. The quote was extended to include that clause and trimmed at the front so it stays within 25 words (22 words).",
+        "Verified unchanged: all 12 quoted passages appear in the extracted text of the four UN PDFs. Two showed only PDF extraction artefacts ('fr om', 'petr oleum') and the quotes keep the page's real words. Symbols and dates match each document's masthead: A/AC.109/2023/16 15 March 2023, 2024/16 21 March 2024, 2025/16 18 March 2025, 2026/16 31 March 2026. The tension's account of the finance commissioner's testimony on 3 September 2024 matches A/AC.109/2025/16 para 12.",
+        "Tier unchanged: 0 recent tier 1 sources and 4 distinct recent tier 2 sources (2023 to 2026). Five threads survive, three of them 'present' and each backed by a 2025 or 2026 source. check_sources.py OK; validate_numbers.mjs --growth-story OK (64 of 64 numbers matched)."
+      ]
+    },
+    "headline": "Income per person in the U.S. Virgin Islands was 26.3 percent below its 2008 peak in 2022, after a refinery closed and hurricanes hit; tourism has recovered.",
+    "arc": "From 2003 to 2010 income per person grew 1.2 percent a year, with gains of 3.3 to 4.0 percent a year in 2004–2007, before it peaked in 2008 and fell 6.6 percent in 2009 in the financial recession. From 2011 to 2022 it shrank by 1.9 percent a year, with the deepest falls in 2011 and 2012 (8.1 and 14.7 percent), as the Hovensa oil refinery on St. Croix closed over 2012 and 2013. After hurricanes Irma and Maria in 2017, federal disaster aid, tourism and building work for a refinery restart lifted growth to 2.1 percent in 2018 and 3.2 percent in 2019, until the COVID-19 pandemic cut the recovery short in 2020. Over 2016–2022 growth averaged 1.2 percent a year, close to the 1.4 percent typical of similar economies, but in 2022 income per person was still 26.3 percent below the 2008 peak and lower than in 2002. The record stops in 2022 because the U.S. Bureau of Economic Analysis suspended its GDP estimates for the territory.",
+    "threads": [
+      {
+        "title": "The refinery closes",
+        "about": "history",
+        "text": "The territory's government counts the closure of the Hovensa oil refinery over 2012 and 2013 among three major shocks, alongside the 2008 recession and the 2017 hurricanes. Income per person fell 14.7 percent in 2012 and 6.2 percent in 2013.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n23/076/20/pdf/n2307620.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2023/16)",
+            "date": "2023-03-15",
+            "quote": "the 2008 financial recession, the closing of the Hovensa oil refinery over the course of 2012 and 2013, and the 2017 hurricanes"
+          }
+        ]
+      },
+      {
+        "title": "Hurricanes, aid and the pandemic",
+        "about": "history",
+        "text": "After the 2017 hurricanes, a recovery came, driven mostly by federal disaster aid, tourism spending and building work for a refinery restart. The COVID-19 pandemic ended it in March 2020. Federal relief payments then held up household spending, and income per person grew 4.1 percent in 2021.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n23/076/20/pdf/n2307620.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2023/16)",
+            "date": "2023-03-15",
+            "quote": "fuelled mostly by federal disaster assistance, a resurgence in tourism expenditure and activities related to refinery construction. However, the recovery ended abruptly in March 2020"
+          },
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n24/078/31/pdf/n2407831.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2024/16)",
+            "date": "2024-03-21",
+            "quote": "Consumer spending was supported by assistance payments from the Government of the United States distributed to households"
+          }
+        ]
+      },
+      {
+        "title": "Tourism back above pre-pandemic",
+        "about": "present",
+        "text": "Tourism is the main engine of the economy. Visitor arrivals surged in 2023 and rose again in 2024, passing their level before the pandemic.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+            "date": "2026-03-31",
+            "quote": "According to the Bureau of Economic Research, the tourism industry remains the primary economic engine of the Territory."
+          },
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+            "date": "2026-03-31",
+            "quote": "the strong recovery that began in 2023, when arrivals surged by 40.3 per cent, signalling that visitor numbers have now surpassed pre-pandemic levels"
+          },
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n25/071/03/pdf/n2507103.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2025/16)",
+            "date": "2025-03-18",
+            "quote": "visitor arrivals had been sustained by solid demand across all major visitor markets"
+          }
+        ]
+      },
+      {
+        "title": "Refinery restart still on hold",
+        "about": "present",
+        "text": "Spending on restarting the refinery lifted investment before 2021, and the plant briefly reopened that year before shutting again within months. Its owner still faces environmental, regulatory and financial hurdles before any reopening.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n24/078/31/pdf/n2407831.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2024/16)",
+            "date": "2024-03-21",
+            "quote": "Investment spending had been elevated in prior years to support capital improvement projects, including the restart of the oil refinery on St. Croix."
+          },
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n23/076/20/pdf/n2307620.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2023/16)",
+            "date": "2023-03-15",
+            "quote": "The Hovensa petroleum refinery resumed operations in February 2021. It was shut down a few months later"
+          },
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+            "date": "2026-03-31",
+            "quote": "the current owner of the refinery has been navigating environmental, regulatory and financial hurdles that must be cleared before any reopening can occur"
+          }
+        ]
+      },
+      {
+        "title": "More dependants per worker",
+        "about": "present",
+        "text": "For each person of working age, there are now more children and older people than there were in 2000.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+            "publisher": "United Nations",
+            "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+            "date": "2026-03-31",
+            "quote": "the dependency ratio results in 64.4 potentially passive individuals per 100 potentially active individuals. This ratio stood at 52.8 in 2000."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The UN's March 2026 review reports that air arrivals kept growing in 2024 and that a renewed federal programme lets the territory make the closed refinery's area an Opportunity Zone, which is expected to give investors relief from federal capital gains tax. The refinery itself has not restarted, and no GDP figures have been published since the 2022 estimates.",
+      "citations": [
+        {
+          "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+          "publisher": "United Nations",
+          "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+          "date": "2026-03-31",
+          "quote": "Air arrivals continued to strengthen in 2024, recording growth of 16.2 per cent."
+        },
+        {
+          "url": "https://documents.un.org/doc/undoc/gen/n26/069/11/pdf/n2606911.pdf",
+          "publisher": "United Nations",
+          "title": "United States Virgin Islands: Working paper prepared by the Secretariat (A/AC.109/2026/16)",
+          "date": "2026-03-31",
+          "quote": "designate the oil refinery area as a “Qualified Opportunity Zone”, which is expected to provide federal capital gains tax relief for investors"
+        }
+      ]
+    },
+    "tension": "The territory's finance department told the legislature in 2024 that output had grown steadily since the refinery closed, matching pre-closure levels in 2022, and had returned to a growth trend since 2019. The data tell a different story for income per person: in 2022 it was still 26.3 percent below the 2008 peak, and it fell in 2020 and again in 2022. The sources speak of total output, while the data measure income per person, and the record cannot show how much of the gap comes from changes in population."
+  }
+}

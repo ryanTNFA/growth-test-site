@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "iso3": "VEN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VEN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 8,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Venezuela economy growth oil production hyperinflation 2024 2025",
+        "growthlab.hks.harvard.edu, iadb.org, imf.org: Venezuela economic collapse recovery Growth Lab",
+        "imf.org: IMF Venezuela 2026 staff mission press release",
+        "worldbank.org, iadb.org, oecd.org: Venezuela economy 2025 oil sanctions inflation outlook",
+        "imf.org: FAQ IMF reengagement with Venezuela",
+        "worldbank.org, iadb.org: Venezuela 2026 World Bank re-engagement economy oil output recovery",
+        "imf.org: Regional Economic Outlook Western Hemisphere 2026 Venezuela",
+        "worldbank.org: Venezuela crude oil production 2026 sanctions Commodity Markets Outlook",
+        "imf.org: Venezuelan exodus unprecedented economic humanitarian crisis IMF departmental paper 2022",
+        "Pages opened by drafter: IMF PR 26/123 (2026-04-16); IMF WHD Spring Meetings 2026 briefing; IMF reengagement FAQ (2026-04-21); IMF briefings 2026-06-25 and 2026-10-01; IMF REO Western Hemisphere October 2025; IMF Departmental Paper 2022/019 summary; World Bank Group visit to Venezuela (2026-05-15); World Bank Commodity Markets Outlook April 2026; Growth Lab-hosted 'Apocalypse Now' (2017). Not readable (403): IMF eLibrary chapter, IDB 'A Look to the Future for Venezuela'.",
+        "Critic re-opened every cited URL: IMF REO WHD Oct 2025 (PDF text extracted), IMF PR 26/123, IMF Departmental Paper 2022 page, World Bank visit press release 2026-05-15, World Bank CMO April 2026 (PDF text extracted), Growth Lab-hosted CGEP note (PDF text extracted)."
+      ],
+      "critic_changes": [
+        "All cited URLs opened; every quoted passage was found verbatim on its page and all dates match (IMF REO Oct 2025, IMF PR 2026-04-16, IMF DP 2022-12-05, WB press release 2026-05-15, WB CMO April 2026, CGEP note 2017). All numbers in the draft (70.4, 1977, 1960, -1.0, -10.4, -9.4, 4.4, -8.1, -25.4, -28.6, 8.2, 1.2) match desk/data/VEN.json.",
+        "Headline: dropped 'oil boom' (no cited passage calls 2004–2013 a boom) and 'lower than in 1960'; now states the data-file 4.4 percent era growth and the 70.4 percent shortfall from the 1977 peak (143 characters).",
+        "Arc: removed 'as oil export income soared' (no cited passage supports it); removed 'national' from the oil strike and 'expropriations' (not in any cited passage); described the post-2014 causes in the cited passages' terms (production problems magnified by the mid-2014 price drop, export income collapse, price controls); replaced 'about a quarter of the population' with 'a large share' because a quarter is a figure not in the data file and may appear only inside a quote.",
+        "Thread 'Oil strike and state control': removed 'national' and 'In the boom that followed' (timing not in sources); added the page's 'quasi-full control of the oil sector' passage so the near-full-control claim is cited.",
+        "Thread 'Oil price fall meets weak production': added the page's 2012–2016 export-revenue passage to support the collapse claim; dropped 'expropriations' and 'could not replace the imports' wording not covered by the cited passages.",
+        "Thread 'A quarter of people left' retitled 'Mass emigration since 2014' (a quarter is not a data-file number); removed 'the IMF expected the outflow to continue' (not in the source) and the unsourced interpretive sentence about per-person numbers (kept as a hedged point in tension only); added the IMF's 'deep economic, political, and humanitarian crisis' wording, which the REO supports.",
+        "Thread 'Inflation and dollar shortages': removed the bolivar clause (not in a cited passage) and added the REO passage on monetary financing of the deficit; changed 'six years of decline' to 'years of decline' since six is not a data-file number.",
+        "Thread 'Reengagement and sanctions relief': the World Bank page (dated 2026-05-15) does not say engagement resumed in April or that it had paused since 2019, so the text now says the IMF resumed in April 2026 and a World Bank delegation visited in May 2026; 'The same month' sanctions claim changed to 'By April 2026' because the CMO does not date the lifting; quote extended to the page's full sentence start.",
+        "since_last_year: replaced 'the slowest of the five years of growth since 2021' with 'the slowest since growth resumed in 2021' (avoids a count not printed in the data file); added the May 2026 World Bank visit; sanctions timing hedged as above.",
+        "Tension: replaced 'about a quarter of the population' with 'a large share' and softened the per-person inference; kept the verified IMF staff-estimates quote.",
+        "tier1_recent_found left at 8 as reported by the drafter; four distinct recent tier 1 sources were re-verified as cited (IMF REO Oct 2025, IMF PR Apr 2026, WB press release May 2026, WB CMO Apr 2026), well above the minimum of 2."
+      ]
+    },
+    "headline": "Growth of 4.4 percent a year from 2004 to 2013 gave way to a collapse that left Venezuela's income per person 70.4 percent below its 1977 peak.",
+    "arc": "Venezuela's income per person peaked in 1977 and is now 70.4 percent below that peak, lower than in 1960, the first year of the record. From 1990 to 2003 it shrank by 1.0 percent a year, ending with falls of 10.4 percent in 2002 and 9.4 percent in 2003, around an oil strike that began in December 2002. From 2004 to 2013 it grew by 4.4 percent a year, while the state took near-full control of the oil sector and its income. From 2014 to 2025 it shrank by 8.1 percent a year: the fall in oil prices from mid-2014 magnified long-running problems in oil production, oil export income collapsed and price controls crippled other domestic production, and income per person fell 25.4 percent in 2019 and 28.6 percent in 2020. Growth has been positive every year since 2021, reaching 8.2 percent in 2022 before slowing to 1.2 percent in 2025, while the IMF still describes a deep economic, political and humanitarian crisis that has driven a large share of the population abroad.",
+    "threads": [
+      {
+        "title": "Oil strike and state control",
+        "about": "history",
+        "text": "An oil strike began in December 2002, during the two worst years of the 1990–2003 era. Under Chávez the state took near-full control of the oil sector and steered oil income into bodies outside public scrutiny.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/original/CMO-April-2026.pdf",
+            "publisher": "World Bank",
+            "title": "Commodity Markets Outlook, April 2026",
+            "date": "2026-04",
+            "quote": "the oil strike in República Bolivariana de Venezuela (December 2002)"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/files/growthlab/files/cgepapocalypsenowvenezuelaoilandreconstruction7_17_1.pdf",
+            "publisher": "Harvard Growth Lab (Columbia Center on Global Energy Policy note)",
+            "title": "Apocalypse Now: Venezuela, Oil and Reconstruction",
+            "date": "2017",
+            "quote": "Chavez’s main oil-policy target was to seize control of the oil rent and divert it to parafiscal entities that escaped public scrutiny."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/files/growthlab/files/cgepapocalypsenowvenezuelaoilandreconstruction7_17_1.pdf",
+            "publisher": "Harvard Growth Lab (Columbia Center on Global Energy Policy note)",
+            "title": "Apocalypse Now: Venezuela, Oil and Reconstruction",
+            "date": "2017",
+            "quote": "Under Chavez’s leadership, Chavismo achieved quasi-full control of the oil sector."
+          }
+        ]
+      },
+      {
+        "title": "Oil price fall meets weak production",
+        "about": "history",
+        "text": "Oil prices began to fall in mid-2014, on top of long-running problems in oil production, and oil export income collapsed between 2012 and 2016. Imports of food and manufactured goods plunged, while price controls crippled other domestic production.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/files/growthlab/files/cgepapocalypsenowvenezuelaoilandreconstruction7_17_1.pdf",
+            "publisher": "Harvard Growth Lab (Columbia Center on Global Energy Policy note)",
+            "title": "Apocalypse Now: Venezuela, Oil and Reconstruction",
+            "date": "2017",
+            "quote": "ongoing production problems were magnified by the drop in oil prices that began in mid-2014"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/files/growthlab/files/cgepapocalypsenowvenezuelaoilandreconstruction7_17_1.pdf",
+            "publisher": "Harvard Growth Lab (Columbia Center on Global Energy Policy note)",
+            "title": "Apocalypse Now: Venezuela, Oil and Reconstruction",
+            "date": "2017",
+            "quote": "The economic pain became more severe in 2016, when export revenue fell to US$27 billion, down 73 percent from US$94 billion in 2012."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/files/growthlab/files/cgepapocalypsenowvenezuelaoilandreconstruction7_17_1.pdf",
+            "publisher": "Harvard Growth Lab (Columbia Center on Global Energy Policy note)",
+            "title": "Apocalypse Now: Venezuela, Oil and Reconstruction",
+            "date": "2017",
+            "quote": "Imports of foods and manufactured goods have plummeted even as domestic production has been crippled by price controls."
+          }
+        ]
+      },
+      {
+        "title": "Mass emigration since 2014",
+        "about": "present",
+        "text": "A large share of the population has left the country since 2014, amid what the IMF calls a deep economic, political and humanitarian crisis. The number of Venezuelans living abroad was still rising between 2019 and 2021.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/whd/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Western Hemisphere — Navigating a Shifting Global Environment",
+            "date": "2025-10",
+            "quote": "which has led to about 8 million people (25 percent of the population) leaving the country since 2014"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/departmental-papers-policy-papers/issues/2022/12/01/regional-spillovers-from-the-venezuelan-crisis-migration-flows-and-their-impact-on-latin-525729",
+            "publisher": "IMF",
+            "title": "Regional Spillovers from the Venezuelan Crisis: Migration Flows and Their Impact on Latin America and the Caribbean",
+            "date": "2022-12-05",
+            "quote": "The stock of Venezuelan migrants reached 5 million in 2019 and 6.1 million in 2021."
+          }
+        ]
+      },
+      {
+        "title": "Inflation and dollar shortages",
+        "about": "present",
+        "text": "In 2025 weaker oil export income left the country short of foreign currency, and a wider budget deficit was financed more by printing money. The IMF expected inflation to rise again after years of decline.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/whd/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Western Hemisphere — Navigating a Shifting Global Environment",
+            "date": "2025-10",
+            "quote": "lower oil prices, larger price discounts, and logistical issues have weakened oil export proceeds, triggering a generalized FX scarcity"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/whd/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Western Hemisphere — Navigating a Shifting Global Environment",
+            "date": "2025-10",
+            "quote": "Fiscal deficit has widened, leading to a larger monetary financing of the deficit."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/whd/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Western Hemisphere — Navigating a Shifting Global Environment",
+            "date": "2025-10",
+            "quote": "inflation will reverse its 6-year downward trend and rise to about 549 percent"
+          }
+        ]
+      },
+      {
+        "title": "Reengagement and sanctions relief",
+        "about": "present",
+        "text": "In April 2026 the IMF resumed dealings with the government, paused since March 2019, and in May 2026 a World Bank delegation visited Caracas after announcing it would resume engagement. By April 2026, sanctions on Venezuelan oil shipments had been temporarily lifted to help make up for oil exports blocked by the conflict in the Middle East.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/16/pr26123-venezuela-imf-announces-resumption-of-dealings",
+            "publisher": "IMF",
+            "title": "IMF Announces Resumption of Dealings with Venezuela",
+            "date": "2026-04-16",
+            "quote": "Dealings with Venezuela had been paused in March 2019, due to government recognition issues."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/05/15/world-bank-group-visit-to-venezuela",
+            "publisher": "World Bank",
+            "title": "World Bank Group Visit to Venezuela",
+            "date": "2026-05-15",
+            "quote": "following the announcement of the resumption of institutional engagement"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/original/CMO-April-2026.pdf",
+            "publisher": "World Bank",
+            "title": "Commodity Markets Outlook, April 2026",
+            "date": "2026-04",
+            "quote": "These include the temporary lifting of sanctions on oil shipments from the Islamic Republic of Iran, the Russian Federation, and República Bolivariana de Venezuela"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In October 2025 the IMF expected growth to slow and inflation to rise again as oil export income weakened; income per person grew 1.2 percent in 2025, the slowest since growth resumed in 2021. In April 2026 the IMF resumed dealings with the government, paused since March 2019, a World Bank delegation followed in May 2026, and by April 2026 sanctions on Venezuelan oil shipments had been temporarily lifted to make up for oil exports blocked by the Middle East conflict.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/reo/whd/2025/october/english/text.pdf",
+          "publisher": "IMF",
+          "title": "Regional Economic Outlook: Western Hemisphere — Navigating a Shifting Global Environment",
+          "date": "2025-10",
+          "quote": "In Venezuela, growth is forecast to decelerate to 0.5 percent in 2025 amid mounting macroeconomic challenges."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/16/pr26123-venezuela-imf-announces-resumption-of-dealings",
+          "publisher": "IMF",
+          "title": "IMF Announces Resumption of Dealings with Venezuela",
+          "date": "2026-04-16",
+          "quote": "Dealings with Venezuela had been paused in March 2019, due to government recognition issues."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/05/15/world-bank-group-visit-to-venezuela",
+          "publisher": "World Bank",
+          "title": "World Bank Group Visit to Venezuela",
+          "date": "2026-05-15",
+          "quote": "following the announcement of the resumption of institutional engagement"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/original/CMO-April-2026.pdf",
+          "publisher": "World Bank",
+          "title": "Commodity Markets Outlook, April 2026",
+          "date": "2026-04",
+          "quote": "These include the temporary lifting of sanctions on oil shipments from the Islamic Republic of Iran, the Russian Federation, and República Bolivariana de Venezuela"
+        }
+      ]
+    },
+    "tension": "The data show income per person growing every year from 2021 to 2025, but in October 2025 the IMF described mounting challenges and a deep crisis, and said its figures for recent years are mostly staff estimates to be read with caution (\"For most indicators, data for 2018–24 are IMF staff estimates.\"). With a large share of the population gone abroad since 2014, some of the measured gain in income per person may reflect fewer people rather than more output."
+  }
+}

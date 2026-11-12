@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "TTO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TTO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Trinidad and Tobago Article IV 2025 IMF staff concluding statement",
+        "worldbank.org (and all tier 1 domains): Trinidad and Tobago Macro Poverty Outlook World Bank",
+        "worldbank.org: Trinidad and Tobago Macro Poverty Outlook 2025 mpo-tto.pdf energy production decline",
+        "tier 1 domains: Trinidad and Tobago economy 2015 2016 recession energy prices fell gas curtailments",
+        "imf.org, worldbank.org, iadb.org, caribank.org, oecd.org: Trinidad and Tobago Article IV 2006 strong growth natural gas LNG trains energy sector expansion",
+        "Opened: imf.org 2026 Article IV staff concluding statement (2026-02-10); imf.org Country Report 26/120 (2026-06); thedocs.worldbank.org MPO Trinidad and Tobago (October 2026); imf.org PR23/135 (2023-05-05); imf.org Country Report 16/204 (2016-06); imf.org Country Report 06/29 (2006-01). The IADB policy brief returned 403 and was not used.",
+        "Critic check: imf.org: Trinidad and Tobago 2026 Article IV staff concluding statement IMF (confirmed the 2026-02-10 concluding statement exists); re-opened and text-extracted all four cited PDFs (IMF CR 06/29, CR 16/204, CR 26/120; World Bank MPO October 2026)"
+      ],
+      "critic_changes": [
+        "All four cited PDFs opened and their text extracted; every quoted passage was found on its page, and dates checked against the documents (CR 06/29 January 2006; CR 16/204 June 2016; CR 26/120 June 2026 publication, staff report completed April 2026; MPO October 2026). No citation dropped.",
+        "Every number checked against desk/data/TTO.json: eras 3.9, 8.6, 2.1 and -1.8; peak 2014; shortfall 19.2; level first reached 2006; 2025 growth -0.7 (series -0.746); falls in 2016 and 2020 confirmed in the series. All correct, so none changed.",
+        "Thread 'The natural gas boom': 'energy output grew very fast' became 'the energy sector grew very fast'. The quoted 18 percent figure is the sector's growth, which in value terms includes prices, not output alone.",
+        "Thread 'The 2015 energy price shock': removed 'Exports and government revenue dropped'. The cited passages do not say it; they support surging deficits and shrinking output, and those stay.",
+        "Thread 'An aging energy sector': replaced 'new gas projects are expected to add output only in the coming years', which no cited passage supports. It now says, citing an added IMF 2026 passage, that new upstream projects have so far only offset declines in mature fields.",
+        "Thread 'Deficits, debt and dollar shortages': renamed 'Lower energy revenue, scarce dollars'. Removed the claims that public debt rose and that 'the exchange rate stayed fixed': the cited passages do not state the first, and the 2016 passage mentions modest depreciation. The text now says what the passages support: energy revenue fell, the currency was judged overvalued in 2016, and the IMF now calls the shortages chronic and worsening.",
+        "since_last_year: the World Bank's 2026 contraction projection was not in any cited passage, so a World Bank quote supporting it was added. An IMF quote was added for its 2025 growth estimate, which the text and the tension both rely on. 'Weaker services and construction' became 'weaker activity elsewhere', because the cited passage names only the non-energy economy.",
+        "tension: dropped 'measured against pre-pandemic levels', which no cited passage supports. The IMF's 'gradual recovery in 2025' is now quoted in since_last_year.",
+        "tier1_recent_found stays at 4. The two recent sources cited (IMF CR 26/120 and the World Bank MPO of October 2026) were verified directly. A search confirmed the 2026-02-10 IMF staff concluding statement exists. The draft reports the fourth source, PR23/135, as opened, but this check did not re-open it."
+      ]
+    },
+    "headline": "A gas boom lifted Trinidad and Tobago fast; since energy prices and output fell in 2015, income per person has slid back to its 2006 level.",
+    "arc": "Income per person in Trinidad and Tobago grew 3.9 percent a year in 1990–1997, climbing back from a long slide through the 1980s. Then came a gas boom: growth averaged 8.6 percent a year in 1998–2006, as heavy spending on new natural gas plants and good prices lifted energy output fast. Growth slowed to 2.1 percent a year in 2007–2014, and income per person reached its peak in 2014. From 2015 world energy prices fell and gas and oil output dropped, and growth has averaged -1.8 percent a year in 2015–2025, with deep falls in 2016 and in the pandemic year of 2020. In 2025 income per person was still 19.2 percent below its 2014 peak, about where it first was in 2006, and the sources describe an aging energy sector that weighs on growth while manufacturing and services carry what growth there is.",
+    "threads": [
+      {
+        "title": "The natural gas boom",
+        "about": "history",
+        "text": "In the early 2000s the energy sector grew very fast, driven by good prices and large new natural gas plants. The IMF then described the country as having the strongest growth in its region. This is the boom behind the 1998–2006 era.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr0629.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: Financial System Stability Assessment, including Reports on the Observance of Standards and Codes on the following topics, Banking Supervision, and Payment Systems",
+            "date": "2006-01",
+            "quote": "has been growing at an annual average of 18 percent since 2002, owing to favorable price movements and strong investments in natural gas facilities."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2006/cr0629.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: Financial System Stability Assessment, including Reports on the Observance of Standards and Codes on the following topics, Banking Supervision, and Payment Systems",
+            "date": "2006-01",
+            "quote": "Compared with countries in the region, TTO has enjoyed the strongest growth performance and fiscal stance."
+          }
+        ]
+      },
+      {
+        "title": "The 2015 energy price shock",
+        "about": "history",
+        "text": "In 2015 world energy prices fell sharply just as maintenance work and falling gas and oil production cut energy output. Budget deficits surged and the economy shrank, opening the era of decline that began in 2015.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16204.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2016-06",
+            "quote": "Ongoing maintenance and further declines in gas and oil production are estimated to have driven energy output 4.7 percent lower"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16204.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2016-06",
+            "quote": "Trinidad and Tobago’s output has continued to shrink while declines in global energy prices are leading to surging fiscal deficits"
+          }
+        ]
+      },
+      {
+        "title": "An aging energy sector",
+        "about": "present",
+        "text": "Energy is still the backbone of the economy, but production from mature oil and gas fields has stagnated or declined. Manufacturing and services have provided most of the recent growth, while new upstream projects have so far only made up for declines in older fields.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2026-06",
+            "quote": "The non-energy sector, particularly manufacturing and services, has underpinned recent growth, but stagnant production in the mature energy sector has weighed on activity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2026-06",
+            "quote": "with energy production broadly unchanged, as gains from new upstream projects offset declines in mature oil and gas fields."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-tto.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Trinidad and Tobago",
+            "date": "2026-10",
+            "quote": "the energy sector remains the backbone of the economy. The sector’s capital-intensive nature, narrow employment base, and declining production"
+          }
+        ]
+      },
+      {
+        "title": "Lower energy revenue, scarce dollars",
+        "about": "present",
+        "text": "Energy revenue has fallen well below what the government collected before 2015. Foreign currency has been scarce since the 2015 shock: in 2016 the IMF judged the currency overvalued, and it now calls the shortages chronic and worsening.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2026-06",
+            "quote": "Energy revenue fell from an average of around 14 percent of GDP in 2009-14 to under ten percent of GDP in recent years"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2026-06",
+            "quote": "At the prevailing exchange rate, FX demand persistently exceeds supply, leading to chronic and worsening FX shortages"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16204.pdf",
+            "publisher": "IMF",
+            "title": "Trinidad and Tobago: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Trinidad and Tobago",
+            "date": "2016-06",
+            "quote": "Despite modest depreciation, staff estimates suggest the currency remains substantially overvalued, while foreign exchange shortages persist."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The recovery stalled again. In mid-2026 the IMF expected modest growth for 2025, but the World Bank's October 2026 estimate is that the economy shrank, because gains in energy could not make up for weaker activity elsewhere. The World Bank projects a small contraction in 2026 too. The war in the Middle East has pushed up energy prices, which the IMF expects to lift energy export revenue for now.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-tto.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Trinidad and Tobago",
+          "date": "2026-10",
+          "quote": "Trinidad and Tobago’s economy contracted by 0.5 percent in 2025, as energy sector gains were insufficient to offset declines in the non-energy economy."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-tto.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Trinidad and Tobago",
+          "date": "2026-10",
+          "quote": "GDP is projected to contract by 0.2 percent in 2026, reflecting broad-based weakness across the economy, particularly in the energy sector."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+          "date": "2026-06",
+          "quote": "Economic activity continued its gradual recovery in 2025, with real GDP growth moderating to 0.8 percent"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ttoea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Trinidad and Tobago: 2026 Article IV Consultation—Press Release; Staff Report; Staff Statement; and Statement by the Executive Director for Trinidad and Tobago",
+          "date": "2026-06",
+          "quote": "the energy price shock due to the war in the Middle East is expected to increase energy export revenues"
+        }
+      ]
+    },
+    "tension": "The IMF describes a gradual recovery that continued in 2025. The data show a deeper and older fall: income per person dropped 0.7 percent in 2025 and is still 19.2 percent below its 2014 peak, a decline that began well before the pandemic. The two institutions also disagree on 2025 itself. The IMF reports growth, while the World Bank estimates that the economy shrank."
+  }
+}

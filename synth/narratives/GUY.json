@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "iso3": "GUY",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GUY",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Guyana Article IV IMF staff concluding statement oil growth'",
+        "same tier 1 domains: 'Guyana Macro Poverty Outlook World Bank'",
+        "same tier 1 domains: 'Guyana Systematic Country Diagnostic growth history sugar bauxite 1990s decline'",
+        "imf.org, worldbank.org, iadb.org, caribank.org: 'Guyana staff report growth slowed since 1998 political uncertainty sugar prices floods 2005 IMF'",
+        "Checked by opening: imf.org PR 26/330 (2026-10-08), imf.org Country Report 25/103 (2025-05), thedocs.worldbank.org Macro Poverty Outlook Guyana (October 2026), documents1.worldbank.org Systematic Country Diagnostic (2020), documents1.worldbank.org PRSC I Implementation Completion Report No. 35463 (2006-03-12)"
+      ],
+      "critic_changes": [
+        "Opened every cited URL (PDFs extracted to text). All five documents exist on tier 1 domains, and their dates match: IMF PR 2026-10-08, IMF CR 25/103 May 2025, World Bank MPO October 2026, SCD 2020, ICR 2006-03-12.",
+        "'First pumped in December 2019' changed to 'in 2019' in the headline-adjacent arc and the oil thread. The opened sources say only that production began in 2019, and the IMF report's one 'December 2019' refers to a statistics page. 'Far offshore' changed to 'offshore'.",
+        "SCD citation: the quote 'The result was economic growth confined in the capital-intensive mining sector, with low impact on the demand for labor.' was checked against the page wording, and the citation is kept.",
+        "Worker shortages thread: renamed from 'Too few workers, rising costs' and rewritten to present labor shortages, wage pressure and real exchange-rate appreciation as risks, which is how both sources frame them, not as current facts. Dropped 'Growth this fast strains a small workforce': the IMF also notes considerable labor availability, so the line was unsupported.",
+        "Public spending thread: 'improve schooling and health' changed to 'close gaps in infrastructure and in people's skills and health', matching the MPO's 'human-capital gaps'. 'Building' changed to 'spending'.",
+        "Arc and history thread: 'weak business climate' changed to 'poor investment climate', the ICR's own words.",
+        "since_last_year: removed 'calm for years', which no source supports; the MPO says only that inflation was subdued through March 2026. Replaced the 900,000-barrels quote with the IMF's oil-GDP-growth passage, which supports output still climbing in 2025. Added the MPO food-and-fuel passage, because no remaining citation supported the food and fuel claim.",
+        "Tension: the claim that 'the IMF notes poverty has not been measured by a household survey since 2019' is now attributed to IMF CR 25/103 (2025), which says the last household survey was conducted in 2019. The October 2026 release does not mention poverty. The population point is now worded as the release's preliminary 2025 figure (1,025 thousand) against the data's 831,142. The outflow point is dated to early 2026 (MPO, 2026Q1).",
+        "Numbers checked against desk/data/GUY.json: 23.0, 3.9, 5.7, 0.3, 3.7, 28.0, 43.5 (2020), 62.1 (2022), 18.6 (2025) and the 2025 peak all match growth_problem or series. No other figures appear outside quotes.",
+        "tier1_recent_found changed from 4 to 3. Only three distinct recent tier 1 sources were verified (IMF PR 26/330, IMF CR 25/103, World Bank MPO October 2026). The 2026 concluding statement was not cited and was not checked.",
+        "No banned phrases or recommendation language were found."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Offshore oil, pumped since 2019, turned Guyana's stop-start growth into a boom: income per person grew 23.0 percent a year over the last decade.",
+    "arc": "Income per person in Guyana fell through the 1980s, then recovered fast, growing 5.7 percent a year in 1990–1997 as the country moved from a planned economy to a market one. From 1998 to 2005 growth nearly stopped, at 0.3 percent a year, as trade shocks, bad weather, political tension, a poor investment climate and the loss of skilled people weighed, and in 2005 severe floods and the closure of the largest gold mine hit at once. Growth picked up to 3.7 percent a year in 2006–2017, carried by high world prices for minerals and new mining, though mining created few jobs. Then came oil: found offshore in 2015 and first pumped in 2019, it lifted growth to 28.0 percent a year in 2018–2025, with 43.5 percent in 2020 alone. Over the last decade income per person grew 23.0 percent a year, against 3.9 in the decade before, and in 2025 it reached its highest level yet.",
+    "threads": [
+      {
+        "title": "Offshore oil arrives",
+        "about": "present",
+        "text": "Oil was found off the coast in 2015 and first pumped in 2019. It has driven the fastest growth in the record: income per person rose 43.5 percent in 2020, 62.1 in 2022 and 18.6 in 2025, reaching a new peak in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1guyea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Guyana: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Guyana (IMF Country Report No. 25/103)",
+            "date": "2025-05",
+            "quote": "The discovery of significant oil reserves in the Stabroek Block by ExxonMobil and its partners in 2015 was a game-changer for Guyana."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Guyana",
+            "date": "2026-10",
+            "quote": "Since oil production began in 2019, the economy has expanded at an unprecedented pace, placing Guyana in the high-income group in 2023."
+          }
+        ]
+      },
+      {
+        "title": "Public spending spreads the boom",
+        "about": "present",
+        "text": "The government is using oil money to close gaps in infrastructure and in people's skills and health, and the economy outside oil has grown fast as well. The World Bank notes that this spending also adds to price pressure and to budget deficits.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/10/08/pr26330-guyana-article-iv",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Guyana",
+            "date": "2026-10-08",
+            "quote": "Real GDP grew by over 19 percent in 2025, with oil and non-oil GDP increasing by 21 percent and 14 percent, respectively."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Guyana",
+            "date": "2026-10",
+            "quote": "Public investment is helping address infrastructure and human-capital gaps, though adding to inflationary pressures and fiscal deficits."
+          }
+        ]
+      },
+      {
+        "title": "Worker shortages and wage risks",
+        "about": "present",
+        "text": "The IMF and the World Bank both list shortages of workers among the risks of growth this fast, with wages that could rise quickly. The World Bank adds that a stronger real exchange rate could make Guyana's other exports harder to sell.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1guyea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Guyana: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Guyana (IMF Country Report No. 25/103)",
+            "date": "2025-05",
+            "quote": "However, labor shortages can slow economic expansion and lead to high wage inflation."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Guyana",
+            "date": "2026-10",
+            "quote": "Downside risks include delays or cost overruns in major projects, overheating and wage pressures, real exchange-rate appreciation that could weaken non-oil competitiveness, shortages of …"
+          }
+        ]
+      },
+      {
+        "title": "Market reforms, then stalling",
+        "about": "history",
+        "text": "The move from a planned to a market economy brought quick growth in the early 1990s, but from 1998 growth stalled. Trade shocks, bad weather and political tension hurt farming and mining, while a poor investment climate and the departure of skilled people held growth down. In 2005 severe floods and the closure of the largest gold mine added to the losses.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/730481468255878214/pdf/35463.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion Report on a Credit to the Cooperative Republic of Guyana for a Poverty Reduction Support Credit I (PRSC), Report No. 35463",
+            "date": "2006-03-12",
+            "quote": "After rapid growth in the 1990s, following the transformation from a planned to a market economy, economic activity stagnated"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/730481468255878214/pdf/35463.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion Report on a Credit to the Cooperative Republic of Guyana for a Poverty Reduction Support Credit I (PRSC), Report No. 35463",
+            "date": "2006-03-12",
+            "quote": "Terms of trade shocks, adverse weather conditions and the instability that followed the political cycle adversely affected the dominant agriculture and mining sectors"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/730481468255878214/pdf/35463.pdf",
+            "publisher": "World Bank",
+            "title": "Implementation Completion Report on a Credit to the Cooperative Republic of Guyana for a Poverty Reduction Support Credit I (PRSC), Report No. 35463",
+            "date": "2006-03-12",
+            "quote": "the closure of OMAI, the largest gold mine of the country, the severe flooding in early 2005 and higher-than-expected oil prices"
+          }
+        ]
+      },
+      {
+        "title": "Mineral prices, few jobs",
+        "about": "history",
+        "text": "From 2006 high world prices for minerals drew new money into mining, and mining's share of the economy almost doubled. Income per person grew 3.7 percent a year in 2006–2017, but the World Bank found this growth made few jobs.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/691761607528494981/pdf/A-Pivotal-Moment-for-Guyana-Realizing-the-Opportunities-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "A Pivotal Moment for Guyana: Realizing the Opportunities (Systematic Country Diagnostic)",
+            "date": "2020",
+            "quote": "rising global mineral prices spurred renewed investment in the mining sector and its share in GDP almost doubled from 11 to 21 percent"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/691761607528494981/pdf/A-Pivotal-Moment-for-Guyana-Realizing-the-Opportunities-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "A Pivotal Moment for Guyana: Realizing the Opportunities (Systematic Country Diagnostic)",
+            "date": "2020",
+            "quote": "The result was economic growth confined in the capital-intensive mining sector, with low impact on the demand for labor."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil output kept climbing in 2025, and income per person grew 18.6 percent that year. Oil output rose again in the first half of 2026. Prices, subdued through March 2026, picked up in the second quarter as food and fuel costs went up.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/08/pr26330-guyana-article-iv",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Guyana",
+          "date": "2026-10-08",
+          "quote": "Real GDP grew by over 19 percent in 2025, with oil and non-oil GDP increasing by 21 percent and 14 percent, respectively."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Guyana",
+          "date": "2026-10",
+          "quote": "Crude oil production rose by about 41 percent y/y to roughly 163 million barrels"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Guyana",
+          "date": "2026-10",
+          "quote": "Inflation remained subdued through March 2026 but picked up in the second quarter"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-guy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Guyana",
+          "date": "2026-10",
+          "quote": "Food prices, particularly vegetables and fruit, were the main driver amid weather-related supply disruptions, while higher global energy prices raised fuel and transport costs."
+        }
+      ]
+    },
+    "tension": "The data show income per person at a record in 2025, but that measure counts output, not what households keep. The World Bank reports large payments for services and income flowing out of the country in early 2026, and the IMF noted in 2025 that the last household survey was in 2019, so there is little recent data on poverty. The IMF's October 2026 release also gives a preliminary 2025 population well above the figure these data divide by, and fuller census results are still to come. If the higher figure holds, income per person is lower than the data show."
+  }
+}

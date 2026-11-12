@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "iso3": "GRL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GRL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 1,
+      "sources_searched": [
+        "Tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): 'Greenland economy growth fisheries'",
+        "Tier 1 (imf.org, worldbank.org, oecd.org): 'Denmark Article IV Greenland economy 2024'",
+        "Tier 1 (all tier 1 domains): 'Greenland economic outlook block grant mining tourism airport Nuuk'",
+        "Tier 1 (oecd.org, imf.org): 'Greenland economy 2024 2025 report'",
+        "Tier 1 (oecd.org, worldbank.org, imf.org, ebrd.com): 'Greenland Self-Government economy fisheries shrimp halibut growth OECD 2024'",
+        "Tier 1 (worldbank.org): 'Greenland tourism country snapshot Prosperity Data360 pdf'",
+        "Opened: OECD 2023 Greenland EOI peer review (oecd.org); IMF Denmark 2025 Article IV (imf.org, mentions Greenland only as geopolitics); World Bank Prosperity Data360 Tourism Snapshot Greenland (worldbank.org, all data not available); OECD Territorial Reviews NORA Region 2011 (oecd.org); OECD DT/TDPC(99)10 (403, not read)",
+        "Tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): 'Greenland economy growth fisheries block grant'",
+        "Tier 2 (un.org, undp.org, unctad.org, unece.org): 'Special Rapporteur rights of Indigenous Peoples visit to Denmark and Greenland 2024 report'",
+        "Tier 2 (un.org): 'A/HRC/59/40/Add.1 Denmark Greenland international solidarity block grant economy'",
+        "Tier 2 (un.org, undp.org, unctad.org, unece.org): 'Greenland economy mining fisheries independence 2024 2025'",
+        "Opened: UNCTADstat Greenland general profile (unctad.org, template without data); A/HRC/59/40/Add.1 via documents.un.org",
+        "Tiers 1 and 2 (imf.org, worldbank.org, oecd.org, un.org, unctad.org, undp.org): 'Greenland economy 2026' (only data pages, no dated document for since_last_year)",
+        "Critic check: re-opened all three cited PDFs (OECD 2023 EOI peer review, OECD NORA 2011, UN A/HRC/59/40/Add.1) and verified every quoted passage against the extracted text"
+      ],
+      "critic_changes": [
+        "Checked all numbers against desk/data/GRL.json: -12.2 (1990), -1.3, 4.2, 1.1 (G4 eras), 1.4 (avg_10y), the 2023 peak, and the 1989 level being passed in 2000 (series) are all correct; the headline is kept.",
+        "Thread 'Fish at the core': the claim that fish products make up most exports had no supporting passage (the 2023 OECD report says nothing about exports). Added the NORA 2011 passage on fish products' share of exports, and the text now says this is a 2011 finding. 'good and bad years at sea show up in the whole economy' was moved to the fish-cycles thread, where its citation now sits.",
+        "Thread 'Falling shrimp and cod prices', renamed 'Fish cycles and falling prices': added the NORA 2011 passage on good and poor catches driving growth and slowdowns, and moved the GDP-fluctuations passage here. The price fall is now tied to the global economic crisis, which is the context the report gives.",
+        "Thread 'Block grant and home-market jobs': the draft said the grant 'pays for a large public sector', but the cited passage only mentions non-tradable sectors. Added the verified passage that the grant made up 57% of government revenue in 2009 (the number appears only inside the quote). Changed 'most new jobs' to 'jobs grew most', to match 'largest growth in employment'.",
+        "Thread 'Self-government and minerals': 'mining licences' changed to 'mining concessions', matching the UN report. The MoU quote now starts with the sentence's subject. Dropped 'Mining is not among the main industries the OECD listed in 2023' because no citation in this thread supports it.",
+        "Arc: 'pays for a large public sector' changed to 'helps keep large public administrations', the source's own words. The fish-price cause is reworded to match the catches-and-prices passage.",
+        "Tension: the OECD compared Greenland with the other NORA territories, not with 'richer economies'; corrected. Removed the invented explanation about price-adjusted income levels and fast-growing neighbours, which no source supports. Added checked series figures (-1.3 in 2002; 6.6 in 2004 and 2008).",
+        "OECD 2023 citation dates changed from 2023-07 to 2023. The document shows only '© OECD 2023' and an adoption date of 14 July 2023, not a publication month. The NORA 2011 date (2011) and the UN report date (2025-04-16, from the GE.25-05472 160425 job stamp) are confirmed.",
+        "Tier stays 2: one recent tier 1 source (OECD 2023) and one recent tier 2 source (UN 2025), so 2 distinct recent sources and 4 threads survive."
+      ]
+    },
+    "headline": "Greenland's fish-based economy grew fast from 1998 to 2008, then slowed to 1.1 percent a year, yet income per person reached a new high in 2023.",
+    "arc": "Greenland's income per person fell by 12.2 percent in 1990, and the era from 1990 to 1997 averaged -1.3 percent a year. From 1998 to 2008 growth picked up to 4.2 percent a year, and income per person passed its 1989 level in 2000. Since 2009 growth has slowed to 1.1 percent a year, close to the 1.4 percent average of the last decade, but income per person still reached a new high in 2023. The sources tie the swings to fish: fish products make up most exports, so good catches and high prices bring growth, while poor catches and falling shrimp and cod prices bring slowdowns. A yearly block grant from Denmark helps keep large public administrations, and since self-government came into force in 2009 Greenland has controlled its mineral resources, though fishing, construction and trade remain the main industries.",
+    "threads": [
+      {
+        "title": "Fish at the core",
+        "about": "present",
+        "text": "Fishing, construction and trade are the main industries, and fishing and related industries bring in a large share of business revenue. In 2011 the OECD found that fish products made up most of Greenland's exports.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/07/global-forum-on-transparency-and-exchange-of-information-for-tax-purposes-greenland-2023-second-round_13ab573a/e1842f2b-en.pdf",
+            "publisher": "OECD",
+            "title": "Global Forum on Transparency and Exchange of Information for Tax Purposes: Greenland 2023 (Second Round): Peer Review Report on the Exchange of Information on Request",
+            "date": "2023",
+            "quote": "Fishing, construction, and wholesale and retail trade are the dominant industries in Greenland"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/07/global-forum-on-transparency-and-exchange-of-information-for-tax-purposes-greenland-2023-second-round_13ab573a/e1842f2b-en.pdf",
+            "publisher": "OECD",
+            "title": "Global Forum on Transparency and Exchange of Information for Tax Purposes: Greenland 2023 (Second Round): Peer Review Report on the Exchange of Information on Request",
+            "date": "2023",
+            "quote": "The fisheries and fisheries-related industries generate around one third of business revenue in Greenland"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "in the Faroe Islands and Greenland fish products account for about 85% of the exports of the Faroe Islands and above 70% for Greenland"
+          }
+        ]
+      },
+      {
+        "title": "Fish cycles and falling prices",
+        "about": "history",
+        "text": "Swings in the fish industry drive swings in the whole economy: good catches and high export prices have brought growth, and poor catches and weak markets have brought slowdowns. After the global economic crisis, cod and shrimp prices fell, which the OECD called a particular challenge for Greenland because shrimp is its most important catch.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "Strong GDP fluctuations in the Faroe Islands and Greenland are linked to fluctuations in the fish industry."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "Good catches and high export prices resulted in economic growth, while poor catches and adverse fishing and market conditions have led to economic slowdown"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "Shrimp prices have also fallen, which poses a particular challenge for Greenland, where shrimp is the most important species."
+          }
+        ]
+      },
+      {
+        "title": "Block grant and home-market jobs",
+        "about": "history",
+        "text": "A yearly block grant from Denmark supports large sectors that serve the home market, and in 2009 it made up most of government revenue. Outside fishing, jobs grew most after 2000 in trade and construction, which serve the home market rather than exports.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "The annual block grant that Greenland and the Faroe Islands receive from Denmark enables them to maintain rather large non-tradable sectors"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "The grant accounts for 57% of government revenue in Greenland (2009)"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2011/03/oecd-territorial-reviews-nora-region-2011_g1g12776/9789264097629-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Territorial Reviews: NORA Region 2011: The Faroe Islands, Greenland, Iceland and Coastal Norway",
+            "date": "2011",
+            "quote": "In Greenland, the largest growth in employment outside fisheries since 2000 has been in wholesale and retail trade and construction, all non-tradable sectors."
+          }
+        ]
+      },
+      {
+        "title": "Self-government and minerals",
+        "about": "present",
+        "text": "Self-government came into force in 2009 and gave Greenland's authorities responsibility for its mineral resources. The government grants mining concessions to investors and has signed a memorandum with the European Union on a supply of minerals.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/07/global-forum-on-transparency-and-exchange-of-information-for-tax-purposes-greenland-2023-second-round_13ab573a/e1842f2b-en.pdf",
+            "publisher": "OECD",
+            "title": "Global Forum on Transparency and Exchange of Information for Tax Purposes: Greenland 2023 (Second Round): Peer Review Report on the Exchange of Information on Request",
+            "date": "2023",
+            "quote": "The Act on Greenland Self-Government came into force in 2009"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/HRC/59/40/Add.1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "Visit to Denmark and Greenland: Report of the Independent Expert on human rights and international solidarity, Cecilia Bailliet (A/HRC/59/40/Add.1)",
+            "date": "2025-04-16",
+            "quote": "Pursuant to the Act on Greenland Self-Government, the Greenlandic authorities have responsibility over mineral resources"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/HRC/59/40/Add.1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "Visit to Denmark and Greenland: Report of the Independent Expert on human rights and international solidarity, Cecilia Bailliet (A/HRC/59/40/Add.1)",
+            "date": "2025-04-16",
+            "quote": "The government of Greenland grants mining concessions to investors and has signed a memorandum of understanding with the European Union"
+          }
+        ]
+      }
+    ],
+    "since_last_year": null,
+    "tension": "In 2011 the OECD wrote that Greenland's income per person had fallen further behind the other North Atlantic territories since 2002 because of slower growth. The data do not show slow growth in those years: after a fall of 1.3 percent in 2002, income per person grew in every year from 2003 to 2008, by as much as 6.6 percent in 2004 and 2008, and the 1998 to 2008 era averaged 4.2 percent a year."
+  }
+}

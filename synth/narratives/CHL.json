@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "CHL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CHL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Chile Article IV consultation 2025 staff report growth",
+        "imf.org/worldbank.org/oecd.org (tier 1 list): OECD Economic Surveys Chile 2025 productivity growth slowdown (OECD pages returned 403, not cited)",
+        "worldbank.org: Chile Macro Poverty Outlook 2025 World Bank growth",
+        "imf.org: IMF Executive Board concludes 2026 Article IV consultation with Chile",
+        "imf.org/worldbank.org/oecd.org/iadb.org: Chile growth slowdown end of copper price boom mining investment 2014 IMF",
+        "imf.org/worldbank.org/oecd.org/iadb.org: Chile 1990s rapid growth Asian crisis 1998 recession lessons IMF",
+        "critic: opened every cited URL (imf.org x3, thedocs.worldbank.org, documents1.worldbank.org) and checked each quote against the page text"
+      ],
+      "critic_changes": [
+        "All 5 cited URLs opened; every quoted passage found verbatim on its page (the two World Bank PDFs read by text extraction). Dates confirmed: IMF F&D March 2000; IMF article 24 June 2025; IMF PR 14/357 dated 22 July 2014; MPO April 2026 and October 2026.",
+        "tier1_recent_found lowered from 5 to 3: only three distinct recent tier 1 sources could be verified (IMF June 2025, World Bank MPO April 2026, World Bank MPO October 2026).",
+        "Arc and Asian-crisis thread: 'hit export prices and volumes in 1998' changed to 'hurt Chile's terms of trade and export volumes', matching the cited passage; the year 1998 is not stated in the passage.",
+        "Arc: 'the World Bank notes the slowdown was already under way before it' replaced with a data-based clause ('growth had already been slow for six years before it'), since no cited passage carried that claim.",
+        "Productivity thread: 'an ageing population' was not supported (the IMF page never mentions ageing); reworded to 'demographic change', title changed to 'Productivity stalls, demography drags'. Added an April 2026 MPO citation ('two decades of weak total factor productivity') so the tension's 'two decades' claim rests on a cited passage.",
+        "Mining thread: the claim about ore grades and maintenance in 2026 had no supporting passage; added the October 2026 MPO citation on mining output and lower ore grades. 'Maintenance halted work' softened to 'maintenance disrupted work'. 'Lighter regulation' changed to 'more efficient regulation' to match 'regulatory efficiency'.",
+        "since_last_year: the claims about hiring and oil prices were not in the cited passage; replaced the quote with the MPO summary sentence (mining disruptions, softening labor market, inflationary pressures) and added the oil-price inflation passage. 'Hiring weakened' changed to 'the job market softened'.",
+        "Tension: reworded to use the data file's prior-decade average (2.9 percent in 2006–2015, G1.avg_prior_10y), which matches the span of 'two decades' better than the 1998–2013 era.",
+        "All numbers checked against desk/data/CHL.json: 5.7, 3.1, 1.1 (G4 eras), -1.5 (1999), 2.3 (2013), 0.8 (2014), -7.0 (2020), 10.8 (2021), 2.0 (2025), 2.9 (2006–2015); the 2025 peak matches G3. No banned phrases; no recommendation language in the story's own words."
+      ]
+    },
+    "headline": "Chile's income per person grew 5.7 percent a year in 1990–1997, 3.1 through 2013 and 1.1 since, as the copper boom faded and productivity stalled.",
+    "arc": "After a decade of market reforms, Chile's income per person grew 5.7 percent a year in 1990–1997, the fastest of its three eras since 1990. The Asian crisis hurt Chile's terms of trade and export volumes, income per person fell 1.5 percent in 1999, and growth then settled at 3.1 percent a year through 2013. From 2014 the pace dropped to 1.1 percent a year: investment weakened as the copper price outlook dimmed, and the World Bank traces the longer slide mainly to weak productivity growth, in mining and beyond. The pandemic cut income per person by 7.0 percent in 2020 before a 10.8 percent rebound in 2021, but growth had already been slow for six years before it. Income per person grew 2.0 percent in 2025 and reached its highest level yet, though mining disruptions pulled the economy back in the first half of 2026.",
+    "threads": [
+      {
+        "title": "A decade of reforms",
+        "text": "Income per person grew 5.7 percent a year in 1990–1997. An IMF article from 2000 credited the reforms of that decade for the record, and the IMF noted in 2025 that growth has not come close to that pace since.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/aninat.htm",
+            "publisher": "IMF",
+            "title": "Chile in the 1990s: Embracing Development Opportunities (Finance & Development)",
+            "date": "2000-03",
+            "quote": "A decade of reforms lies behind Chile's impressive macroeconomic performance."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/24/cf-chile-can-grow-faster-but-it-wont-be-like-its-the-1990s-again",
+            "publisher": "IMF",
+            "title": "Chile Can Grow Faster – But it Won’t Be Like the 1990s Again",
+            "date": "2025-06-24",
+            "quote": "Chile grew 6.2 percent per year on average in the 1990s, but by the 2020s growth barely went above 2 percent."
+          }
+        ]
+      },
+      {
+        "title": "The Asian crisis shock",
+        "text": "The Asian crisis hurt Chile's terms of trade and the volume of its exports. Income per person fell 1.5 percent in 1999, a short dip before growth resumed.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/aninat.htm",
+            "publisher": "IMF",
+            "title": "Chile in the 1990s: Embracing Development Opportunities (Finance & Development)",
+            "date": "2000-03",
+            "quote": "the negative impact of the Asian crisis on its terms of trade and export volumes"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/aninat.htm",
+            "publisher": "IMF",
+            "title": "Chile in the 1990s: Embracing Development Opportunities (Finance & Development)",
+            "date": "2000-03",
+            "quote": "Its domestic economy underwent a minor recession and its growth faltered briefly."
+          }
+        ]
+      },
+      {
+        "title": "The copper boom fades",
+        "text": "Growth in income per person fell from 2.3 percent in 2013 to 0.8 percent in 2014, the start of the slow era. The IMF tied the slowdown in part to a weaker copper price outlook that held back investment.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr14357",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2014 Article IV Consultation with Chile",
+            "date": "2014-07-22",
+            "quote": "Investment has weakened and growth slowed markedly in part due to a weaker copper price outlook."
+          }
+        ]
+      },
+      {
+        "title": "Productivity stalls, demography drags",
+        "text": "The World Bank traces the long slowdown mainly to weak productivity growth, linked to falling copper ore grades but also spread across the rest of the economy, and describes two decades of it. The IMF adds that demographic change alone trims the pace the economy can sustain.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-chl.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chile (October 2026)",
+            "date": "2026-10",
+            "quote": "The main driver is weak total factor productivity growth, rooted in declining copper ore grades but also widespread in the non-mining sector."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099718508052613253/pdf/Bulk-f35e1f58-57ca-4f5d-8106-4216e4883236.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chile (April 2026)",
+            "date": "2026-04",
+            "quote": "two decades of weak total factor productivity"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/24/cf-chile-can-grow-faster-but-it-wont-be-like-its-the-1990s-again",
+            "publisher": "IMF",
+            "title": "Chile Can Grow Faster – But it Won’t Be Like the 1990s Again",
+            "date": "2025-06-24",
+            "quote": "Demographic drag: this alone saps ¼ percentage point from Chile’s potential growth."
+          }
+        ]
+      },
+      {
+        "title": "Mining setbacks, new government",
+        "text": "Mining output shrank in the second half of 2025 and fell again in the first half of 2026, as ore grades declined and maintenance disrupted work. A new government took office in March 2026 with a focus on fiscal discipline, more efficient regulation and drawing investment.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099718508052613253/pdf/Bulk-f35e1f58-57ca-4f5d-8106-4216e4883236.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chile (April 2026)",
+            "date": "2026-04",
+            "quote": "Full-year GDP growth in 2025 was 2.5 percent, revised downward after mining output contracted in the second half of the year."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-chl.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chile (October 2026)",
+            "date": "2026-10",
+            "quote": "Mining output fell 4.7 percent, reflecting lower ore grades and maintenance disruptions"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-chl.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Chile (October 2026)",
+            "date": "2026-10",
+            "quote": "the new administration that took office in March 2026 has made fiscal consolidation, regulatory efficiency, and investment facilitation the cornerstones of its strategy"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.0 percent in 2025 and reached its highest level yet. Then the economy shrank in the first half of 2026, as mining was disrupted, the job market softened and higher oil prices pushed up inflation.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-chl.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Chile (October 2026)",
+          "date": "2026-10",
+          "quote": "The economy contracted 0.3 percent in the first half of 2026, weighed down by mining disruptions, a softening labor market, and rising inflationary pressures."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-chl.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Chile (October 2026)",
+          "date": "2026-10",
+          "quote": "Inflation climbed to 4.3 percent, driven by rising international oil prices, impacting on real wages and moderating private consumption."
+        }
+      ]
+    },
+    "tension": "The World Bank describes two decades of weak productivity, a span that starts around 2006. Yet income per person grew 2.9 percent a year in 2006–2015, and the sharp break in the data comes only in 2014. For years, weak productivity and solid growth ran side by side."
+  }
+}

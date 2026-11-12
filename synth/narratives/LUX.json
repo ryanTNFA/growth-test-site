@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "LUX",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LUX",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Luxembourg Article IV consultation staff concluding statement 2025 (also yields the 2026 mission statement)",
+        "oecd.org: OECD Economic Survey Luxembourg 2025 productivity growth",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Luxembourg 2009 Article IV financial crisis impact financial sector growth model",
+        "Opened: IMF 2026 and 2025 Article IV concluding statements, IMF 2009 concluding statement, OECD Economic Surveys: Luxembourg 2025 (PDF), OECD Economics Department Working Paper No. 1239 (2015, PDF)",
+        "Critic re-opened all five cited URLs (imf.org x3, oecd.org PDFs x2, text extracted locally) and checked every quote, date and number against desk/data/LUX.json"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/LUX.json. 3.3, -2.1 (2008), -5.0 (2009), -0.4, 5.3 (2021), the falls from 2022 to 2025, 8.1, 2006, 2007, -0.2, 0.5 and -0.8 (2025) all match, so no number was changed.",
+        "All 5 cited URLs opened. Every original quote was found on its page, and all dates match: OECD WP 1239 shows 24-Jun-2015, the OECD Survey says April 2025, and the IMF statements are dated 2009-03-30, 2025-03-21 and 2026-05-06.",
+        "Arc: 'reached the economy through its mostly foreign-owned banks' became 'hit through the banks, many of them subsidiaries of foreign groups', which the newly cited OECD 2015 passage supports. 'from mid-2022' became 'in 2022 and 2023', because no cited passage gives mid-2022. 'key source of growth' became 'key contributor to growth' to match the OECD wording.",
+        "Thread 'Finance builds the boom': 'credits ... as a key driver of the fast growth' became 'calls ... a key contributor to growth', to match the quote.",
+        "Thread 'The 2008 crisis hits banks': the claim that the crisis 'spread through the subsidiaries of foreign banks' had no cited support. It became the supported fact that some subsidiaries had to raise liquidity for their foreign banking groups, with a new OECD 2015 citation. 'Late 2008' became 'the third quarter of 2008' to match the IMF quote. The 14% balance-sheet quote was replaced by the OECD passage on the financial sector's falling share of value added, which supports the thread's claim about the sector's share; the separate 'bank balance sheets shrank' claim was dropped.",
+        "Thread 'More workers, flat productivity': the claim that OECD and IMF 'both describe this model as reaching its limits, with pressure on housing and infrastructure' was not supported by the cited quotes. It now cites the OECD 'has reached its limits' passage and the IMF 'not sustainable given ageing population and infrastructure bottlenecks' passage, both verified. 'Output per worker has barely moved' became 'labour productivity has stagnated'. The immigrants and cross-border workers detail moved to the arc only, so the thread stays within 3 citations.",
+        "Thread 'Rate shock ends housing boom': 'When euro area interest rates rose from mid-2022' became 'When interest rates rose in 2022 and 2023', because neither the euro-area framing nor mid-2022 is in the quotes.",
+        "Thread 'Public spending carries growth': 'growth has trailed the euro area' now has its own verified IMF 2026 citation. 'Describes private firms as squeezed by high labour costs' became 'lists persistent pressure on competitiveness from high labour costs and weak productivity among the risks', which matches how the IMF presents it.",
+        "Tension: 'the workforce and population have grown with it' became 'mostly by adding workers rather than by raising output per worker', because population growth is not supported by the cited sources or the data fields used.",
+        "The story keeps 3 distinct recent tier 1 sources: IMF 2025, IMF 2026 and OECD 2025. All 5 threads survive with citations, and every 'present' thread has a source from 2023 or later. No banned phrases or recommendation language found."
+      ]
+    },
+    "headline": "Luxembourg's finance-led boom ended in 2008; output has since grown with the workforce, but income per person is back near its 2006 level.",
+    "arc": "From 1990 to 2007 income per person grew 3.3 percent a year, as Luxembourg's financial sector became a leading international hub for investment funds and a key contributor to growth. The 2008 global financial crisis hit through the banks, many of them subsidiaries of foreign groups: income per person fell 2.1 percent in 2008 and 5.0 percent in 2009, and the era from 2008 to 2025 has averaged -0.4 percent a year. Over that second era, the sources say, output grew mainly because the workforce grew, with immigrants and cross-border workers, while labour productivity stalled. After a rebound of 5.3 percent in 2021, rising interest rates in 2022 and 2023 hit the financial sector and ended a long housing boom, and income per person fell every year from 2022 to 2025. Income per person peaked in 2007, is now 8.1 percent below that peak and about where it first was in 2006; growth averaged -0.2 percent a year over 2016 to 2025, against 0.5 in the decade before.",
+    "threads": [
+      {
+        "title": "Finance builds the boom",
+        "text": "From 1990 to 2007 Luxembourg grew into a leading centre for asset management and investment funds. The OECD calls this financial sector a key contributor to growth in that era, when income per person rose 3.3 percent a year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/06/luxembourg-addressing-new-challenges-in-a-major-financial-sector_g17a268b/5jrzxgz5tvwj-en.pdf",
+            "publisher": "OECD",
+            "title": "Luxembourg - Addressing New Challenges in a Major Financial Sector (OECD Economics Department Working Papers No. 1239)",
+            "date": "2015-06-24",
+            "quote": "Luxembourg's financial sector emerged as a leading international hub for asset management and investment funds and became a key contributor to growth."
+          }
+        ]
+      },
+      {
+        "title": "The 2008 crisis hits banks",
+        "text": "Growth came to a sudden halt in the third quarter of 2008, and some of Luxembourg's bank subsidiaries had to raise cash for their foreign parent groups. Since the crisis the financial sector's share of the economy has fallen. Income per person dropped 5.0 percent in 2009 and has not regained its 2007 peak.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs033009",
+            "publisher": "IMF",
+            "title": "Luxembourg - 2009 Article IV Consultation, IMF Concluding Statement",
+            "date": "2009-03-30",
+            "quote": "Growth came to a sudden halt in the third quarter of 2008"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/06/luxembourg-addressing-new-challenges-in-a-major-financial-sector_g17a268b/5jrzxgz5tvwj-en.pdf",
+            "publisher": "OECD",
+            "title": "Luxembourg - Addressing New Challenges in a Major Financial Sector (OECD Economics Department Working Papers No. 1239)",
+            "date": "2015-06-24",
+            "quote": "At the initial phase of the 2008 crisis, some bank subsidiaries had to raise liquidity for their foreign banking groups"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/06/luxembourg-addressing-new-challenges-in-a-major-financial-sector_g17a268b/5jrzxgz5tvwj-en.pdf",
+            "publisher": "OECD",
+            "title": "Luxembourg - Addressing New Challenges in a Major Financial Sector (OECD Economics Department Working Papers No. 1239)",
+            "date": "2015-06-24",
+            "quote": "Since the crisis the share of the financial and insurance sector in the economy's real value added dropped by some 4 percentage points"
+          }
+        ]
+      },
+      {
+        "title": "More workers, flat productivity",
+        "text": "Since the crisis, output has grown mostly by adding workers, while labour productivity has stagnated. The OECD says this model, built on a fast-growing workforce, has reached its limits. The IMF says it is not sustainable given an ageing population and infrastructure bottlenecks.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-luxembourg-2025_3eb782b5/803b3ea1-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Luxembourg 2025",
+            "date": "2025-04",
+            "quote": "Luxembourg's real GDP growth over the past 15 years has largely been driven by the increase in the workforce"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-luxembourg-2025_3eb782b5/803b3ea1-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Luxembourg 2025",
+            "date": "2025-04",
+            "quote": "Yet, the growth model based on rapid labour force expansion has reached its limits. Productivity has stagnated over the past 15 years"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/03/21/mcs-luxembourg-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Luxembourg: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-03-21",
+            "quote": "labor productivity growth has lagged peers; not sustainable given ageing population and infrastructure bottlenecks"
+          }
+        ]
+      },
+      {
+        "title": "Rate shock ends housing boom",
+        "text": "When interest rates rose in 2022 and 2023, higher borrowing costs halted a long housing boom and construction fell sharply. Higher rates also weighed on the financial sector, the economy's main pillar. Income per person fell every year from 2022 to 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-luxembourg-2025_3eb782b5/803b3ea1-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Luxembourg 2025",
+            "date": "2025-04",
+            "quote": "Higher borrowing costs abruptly halted a decade-long housing boom, causing a 40% drop in construction activity."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-economic-surveys-luxembourg-2025_3eb782b5/803b3ea1-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Luxembourg 2025",
+            "date": "2025-04",
+            "quote": "Rising interest rates also impacted activity in the financial sector, a major pillar of the economy."
+          }
+        ]
+      },
+      {
+        "title": "Public spending carries growth",
+        "text": "Since 2022 growth has trailed the euro area average, and the IMF finds that public sector activity has done more and more of the work, masking private sector weakness. It lists persistent pressure on competitiveness from high labour costs and weak productivity among the risks.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-luxembourg-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Luxembourg: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "Growth has fallen behind the euro area average since 2022, with output below its long-term trend."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-luxembourg-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Luxembourg: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "public sector activity has increasingly driven growth, masking private sector weaknesses"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-luxembourg-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Luxembourg: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-06",
+            "quote": "persistent competitiveness pressures from high labor costs and weak productivity"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In May 2026 the IMF reported that growth picked up a little in 2025, helped by government spending and rising real incomes, while unemployment climbed. In the data, income per person still fell 0.8 percent in 2025, its fourth yearly fall in a row.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-luxembourg-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Luxembourg: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-06",
+          "quote": "Growth has edged up to 0.6 percent in 2025, supported by expansionary fiscal policy and real income gains"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/06/mcs-05062026-luxembourg-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Luxembourg: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-06",
+          "quote": "unemployment rising above 6 percent amid persisting skill mismatches"
+        }
+      ]
+    },
+    "tension": "The sources describe an economy whose output kept growing after 2008, carried by a fast-rising workforce, and the IMF reports positive growth in 2025. The data tell a flatter story: income per person has averaged -0.4 percent a year since 2008, fell every year from 2022 to 2025, and is about where it first was in 2006. Output has grown, but mostly by adding workers rather than by raising output per worker, so little of that growth shows up as higher income per person."
+  }
+}

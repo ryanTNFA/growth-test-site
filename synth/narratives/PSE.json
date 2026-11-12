@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "iso3": "PSE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PSE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "worldbank.org, imf.org and the other tier 1 domains: West Bank and Gaza economic monitoring report 2025 Palestinian economy",
+        "imf.org and tier 1 domains: IMF West Bank and Gaza staff report Ad Hoc Liaison Committee 2025",
+        "tier 1 domains: Palestinian economy second intifada 2000 closures GDP decline recovery aid-driven growth",
+        "tier 1 domains: West Bank and Gaza economy stagnation declining aid since 2013 growth slowdown Israeli restrictions Area C",
+        "tier 1 domains: Palestinian economy 2019 clearance revenue standoff growth stagnated per capita income World Bank AHLC",
+        "opened: thedocs.worldbank.org Economic Update on the West Bank and Gaza (May 2026)",
+        "opened: thedocs.worldbank.org Impacts of the Conflict in the Middle East on the Palestinian Economy (September 2025)",
+        "opened: thedocs.worldbank.org Impacts of the Conflict in the Middle East on the Palestinian Economy (May 2024)",
+        "opened: worldbank.org/ext/en/country/westbankandgaza (undated country page)",
+        "opened: imf.org West Bank and Gaza Selected Issues (September 2023)",
+        "opened: imf.org West Bank and Gaza Report to the Ad Hoc Liaison Committee (September 2023)",
+        "opened: documents1.worldbank.org Twenty-Seven Months - Intifada, Closures and Palestinian Economic Crisis (May 2003)",
+        "opened: worldbank.org Palestine's Economic Update October 2019",
+        "critic re-opened all cited URLs: documents1.worldbank.org (2003 PDF), imf.org (2023 Selected Issues PDF), thedocs.worldbank.org (September 2025 and May 2026 PDFs), worldbank.org/ext country page, worldbank.org October 2019 update"
+      ],
+      "critic_changes": [
+        "Opened every cited URL. The four PDFs were read from their extracted text. All quoted passages appear on their pages, and the dates match the documents: May 2003; 11 September 2023; September 2025; May 2026; 9 October 2019.",
+        "Thread 'Spending-led growth loses support': dropped the October 2019 quote 'The decline in growth implies a sizable decline in real per capita income'. On the page it refers to projected declines in 2020-21, not 2019, so it did not support the thread. Replaced it with that page's sentence on the 'clearance revenue standoff', and changed 'a dispute ... hit the budget' to 'a standoff arose'. Also removed 'a little' from 'fell a little in each year from 2017 to 2019', because the source spoke of a 'sizable' decline, and changed 'farms and factories' to 'producing goods' to stay closer to the source's 'productive sectors'.",
+        "Thread 'Blockade splits Gaza off': 'fell year after year' overstated the IMF passage, which gives only an annual average decline. Changed it to 'declined on average'. Added an IMF quote from the same page that ties the split to the 2007 blockade and recurring wars.",
+        "Thread 'War since October 2023': the 2025 growth of 1.9 percent was described as 'mostly a rebound from that low base'. The May 2026 report says only Gaza's growth was mainly low-base effects, while the West Bank's had other drivers, so this now reads 'a recovery the World Bank calls uneven'. 'Cut the jobs West Bank workers held in Israel' became 'cut most of the jobs Palestinians held in Israel', to match the quote.",
+        "Thread 'Withheld revenues squeeze the budget': removed 'partial salaries' because no cited quote contains it. 'Most of the tax revenue' became 'main source of revenue'. Added the September 2025 World Bank quote on bigger deductions after October 2023, which the text claimed but no quote showed.",
+        "since_last_year: dropped the worldbank.org country-page citation and the claim that the West Bank shrank in early 2026. The page shows no date, and the paragraph cites Q2 2026 unemployment, so the 2026-05 date was wrong and no month-level date can be shown. Replaced it with the May 2026 report's line on more domestic bank borrowing in early 2026. Reworded the ceasefire sentence to the source's 'fragile window for stabilization', and 'mostly a rebound' to 'an uneven recovery', each with a citation.",
+        "Numbers checked against desk/data/PSE.json: era means -1.4, 4.8 and -4.1; peak 2016; shortfall 33.9; level first reached in 1997; yearly growth -10.9, -11.6 and -14.7 for 2000-02; -24.7 in 2024, the largest drop in the series; 1.9 in 2025; negative growth in each year 2017-19. All are correct. The tension's claims about a 2009 level and 'modest growth recorded between 2010 and 2019' were confirmed in the September 2025 World Bank report. No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "Income per person in the West Bank and Gaza rose from 2003 to a 2016 peak, then stalled and collapsed in war; in 2025 it was near its 1997 level.",
+    "arc": "Income per person in the West Bank and Gaza has moved through three eras since 1995, each shaped more by conflict and limits on movement than by ordinary business cycles. From 1995 to 2002 it fell 1.4 percent a year on average: gains in the late 1990s were wiped out when closures during the second intifada cut trade and jobs. From 2003 to 2016 it grew 4.8 percent a year, starting with a sharp rebound and then slower growth driven by spending in the West Bank, while Gaza fell behind under the blockade imposed in 2007. After the 2016 peak, income per person shrank 4.1 percent a year from 2017 to 2025: it slipped as donor support fell and tax transfers were disputed, dropped in the 2020 pandemic, and collapsed in 2024 during the war centered in Gaza. In 2025 it was 33.9 percent below the 2016 peak, about where it first stood in 1997.",
+    "threads": [
+      {
+        "title": "Intifada and closures",
+        "about": "history",
+        "text": "Income per person rose in the late 1990s, then fell in each year from 2000 to 2002, by 10.9, 11.6 and 14.7 percent. The World Bank traced the crisis to closures: Israeli limits on moving goods and people across borders and inside the territories during the second intifada.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/616581468765333893/pdf/263141270months0Intifada10Closures.pdf",
+            "publisher": "World Bank",
+            "title": "Twenty-Seven Months - Intifada, Closures and Palestinian Economic Crisis: An Assessment",
+            "date": "2003-05",
+            "quote": "The proximate cause of the Palestinian economic crisis is closure, i.e. restrictions imposed by GOI on the movement of Palestinian goods and people"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/616581468765333893/pdf/263141270months0Intifada10Closures.pdf",
+            "publisher": "World Bank",
+            "title": "Twenty-Seven Months - Intifada, Closures and Palestinian Economic Crisis: An Assessment",
+            "date": "2003-05",
+            "quote": "real per capita incomes are now 46 percent lower than in 1999"
+          }
+        ]
+      },
+      {
+        "title": "Blockade splits Gaza off",
+        "about": "history",
+        "text": "After 2007 the two territories went separate ways. Under the blockade and repeated wars, income per person in Gaza declined on average, while the West Bank kept growing. The combined figures for the 2003 to 2016 era hide this split.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1wbgea2023004.pdf",
+            "publisher": "IMF",
+            "title": "West Bank and Gaza: Selected Issues",
+            "date": "2023-09-11",
+            "quote": "real GDP per capita declining at an annual average rate of 2.5 percent amidst rapid population growth"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1wbgea2023004.pdf",
+            "publisher": "IMF",
+            "title": "West Bank and Gaza: Selected Issues",
+            "date": "2023-09-11",
+            "quote": "In contrast, the West Bank recorded average annual real GDP growth and per capita growth of 5.1 and 2.8 percent respectively over the same period."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1wbgea2023004.pdf",
+            "publisher": "IMF",
+            "title": "West Bank and Gaza: Selected Issues",
+            "date": "2023-09-11",
+            "quote": "This largely reflects the Israeli blockade of Gaza following the political take-over by Hamas in 2007 and recurring wars between the two sides since then."
+          }
+        ]
+      },
+      {
+        "title": "Spending-led growth loses support",
+        "about": "history",
+        "text": "Growth leaned on household and government spending rather than on producing goods. Budget support from donors shrank fast after 2014, and in 2019 a standoff arose over the tax revenues Israel collects for the Palestinian Authority. Income per person fell in each year from 2017 to 2019.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/88b250e19a55174787bafafd5322360e-0280012025/original/Palestinian-Economic-Update-Sept2025-FINAL.pdf",
+            "publisher": "World Bank",
+            "title": "Impacts of the Conflict in the Middle East on the Palestinian Economy",
+            "date": "2025-09",
+            "quote": "Episodes of economic growth remain driven by consumption rather than the productive sectors"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1wbgea2023004.pdf",
+            "publisher": "IMF",
+            "title": "West Bank and Gaza: Selected Issues",
+            "date": "2023-09-11",
+            "quote": "Between 2014-22, budget support to the PA has also been declining rapidly from 8.8 to 1.9 percent of GDP."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/westbankandgaza/publication/economic-update-october-2019",
+            "publisher": "World Bank",
+            "title": "Palestine's Economic Update — October 2019",
+            "date": "2019-10-09",
+            "quote": "But uncertainty about a comprehensive resolution for the clearance revenue standoff remains high."
+          }
+        ]
+      },
+      {
+        "title": "War since October 2023",
+        "about": "present",
+        "text": "The war that began in October 2023 brought Gaza's economy to a standstill and cut most of the jobs Palestinians held in Israel. Income per person fell 24.7 percent in 2024, the largest drop in the series. It grew 1.9 percent in 2025, a recovery the World Bank calls uneven.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/88b250e19a55174787bafafd5322360e-0280012025/original/Palestinian-Economic-Update-Sept2025-FINAL.pdf",
+            "publisher": "World Bank",
+            "title": "Impacts of the Conflict in the Middle East on the Palestinian Economy",
+            "date": "2025-09",
+            "quote": "After an 83 percent year on year contraction in 2024, Gaza’s GDP fell an additional 12 percent in Q1-2025."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/88b250e19a55174787bafafd5322360e-0280012025/original/Palestinian-Economic-Update-Sept2025-FINAL.pdf",
+            "publisher": "World Bank",
+            "title": "Impacts of the Conflict in the Middle East on the Palestinian Economy",
+            "date": "2025-09",
+            "quote": "Employment among Palestinians working in Israel fell by 86 percent within a single quarter after October 2023, dropping from 177,000 to 24,000."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/caf69bb9db6d729c6b35254c5815df9a-0280012026/original/Palestinian-Economic-Monitor-5-19-26web.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Update on the West Bank and Gaza",
+            "date": "2026-05",
+            "quote": "Recovery in 2025 was uneven and lacked underlying strength."
+          }
+        ]
+      },
+      {
+        "title": "Withheld revenues squeeze the budget",
+        "about": "present",
+        "text": "Israel collects the Palestinian Authority's main source of revenue and is meant to pass it on. Deductions grew after October 2023 and transfers stopped completely in May 2025, so the Authority has leaned on unpaid bills and bank borrowing.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/88b250e19a55174787bafafd5322360e-0280012025/original/Palestinian-Economic-Update-Sept2025-FINAL.pdf",
+            "publisher": "World Bank",
+            "title": "Impacts of the Conflict in the Middle East on the Palestinian Economy",
+            "date": "2025-09",
+            "quote": "are mostly VAT and import duties that, according to the Paris Protocol, should be collected by the Government of Israel and transferred to the PA"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/88b250e19a55174787bafafd5322360e-0280012025/original/Palestinian-Economic-Update-Sept2025-FINAL.pdf",
+            "publisher": "World Bank",
+            "title": "Impacts of the Conflict in the Middle East on the Palestinian Economy",
+            "date": "2025-09",
+            "quote": "Since the onset of the conflict, Israeli deductions from clearance revenues increased, reducing the PA’s primary revenue source"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/caf69bb9db6d729c6b35254c5815df9a-0280012026/original/Palestinian-Economic-Monitor-5-19-26web.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Update on the West Bank and Gaza",
+            "date": "2026-05",
+            "quote": "With clearance revenues suspended completely since May 2025 and limited external financing alternatives, the PA has increasingly relied on arrears accumulation and domestic bank borrowing"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Tax revenue transfers from Israel have been fully suspended since May 2025. The October 2025 ceasefire in Gaza opened a fragile window for stabilization, and income per person grew 1.9 percent in 2025, an uneven recovery from the 2024 collapse. In early 2026 the Palestinian Authority borrowed more from domestic banks.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/caf69bb9db6d729c6b35254c5815df9a-0280012026/original/Palestinian-Economic-Monitor-5-19-26web.pdf",
+          "publisher": "World Bank",
+          "title": "Economic Update on the West Bank and Gaza",
+          "date": "2026-05",
+          "quote": "The October 2025 ceasefire halted two years of intense conflict, centered in Gaza, and created an important, though fragile, window for stabilization"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/caf69bb9db6d729c6b35254c5815df9a-0280012026/original/Palestinian-Economic-Monitor-5-19-26web.pdf",
+          "publisher": "World Bank",
+          "title": "Economic Update on the West Bank and Gaza",
+          "date": "2026-05",
+          "quote": "Recovery in 2025 was uneven and lacked underlying strength."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/caf69bb9db6d729c6b35254c5815df9a-0280012026/original/Palestinian-Economic-Monitor-5-19-26web.pdf",
+          "publisher": "World Bank",
+          "title": "Economic Update on the West Bank and Gaza",
+          "date": "2026-05",
+          "quote": "following the PA’s additional borrowing from domestic banks in early 2026"
+        }
+      ]
+    },
+    "tension": "The World Bank says total output had fallen back to its 2009 level by the end of 2024. Income per person fell further than that: by 2025 it was about where it first stood in 1997, because the population kept growing. The World Bank also describes modest growth between 2010 and 2019, but in the data income per person was already falling slightly in each year from 2017 to 2019."
+  }
+}

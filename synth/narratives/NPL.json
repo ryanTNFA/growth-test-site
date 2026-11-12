@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "iso3": "NPL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NPL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Nepal Article IV 2025 staff report growth remittances'",
+        "same tier 1 domains: 'Nepal Development Update 2025 World Bank growth'",
+        "same tier 1 domains: 'Nepal Development Update October 2026 flood growth FY26'",
+        "opened: worldbank.org press release 2025-03-24 (Country Economic Memorandum)",
+        "opened: documents1.worldbank.org Nepal Country Economic Memorandum 2025 PDF",
+        "opened: documents1.worldbank.org Nepal Development Update, April 8, 2026 PDF",
+        "opened: worldbank.org press release 2026-10-06 (Rasuwa flood)",
+        "opened: worldbank.org/ext/en/country/nepal (undated, not cited)",
+        "tried: imf.org Sixth ECF Review page (HTTP 403, not cited)",
+        "critic: re-opened all four cited URLs (worldbank.org, documents1.worldbank.org); PDF text extracted and each quote matched"
+      ],
+      "critic_changes": [
+        "Opened all four cited URLs. The two press releases were checked with WebFetch; the two PDFs were extracted to text and every quote matched the page exactly. Titles and dates match the documents: the CEM is dated 2025, the NDU April 8, 2026, and the press releases 2025-03-24 and 2026-10-06.",
+        "Arc: dropped 'growth over 1996–2023 trailed most South Asian neighbors'. The CEM compares Nepal with structural and aspirational peers (Bangladesh, Bolivia, Kyrgyz Republic; Cambodia, Lao PDR, Moldova), not South Asian neighbors, and no cited passage carried the comparison.",
+        "Arc: replaced 'brought down the government' with 'forced the prime minister to resign', matching the NDU passage. Made the investment years explicit (27.6 in 2015, 33.8 in 2019). Softened 'Through every era' to 'Across these years'.",
+        "Thread 'Conflict, then no peace dividend': replaced the citation 'Political unrest hampered growth...' with the CEM passages that support 'pushed workers abroad' (the conflict 'fueled international migration') and 'no growth surge' (a surge 'failed to materialize'). The text said instability 'held back reform'; it now says it held back the economy, which is closer to the source.",
+        "Thread 'Earthquake, blockade and rebuilding': removed 'months later' and the causal claim that the shocks 'left' income flat, since no source dates the blockade or ties it to 2016. Added the CEM passage that ties the rise in capital accumulation to reconstruction after the earthquake.",
+        "Thread 'Remittances carry spending, not exports': 'paid for household spending' became 'supported millions of households' to match the NDU quote. Extended the press-release quote to cover 'slow job creation', which supports 'jobs at home slow to come'; the quote is trimmed to 23 words.",
+        "Thread 'Unrest and a new government': 'brought down the government' became 'led the prime minister to resign'. 'Slowed services' became 'services growth barely picked up', since the source says 'only a marginal increase in services sector growth'.",
+        "Thread 'Hydropower's rise and exposure': 'a main source of industrial growth' was stronger than the source and now reads 'lifted industry in the first half of FY26'. 'The same mountain rivers' was unsourced and now reads 'Natural disasters', following the CEM.",
+        "since_last_year: 'roads' became 'transport' (the press release names transport infrastructure, not roads). 'Clouded the outlook' is now backed by an added NDU passage saying the ongoing Middle East conflict is likely to weigh on the outlook. Added the NDU passage on the protests and the prime minister's resignation.",
+        "Tension: dropped 'productivity added almost nothing to growth'. No cited passage supports it, and in the CEM the TFP finding is not specific to 2015–2023. 'The fastest years since 1960' now reads 'the two fastest years in a series that starts in 1960'. The data confirm 8.8 and 7.4 are the two highest values. The reconstruction link now rests on the newly cited CEM passage.",
+        "Numbers: every figure in the headline, arc, threads, since_last_year and tension was checked against desk/data/NPL.json. They are 3.1 (G4 era), 3.8 and 3.5 (G1), -0.04 ('flat') for 2016, 8.8 for 2017, 7.4 for 2018 and -4.2 for 2020 (series), investment 27.6 (2015), 33.8 (2019) and 23.6 (2025) (series), and the 2025 peak (G3). The figures 77.3, 3.7% and 385 MW appear only inside quotes.",
+        "tier1_recent_found corrected from 3 to 4. There are four distinct recent tier 1 sources: the CEM 2025, the NDU of April 2026, and the press releases of March 2025 and October 2026.",
+        "No banned phrases and no 'per head'. The headline is 155 characters."
+      ]
+    },
+    "headline": "Nepal's income per person grew 3.1 percent a year over 1990–2025 through conflict, an earthquake and unrest, carried by remittances more than jobs at home.",
+    "arc": "The data show one long era: since 1990, income per person in Nepal has grown 3.1 percent a year with no lasting shift up or down. The World Bank splits these years into a Maoist conflict from 1996 to 2006 that disrupted the economy and sent workers abroad, a post-war stretch of unstable governments to 2014 that brought no growth surge, and a run of shocks from 2015. Income per person grew 3.8 percent a year over 2006–2015 and 3.5 percent over 2016–2025, but the later decade swung hard: flat in 2016 after the earthquake and India's blockade, 8.8 percent in 2017 and 7.4 percent in 2018 as rebuilding lifted investment from 27.6 percent of GDP in 2015 to 33.8 percent in 2019, then a 4.2 percent fall in 2020 with COVID-19. Across these years, money sent home by Nepalis working abroad kept household spending up and poverty falling, even as exports and industry stalled. Income per person reached its highest level yet in 2025, the same year youth-led protests forced the prime minister to resign.",
+    "threads": [
+      {
+        "title": "Conflict, then no peace dividend",
+        "about": "history",
+        "text": "A Maoist insurgency from 1996 to 2006 disrupted the economy and pushed workers abroad. Peace in 2006 did not bring a growth surge: frequent changes of government and a long wait for a new constitution held back the economy.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "was defined by a decade-long conflict between the government and the Communist (Maoist) Party of Nepal, which disrupted the economy and fueled international migration"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "However, a surge in growth failed to materialize during the post-conflict period from 2007-2014."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "Political instability persisted in the form of frequent changes in government and delays in the adoption of a new constitution."
+          }
+        ]
+      },
+      {
+        "title": "Earthquake, blockade and rebuilding",
+        "about": "history",
+        "text": "Income per person was flat in 2016, after the 2015 earthquake and India's border blockade. Rebuilding then lifted investment from 27.6 percent of GDP in 2015 to 33.8 percent in 2019, and income per person grew 8.8 percent in 2017, before COVID-19 brought a 4.2 percent fall in 2020. The World Bank notes that the investment went mostly to reconstruction rather than new industries.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "was dominated by repeated shocks, including the devastating 2015 Gorkha earthquake, India’s blockade, a major landslide in 2017, and the global COVID-19 pandemic"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "The sharp increase can be attributed to reconstruction efforts following the 2015 Gorkha earthquake, which triggered significant investments in housing, infrastructure, and public facilities."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "Investment, though rising after the 2015 earthquake, was largely directed at reconstruction rather than growth-enhancing industries."
+          }
+        ]
+      },
+      {
+        "title": "Remittances carry spending, not exports",
+        "about": "present",
+        "text": "Money sent home by Nepalis working abroad has cut poverty and supported millions of households. The World Bank finds it has also pushed up local prices and the real exchange rate, wearing down the price edge of exports, while industry has stalled and jobs at home have been slow to come.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+            "date": "2026-04-08",
+            "quote": "Remittances remain a critical stabilizer, supporting millions of households and helping to reduce poverty"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "a Dutch Disease-like effect may have eroded price competitiveness over time, with rising remittances driving domestic non-tradeable prices"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/03/24/nepal-world-bank-report-outlines-key-reforms-to-boost-growth-create-jobs",
+            "publisher": "World Bank",
+            "title": "Nepal: World Bank Report Outlines Key Reforms to Boost Growth, Create Jobs",
+            "date": "2025-03-24",
+            "quote": "low productivity, declining exports, and a stagnant industrial sector have held back the economy and led to slow job creation in non-agriculture sectors"
+          }
+        ]
+      },
+      {
+        "title": "Unrest and a new government",
+        "about": "present",
+        "text": "Youth-led protests against corruption in September 2025 turned into wide unrest and led the prime minister to resign. In the uncertainty that followed, services growth barely picked up and new investment was held back. A snap election in March 2026 gave one party a majority.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+            "date": "2026-04-08",
+            "quote": "Youth-led anti-corruption protests in September 2025 escalated into widespread unrest, resulting in the resignation of the prime minister"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+            "date": "2026-04-08",
+            "quote": "Heightened uncertainty following the unrest led to only a marginal increase in services sector growth and dampened new investment."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+            "date": "2026-04-08",
+            "quote": "Under an interim government, snap elections for the HoR on March 5, 2026, led to the formation of a single-party majority government."
+          }
+        ]
+      },
+      {
+        "title": "Hydropower's rise and exposure",
+        "about": "present",
+        "text": "New hydropower plants lifted industry in the first half of FY26. Natural disasters leave them exposed: the 2015 earthquake and floods damaged plants, and the August 2026 Rasuwa flood hit hydropower and power lines.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+            "date": "2026-04-08",
+            "quote": "The industrial sector, by contrast, benefited from a notable expansion in hydroelectric capacity, with 385 MW added to the grid in H1FY26"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099032125103030263/pdf/P179761-430153ad-672c-4418-89c5-ef3740c65113.pdf",
+            "publisher": "World Bank",
+            "title": "Nepal Country Economic Memorandum 2025: Unlocking Nepal's Growth Potential",
+            "date": "2025",
+            "quote": "The 2015 earthquake and frequent floods have damaged numerous operational facilities."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/nepal-s-growth-projected-to-slow-following-devastating-rasuwa-flood",
+            "publisher": "World Bank",
+            "title": "Nepal's Growth Projected to Slow Following Devastating Rasuwa Flood",
+            "date": "2026-10-06",
+            "quote": "industry is expected to be the primary drag on growth, reflecting extensive damage to hydropower, solar energy, electricity transmission, and transport infrastructure"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Youth-led protests in September 2025 led the prime minister to resign, and a snap election in March 2026 gave a single party a majority. Conflict in the Middle East, where most Nepali migrant workers are based, weighed on the outlook in early 2026. In August 2026 a flood in Rasuwa damaged hydropower, power lines and transport, and the World Bank now expects growth to slow in FY27.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+          "publisher": "World Bank",
+          "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+          "date": "2026-04-08",
+          "quote": "Youth-led anti-corruption protests in September 2025 escalated into widespread unrest, resulting in the resignation of the prime minister"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+          "publisher": "World Bank",
+          "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+          "date": "2026-04-08",
+          "quote": "With Nepal's economy already showing limited momentum in H1FY26, the ongoing conflict in the Middle East is likely to further weigh on the outlook."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099315004072621459/pdf/IDU-5fbb7a2f-51fb-4e48-aadc-2a447660fbe1.pdf",
+          "publisher": "World Bank",
+          "title": "Nepal Development Update: Growth Under Pressure: Navigating Domestic and Global Shocks",
+          "date": "2026-04-08",
+          "quote": "The most significant channel is labor migration and remittances, given that 77.3 percent of Nepali migrant workers are based in the Middle East"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/10/06/nepal-s-growth-projected-to-slow-following-devastating-rasuwa-flood",
+          "publisher": "World Bank",
+          "title": "Nepal's Growth Projected to Slow Following Devastating Rasuwa Flood",
+          "date": "2026-10-06",
+          "quote": "Growth in Nepal is projected to slow to 3.7% in FY27 following disruptions to industry and services caused by the August 26 flood"
+        }
+      ]
+    },
+    "tension": "The World Bank describes 2015–2023 as years of repeated shocks. Yet in the data, income per person grew 3.5 percent a year over 2016–2025, close to the 3.8 of the decade before, and 2017 and 2018 were the two fastest years in a series that starts in 1960. The same report ties much of the rise in investment after 2015 to rebuilding after the earthquake rather than to new industries, and investment has since fallen back to 23.6 percent of GDP in 2025."
+  }
+}

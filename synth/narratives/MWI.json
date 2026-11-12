@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "iso3": "MWI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MWI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 7,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'Malawi IMF Article IV 2025 staff report growth'",
+        "tier 1: 'Malawi Economic Monitor 2025 World Bank growth'",
+        "tier 1: 'Malawi 1992 1994 drought growth 2001 2002 food crisis donors suspended aid economy history'",
+        "tier 1: 'Malawi Country Economic Memorandum growth history volatility weather shocks World Bank'",
+        "tier 1: 'Malawi IMF 2026 staff-level agreement exchange rate kwacha'",
+        "worldbank.org, imf.org, afdb.org: 'Malawi Macro Poverty Outlook 2026 growth per capita'",
+        "Pages opened (draft): imf.org PR 25/261 (2025-07-22), IMF Country Report 25/226 PDF, imf.org PR 25/363 (2025-11-07), imf.org PR 26/212 (2026-06-18), worldbank.org MEM press release (2026-02-24), worldbank.org CEM 'A Narrow Path to Prosperity' page (2023-12-13), thedocs.worldbank.org MPO Malawi (October 2026), documents1.worldbank.org SCD (2018-12), documents1.worldbank.org Country Assistance Evaluation (2006-07-26), growthlab.hks.harvard.edu Working Paper 273 (2025-10), documents.worldbank.org MPO April 2026 detail page (no text rendered)",
+        "Critic check: re-opened every cited URL (WebFetch; PDFs text-extracted locally) and verified each quote, title and date"
+      ],
+      "critic_changes": [
+        "Arc cut from 7 to 6 sentences (limit 4–6) by joining the 1990s swings into one sentence.",
+        "Arc and the 'Debt relief' thread: the Growth Lab dates the faster growth to 2006–2010, not the whole 2007–2014 era; reworded so it no longer says the Growth Lab explains the full 2007–2014 run.",
+        "2012: 'growth dipped to -1.0 percent' changed to 'income per person fell 1.0 percent', since the -1.0 figure is income per person growth in the data file.",
+        "'Debt relief and good harvests' retitled 'Debt relief and good weather' to match the source. Its claim that growth 'has not regained that pace since' changed to what the Growth Lab says, that imports have not returned to their earlier level; that passage is added as a citation, along with the Growth Lab's 2012 passage.",
+        "Arc: 'deficits, debt and inflation have climbed' softened to 'have stayed high'. No source here says the deficit itself kept climbing.",
+        "'Aid cut-offs' thread: removed the 'Cashgate' name, which no cited passage contains, and the implied link between the 2001 suspension and the food crisis. The first SCD quote now includes its words on corruption scandals, so the passage supports the rewritten text.",
+        "'Too few dollars' thread: the claim that tobacco and aid stagnated had no supporting quote, so the Growth Lab's tobacco-and-aid passage replaces the 'no buffers once hit with COVID-19' quote. The COVID-buffer and fuel-shortage claims were dropped because no remaining citation supports them. Dates now read 2016 to 2019/20, as the source has it.",
+        "'Deficits' thread: the Growth Lab quote now runs on to 'excess money creation to support current spending', so it supports 'with new money'. The wording now says deficits 'kept inflation high and public debt rising', matching the World Bank passage.",
+        "since_last_year: dropped 'September' for the elections because no cited source gives the month. Added the IMF Country Report 25/226 passage (2025-08) to support the May 2025 lapse of the arrangement without a review.",
+        "Tension: rewritten around the real disagreement (the Growth Lab dates the fall from 2020, but the data show a 2021 rise to the peak), with the data file's 2020 (-1.8) and 2021 (1.9) rates. The World Bank point is kept but shortened.",
+        "Checked every quote against the opened pages: MPO Oct 2026, IMF CR 25/226 (Aug 2025), IMF PR 26/212 (2026-06-18), WB MEM press release (2026-02-24), WB SCD (Dec 2018), WB CAE (2006-07-26) and Growth Lab WP 273 (Oct 2025). All exist on tier 1 domains with matching dates.",
+        "Checked every number against MWI.json (eras 2.4/0.0/3.3/0.2; 1992 -10.0; 1994 -9.2; 1995 16.9; 2001 -7.2; 2012 -1.0; 2020 -1.8; 2021 1.9; 2025 -0.7; peak 2021; 3.8 percent below; level first reached 2014). All match. No banned phrases."
+      ]
+    },
+    "headline": "Malawi's income per person grew fastest in 2007–2014, then stalled as scarce foreign exchange, droughts and rising debt took it back to its 2014 level.",
+    "arc": "Since 1990, Malawi's income per person has grown in four eras: 2.4 percent a year in 1990–1998, 0.0 in 1999–2006, 3.3 in 2007–2014 and 0.2 since 2015. The 1990s swung hard: income per person fell 10.0 percent in 1992 and 9.2 percent in 1994, then rose 16.9 percent in 1995. The World Bank describes a farm economy reliant on maize and tobacco and exposed to droughts, and multi-party rule from 1994 brought a strategy built on smallholder farming. Growth stalled from 1999 to 2006, with a fall of 7.2 percent in 2001, a badly handled 2001/02 food crisis and a suspension of donor budget support. The Growth Lab credits faster growth from 2006 to 2010 to debt relief, good weather and a jump in farm output after a farm input programme, though income per person fell 1.0 percent in 2012 as imports per person fell. Since 2015, earnings from tobacco and aid have stagnated, a fixed exchange rate ran down reserves, and deficits, debt and inflation have stayed high; income per person peaked in 2021, has fallen every year since, and in 2025 was 3.8 percent below that peak, about where it first was in 2014.",
+    "threads": [
+      {
+        "title": "Rain-fed maize and drought",
+        "about": "present",
+        "text": "Much of Malawi's farming depends on rain-fed maize, which keeps rural incomes volatile. The World Bank tied this exposure to droughts in 2006, and the IMF links weak growth in 2024 to lower farm output and scarce foreign exchange.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mwi.pdf",
+            "publisher": "World Bank",
+            "title": "Malawi: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "heavy reliance on rain-fed maize production keeps rural incomes volatile"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mwiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Malawi: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Malawi (IMF Country Report No. 25/226)",
+            "date": "2025-08",
+            "quote": "Economic activity in 2024 was hindered by lower-than-expected agricultural output and critical foreign exchange shortages"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/473381468270033298/pdf/Malawi-Country-assistance-evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "Malawi Country Assistance Evaluation (Report No. 36862)",
+            "date": "2006-07-26",
+            "quote": "The heavy dependence on maize production and tobacco exports has left Malawi vulnerable to exogenous shocks such as droughts"
+          }
+        ]
+      },
+      {
+        "title": "Aid cut-offs and weak governance",
+        "about": "history",
+        "text": "Donors suspended budget support in 2001, 2010 and 2013, partly over corruption scandals. The 2001 suspension came in the flat 1999–2006 era, when the World Bank found the response to the 2001/02 food crisis badly handled. After the 2013 suspension, the World Bank says, public finances deteriorated rapidly.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/723781545072859945/pdf/malawi-scd-final-board-12-7-2018-12122018-636804216425880639.pdf",
+            "publisher": "World Bank",
+            "title": "Malawi Systematic Country Diagnostic: Breaking the Cycle of Low Growth and Slow Poverty Reduction",
+            "date": "2018-12",
+            "quote": "numerous corruption scandals, have led to repeated cycles of the suspension of donor budget support, notably in 2001, 2010 and 2013"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/473381468270033298/pdf/Malawi-Country-assistance-evaluation.pdf",
+            "publisher": "World Bank",
+            "title": "Malawi Country Assistance Evaluation (Report No. 36862)",
+            "date": "2006-07-26",
+            "quote": "The dysfunctional responses to the 2001/02 food crisis"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/723781545072859945/pdf/malawi-scd-final-board-12-7-2018-12122018-636804216425880639.pdf",
+            "publisher": "World Bank",
+            "title": "Malawi Systematic Country Diagnostic: Breaking the Cycle of Low Growth and Slow Poverty Reduction",
+            "date": "2018-12",
+            "quote": "As a consequence, Malawi's fiscal situation deteriorated rapidly, with a significant negative impact on private sector confidence"
+          }
+        ]
+      },
+      {
+        "title": "Debt relief and good weather",
+        "about": "history",
+        "text": "The Growth Lab ties faster growth in 2006–2010 to debt relief, good weather and a jump in farm output after a farm input programme, a period when imports rose across the board. Income per person fell 1.0 percent in 2012 as imports per person declined, and the Growth Lab says imports have not returned to their earlier level since.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "growth between 2006 and 2010 due to a combination of debt relief, good weather, and a large increase in agricultural productivity"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "It is no coincidence that growth declined and hit a low in 2012 simultaneously as imports per capita declined."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "Unfortunately, the economy has not been able to import at the preceding level ever since."
+          }
+        ]
+      },
+      {
+        "title": "Too few dollars",
+        "about": "present",
+        "text": "Malawi's main sources of dollars, tobacco and aid, have stagnated or declined while the population grows, and goods exports have shrunk as a share of GDP since 2014. From 2016 to 2019/20 a fixed exchange rate drew down reserves.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "its traditional sources of foreign exchange (e.g., tobacco and aid) have stagnated or declined while its population grows"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "Between 2016 and 2019/2020 (Period B), policymakers chose to fix the exchange rate to try to anchor inflation and drew down on international reserves"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/02/24/malawi-economic-monitor-stabilizing-the-economy-to-unlock-private-investment-and-create-jobs",
+            "publisher": "World Bank",
+            "title": "Malawi Economic Monitor: Stabilizing the Economy to Unlock Private Investment and Create Jobs",
+            "date": "2026-02-24",
+            "quote": "goods exports as a share of GDP have declined since 2014, the number of exporting firms has fallen sharply"
+          }
+        ]
+      },
+      {
+        "title": "Deficits, debt and inflation",
+        "about": "present",
+        "text": "Large budget deficits, paid for with costly borrowing from local banks and with new money, have kept inflation high and public debt rising. The World Bank says the rising debt crowds out credit to private firms.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/02/24/malawi-economic-monitor-stabilizing-the-economy-to-unlock-private-investment-and-create-jobs",
+            "publisher": "World Bank",
+            "title": "Malawi Economic Monitor: Stabilizing the Economy to Unlock Private Investment and Create Jobs",
+            "date": "2026-02-24",
+            "quote": "Inflation remains elevated, driven by food prices and large fiscal deficits, while rising public debt continues to crowd out credit to the private sector."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2026/09/2025-10-glwp-273-Malawi-economic-policy.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "Malawi’s Path Out of Poverty and Toward Prosperity (Growth Lab Working Paper No. 273)",
+            "date": "2025-10",
+            "quote": "reliant on a vicious cycle of domestic borrowing from banks at high cost and excess money creation to support current spending"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/02/24/malawi-economic-monitor-stabilizing-the-economy-to-unlock-private-investment-and-create-jobs",
+            "publisher": "World Bank",
+            "title": "Malawi Economic Monitor: Stabilizing the Economy to Unlock Private Investment and Create Jobs",
+            "date": "2026-02-24",
+            "quote": "Fiscal deficits remain among the highest in Sub-Saharan Africa, with interest payments approaching half of domestic revenues"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF lending arrangement lapsed in May 2025 without a review, and a new government took office after the 2025 elections. In October 2026 the World Bank reported that the new government's tighter budget had started to narrow the deficit and that inflation began to ease in the first half of 2026. In June 2026 IMF staff opened talks on a new arrangement tied to the government's National Economic Recovery Plan.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-mwi.pdf",
+          "publisher": "World Bank",
+          "title": "Malawi: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Fiscal consolidation embarked by the new government following the 2025 elections has started to yield results."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/18/pr-26212-malawi-imf-staff-completes-visit-to-malawi",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes Visit to Malawi (Press Release No. 26/212)",
+          "date": "2026-06-18",
+          "quote": "initiate discussions on policy priorities outlined in the National Economic Recovery Plan (NERP) that could be supported under an ECF"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1mwiea2025001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Malawi: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Malawi (IMF Country Report No. 25/226)",
+          "date": "2025-08",
+          "quote": "The 2023 Extended Credit Facility (ECF) automatically terminated on May 14, 2025 after eighteen months since the approval without completing a review."
+        }
+      ]
+    },
+    "tension": "The Growth Lab says income per person has been declining since 2020. The data show a fall of 1.8 percent in 2020, a rise of 1.9 percent in 2021 to the peak, and falls only from 2022. The World Bank also says growth strengthened in 2025, yet income per person still fell 0.7 percent that year because the population grew faster than output."
+  }
+}

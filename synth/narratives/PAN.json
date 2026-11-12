@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "PAN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PAN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allow-list)",
+        "Panama Article IV consultation 2025 IMF staff report growth mine closure",
+        "Panama Macro Poverty Outlook World Bank 2025 growth",
+        "Panama 2026 Article IV IMF staff concluding statement",
+        "Panama growth slowdown canal expansion public investment boom productivity Growth Lab"
+      ],
+      "critic_changes": [
+        "Checked all 6 cited URLs (the 4 PDFs by extracting their text). Every quoted passage was found word for word, and every date matches its document: Growth Lab WP 325 October 2016; IMF CR 23/122 March 2023; IMF CR 25/245 August 2025; IMF concluding statement 7 October 2026; World Bank MPO October 2026.",
+        "Thread 'Big projects end, growth slows': the text says the boom had started to slow by 2018 and growth was weak before the pandemic, but the cited passage did not say this. Added the IMF passage 'In 2018, the boom had started to slow, and in 2019 the economy grew by 3 percent only.' from the same report.",
+        "Thread 'Pandemic crash and rebound': the 'long and strict lockdown' claim had no supporting passage. Added the IMF 2023 sentence about the lockdown, with footnote markers removed. Changed 'just as sharp' to 'sharp too': the rebounds of 15.1 and 9.6 are a different size from the 18.9 fall.",
+        "Thread 'Mine closure and Canal drought': the claim 'after protests and a Supreme Court ruling' had no supporting passage. Replaced the GDP 7.3-to-2.9 quote with the IMF 2025 passage on the late-2023 closure order, protests and the Supreme Court ruling. The mine-to-slowdown link stays in the arc, which the IMF 2025 report supports. Reworded the legal-dispute sentence to match the IMF 2026 passage.",
+        "Thread 'Fiscal strain and reform': 'the deficit has been narrowing' had no supporting cited passage. Extended the World Bank quote, still within 25 words, to include 'helping reduce the fiscal deficit', and reworded the text to match.",
+        "All numbers in the headline, arc, threads, since_last_year and tension were checked against desk/data/PAN.json: eras 3.2/6.8/2.9, 10-year averages 2.6 and 6.0, growth -18.9 (2020), 15.1 (2021), 9.6 (2022), 1.5 (2024), 3.1 (2025), 2.8 (2014) and 1.5 (2019), investment 40.2 (2014, the peak) and 37.0 (2019), and the 2025 peak level. All match. Income per person in 2022 is above its 2019 level, as the arc says.",
+        "Found no banned phrases and no recommendation language. 4 distinct recent tier 1 sources survive (IMF 2023, IMF 2025, IMF 2026, World Bank 2026), so the story stays tier 1."
+      ]
+    },
+    "headline": "Panama's Canal-and-building boom gave way to slower growth from 2013; a pandemic crash and a mine closure followed, yet income per person is at a new high.",
+    "arc": "From 1990 to 2003 income per person grew 3.2 percent a year, as Panama recovered from a collapse in the late 1980s. From 2004 to 2012 growth jumped to 6.8 percent a year, driven by trade, logistics and finance around the Canal and by a wave of building that included the Canal expansion, Panama City's metro and a new airport terminal. Since 2013 growth has averaged 2.9 percent a year as that boom faded and the big public projects were finished; over 2016 to 2025 it averaged 2.6 percent, against 6.0 in the decade before. The pandemic cut income per person by 18.9 percent in 2020, and rebounds of 15.1 percent in 2021 and 9.6 percent in 2022 took it back above its 2019 level. The closure of the Cobre Panamá copper mine in late 2023 and a drought that limited Canal traffic slowed growth to 1.5 percent in 2024, before a pickup to 3.1 percent in 2025 took income per person to its highest level yet.",
+    "threads": [
+      {
+        "title": "The Canal and construction boom",
+        "about": "history",
+        "text": "From 2004 Panama grew faster than almost any other economy. Services around the Canal grew quickly, and so did building, both public projects and private towers and warehouses, so that income per person nearly doubled in about a decade.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2016/10/panama_growth_diagnostics_wp_325.pdf",
+            "publisher": "Growth Lab",
+            "title": "Shifting Gears: A Growth Diagnostic of Panama",
+            "date": "2016-10",
+            "quote": "the most spectacular performance was recorded from 2004 onwards, a decade in which Panama doubled its income per capita"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1panea2023002.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2022 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2023-03",
+            "quote": "an unprecedented construction and investment boom precipitated a rapid economic expansion in Panama"
+          }
+        ]
+      },
+      {
+        "title": "Big projects end, growth slows",
+        "about": "history",
+        "text": "The IMF links the slowdown to the end of the big public works, such as the Canal expansion and the new airport terminal. By its account the boom had started to slow by 2018, and growth was already weak before the pandemic.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1panea2023002.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2022 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2023-03",
+            "quote": "Investment gradually slowed following the completion of major public infrastructure projects, including the Canal expansion and a new terminal in the Tocumen International Airport"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1panea2023002.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2022 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2023-03",
+            "quote": "In 2018, the boom had started to slow, and in 2019 the economy grew by 3 percent only."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic crash and rebound",
+        "about": "history",
+        "text": "A long and strict lockdown in 2020 brought the deepest fall in the record, with income per person down 18.9 percent. The rebound was sharp too, at 15.1 percent in 2021 and 9.6 percent in 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1panea2023002.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2022 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2023-03",
+            "quote": "A long and strict lockdown to mitigate the spread of the pandemic had a severe social and economic impact."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1panea2023002.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2022 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2023-03",
+            "quote": "The Covid-19 pandemic led to a deep downturn, with real GDP shrinking by 18 percent"
+          }
+        ]
+      },
+      {
+        "title": "Mine closure and Canal drought",
+        "about": "present",
+        "text": "After widespread protests and a Supreme Court ruling, the government ordered the Cobre Panamá copper mine closed in late 2023. An El Niño drought also cut Canal transits in the 2023–24 dry season, and growth of income per person fell to 1.5 percent in 2024. The legal and arbitration issues around the mine are still unresolved.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1panea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2025-08",
+            "quote": "The government ordered the closure of the Cobre Panamá copper mine in late 2023. The closure followed widespread protests and a Supreme Court ruling"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1panea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2025-08",
+            "quote": "The Canal suffered a drop of about 1/3 in transits during the 2023–24 dry season due to an El Niño-triggered drought."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/10/06/cs-panama-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Panama: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-10-07",
+            "quote": "unresolved legal and arbitration issues related to Cobre Panamá and port concessions"
+          }
+        ]
+      },
+      {
+        "title": "Fiscal strain and reform",
+        "about": "present",
+        "text": "The shocks of 2023 and 2024 exposed weak public finances: low revenue, rigid spending and poorly aimed subsidies. Panama lost its investment-grade rating from one agency in 2024. The government elected in mid-2024 changed the fiscal rules, the pension system and tax collection, which helped reduce the deficit.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pan.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Panama",
+            "date": "2026-10",
+            "quote": "The mine closure and Canal drought during 2023–2024 revealed fiscal weaknesses: low revenues, rigid spending, and poorly targeted subsidies worsened debt-carrying capacity"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1panea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Panama: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Panama",
+            "date": "2025-08",
+            "quote": "Fitch downgraded Panama to below IG in March 2024."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pan.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Panama",
+            "date": "2026-10",
+            "quote": "The government elected in mid-2024 responded with reforms to the fiscal responsibility framework, the pension system, and tax administration, helping reduce the fiscal deficit"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up in 2025, when income per person rose 3.1 percent to its highest level yet. The World Bank's October 2026 update says the momentum carried into early 2026, driven by commerce, Canal operations and construction, with an extra lift from permission to export ore already stockpiled at the closed mine. The IMF's October 2026 mission confirmed the 2025 recovery.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pan.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Panama",
+          "date": "2026-10",
+          "quote": "Panama's economy gained momentum in 2025, with GDP growing 4.4 percent, continuing into Q1-2026 at 4.8 percent, driven by commerce, Canal operations, and construction."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-pan.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Panama",
+          "date": "2026-10",
+          "quote": "with the authorization to export Cobre Panama’s stockpiled ore providing an additional boost to economic growth"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/10/06/cs-panama-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Panama: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-10-07",
+          "quote": "Real GDP grew by 4.4 percent in 2025."
+        }
+      ]
+    },
+    "tension": "The IMF says the boom began to slow around 2018, once the big public projects were finished. The data show the slowdown starting earlier, while investment was still near its peak. Growth of income per person fell to 2.8 percent in 2014, the year investment reached 40.2 percent of GDP. Investment was still 37.0 percent of GDP in 2019, when growth was 1.5 percent."
+  }
+}

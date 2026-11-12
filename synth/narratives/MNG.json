@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "iso3": "MNG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MNG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Mongolia Article IV 2025 staff report growth mining coal copper",
+        "same tier 1 domains: Mongolia Economic Update World Bank 2025 growth",
+        "same tier 1 domains: Mongolia Extended Fund Facility 2017 commodity prices fell foreign investment boom bust",
+        "imf.org, worldbank.org, adb.org, ebrd.com, oecd.org: Mongolia transition 1990s collapse Soviet assistance output fell economy",
+        "imf.org, worldbank.org, adb.org, ebrd.com, oecd.org, growthlab.hks.harvard.edu: Mongolia mining boom 2011 Oyu Tolgoi construction growth FDI",
+        "imf.org, worldbank.org, adb.org: Mongolia 2021 2022 border closures China coal exports COVID-19 economy contracted",
+        "Critic re-opened every cited page: imf.org 2025 Article IV press release; worldbank.org April 2026 press release; documents1.worldbank.org Macro Poverty Outlook April 2026 (PDF text extracted); imf.org 2017 EFF press release; imf.org 2012 Article IV mission conclusions; imf.org 2022 Article IV concluding statement; imf.org WP/03/217 (PDF text extracted); blogs.worldbank.org 1992 post"
+      ],
+      "critic_changes": [
+        "Re-opened all 8 cited pages; every quoted passage, title and date checked out against the page.",
+        "Arc: dropped 'and trade' from 'Soviet aid and trade ended', because the sources mention only the loss of aid.",
+        "Arc: dropped 'and trade' from 'led at first by herding, crops and trade', because the IMF paper names the primary sector (herding and crops) as the engine of recovery.",
+        "Arc and the 'Foreign money builds mines' thread: changed 'coal and copper mining' to 'mining', because the 2012 IMF passage says only 'the mining sector'.",
+        "Arc: changed 'heavy public debt load' to 'rising public debt' and 'closures at the Chinese border' to 'China's border restrictions' so they match the cited passages.",
+        "'Losing Soviet aid' thread: dropped 'while it was also rebuilding its institutions', which no source supports. Changed 'Output hit bottom in 1993' to 'Income per person hit bottom in 1993', which the series shows. Swapped the 'bottomed out' quote for the IMF passage on efficiency gains from market-oriented reforms, so the reform claim has a citation.",
+        "'Commodity bust and debt' thread: changed 'hurting exports and the budget' to 'the balance of payments and the budget', and 'high public debt' to 'pushed up public debt', to match the IMF passage.",
+        "'Pandemic and border closures' thread: changed 'mining recovered only as trade limits eased' to 'the fall in mining output eased only as limits on cross-border trade were relaxed', which is what the IMF passage says.",
+        "'From coal to copper' thread: dropped 'nearly all exports', which no cited quote supports. Replaced the forward-looking Oyu Tolgoi quote with the World Bank Macro Poverty Outlook passage 'The copper surge offset weaker performance in the coal sector', which supports the coal-to-copper shift.",
+        "since_last_year: removed the trailing comma from the IMF coal quote.",
+        "All numbers (-2.1, 11.5, 3.7, 7.2, 15.3, 2.3, 0.2, 0.5, 6.3, 5.6, 5.5, 2.5, 6.5, the 2025 peak and the 1990 level passed in 2004) match desk/data/MNG.json. No banned phrases and no recommendation language were found."
+      ]
+    },
+    "headline": "Mongolia's growth follows its mines: a post-Soviet collapse, a mining boom, a bust after 2015, then a copper-led record high in 2025.",
+    "arc": "Income per person shrank by 2.1 percent a year in 1990–1997, when Soviet aid ended just as Mongolia began moving to a market economy, and it fell 11.5 percent in 1991 alone. Growth came back at 3.7 percent a year in 1998–2005, led at first by herding and crops, and it sped up from 2003. In 2006–2014 it averaged 7.2 percent, as foreign money poured into mining, and it reached 15.3 percent in 2011. Since 2015 it has averaged 2.3 percent. Falling commodity prices and rising public debt brought growth close to zero in 2015 and 2016, and the pandemic, with China's border restrictions, brought a fall of 6.3 percent in 2020. A mining boom in 2023–24 and a copper surge in 2025 lifted income per person to its highest level yet in 2025, but the last decade's average of 2.5 percent is still far below the 6.5 of the decade before.",
+    "threads": [
+      {
+        "title": "Losing Soviet aid",
+        "text": "When Soviet support ended, Mongolia lost aid worth a large share of its economy. Income per person hit bottom in 1993. The recovery that followed came from market reforms that made the economy more efficient, with herding and crops leading.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://blogs.worldbank.org/en/eastasiapacific/mongolia-25-year-partnership-with-the-world-bank-1992",
+            "publisher": "World Bank",
+            "title": "1992: On the magnitude of Mongolia's challenges and the speed of reforms",
+            "date": "2016-02-24",
+            "quote": "Mongolia's loss of Soviet aid alone was 30% of GDP."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2003/wp03217.pdf",
+            "publisher": "IMF",
+            "title": "Growth and Recovery in Mongolia During Transition (WP/03/217)",
+            "date": "2003-11",
+            "quote": "before beginning to recover as a result of efficiency gains from market-oriented reforms"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2003/wp03217.pdf",
+            "publisher": "IMF",
+            "title": "Growth and Recovery in Mongolia During Transition (WP/03/217)",
+            "date": "2003-11",
+            "quote": "The primary sector was a principal engine of Mongolia's quick recovery during the second half of the 1990s"
+          }
+        ]
+      },
+      {
+        "title": "Foreign money builds mines",
+        "text": "From the mid-2000s, foreign investment in mining drove the fastest growth on record, with income per person up 15.3 percent in 2011. The boom ran through 2014, when growth was still 5.6 percent.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs092512",
+            "publisher": "IMF",
+            "title": "Mongolia-2012 Article IV Consultation: Preliminary Conclusions of the IMF Mission",
+            "date": "2012-09-25",
+            "quote": "Mongolia remains one of the fastest growing economies globally due to FDI-financed development of the mining sector"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs092512",
+            "publisher": "IMF",
+            "title": "Mongolia-2012 Article IV Consultation: Preliminary Conclusions of the IMF Mission",
+            "date": "2012-09-25",
+            "quote": "Growth accelerated to 17 percent in 2011 and remained in low double-digits through Q2 2012."
+          }
+        ]
+      },
+      {
+        "title": "Commodity bust and debt",
+        "text": "Commodity prices fell from 2011, hurting the balance of payments and the budget, and earlier easy policy had pushed up public debt. Income per person grew just 0.2 percent in 2015 and fell 0.5 percent in 2016, and an IMF-backed program followed in 2017.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/05/24/17193-imf-executive-board-approves-financial-arrangement-for-mongolia",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves Financial Arrangement for Mongolia",
+            "date": "2017-05-24",
+            "quote": "sharp drop in commodity prices from 2011 onward severely affected the balance of payments and fiscal position"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/05/24/17193-imf-executive-board-approves-financial-arrangement-for-mongolia",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves Financial Arrangement for Mongolia",
+            "date": "2017-05-24",
+            "quote": "Macroeconomic policy easing previously supported growth but increased public debt"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and border closures",
+        "text": "Income per person fell 6.3 percent in 2020 and stayed flat in 2021. China's pandemic rules held back exports, and the fall in mining output eased only as limits on cross-border trade were relaxed in 2022.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/10/25/mcs102522-mongolia-staff-concluding-statement-of-the-2022-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Mongolia: Staff Concluding Statement of the 2022 Article IV Mission",
+            "date": "2022-10-25",
+            "quote": "export contraction from China’s zero-COVID measures"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/10/25/mcs102522-mongolia-staff-concluding-statement-of-the-2022-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Mongolia: Staff Concluding Statement of the 2022 Article IV Mission",
+            "date": "2022-10-25",
+            "quote": "Mining GDP contraction eased as cross‑border trade restrictions relaxed."
+          }
+        ]
+      },
+      {
+        "title": "From coal to copper",
+        "text": "Mongolia relies on a few mined goods such as coal and copper, and the sources link this to repeated booms and busts. Mining boomed in 2023–24, then coal weakened and a surge in copper output took over as the main driver.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099520408062613469/pdf/Bulk-89055f5f-5673-47b0-9b17-56022cd62fcb.pdf",
+            "publisher": "World Bank",
+            "title": "Mongolia, Macro Poverty Outlook",
+            "date": "2026-04",
+            "quote": "This dependence has contributed to recurrent boom-and-bust cycles, often amplified by procyclical fiscal policies"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/09/15/pr-25298-mongolia-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Mongolia",
+            "date": "2025-09-15",
+            "quote": "A booming mining sector in 2023-24 significantly bolstered exports and fiscal revenues."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099520408062613469/pdf/Bulk-89055f5f-5673-47b0-9b17-56022cd62fcb.pdf",
+            "publisher": "World Bank",
+            "title": "Mongolia, Macro Poverty Outlook",
+            "date": "2026-04",
+            "quote": "The copper surge offset weaker performance in the coal sector."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Coal exports fell sharply in the first half of 2025, but growth held up: copper output jumped and farming bounced back after two years of climate-related losses. Income per person grew 5.5 percent in 2025 and reached its highest level yet.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099520408062613469/pdf/Bulk-89055f5f-5673-47b0-9b17-56022cd62fcb.pdf",
+          "publisher": "World Bank",
+          "title": "Mongolia, Macro Poverty Outlook",
+          "date": "2026-04",
+          "quote": "Mongolia achieved strong growth in 2025, driven by a sharp increase in copper production and an agricultural rebound following two years of climate-related losses."
+        },
+        {
+          "url": "https://www.imf.org/en/News/Articles/2025/09/15/pr-25298-mongolia-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Mongolia",
+          "date": "2025-09-15",
+          "quote": "Coal exports declined markedly in the first half of 2025, resulting in a widening current account deficit"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/04/09/world-bank-mongolia-s-economy-stays-resilient-but-faces-rising-uncertainty",
+          "publisher": "World Bank",
+          "title": "World Bank: Mongolia's Economy Stays Resilient but Faces Rising Uncertainty",
+          "date": "2026-04-09",
+          "quote": "These growth drivers helped offset weaker coal activity."
+        }
+      ]
+    },
+    "tension": "The IMF found that total output was back to its pre-transition level by 2000–01, but income per person did not pass its 1990 level until 2004, which points to population growth. The data also call 2015–2025 a slow era at 2.3 percent a year, while the sources describe boom years in 2023–2025. Most of the drag in that era comes from 2015–2016 and 2020–2021."
+  }
+}

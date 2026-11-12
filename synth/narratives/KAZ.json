@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "iso3": "KAZ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KAZ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Kazakhstan Article IV 2025 staff concluding statement growth oil\"",
+        "same tier 1 domains: \"Kazakhstan economic update 2025 World Bank growth\"",
+        "same tier 1 domains: \"Kazakhstan country economic memorandum productivity growth slowdown since 2008 oil boom\"",
+        "same tier 1 domains: \"Kazakhstan 1990s transition output collapse oil boom 2000s growth history\"",
+        "opened: imf.org (2025 Article IV staff concluding statement), thedocs.worldbank.org (Macro Poverty Outlook, October 2026), growthlab.hks.harvard.edu (A Growth Diagnostic of Kazakhstan, February 2023), documents1.worldbank.org (Country Economic Memorandum, June 2005)",
+        "tried, not readable: elibrary.imf.org 1998 working paper on output decline (HTTP 403)",
+        "critic: re-opened all four cited URLs; the three PDFs were checked against their extracted full text"
+      ],
+      "critic_changes": [
+        "Checked every cited URL. The IMF statement was read as a page; the three PDFs (World Bank MPO October 2026, Growth Lab February 2023, World Bank CEM June 2005) were checked against their extracted full text. All draft quotes were found verbatim and all dates match.",
+        "Headline: the draft said income per person 'followed oil' through all three eras, but the sources tie the 1990s collapse to the Soviet breakup, not oil. Reworded; the numbers (8.9, 2.5, 2007, 2008) are unchanged and match G4.eras.",
+        "Arc: 'lifted growth to 5.2 percent in 2025' now says income per person grew 5.2 percent, because 5.2 is per-person growth in the series; the IMF's GDP figure is different. 'World prices for oil and metals' changed to 'world commodity prices', which is what the CEM supports. Reworded the 2020 sentence so the 3.9 percent fall clearly sits inside the 2016-2025 decade. All numbers checked against KAZ.json: -4.6, 8.9, 2.5, 2.1, 4.2, -3.9 (2020), 5.2 (2025), the 2003 crossing of the 1990 level (5,724 vs 5,557), 0.0 in 2009, small declines in 2015 and 2016, and the peak of 12,492.",
+        "Thread 'Collapse after independence': added two citations from the same CEM page for claims the draft's single quote did not support (hyperinflation peaking in 1994, and production ties with the CIS being severed). Changed 'rest of the former Soviet Union' to match the source.",
+        "Thread on 2014: the Growth Lab passage refers to commodity prices, not oil prices specifically. Retitled the thread and reworded it, and widened the quote to start 'In 2014,' to match the page.",
+        "Thread 'Oil still sets the pace': dropped 'a large role for ... the state', which no cited passage supports (the MPO mentions the state's footprint only in a reform recommendation). Widened the MPO quote to include 'low and stagnant productivity' so it supports the productivity claim.",
+        "Thread 'Oil money and high inflation': the claim about transfers from the national oil fund was not in the quoted passage. Replaced the quote with a 23-word passage from the same IMF page that includes the National Fund transfers. Changed 'well above' the target to 'above', as the source supports.",
+        "since_last_year: 'inflation stayed high' made specific ('above the central bank's target') to match the MPO. Checked 'fastest since 2011' against the series: 2011 was 6.0 and 2012-2024 were all below 5.2.",
+        "Tension: removed the inline quote with the 0.1 percent figure, because figures not in the data may appear only inside a citation's quoted passage and tension carries no citation. Kept the claim, which the MPO page supports (real incomes contracting during 2025, barely rising in Q1-2026, real wages declining). Softened the inference 'did not reach household pockets' to 'was not matched by household incomes'.",
+        "Tier and count unchanged: tier 1, with 3 distinct recent tier 1 sources (IMF 2025-11-21, World Bank MPO 2026-10, Growth Lab 2023-02). No banned phrases or recommendation language in the story's own text."
+      ]
+    },
+    "headline": "Kazakhstan's income per person collapsed in the 1990s, grew 8.9 percent a year with oil to 2007, and has grown 2.5 percent a year since 2008.",
+    "arc": "Income per person fell 4.6 percent a year from 1991 to 1998, as output and exports collapsed after the Soviet Union broke up and inflation ran out of control. From 1999 to 2007 it grew 8.9 percent a year as oil production rose and world commodity prices climbed, and in 2003 it passed its 1990 level. Since 2008 growth has averaged 2.5 percent a year: it stopped in 2009 during the global financial crisis, picked up again, and turned to small declines in 2015 and 2016 after the 2014 fall in commodity prices. Over the last decade (2016 to 2025) it averaged 2.1 percent a year, against 4.2 in the decade before, and that decade included a fall of 3.9 percent in 2020. In 2025 rising oil output and strong spending at home lifted income per person by 5.2 percent. That took it to its highest level so far, about 12,492 in constant dollars.",
+    "threads": [
+      {
+        "title": "Collapse after independence",
+        "about": "history",
+        "text": "After 1991 the economy's production ties with the other former Soviet republics were cut. Output and exports fell steeply, and inflation peaked in 1994. This is why income per person shrank 4.6 percent a year from 1991 to 1998.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/782011468047388350/pdf/308521KZ10rev0pdf.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Kazakhstan Country Economic Memorandum: Getting Competitive, Staying Competitive: The Challenge of Managing Kazakhstan's Oil Boom",
+            "date": "2005-06",
+            "quote": "A difficult transition. From 1991 to 1995 real GDP fell by 39 percent and exports collapsed (Figure 1)."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/782011468047388350/pdf/308521KZ10rev0pdf.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Kazakhstan Country Economic Memorandum: Getting Competitive, Staying Competitive: The Challenge of Managing Kazakhstan's Oil Boom",
+            "date": "2005-06",
+            "quote": "Fiscal and external imbalances led to hyperinflation which peaked in 1994, and there were widespread arrears in pensions and wages."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/782011468047388350/pdf/308521KZ10rev0pdf.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Kazakhstan Country Economic Memorandum: Getting Competitive, Staying Competitive: The Challenge of Managing Kazakhstan's Oil Boom",
+            "date": "2005-06",
+            "quote": "Production ties with the Commonwealth of Independent States (CIS) were severed, which created massive underemployment"
+          }
+        ]
+      },
+      {
+        "title": "The oil boom of the 2000s",
+        "about": "history",
+        "text": "Recovery began in 2000, led by the oil sector, as oil production climbed and world commodity prices rose. This boom carried the 8.9 percent a year growth in income per person from 1999 to 2007.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/782011468047388350/pdf/308521KZ10rev0pdf.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Kazakhstan Country Economic Memorandum: Getting Competitive, Staying Competitive: The Challenge of Managing Kazakhstan's Oil Boom",
+            "date": "2005-06",
+            "quote": "A vigorous recovery started in 2000 and has continued through 2004, led mainly by the oil sector (Figure 3)."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2023/03/2023-02-cid-wp-427-kazakhstan-growth-diagnostic.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "A Growth Diagnostic of Kazakhstan",
+            "date": "2023-02",
+            "quote": "The early and mid-2000s saw higher than 8% GDP growth and a large reduction in poverty in the context of a global commodity boom."
+          }
+        ]
+      },
+      {
+        "title": "Commodity price crash and floating tenge",
+        "about": "history",
+        "text": "Growth slowed when commodity prices collapsed in 2014, and income per person slipped in 2015 and 2016. Afterwards the country let its currency float and adopted inflation targeting, but no other source of growth grew strong enough to replace oil.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2023/03/2023-02-cid-wp-427-kazakhstan-growth-diagnostic.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "A Growth Diagnostic of Kazakhstan",
+            "date": "2023-02",
+            "quote": "In 2014, Kazakhstan's growth slowed with the collapse of commodity prices, and alternative engines of growth have not been strong enough to fend against …"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2023/03/2023-02-cid-wp-427-kazakhstan-growth-diagnostic.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "A Growth Diagnostic of Kazakhstan",
+            "date": "2023-02",
+            "quote": "the switch to a floating exchange rate regime and the introduction of an inflation targeting regime as the policy anchor"
+          }
+        ]
+      },
+      {
+        "title": "Oil still sets the pace",
+        "about": "present",
+        "text": "Growth still rises and falls with oil output and oil prices, as the 2025 surge and the 2026 slowdown show. The sources describe low, stagnant productivity and an economy still dominated by extractive industries.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2023/03/2023-02-cid-wp-427-kazakhstan-growth-diagnostic.pdf",
+            "publisher": "Harvard Growth Lab",
+            "title": "A Growth Diagnostic of Kazakhstan",
+            "date": "2023-02",
+            "quote": "The dominance of oil in Kazakhstan's economy has created challenges, both in terms of a dependence on volatile oil prices and the sustainability of growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kaz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kazakhstan",
+            "date": "2026-10",
+            "quote": "low and stagnant productivity, and the continued dominance of extractive industries remain key obstacles"
+          }
+        ]
+      },
+      {
+        "title": "Oil money and high inflation",
+        "about": "present",
+        "text": "Large transfers from the national oil fund have kept public spending loose, and spending at home has been strong. Inflation has stayed above the central bank's target.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/20/cs-kazakhstan-staff-concluding-statement-for-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kazakhstan: Staff Concluding Statement for the 2025 Article IV Mission",
+            "date": "2025-11-21",
+            "quote": "remains loose, with the non-oil deficit projected at over 8 percent of GDP in 2025, supported by large transfers from the National Fund"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kaz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Kazakhstan",
+            "date": "2026-10",
+            "quote": "Inflation is projected to remain above the NBK’s 5 percent target through at least 2027, pressured by persistent quasi-fiscal stimulus on domestic demand"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 rising oil output and strong spending at home pushed growth up, and income per person grew 5.2 percent, its fastest since 2011. By the first half of 2026 growth had eased, because oil production fell during field maintenance and disruption on export routes, and inflation stayed above the central bank's target.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-kaz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Kazakhstan",
+          "date": "2026-10",
+          "quote": "largely due to an 8 percent yoy contraction in oil production (as a result of maintenance at major oilfields and disruptions along key export routes)."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/11/20/cs-kazakhstan-staff-concluding-statement-for-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Kazakhstan: Staff Concluding Statement for the 2025 Article IV Mission",
+          "date": "2025-11-21",
+          "quote": "driven by rising oil output and strong domestic demand"
+        }
+      ]
+    },
+    "tension": "The data show income per person up 5.2 percent in 2025 to a new high, and the sources describe a strong, oil-led year. Yet the World Bank's Macro Poverty Outlook (October 2026) reports that households' real incomes shrank during 2025, barely grew in early 2026, and real wages were falling. The rise in output per person was not matched by household incomes."
+  }
+}

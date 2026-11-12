@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "SVN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SVN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch on tier 1 domains (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): 'Slovenia Article IV 2025 staff concluding statement growth' and 'OECD Economic Survey Slovenia 2025' - not performed by the drafter, the shared web search budget for that turn was used up",
+        "Direct fetch imf.org/en/Countries/SVN (country page) -> 2025 Article IV staff report page and its .pdf.md text",
+        "Direct fetch oecd.org Economic Survey Slovenia 2025 and oecd.org country page - HTTP 403, not read",
+        "Direct fetch ebrd.com Slovenia country page -> EBRD Slovenia Country Strategy 2024-2029 (PDF) and Transition Report 2025-26 Slovenia country assessment",
+        "Critic check: WebFetch of all four cited URLs. The EBRD strategy PDF text was extracted locally to verify quotes and the 24 July 2024 approval date. The IMF .pdf.md was downloaded in full to verify quotes. The IMF press-release page confirmed the title and the date January 26, 2026. The EBRD Transition Report CEB page confirmed the Slovenia sentences.",
+        "Tier 2 (UN) not searched: tier 1 gave 3 distinct recent sources"
+      ],
+      "critic_changes": [
+        "Headline: 'as growth slowed year by year' implied growth slowed throughout the climb since 2017; the data show slowing only after 2021 (8.1, 2.5, 2.0, 1.4, 0.9), so it now reads 'though growth has slowed since 2021' (154 characters).",
+        "Arc: 'an energy and inflation shock' reworded to 'an energy crisis and high inflation', the wording of the EBRD passage. All arc numbers (1.2, 4.1, -0.4, 2.4, 29.6, 8.4, 85.8, 35.4, 8.1, 0.9, and 2017 as the first year above the 2008 level) checked against SVN.json and found correct.",
+        "Thread 'Banking crisis and long deleveraging': 'Over the same years' tightened to 'Since the global financial crisis' to match the IMF NIIP passage. Both citations verified verbatim (EBRD strategy p. Key Transition Challenges; IMF staff report Annex II).",
+        "Thread 'Energy shock and 2023 floods': removed 'The August 2023 floods damaged infrastructure' and 'was still lifting public investment in 2025'. The IMF passage lists post-flood reconstruction and the NRRP final year as drivers of expected near-term strengthening, not as something that lifted 2025, and no cited passage says the floods damaged infrastructure. Now reads as the IMF's expectation. 'as energy prices jumped' changed to 'amid an energy crisis' to match the EBRD passage. 8.8 percent inflation in 2022 confirmed in series FP.CPI.TOTL.ZG.",
+        "Thread 'Slower productivity gains': 'venture and equity finance' narrowed to 'venture finance'. The cited EBRD passage covers only the venture capital ecosystem. All three quotes verified.",
+        "Thread 'Ageing and a tight labour market': the cited passages did not support 'shrinking the pool of workers', 'pensions, health and care' or 'firms find it hard to hire'. Added the IMF passage 'With aging constraining labor supply...' (verbatim, 15 words) and extended the EBRD quote to include 'Facing increasing labour shortages' (23 words). The text now says ageing limits the supply of workers and is expected to push up public spending, and that the sources describe shortages of workers. 3.5 percent unemployment matches growth_problem G11 (3.509).",
+        "Thread 'An open economy tied to Europe' renamed 'An open, export-led economy'. The EBRD passage says global, not European, value chains, so 'European supply chains' became 'global supply chains'. Dropped 'carries growth when Europe's demand is strong', which no cited passage supports. Dropped the claim that higher tariffs held growth back in 2025: the IMF lists tariffs only in its shock scenarios, so the text now says the IMF treats them as a blow to demand. 81.0 percent exports matches G10 (80.998).",
+        "since_last_year: removed 'with flood rebuilding and public investment helping'. The cited IMF passages do not tie the Q2–Q4 2025 pickup to those factors, which the IMF gives as drivers of expected near-term strengthening. Also removed 'exports were weak' from this section because neither of its citations says it. Both IMF quotes verified; the press-release page shows publication date January 26, 2026, kept as 2026-01-26.",
+        "Tension: 'calls the economy stagnating' changed to 'says the economy is stagnating'. Verified on the EBRD Transition Report page ('The economy is stagnating.') and in the EBRD strategy ('stagnant progress in its journey towards further convergence').",
+        "Citations: all 9 distinct quotes opened and checked (the EBRD strategy PDF by extracting its text; the IMF .pdf.md by full download). All are on tier 1 domains and verbatim, with dates matching the documents (EBRD strategy approved 24 July 2024; IMF report 26 January 2026). The Transition Report page shows no date, so '2025' is kept. Three distinct recent tier 1 sources: EBRD Country Strategy 2024, EBRD Transition Report 2025-26, IMF 2025 Article IV.",
+        "No banned phrases or recommendation language found. The IMF passages' recommendations are not echoed, and 'constraints' is described only as what the sources point to."
+      ]
+    },
+    "headline": "Slovenia's income per person boomed until 2008, slumped through a banking crisis, then climbed to a new peak in 2025, though growth has slowed since 2021.",
+    "arc": "After deep falls in 1991 and 1992, income per person grew 1.2 percent a year on average over 1991–1998. From 1999 to 2008 growth averaged 4.1 percent a year, while investment rose to 29.6 percent of GDP in 2008 and credit to the private sector climbed fast. The 2009 crash, when income per person fell 8.4 percent, opened an era of -0.4 percent a year to 2016; the sources point to a banking crisis, after which the private sector paid down debt and credit fell from 85.8 percent of GDP in 2010 to 35.4 in 2024. Since 2017 growth has averaged 2.4 percent a year: income per person first passed its 2008 level in 2017 and reached a new peak in 2025. The sources say recent years were shaped by the pandemic, an energy crisis and high inflation in 2022, the August 2023 floods and weak exports, and growth per person slowed from 8.1 percent in 2021 to 0.9 in 2025.",
+    "threads": [
+      {
+        "title": "Banking crisis and long deleveraging",
+        "about": "history",
+        "text": "The 2009–2016 era came with a banking crisis. Afterwards the private sector paid down debt: credit fell from 85.8 percent of GDP in 2010 to 35.4 in 2024, and investment fell from 29.6 percent of GDP in 2008 to 17.8 in 2016. Since the global financial crisis, Slovenia's foreign balance sheet has steadily improved.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/slovenia/EBRD-Latest-Slovenia-Strategy.pdf",
+            "publisher": "EBRD",
+            "title": "Slovenia Country Strategy 2024-2029",
+            "date": "2024-07-24",
+            "quote": "Following the banking crisis, the private sector has been deleveraging, and credit penetration in the economy declined significantly."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "The NIIP has improved steadily since the global financial crisis and Slovenia became a net creditor country in 2023."
+          }
+        ]
+      },
+      {
+        "title": "Energy shock and 2023 floods",
+        "about": "present",
+        "text": "After the rebound of 2021, inflation reached 8.8 percent in 2022 amid an energy crisis, and growth slowed in 2022 and 2023. The IMF expects rebuilding after the 2023 floods, along with the final year of the EU-backed recovery plan, to keep public investment strong.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/slovenia/EBRD-Latest-Slovenia-Strategy.pdf",
+            "publisher": "EBRD",
+            "title": "Slovenia Country Strategy 2024-2029",
+            "date": "2024-07-24",
+            "quote": "faced setbacks in 2022 and 2023, due to rising inflation, the energy crisis, and heightened external vulnerabilities."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "strong public investment (post-flood reconstruction and NRRP final year)"
+          }
+        ]
+      },
+      {
+        "title": "Slower productivity gains",
+        "about": "present",
+        "text": "Output per worker has grown more slowly over the past five years as gains in efficiency weakened. The sources point to shortages of skilled workers, red tape that holds back new and growing firms, and a thin market for venture finance.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "Labor productivity growth has slowed in the past five years due to weaker TFP gains"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "persistent shortages of skilled labor, regulatory and administrative burdens that inhibit business dynamism"
+          },
+          {
+            "url": "https://www.ebrd.com/home/news-and-events/publications/economics/transition-reports/transition-report-2025-26/country-assessments/ceb.html",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Slovenia country assessment",
+            "date": "2025",
+            "quote": "Despite its relatively high level of innovation activities, Slovenia lags its peers in the venture capital ecosystem"
+          }
+        ]
+      },
+      {
+        "title": "Ageing and a tight labour market",
+        "about": "present",
+        "text": "An ageing population is limiting the supply of workers and is expected to push up public spending. Unemployment is low, at 3.5 percent in 2025, and the sources describe shortages of workers.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "With aging constraining labor supply, closing the per-capita income gap with more advanced EU members"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "Spending pressures from aging are expected to increase significantly, alongside pressures from defense and the digital and green transitions."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/slovenia/EBRD-Latest-Slovenia-Strategy.pdf",
+            "publisher": "EBRD",
+            "title": "Slovenia Country Strategy 2024-2029",
+            "date": "2024-07-24",
+            "quote": "the employment rate has stabilised at high levels compared to the pre-Covid period, while unemployment has been at record low levels. Facing increasing labour shortages"
+          }
+        ]
+      },
+      {
+        "title": "An open, export-led economy",
+        "about": "present",
+        "text": "Exports equalled 81.0 percent of GDP in 2025, and many firms are part of global supply chains. Weaker investment and exports pulled growth down in 2025, and the IMF treats higher tariffs on EU exports as a blow to demand.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/slovenia/EBRD-Latest-Slovenia-Strategy.pdf",
+            "publisher": "EBRD",
+            "title": "Slovenia Country Strategy 2024-2029",
+            "date": "2024-07-24",
+            "quote": "Despite a strong integration in global value chains and a wealth of export-oriented companies, challenges persist in private sector competitiveness"
+          },
+          {
+            "url": "https://www.ebrd.com/home/news-and-events/publications/economics/transition-reports/transition-report-2025-26/country-assessments/ceb.html",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Slovenia country assessment",
+            "date": "2025",
+            "quote": "This substantial drop from the 1.7 per cent growth rate recorded in 2024 was caused by weaker investment and exports."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+            "publisher": "IMF",
+            "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-26",
+            "quote": "Higher tariffs on EU exports constitute an adverse demand shock."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth per person slowed to 0.9 percent in 2025, the slowest since 2020. The IMF reported in January 2026 that output shrank early in 2025 and then grew through the rest of the year.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/publications/cr/issues/2026/01/23/republic-of-slovenia-2025-article-iv-consultation-press-release-and-staff-report-573430",
+          "publisher": "IMF",
+          "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+          "date": "2026-01-26",
+          "quote": "The economic slowdown that began in 2024 continued into early 2025, but growth has since picked up."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1svnea2026001-source-pdf.pdf.md",
+          "publisher": "IMF",
+          "title": "Republic of Slovenia: 2025 Article IV Consultation-Press Release; and Staff Report",
+          "date": "2026-01-26",
+          "quote": "Economic activity contracted in Q1 2025 but expanded in Q2–Q4 2025; growth forecast of 0.8 percent in 2025."
+        }
+      ]
+    },
+    "tension": "The EBRD says the economy is stagnating and that Slovenia's catching up with the EU has stalled, yet income per person reached a new peak in 2025 and the 2017–2025 era averaged 2.4 percent a year. The two views meet in the yearly numbers: growth per person stayed positive but slowed every year after 2021, from 8.1 percent to 0.9 in 2025, so the era average hides a recent slowdown."
+  }
+}

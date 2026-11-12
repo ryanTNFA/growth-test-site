@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "TCA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TCA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Turks and Caicos Islands economic review growth tourism",
+        "WebSearch caribank.org: Caribbean Development Bank Turks and Caicos Islands country economic review 2024",
+        "WebSearch tier 1: Turks and Caicos Islands 2009 fiscal crisis interim administration United Kingdom loan guarantee recession",
+        "WebSearch caribank.org: Caribbean Economic Review and Outlook 2025-2026 Turks and Caicos stayover arrivals declined",
+        "WebSearch caribank.org (critic): Country Economic Review 2022 Turks and Caicos Islands Caribbean Development Bank",
+        "Opened: caribank.org Country Economic Review 2022 - Turks and Caicos Islands (landing page, economic reviews listing for its date, and PDF)",
+        "Opened: caribank.org Country Engagement Strategy - Turks and Caicos Islands 2026-30 (PDF)",
+        "Opened: imf.org IMF Country Report 15/282, Turks and Caicos Islands Financial System Stability Assessment (PDF)",
+        "Tried, not used: caribank.org Caribbean Economic Review and Outlook 2025-2026 PDF (too large to open)"
+      ],
+      "critic_changes": [
+        "Opened all three cited PDFs (IMF CR 15/282, CDB Country Engagement Strategy 2026-30, CDB Country Economic Review 2022) and extracted their text: every original quote was found on its page. Dates confirmed: IMF report dated October 2015 on its cover; the strategy dated September 2026 (considered by the Board on 30 September 2026); the Country Economic Review 2022 dated 6 November 2023 on the caribank.org economic reviews listing (the PDF shows no date).",
+        "Headline: 'a crisis decade under outside rule' overstated the sources (the IMF describes the UK takeover after the 2009 crisis, not a decade of outside rule); rewritten and kept under 160 characters (159).",
+        "Arc: 'credits ... fast population growth from migration' as a cause of growth was not supported (the strategy reports the population grew through migration, not that this drove growth); replaced with the review's own account of a tourism-led recovery as COVID-19 restrictions eased, with construction adding to it. The pandemic sentence now attributes the 2020 fall to the year, not as a sourced cause. All arc numbers checked against desk/data/TCA.json (-2.0, 11.6, 22.8, 67.6, 35.6, 27.2, 12.6, 12.9, 4.9, peak 2024) and kept.",
+        "Thread 'Crisis and outside rule': the first IMF quote did not cover the financial mismanagement the text describes; replaced with a 25-word passage from the same sentence that does.",
+        "Thread 'Hurricanes, then the pandemic': 'the pandemic then shut tourism in 2020' was not supported by any cited passage, and the easing of travel limits was not in the quoted passage; text reworded and a third citation added from the same review ('bolstered by the easing of COVID-19 restrictions').",
+        "Thread 'Tourism carries the economy': 'public revenue' dropped from the text; the strategy quote extended to the words that support output and jobs (24 words).",
+        "Thread 'Surpluses and almost no debt': dropped 'These buffers set the territory apart from most of its neighbours', which no cited passage supports; added the IMF passage that supports surpluses since 2012 ('Since the crisis years').",
+        "Thread 'A fast-growing population': the causal sentence reworded as plain arithmetic so it does not contradict the tension.",
+        "since_last_year: the EU quote was cut off mid-phrase ('list of'); completed to the page's full sentence. Added the strategy's own passage for the November 2025 OECD forum claim, which had no citation.",
+        "Tension: removed the unsourced guess that the 2017 jump 'may reflect a change in how the series is measured'. Added 2022 (12.6 percent income per person in the data against slower total output growth in the CDB review), which the review's table supports alongside 2021; no CDB figures restated outside quotes.",
+        "Tier 1 kept: 2 distinct recent tier 1 sources (CDB strategy 2026-09 and CDB review 2023-11-06); no banned phrases; no recommendation or verdict language."
+      ]
+    },
+    "headline": "After the 2009 crisis and years of decline, tourism-led growth lifted income per person to a record in 2024, though an unexplained 2017 jump drives much of it.",
+    "arc": "Income per person in the Turks and Caicos Islands shrank by 2.0 percent a year in 2008–2016, then grew by 11.6 percent a year in 2017–2024, reaching its highest level yet in 2024. The first era opened with a fall of 22.8 percent in 2009, when the IMF says the global financial crisis, Hurricane Ike and the discovery of government financial mismanagement hit at once, and the United Kingdom took over governance. Austerity from 2012 kept the recovery slow, though growth turned positive again in 2014–2016. The second era's average rests heavily on a 67.6 percent jump in 2017, the year Hurricanes Irma and Maria struck; income per person then fell by 35.6 percent in 2020, the year of the pandemic, before rising by 27.2, 12.6 and 12.9 percent in 2021–2023. The Caribbean Development Bank describes a recovery led by tourism as COVID-19 restrictions eased, with building work adding to it, and growth slowed to 4.9 percent in 2024.",
+    "threads": [
+      {
+        "title": "Crisis and outside rule",
+        "about": "history",
+        "text": "In 2009 the economy was hit by the global financial crisis, Hurricane Ike and the discovery of severe financial mismanagement by the territory's government. The United Kingdom took over governance and imposed austerity, which the IMF says held back the recovery from 2012.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15282.pdf",
+            "publisher": "IMF",
+            "title": "Turks and Caicos Islands: Financial System Stability Assessment (IMF Country Report No. 15/282)",
+            "date": "2015-10",
+            "quote": "combined effects of the global financial crisis and Hurricane Ike, which reduced tourism receipts; and severe financial mismanagement by the TCI government, discovered in 2009"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15282.pdf",
+            "publisher": "IMF",
+            "title": "Turks and Caicos Islands: Financial System Stability Assessment (IMF Country Report No. 15/282)",
+            "date": "2015-10",
+            "quote": "As a result, the United Kingdom took over the territory’s governance, provided short-term funding, and imposed fiscal austerity measures."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15282.pdf",
+            "publisher": "IMF",
+            "title": "Turks and Caicos Islands: Financial System Stability Assessment (IMF Country Report No. 15/282)",
+            "date": "2015-10",
+            "quote": "The aggressive fiscal austerity that started in 2012 limited the recovery of GDP."
+          }
+        ]
+      },
+      {
+        "title": "Hurricanes, then the pandemic",
+        "about": "history",
+        "text": "Hurricanes Irma and Maria did very heavy damage in 2017, across housing, transport, energy and tourism. After the pandemic, tourism came back strongly in 2022 as COVID-19 restrictions eased.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+            "date": "2026-09",
+            "quote": "Hurricanes Irma and Maria caused estimated $558 mn in combined damage, losses and additional costs, equivalent to about 55% of GDP"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20TURKS%20AND%20CAICOS%20ISLANDS%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Turks and Caicos Islands",
+            "date": "2023-11-06",
+            "quote": "Hotels and restaurants, which account for around 33% of GDP, grew by 15.8%, bolstered by the easing of COVID-19 restrictions."
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20TURKS%20AND%20CAICOS%20ISLANDS%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Turks and Caicos Islands",
+            "date": "2023-11-06",
+            "quote": "Stayover visitor arrivals grew by 41.7% to reach 573,300."
+          }
+        ]
+      },
+      {
+        "title": "Tourism carries the economy",
+        "about": "present",
+        "text": "Tourism, mostly from the United States, drives output and jobs. That ties growth closely to demand in one market.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+            "date": "2026-09",
+            "quote": "high dependence on tourism, particularly the United States of America market, which accounts for more than four-fifths of stayover visitors, exposes economic activity, employment"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15282.pdf",
+            "publisher": "IMF",
+            "title": "Turks and Caicos Islands: Financial System Stability Assessment (IMF Country Report No. 15/282)",
+            "date": "2015-10",
+            "quote": "Tourism (mainly from North America) generates more than half of GDP directly and indirectly."
+          }
+        ]
+      },
+      {
+        "title": "A fast-growing population",
+        "about": "present",
+        "text": "The population has grown fast over the past decade, mostly through migrants who came to work in tourism, construction and related services. When the population grows this fast, income per person rises more slowly than total output.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+            "date": "2026-09",
+            "quote": "having grown by 38% over the past decade, driven largely by inward migration linked to tourism, construction and related services"
+          }
+        ]
+      },
+      {
+        "title": "Surpluses and almost no debt",
+        "about": "present",
+        "text": "Since the crisis years the government has run surpluses, built up cash reserves and kept public debt close to zero.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+            "date": "2026-09",
+            "quote": "The Government maintains operating surpluses, substantial cash reserves and negligible public debt."
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20TURKS%20AND%20CAICOS%20ISLANDS%20Economic%20Review%20-%2011%20x%208_5.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Turks and Caicos Islands",
+            "date": "2023-11-06",
+            "quote": "An overall fiscal surplus was attained for fiscal year (FY) 2022/23 and public debt remained negligible."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15282.pdf",
+            "publisher": "IMF",
+            "title": "Turks and Caicos Islands: Financial System Stability Assessment (IMF Country Report No. 15/282)",
+            "date": "2015-10",
+            "quote": "The government has been generating 3½-nearly 8 percent of GDP overall surplus since 2012"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In November 2025 an OECD forum on harmful tax practices asked the territory to enforce its economic substance rules more strongly, and in February 2026 the European Union added it to its list of tax jurisdictions it judges non-cooperative. The Caribbean Development Bank's September 2026 strategy still expects growth to stay moderately strong.",
+      "citations": [
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+          "date": "2026-09",
+          "quote": "In November 2025, the Organisation for Economic Cooperation and Development Forum on Harmful Tax Practices called for further action by TCI"
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+          "date": "2026-09",
+          "quote": "In February 2026, the European Union (EU) subsequently added TCI to its list of non-cooperative jurisdictions for tax purposes."
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/TCI%20Country%20Engagement%20Strategy%202026-2030_redacted.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Country Engagement Strategy (2026-2030): Turks and Caicos Islands",
+          "date": "2026-09",
+          "quote": "Real GDP growth is projected to remain moderately strong, with employment and fiscal revenues continuing to benefit from the expansion in economic activity"
+        }
+      ]
+    },
+    "tension": "The data show income per person jumping 67.6 percent in 2017, from 30,183 to 50,586 dollars, yet the sources describe 2017 as a year of severe hurricane damage, not a boom, and none of them explains the jump. In 2021 and 2022, too, the data show income per person up 27.2 and 12.6 percent, while the Caribbean Development Bank reports slower growth in total output in both years, even though the population was rising."
+  }
+}

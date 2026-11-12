@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "POL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "POL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: \"Poland Article IV staff report 2025 IMF\" (tier 1 domain list)",
+        "oecd.org: \"OECD Economic Survey Poland 2025\" (tier 1 domain list)",
+        "Opened: imf.org 2025 Article IV concluding statement (2025-11-24), imf.org press release PR 26/30 (2026-02-03), imf.org IMF Country Report No. 26/25 PDF (2026-01), oecd.org OECD Economic Surveys: Poland 2025 PDF (2025-02), worldbank.org Poland country overview (no date shown, not cited)",
+        "Blocked (403): oecd.org survey landing page, OECD press release, OECD Economic Outlook 2025 Issue 2 Poland note",
+        "Not run: two further tier 1 searches (World Bank growth history, EBRD prospects) because the shared web search budget ran out; tier 2 not needed",
+        "Critic check: re-opened all three cited URLs (IMF concluding statement page; IMF Country Report No. 26/25 PDF and OECD Economic Surveys: Poland 2025 PDF, text extracted locally) and found every quoted passage verbatim"
+      ],
+      "critic_changes": [
+        "All 3 cited documents re-opened. All quoted passages appear word for word, and all dates match: IMF concluding statement 2025-11-24, IMF Country Report No. 26/25 January 2026, OECD survey February 2025. Every number in the prose matches desk/data/POL.json (growth_problem and series), so no figure was changed.",
+        "IMF report title: changed the hyphen in 'Consultation-Press Release' to the em dash the document uses ('Consultation—Press Release').",
+        "Arc and thread 1: removed the claim that the OECD ties the catch-up to foreign investment. The cited passages link productivity gains only to trade openness and say only that FDI flows 'remained solid'. Renamed thread 1 'Catch-up through trade' and rewrote it to say that foreign investment held up while business investment stagnated.",
+        "Thread 2: changed 'drove up energy and food prices' to 'pushed up inflation', because the quoted passages mention inflation and real wages, not energy and food prices.",
+        "Thread 3: the text says public spending helped the recovery, but none of the quotes supported that. Replaced the concluding-statement quote (which repeated the first citation's point and is still used in since_last_year) with the IMF report's passage on fiscal stimulus. Also changed 'borrowing costs' to 'interest rates' to match 'tight monetary policy'.",
+        "Thread 4: removed 'rather than lower revenue' for the OECD, which does not say that. Only the IMF traces the widening entirely to spending, and the text now says so.",
+        "Thread 5: changed 'as costs rise' to 'as cost competitiveness declines' to match the IMF passage.",
+        "Tension: changed the OECD wording to match the source, which says 'Real GDP declined significantly over 2022' and the economy 'returned to growth in mid-2023'. Reworded the investment point so it is clear that investment fell while growth held up."
+      ]
+    },
+    "headline": "Poland's income per person grew 3.8 percent a year over 1991–2025, a steady catch-up now leaning on wages and public spending as ageing looms.",
+    "arc": "Poland's data show one long era: since 1991, income per person grew 3.8 percent a year on average, with no lasting shift up or down. After a fall of 7.3 percent in 1991, growth held steady, averaging 3.9 percent a year over 2006–2015 and 4.0 percent over 2016–2025, and income per person rose from 5,111 dollars in 1990 to 18,707 in 2025 (in 2015 dollars), its highest level yet. The OECD says the economy grew faster than its Central European neighbours, and it links faster gains in output per worker to growing openness to trade. The run had few breaks: income per person still grew 2.5 percent in 2009, fell 0.9 percent in the pandemic year of 2020, and slowed to 0.6 percent in 2023 after Russia's invasion of Ukraine pushed up prices and cut real wages. Since then, rising real wages and higher public spending have carried the recovery, while the IMF expects an ageing population and slower productivity gains to pull growth down over time.",
+    "threads": [
+      {
+        "title": "Catch-up through trade",
+        "text": "Over two decades Poland grew faster than its Central European neighbours, and the OECD links faster gains in output per worker to growing openness to trade. Foreign investment held up, but business investment has stagnated since 2009, and total investment fell from 24.3 percent of GDP in 1999 to 17.0 percent in 2024.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "The economy has doubled in size over the past two decades as it grew faster than neighbouring Central European countries"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "Increasing trade openness is helping the productivity convergence with exporting firms having experienced faster productivity growth than the average."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "While FDI flows have remained solid, overall business investment rates have stagnated since 2009."
+          }
+        ]
+      },
+      {
+        "title": "War shock and the 2023 stall",
+        "text": "Russia's invasion of Ukraine in 2022 pushed up inflation, cut real wages and weakened household spending, and income per person grew only 0.6 percent in 2023. Poland also took in a large wave of Ukrainian refugees.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "For Poland, Russia’s war in Ukraine represented a major downward shock to output and upward shock to inflation."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "Negative real wage growth contributed to an annual fall of 2.4% in real private consumption by mid-2023"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "After the outbreak of the war in early 2022, Poland received about 1.4 million refugees."
+          }
+        ]
+      },
+      {
+        "title": "Wages and spending lead recovery",
+        "text": "Since 2023 the recovery has rested on household spending, fed by fast-rising real wages, with help from public spending. Private investment has stayed weak while interest rates were kept high.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "the primary driver has been private consumption due to a rebound in real wages"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "Fiscal stimulus has also played a role with 1.2 percent of GDP in discretionary loosening in 2024 alone."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "tight monetary policy which dampened private investment (now at a record low 12.5 percent of GDP)"
+          }
+        ]
+      },
+      {
+        "title": "A spending-led public deficit",
+        "text": "After the pandemic and the war, public spending rose on social benefits, public pay and defence, and the budget deficit widened. The IMF traces the whole widening to higher spending, and the OECD also points to extra spending on social policies, health and defence.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "The recent widening of the deficit stems entirely from net higher spending—driven by expanded social benefits, a better-compensated public sector, and increased defense outlays."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "Fiscal support measures, combined with additional spending on social policies, health and defence, have opened up a substantial fiscal deficit."
+          }
+        ]
+      },
+      {
+        "title": "Ageing and a slowing catch-up",
+        "text": "Both the IMF and the OECD expect an ageing population and labour shortages to weigh on growth. The IMF also warns that catch-up could stall as cost competitiveness declines and home-grown innovation stays limited.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "Potential growth will also fall due to demographic headwinds and slowing productivity growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+            "date": "2026-01",
+            "quote": "Poland risks seeing convergence stall given declining cost competitiveness and limited domestic innovation"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-poland-2025_3d6f79bd/483d3bb9-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Poland 2025",
+            "date": "2025-02",
+            "quote": "An ageing population risks constraining growth as it exacerbates labour shortages"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up: income per person rose 3.9 percent in 2025, after 3.4 percent in 2024, as rising real wages lifted household spending. In its January 2026 report the IMF noted that the public deficit had widened through higher spending, and it raised its rating of the risk of debt distress to moderate.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/11/24/cs-poland-staff-concluding-statement-of-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Poland: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-11-24",
+          "quote": "Real output has risen by 6 percent since end-2023, driven by rising real wages and strong private consumption."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1polea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Republic of Poland: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/25)",
+          "date": "2026-01",
+          "quote": "the risk of sovereign debt distress for Poland has been increased to moderate"
+        }
+      ]
+    },
+    "tension": "The OECD says real GDP declined over 2022 and the economy returned to growth only in mid-2023, yet the yearly data show income per person growing 5.7 percent in 2022. In the annual figures the war shock shows up mainly as the slowdown to 0.6 percent in 2023. Separately, the IMF puts private investment at a record low and total investment fell from 24.3 percent of GDP in 1999 to 17.0 percent in 2024, yet growth in income per person has held near its long-run pace of 3.8 percent."
+  }
+}

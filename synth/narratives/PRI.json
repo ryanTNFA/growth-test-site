@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "iso3": "PRI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PRI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 1,
+      "sources_searched": [
+        "Tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): 'Puerto Rico economy growth'",
+        "Tier 1: 'Puerto Rico debt restructuring PROMESA hurricane Maria economy'",
+        "Tier 1: 'Puerto Rico economic outlook 2024 2025'",
+        "Tier 1: 'Puerto Rico Section 936 manufacturing population decline'",
+        "Tier 1 (growthlab.hks.harvard.edu, iadb.org, oecd.org): 'Puerto Rico'",
+        "Tier 1 (imf.org, worldbank.org, iadb.org): 'Puerto Rico working paper fiscal oversight board economy emigration'",
+        "Tier 1 (worldbank.org): 'Puerto Rico Jones Act cabotage economic consequences World Bank' and the paper's title",
+        "Tier 1: 'Puerto Rico economy hurricane Maria recovery reconstruction funds growth 2023'",
+        "Tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): 'Puerto Rico economy growth'",
+        "Tier 2 (cepal.org, unctad.org, undp.org, un.org): 'Puerto Rico debt crisis hurricane Maria emigration economy'",
+        "Tier 2 (cepal.org, unctad.org, un.org): 'Puerto Rico Caribbean economic survey 2024 2025'",
+        "Tiers 1 and 2: 'Puerto Rico economy stagnation pharmaceutical manufacturing reshoring 2024'",
+        "Tier 2 (un.org): 'Special Committee on Decolonization Puerto Rico 2025 economy oversight board debt'",
+        "Opened: documents1.worldbank.org PRWP 10780 (May 2024); news.un.org (2017-10-30); undp.org UNDP LAC WP 52 (2025); repositorio.cepal.org Studies and Perspectives 97 (2020) and Economic survey of the Caribbean 2024 (no Puerto Rico coverage); IMF eLibrary, openknowledge.worldbank.org, cepal.org press release and press.un.org 2023 would not load",
+        "Critic: re-opened all three cited URLs; World Bank and UNDP PDFs checked in full text extracted locally"
+      ],
+      "critic_changes": [
+        "Checked every cited URL: the World Bank PRWP 10780 (May 2024), the UN News story (30 October 2017) and UNDP LAC WP 52 (2025) all exist on allowed domains, with dates matching the documents; every kept quote was found verbatim.",
+        "Arc, first sentence: replaced 'in an era shaped by a federal tax credit' with 'while a federal tax credit drew firms with patents, above all drug makers', because the source credits the tax credit with drug makers' dominance, not with shaping the whole 1990-2004 era.",
+        "Bankruptcy thread: cut the first UN quote to 'which filed for bankruptcy in May 2017'. The words after it ('under the Puerto Rico Oversight...') could not be checked on the page. Lengthened the second quote to the page's full words: 'The hurricane has aggravated the island's existing dire situation caused by debt and austerity measures'.",
+        "Emigration thread: the old quote broke off mid-clause ('...may have been much smaller'), and 'links the outflow to' overstated how firm the source is. Split it into two exact quotes, the second giving the condition ('if a larger set of industries were viable in PR'), and reworded the text to 'suggests the outflow might have been much smaller if a wider range of industries could thrive there'.",
+        "Shipping thread: 'raises prices for households' is not in the source, which estimates welfare losses, so the text now says the law 'imposes a cost on households'. Corrected the law's description to the page's wording (US-built, US-flagged, US-owned and US-crewed) and added a citation for it.",
+        "Tension: softened 'even while the economy as a whole shrinks' to 'can hold up better than the economy as a whole', because total GDP is not in the data file's allowed fields.",
+        "Numbers checked against desk/data/PRI.json, all as printed: 3.1 (1990-2004), 0.1 (2005-2025), -0.2 (2006-2015), 0.7 (2016-2025), investment 19.8 (1999) and 8.0 (2016), -0.9 (2017 and 2018), -3.6 (2020), 4.3 (2022), 3.2 (2024), 2004 level first passed in 2024, peak in 2025. No number changed.",
+        "Recent sources: one tier 1 (World Bank 2024) and one tier 2 (UNDP 2025), so the story stays at tier 2 with tier1_recent_found = 1. All 5 threads kept. Present threads each cite a source from 2023 or later. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Puerto Rico's income per person grew briskly until 2004, then stalled for two decades of emigration and bankruptcy before passing its old high in 2024.",
+    "arc": "Income per person in Puerto Rico grew 3.1 percent a year from 1990 to 2004, while a federal tax credit drew firms with patents, above all drug makers, to the island. The credit was phased out by 2006, and from 2005 to 2025 growth averaged just 0.1 percent a year. Over 2006–2015 income per person shrank 0.2 percent a year, investment fell from 19.8 percent of GDP in 1999 to 8.0 in 2016, and many people left the island. The government filed for bankruptcy in May 2017, the year Hurricane Maria struck, and income per person fell 0.9 percent in both 2017 and 2018 and 3.6 percent in 2020. Growth then picked up, with 4.3 percent in 2022 and 3.2 in 2024, for an average of 0.7 percent a year over 2016–2025. In 2024 income per person passed its 2004 high for the first time.",
+    "threads": [
+      {
+        "title": "A tax credit and drug makers",
+        "about": "history",
+        "text": "A federal tax credit drew firms with patents to the island, and drug makers came to dominate its industry and exports. The credit was phased out by 2006, around the turn from the fast era to the slow one.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "While Section 936 was phased out by 2006, the dominance of the pharmaceutical sector in PR is clearly a legacy of the policy."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "Pharmaceuticals account for a large share of PR’s trade (20.9 percent of imports and 74.0 percent of exports)."
+          }
+        ]
+      },
+      {
+        "title": "Bankruptcy, then Hurricane Maria",
+        "about": "history",
+        "text": "Debt and spending cuts had already weighed on the island when its government filed for bankruptcy in May 2017. Hurricane Maria struck months later, and income per person fell in both 2017 and 2018.",
+        "citations": [
+          {
+            "url": "https://news.un.org/en/story/2017/10/569602-un-experts-sound-alarm-mounting-rights-concerns-puerto-rico-wake-hurricane",
+            "publisher": "United Nations",
+            "title": "UN experts sound alarm on mounting rights concerns in Puerto Rico in wake of Hurricane Maria",
+            "date": "2017-10-30",
+            "quote": "which filed for bankruptcy in May 2017"
+          },
+          {
+            "url": "https://news.un.org/en/story/2017/10/569602-un-experts-sound-alarm-mounting-rights-concerns-puerto-rico-wake-hurricane",
+            "publisher": "United Nations",
+            "title": "UN experts sound alarm on mounting rights concerns in Puerto Rico in wake of Hurricane Maria",
+            "date": "2017-10-30",
+            "quote": "The hurricane has aggravated the island's existing dire situation caused by debt and austerity measures"
+          }
+        ]
+      },
+      {
+        "title": "Two decades of emigration",
+        "about": "present",
+        "text": "Large numbers of people have left the island over the last two decades. A World Bank study suggests the outflow might have been much smaller if a wider range of industries could thrive there.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "PR has seen quite large emigration flows over the last two decades"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "an outflow that may have been much smaller if a larger set of industries were viable in PR"
+          }
+        ]
+      },
+      {
+        "title": "Costly shipping rules",
+        "about": "present",
+        "text": "A US law requires ships moving goods between US ports to be US-built, US-flagged, US-owned and US-crewed. A World Bank study finds that this imposes a cost on households and raises the cost of investment on the island.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "requires that maritime vessels moving goods from one U.S. port to another must be U.S.-built, U.S.-flagged, U.S.-owned and U.S.-crewed"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "Estimated tariff-equivalent costs among final products imply static annual welfare losses of 1.1 percent of household consumption ($203 per person)."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099257005212415735/pdf/IDU15b5b7ebd10471140061b90610cb9b5695bc1.pdf",
+            "publisher": "World Bank",
+            "title": "Economic Consequences of Cabotage Restrictions: The Effect of the Jones Act on Puerto Rico",
+            "date": "2024-05",
+            "quote": "the law raises the cost of investment in PR by 3.0 percent"
+          }
+        ]
+      },
+      {
+        "title": "Exposure to storms",
+        "about": "present",
+        "text": "Puerto Rico is among the economies worldwide with the largest average disaster losses relative to their size over 2000–2019.",
+        "citations": [
+          {
+            "url": "https://www.undp.org/sites/g/files/zskgke326/files/2025-11/wp52_resilient_human_development.pdf",
+            "publisher": "UNDP",
+            "title": "Resilient Human Development in Latin America and the Caribbean",
+            "date": "2025",
+            "quote": "between 2000 and 2019, seven are Caribbean countries: Dominica (placing first), Grenada (third), the Bahamas (fourth), Puerto Rico (fifth)"
+          }
+        ]
+      }
+    ],
+    "since_last_year": null,
+    "tension": "The sources describe deep crisis: bankruptcy, a destructive hurricane and two decades of large emigration. Yet in the data, income per person fell only slowly, by 0.2 percent a year over 2006–2015, and reached a new peak in 2025. Part of the gap may be arithmetic: when many people leave, output is shared among fewer residents, so income per person can hold up better than the economy as a whole."
+  }
+}

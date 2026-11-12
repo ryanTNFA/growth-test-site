@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "iso3": "NLD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NLD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Netherlands 2025 Article IV consultation IMF staff concluding statement",
+        "tier 1 domains: OECD Economic Surveys Netherlands 2025",
+        "imf.org, oecd.org: Netherlands 2026 Article IV IMF",
+        "imf.org: Netherlands 2024 Article IV staff report growth contracted 2023 energy prices",
+        "imf.org, oecd.org, worldbank.org: Netherlands Article IV 2014 recession housing market correction household debt mortgage",
+        "imf.org, oecd.org: Netherlands population growth immigration GDP per capita labour shortages",
+        "Critic re-opened: imf.org 2014 press release pr14552, 2016 Country Report 16/45 PDF, 2024 concluding statement, 2026 Country Report 26/197 PDF; oecd.org Economic Surveys Netherlands 2025 PDF"
+      ],
+      "critic_changes": [
+        "All seven citations re-opened and checked: every quoted passage appears on its page (the three PDFs read via text extraction), all URLs are on tier 1 domains, and all dates match the documents (2026 report: press release dated July 27, 2026; OECD survey July 2025; 2016 report February 2016; 2014 press release December 5, 2014; 2024 concluding statement February 9, 2024).",
+        "Every number in headline, arc and tension checked against desk/data/NLD.json: 1.5 (1990–2025 era mean), 4.3 (1999), -4.2 (2009), 0.8 (2006–2015), 1.3 (2016–2025), 1.7 (structural-peer median), -4.4 (2020), 5.7 (2021), 4.0 (2022), -1.6 (2023), peak 2025, level first reached 2022: all correct as rounded. Headline is 158 characters.",
+        "Housing thread: 'Exports led the recovery' changed to 'Exports and investment led the recovery', matching the 2016 IMF report ('recovery led by exports and investment'). Completed the 2016 report's title to the document's full wording.",
+        "Energy-crisis thread: removed 'including in Germany' (neither cited page names Germany as a source of weak demand; the OECD mentions Germany only as a main trading partner) and changed 'interest rates rose' to 'financial conditions tightened' to match the IMF passage.",
+        "Supply-limits thread: 'Firms save a lot' changed to 'Firms and households save a lot', since the IMF cites high private savings generally, not firms only.",
+        "High-tech thread: 'world-class clusters in chipmaking equipment, photonics and agrifood' changed to 'strong clusters in semiconductors, photonics, fintech and agrifood' (the IMF report's wording), and 'rising trade tensions' to 'rising geopolitical tensions' (the IMF report's wording).",
+        "Tension: 'outperformed its European peers' softened to 'did better than several other euro area economies', matching the OECD survey ('in contrast to several other Euro area economies'). The 2023 total-output claim (IMF: growth of about 0.1 percent in 2023) and the population claim (IMF 2026: labour force increased as the working-age population continues to grow) were confirmed on the cited pages.",
+        "No banned phrases or recommendation language found. Three distinct recent tier 1 sources are cited (IMF 2024, OECD 2025, IMF 2026), so the story stays tier 1."
+      ]
+    },
+    "headline": "Steady but slow: income per person in the Netherlands has grown about 1.5 percent a year since 1990, through a housing bust, the pandemic and an energy shock.",
+    "arc": "Since 1990, growth in income per person in the Netherlands has had no lasting break: it averaged 1.5 percent a year over 1990–2025, one long era. Inside that era came a strong run in the late 1990s, with growth of 4.3 percent in 1999, then a fall of 4.2 percent in 2009 and a second dip in 2012 and 2013, when the IMF describes indebted households saving after a fall in house prices. Growth averaged 0.8 percent a year over 2006–2015 and 1.3 percent over 2016–2025, below the structural-peer median of 1.7. After a drop of 4.4 percent in 2020, income per person bounced back by 5.7 percent in 2021 and 4.0 percent in 2022, then fell 1.6 percent in 2023 as the energy crisis and tighter credit hit. It reached a new peak in 2025, but only just above the level first reached in 2022, and the IMF and OECD describe labour shortages, weak investment, grid congestion and nitrogen limits holding back productivity.",
+    "threads": [
+      {
+        "title": "Housing bust and household debt",
+        "about": "history",
+        "text": "After 2008, house prices fell and many households were left with large mortgages. They cut spending and saved, so the economy slipped back into recession in 2012 and 2013. Exports and investment led the recovery that began in 2014.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr14552",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2014 Article IV Consultation with the Netherlands",
+            "date": "2014-12-05",
+            "quote": "Exports are rising on expanding global trade; consumption remains sluggish as indebted households continue to save."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1645.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Netherlands: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the Kingdom of the Netherlands—Netherlands (IMF Country Report No. 16/45)",
+            "date": "2016-02",
+            "quote": "A moderate recovery is underway after a double-dip recession that ended in early 2014."
+          }
+        ]
+      },
+      {
+        "title": "The 2022–23 energy crisis",
+        "about": "history",
+        "text": "A strong rebound after the pandemic gave way to stagnation when energy prices jumped and financial conditions tightened. Higher prices cut households' buying power, and weaker demand abroad added to the drag. Growth picked up again from 2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/02/08/cs020824-the-netherlands-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands–The Netherlands: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-02-09",
+            "quote": "reflecting the energy shock, tighter financial conditions, and weaker external demand"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/07/oecd-economic-surveys-netherlands-2025_aa9d215c/2dd1f4aa-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Netherlands 2025",
+            "date": "2025-07",
+            "quote": "Following a strong post-pandemic recovery, GDP stagnated due to the energy crisis, before picking up from the second quarter of 2024"
+          }
+        ]
+      },
+      {
+        "title": "Supply limits and weak investment",
+        "about": "present",
+        "text": "The IMF and OECD describe an economy pressing against its limits: too few workers, a congested electricity grid, nitrogen rules that hold up building, and a shortage of homes. Firms and households save a lot but invest little at home, and productivity has grown slowly.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/07/oecd-economic-surveys-netherlands-2025_aa9d215c/2dd1f4aa-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Netherlands 2025",
+            "date": "2025-07",
+            "quote": "Persistent supply constraints have been weighing on potential growth, leading to labour shortages, weak investment, and sluggish productivity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nldea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of The Netherlands—The Netherlands: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/197)",
+            "date": "2026-07-27",
+            "quote": "Structural bottlenecks, high savings, and low investment continue to limit the economy's capacity to adapt."
+          }
+        ]
+      },
+      {
+        "title": "High-tech strength, trade exposure",
+        "about": "present",
+        "text": "The Netherlands is a small, very open trading economy with strong clusters in semiconductors, photonics, fintech and agrifood. That strength also ties growth to foreign suppliers and buyers at a time of rising geopolitical tensions.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nldea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Kingdom of The Netherlands—The Netherlands: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/197)",
+            "date": "2026-07-27",
+            "quote": "Heavy reliance on foreign inputs and demand heightens vulnerability to fragmentation and supply chain disruptions."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "A new shock arrived in 2026. Energy prices rose with the war in the Middle East, and the IMF expects growth to slow and inflation to pick up again, just as the economy had regained momentum in 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1nldea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Kingdom of The Netherlands—The Netherlands: 2026 Article IV Consultation—Press Release and Staff Report (IMF Country Report No. 26/197)",
+          "date": "2026-07-27",
+          "quote": "the energy price shock from the war in the Middle East is projected to slow growth to about 1 percent"
+        }
+      ]
+    },
+    "tension": "The IMF and OECD describe an economy that weathered crises well and did better than several other euro area economies. Income per person tells a flatter story: it fell 1.6 percent in 2023, when the IMF reports total output still edged up, and in 2025 it stood only just above the level first reached in 2022. The gap comes from a growing population, which the IMF notes has kept adding workers, so total output has grown faster than income per person."
+  }
+}

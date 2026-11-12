@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "iso3": "AUS",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AUS",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Australia Article IV consultation 2025 staff concluding statement productivity growth'",
+        "tier 1 domains: 'OECD Economic Survey of Australia 2025 productivity'",
+        "tier 1 domains: 'Australia mining boom terms of trade end of mining investment boom transition IMF OECD'",
+        "imf.org: 'Australia 2024 Article IV staff concluding statement growth per capita population'",
+        "tier 1 domains: 'Australia economic outlook 2026 growth inflation interest rates OECD Economic Outlook June 2026'",
+        "Opened: IMF 2025 Article IV concluding statement (2025-11-20), IMF Country Report 26/38 (2026-02), OECD Economic Surveys: Australia 2026 (2026-01), IMF 2024 concluding statement (2024-10-02), IMF 2016 and 2018 concluding statements; OECD Economic Outlook 2026 country pages returned 403 and were not used",
+        "Critic check: re-opened imf.org Country Report 26/38 PDF, oecd.org Economic Surveys: Australia 2026 PDF and the imf.org 2016 concluding statement; every quoted passage found on its page"
+      ],
+      "critic_changes": [
+        "Headline: fixed the grammar, which said 'the pace' had slipped below its 2023 peak. It is the level of income per person that is below the peak. Also named the 2016-2025 window for the 0.8 percent.",
+        "Competition reforms thread: the draft dated the National Competition Policy to 'the late 1990s into the early 2000s'. The OECD survey (Box 2.2) says the governments agreed it in 1995 and the program ended in 2006. Corrected the text and added a citation with the 1995 passage.",
+        "Mining thread: changed 'weighs heavily on' to 'has an outsized effect on' to match the OECD's 'disproportionate effect'. Lengthened the third OECD quote so it includes the clause naming the mining sector, which the thread relies on.",
+        "Population thread: dropped 'record' net migration and 'when the borders reopened', which the cited passages do not support. The OECD says 'a surge in immigration'. Added the OECD passage on the sharp fall in real disposable household income, which supports both the thread and the arc's cause for 2024-2025.",
+        "Steady growth thread: the draft listed falls in 1991, 1992 and 2020 as if they were the only ones, leaving out 2024 and 2025. It now says 'before 2024'.",
+        "Arc: changed 'high prices' to 'higher prices' to match the OECD's account (higher inflation, then monetary tightening, then a fall in real household income). All arc numbers checked against desk/data/AUS.json: 1.5 for 1990-2025, 2.6-3.9 for 1993-1999, 1.1 for 2006-2015, 0.8 for 2016-2025, -0.1 in 2009, -1.4 in 2020, 1.9 and 2.9 in 2021-2022, -0.6 and -0.2 in 2024-2025, and 0.8 below the 2023 peak.",
+        "Tension: the draft credited 'a soft landing' to both the IMF and the OECD, but only the IMF press release uses the phrase. It is now attributed to the IMF. The OECD survey separately reports positive GDP growth of around 1% through 2024, which backs 'total output kept growing'.",
+        "IMF citations: title punctuation now matches the report cover (em dash). The date 2026-02 matches the cover, and the press release inside is dated February 15, 2026.",
+        "Verified: all cited URLs opened. Every quoted passage was found word for word in the IMF Country Report 26/38 PDF, the OECD Economic Surveys: Australia 2026 PDF (dated January 2026) and the IMF 2016 concluding statement (2016-11-15). Two distinct recent tier 1 sources are cited (IMF 2026-02, OECD 2026-01). No banned phrases and no recommendation language were found."
+      ]
+    },
+    "headline": "Australia's income per person grew steadily for three decades, but growth slowed to 0.8 percent a year in 2016-2025 and income is below its 2023 peak.",
+    "arc": "Since 1990, income per person in Australia has grown by an average of 1.5 percent a year, and the data show no lasting break in that pace from 1990 to 2025. Within that single era, growth has eased. It ran between 2.6 and 3.9 percent a year from 1993 to 1999, then averaged 1.1 percent over 2006-2015 and 0.8 percent over 2016-2025. The OECD links the strong late 1990s to productivity gains from competition reforms and dates the productivity slowdown to the mid-2000s. Falls were rare and short: income per person dropped in 1991 and 1992, was flat in 2009 (-0.1), and fell 1.4 percent in 2020 before rising 1.9 and 2.9 percent in 2021 and 2022. It peaked in 2023, then fell in 2024 (-0.6) and 2025 (-0.2) to 0.8 percent below that peak, as higher prices and tighter money squeezed household incomes while the population grew fast after the pandemic.",
+    "threads": [
+      {
+        "title": "A long productivity slowdown",
+        "about": "present",
+        "text": "Both the IMF and the OECD describe productivity growth that has been weak for years. The OECD says the slowdown began in the mid-2000s. The IMF links it to slow uptake of new technology, fading business dynamism and capital that is slow to move to better uses, which fits the drift in income per person growth from 1.1 percent a year over 2006-2015 to 0.8 percent over 2016-2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ausea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Australia: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Director for Australia (IMF Country Report No. 26/38)",
+            "date": "2026-02",
+            "quote": "The stagnation of productivity reflects several structural factors, including the slow pace of adoption of new technologies, fading business dynamism, and inefficiency in capital reallocation."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "In the mid-2000s, productivity growth began to slow and over the decade prior to the onset of the pandemic, average annual productivity growth was 1.1%"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "From the mid-2000s through 2015, both entry and exit rates fell in Australia and they have not recovered since"
+          }
+        ]
+      },
+      {
+        "title": "Competition reforms of the 1990s",
+        "about": "history",
+        "text": "The OECD says the National Competition Policy, agreed by all governments in 1995 and wound up in 2006, helped productivity growth strengthen in the late 1990s and early 2000s. In the data, income per person grew between 2.6 and 3.9 percent a year from 1993 to 1999, well above the 1.5 percent average since 1990.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "Productivity growth strengthened notably during the late 1990s and early 2000s, with competition reforms cited as a key contributor."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "the Commonwealth, states and territories entered into three intergovernmental agreements in 1995 to implement the National Competition Policy (NCP)."
+          }
+        ]
+      },
+      {
+        "title": "Mining boom and its aftermath",
+        "about": "present",
+        "text": "By 2016 the IMF described Australia as moving out of a mining boom. Mining still has an outsized effect on measured productivity. The OECD notes that output per mine tends to fall as the easiest deposits run out, and it names mining as one reason productivity growth before the pandemic was about half its long-run average.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2016/11/15/MS111516-Australia-IMF-Staff-Concluding-Statement-of-the-2016-Article-IV-Mission",
+            "publisher": "IMF",
+            "title": "Australia: IMF Staff Concluding Statement of the 2016 Article IV Mission",
+            "date": "2016-11-15",
+            "quote": "Australia is transitioning from the mining boom with strong growth and relatively low unemployment"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "with a structural trend towards lower productivity in each mine as the easiest-to-access deposits are used up"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "Productivity growth in the 5 years prior to the pandemic was around half the average of the previous half century, although this is partly …"
+          }
+        ]
+      },
+      {
+        "title": "Population surge after the pandemic",
+        "about": "present",
+        "text": "After the pandemic, a surge in immigration made the population grow fast. The OECD says real consumption was flat from early 2022 to late 2024 as household incomes fell sharply, and income per person fell in 2024 and 2025. The IMF reports that migration eased from those peaks during 2025.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "Real aggregate consumption was broadly flat between early 2022 and late 2024, despite rapid growth of the population driven by a surge in immigration"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "The softness of consumption growth largely reflected a sharp fall in real disposable household income"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ausea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Australia: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Director for Australia (IMF Country Report No. 26/38)",
+            "date": "2026-02",
+            "quote": "labor supply growth has eased as net migration softened from post-COVID peaks"
+          }
+        ]
+      },
+      {
+        "title": "Steady growth, rare recessions",
+        "about": "history",
+        "text": "Australia has long had few recessions, and its growth has varied little from year to year. The OECD notes that 2020 was the first year output fell since 1991. In the data, before 2024 income per person fell only in 1991, 1992 and 2020, and was flat in 2009 (-0.1).",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "resilience during the shocks of the past half-decade fits with its long-term experience of low variance of GDP growth and avoidance of recessions"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Australia 2026",
+            "date": "2026-01",
+            "quote": "its first year of negative GDP growth since 1991 followed by its fastest annual growth since 1984 and then another sharp slowdown"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In February 2026, the IMF reported that during 2025 the economy recovered from a weak 2024 as private demand picked up and interest rates were cut. In January 2026, the OECD described the economy as recovering towards its trend path. The annual data do not yet show this in income per person, which fell 0.2 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ausea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Australia: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Alternate Executive Director for Australia (IMF Country Report No. 26/38)",
+          "date": "2026-02",
+          "quote": "Growth picked up to 2.1 percent year on year in 2025Q3 after a weak 2024, as private demand gradually recovered."
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-australia-2026_1b6f84bc/d22a1efd-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Australia 2026",
+          "date": "2026-01",
+          "quote": "the economy is now recovering towards its trend path"
+        }
+      ]
+    },
+    "tension": "The IMF describes a soft landing, the OECD an economy now recovering, and total output kept growing through the slowdown. Yet income per person fell in 2024 and 2025 and is 0.8 percent below its 2023 peak, because the population grew faster than output after the pandemic."
+  }
+}

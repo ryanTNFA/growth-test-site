@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "iso3": "LAO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LAO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org: Lao PDR Article IV 2025 staff report public debt growth",
+        "worldbank.org: Lao PDR Economic Monitor 2025 growth inflation kip",
+        "tier 1 domains: Lao PDR resource-driven growth hydropower mining boom debt-financed public investment slowdown",
+        "tier 1 domains: Lao PDR New Economic Mechanism 1986 Asian financial crisis 1997 kip inflation",
+        "imf.org, worldbank.org, adb.org: Lao PDR Economic Monitor 2026 growth inflation",
+        "opened: imf.org PR 26/059 (2026-02-20); imf.org 2025 Article IV concluding statement (2025-12-19); worldbank.org LEM Dec 2025 key findings; worldbank.org LEM Jun 2026 key findings; worldbank.org press release 2026-07-09; thedocs.worldbank.org Public Finance Review 2023 executive summary; adb.org Economics Working Paper 330 (2013); elibrary.imf.org 2023 DSA (403, not used)",
+        "critic: re-opened all 7 cited URLs; both PDFs text-extracted locally to verify quotes and dates"
+      ],
+      "critic_changes": [
+        "Headline was 162 characters, over the 160 limit; shortened. Also changed 'through debt distress' to 'amid', because the kip fell from 2021 and the slowdown began in 2018, so the sources do not support debt distress as the cause from 2018.",
+        "Arc: 'That model was already under strain before 2020' is now credited to the World Bank, using the Public Finance Review's own words ('already showing strains before 2020'). Changed 'large foreign investments in mining and hydropower' to 'large investments', which matches the cited passage. Merged two sentences to keep 5 sentences. Changed 'weak productivity to hold growth down' to the IMF's own framing, growth to moderate with weaker productivity growth.",
+        "Thread 'Debt, a falling kip, inflation': the text said external debt for public investment 'left the country in debt distress'. The source names short-term external liquidity pressures as the trigger, so the text now states the two facts separately. Added the verified Public Finance Review passage on debt distress as a citation.",
+        "Thread 'Mining and hydropower boom': changed 'foreign investment in mines and dams' to 'large investments', in line with the cited passage.",
+        "Thread 'Workers leaving, productivity weak': the World Bank passage does not mention workers leaving, so the text no longer says 'Both the IMF and the World Bank' expect this. It now credits the IMF with the outmigration point and the World Bank with the outlook limits.",
+        "since_last_year: the record reserves in March 2026 were not in any cited passage, so added the verified World Bank passage. Replaced 'exports, tourism and transport picked up' with what the page says, that growth was supported by tourism and transport. Replaced 'expects growth to slow' with 'moderate', the press release's word.",
+        "Every citation checked: all 7 URLs opened on tier 1 domains. All quotes match the pages (the ADB and World Bank PDFs were text-extracted to confirm), and all dates match: ADB WP 330 is dated January 2013, the Public Finance Review only shows 2023, and the IMF, LEM and press-release dates match their pages. All numbers match LAO.json: 3.9, 6.1, 2.3 and 2.9/6.3, plus 6.9 (2010), 5.2 (2017), -1.0 (2020), 3.2 (2025), 2.1 (1998), 5.4 (1999), 1.1/1.3/2.3 (2021-23) and the 2025 peak. No banned phrases found."
+      ]
+    },
+    "headline": "Lao PDR's run of 6.1 percent a year on mines, dams and foreign debt slowed to 2.3 percent from 2018, amid debt distress, a falling kip and soaring prices.",
+    "arc": "Income per person in Lao PDR grew 3.9 percent a year from 1990 to 2004, as market reforms begun in 1986 took hold, with a setback and hyperinflation after the 1997 Asian crisis. From 2005 to 2017 growth rose to 6.1 percent a year, carried by large investments in mining and hydropower that the World Bank says created few jobs, while many public investments were financed by external debt. The World Bank says this model was already showing strains before 2020, and growth eased from 6.9 percent in 2010 to 5.2 in 2017. The era from 2018 to 2025 averaged 2.3 percent, with a fall of 1.0 percent in 2020 and weak years in 2021 and 2022 as the pandemic, heavy debt and a sharp fall in the kip hit, and recovery has been gradual, with growth of 3.2 percent in 2025, when income per person reached its highest level to date. Over the last decade growth averaged 2.9 percent a year against 6.3 in the decade before, and the IMF still judges public debt unsustainable and expects workers leaving the country and weaker productivity growth to slow growth.",
+    "threads": [
+      {
+        "title": "Market reforms from 1986",
+        "about": "history",
+        "text": "From 1986 the government began moving away from central planning under the New Economic Mechanism, freeing prices, unifying exchange rates and opening trade and private enterprise. Income per person grew 3.9 percent a year from 1990 to 2004.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30138/economics-wp330-lao-economy.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "The Lao Economy: Capitalizing on Natural Resource Exports (ADB Economics Working Paper No. 330)",
+            "date": "2013-01",
+            "quote": "In 1986, however, the government began decentralizing control and introducing market-oriented reforms under the New Economic Mechanism (NEM)."
+          }
+        ]
+      },
+      {
+        "title": "Asian crisis and hyperinflation",
+        "about": "history",
+        "text": "After the Asian financial crisis, large budget deficits were financed by printing money and prices ran out of control. Growth of income per person dipped to 2.1 percent in 1998 and recovered to 5.4 percent in 1999.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30138/economics-wp330-lao-economy.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "The Lao Economy: Capitalizing on Natural Resource Exports (ADB Economics Working Paper No. 330)",
+            "date": "2013-01",
+            "quote": "The Lao PDR experienced a period of hyperinflation following the 1997–1999 Asian financial crisis, deriving from monetization of large fiscal deficits."
+          }
+        ]
+      },
+      {
+        "title": "Mining and hydropower boom",
+        "about": "history",
+        "text": "The fast growth of 2005 to 2017, at 6.1 percent a year, rested on large investments in mines and dams, and exports came to be mostly minerals and electricity. The World Bank notes that these capital-heavy projects created few jobs.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/fd7f79460aa965e5f4c4c5577e0ea649-0070062023/original/WBLaoPDR-PublicFinanceReview2023ExSumEng.pdf",
+            "publisher": "World Bank",
+            "title": "Lao PDR 2023 Forging Ahead: Restoring Stability & Boosting Prosperity, Executive Summary (Public Finance Review)",
+            "date": "2023",
+            "quote": "economic growth was predominantly driven by large-scale investments in capital-intensive sectors, such as mining and hydropower, which created few jobs"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/30138/economics-wp330-lao-economy.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "The Lao Economy: Capitalizing on Natural Resource Exports (ADB Economics Working Paper No. 330)",
+            "date": "2013-01",
+            "quote": "More recently, most Lao PDR exports have consisted of resource-based items, especially mining and hydropower exports."
+          }
+        ]
+      },
+      {
+        "title": "Debt, a falling kip, inflation",
+        "about": "present",
+        "text": "Many public investments were financed by external debt, and debt pressures pushed the country into debt distress. From 2021 the kip fell sharply and prices soared. Debt is now falling as a share of the economy, but the IMF still judges it unsustainable.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/fd7f79460aa965e5f4c4c5577e0ea649-0070062023/original/WBLaoPDR-PublicFinanceReview2023ExSumEng.pdf",
+            "publisher": "World Bank",
+            "title": "Lao PDR 2023 Forging Ahead: Restoring Stability & Boosting Prosperity, Executive Summary (Public Finance Review)",
+            "date": "2023",
+            "quote": "Since 2021, the national currency has depreciated considerably, and inflation soared."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/fd7f79460aa965e5f4c4c5577e0ea649-0070062023/original/WBLaoPDR-PublicFinanceReview2023ExSumEng.pdf",
+            "publisher": "World Bank",
+            "title": "Lao PDR 2023 Forging Ahead: Restoring Stability & Boosting Prosperity, Executive Summary (Public Finance Review)",
+            "date": "2023",
+            "quote": "Significant debt pressures, especially short-term external liquidity constraints, have pushed the country into debt distress."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/20/pr-26059-lao-pdr-imf-concludes-2025-aiv-consultation-with-lao-peoples-democratic-republic",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Lao People's Democratic Republic",
+            "date": "2026-02-20",
+            "quote": "Public debt remains unsustainable despite a falling debt-to-GDP ratio."
+          }
+        ]
+      },
+      {
+        "title": "Workers leaving, productivity weak",
+        "about": "present",
+        "text": "The IMF expects growth to moderate as workers leave for jobs abroad and productivity growth weakens. The World Bank also points to low productivity, skill shortages and gaps in infrastructure as limits on the outlook.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/20/pr-26059-lao-pdr-imf-concludes-2025-aiv-consultation-with-lao-peoples-democratic-republic",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Lao People's Democratic Republic",
+            "date": "2026-02-20",
+            "quote": "Growth expected to moderate amid labor outmigration and weaker productivity growth."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/lao/publication/lao-economic-monitor-dec-2025-consolidating-recent-reform-momentum-for-stability-and-growth-key-findings",
+            "publisher": "World Bank",
+            "title": "Lao Economic Monitor, December 2025: Consolidating Recent Reform Momentum for Stability and Growth: Key Findings",
+            "date": "2025-12-09",
+            "quote": "The medium-term outlook remains constrained by low productivity, skill shortages, and infrastructure gaps."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over 2025 tighter policy steadied the kip and slowed inflation, growth was supported by tourism and transport, and income per person grew 3.2 percent, its best year since 2019. Reserves reached a record in March 2026, but an oil price shock in early 2026 pushed fuel prices and inflation back up, and the World Bank expects growth to moderate in 2026.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/country/lao/publication/lao-economic-monitor-jun-2026-consolidating-reform-momentum-amid-volatility-key-findings",
+          "publisher": "World Bank",
+          "title": "Lao Economic Monitor, Jun 2026: Consolidating Reform Momentum Amid Volatility. Key Findings",
+          "date": "2026-07-06",
+          "quote": "Tighter macroeconomic policies helped stabilize the exchange rate and slowed inflation in 2025."
+        },
+        {
+          "url": "https://www.worldbank.org/en/country/lao/publication/lao-economic-monitor-jun-2026-consolidating-reform-momentum-amid-volatility-key-findings",
+          "publisher": "World Bank",
+          "title": "Lao Economic Monitor, Jun 2026: Consolidating Reform Momentum Amid Volatility. Key Findings",
+          "date": "2026-07-06",
+          "quote": "This helped to lift international reserves to a record $4.2 billion in March 2026, equivalent to 3.8 months of imports."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/07/09/moderate-lao-economic-growth-anticipated-in-2026-with-recent-gains-fragile",
+          "publisher": "World Bank",
+          "title": "Moderate Lao Economic Growth Anticipated in 2026 with Recent Gains Fragile",
+          "date": "2026-07-09",
+          "quote": "GDP growth is projected to moderate to 3.8% in 2026 as global oil price shocks push domestic inflation back up,"
+        }
+      ]
+    },
+    "tension": "The World Bank describes a crisis from 2021, with a sharply falling kip, soaring inflation and a large hit to living standards, yet income per person in the data never fell after 2020: it grew 1.1, 1.3 and 2.3 percent in 2021 to 2023 and reached a new peak in 2025. The data measure real output per person, not the loss of purchasing power that the sources describe."
+  }
+}

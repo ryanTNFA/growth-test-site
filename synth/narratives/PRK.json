@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "iso3": "PRK",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "PRK",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "WebSearch (tier 1 domains: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): North Korea DPRK economy growth",
+        "WebSearch (imf.org, worldbank.org, oecd.org, adb.org): Democratic People's Republic of Korea economy 2024",
+        "WebSearch (oecd.org): OECD Economic Survey Korea North Korean economy sanctions pandemic annex",
+        "WebSearch (imf.org, worldbank.org, adb.org, oecd.org): North Korea economy sanctions food insecurity 2025",
+        "Opened: oecd.org OECD Economic Surveys: Korea 2026 (July 2026), Annex 1.A on North Korea",
+        "Opened: oecd.org OECD Economic Surveys: Korea 2024 (July 2024), Annex A on North Korea",
+        "Opened: oecd.org Economics Department Working Paper No. 1607, North Korea: The last transition economy? (25 November 2020)",
+        "Critic: re-opened all three cited OECD PDFs with WebFetch and checked every quoted passage against the extracted page text",
+        "Not needed: tier 2 UN domains (tier 1 gave 2 recent sources)"
+      ],
+      "critic_changes": [
+        "Re-opened all three cited OECD PDFs (Korea 2026 survey, Korea 2024 survey, Working Paper No. 1607) and checked every quote against the page text. All original quotes appear on the pages, and all dates match the documents (July 2026 and July 2024 covers, 25 November 2020 on the working paper).",
+        "Headline: dropped 'still below its 1990 size'. That claim rests on a 2020 estimate, and growth has been reported since, so it is no longer safe to say in the present tense. The headline now says 'no growth record in the data' (139 characters).",
+        "Thread 'Sanctions and the border closure': the 2017 to 2018 output falls and the 2020 border closure had no supporting citation. Added two Korea 2024 passages that say so. Dropped the self-subsistence quote, which ran to 26 words, over the 25-word limit.",
+        "Thread 'Power, food and materials short': cut the 2026 'Chronic shortages...' quote from 27 words to 25. Reworded the text so it matches the page: the 2024 '20x10' plan and doubts about whether new facilities can operate.",
+        "Thread 'A turn towards Russia': the claim that China trade stays below its pre-2018 level had no supporting quote. Added the Korea 2026 passage that says so.",
+        "Thread 'Markets grow, then retreat': 'mixed system beside the state plan' changed to the source's 'hybrid system' wording, and the quote extended to show it. Added a Korea 2024 passage to support 'since the pandemic'.",
+        "Thread 'Decline after Soviet support ended': added the working paper's 'not sustained beyond the mid-1960s' passage to support the first sentence. Softened 'still below' to 'reportedly below', as the source has it.",
+        "since_last_year: removed 'fastest in eight years' from the prose. 'Eight' is a figure that is not in the data file, and it stays only inside the quoted passage. Changed 'industry' to 'manufacturing' to match the page.",
+        "Tension: credits the 1990 comparison to the OECD's 2020 estimate rather than stating it as current fact.",
+        "Data check: desk/data/PRK.json has empty series, null G1 averages, null G3 and no G4 eras. The story uses only years from the data file (2016 to 2025) and states that no eras or averages exist. No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "With no growth record in the data, sources describe a North Korean economy held down by sanctions and state control, now leaning on Russia.",
+    "arc": "The data file holds no income per person figures for North Korea, so it shows no eras and no 10-year average for 2016 to 2025. The sources warn that the country publishes almost no economic statistics, and that outside estimates show the direction of growth rather than its size. On their telling, fast industrial growth faded after the mid-1960s, and trend growth turned negative once Soviet support ended and trade with China moved onto commercial terms. Markets spread after 2000, but tighter sanctions brought sharp falls in output in 2017 and 2018, and the border closure from 2020 deepened the slump. The sources describe a rebound in 2023 and 2024, helped by trade with China and Russia, while the state has pulled markets and foreign currency back under its control.",
+    "threads": [
+      {
+        "title": "Decline after Soviet support ended",
+        "about": "history",
+        "text": "Fast post-war industrial growth faded after the mid-1960s. Growth then slowed and turned negative as Soviet support ended and China put trade on commercial terms. The OECD reported in 2020 that output was reportedly below its 1990 level, even though the population had grown.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/04/north-korea-the-last-transition-economy_f0e702c1/82dee315-en.pdf",
+            "publisher": "OECD",
+            "title": "North Korea: The last transition economy? (OECD Economics Department Working Papers No. 1607)",
+            "date": "2020-11-25",
+            "quote": "Rapid post-war industrialisation was not sustained beyond the mid-1960s"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/04/north-korea-the-last-transition-economy_f0e702c1/82dee315-en.pdf",
+            "publisher": "OECD",
+            "title": "North Korea: The last transition economy? (OECD Economics Department Working Papers No. 1607)",
+            "date": "2020-11-25",
+            "quote": "trend growth declined and turned negative as Soviet support ended and the terms of trade with China shifted to a commercial basis"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/04/north-korea-the-last-transition-economy_f0e702c1/82dee315-en.pdf",
+            "publisher": "OECD",
+            "title": "North Korea: The last transition economy? (OECD Economics Department Working Papers No. 1607)",
+            "date": "2020-11-25",
+            "quote": "Today, real GDP in North Korea is reportedly lower than in 1990, notwithstanding a larger population"
+          }
+        ]
+      },
+      {
+        "title": "Sanctions and the border closure",
+        "about": "present",
+        "text": "Tighter international sanctions brought sharp falls in output in 2017 and 2018. The border closure from 2020 then blocked trade and movement. The OECD says sanctions still restrict formal trade, finance and investment.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "after severely contracting in 2017 and 2018 as a result of tightened international sanctions"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "blocking human and material exchanges across the border and restricting domestic movement, at considerable economic cost"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2026",
+            "date": "2026-07",
+            "quote": "International sanctions continue to restrict formal trade, finance and investment."
+          }
+        ]
+      },
+      {
+        "title": "Markets grow, then retreat",
+        "about": "present",
+        "text": "Market trading spread after 2000, as part of a shift to a hybrid system that mixed state control with private initiative. Since the pandemic the state has tightened its grip again, curbing informal markets, enterprise freedom and the use of foreign currency.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/04/north-korea-the-last-transition-economy_f0e702c1/82dee315-en.pdf",
+            "publisher": "OECD",
+            "title": "North Korea: The last transition economy? (OECD Economics Department Working Papers No. 1607)",
+            "date": "2020-11-25",
+            "quote": "the scale and breadth of market activities has visibly expanded since the turn of the millennium, as part of a transition to a hybrid system"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "North Korean authorities tightened state control over markets and external trade during the pandemic and seem determined to maintain control going forward"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2026",
+            "date": "2026-07",
+            "quote": "the suppression of jangmadang activity (informal market), the rollback of limited enterprise autonomy and the re-centralisation of price setting"
+          }
+        ]
+      },
+      {
+        "title": "A turn towards Russia",
+        "about": "present",
+        "text": "Trade with China has recovered since 2022 but stays well below its level before 2018. Ties with Russia have grown fast since 2023, bringing trade, food and foreign currency linked to military cooperation.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2026",
+            "date": "2026-07",
+            "quote": "Trade with China rebounded strongly since 2022, although volumes remain well below pre-2018 levels following China's compliance with international sanctions."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2026",
+            "date": "2026-07",
+            "quote": "Increased trade, food supplies and unreported revenue streams linked to military cooperation have helped alleviate shortages and improve foreign-exchange availability."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "Trade between North Korea and Russia is also suspected to have expanded since the North Korea - Russia summit in September 2023."
+          }
+        ]
+      },
+      {
+        "title": "Power, food and materials short",
+        "about": "present",
+        "text": "Factories run shorter hours because power and raw materials are scarce, and food shortages were severe from 2020 to 2022. The OECD doubts that factories built under a plan launched in 2024 can run as planned, given chronic shortages and the priority given to military production.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "manufacturing sectors are running at shorter hours due to intensifying power shortages and difficulties in securing raw materials"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/07/oecd-economic-surveys-korea-2024_9343c046/c243e16a-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2024",
+            "date": "2024-07",
+            "quote": "North Korea is thought to have suffered severe food shortages from 2020 to 2022 due to border closures and failing crops."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Korea 2026",
+            "date": "2026-07",
+            "quote": "Chronic shortages of electricity, raw materials and skilled labour, combined with the prioritisation of military production, raise questions about whether newly built facilities can operate"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The OECD's July 2026 survey of Korea reports that North Korea's economy grew faster in 2024 than in 2023, led by manufacturing, mining and building. It also reports that the North Korean won lost much of its value from 2024, as the state raised official wages while tightening control of markets and foreign exchange.",
+      "citations": [
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Korea 2026",
+          "date": "2026-07",
+          "quote": "North Korea’s economy accelerated in 2024, growing by 3.7% (following growth of +3.1% in 2023 and -0.2% in 2022), its fastest pace in eight years"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/07/oecd-economic-surveys-korea-2026_17d6bf02/6b87f585-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Korea 2026",
+          "date": "2026-07",
+          "quote": "After a decade of relative stability, the North Korean Won (KPW) depreciated sharply in 2024"
+        }
+      ]
+    },
+    "tension": "The sources report a rebound in 2023 and 2024, but the data file holds no income per person figures to check it against, and the OECD itself says outside estimates show the direction of growth rather than its size. The OECD also reported in 2020 that output was below its 1990 level while the population had grown, which would leave income per person lower still, but the data cannot confirm this."
+  }
+}

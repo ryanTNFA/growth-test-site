@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "iso3": "ABW",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ABW",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Aruba Article IV IMF staff concluding statement tourism growth\"",
+        "same tier 1 domains: \"Aruba economy 2026\"",
+        "opened: imf.org 2025 Article IV concluding statement (2025-10-07), 2025 Article IV press release (2025-12-01), 2023 Article IV press release (2023-07-27), 2017, 2015 and 2010 Article IV concluding statements",
+        "tried: imf.org 2019 Article IV concluding statement (404, not used)",
+        "critic: re-opened all six cited imf.org pages with WebFetch and checked titles, dates and quoted passages"
+      ],
+      "critic_changes": [
+        "Re-opened all six cited imf.org pages: every title, date and quoted passage matched the page, so every citation was kept.",
+        "Thread 'Slow recovery, refinery hopes': the claim about weak tourism and shrinking non-tourism exports in 2016 had no supporting quote. Added a third citation from the 2017 concluding statement with the page's own sentence. Also shortened the clause about whether the refinery reopened.",
+        "Thread 'Pandemic collapse, tourism rebound': dropped 'when travel stopped', which no cited passage supports, and said 'pandemic restrictions' to match the 2023 quote.",
+        "Thread 'Public debt up, then down': dropped the claims that deficits drove debt up and that the tourism rebound brought it down, because the quotes give only debt levels. The text now describes only the rise and the fall the quotes show.",
+        "Thread 'Limits of a tourism economy': changed 'leans heavily on tourism' to 'recent growth has come from tourism', which the cited passages support. Reworded the diversification sentence so it reports what the IMF statement names and does not frame it as advice.",
+        "Arc, last sentence: changed 'as the rebound fades' to 'as tourism and hotel investment ease' to match the IMF passage.",
+        "since_last_year: dated it to the month the source shows (December 2025) and matched the wording to the quote.",
+        "Tension: removed the guesses about data revisions or a shrinking population as the cause, because no source gives them. Also said that the IMF report was from 2017.",
+        "Numbers checked against desk/data/ABW.json: eras 1.3, -1.9 and 2.9; 2009 at -12.3; 2020 at -23.5; 2021–2024 at 15.8, 11.0, 9.5 and 6.2; 10-year average 3.0 against -0.5 before; 2015 at 2.6 and 2016 at 0.5; peak in 2024. All match, and none needed correcting."
+      ]
+    },
+    "headline": "Aruba's income per person slid through the 2009 crisis and a refinery shutdown, then a post-pandemic tourism boom carried it to a record in 2024.",
+    "arc": "Since 1990, Aruba's income per person has moved through three eras: growth of 1.3 percent a year in 1990–2004, a fall of 1.9 percent a year in 2005–2012, and growth of 2.9 percent a year in 2013–2024. The IMF ties the middle era to a double-dip recession caused by the global financial crisis and the shutdown of the oil refinery, and income per person fell 12.3 percent in 2009 alone. Growth came back after 2013 but stayed uneven: the IMF described a gradual recovery, weak tourism in 2016 and hopes resting on a refinery reopening. The pandemic cut income per person by 23.5 percent in 2020, and a tourism-driven rebound followed, with growth of 15.8, 11.0, 9.5 and 6.2 percent from 2021 to 2024. That rebound lifted the 10-year average to 3.0 percent a year, against -0.5 in the decade before, and income per person reached its highest level yet in 2024. The IMF now expects growth to slow as tourism and hotel investment ease, and it says strong tourism demand is straining housing, workers and infrastructure.",
+    "threads": [
+      {
+        "title": "Refinery shutdown and global crisis",
+        "text": "Aruba's oil refinery closed in July 2009 as tourism fell after the global downturn. The IMF later called the result a double-dip recession, which matches the 2005–2012 era when income per person fell 1.9 percent a year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs090810",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands-Aruba: Concluding Statement of the 2010 Article IV Consultation Mission",
+            "date": "2010-09-08",
+            "quote": "Aruba’s oil refinery temporarily closed in July 2009; refinery contributed about 5 percent to employment."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs021315",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Aruba: Concluding Statement of the 2015 Article IV Mission",
+            "date": "2015-02-13",
+            "quote": "The economy suffered a double-dip recession caused by the global financial crisis and the shutdown of the oil refinery"
+          }
+        ]
+      },
+      {
+        "title": "Slow recovery, refinery hopes",
+        "text": "After 2013 the IMF described a gradual recovery, held back in 2016 by weak tourism and shrinking non-tourism exports. Officials expected a refinery reopening to lift the economy; the sources here do not say whether it reopened.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs021315",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Aruba: Concluding Statement of the 2015 Article IV Mission",
+            "date": "2015-02-13",
+            "quote": "Aruba is recovering gradually from a severe double-dip recession."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/03/31/ms033117-kingdom-of-the-netherlands-aruba-concluding-statement-of-the-2017-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Aruba: Concluding Statement of the 2017 Article IV Mission",
+            "date": "2017-03-31",
+            "quote": "Exports grew only 0.3 percent in 2016 due to weak tourism and shrinking non-tourism exports."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/03/31/ms033117-kingdom-of-the-netherlands-aruba-concluding-statement-of-the-2017-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Aruba: Concluding Statement of the 2017 Article IV Mission",
+            "date": "2017-03-31",
+            "quote": "reopening of the refinery estimated by authorities to add more than 6 percent to the level of GDP"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse, tourism rebound",
+        "text": "Income per person fell 23.5 percent in 2020. Tourists returned once pandemic restrictions were lifted, and four years of strong growth took income per person to a record in 2024.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2023/07/27/pr23277-aruba-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with the Kingdom of the Netherland—Aruba",
+            "date": "2023-07-27",
+            "quote": "driven by recovery of tourist arrivals after pandemic restrictions were lifted."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/01/pr25401-the-kingdom-of-the-netherlands-aruba-imf-concludes-article-iv-consultation-discussions",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Aruba",
+            "date": "2025-12-01",
+            "quote": "Aruba’s economy has shown a remarkable post-pandemic tourism-driven recovery but is set to slow"
+          }
+        ]
+      },
+      {
+        "title": "Public debt up, then down",
+        "text": "Public debt climbed during the slow years after the 2009 crisis and was higher still in 2020. The IMF reports that it has fallen sharply since then.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs021315",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands—Aruba: Concluding Statement of the 2015 Article IV Mission",
+            "date": "2015-02-13",
+            "quote": "Public debt surpassed 80 percent of GDP in 2014."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/07/cs-kingdom-of-the-netherlands-aruba-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands-Aruba: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-10-07",
+            "quote": "Central government debt declined from 116.3 percent of GDP in 2020 to 68.6 percent by end-2024."
+          }
+        ]
+      },
+      {
+        "title": "Limits of a tourism economy",
+        "text": "Recent growth has come from tourism, and the IMF says strong tourism demand is now straining housing, workers and infrastructure. The 2025 IMF statement also names other sectors, such as agriculture and creative industries, in the discussion of where growth could come from.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/01/pr25401-the-kingdom-of-the-netherlands-aruba-imf-concludes-article-iv-consultation-discussions",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Aruba",
+            "date": "2025-12-01",
+            "quote": "Strong tourism demand is straining infrastructure, labor markets, and housing availability and affordability"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/07/cs-kingdom-of-the-netherlands-aruba-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands-Aruba: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-10-07",
+            "quote": "Promote \"Promising Sectors\": agriculture, circular economy, creative industries, knowledge economy"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In December 2025 the IMF said the tourism-driven boom is set to slow, as tourism and hotel investment ease after four strong years.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/01/pr25401-the-kingdom-of-the-netherlands-aruba-imf-concludes-article-iv-consultation-discussions",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Aruba",
+          "date": "2025-12-01",
+          "quote": "Growth is projected to slow to about 4.0 percent in 2025 as tourism and hotel investments ease"
+        }
+      ]
+    },
+    "tension": "In 2017 the IMF reported that the economy shrank in 2015 and 2016, but the data show income per person growing 2.6 percent in 2015 and 0.5 percent in 2016. The sources do not explain the gap."
+  }
+}

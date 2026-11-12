@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "BEL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BEL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Belgium Article IV staff report 2025 IMF",
+        "oecd.org: OECD Economic Surveys Belgium 2024 2025 productivity growth",
+        "imf.org: IMF Executive Board concludes 2026 Article IV consultation with Belgium",
+        "oecd.org: OECD Economic Surveys: Belgium 2026 (HTML pages returned 403; not cited)",
+        "oecd.org: Reforms can strengthen Belgium's competitiveness, unlock its growth potential and support sustainable public finances",
+        "Opened: imf.org PR 26/057 (2026-02-23); imf.org Country Report 26/49 PDF (2026-02); imf.org staff concluding statement 2026 Article IV mission (2025-12-16); oecd.org OECD Economic Surveys: Belgium 2024 PDF (2024-09)",
+        "Critic check: re-opened oecd.org Economic Surveys: Belgium 2024 PDF (full text extracted), imf.org Country Report 26/49 PDF (full text extracted), imf.org PR 26/057 web page",
+        "Tier 2 (UN) not searched: tier 1 gave enough recent sources"
+      ],
+      "critic_changes": [
+        "All numbers in the headline, arc, threads, since_last_year and tension checked against desk/data/BEL.json (G4 era mean 1.3, G1 avg_10y 1.0 and avg_prior_10y 0.6, G3 peak 2025, and yearly growth for 1997, 2000, 2009, 2012, 2013, 2020-2025): all match.",
+        "Every citation re-opened. OECD Economic Surveys: Belgium 2024 (September 2024) and IMF Country Report 26/49 (February 2026) PDFs had their full text extracted, and every quoted passage was found verbatim apart from line breaks.",
+        "since_last_year: the PR 26/057 web page quote ('...remains scarred through large structural fiscal deficits...') is not on that web page; that wording appears only in the press-release section of the Country Report PDF. Replaced it with a passage confirmed on the web page ('Global and trade uncertainties, higher tariffs, or tighter financial conditions could lower growth.').",
+        "since_last_year: dropped 'new federal coalition' and 'pension, tax and labour reforms', because the cited passages do not say the coalition is new or name those reforms. Changed 'weighing on investment and exports' to 'risks to growth' to match the cited passage. Added the IMF labour-force participation passage to support 'more people joining the labour force'.",
+        "Wage costs thread: removed '1996 law', because the cited OECD text names the wage law without a year. Replaced 'in the years when growth was weakest' with the data's own figure for that decade (2006-2015 average of 0.6).",
+        "Pandemic thread: swapped the OECD 'proved resilient' quote for the OECD passage on wage indexation and energy support preserving household purchasing power, which the thread's claim needs. Changed 'kept households spending' to 'protected household spending power' to match.",
+        "Ageing thread: 'the IMF and OECD both note that a smaller share of Belgians work than in many peers' was not supported by the cited passages. It now reads that the OECD notes large employment gaps for women, older people and other groups, with an added OECD citation that supports it.",
+        "Open economy thread: the claim about energy-hungry industries paying more for energy than US and Chinese rivals had no citation. Added the IMF Country Report passage on the energy-cost gap with the US and China and reworded the text to match it. Replaced 'tariffs hit it hard' with the OECD's own point about exposure to slow world trade and the erosion of exporters' price competitiveness.",
+        "Tension: removed 'GDP grew faster than that, so a growing population took much of the gain', because neither the data file nor any cited passage shows GDP or population growth. Checked 'solid' (IMF) and 'subdued over the past decade' (OECD) against the source text: both are there."
+      ]
+    },
+    "headline": "Belgium's income per person has grown about 1.3 percent a year since 1990, as productivity gains faded and costs, ageing and debt pressed on an open economy.",
+    "arc": "Since 1990 Belgium's income per person has grown by 1.3 percent a year on average, with no lasting shift up or down: the data show one long era. Within it the pace eased: there were years of 3.5 percent growth in 1997 and 2000, but 2006-2015 averaged only 0.6 percent, with a fall of 2.7 percent in 2009 and small declines in 2012 and 2013. The OECD says productivity growth has slowed since the 1990s, more than in other rich economies, and links this to weak business dynamism and the slow spread of technology; by 2010 Belgian wages had also drifted above those of its neighbours, a gap that wage restraint later closed. Growth picked up to 1.0 percent a year over 2016-2025, through a drop of 5.2 percent in 2020 and rebounds of 5.8 and 3.2 percent in 2021 and 2022. The IMF and OECD describe an economy that came through the pandemic and the energy crisis well, with wage indexation protecting household spending, but that was left with larger deficits, rising public debt and weaker price competitiveness. Since then growth has been slow, at 0.7, 0.4 and 0.3 percent in 2023, 2024 and 2025, though income per person in 2025 was the highest on record.",
+    "threads": [
+      {
+        "title": "A long productivity slowdown",
+        "about": "present",
+        "text": "Belgium's productivity is high, but its growth has slowed since the 1990s. The OECD points to few firms entering and leaving markets and to new technology spreading slowly from leading firms to the rest. The IMF reports productivity growth still sluggish in 2025.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "Productivity growth has slowed significantly since the 1990's, more than in other advanced economies, though it does remain high in level terms."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "Labor-productivity growth remained sluggish, but declining wage growth in 2024-25H1 brought overall unit labor cost increases since 2021 closer to the EA average."
+          }
+        ]
+      },
+      {
+        "title": "Wage costs and the neighbours",
+        "about": "history",
+        "text": "Belgian wages follow prices automatically, and a law sets wage growth against France, Germany and the Netherlands. By 2010 Belgian wages had risen faster than in those countries; low wage norms in the early 2010s and a pause in indexation in 2015-16 closed the gap, in a decade (2006-2015) when income per person grew only 0.6 percent a year.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "By 2010 a 4% gap had emerged between salary developments in Belgium and the comparator countries of Germany, France, and the Netherlands"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "This led to a closing of the labour cost gap and greater cost competitiveness (IMF, 2019)."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, energy shock and debt",
+        "about": "present",
+        "text": "Income per person fell 5.2 percent in 2020 and recovered quickly in 2021 and 2022. Wage indexation and energy support protected household spending power through the energy crisis, but the two shocks left larger deficits, higher public debt and weaker price competitiveness, which still weigh on the outlook.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "Automatic wage indexation and energy-related support measures helped preserve household purchasing power."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "The pandemic and the energy crisis have left Belgium with higher structural deficits and a further increase in an already high debt-to-GDP ratio."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "Belgium emerged from the pandemic and energy crisis with large structural fiscal deficits, an elevated and rising public debt, a deteriorated price-competitiveness"
+          }
+        ]
+      },
+      {
+        "title": "Ageing and too few workers",
+        "about": "present",
+        "text": "An ageing population is slowing the growth of the workforce, and the OECD notes large employment gaps for women, older people and other groups. Recent reforms have drawn more people into the labour force, which pushed unemployment up.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "With population aging weighing on employment growth, raising productivity and labor-force participation is paramount"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "Regional disparities and employment gaps for women, older people, foreign-born, and people with disabilities are particularly large"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "The rise in unemployment reflected an increase in labor force participation following government reforms"
+          }
+        ]
+      },
+      {
+        "title": "An open economy facing headwinds",
+        "about": "present",
+        "text": "Belgium is highly exposed to slow world trade, and wage indexation has eroded exporters' price competitiveness. Its industry faces a large energy-cost gap with rivals in the United States and China, and the IMF expects higher US tariffs to hold back growth.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/09/oecd-economic-surveys-belgium-2024_578fb44b/c671124e-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Belgium 2024",
+            "date": "2024-09",
+            "quote": "Indexation has, however, eroded price competitiveness for exporters and Belgium is highly exposed to the slowdown in global trade"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "The cost-competitiveness gap is much larger with non-EU trade partners (including the US and China) who benefit from significantly lower energy costs."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+            "date": "2026-02",
+            "quote": "Higher US tariffs are expected to continue dampening growth in 2026-27."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth kept slowing: income per person rose just 0.3 percent in 2025. The IMF's early-2026 review describes an ambitious federal reform agenda, more people joining the labour force after reforms, and trade tensions and higher tariffs as risks to growth.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+          "date": "2026-02",
+          "quote": "The federal government has launched an ambitious reform agenda but faces challenges."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1belea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Belgium: 2026 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Belgium (IMF Country Report No. 26/49)",
+          "date": "2026-02",
+          "quote": "The rise in unemployment reflected an increase in labor force participation following government reforms"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/19/pr26057-belgium-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Belgium",
+          "date": "2026-02-23",
+          "quote": "Global and trade uncertainties, higher tariffs, or tighter financial conditions could lower growth."
+        }
+      ]
+    },
+    "tension": "The IMF calls activity solid and the OECD calls the economy resilient, yet income per person grew only 0.7, 0.4 and 0.3 percent in 2023, 2024 and 2025. In the other direction, the OECD describes subdued productivity gains over the past decade, while income per person grew faster in 2016-2025 (1.0 percent a year) than in 2006-2015 (0.6), a decade that held the 2009 fall."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "iso3": "ROU",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ROU",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "ebrd.com: Romania diagnostic PDF (January 2026), opened and text-checked",
+        "imf.org: IMF Country Report No. 25/294, Romania 2025 Article IV (press release 14 November 2025), opened and text-checked",
+        "thedocs.worldbank.org: Macro Poverty Outlook Romania PDF (October 2026), opened and text-checked",
+        "Drafter's log: WebSearch on tier 1 domains (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org) not run because the search budget was used up; pages opened directly instead",
+        "Drafter's log: oecd.org Economic Survey of Romania 2024 returned 403 and was not used",
+        "Tier 2 (UN) domains not searched: tier 1 gave 3 recent sources"
+      ],
+      "critic_changes": [
+        "Opened all three cited PDFs (EBRD Romania diagnostic, January 2026; IMF Country Report 25/294, press release dated 14 November 2025; World Bank Macro Poverty Outlook, October 2026), extracted their text locally and matched every quoted passage. All quotes appear on the pages; titles and dates match.",
+        "Thread 'A slow, unstable transition': 'income per person fell through most of the decade' was wrong. The series shows falls in only 5 of the 10 years from 1991 to 2000 (1991, 1992, 1997, 1998, 1999). Replaced it with 'in 2000 income per person was still below its 1990 level' (4,569 against 5,019 in the series).",
+        "Thread 'Catching up on loose budgets': dropped 'the sources say this model has reached its limits' because no cited passage in the thread says it. Dropped 'strong household spending' from the thread for the same reason (the arc keeps it; the EBRD says private consumption 'has boomed'). Replaced 'passed its earlier highs and kept rising to 2025' with 'reached a new peak in 2025', because income per person fell in 2020 and passed its 2008 high in 2014, before this era. Lengthened the IMF quote to the page's words so it also supports the current-account point, keeping it to 25 words.",
+        "Thread 'Emigration and a shrinking workforce': the population-decline quote did not support 'most of those who left were of working age'. Added the EBRD passage on working-age emigrants. Dropped the World Bank TFP citation to stay within 3 citations and removed the productivity sentence it supported. The arc's 'productivity growth stayed low' rests on the IMF report.",
+        "since_last_year: the quoted passages did not support the wage and pension freeze or the energy shock. Added a third World Bank passage that states both (the PDF's line-break hyphen in 'com-pressed' is removed). Changed 'a new energy price shock' to 'higher energy prices'.",
+        "Tension: removed the claim that part of the rise in income per person came from a shrinking population, with the EBRD's growth since 2015 below 3.5 percent. The EBRD's 3.3 percent is GDP growth over a different window, the gap is small, and the EBRD says the population has grown since 2022, so the claim is not supported. Kept the IMF-versus-data disagreement and added avg_prior_10y (2006 to 2015: 3.7) from G1 to show it.",
+        "Checked every number against desk/data/ROU.json: the era means (-0.8, 7.8, 1.4, 3.5), 2009 -4.7, 2010 -3.3, 2024 1.0, 2025 0.8, investment 37.3 (2008) and 26.0 (2009), credit 7.1 (2000) and 35.9 (2008), inflation 255.2 (1993) and 154.8 (1997), and the 2025 peak all match. Found no banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "After a lost 1990s, Romania boomed around EU entry and caught up fast, but growth in income per person slowed to 0.8 percent by 2025.",
+    "arc": "Income per person shrank by 0.8 percent a year from 1991 to 2000, as a slow move from central planning brought hyperinflation and instability, and in 2000 it was still below its 1990 level. From 2001 to 2008 it grew 7.8 percent a year as the prospect of EU membership sped up reform; Romania joined in 2007, and investment reached 37.3 percent of GDP in 2008. The 2009 to 2016 era averaged 1.4 percent: income per person fell 4.7 percent in 2009 and 3.3 percent in 2010 after the global financial crisis, then recovered slowly. Growth picked up to 3.5 percent a year from 2017 to 2025, an era the sources tie to loose fiscal and wage policy, strong household spending and EU funds, and income per person reached a new peak in 2025. That model widened the budget and current account deficits, and growth slowed to 1.0 percent in 2024 and 0.8 percent in 2025 as investment weakened and productivity growth stayed low.",
+    "threads": [
+      {
+        "title": "A slow, unstable transition",
+        "about": "history",
+        "text": "Romania moved from central planning to a market economy more slowly than some neighbours. The early years brought hyperinflation and unstable state firms: inflation reached 255.2 percent in 1993 and 154.8 percent in 1997, and in 2000 income per person was still below its 1990 level.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "The early years were marked by significant challenges, including hyperinflation, economic instability and the need to restructure SOEs."
+          }
+        ]
+      },
+      {
+        "title": "The EU accession boom",
+        "about": "history",
+        "text": "The prospect of joining the EU sped up reform in the early 2000s, and Romania joined in 2007. Bank credit to the private sector rose from 7.1 percent of GDP in 2000 to 35.9 percent in 2008, and investment climbed to 37.3 percent of GDP.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "the prospects of joining the European Union (EU) in the early 2000s accelerated the pace of reform."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rouea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Romania: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Romania",
+            "date": "2025-11-14",
+            "quote": "Average real GDP growth accelerated markedly after EU accession in 2007"
+          }
+        ]
+      },
+      {
+        "title": "Crisis and a slow recovery",
+        "about": "history",
+        "text": "The global financial crisis ended the boom: income per person fell in 2009 and 2010, and investment dropped from 37.3 percent of GDP in 2008 to 26.0 percent in 2009. Foreign investment also fell and took until 2016 to recover.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "Following a drop after the global financial crisis, foreign investment inflows into Romania had recovered by 2016"
+          }
+        ]
+      },
+      {
+        "title": "Catching up on loose budgets",
+        "about": "present",
+        "text": "From the mid-2010s growth leaned on tax cuts, rising public wages and pensions, and capital inflows including EU funds. Income per person reached a new peak in 2025, but the budget deficit widened and added to pressure on the current account.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "This accelerated pace was mainly a consequence of expansionary fiscal and wage policy, steady capital inflows (including EU funds)"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "Significant tax cuts in 2016 and 2017 reduced fiscal revenues to GDP, with only a partial recovery by 2024."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1rouea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Romania: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Romania",
+            "date": "2025-11-14",
+            "quote": "public finances have deteriorated, driven by significant increases in pension spending, public wages, and domestically financed capital expenditure, and added pressure on the current account."
+          }
+        ]
+      },
+      {
+        "title": "Emigration and a shrinking workforce",
+        "about": "present",
+        "text": "Romania's population fell sharply after 2000, and most of the people who emigrated in the past 15 years were of working age. The World Bank says a shrinking workforce and brain drain add to the pressures on the economy's capacity to grow.",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "Romania's population declined pretty dramatically, from 22.8 million in 2000 to 19.1 million in 2022."
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/country-strategies/romania/Romania-diagnostic-2026.pdf",
+            "publisher": "EBRD",
+            "title": "Romania diagnostic",
+            "date": "2026-01",
+            "quote": "Around 70 per cent of the 2 million Romanians who have emigrated in the past 15 years are of working age"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rou.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Romania",
+            "date": "2026-10",
+            "quote": "A shrinking workforce and brain drain compound these supply-side pressures."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Since mid-2025 the budget has been tightened: VAT rose in August 2025, and public wages and pensions were frozen. With higher energy prices on top, household spending fell, and the World Bank reports that the economy shrank in the first half of 2026, after income per person grew only 0.8 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rou.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Romania",
+          "date": "2026-10",
+          "quote": "The value-added tax hike to 21 percent in August 2025 lifted receipts by 25.1 percent y-o-y."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rou.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Romania",
+          "date": "2026-10",
+          "quote": "The economy contracted 0.7 percent y-o-y in H1 2026, driven by private consumption compression (down 2.5 percent)"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rou.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Romania",
+          "date": "2026-10",
+          "quote": "energy sector-driven inflation and a public wage and pension freeze compressed household purchasing power."
+        }
+      ]
+    },
+    "tension": "The IMF says average growth sped up markedly after Romania joined the EU in 2007, but in the data the fastest era is 2001 to 2008, mostly before entry, and the 2009 to 2016 era that followed averaged only 1.4 percent. Over 2006 to 2015 as a whole, income per person grew 3.7 percent a year, close to the 3.5 percent of 2016 to 2025, so the data show no clear speed-up after accession."
+  }
+}

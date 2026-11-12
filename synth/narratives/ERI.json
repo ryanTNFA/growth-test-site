@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "ERI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ERI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Eritrea economic outlook 2024 2025\"",
+        "worldbank.org: \"Eritrea Macro Poverty Outlook\"",
+        "imf.org, worldbank.org, afdb.org, oecd.org: \"Eritrea economy border war Ethiopia 1998 national service sanctions growth\"",
+        "imf.org, worldbank.org, afdb.org: \"Eritrea Bisha mine 2011 growth IMF\"",
+        "Opened: World Bank MPO Eritrea October 2026 (thedocs.worldbank.org), World Bank MPO Eritrea April 2024 (documents1.worldbank.org), IMF WP/04/7 (imf.org), World Bank Health and Education PER 2008 (documents1.worldbank.org), IMF PIN 09/133 (imf.org)",
+        "afdb.org pages returned HTTP 403 and were not used",
+        "Critic pass: re-opened all five cited URLs (PDF text extracted and searched for each quoted passage)"
+      ],
+      "critic_changes": [
+        "All five cited URLs re-opened; PDF text extracted and every quoted passage found verbatim (line-break hyphens such as 'up- grading' and 'near- ly' read as single words). Dates match the documents (MPO 2024 month taken from the PDF's April 2024 metadata).",
+        "Headline: replaced 'long isolation' as a cause of the pre-2011 fall with 'a long standoff' (the cited sources do not tie sanctions-era isolation to the 1998-2011 decline); 'back where it was in 1994' softened to 'about where it was in 1994' to match the data's level_first_reached wording.",
+        "Arc, last sentence: removed 'a decade of isolation' (no cited passage gives a decade) and rephrased to what the 2026 MPO says: reliance on mining, state-owned enterprise dominance, isolation ended when UN sanctions were lifted in 2018.",
+        "Thread 'No war, no peace': dropped 'A peace deal was signed in 2000' (not in any opened source); replaced the 9-word drought fragment with a fuller verbatim passage that actually supports 'cut the harvest sharply'.",
+        "Thread 'Isolation and the state's reach': removed 'about a decade' (unsupported); added the MPO 2026 passage on state-owned enterprise dominance, which the claim about private investment had lacked.",
+        "Thread 'Mining and the Colluli mine': added the MPO 2026 passage on export concentration and commodity price swings to support 'metal prices swing the economy'.",
+        "Thread 'A heavy public debt': replaced 'Wartime borrowing... much of it owed at home' (the IMF attributes the debt rise to war-related factors and policy decisions) with wording the passages support, and added the MPO 2024 passage on the domestic-bank share.",
+        "since_last_year: added a verbatim citation for the September 2025 power-station upgrade.",
+        "Tension: 'steady, mining-led growth since 2023' changed to 'modest, mining-supported growth in recent years' to match the source's wording.",
+        "Numbers checked against desk/data/ERI.json: 3.9 (1993-2001 era), -1.6 (2002-2011 era), peak 1998, -12.1 (2008), 6.7 (2011), 16.4 percent shortfall, 1994 level-first-reached: all correct. Other figures appear only inside quotes. No banned phrases or recommendations found."
+      ]
+    },
+    "headline": "Eritrea's early gains after independence were undone by war with Ethiopia and a long standoff; by 2011 income per person was about where it was in 1994.",
+    "arc": "After independence, income per person grew fast, and from 1993 to 2001 it rose 3.9 percent a year on average. It peaked in 1998, the year a border war with Ethiopia began; the IMF says the war drastically changed the economy's path, cutting off Ethiopia as an export market and driving up public debt. From 2002 to 2011 growth averaged -1.6 percent a year, as the country stayed mobilized in a \"no war, no peace\" standoff, with labour shortages, less trade and more state control. A severe drought made 2008 the worst year in the record, at -12.1 percent, before growth picked up to 6.7 percent in 2011, the last year in the data. By then income per person was still 16.4 percent below the 1998 peak, about where it first was in 1994. The World Bank now describes an economy that relies on mining exports, where state-owned firms dominate, emerging from long isolation after UN sanctions were lifted in 2018.",
+    "threads": [
+      {
+        "title": "Border war with Ethiopia",
+        "text": "The 1998 to 2000 war with Ethiopia ended a promising start after independence. Output fell, public debt rose fast, and Eritrea lost Ethiopia, its traditional export market.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2004/wp0407.pdf",
+            "publisher": "IMF",
+            "title": "Fiscal Sustainability: The Case of Eritrea (IMF Working Paper WP/04/7)",
+            "date": "2004-01",
+            "quote": "Following a promising start after independence in 1993, the war with Ethiopia during 1998-2000 drastically changed the performance of the Eritrean economy: GDP declined,"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2004/wp0407.pdf",
+            "publisher": "IMF",
+            "title": "Fiscal Sustainability: The Case of Eritrea (IMF Working Paper WP/04/7)",
+            "date": "2004-01",
+            "quote": "Since 1998, current account deficits have widened mainly as a result of the loss of the traditional export market of Ethiopia"
+          }
+        ]
+      },
+      {
+        "title": "No war, no peace",
+        "text": "After the war the border conflict stayed unresolved and the country stayed mobilized. Labour shortages and reduced trade weighed on the economy, and the state stepped up its control, including price controls. A severe drought in 2008 cut the harvest sharply.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/624641468021642997/pdf/386980ESW0P0900IC0disclosed04050120.pdf",
+            "publisher": "World Bank",
+            "title": "Eritrea Health and Education Sectors: Public Expenditure Review 2008",
+            "date": "2008-03-05",
+            "quote": "In this climate of instability, with labor shortages (as a result of mobilization) and reduced trade, the economy has been under strain."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/624641468021642997/pdf/386980ESW0P0900IC0disclosed04050120.pdf",
+            "publisher": "World Bank",
+            "title": "Eritrea Health and Education Sectors: Public Expenditure Review 2008",
+            "date": "2008-03-05",
+            "quote": "The government has responded through increased state intervention in the economy and the introduction of price controls."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn09133",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Executive Board Concludes 2009 Article IV Consultation with the State of Eritrea",
+            "date": "2009-12-11",
+            "quote": "Severe drought in 2008 resulted in a harvest that was \"one-fourth of that of the previous year\""
+          }
+        ]
+      },
+      {
+        "title": "Isolation and the state's reach",
+        "text": "UN sanctions left Eritrea in long isolation until 2018, and growth leaned on domestic sources. The World Bank says state-owned firms and regulation still hold back private investment.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eritrea, October 2026",
+            "date": "2026-10",
+            "quote": "Following the lifting of the United Nations (UN) sanctions in 2018, Eritrea emerged from prolonged isolation, having relied largely on domestic growth."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eritrea, October 2026",
+            "date": "2026-10",
+            "quote": "Private sector investment remains constrained by state-owned enterprise dominance and regulatory restrictions."
+          }
+        ]
+      },
+      {
+        "title": "Mining and the Colluli mine",
+        "text": "Zinc, copper and gold now earn almost all of Eritrea's export income, so metal prices swing the economy. A Chinese firm bought half of the Colluli potash mine in 2023, and the World Bank expects it to start producing by end-2027.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eritrea, October 2026",
+            "date": "2026-10",
+            "quote": "These three minerals account for more than 95 percent of Eritrea’s export earnings."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eritrea, October 2026",
+            "date": "2026-10",
+            "quote": "Exports are highly concentrated in zinc, copper, and gold, exposing the economy to commodity price swings and changes in demand from China."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Eritrea, October 2026",
+            "date": "2026-10",
+            "quote": "In early 2023, the Chinese company Sichuan Road and Bridge Group acquired a 50 percent stake in the Colluli potash mine"
+          }
+        ]
+      },
+      {
+        "title": "A heavy public debt",
+        "text": "The war years drove up public debt, both at home and abroad. The World Bank says most of it is now owed to domestic banks and describes the country as in debt distress.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2004/wp0407.pdf",
+            "publisher": "IMF",
+            "title": "Fiscal Sustainability: The Case of Eritrea (IMF Working Paper WP/04/7)",
+            "date": "2004-01",
+            "quote": "However, the most significant change was the sharp deterioration of the public finances and rapid increase in domestic and external public debt,"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099500004052435073/pdf/IDU1c0784fac1989a140e6182dd111c10ec0e5bd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Eritrea: April 2024",
+            "date": "2024-04",
+            "quote": "Public debt was estimated at around 219 percent of GDP at end-2023, of which nearly 80 percent is owed to domestic banks."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099500004052435073/pdf/IDU1c0784fac1989a140e6182dd111c10ec0e5bd.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Eritrea: April 2024",
+            "date": "2024-04",
+            "quote": "The country is in debt distress"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The World Bank reports that strong mining output and household spending lifted growth in 2025. It also notes work begun in September 2025 to upgrade the two main power stations, and lists recent tensions with Ethiopia among the risks.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Eritrea, October 2026",
+          "date": "2026-10",
+          "quote": "Real GDP growth increased to 3.2 percent in 2025, supported by strong mining output and private consumption"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-eri.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Eritrea, October 2026",
+          "date": "2026-10",
+          "quote": "In September 2025, Eritrea embarked on upgrading of its two main power stations at Beleza and Hirgigo"
+        }
+      ]
+    },
+    "tension": "The World Bank describes modest, mining-supported growth in recent years, but the data here end in 2011, and the World Bank itself says national accounts are unpublished. So the record cannot show whether recent growth has lifted income per person above its 1998 peak. The World Bank also expects income per person to grow only slowly."
+  }
+}

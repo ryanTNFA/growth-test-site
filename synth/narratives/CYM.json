@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "CYM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CYM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "caribank.org, imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com (tier 1): 'Cayman Islands economic review growth'",
+        "caribank.org: 'Caribbean Development Bank Cayman Islands country economic review 2024'",
+        "imf.org, worldbank.org, oecd.org, iadb.org, caribank.org: 'Cayman Islands economy global financial crisis 2009 contraction tourism financial services'",
+        "caribank.org: 'Caribbean Economic Review and Outlook 2024-2025 Cayman Islands'",
+        "imf.org: 'Cayman Islands IMF country report 2009 offshore financial center assessment' (elibrary page returned 403; not cited)",
+        "Critic check, caribank.org: 'Caribbean Economic Review and Outlook 2025-2026 Caribbean Development Bank'; 'Country Economic Review 2022 Cayman Islands'",
+        "Critic opened: highlights-2009-activities; CAY CER 2018_final.pdf; CDB Cayman Economic Review 2022 PDF and landing page; CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf and its landing page; economic-reviews listing (dates: 2025-26 review Apr 22, 2026; Cayman CER 2022 Nov 6, 2023)",
+        "Tier 2 (UN) not searched: tier 1 gave 2 recent sources"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/CYM.json: 12.3 percent shortfall, the 2007 peak, -2.8 (2007-2014), 1.1 (2015-2024), -9.8 (2009), -6.8 (2020), 2.7 to 3.7 (2021-2023), 0.4 to 0.9 (2015-2017), below 2006, and income per person under its 2019 level until 2023 all match; none changed.",
+        "All cited passages were found word for word in the opened pages (the PDFs were read through extracted text). The 2009 highlights date 2010-01-28 is the release date printed on the page (the page's web 'Published on' date is 2012-05-21).",
+        "Country Economic Review 2022 - Cayman Islands: date made more precise, from '2023' to '2023-11', using the CDB economic-reviews listing (Nov 6, 2023). The PDF itself prints no date.",
+        "Caribbean Economic Review and Outlook 2025 - 2026: date made more precise, from '2026-04' to '2026-04-22', using the CDB listing (Apr 22, 2026).",
+        "Arc: the claim that output fell 'more sharply in 2009 than in most of the region' now says what the source says: Cayman was among the few economies where output fell by more than 5 percent. The causes the CER 2017 gives are now limited to the early years of the 2015-2024 era, because that review covers only up to 2017. 'the reopening of tourism brought growth' was softened to 'as tourism reopened'.",
+        "Thread 'Financial crisis hits finance': dropped 'mainly through its financial sector, the core of the economy', which the cited passages do not support (the 2009 CDB page names tourism and FDI as the main regional channels). 'A decade later' became 'in 2016' to match the quote.",
+        "Thread 'Tourism and services lead recovery': 'stayover tourism' became 'tourism', because the source says only 'a boom in tourism'. The second quote now runs to the full sentence, so it also supports 'finance grew again, but only modestly'.",
+        "Thread 'Pandemic shock, tourism rebound': changed from 'present' to 'history', because it describes 2020-2022. 'Closed borders' became 'the pandemic', because the cited passages do not mention border closures.",
+        "Thread 'Finance under global rules' was renamed 'Finance under outside scrutiny'. The unsupported claim that the sector 'depends on rules set abroad' was reworded.",
+        "since_last_year: added a citation for the claim that tourism slowed across the Caribbean in 2025, and one for financial services expanding, because the draft's citations did not support either claim. The 'Arrivals also increased' passage sits in the report's stayover-arrivals paragraph, so 'stayover arrivals still rose' holds.",
+        "No banned phrases and no recommendation or verdict language were found. Two distinct recent tier 1 sources remain (CDB Country Economic Review 2022, Nov 2023; CDB Caribbean Economic Review and Outlook 2025-2026, Apr 2026), so the story stays tier 1."
+      ]
+    },
+    "headline": "The Cayman Islands' income per person fell hard after 2007 and has climbed back slowly since 2015, but in 2024 it was still 12.3 percent below its 2007 peak.",
+    "arc": "Income per person in the Cayman Islands peaked in 2007 and then fell for most of the next seven years: from 2007 to 2014 it shrank by 2.8 percent a year, with the deepest drop, 9.8 percent, in 2009. The Caribbean Development Bank traces that slump to the global financial crisis, which hit the islands' financial sector hard, and it counted Cayman among the few economies in the region where output fell by more than 5 percent in 2009. From 2015 to 2024 growth turned positive, at 1.1 percent a year; for the early years of that recovery the bank credits a boom in tourism and a shift towards professional, scientific and technical services, while finance returned to modest growth. The pandemic broke the recovery in 2020, when income per person fell 6.8 percent, but as tourism reopened growth ran at between 2.7 and 3.7 percent a year from 2021 to 2023. Even so, income per person in 2024 was still 12.3 percent below its 2007 peak, and lower than in 2006, the first year of the record.",
+    "threads": [
+      {
+        "title": "Financial crisis hits finance",
+        "about": "history",
+        "text": "The 2008-09 global crisis hit the Cayman Islands' financial sector hard. Output fell harder in 2009 than in most of the region, and finance's direct share of the economy was smaller in 2016 than in 2007.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/newsroom/news-and-events/highlights-2009-activities",
+            "publisher": "Caribbean Development Bank",
+            "title": "Highlights of CDB's Activities in 2009 and Economic Background and Prospects",
+            "date": "2010-01-28",
+            "quote": "Antigua and Barbuda and Cayman Islands recorded declines that were in excess of 5%"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "The Cayman Islands economy has gradually picked up pace since the global financial crisis, which had a significant negative impact on the financial sector."
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "In 2016, the financial sector made a direct contribution of 14.3% to GDP, down from close to 19% in 2007"
+          }
+        ]
+      },
+      {
+        "title": "Tourism and services lead recovery",
+        "about": "history",
+        "text": "The return to growth after 2015 rested on a boom in tourism and on new business in professional, scientific and technical services. Finance grew again, but only modestly.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "This diversification, together with a boom in tourism, pushed the growth rate of the economy close to pre-crisis levels"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "Since 2014, the sector has returned to stable, albeit modest, growth and the economy has reaped the benefits from diversification to professional, scientific, and …"
+          }
+        ]
+      },
+      {
+        "title": "More workers, more people",
+        "about": "history",
+        "text": "Growth after the crisis drew in many foreign workers. Skills shortages pushed up the number of work permits and the population grew quickly, so total output could rise faster than income per person.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "skills shortages in the local economy led to strong growth in the number of work permits issued"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CAY%20CER%202018_final.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Cayman Islands Country Economic Review 2017",
+            "date": "2018",
+            "quote": "leading also to very healthy population growth of 1.8% on average between 2010 and 2016"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic shock, tourism rebound",
+        "about": "history",
+        "text": "The pandemic hit tourism in 2020, when income per person fell 6.8 percent. The islands reopened in phases, which held back visitor numbers, but output passed its 2019 level in 2022 as tourism and transport recovered.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20Cayman%20Economic%20Review%20-%2011%20x%208_5_0.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Cayman Islands",
+            "date": "2023-11",
+            "quote": "Economic output exceeded its 2019 levels following a 3.7% rise in real gross domestic product (GDP)."
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20Cayman%20Economic%20Review%20-%2011%20x%208_5_0.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Cayman Islands",
+            "date": "2023-11",
+            "quote": "The slow reopening of the tourism sector restricted the recovery of stayover arrivals."
+          }
+        ]
+      },
+      {
+        "title": "Finance under outside scrutiny",
+        "about": "present",
+        "text": "The financial sector is still watched by outside rule-setters: in 2022 the islands remained on the grey list of the global anti-money-laundering watchdog. Activity kept growing, and in 2025 insurance licences, fund registrations and new company registrations all rose.",
+        "citations": [
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB%20-%20Cayman%20Economic%20Review%20-%2011%20x%208_5_0.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Country Economic Review 2022 - Cayman Islands",
+            "date": "2023-11",
+            "quote": "Cayman remained on FATF’s grey list having not fully implemented the necessary reforms to address strategic deficiencies in its AML regime"
+          },
+          {
+            "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+            "publisher": "Caribbean Development Bank",
+            "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+            "date": "2026-04-22",
+            "quote": "Cayman Islands reported solid increases in the number of insurance licenses, total fund registrations and registrations of new companies and partnerships."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 tourism slowed across the Caribbean. In the Cayman Islands stayover arrivals still rose while cruise passenger arrivals fell, and activity in financial services kept expanding. The data file ends in 2024, so these changes are not yet in the numbers.",
+      "citations": [
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04-22",
+          "quote": "Tourism momentum moderated across service‑exporting BMCs in 2025, following strong growth in the post‑pandemic period"
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04-22",
+          "quote": "Arrivals also increased in Anguilla, Barbados, Belize, Cayman Islands, and St. Kitts and Nevis"
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04-22",
+          "quote": "several destinations including Antigua and Barbuda, Cayman Islands, Jamaica, Montserrat, and Saint Lucia experienced declines"
+        },
+        {
+          "url": "https://www.caribank.org/sites/default/files/publication-resources/CDB-AnnualRegionalEconomicReview-2025-26-Apr20.pdf",
+          "publisher": "Caribbean Development Bank",
+          "title": "Caribbean Economic Review and Outlook 2025 - 2026",
+          "date": "2026-04-22",
+          "quote": "Activity in the non‑bank financial sector of international financial centres expanded in 2025."
+        }
+      ]
+    },
+    "tension": "The sources describe recoveries that look stronger than the income per person record. The Caribbean Development Bank said growth after the crisis came close to pre-crisis rates, yet income per person grew only 0.4 to 0.9 percent a year in 2015-2017. It also reported that output passed its 2019 level in 2022, while income per person stayed below its 2019 level until 2023. The bank's reports of fast population growth from rising work permits point to the gap: total output grew, but it was shared among more people."
+  }
+}

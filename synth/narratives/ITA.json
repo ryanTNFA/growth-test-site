@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "iso3": "ITA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ITA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Italy IMF Article IV 2025 staff concluding statement growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: OECD Economic Survey of Italy 2024 productivity ageing",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Italy lost decades productivity stagnation since 1990s euro sovereign debt crisis IMF",
+        "imf.org, oecd.org, worldbank.org: Italy 2011 sovereign debt crisis spreads recession fiscal consolidation IMF article IV 2013",
+        "opened: imf.org IMF Country Report 26/193 (2026 Article IV), 25/201 (2025 Article IV), 24/240 (2024 Article IV), 15/167 (2015 Selected Issues), 12/167 (2012 Article IV); imf.org 2026 press release, 2025 concluding statement and 2025 country focus article",
+        "oecd.org Economic Survey pages (2024, 2026) returned HTTP 403 and were not cited",
+        "critic: re-opened all five cited imf.org PDFs and checked every quoted passage and date against the extracted text"
+      ],
+      "critic_changes": [
+        "Checked all 14 quoted passages against text extracted from the five cited imf.org PDFs (Country Reports 26/193, 25/201, 24/240, 15/167, 12/167). All appear verbatim, and every publication date (July 2026, 2025, 2024, 2015, 2012) matches the report's cover. Every citation kept.",
+        "Arc: cut from 7 sentences to 6, within the 4 to 6 limit, by merging the 2007–2014 era sentence with the 2009 global financial crisis fall. No numbers changed.",
+        "Thread 'Productivity stalled for decades': dropped 'jobs concentrated in small, older firms'. The 2026 report says this, but no cited passage does. Replaced 'Its 2025 and 2026 reports say this is still the case' with a sentence on the 2026 report only, because the thread cites no 2025 report.",
+        "Thread 'Two crises, one long slump': dropped 'The global financial crisis hit firms' profits', which the cited passages do not support. The 2015 passage is about loan losses hurting banks' profits. The thread now says the 2011 recession began in the middle of 2011 (2012 report) and that output passed its level from before the financial crisis only in 2024 (2024 report). That replaces 'output stayed below its 2007 level for years'.",
+        "since_last_year: added a citation from the 2026 report naming the war in the Middle East and the jump in energy prices, because no cited passage supported the sentence about the war.",
+        "Numbers: checked every figure in the headline, arc, threads, since_last_year and tension against desk/data/ITA.json: era means 1.3, -1.3 and 1.3; yearly growth -5.9, -3.4, -2.0, -8.4, 9.5, 5.0, 1.0, 0.8 and 0.6; G1 1.3 and -0.8; G3 at its peak in 2025, a level first reached in 2007. All match, and none were changed.",
+        "The tension's 'below the euro area average' is in the 2026 report: 'at a rate below the euro area average'. It was kept. No recommendation language or banned phrases were found. The story keeps tier 1, with 3 distinct recent tier 1 sources (2024, 2025 and 2026)."
+      ]
+    },
+    "headline": "Italy's income per person fell through two crises after 2007 and is only now about back to that level, with growth held down by weak productivity and ageing.",
+    "arc": "From 1990 to 2006 income per person grew 1.3 percent a year, while the IMF found that productivity had stopped rising from the late 1990s. From 2007 to 2014 it shrank 1.3 percent a year, with a fall of 5.9 percent in 2009 in the global financial crisis. Then the euro area debt crisis brought a second recession, with falls of 3.4 percent in 2012 and 2.0 percent in 2013, as confidence fell, credit tightened and banks' bad loans piled up. Since 2015 growth has again averaged 1.3 percent a year, but the era holds a pandemic fall of 8.4 percent in 2020 and a rebound of 9.5 percent in 2021 and 5.0 percent in 2022, led by services, tourism and construction backed by tax credits. Growth then eased to 1.0 percent in 2023, 0.8 in 2024 and 0.6 in 2025, with investment under the EU-funded recovery plan helping to hold it up. Income per person reached its highest level yet in 2025, but that is about where it first stood in 2007, and over 2006–2015 it fell 0.8 percent a year before rising 1.3 percent a year over 2016–2025.",
+    "threads": [
+      {
+        "title": "Productivity stalled for decades",
+        "text": "The IMF traces Italy's slow growth to productivity that has barely risen since the late 1990s. It links this to a hard business climate, a split labor market and little competition in services. Its 2026 report says Italy is still caught in a cycle of low productivity and low growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15167.pdf",
+            "publisher": "IMF",
+            "title": "Italy: Selected Issues (IMF Country Report No. 15/167)",
+            "date": "2015-07",
+            "quote": "Italy's productivity has been stagnant since the late 1990s."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2012/cr12167.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2012 Article IV Consultation (IMF Country Report No. 12/167)",
+            "date": "2012-07",
+            "quote": "The difficult business environment, fragmented labor market, and limited service competition have contributed to Italy's weak growth performance and loss in competitiveness."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+            "date": "2026-07",
+            "quote": "persistent challenges are keeping Italy in a low-productivity, low-growth cycle"
+          }
+        ]
+      },
+      {
+        "title": "Two crises, one long slump",
+        "text": "From the middle of 2011 the euro area debt crisis pushed Italy into a second recession as confidence fell and credit tightened. Loan losses then hurt banks' profits and slowed the recovery, so output did not pass its level from before the global financial crisis until 2024.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2012/cr12167.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2012 Article IV Consultation (IMF Country Report No. 12/167)",
+            "date": "2012-07",
+            "quote": "concerns about the fiscal outlook and the euro area crisis depressed confidence and tightened credit conditions"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15167.pdf",
+            "publisher": "IMF",
+            "title": "Italy: Selected Issues (IMF Country Report No. 15/167)",
+            "date": "2015-07",
+            "quote": "Loan losses have depressed profitability and hindered Italy's recovery."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1itaea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2024 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 24/240)",
+            "date": "2024-07",
+            "quote": "finally exceeding the level that prevailed 15 years ago prior to the global financial crisis (GFC)"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic rebound and recovery plan",
+        "text": "After the 2020 fall, services, tourism and building work boosted by home-renovation tax credits drove a quick rebound. As those tax credits were cut back, investment under the EU-funded National Recovery and Resilience Plan became a main support for growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1itaea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2024 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 24/240)",
+            "date": "2024-07",
+            "quote": "The recovery was mostly driven by the robust expansion of services (including tourism) and tax credit-boosted construction"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1itaea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 25/201)",
+            "date": "2025-07",
+            "quote": "NRRP-related infrastructure investment remained a key driver of growth and helped offset slower activity in the residential segment as Superbonus spending was curtailed."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+            "date": "2026-07",
+            "quote": "Real GDP grew by 0.5 percent in 2025, in part supported by continued investment under the National Recovery and Resilience Plan (NRRP)."
+          }
+        ]
+      },
+      {
+        "title": "A shrinking, ageing workforce",
+        "text": "Births have fallen for decades and dropped sharply after the global financial crisis, so the number of people of working age has been falling. The IMF expects this, together with weak productivity, to keep growth slow over the medium term.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1itaea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2024 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 24/240)",
+            "date": "2024-07",
+            "quote": "A secular decline in fertility since the 1960s, exacerbated by a collapse in the number of births since the GFC"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+            "date": "2026-07",
+            "quote": "Italy's working-age population has been shrinking for more than a decade"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1itaea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Italy: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 25/201)",
+            "date": "2025-07",
+            "quote": "Productivity growth is weak, including amid a slow rate of innovation, and Italy continues to wrestle with a shortage of high-skilled workers"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 0.6 percent in 2025, the slowest of the last three years, while employment stayed near record highs. In 2026 a war in the Middle East pushed up world energy prices. The IMF's July 2026 report says inflation picked up because Italy relies on imported fuel, and it expects growth to stay slow.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+          "date": "2026-07",
+          "quote": "the recent surge in global energy prices following the war in the Middle East has put economic growth in jeopardy"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+          "date": "2026-07",
+          "quote": "Amid the increase in global energy prices, domestic inflation has picked up, reflecting Italy's dependence on imported fossil fuels."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1itaea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Italy: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Italy (IMF Country Report No. 26/193)",
+          "date": "2026-07",
+          "quote": "employment in Italy has remained at around historic highs for the past several months"
+        }
+      ]
+    },
+    "tension": "The data show income per person at its highest level yet in 2025, and the latest era (2015–2025) growing 1.3 percent a year, as fast as 1990–2006. The IMF instead describes a modest pace below the euro area average. The gap narrows on a closer look. The era average is lifted by the 9.5 percent rebound in 2021 after the 8.4 percent fall in 2020. Yearly growth since 2023 has been 1.0 percent or less. And the 2025 peak is only about the level first reached in 2007, so the record mostly marks lost ground won back, not fast growth."
+  }
+}

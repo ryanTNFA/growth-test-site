@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "iso3": "EGY",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "EGY",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Egypt IMF Article IV 2025 staff report review Extended Fund Facility",
+        "same tier 1 domains: Egypt Macro Poverty Outlook World Bank 2025",
+        "same tier 1 domains: Egypt 2016 floatation reform program growth after 2011 revolution slowdown investment",
+        "same tier 1 domains: Egypt country economic memorandum World Bank 2024 private sector growth jobs",
+        "same tier 1 domains: Egypt IMF December 2022 Extended Fund Facility war in Ukraine capital outflows press release",
+        "Critic, same tier 1 domains: Egypt IMF press release December 2025 Extended Fund Facility staff-level agreement",
+        "Opened: thedocs.worldbank.org MPO Egypt (October 2026); imf.org press releases of 2026-02-26, 2025-12-22, 2025-03-11, 2022-12-16; imf.org country report page 2025-07-15; worldbank.org feature 2025-11-24; imf.org articles 2016-11-11 and 2018-01-23; documents1.worldbank.org Report No. 100978-EG (2015-11-23)",
+        "Critic re-opened every cited URL: thedocs.worldbank.org mpo-egy.pdf, documents1.worldbank.org Report No. 100978-EG, imf.org 2016-11-11, 2018-01-23, 2022-12-16, 2025-03-11, 2026-02-26, worldbank.org feature 2025-11-24"
+      ],
+      "critic_changes": [
+        "All 8 cited URLs opened (the two World Bank PDFs read after text extraction). All are on tier 1 domains, and every quote was found on its page. Every number in the headline, arc, threads, since_last_year and tension matches desk/data/EGY.json once rounded: 1,972 and 4,253; 2.2, 2.6, 2.3 and 2.4; 4.8 to 5.2; -0.4; 3.4 and 3.7; 0.6 and 2.8; 18.8 and 11.7; and inflation of 29.5 and 33.9 from FP.CPI.TOTL.ZG in series. Headline is 156 characters, and no banned phrases appear.",
+        "Thread 'Revolution and stalled years': replaced the quote with the page's next sentence ('due to the negative economic ramifications and policy uncertainty following the 2011 revolution'). The draft's quote did not support the thread's claim about policy uncertainty. Also corrected the document title to the page's wording, which includes 'in the Amount of US$1,000 Million'.",
+        "Thread 'The 2016 float and recovery': the draft's 2016 quote ended in a full stop where the page continues. Extended it to the page's full clause. Corrected the 2018 IMF article's date from '2018-01' to 2018-01-23, the date the page shows.",
+        "Thread 'Outside shocks since 2022': extended the 2022 quote to 'which triggered capital outflows' so that it supports the outflows claim. The draft said growth slowed in 2024 'before' the March 2024 exchange-rate move, which gets the order wrong. Rewrote it as a separate sentence and added a citation for it from the 2025-03-11 IMF press release ('Shift to a flexible exchange rate regime in March 2024...').",
+        "Thread 'The state's large footprint': changed 'Over the same years' to 'Meanwhile', because no span of years had been named.",
+        "since_last_year: the claim about what drove growth had no citation, so added the MPO passage on its drivers. The draft quote 'US$9.2 billion in capital outflows...' was extended to the full sentence as the page prints it. Added 'before conditions settled', because the MPO says conditions later stabilized.",
+        "tension: extended the MPO quote to include 'roughly half the increase in the working-age population', which the draft's jobs claim relied on. Softened 'The gap is the growing population' to 'Most of the gap', because the MPO counts fiscal years, not calendar years.",
+        "tier1_recent_found left at 6. Four recent tier 1 sources were re-verified as cited (MPO 2026-10, IMF 2026-02-26, World Bank 2025-11-24, IMF 2025-03-11). A tier 1 search also confirmed the IMF 2025-12-22 press release exists."
+      ]
+    },
+    "headline": "Egypt's income per person has grown a steady 2.2 percent a year since 1990, through a revolution, two currency upheavals and a Red Sea shock, to a new high.",
+    "arc": "Since 1990 Egypt's income per person has grown at about 2.2 percent a year with no lasting change in pace, more than doubling from 1,972 to 4,253 constant dollars, a level first reached in 2025 and its highest yet. Within that one long era there were sharp swings: growth ran at 4.8 to 5.2 percent a year in 2006–2008, then sat at or just below zero from 2011 to 2013, which the World Bank ties to policy uncertainty after the January 2011 revolution. Growth came back after the IMF-supported program of November 2016 let the pound float, and it averaged 2.6 percent in 2016–2025, against 2.3 percent in 2006–2015. From 2022 the IMF describes new strain from Russia's war in Ukraine and capital outflows, then Red Sea disruptions from December 2023 that cut Suez Canal earnings; inflation reached 33.9 percent in 2023 and growth in income per person fell to 0.6 percent in 2024. It picked up to 2.8 percent in 2025 after a move to a flexible exchange rate in March 2024, while investment fell to 11.7 percent of GDP in 2024 and 2025 and the IMF and World Bank keep pointing to the state's large role in the economy.",
+    "threads": [
+      {
+        "title": "Revolution and stalled years",
+        "text": "After the January 2011 revolution, income per person stopped growing: growth was -0.4 percent in 2011 and just below zero in 2012 and 2013. The World Bank links the slowdown to the fallout and policy uncertainty that followed, after faster growth in the late 2000s.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/630471468186542188/pdf/100978-PGD-P157704-R2015-0233-1-Box393255B-OUO-9.pdf",
+            "publisher": "World Bank",
+            "title": "Program Document for a Proposed Loan in the Amount of US$1,000 Million to the Arab Republic of Egypt for a First Fiscal Consolidation, Sustainable Energy and Competitiveness Programmatic Development Policy Financing (Report No. 100978-EG)",
+            "date": "2015-11-23",
+            "quote": "due to the negative economic ramifications and policy uncertainty following the 2011 revolution"
+          }
+        ]
+      },
+      {
+        "title": "The 2016 float and recovery",
+        "text": "In November 2016 Egypt began an IMF-supported program and moved away from a fixed pound, which the IMF said had been overvalued. Prices jumped, with inflation at 29.5 percent in 2017, but growth in income per person rose to 3.4 percent in 2018 and 3.7 percent in 2019.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2016/11/11/na111116-a-chance-for-change-egypt",
+            "publisher": "IMF",
+            "title": "A Chance for Change: IMF Agreement to Help Bring Egypt's Economy to Its Full Potential",
+            "date": "2016-11-11",
+            "quote": "A flexible exchange rate regime to remove overvaluation, rebuild reserves, and provide buffers for external shocks"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2018/01/22/na012318-egypt-time-to-entrench-growth-and-make-it-more-inclusive",
+            "publisher": "IMF",
+            "title": "Egypt: Time to Entrench Growth and Make It More Inclusive",
+            "date": "2018-01-23",
+            "quote": "The floating of the pound and initial steps to improve the business climate have helped boost growth."
+          }
+        ]
+      },
+      {
+        "title": "Outside shocks since 2022",
+        "text": "Russia's war in Ukraine set off capital outflows in 2022, and from December 2023 attacks on Red Sea shipping cut Suez Canal earnings. Inflation reached 33.9 percent in 2023 and growth in income per person slowed to 0.6 percent in 2024. In March 2024 Egypt moved to a flexible exchange rate.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/12/16/pr22441-egypt-imf-executive-board-approves-46-month-usd3b-extended-arrangement",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves 46-month US$3 billion Extended Arrangement for Egypt",
+            "date": "2022-12-16",
+            "quote": "exacerbated by Russia’s war in Ukraine which triggered capital outflows"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/03/11/pr-2558-egypt-imf-completes-4th-rev-eff-arrangement-under-rsf-concl-2025-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Fourth Review of the Extended Fund Facility Arrangement for Egypt, Approves the Request for an Arrangement Under the Resilience and Sustainability Facility, and Concludes the 2025 Article IV Consultation",
+            "date": "2025-03-11",
+            "quote": "Trade disruptions in the Red Sea since December 2023 reduced foreign exchange inflows from the Suez Canal by US$6 billion"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/03/11/pr-2558-egypt-imf-completes-4th-rev-eff-arrangement-under-rsf-concl-2025-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Fourth Review of the Extended Fund Facility Arrangement for Egypt, Approves the Request for an Arrangement Under the Resilience and Sustainability Facility, and Concludes the 2025 Article IV Consultation",
+            "date": "2025-03-11",
+            "quote": "Shift to a flexible exchange rate regime in March 2024: gaps with the parallel rate remain closed"
+          }
+        ]
+      },
+      {
+        "title": "The state's large footprint",
+        "text": "The IMF and the World Bank both describe a state that is heavily present in the economy, through many state-owned firms. Meanwhile investment fell from 18.8 percent of GDP in 2019 to 11.7 percent in 2024 and 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/26/pr-26064-egypt-imf-completes-5th-and-6th-revs-under-ext-arrange-under-eff-and-1st-rev-under-rsa",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Fifth and Sixth Reviews Under the Extended Arrangement Under the Extended Fund Facility and First Review Under the Resilience and Sustainability Arrangement for Egypt",
+            "date": "2026-02-26",
+            "quote": "Decisive efforts to reduce the state’s footprint in the economy are essential to crowd in private investment."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/feature/2025/11/24/more-jobs-better-jobs-the-engine-for-egypt-s-future-growth",
+            "publisher": "World Bank",
+            "title": "More Jobs, Better Jobs: the Engine for Egypt’s Future Growth",
+            "date": "2025-11-24",
+            "quote": "State-owned enterprises remain prominent, with 561 entities active in 18 sectors."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The World Bank reports that growth picked up in the year to June 2026, led by household spending, investment, manufacturing and tourism. A regional conflict in early 2026 brought capital outflows and a weaker pound before conditions settled, and by October 2026 the World Bank said inflation was rising again.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-egy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Arab Republic of Egypt",
+          "date": "2026-10",
+          "quote": "Growth was driven by private consumption and investment, alongside non-oil manufacturing, tourism, and information and communication technologies."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-egy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Arab Republic of Egypt",
+          "date": "2026-10",
+          "quote": "Early conflict pressures included US$9.2 billion in capital outflows in March and currency depreciation of about 17 percent."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-egy.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Arab Republic of Egypt",
+          "date": "2026-10",
+          "quote": "However, inflationary pressures are re-emerging and constraining poverty reduction."
+        }
+      ]
+    },
+    "tension": "The sources talk about growth in the whole economy, which the World Bank puts well above the growth in income per person in the data: 2.4 percent a year over 2006–2025. Most of the gap is the growing population, and the World Bank adds that new jobs have kept pace with only about half of the rise in working-age people. (World Bank, Macro Poverty Outlook, October 2026: \"real GDP grew 4.4 percent annually, generating about 0.6 million jobs a year, roughly half the increase in the working-age population\")"
+  }
+}

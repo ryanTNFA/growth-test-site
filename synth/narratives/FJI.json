@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "FJI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "FJI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Fiji Article IV consultation 2025 IMF staff report growth tourism\"",
+        "tier 1 domains: \"Fiji economic update World Bank 2025 growth\"",
+        "tier 1 domains: \"Fiji coups 2006 2000 growth sugar industry decline economy\"",
+        "tier 1 domains: \"Fiji COVID-19 tourism collapse 2020 economy contracted recovery 2022\"",
+        "opened (critic check): imf.org pr26178 (2026 Article IV press release), imf.org IMF Country Report 23/238 (2023 Article IV staff report), thedocs.worldbank.org Macro Poverty Outlook Fiji (October 2026), thedocs.worldbank.org Pacific Economic Update May 2026, documents1.worldbank.org Fiji Systematic Country Diagnostic 2017"
+      ],
+      "critic_changes": [
+        "All 9 quoted passages were checked against the text of the opened pages. Every one appears word for word, and the dates hold: SDC 2017 (Report No. 116491-FJ), IMF Country Report 23/238 dated June 2023, Pacific Economic Update May 2026, MPO October 2026, IMF PR26/178 dated 29 May 2026.",
+        "Arc: 'which the World Bank calls the economy's main driver of growth' is not in any cited page (the SDC names TFP as the main driver in 2011–15). Replaced with 'a major driver of activity in Fiji', which is how the Pacific Economic Update May 2026 puts it.",
+        "Tourism thread: 'when they reopened in late 2021' is not supported. The IMF passage dates the rebound to 2022, so it now says 'when travel reopened it rebounded strongly in 2022'. 'Largest swings in the data' is now 'largest yearly swings in income per person since 1961' (-17.2 in 2020 and +17.4 in 2022 are the series extremes).",
+        "Emigration thread: the cited IMF passage did not support 'props up household spending'. Added an MPO October 2026 passage on remittances supporting household consumption, and changed the wording to 'supports household spending'.",
+        "Trade preferences thread: the sugar claim had no citation, so an SDC passage on sugar's dependence on EU preferential access was added. 'Garment factories closed' was softened to 'the garment industry declined after 2000', matching the source.",
+        "Cyclones thread: the Cyclone Winston claim had no quoted support and was dropped. The Cyclone Evan claim now cites the SDC passage that ties it to lower sugar output and tourist arrivals.",
+        "Coups thread: 'decade of stagnation' became 'period of stagnation', matching the SDC's 'Stagnation (2001‒10)'.",
+        "Tension reframed: the SDC cites IMF 1995, so its claim covers only the period up to the mid-1990s. The data agree up to 1995 (14.2 against 12.5 in 1990), and the disagreement is the jump to 26.0 in 1998. All figures come from series NE.GDI.FTOT.ZS.",
+        "tier1_recent_found changed from 5 to 4. Only four recent tier 1 sources were cited and verified; the World Bank CEM brief listed in the draft was never cited or checked.",
+        "All numbers were checked against desk/data/FJI.json: era means 2.3/0.2/2.6, G1 2.2 and prior 1.8, yearly growth -17.2/-4.5/17.4/8.9/2.7, falls in 2000/2007/2009, investment 12.5/14.2/26.0, and peak level in 2025. All are correct."
+      ]
+    },
+    "headline": "Fiji's income per person stalled through a decade of coups and lost trade deals, then climbed to a new high on tourism despite the pandemic collapse.",
+    "arc": "Fiji's income per person grew 2.3 percent a year in 1990–1999, as the economy recovered from the 1987 coup and a garment industry grew up on trade deals with Australia, New Zealand and the United States. Growth then nearly stopped, at 0.2 percent a year in 2000–2009: coups in 2000 and 2006 drove out skilled people and business owners and hurt confidence, while garment trade deals and guaranteed European sugar prices came to an end. Since 2010 growth has averaged 2.6 percent a year, led by tourism, which the World Bank calls a major driver of activity in Fiji. That era also holds Fiji's sharpest swing: income per person fell 17.2 percent in 2020 and 4.5 percent in 2021 when borders closed, then rose 17.4 percent in 2022 and 8.9 percent in 2023 as visitors returned. By 2025 income per person was at its highest level yet, but growth swings more than in most economies, and the 2016–2025 average of 2.2 percent is only a little above the 1.8 percent of 2006–2015.",
+    "threads": [
+      {
+        "title": "Coups and lost confidence",
+        "about": "history",
+        "text": "Fiji had coups in 1987, 2000 and 2006. The World Bank links each one to falling confidence and investment and to waves of skilled people leaving, and calls 2001–2010 a period of stagnation; income per person fell in 2000, 2007 and 2009.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "During the following 18 months, around 1,000 people left each month—most of them professionals and business owners."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "The emigration, loss of confidence, and strained international relations were exacerbated by the third coup in 2006."
+          }
+        ]
+      },
+      {
+        "title": "Trade preferences ran out",
+        "about": "history",
+        "text": "Sugar and garments were both built on special access to rich-country markets: sugar on guaranteed prices in Europe, garments on trade deals with Australia, New Zealand and the United States. As those deals were phased out, the garment industry declined after 2000 and manufacturing began to shrink, in the same years as the flat 2000–2009 era.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "Manufacturing began to shrink in the early 2000s with the erosion of trade preferences."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "Since 2000, the garment industry has rapidly declined as trade preferences and tax concessions have been phased out."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "The sugar sector is heavily dependent on preferential access to the European Union (EU)."
+          }
+        ]
+      },
+      {
+        "title": "Tourism lifts and drops growth",
+        "about": "present",
+        "text": "Tourism is now a large part of Fiji's economy, which ties income to visitor numbers. When borders shut in 2020 the economy collapsed, and when travel reopened it rebounded strongly in 2022, giving the largest yearly swings in income per person since 1961.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1fjiea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Fiji: 2023 Article IV Consultation—Press Release; and Staff Report",
+            "date": "2023-06",
+            "quote": "As a small island dependent on tourism, Fiji’s economy contracted sharply with the pandemic and then rebounded strongly in 2022"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/a04d2954d291f783c8a729d0a7342f51-0070062026/original/Pacific-Economic-Update-May-2026-Full-report.pdf",
+            "publisher": "World Bank",
+            "title": "Pacific Economic Update, May 2026",
+            "date": "2026-05",
+            "quote": "Fiji’s tourism sector comprises about one third of output and roughly one quarter of jobs"
+          }
+        ]
+      },
+      {
+        "title": "Emigration and money sent home",
+        "about": "present",
+        "text": "Skilled workers keep leaving, now often through Australian and New Zealand work schemes, which leaves gaps in tourism, health care and building. The money they send home has grown and supports household spending.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-fji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Fiji (October 2026)",
+            "date": "2026-10",
+            "quote": "As a result, labor shortages have intensified in tourism, healthcare, and construction, weighing on productivity and service delivery."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1fjiea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Fiji: 2023 Article IV Consultation—Press Release; and Staff Report",
+            "date": "2023-06",
+            "quote": "Buoyed by emigration and the rise of mobile money networks, remittances have doubled since 2017"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-fji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Fiji (October 2026)",
+            "date": "2026-10",
+            "quote": "Construction and services helped offset slower tourism growth, while remittances and the VAT rate cut supported household consumption."
+          }
+        ]
+      },
+      {
+        "title": "Cyclones and climate shocks",
+        "about": "present",
+        "text": "Fiji sits in a cyclone belt. Cyclone Evan in 2012 slowed growth by hurting sugar output and tourist arrivals, and the World Bank still lists cyclones and droughts as a recurring threat to farms and infrastructure.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "Fiji is on a tropical cyclone belt, and on average, one cyclone passes through Fijian waters each year."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/529271512123603244/pdf/116491-revised-PUBLIC-ACS.pdf",
+            "publisher": "World Bank",
+            "title": "Republic of Fiji: Systematic Country Diagnostic",
+            "date": "2017",
+            "quote": "Cyclone Evan hit in 2012, one of the worst in Fiji’s history, slowing growth by damaging sugar output (−7.1 percent) and tourist arrivals (−2.5 percent)."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-fji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Fiji (October 2026)",
+            "date": "2026-10",
+            "quote": "recurring climate shocks, including tropical cyclones and El Niño droughts, continue to threaten agriculture and infrastructure."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth held up in 2025 on tourism, money sent home and government spending, with income per person up 2.7 percent. In 2026 the picture turned: higher oil prices raised living costs, and both the IMF and the World Bank now expect growth to slow this year.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/29/pr26178-fiji-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Fiji",
+          "date": "2026-05-29",
+          "quote": "Growth is expected to fall in 2026 because of higher oil prices, softer tourism demand, and elevated uncertainty."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-fji.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Fiji (October 2026)",
+          "date": "2026-10",
+          "quote": "Fiji’s post-COVID recovery is slowing as global energy shocks raise inflation and weaken growth to 2.1 percent in 2026"
+        }
+      ]
+    },
+    "tension": "The World Bank's 2017 review, citing a 1995 IMF report, says investment failed to recover after the 1987 coup for lack of confidence. The data fit that up to the mid-1990s, with investment at 14.2 percent of GDP in 1995 against 12.5 percent in 1990. But investment then jumped to 26.0 percent in 1998, and income per person grew 2.3 percent a year over the decade."
+  }
+}

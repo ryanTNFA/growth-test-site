@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "RUS",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "RUS",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "Read desk/data/RUS.json and registry/growth_story_sources.json",
+        "WebSearch (tier 1 allowed_domains): 'Russian Federation Macro Poverty Outlook 2025 growth' -- not run, session web-search budget exhausted",
+        "WebSearch (tier 1 allowed_domains): 'Russia economy sanctions growth slowdown 2024 2025' -- not run, session web-search budget exhausted",
+        "Because no searches could run, tier 1 pages were opened directly with WebFetch:",
+        "worldbank.org/en/country/russia/overview",
+        "worldbank.org/en/publication/macro-poverty-outlook and /mpo_eca (leading to thedocs.worldbank.org mpo-rus.pdf, October 2026)",
+        "worldbank.org press release 2026/10/06 'Europe and Central Asia: Slower Growth with Global Headwinds' (Russia mentioned only in passing; not cited)",
+        "worldbank.org/en/region/eca/publication/europe-and-central-asia-economic-update (no Russia text; full report on openknowledge returned 403)",
+        "worldbank.org/en/publication/global-economic-prospects (June 2026; no Russia text)",
+        "worldbank.org/en/region/eca/brief/global-economic-prospects-europe-and-central-asia (June 2022)",
+        "worldbank.org/en/region/eca/publication/growing-to-high-income-in-europe-and-central-asia (no Russia text)",
+        "thedocs.worldbank.org mpo-am24.pdf (too large to fetch)",
+        "imf.org/en/Countries/RUS (no Russia-specific documents dated 2023 or later; no Article IV since the 2020 cycle)",
+        "imf.org WEO Update July 2026 (no Russia text)",
+        "imf.org 2020 Article IV Consultation (IMF Country Report 21/36, page and PDF)",
+        "imf.org/external/pubs/nft/2003/russia/ (Russia Rebounds, 2003)",
+        "ebrd.com Regional Economic Prospects (404)",
+        "Tier 2 not searched: tier 1 gave 2 recent sources (World Bank MPO October 2026; World Bank Russia overview 2026)",
+        "Critic: re-opened every cited URL with WebFetch (both PDFs text-extracted locally) and checked each quote, date and number against desk/data/RUS.json"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/RUS.json: era means -6.2, 7.3 and 1.3; 1992 -14.6; 2000 10.5; 2009 -7.8; 2022 -1.1; 2023 4.4; 2024 5.0; 2025 1.1; peak in 2025; 10-year average 1.9 against 2.5 before. All match, and none were changed.",
+        "Opened and verified all citations. The quotes from the IMF 2003 'Russia Rebounds', the IMF Country Report 21/36 (February 2021), the World Bank GEP ECA brief (2022-06-07), the World Bank MPO (October 2026) and the World Bank Russia overview all appear verbatim, with matching dates.",
+        "Thread 'Oil-lifted rebound after 1999': added a verified citation ('Instead, Russia has experienced its first period of sustained growth'), because the text's claim about the 'first period of sustained growth' had no supporting quote.",
+        "Thread 'Costly credit and sanctions': rewritten. The World Bank overview ties capacity constraints, sanctions, tighter monetary policy, costly borrowing and refinery outages to the expected 2026 slowdown, not to the 2025 slowdown. The page also never mentions 'spare capacity'. The thread now credits the MPO for the borrowing-cost effect and the overview for the further easing expected in 2026.",
+        "Arc: 'the 2014–15 oil price fall and sanctions each left lasting output losses' changed to 'the 2015 crisis', to match the IMF's wording. The pre-COVID causes are now credited to the IMF passage. 'as high borrowing costs weighed' softened to 'while', because the MPO describes borrowing costs as continuing to affect spending but does not explicitly call them the cause of the 2025 slowdown.",
+        "Tension: removed 'since 2022' from the data-publication claim. In the MPO, 'since 2022' modifies changes to the economy, not the authorities' decision to limit data publication.",
+        "The World Bank Russia overview date is kept as '2026'. The page shows no update date, only a 2026 copyright, and its text discusses the 2026 forecast. It still counts as the second distinct recent tier 1 source, alongside the October 2026 MPO, so tier 1 stands with tier1_recent_found = 2."
+      ]
+    },
+    "headline": "Russia's income per person collapsed in the 1990s, surged with oil until 2008, then grew 1.3 percent a year through crises, sanctions and war.",
+    "arc": "From 1990 to 1998, as the Soviet system broke up, income per person shrank by 6.2 percent a year, and the period ended with a debt default in August 1998. From 1999 to 2008 it grew 7.3 percent a year, a recovery the IMF ties partly to rising oil prices. Since 2009 growth has averaged 1.3 percent a year. The global financial crisis and the 2015 crisis each left lasting output losses, and the IMF blamed low oil prices, tight policies, sanctions and structural limits for lackluster growth before COVID-19. After the 2022 invasion of Ukraine, a war-driven economy lifted income per person by 4.4 percent in 2023 and 5.0 in 2024, but growth slowed to 1.1 in 2025 while high borrowing costs weighed on spending. Income per person was at its highest so far in 2025, yet the last decade averaged 1.9 percent a year against 2.5 in the decade before.",
+    "threads": [
+      {
+        "title": "Transition collapse and 1998 default",
+        "text": "Income per person fell almost every year from 1990 to 1998, by as much as 14.6 percent in 1992, as the old planned economy came apart. The IMF describes a huge fall in output early in the transition, ending in a loss of confidence and a debt default in August 1998.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/nft/2003/russia/",
+            "publisher": "IMF",
+            "title": "Russia Rebounds",
+            "date": "2003-09-09",
+            "quote": "few outsiders could understand how the population survived such a massive decline in output"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/nft/2003/russia/",
+            "publisher": "IMF",
+            "title": "Russia Rebounds",
+            "date": "2003-09-09",
+            "quote": "However, it finally succumbed to collapsing confidence and declared a default on its debts in August 1998."
+          }
+        ]
+      },
+      {
+        "title": "Oil-lifted rebound after 1999",
+        "text": "After the default, growth returned quickly: income per person rose 10.5 percent in 2000 and stayed above 5 percent a year through 2008. The IMF calls it Russia's first period of sustained growth and says rising oil prices gave it a further push.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/nft/2003/russia/",
+            "publisher": "IMF",
+            "title": "Russia Rebounds",
+            "date": "2003-09-09",
+            "quote": "Instead, Russia has experienced its first period of sustained growth"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/nft/2003/russia/",
+            "publisher": "IMF",
+            "title": "Russia Rebounds",
+            "date": "2003-09-09",
+            "quote": "a positive terms of trade change from rising oil prices gave a further boost to the economy"
+          }
+        ]
+      },
+      {
+        "title": "Crises that left scars",
+        "text": "Income per person fell 7.8 percent in 2009, and a second recession followed in 2014–15 as oil prices fell and sanctions arrived. The IMF found that output never got back to its earlier trend after either crisis, and it blamed low oil prices, tight policies, sanctions and long-standing structural limits for weak growth in the years before COVID-19.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2021/english/1rusea2021001.pdf",
+            "publisher": "IMF",
+            "title": "Russian Federation: 2020 Article IV Consultation—Press Release; Staff Report",
+            "date": "2021-02",
+            "quote": "Both the global financial crisis (GFC) and the 2015 crisis have seen large scarring, with output never recovering to its pre-crisis trend."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2021/english/1rusea2021001.pdf",
+            "publisher": "IMF",
+            "title": "Russian Federation: 2020 Article IV Consultation—Press Release; Staff Report",
+            "date": "2021-02",
+            "quote": "the combination of low oil prices, tight policies, sanctions, and long-standing structural constraints, led to lackluster growth"
+          }
+        ]
+      },
+      {
+        "title": "A war-driven economy",
+        "text": "Sanctions after the 2022 invasion of Ukraine cut output, and income per person fell 1.1 percent that year. War-related demand then lifted growth to 4.4 percent in 2023 and 5.0 in 2024. The World Bank says this growth model is now weakening and that very low unemployment reflects labor shortages rather than broad strength.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/region/eca/brief/global-economic-prospects-europe-and-central-asia",
+            "publisher": "World Bank",
+            "title": "Global Economic Prospects: Europe and Central Asia",
+            "date": "2022-06-07",
+            "quote": "The invasion has devastated Ukraine's economy, while international sanctions have caused output to plummet in Russia."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rus.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Russian Federation",
+            "date": "2026-10",
+            "quote": "Russia’s economy remains outwardly resilient but is under increasing macro-financial pressure as the war-driven growth model weakens."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rus.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Russian Federation",
+            "date": "2026-10",
+            "quote": "Labor market indicators reflect war-related labor shortages rather than broad-based economic strength."
+          }
+        ]
+      },
+      {
+        "title": "Costly credit and sanctions",
+        "text": "Growth in income per person slowed to 1.1 percent in 2025. The World Bank says high borrowing costs from tight monetary policy kept weighing on household spending and business investment. It expects growth to ease further in 2026 and ties this to capacity limits, sanctions, high borrowing costs and refinery outages.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rus.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Russian Federation",
+            "date": "2026-10",
+            "quote": "High borrowing costs, due to tight monetary policy, continued affecting private consumption and investment."
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/russia/overview",
+            "publisher": "World Bank",
+            "title": "The World Bank in the Russian Federation: Overview",
+            "date": "2026",
+            "quote": "high borrowing costs, the impact of sanctions, and refinery outages"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth in income per person fell from 5.0 percent in 2024 to 1.1 in 2025. The World Bank's October 2026 note says growth slowed again in the first half of 2026. High borrowing costs held back spending, and damage to energy infrastructure led to fuel rationing and higher prices.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rus.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Russian Federation",
+          "date": "2026-10",
+          "quote": "Real GDP growth continued decelerating, from 1 percent in 2025 to 0.6 percent year-on-year (yoy) during the first half of 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-rus.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Russian Federation",
+          "date": "2026-10",
+          "quote": "Damage to energy infrastructure have forced fuel rationing across many Russian regions, pushed domestic gasoline prices higher, and lifted headline inflation."
+        }
+      ]
+    },
+    "tension": "The data show income per person at its highest level so far in 2025, after growth of 4.4 percent in 2023 and 5.0 in 2024. The World Bank calls that growth war-driven and says the tight labor market reflects labor shortages, not broad strength. It also says the authorities have chosen to limit what economic data they publish, which makes the economy hard to assess. So the peak in the data may say less about lasting gains than it seems to."
+  }
+}

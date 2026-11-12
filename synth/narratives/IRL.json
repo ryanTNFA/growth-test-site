@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "iso3": "IRL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IRL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): \"Ireland Article IV 2025 staff report multinational corporate tax GDP\"",
+        "tier 1: \"OECD Economic Survey Ireland 2024 2025 modified domestic demand\"",
+        "tier 1: \"Ireland 2015 GDP growth 26 percent relocation intellectual property multinationals\"",
+        "tier 1: \"Ireland ex post evaluation exceptional access 2010 extended arrangement banking crisis property bubble\"",
+        "tier 1: \"Ireland Celtic Tiger 1990s growth foreign direct investment convergence IMF OECD\"",
+        "opened: imf.org IMF Country Report 26/156 (2026 Article IV), imf.org PR25/189 (2025 Article IV press release), oecd.org OECD Economic Surveys: Ireland 2025 (PDF), imf.org CR 16/256, imf.org CR 15/20, imf.org CR 04/348, imf.org 'Ireland: Exceptional Recovery' (2016)",
+        "not opened (HTTP 403): elibrary.imf.org 2026 Article IV page, oecd.org Economic Outlook 2026 Issue 1 Ireland note, oecd.org 2025 Survey landing page, oecd.org 2016 data explainer",
+        "critic check: re-opened all five cited PDFs (imf.org CR 26/156, CR 16/256, CR 15/20, CR 04/348; oecd.org Economic Surveys: Ireland 2025) and verified every quoted passage and date against the extracted text"
+      ],
+      "critic_changes": [
+        "Tension: the draft called 10.5 percent growth in 2025 'the fastest in its peer group'; the data file's rank (1 of 11 structural peers) is for the 2016–2025 average of 5.1, not for 2025. Rewrote to attach the rank to the 10-year average.",
+        "Tension: 'a separate gauge' made plural ('separate gauges') because the 2026 IMF report uses both GNI* and modified domestic demand, and tied explicitly to the data's 10.5 percent for 2025.",
+        "Arc: the draft said the 2021 and 2023 swings came from multinationals' exports; the cited sources only tie the 2025 jump to their exports. Reworded to say the figures swung widely and that the IMF ties the 2025 jump to multinational exports.",
+        "Thread 'Foreign investment and the Celtic Tiger': dropped 'EU membership' as a driver of foreign investment (the 2004 IMF report credits EU membership with structural funds for infrastructure, not with the FDI pull); added two verified quotes from the same report backing the low corporate tax / wage moderation and more-people-at-work claims.",
+        "Thread 'Credit boom and banking bust': replaced the unsupported 'financed by a fast-growing banking system' with banks funding the boom by borrowing on international markets, and added the verified IMF CR 15/20 quote on wholesale-market funding.",
+        "Thread 'Multinationals move their assets in': added a verified quote from IMF CR 16/256 Box 1 supporting 'partly in response to global moves against tax avoidance', which the original quotes did not cover.",
+        "Thread 'Reliance on a few multinationals': reworded the first sentence to match the OECD passage (value added concentrated in a few multinational-dominated sectors, risks to growth and tax revenue) rather than claiming firms drive exports and tax revenue; removed the trailing full stop from the OECD figure-title quote to match the page.",
+        "All citations verified on the page: IMF CR 26/156 (June 2026), OECD Economic Surveys: Ireland 2025 (February 2025), IMF CR 16/256 (July 2016), IMF CR 15/20 (January 2015), IMF CR 04/348 (November 2004); dates kept. All numbers in headline, arc, threads, since_last_year and tension checked against desk/data/IRL.json (eras 5.5/-0.6/6.9; 2008 -6.4, 2009 -6.1, 2015 23.5, 1997 9.9, 1999 9.3, 2021 14.6, 2023 -4.3, 2024 1.0, 2025 10.5; G1 5.1 and 2.7; peak 2025; 11 structural peers). No banned phrases found. Tier 1 holds with two distinct recent sources (IMF 2026, OECD 2025)."
+      ]
+    },
+    "headline": "Ireland's income per person rode foreign investment, crashed with its banks in 2008, then soared as multinationals booked more of their output there.",
+    "arc": "Since 1990 Ireland's income per person has grown in three eras: 5.5 percent a year over 1990–2005, -0.6 over 2006–2013 and 6.9 over 2014–2025. The IMF ties the first era to large inflows of foreign investment, low corporate tax rates, wage pacts and more people at work; after euro entry, growth came more from cheap credit and rising property prices. That boom ended in a banking crisis: income per person fell 6.4 percent in 2008 and 6.1 in 2009, and Ireland entered an IMF-supported programme in 2010. The third era began with a recovery, but its size owes much to multinational firms: the 23.5 percent jump in 2015 came mostly from companies moving assets to Ireland, which the IMF says did little for the underlying economy. Since then the figures have swung widely, from 14.6 percent in 2021 to -4.3 in 2023 and 10.5 in 2025, which the IMF ties to strong exports by multinational firms, leaving income per person at its highest level so far. Over the last decade growth averaged 5.1 percent a year, up from 2.7 in the decade before.",
+    "threads": [
+      {
+        "title": "Foreign investment and the Celtic Tiger",
+        "about": "history",
+        "text": "In the 1990s Ireland drew in large flows of foreign investment, helped by low corporate tax rates and wage pacts, while unemployment fell and more people moved into work. Income per person grew 9.9 percent in 1997 and 9.3 in 1999.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04348.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2004 Article IV Consultation—Staff Report; IMF Country Report No. 04/348",
+            "date": "2004-11",
+            "quote": "A sound macroeconomic policy framework encouraged large inflows of FDI that served as a catalyst to growth."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04348.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2004 Article IV Consultation—Staff Report; IMF Country Report No. 04/348",
+            "date": "2004-11",
+            "quote": "with reductions in income tax facilitating agreements on wage moderation, while low corporate tax rates encouraged foreign investment."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04348.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2004 Article IV Consultation—Staff Report; IMF Country Report No. 04/348",
+            "date": "2004-11",
+            "quote": "A salient feature of this “Celtic Tiger” era was large increases in the proportion of the population at work"
+          }
+        ]
+      },
+      {
+        "title": "Credit boom and banking bust",
+        "about": "history",
+        "text": "After euro entry, interest rates fell and growth leaned on borrowing and rising property prices, with banks funding the credit boom by borrowing heavily on international markets. When the property bubble burst the banks ran into trouble, the economy shrank and Ireland turned to an IMF-supported programme in 2010.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr1520.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: Ex Post Evaluation of Exceptional Access Under the 2010 Extended Arrangement; IMF Country Report No. 15/20",
+            "date": "2015-01",
+            "quote": "This was supported by a large credit expansion and a property price driven wealth effect."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr1520.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: Ex Post Evaluation of Exceptional Access Under the 2010 Extended Arrangement; IMF Country Report No. 15/20",
+            "date": "2015-01",
+            "quote": "The credit boom was financed through extensive recourse to cross-border wholesale markets"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr1520.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: Ex Post Evaluation of Exceptional Access Under the 2010 Extended Arrangement; IMF Country Report No. 15/20",
+            "date": "2015-01",
+            "quote": "Banking sector difficulties and the bursting of the real estate bubble took their toll on the broader economy."
+          }
+        ]
+      },
+      {
+        "title": "Multinationals move their assets in",
+        "about": "history",
+        "text": "In 2015 large multinational firms moved intellectual property, such as patents, to Ireland, partly in response to global moves against tax avoidance. Measured income per person jumped 23.5 percent that year, but the IMF judged it a one-off shift with little effect on the underlying economy.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16256.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2016 Article IV Consultation and Fifth Post-Program Monitoring—Press Release; and Staff Report; IMF Country Report No. 16/256",
+            "date": "2016-07",
+            "quote": "are largely related to relocation of multinational companies to Ireland, which had a limited impact on the underlying Irish economy"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16256.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2016 Article IV Consultation and Fifth Post-Program Monitoring—Press Release; and Staff Report; IMF Country Report No. 16/256",
+            "date": "2016-07",
+            "quote": "Partly in response to increasing multilateral efforts to combat aggressive tax planning and avoidance"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16256.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2016 Article IV Consultation and Fifth Post-Program Monitoring—Press Release; and Staff Report; IMF Country Report No. 16/256",
+            "date": "2016-07",
+            "quote": "some MNEs have chosen to restructure their businesses and relocate their intangible assets, such as patents and copyrights, to countries with supportive business environment."
+          }
+        ]
+      },
+      {
+        "title": "Reliance on a few multinationals",
+        "about": "present",
+        "text": "A few sectors led by foreign multinational firms produce much of Ireland's output, which puts growth and tax revenue at risk, so the headline figures swing with these firms' choices. Spending by people and firms at home has moved more steadily than the export side.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1irlea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Ireland: 2026 Article IV Consultation—Press Release; and Staff Report; IMF Country Report No. 26/156",
+            "date": "2026-06",
+            "quote": "Reliance on MNEs continues to be a source of vulnerability; housing and infrastructure gaps remain to be fully addressed;"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-ireland-2025_a6d6c982/9a368560-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Ireland 2025",
+            "date": "2025-02",
+            "quote": "High concentration of value-added in a few multinational-dominated sectors creates risks to growth and tax revenues."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-ireland-2025_a6d6c982/9a368560-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Ireland 2025",
+            "date": "2025-02",
+            "quote": "Domestic demand has been more resilient than the volatile external sector"
+          }
+        ]
+      },
+      {
+        "title": "Housing behind a growing population",
+        "about": "present",
+        "text": "Ireland's population has grown fast and home building has not kept pace. The OECD says high housing costs could make the country less attractive to foreign firms and skilled workers.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-ireland-2025_a6d6c982/9a368560-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Ireland 2025",
+            "date": "2025-02",
+            "quote": "Housing supply has not kept up with population growth"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/oecd-economic-surveys-ireland-2025_a6d6c982/9a368560-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Ireland 2025",
+            "date": "2025-02",
+            "quote": "Most notably, high housing costs could lower the attractiveness of Ireland for foreign direct investment and talent."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 10.5 percent in 2025, after 1.0 in 2024. The IMF says strong exports by multinational firms drove the jump, as firms brought shipments forward, and that output then fell sharply in early 2026 as those exports returned to normal.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1irlea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Ireland: 2026 Article IV Consultation—Press Release; and Staff Report; IMF Country Report No. 26/156",
+          "date": "2026-06",
+          "quote": "Real GDP rose by 12.3 percent in 2025, largely driven by MNEs’ strong exports"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1irlea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Ireland: 2026 Article IV Consultation—Press Release; and Staff Report; IMF Country Report No. 26/156",
+          "date": "2026-06",
+          "quote": "contracted by 17 percent (y-o-y) in 2026 Q1, reflecting a return to more normal levels of MNEs’ exports following front-loading last year"
+        }
+      ]
+    },
+    "tension": "The data show income per person growing 6.9 percent a year over 2014–2025, and 5.1 over 2016–2025, the fastest of 11 structural peers. The sources say much of the output counted in Ireland belongs to the global operations of multinational firms. The IMF calls the 23.5 percent jump in 2015 a one-off shift with limited impact on the underlying economy, and it measures the home economy with separate gauges that rose much less than the data's 10.5 percent in 2025."
+  }
+}

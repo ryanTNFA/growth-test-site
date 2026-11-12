@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "iso3": "TZA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "TZA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Tanzania IMF Article IV 2025 staff report growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Tanzania Economic Update World Bank 2025",
+        "imf.org: IMF Tanzania 2026 review Extended Credit Facility press release",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org: Tanzania economic reforms mid-1990s liberalization growth acceleration since 2000",
+        "opened: imf.org PR 25/225 (2025-06-27), imf.org PR 26/244 (2026-07-10), worldbank.org TEU series page, worldbank.org TEU 2026 brief, thedocs.worldbank.org MPO Tanzania October 2026, assets.mcc.gov Tanzania 2024 Constraints Analysis (January 2025), imf.org 2009 book Tanzania: The Story of an African Transition",
+        "critic re-opened and verified: assets.mcc.gov Tanzania 2024 Constraints Analysis (PDF text extracted; 'Publication Date: January 2025'), imf.org 2009 book (PDF text extracted), thedocs.worldbank.org MPO Tanzania (PDF text extracted; 'October 2026'), worldbank.org TEU series page, worldbank.org TEU 2026 brief (dated October 2, 2026), imf.org PR 26/244 (July 10, 2026)"
+      ],
+      "critic_changes": [
+        "Opened all 7 cited URLs, pulling text out of the three PDFs. Every quoted passage, date and domain checked out against the source, and all are tier 1.",
+        "Checked every number against desk/data/TZA.json and all are correct: 0.4 (1990–1998), falls in 1991–1994, 2.9 (1999–2025), 4.7 in 2011, 3.3 and 2.1, -1.0 in 2020, peak in 2025, 2025 growth of 2.9 as the fastest since 2017, and 2020 as the only fall since 1999.",
+        "Thread 'Fast population, few good jobs': changed 'most people still work in farming or informal work' to 'many people rely on informal work'. The cited World Bank passage says only 'significant reliance on informal employment' and does not mention farming or a majority. Renamed the thread 'Fast population, few formal jobs' to match.",
+        "Thread 'A reform turn since 2021': the draft's IMF quote did not support 'warns that slower reform could weaken growth'. Added a second citation from the same IMF press release, 'Reform delays could weaken growth prospects and fiscal sustainability.', and changed the wording to 'reform delays'.",
+        "since_last_year: replaced the IMF quote about a Middle East conflict, which did not support the sentence about the program's final reviews, with the press release's line that the Board 'completed the final sixth and seventh reviews' under the ECF. Changed 'final reviews of its lending program' to 'final reviews of its Extended Credit Facility loan', because the same release also covers non-final (third and fourth) RSF reviews.",
+        "Tension: removed 'beats the regional average' because no cited passage says it."
+      ]
+    },
+    "headline": "Reforms from the mid-1990s ended a long slump; income per person has grown every year but one since 1999, though fast population growth keeps the gains modest.",
+    "arc": "Socialist policies and economic isolation ended in collapse in the 1980s. Reforms began in 1986 but moved slowly: from 1990 to 1998 income per person grew 0.4 percent a year, and it fell every year from 1991 to 1994. In the mid-1990s the reforms began to pay off. A single exchange rate, freer imports, a rebuilt banking system, lower inflation and debt relief drew in private and foreign investment, and from 1999 to 2025 income per person grew 2.9 percent a year, with the best years in the early 2000s and a high of 4.7 percent in 2011. Since 2010 growth has relied more on public infrastructure spending while private and foreign investment fell, and the pace slowed from 3.3 percent a year in 2006–2015 to 2.1 percent in 2016–2025, including a fall of 1.0 percent in 2020. Income per person reached its highest level yet in 2025, but fast population growth means strong growth in the economy as a whole turns into much smaller gains per person.",
+    "threads": [
+      {
+        "title": "Socialism, collapse and slow reform",
+        "about": "history",
+        "text": "State control, socialist self-reliance and isolation led to economic collapse in the 1980s. Prices, the exchange rate and trade were freed step by step from 1986, but growth stayed weak, and income per person grew only 0.4 percent a year from 1990 to 1998.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-tanzania-2024.pdf",
+            "publisher": "MCC",
+            "title": "Tanzania 2024 Constraints Analysis Report",
+            "date": "2025-01",
+            "quote": "After socialism, economic isolation, and deteriorating terms of trade led to economic collapse in the 1980s"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/books/2009/tanzania/tanzania.pdf",
+            "publisher": "IMF",
+            "title": "Tanzania: The Story of an African Transition",
+            "date": "2009",
+            "quote": "But for most of the period economic growth remained anemic and stability elusive."
+          }
+        ]
+      },
+      {
+        "title": "Mid-1990s reforms take hold",
+        "about": "history",
+        "text": "From the mid-1990s a unified exchange rate, freer imports, a restructured banking system and tighter public finances brought inflation down and drew in private and foreign investment. Debt relief removed almost all foreign debt, and income per person has grown every year since 1999 except 2020.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/books/2009/tanzania/tanzania.pdf",
+            "publisher": "IMF",
+            "title": "Tanzania: The Story of an African Transition",
+            "date": "2009",
+            "quote": "It was only in the mid-1990s that the reforms really began to pay off."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/books/2009/tanzania/tanzania.pdf",
+            "publisher": "IMF",
+            "title": "Tanzania: The Story of an African Transition",
+            "date": "2009",
+            "quote": "Private investment, domestic and foreign, fueled economic growth, which in turn boosted tax revenues."
+          }
+        ]
+      },
+      {
+        "title": "Public investment takes the lead",
+        "about": "present",
+        "text": "Since 2010 public infrastructure spending has become the main source of new capital, while private investment and foreign investment fell. Growth in income per person slowed from 3.3 percent a year in 2006–2015 to 2.1 percent in 2016–2025.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-tanzania-2024.pdf",
+            "publisher": "MCC",
+            "title": "Tanzania 2024 Constraints Analysis Report",
+            "date": "2025-01",
+            "quote": "Since 2010, growth has increasingly relied on public investment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tza.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tanzania",
+            "date": "2026-10",
+            "quote": "Tanzania’s growth remains strong, supported by infrastructure investment and sound macroeconomic policies"
+          }
+        ]
+      },
+      {
+        "title": "Fast population, few formal jobs",
+        "about": "present",
+        "text": "The population grows fast and formal jobs have not kept pace, so many people rely on informal work. The World Bank finds poverty has fallen only slowly because growth is concentrated in sectors that use a lot of capital and have weak links to the livelihoods of the poorest.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/tanzania/publication/tanzania-economic-update-teu",
+            "publisher": "World Bank",
+            "title": "Tanzania Economic Update (TEU)",
+            "date": "2026-02",
+            "quote": "Job creation, particularly in the formal sector, has not kept pace with rapid population growth, resulting in significant reliance on informal employment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tza.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Tanzania",
+            "date": "2026-10",
+            "quote": "growth remains concentrated in capital-intensive sectors with limited links to the livelihoods of those at the bottom"
+          }
+        ]
+      },
+      {
+        "title": "A reform turn since 2021",
+        "about": "present",
+        "text": "President Samia Suluhu Hassan took office in March 2021 after President Magufuli's death and has backed reforms that give private firms a bigger role. The IMF ties its outlook to mining, agriculture and tourism and warns that reform delays could weaken growth.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-tanzania-2024.pdf",
+            "publisher": "MCC",
+            "title": "Tanzania 2024 Constraints Analysis Report",
+            "date": "2025-01",
+            "quote": "President Hassan has supported economic reforms that give the private sector a greater role in the economy."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/10/pr26244-tanzania-imf-exec-board-completes-6th-7th-rev-ecf-arr-3rd-4th-rev-rsf-arr",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Sixth and Seventh Reviews Under the Extended Credit Facility Arrangement and Third and Fourth Reviews Under the Resilience and Sustainability Facility Arrangement with Tanzania",
+            "date": "2026-07-10",
+            "quote": "Projected medium-term real GDP growth: about 6.2 percent, assuming a strong outlook for mining, agriculture and tourism."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/10/pr26244-tanzania-imf-exec-board-completes-6th-7th-rev-ecf-arr-3rd-4th-rev-rsf-arr",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Sixth and Seventh Reviews Under the Extended Credit Facility Arrangement and Third and Fourth Reviews Under the Resilience and Sustainability Facility Arrangement with Tanzania",
+            "date": "2026-07-10",
+            "quote": "Reform delays could weaken growth prospects and fiscal sustainability."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.9 percent in 2025, the fastest since 2017, helped by services and by higher government spending before the October 2025 elections. In the first half of 2026 an oil price spike tied to conflict in the Middle East raised fuel costs and put pressure on the balance of payments, while gold exports and tourism softened the blow. In July 2026 the IMF completed the final reviews of its Extended Credit Facility loan.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/brief/2026/09/30/tanzania-economic-update-2026-making-jobs-work",
+          "publisher": "World Bank",
+          "title": "Tanzania Economic Update 2026: Making Jobs Work",
+          "date": "2026-10-02",
+          "quote": "alongside increased government spending ahead of the October 2025 elections"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-tza.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Tanzania",
+          "date": "2026-10",
+          "quote": "Tanzania’s strong growth momentum has continued despite balance-of-payments pressures stemming from the oil price spike in the first half of 2026."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/10/pr26244-tanzania-imf-exec-board-completes-6th-7th-rev-ecf-arr-3rd-4th-rev-rsf-arr",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Completes the Sixth and Seventh Reviews Under the Extended Credit Facility Arrangement and Third and Fourth Reviews Under the Resilience and Sustainability Facility Arrangement with Tanzania",
+          "date": "2026-07-10",
+          "quote": "The Executive Board completed the final sixth and seventh reviews under the Extended Credit Facility (ECF) arrangement"
+        }
+      ]
+    },
+    "tension": "The sources describe strong, steady growth and expect it to speed up. The data on income per person tell a quieter story: growth per person slowed from 3.3 percent a year in 2006–2015 to 2.1 percent in 2016–2025, because the population grows fast, and the World Bank notes that poverty has fallen only slowly."
+  }
+}

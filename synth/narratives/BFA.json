@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "iso3": "BFA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BFA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "WebSearch (tier 1 domains: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Burkina Faso Article IV 2025 staff report growth",
+        "WebSearch (tier 1 domains): Burkina Faso Macro Poverty Outlook economic update 2025",
+        "WebSearch (tier 1 domains): Burkina Faso two coups 2022 security crisis growth economy",
+        "WebSearch (tier 1 domains): Burkina Faso country economic memorandum growth history cotton gold",
+        "Opened: thedocs.worldbank.org MPO Burkina Faso (October 2026)",
+        "Opened: imf.org IMF Country Report No. 26/207 (July 2026)",
+        "Opened: imf.org IMF Country Report No. 23/149 (April 2023)",
+        "Opened: worldbank.org Country Economic Memorandum web page (June 2024)",
+        "Opened: documents1.worldbank.org Country Economic Memorandum for Burkina Faso PDF (September 2023)",
+        "Critic: re-opened all five cited URLs with WebFetch and checked every quoted passage against the PDFs' extracted text"
+      ],
+      "critic_changes": [
+        "Checked all five cited URLs (web page via WebFetch; the four PDFs via their downloaded text). Every quoted passage appears on its page, and the dates match: CEM PDF September 2023, CEM page 27 June 2024, IMF CR 23/149 April 2023, IMF CR 26/207 July 2026, MPO October 2026.",
+        "IMF CR 26/207 title: added the missing words 'Requests for Augmentation of Access and Modification of Performance Criteria, and Financing Assurances Review' so the title matches the report's cover.",
+        "Thread 'Insecurity and military rule': the IMF 2023 quote did not mention the coups or Mali, so the claims 'regional roots in the Malian crisis' and 'it led to military coups' had no support in the thread. Changed the quote to the page's longer passage that names both 2022 coups, rewrote the text to match it, and dropped the unsupported causal claim. Changed 'hunger' to 'short of food' to match 'food insecurity'.",
+        "Thread 'The gold price windfall': the cited passages do not say gold lifted exports and revenue in 2025, so that sentence now says high gold prices lifted economic activity in 2025, and the point about exports and revenue is made in general terms, as the MPO passage does. Changed 'held back mining output growth' to 'held back the rebound in mining output', following the IMF's wording ('mining growth rebounded ... reportedly muted').",
+        "Thread 'Rain-fed farms, fast-growing population': removed the unsupported comparison 'the population has grown about as fast as many economies' output'. Replaced 'good and bad seasons move growth from year to year' with the MPO's point that rural livelihoods are exposed to weather shocks. No new figures added outside quotes.",
+        "Thread 'From cotton to gold': changed 'exposed to swings in world prices' to 'exposed to global shocks', which is what the cited passage says.",
+        "Arc: 'spread into farming and mining areas' changed to 'disrupted farming and gold mining', which is what the CEM says. 'military coups' changed to 'two military coups', and 'Stronger harvests and very high gold prices' changed to 'A strong harvest and high gold prices'. Every number checked against BFA.json (2.36, avg_prior_10y 2.37, avg_10y 2.26, and the 1996, 2009, 2020, 2022, 2023, 2024 and 2025 growth rates; peak in 2025): all correct.",
+        "since_last_year: removed 'exports' from what gold prices lifted in 2025, since no cited passage supports it. 'Fighting in Mali' changed to 'the armed groups' offensive in Mali', and 'aid' to 'humanitarian aid', to match the IMF passage.",
+        "Tension: 'a pace few low-income countries matched' changed to 'very few', as the CEM puts it. 2020 dropped from the list of weak years linked to the security crisis, because the sources tie that period to COVID-19; the 2022 and 2023 figures from the data file are now given instead.",
+        "No banned phrases or recommendation language found. Four threads and four distinct recent tier 1 documents remain, so the story stays tier 1."
+      ]
+    },
+    "headline": "Burkina Faso's income per person has grown about 2.4 percent a year since 1990, through the move from cotton to gold, spreading insecurity and military coups.",
+    "arc": "Since 1990, income per person in Burkina Faso has grown at a steady 2.4 percent a year with no lasting shift up or down, and in 2025 it reached its highest level yet. The pace was 2.4 percent in 2006–2015 and 2.3 percent in 2016–2025. The big swings came in single years: 8.2 percent in 1996, close to zero in 2009, and falls of -0.4 percent in 2020 and -0.7 percent in 2022. World Bank work describes fast growth in total output over the past two decades, as the economy moved from cotton exports to gold, but the population grew so quickly that income per person rose much more slowly. Insecurity linked to the Malian crisis that began in 2012 disrupted farming and gold mining, and two military coups followed in 2022; growth in income per person was only 0.7 percent in 2023. A strong harvest and high gold prices brought a recovery, with income per person up 2.5 percent in 2024 and 3.0 percent in 2025.",
+    "threads": [
+      {
+        "title": "From cotton to gold",
+        "text": "Over the past two decades the economy moved from relying on cotton exports to relying on gold, which left it exposed to global shocks. Industrial gold mining became a driver of growth, but it creates few jobs and has few links to local businesses. The World Bank dates the end of Burkina Faso's catch-up with regional peers to around 2013.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062524130526315/pdf/P1773491b9944700f1a7671e64a0d05e45b.pdf",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum for Burkina Faso: Making growth more efficient, sustainable, and inclusive",
+            "date": "2023-09",
+            "quote": "dependence on commodity exports—initially cotton, and more recently gold—has left it vulnerable to global shocks"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/burkinafaso/publication/country-economic-memorandum-for-burkina-faso-making-growth-more-efficient-sustainable-and-inclusive",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum for Burkina Faso: Making Growth More Efficient, Sustainable, and Inclusive",
+            "date": "2024-06-27",
+            "quote": "Industrial gold mining has emerged as a driver of growth, but the sector creates few jobs and has limited linkages with local businesses."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062524130526315/pdf/P1773491b9944700f1a7671e64a0d05e45b.pdf",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum for Burkina Faso: Making growth more efficient, sustainable, and inclusive",
+            "date": "2023-09",
+            "quote": "Burkina Faso's strong convergence with regional peers in the early years of the century ended around 2013"
+          }
+        ]
+      },
+      {
+        "title": "Insecurity and military rule",
+        "text": "Insecurity spread across Burkina Faso and two military coups followed in 2022; the uncertainty and violence shut the zinc mine for good and closed several gold mines for a time. Attacks have become less frequent, but many people remain displaced or short of food, and insecurity still disrupts markets and private investment.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1bfaea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Burkina Faso: Request for Disbursement Under the Rapid Credit Facility—Press Release; Staff Report; and Statement by the Executive Director for Burkina Faso (IMF Country Report No. 23/149)",
+            "date": "2023-04",
+            "quote": "following the two military coups in January and September 2022 and deteriorating security conditions forced the permanent closure of the zinc mine"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bfaea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Burkina Faso: 2026 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement, Requests for Augmentation of Access and Modification of Performance Criteria, and Financing Assurances Review, and First Review under the Resilience and Sustainability Facility Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Burkina Faso (IMF Country Report No. 26/207)",
+            "date": "2026-07",
+            "quote": "Although the incidence of terrorist attacks has diminished, terrorism-induced internal displacement and food insecurity persist."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bfa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burkina Faso",
+            "date": "2026-10",
+            "quote": "persistent insecurity continues to disrupt markets, constrain private investment, and limit access to productive assets and basic services."
+          }
+        ]
+      },
+      {
+        "title": "The gold price windfall",
+        "text": "High world gold prices lifted economic activity in 2025, and gold dominates exports and is an important source of public revenue, though it creates few jobs. A new mining code changed the state's stake, permit terms and local content rules, and the IMF reports that it held back the rebound in mining output that year.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bfaea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Burkina Faso: 2026 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement, Requests for Augmentation of Access and Modification of Performance Criteria, and Financing Assurances Review, and First Review under the Resilience and Sustainability Facility Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Burkina Faso (IMF Country Report No. 26/207)",
+            "date": "2026-07",
+            "quote": "High gold prices, combined with reforms in the mining sector, energized economic activity in Burkina Faso in 2025."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bfaea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Burkina Faso: 2026 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement, Requests for Augmentation of Access and Modification of Performance Criteria, and Financing Assurances Review, and First Review under the Resilience and Sustainability Facility Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Burkina Faso (IMF Country Report No. 26/207)",
+            "date": "2026-07",
+            "quote": "though it was reportedly muted by the adoption of the new mining code, including changes to state participation, permit duration, and local content requirements"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bfa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burkina Faso",
+            "date": "2026-10",
+            "quote": "Gold dominates exports and is an important source of government revenues, but its relatively capital-intensive nature and limited domestic linkages constrain job creation"
+          }
+        ]
+      },
+      {
+        "title": "Rain-fed farms, fast-growing population",
+        "text": "Most people work in farming that depends on rain and has low productivity, which leaves rural livelihoods exposed to swings in the weather. The population has grown quickly, so fast growth in total output has turned into much smaller gains in income per person.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bfa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burkina Faso",
+            "date": "2026-10",
+            "quote": "Agriculture accounts for about 64 percent of employment (82 percent for the poor) but remains predominantly rain-fed and low-productivity"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099062524130526315/pdf/P1773491b9944700f1a7671e64a0d05e45b.pdf",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum for Burkina Faso: Making growth more efficient, sustainable, and inclusive",
+            "date": "2023-09",
+            "quote": "The population has grown by an average of 3 percent per year from 2000 to 2022."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "High gold prices lifted growth in 2025, and income per person rose 3.0 percent to its highest level yet. In 2026 the picture became less certain. The World Bank expects slower farm growth after late rains and costlier fertilizer, and the IMF describes a shock from fertilizer and energy prices, spillovers from the armed groups' offensive in Mali and a drop in humanitarian aid.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bfa.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Burkina Faso",
+          "date": "2026-10",
+          "quote": "due to late rains and higher fertilizer prices, partly offset by government support under the Offensive Agricole."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1bfaea2026002.pdf",
+          "publisher": "IMF",
+          "title": "Burkina Faso: 2026 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement, Requests for Augmentation of Access and Modification of Performance Criteria, and Financing Assurances Review, and First Review under the Resilience and Sustainability Facility Arrangement—Press Release; Staff Report; and Statement by the Executive Director for Burkina Faso (IMF Country Report No. 26/207)",
+          "date": "2026-07",
+          "quote": "a surge in fertilizer and energy prices, spillovers from the terrorist offensive in Mali, and a drop in foreign humanitarian aid"
+        }
+      ]
+    },
+    "tension": "The World Bank describes total output growing fast for two decades, a pace very few low-income countries matched, yet income per person has risen only about 2.4 percent a year since 1990 because the population grew so quickly. The sources also describe a deepening security crisis and two military coups, but the data show no lasting break: the last decade averaged 2.3 percent against 2.4 percent in the decade before, and the damage shows up only in single weak years such as -0.7 percent in 2022 and 0.7 percent in 2023."
+  }
+}

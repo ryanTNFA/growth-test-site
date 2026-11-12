@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "iso3": "ZMB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ZMB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Zambia Article IV staff report 2025 debt restructuring copper drought growth'",
+        "same tier 1 domains: 'Zambia economic history copper prices privatization 1990s decline 2000s boom debt relief HIPC growth'",
+        "same tier 1 domains: 'Zambia 2020 default Eurobond debt accumulation infrastructure spending growth slowdown 2015 copper price power shortages'",
+        "imf.org, worldbank.org, afdb.org: 'Zambia 2026 IMF press release new program economy growth elections'",
+        "Opened: imf.org press releases of 2024-11-11, 2025-06-09, 2025-12-18 and 2026-05-14; IMF/IDA HIPC preliminary document (2000-07-20); World Bank Macro Poverty Outlook Zambia (April 2026); MCC Zambia 2022 Constraints Analysis Report (published February 2024)",
+        "Critic re-opened every cited URL (IMF 2024-11-11, 2025-12-18, 2026-05-14 press releases; IMF HIPC 2000 PDF; World Bank MPO April 2026 PDF; MCC constraints analysis PDF) and checked each quote against the extracted text",
+        "Tier 2 (UN) domains not searched: tier 1 gave 5 recent cited sources"
+      ],
+      "critic_changes": [
+        "Checked all numbers against desk/data/ZMB.json: -1.5, 3.5, 0.6 (G4 eras), 0.5 and 3.4 (G1), peak 2025 and level first reached 1965 (G3), -5.6 in 2020 and 0.9 in 2024 and 2025 (series) all match; no number changed.",
+        "All quotes verified verbatim against the pages (PDF text extracted locally); dates match (MCC report says 'Publication Date: February 2024'; WB MPO footer 'April 2026'; HIPC document 'July 20, 2000').",
+        "Copper thread: replaced the MCC 'volatile swings' citation with MCC passages that actually support the text's claims that minerals are most of exports and that mining employs few people with weak links; reworded the 'booms and slumps' sentence to match the World Bank passage.",
+        "State mines thread: the cited quotes did not support the March 2000 sale or falling ZCCM output, so I added the HIPC passage on privatization in March 2000 and the drop in copper production. Changed 'produced less copper each year' to 'produced less and less copper' because the source gives only a fall from 1992 to 1999.",
+        "Borrowing thread: replaced the 'returns ... failed to materialize' quote with the MCC passage that also covers the 2020 Eurobond default, which the text claims; reworded so each claim is backed.",
+        "Drought thread: dropped the unsupported 'many Zambians farm rain-fed land' and 'slowed trade and other services into 2025' claims; replaced them with what the cited passages say. Added the IMF line 'Lingering effects of the drought reduced agricultural output.' Arc changed 'cut harvests' to 'cut farm output' to match.",
+        "since_last_year: removed 'growth lost pace late in 2025' (not in any opened source) and the claim that new IMF program talks would resume after the August 2026 elections (on the IMF page but in no cited passage).",
+        "Tension: removed 'the population is growing almost as fast as total output' (not in the data file or the cited sources); limited the 0.9 percent contrast to 2025, the year the World Bank's 'robust' description covers; changed 'farm rebound' to the World Bank's own terms.",
+        "tier1_recent_found set to 5, the distinct recent tier 1 sources actually cited and verified: MCC Feb 2024, IMF 2024-11-11, IMF 2025-12-18, World Bank MPO Apr 2026, IMF 2026-05-14. The IMF 2025-06-09 release was not cited."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Zambia's copper-fuelled climb of 1999–2012 has stalled: income per person is at a record high, but only back to where it stood in 1965.",
+    "arc": "Zambia's income per person reached its highest level on record in 2025, but only just: it is about where it first stood in 1965, after a long fall and a slow climb back. From 1990 to 1998 it shrank by 1.5 percent a year, as copper prices collapsed, droughts hit and the loss-making state mining company, ZCCM, dug less and less copper. From 1999 to 2012 it grew by 3.5 percent a year: the mines were sold to private owners in 2000 and copper prices rose through the 2000s. Since 2013 growth has slowed to 0.6 percent a year, and to 0.5 over the last decade against 3.4 in the decade before, as copper prices fell and heavy borrowing for big building projects ended in arrears and a default in 2020, a year when income per person fell by 5.6 percent. A drought in 2024 cut farm output and electricity, and income per person rose by only 0.9 percent in both 2024 and 2025.",
+    "threads": [
+      {
+        "title": "Copper sets the pace",
+        "about": "present",
+        "text": "Copper and other minerals make up most of what Zambia sells abroad, so the economy's fortunes rise and fall with copper. Copper mining needs much capital but employs few people and has weak links to the rest of the economy, so its gains spread thinly.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-zambia-2022.pdf",
+            "publisher": "MCC",
+            "title": "Zambia 2022 Constraints Analysis Report",
+            "date": "2024-02",
+            "quote": "the heavy dependence on copper exports—copper and other minerals account for more than three-fourths of Zambia’s export basket"
+          },
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-zambia-2022.pdf",
+            "publisher": "MCC",
+            "title": "Zambia 2022 Constraints Analysis Report",
+            "date": "2024-02",
+            "quote": "The copper mining sector is capital intensive, generates relatively few jobs, and lacks significant backward or forward linkages to the wider economy."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099734408072619839/pdf/Bulk-0b1d75ab-c049-4778-9b13-ae3f986cf1b1.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zambia",
+            "date": "2026-04",
+            "quote": "the country’s resilience remains tied to copper export performance"
+          }
+        ]
+      },
+      {
+        "title": "State mines decline, then sold",
+        "about": "history",
+        "text": "In the 1990s the loss-making state mining company ZCCM produced less and less copper, while copper prices collapsed from 1995 and droughts hit. ZCCM was privatized in March 2000, at the start of the faster era.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/hipc/2000/zmb.pdf",
+            "publisher": "IMF",
+            "title": "Zambia: Preliminary Document on the Enhanced Initiative for Heavily Indebted Poor Countries",
+            "date": "2000-07-20",
+            "quote": "In the period prior to its privatization in March 2000, continuing poor performance of the ZCCM led to a decline in copper production"
+          },
+          {
+            "url": "https://www.imf.org/external/np/hipc/2000/zmb.pdf",
+            "publisher": "IMF",
+            "title": "Zambia: Preliminary Document on the Enhanced Initiative for Heavily Indebted Poor Countries",
+            "date": "2000-07-20",
+            "quote": "Zambia has been hard hit by a collapse of copper prices since 1995"
+          },
+          {
+            "url": "https://www.imf.org/external/np/hipc/2000/zmb.pdf",
+            "publisher": "IMF",
+            "title": "Zambia: Preliminary Document on the Enhanced Initiative for Heavily Indebted Poor Countries",
+            "date": "2000-07-20",
+            "quote": "Several droughts, terms of trade shocks combined with poor macroeconomic management and the failure to address the problems of the state-owned mining company ZCCM"
+          }
+        ]
+      },
+      {
+        "title": "Borrowing, default and restructuring",
+        "about": "present",
+        "text": "As copper prices rose in the 2000s, the government borrowed heavily abroad for large building projects. When copper prices fell and revenues shrank, it fell behind on payments and in 2020 defaulted on a bond. A long restructuring has since cut the debt, though the World Bank still rates the risk of distress as high.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-zambia-2022.pdf",
+            "publisher": "MCC",
+            "title": "Zambia 2022 Constraints Analysis Report",
+            "date": "2024-02",
+            "quote": "the GRZ borrowed roughly $17 billion from international lenders, including China, to pursue a variety of infrastructure megaprojects"
+          },
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-zambia-2022.pdf",
+            "publisher": "MCC",
+            "title": "Zambia 2022 Constraints Analysis Report",
+            "date": "2024-02",
+            "quote": "falling copper prices eroded government revenues, Zambia quickly fell into arrears. In 2020, the government defaulted on one of its Eurobond issues"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099734408072619839/pdf/Bulk-0b1d75ab-c049-4778-9b13-ae3f986cf1b1.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zambia",
+            "date": "2026-04",
+            "quote": "public debt fell from 133.4 percent of GDP in 2023 to 100.1 percent in 2025, remaining sustainable but still at high risk of distress"
+          }
+        ]
+      },
+      {
+        "title": "Drought, dams and power cuts",
+        "about": "present",
+        "text": "Bad weather threatens both farm output and hydroelectric power, so a poor rainy season hits food and electricity together. The 2024 drought cut farm output and brought electricity shortages that hit economic activity widely.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/11/11/pr-24413-zambia-imf-reaches-agreement-on-4th-review-of-ecf",
+            "publisher": "IMF",
+            "title": "IMF Reaches Staff-Level Agreement on the Fourth Review of the Extended Credit Facility with Zambia",
+            "date": "2024-11-11",
+            "quote": "Lingering effects of the drought reduced agricultural output."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/11/11/pr-24413-zambia-imf-reaches-agreement-on-4th-review-of-ecf",
+            "publisher": "IMF",
+            "title": "IMF Reaches Staff-Level Agreement on the Fourth Review of the Extended Credit Facility with Zambia",
+            "date": "2024-11-11",
+            "quote": "Electricity shortages impacted economic activity widely."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099734408072619839/pdf/Bulk-0b1d75ab-c049-4778-9b13-ae3f986cf1b1.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Zambia",
+            "date": "2026-04",
+            "quote": "Climate change and global trade uncertainties are major risks, threatening agricultural output, hydroelectric power, and mining prospects."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The 2025 harvest recovered strongly from the drought, inflation fell back and agreement was reached on most of the external debt being restructured. But in May 2026 the IMF cut its growth forecast for 2026, citing weaker mining output and a return to normal harvests.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/14/pr26150-zambia-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Zambia",
+          "date": "2026-05-14",
+          "quote": "Growth revised down to 4.3 percent in 2026, reflecting: weaker mining output, a normalization of agricultural production following the exceptional 2025 harvest"
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099734408072619839/pdf/Bulk-0b1d75ab-c049-4778-9b13-ae3f986cf1b1.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Zambia",
+          "date": "2026-04",
+          "quote": "Headline inflation dropped from 16.8 percent in February 2025 to 7.5 percent in February 2026, thanks to strong agricultural harvests, a firmer kwacha"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/18/pr-25431-zambia-imf-reaches-agreement-on-6th-and-final-rev-of-ecf",
+          "publisher": "IMF",
+          "title": "IMF Staff reaches Staff-Level Agreement on the Sixth and Final Review of the Extended Credit Facility with Zambia",
+          "date": "2025-12-18",
+          "quote": "Agreement reached on most of the external debt under the perimeter of the debt restructuring"
+        }
+      ]
+    },
+    "tension": "The World Bank calls recent growth robust, driven by foreign investment in mining, higher copper exports and gains in farming and electricity, yet in the data income per person rose by only 0.9 percent in 2025. And the record level of income per person reached in 2025 is about the same as in 1965, so the record says more about recovery than about new ground."
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "iso3": "AUT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AUT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Austria Article IV 2025 staff concluding statement recession",
+        "oecd.org/imf.org (tier 1 list): OECD Economic Surveys Austria 2025",
+        "imf.org, oecd.org, worldbank.org, ebrd.com: Austria Article IV 2010 global crisis banks Central Eastern Europe exposure recession 2009",
+        "imf.org, oecd.org: Austria Article IV 2015 2016 growth weak unemployment rising sluggish recovery",
+        "imf.org: IMF Executive Board concludes 2026 Article IV consultation with Austria",
+        "opened: imf.org 2026 Article IV staff concluding statement (May 2026)",
+        "opened: imf.org 2025 Article IV concluding statement (April 2025)",
+        "opened: imf.org Country Report 26/180 (July 2026)",
+        "opened: oecd.org OECD Economic Surveys: Austria 2026 (March 2026)",
+        "opened: oecd.org OECD Economic Surveys: Austria 2009",
+        "opened: imf.org Country Report 16/50 (February 2016)",
+        "opened: imf.org 2010, 2015 and 2016 Article IV concluding statements",
+        "critic: re-opened and text-checked all four cited PDFs (oecd.org Austria 2026, imf.org CR 26/180, oecd.org Austria 2009, imf.org CR 16/50)"
+      ],
+      "critic_changes": [
+        "Checked all 13 citations against the text of the four cited PDFs (OECD Austria 2026, IMF CR 26/180, OECD Austria 2009, IMF CR 16/50). Every quoted passage appears on its page, every date matches the document (March 2026, July 2026, July 2009, February 2016), and all domains are tier 1. No citation was dropped.",
+        "Every number in the headline, arc, since_last_year and tension matches desk/data/AUT.json: 1.2, 0.7, 0.5, -3.8 (2009), -6.7 (2020), 4.5, 4.3, -1.8, -1.2, 0.3, 2.6 below the 2022 peak, and the level first reached in 2018. No number was changed.",
+        "Arc: 'the longest recession since 1945' had no citation. It is now credited to the OECD ('which the OECD calls...'), and the OECD 2026 passage that says so is added to thread 1.",
+        "Thread 1: added 'its longest since 1945' along with that supporting OECD citation.",
+        "Thread 2: removed 'tied to German supply chains', which no cited passage supports. Changed 'labour costs climbed faster than in the rest of the euro area' to the IMF's actual claim: wider indexation of wages to past inflation is the main reason Austria lost competitiveness against the euro area.",
+        "Thread 5: removed 'so the population grew alongside output', an inference the cited passage does not make. Restated the immigration sentence as the IMF puts it (the labour market opened to workers from the newer EU members). Added 'labour input fell' so the slowdown sentence matches the cited passage.",
+        "since_last_year: no cited passage supported the claim that energy prices rose again in 2026. Added the IMF CR 26/180 passage on Middle East developments pushing up gasoline pump prices."
+      ]
+    },
+    "headline": "Austria's income per person is back where it was in 2018: an energy shock and two years of recession came on top of a long, slow fade in growth.",
+    "arc": "Since 1990 Austria's income per person has grown 1.2 percent a year on average, with no lasting break in the trend, but the pace has faded: 0.7 percent a year over 2006–2015 and 0.5 percent over 2016–2025. Growth in the mid-2000s leaned on exports to Central and Eastern Europe, and the collapse in world trade and investment cut income per person by 3.8 percent in 2009. Growth then stalled in 2012–2014 as the euro area crisis and a weak recovery to the east spilled over, and the IMF judged that underlying growth had slowed even before 2008. The pandemic cut income per person by 6.7 percent in 2020, and rebounds of 4.5 and 4.3 percent took it to a peak in 2022. The 2022 energy price shock, Germany's slump and higher interest rates then brought falls of 1.8 percent in 2023 and 1.2 percent in 2024, which the OECD calls the longest recession since 1945. Income per person grew 0.3 percent in 2025 but is still 2.6 percent below its 2022 peak, about where it first was in 2018.",
+    "threads": [
+      {
+        "title": "Energy shock and long recession",
+        "text": "Russia's war in Ukraine sent energy prices up from 2022. Together with Germany's slump and higher interest rates, this tipped Austria into two years of recession, its longest since 1945, and the OECD expects a lasting loss in the level of output.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "The downturn, driven by the 2022 energy price shock, hit Austria particularly hard and will have permanent effect on the level of output."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "Austria has high levels of well-being, but has experienced recently its longest recession since 1945."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+            "date": "2026-07",
+            "quote": "Then, Russia’s war in Ukraine, Germany’s multi-year slump and monetary tightening tipped the economy into a 2-year recession"
+          }
+        ]
+      },
+      {
+        "title": "Energy and labour costs rise",
+        "text": "Industry lost ground as energy prices and wages rose, and energy-hungry sectors were hit hardest. Wages in Austria are more widely linked to past inflation than elsewhere in the euro area, and the IMF sees this as the main reason Austria lost competitiveness against the rest of the euro area.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "Business dynamism has declined over the past decade and competitiveness has been eroded by high energy prices and rising labour costs."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "The decline is largely attributable to energy-intensive sectors, which were particularly affected by the rise in energy prices"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+            "date": "2026-07",
+            "quote": "Austria has lost competitiveness relative to the Euro area primarily because of the more widespread indexation of wages to past inflation."
+          }
+        ]
+      },
+      {
+        "title": "Slow productivity, ageing workforce",
+        "text": "Output per worker has grown slowly for years, held back by little capital per worker and more part-time work. The population is ageing, and both the IMF and the OECD expect the workforce to shrink.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "Trend labour productivity growth is low, held back by low capital intensity and rising part-time employment."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-surveys-austria-2026_9fb53433/7cea027b-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2026",
+            "date": "2026-03",
+            "quote": "The population is ageing and the labour force will decline."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+            "date": "2026-07",
+            "quote": "reflecting persistently weak labor productivity growth and a shrinking workforce"
+          }
+        ]
+      },
+      {
+        "title": "Eastern exports and the crisis",
+        "text": "In 2005–2007 growth leaned on exports to Central and Eastern Europe. The 2009 collapse in world trade and investment ended that run, and spillovers from the euro area crisis and a weak recovery to the east kept growth close to zero in 2012–2014.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/07/oecd-economic-surveys-austria-2009_g1gh9a73/eco_surveys-aut-2009-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2009",
+            "date": "2009-07",
+            "quote": "This strong expansion was largely driven by exports, especially to CEE, while consumption was subdued."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2009/07/oecd-economic-surveys-austria-2009_g1gh9a73/eco_surveys-aut-2009-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Austria 2009",
+            "date": "2009-07",
+            "quote": "The economic downturn was primarily due to falling exports, reflecting the collapse in world trade, and shrinking investment"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1650.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2015 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Austria",
+            "date": "2016-02",
+            "quote": "Growth stagnated below 1 percent in 2012–14 due to trade and confidence spillovers from the euro area crisis, weak recovery in CESEE"
+          }
+        ]
+      },
+      {
+        "title": "An earlier slowdown and immigration",
+        "text": "The IMF found that underlying growth had begun to slow before the 2008 crisis, as capital built up more slowly, labour input fell and productivity stopped rising. From 2011 more immigrants arrived, as Austria's labour market opened to workers from the newer EU members.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1650.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2015 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Austria",
+            "date": "2016-02",
+            "quote": "This sizeable slowdown, which started before the global crisis, reflects slower accumulation of physical and human capital, declining labor input, and flat total factor productivity"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1650.pdf",
+            "publisher": "IMF",
+            "title": "Austria: 2015 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Austria",
+            "date": "2016-02",
+            "quote": "the immigrant inflow has strengthened since 2011 reflecting the labor market liberalization for workers from the EU’s New Member States"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 the economy came out of its two-year recession, and income per person edged up 0.3 percent. In 2026 a war in the Middle East pushed energy prices up again, and the IMF expects it to slow the recovery.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+          "publisher": "IMF",
+          "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+          "date": "2026-07",
+          "quote": "The economy emerged from a two-year recession in 2025, with growth reaching 1.0 percent"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+          "publisher": "IMF",
+          "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+          "date": "2026-07",
+          "quote": "developments in the Middle East caused pump prices for gasoline to jump roughly 20 percent year-on-year"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1autea2026002.pdf",
+          "publisher": "IMF",
+          "title": "Austria: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Alternate Executive Director for Austria",
+          "date": "2026-07",
+          "quote": "The war in the Middle East is expected to slow, but not derail, the near-term recovery."
+        }
+      ]
+    },
+    "tension": "The IMF describes 2025 as the year Austria emerged from recession, yet income per person rose only 0.3 percent that year and is still 2.6 percent below its 2022 peak. The gap suggests a population that keeps growing, so a recovery in total output shows up only faintly per person."
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "BEN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BEN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Benin Article IV staff report 2024 2025 growth",
+        "same tier 1 list: Benin Macro Poverty Outlook economic update growth",
+        "imf.org: IMF Benin press release 2026 review Extended Fund Facility growth",
+        "same tier 1 list: Benin Nigeria border closure 2019 re-export trade growth impact",
+        "Opened: thedocs.worldbank.org MPO Benin (Oct 2026); imf.org IMF Country Report 24/338 (Dec 2024); imf.org PR 26/063 (Feb 2026); documents1.worldbank.org Benin CEM 2.0 Chapter IV (2022). Failed to open: imf.org PR 26/355 (404), afdb.org Benin outlook (403), elibrary.imf.org PDF (403), imf.org CR 22/246 (opened, but it was a different Selected Issues paper and was not used)",
+        "Checker: re-opened all three cited PDFs (IMF CR 24/338, World Bank MPO Benin October 2026, World Bank CEM 2.0 Chapter IV) and searched their extracted text for every quoted passage"
+      ],
+      "critic_changes": [
+        "since_last_year: 'fastest pace since 1981' corrected to 'since 1990'; the series shows 5.7 percent growth in income per person in 1990, above 2025's 5.5.",
+        "tension: removed '7 to 8 percent' for whole-economy growth. It is not in growth_problem or series and may appear only inside a quoted passage.",
+        "Trouble on the borders: removed '35 years' from the thread's own words, since it is not in the data file (it stays inside the quoted passage). 'Insecurity spilling over from the Sahel weighs on the north' was reworded to the source's 'fragility' in the north and the wider region, which is what the passage supports.",
+        "Demography thread: removed 'Half of Benin's people are 18 or younger' because the number is not in the data and a median age of 18 means half are younger than 18. Removed 'the population grows fast' and 'splits the gains', which the cited passages do not state; that point stays in tension, where it rests on the data. Renamed the thread 'A young population' and shortened the IMF quote to drop its prescriptive clause.",
+        "A reform and building drive: 'heavy spending on roads, power and water' was not supported and became 'a public building drive'. Added the IMF passage on the 2016 'Revealing Benin' reform programme, which supports the 2016 claim in the arc and the thread.",
+        "Processing crops at home: 'cotton, cashews and soybeans' became 'farm goods', because the SEZ passage does not name those crops. Added the IMF passage on the SEZ textile unit to support the ginned-cotton sentence.",
+        "Arc: 'did little to build more productive firms' reworded to 'held back more productive manufacturing and services' to match the World Bank passage.",
+        "All 12 citations verified: the three PDFs were re-opened and every quoted passage was found verbatim in the extracted text. Dates confirmed: IMF CR 24/338 is December 2024, the MPO footer reads October 2026, and CEM Chapter IV is 2022.",
+        "All remaining numbers were checked against desk/data/BEN.json: 1.3, 3.7, 3.4, 1.2, 749, 1,006, 19.7 (2016), 35.4 (2025), 1.1 (2020), 5.5 (2025), and 2025 as the peak."
+      ]
+    },
+    "headline": "After decades of slow, uneven gains, Benin's income per person sped up to 3.7 percent a year from 2017 as reforms and investment took hold.",
+    "arc": "From 1990 to 2016 Benin's income per person grew slowly and unevenly, at 1.3 percent a year, rising from about 749 to 1,006 dollars in constant prices. The sources describe an economy that leaned on cotton and on transit trade with Nigeria. That left it exposed to its big neighbour's policies and held back more productive manufacturing and services. From 2017 growth stepped up to 3.7 percent a year, and the last decade averaged 3.4 against 1.2 in the decade before. The IMF ties the turn to a reform programme launched in 2016 and a public building drive, and investment rose from 19.7 percent of GDP in 2016 to 35.4 in 2025. Growth stayed positive even in 2020, at 1.1, and reached 5.5 in 2025, when income per person hit its highest level on record.",
+    "threads": [
+      {
+        "title": "Cotton and the Nigeria trade",
+        "about": "history",
+        "text": "For decades Benin earned its living from a few crops, mainly cotton, and from goods passing through its port to Nigeria. The World Bank says this reliance held back more productive manufacturing and services. It also left Benin exposed when Nigeria closed its border in 2019 and 2020.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/156231646079813834/pdf/Increasing-Diversification-and-Integration-for-Economic-Transformation-Chapter-4.pdf",
+            "publisher": "World Bank",
+            "title": "Benin Country Economic Memorandum 2.0, Chapter IV: Increasing Diversification and Integration for Economic Transformation",
+            "date": "2022",
+            "quote": "Throughout recent decades, Benin has relied on external growth drivers such as commodity exports (cotton, cashews) and transit trade with Nigeria."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/156231646079813834/pdf/Increasing-Diversification-and-Integration-for-Economic-Transformation-Chapter-4.pdf",
+            "publisher": "World Bank",
+            "title": "Benin Country Economic Memorandum 2.0, Chapter IV: Increasing Diversification and Integration for Economic Transformation",
+            "date": "2022",
+            "quote": "The reliance on the Nigerian market, through re-export activity, continues to subdue the development of a higher-productivity manufacturing and services sectors"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/156231646079813834/pdf/Increasing-Diversification-and-Integration-for-Economic-Transformation-Chapter-4.pdf",
+            "publisher": "World Bank",
+            "title": "Benin Country Economic Memorandum 2.0, Chapter IV: Increasing Diversification and Integration for Economic Transformation",
+            "date": "2022",
+            "quote": "is vulnerable to changes in Nigerian policies as evidenced by the 2019-2020 border closure."
+          }
+        ]
+      },
+      {
+        "title": "A reform and building drive",
+        "about": "present",
+        "text": "Since 2016 the government has run a reform programme alongside a public building drive. The IMF links this to faster and steadier growth. Investment climbed from 19.7 percent of GDP in 2016 to 35.4 in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "The country's reform program—anchored in the Government Actions Program \"Revealing Benin\" (2016-2021; and 2021-26)"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "Economic activity accelerated over the past five years, with less volatile income growth notwithstanding severe shocks"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "Growth is expected to remain strong in the coming years, supported by the government infrastructure drive and by private investment"
+          }
+        ]
+      },
+      {
+        "title": "Processing crops at home",
+        "about": "present",
+        "text": "A special economic zone opened in 2020 to process farm goods in Benin rather than ship them raw. A textile plant there is meant to handle every step from ginned cotton onward.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "The authorities launched a special economic zone (SEZ) in 2020, with some factories already operational for local transformation of commodities."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "The integrated textile unit in the SEZ is expected to cover every step of the transformation process of cotton lint ginned by local factories."
+          }
+        ]
+      },
+      {
+        "title": "Trouble on the borders",
+        "about": "present",
+        "text": "Benin's neighbours remain a source of shocks. The closure of the border with Niger cut port traffic in 2023, and fragility persists in the north and the wider region. Even so, the country has kept unbroken constitutional rule.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "The service sector was buoyed by retail trade and tourism, partially compensating for the sharp drop in port activity amid the Niger border closure."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ben.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Benin",
+            "date": "2026-10",
+            "quote": "Despite persistent fragility in northern Benin and the subregion, Benin has maintained 35 years of uninterrupted constitutional rule."
+          }
+        ]
+      },
+      {
+        "title": "A young population",
+        "about": "present",
+        "text": "Benin's population is very young. The World Bank says growth has done little for living standards so far, and productivity remains low.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1benea2024002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Benin: Staff Report for the 2024 Article IV Consultation, Fourth Review Under the Extended Fund Facility and the Extended Credit Facility Arrangements (IMF Country Report No. 24/338)",
+            "date": "2024-12",
+            "quote": "Harnessing the demographic dividend—Benin's median age is 18"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ben.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Benin",
+            "date": "2026-10",
+            "quote": "poverty reduction has remained modest as growth has translated weakly into welfare gains and productivity remains low."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth held up through the 2026 election year. Income per person rose 5.5 percent in 2025, its fastest pace since 1990, and a new government took office in May 2026. The World Bank says the vote and the Middle East conflict did little to slow activity.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ben.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Benin",
+          "date": "2026-10",
+          "quote": "The government formed by the two main ruling parties took office in May 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ben.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Benin",
+          "date": "2026-10",
+          "quote": "The Middle East conflict and electoral cycle have had limited effects on economic activity."
+        }
+      ]
+    },
+    "tension": "The sources report growth for the whole economy, which has run well above growth in income per person. Income per person grew 3.7 percent a year from 2017 and 5.5 in 2025, as a fast-growing population shares the gains. The World Bank adds that strong growth has done little to cut poverty."
+  }
+}

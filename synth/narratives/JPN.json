@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "iso3": "JPN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "JPN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, oecd.org, worldbank.org, adb.org and the other tier 1 domains: Japan Article IV consultation 2025 staff report",
+        "tier 1 domains: OECD Economic Surveys Japan 2026 (oecd.org pages returned HTTP 403 and could not be opened)",
+        "tier 1 domains: Japan lost decade asset price bubble banking crisis 1990s deflation lessons",
+        "imf.org: Japan 2009 global financial crisis collapse in exports, IMF Article IV 2009",
+        "Opened: imf.org IMF Country Report 26/75 (2026 Article IV), imf.org PR 25/84 (2025 Article IV press release), imf.org 2009 Article IV concluding statement, adb.org ADBI Working Paper 521 (2015)",
+        "Critic re-check: opened all four cited URLs again; the IMF 26/75 and ADBI 521 PDFs were text-extracted and every quoted passage was matched against the full text"
+      ],
+      "critic_changes": [
+        "All four cited URLs reopened; the IMF Country Report 26/75 and ADBI Working Paper 521 PDFs were text-extracted and every quote matched verbatim. Dates confirmed: CR 26/75 April 2026, PR 25/84 2 April 2025, 2009 concluding statement 20 May 2009, ADBI WP 521 April 2015.",
+        "Headline: dropped the causal clause 'as a shrinking workforce slowed output', which pulled against the tension section (a shrinking population raises income per person); now states pace, no lasting break and the 2025 high.",
+        "Arc: replaced 'fast catch-up was over by 1990' (the data show 4.5 percent growth in 1990) with a plain statement about the 1960s; 'the pace has not slipped' replaced by 'stayed close to the long average' (0.7 and 0.8 sit below the 1.0 era mean); 'bubble' made 'real estate and stock market bubble in the early 1990s' to match the source; 'world demand for Japan's exports' simplified to 'world demand' to match the 2009 IMF passage.",
+        "Thread 'Burst bubble, weak banks': 'around 1990' corrected to 'the early 1990s' per the ADBI paper; first ADB quote swapped for the passage that actually describes the bubble bursting.",
+        "Thread 'A shrinking, aging workforce': 'has fallen every year since' softened to 'has been shrinking since' (source says approximately 0.6 percent per year); removed the claim about women, older people and foreign workers, which none of the three quoted passages carries; 'two decades' figure moved out of own words (kept only inside the quote).",
+        "Thread 'Exposed to world demand' retitled 'Hit by world demand': removed 'reliance on factory exports', not supported by the cited passage; 5.9 and 4.1 checked against the series (2009 is the series minimum).",
+        "Thread 'Deflation ends, real wages fall': 'more than three years' and 'decades' durations kept out of own words (non-data numbers); added a third verified citation for the nominal-wage claim ('multi-decade highs').",
+        "Thread 'Aging and public debt': removed 'Public debt is very high', which no quoted passage supports; quote extended (25 words) to carry the 2035 debt-ratio projection that the text describes.",
+        "since_last_year: added a verified citation for the July 2025 US trade agreement; reworded tariff sentence to match the source ('helped avert a major escalation in tariffs').",
+        "Tension: kept the 2024 contrast (IMF: output contraction in 2024 from temporary supply disruptions, verified; data: income per person +0.2); removed 'steady' since the period includes falls of 5.9 and 4.0.",
+        "All own-words numbers checked against desk/data/JPN.json: 1.0 (G4 era mean 0.95), 0.7 (avg_prior_10y), 0.8 (avg_10y), 38,619 (G3 peak 2025), 1.7 (2025), 0.2 (2024), -2.0 (1998), -5.9 (2009), -4.0 (2020), 4.1 (2010), >10 percent in 1961/1964/1968/1969, shrinking 1993/1998/1999. No banned phrases. Two distinct recent tier 1 sources (IMF CR 26/75, IMF PR 25/84), so the story stays tier 1."
+      ]
+    },
+    "headline": "Japan's income per person has grown about 1.0 percent a year since 1990, slowly and with no lasting break, and reached a new high in 2025.",
+    "arc": "Japan's fastest growth came in the 1960s, when income per person grew by more than 10 percent in several years. Since 1990 the data show one long era with no lasting shift: growth averaged 1.0 percent a year over 1990–2025. The sources link the slow pace first to the bursting of the real estate and stock market bubble in the early 1990s and the bank troubles that followed, and later to a working-age population that has been shrinking since 1995. Sharp drops came with shocks: income per person fell 2.0 percent in 1998, 5.9 percent in 2009 when world demand collapsed, and 4.0 percent in 2020. The last two decades stayed close to the long average, at 0.7 percent a year over 2006–2015 and 0.8 percent over 2016–2025. Income per person reached its highest level so far in 2025, at 38,619 in constant dollars, after growth of 1.7 percent that year.",
+    "threads": [
+      {
+        "title": "Burst bubble, wary banks",
+        "text": "The sources date Japan's long slowdown to the bursting of its real estate and stock market bubble in the early 1990s. One study ties the slow years that followed partly to banks that grew wary of lending to small and new firms. Income per person shrank in 1993 and again in 1998 and 1999.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/159841/adbi-wp521.pdf",
+            "publisher": "ADB",
+            "title": "Japan’s Lost Decade: Lessons for Other Economies (ADBI Working Paper 521)",
+            "date": "2015-04",
+            "quote": "In the early 1990s, Japan’s real estate and stock market bubble burst and the economy went into a tailspin."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/159841/adbi-wp521.pdf",
+            "publisher": "ADB",
+            "title": "Japan’s Lost Decade: Lessons for Other Economies (ADBI Working Paper 521)",
+            "date": "2015-04",
+            "quote": "Basel capital requirements that have made Japanese banks reluctant to lend money to startup businesses and small and medium-sized enterprises"
+          }
+        ]
+      },
+      {
+        "title": "A shrinking, aging workforce",
+        "text": "Japan's working-age population peaked in 1995 and has been shrinking since, which the IMF says has long kept growth subdued. Automation has helped hold up output per worker, and the IMF links the push for higher productivity to the aging population.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "A shrinking and aging workforce has led to subdued GDP growth over the past two decades, but automation has supported labor productivity."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "Japan’s working age population (aged 15-64) peaked in 1995 and has been shrinking by approximately 0.6 percent per year since."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/04/01/pr25084-japan-imf-executive-board-concludes-2025-article-iv-consultation-with-japan",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Japan",
+            "date": "2025-04-02",
+            "quote": "structural policies to improve efficiency and productivity in the context of an aging population"
+          }
+        ]
+      },
+      {
+        "title": "Hit by world demand",
+        "text": "When world demand collapsed in 2008–09, Japan fell into what the IMF called its most severe recession in decades. Income per person fell 5.9 percent in 2009, the deepest drop in data that start in 1960, then grew 4.1 percent in 2010.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs052009",
+            "publisher": "IMF",
+            "title": "2009 Article IV Consultation with Japan: Concluding Statement of the IMF Mission",
+            "date": "2009-05-20",
+            "quote": "The collapse in external demand and financial spillovers have plunged the economy into the most severe recession in decades."
+          }
+        ]
+      },
+      {
+        "title": "Deflation ends, real wages fall",
+        "text": "After decades of prices that barely rose, inflation has run above the central bank's target for several years. Nominal wages are growing at their fastest in decades, but prices have risen faster, so real wages have fallen since 2022.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "After three decades of near-zero inflation, prices grew faster than the BOJ’s target for over three and a half years before moderating in January."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "Nominal wages have been growing at multi-decade highs for the past few years"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "high inflation has contributed to a 6-percent fall in real wages since 2022, eroding household purchasing power."
+          }
+        ]
+      },
+      {
+        "title": "Aging and public debt",
+        "text": "The IMF expects spending on interest and on health and care for an older population to keep rising. It projects that this will push the public debt ratio up again from 2035.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+            "date": "2026-04",
+            "quote": "interest and health and long-term care for the aging population will continue to rise, eventually leading to an increase in the debt-to-GDP ratio from 2035"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 1.7 percent in 2025, after 0.2 percent in 2024, and reached a new high. A trade deal with the United States in July 2025 helped avert a bigger rise in US tariffs, and the harm from higher tariffs fell mostly on carmakers. Inflation eased in early 2026, and the IMF expects growth to slow in 2026 as world demand weakens and the conflict in the Middle East weighs on the outlook.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+          "date": "2026-04",
+          "quote": "In July 2025, Japan became the first country in Asia to reach a bilateral trade and investment agreement with the United States"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+          "date": "2026-04",
+          "quote": "the impact of higher US tariffs has been limited and largely confined to the auto sector."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1jpnea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Japan: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Japan",
+          "date": "2026-04",
+          "quote": "moderate to 0.8 percent due to weaker external demand and the impact from the conflict in the Middle East."
+        }
+      ]
+    },
+    "tension": "The IMF describes total output, which it says shrank in 2024 because of temporary supply disruptions. Yet income per person rose 0.2 percent that year, because there were fewer people to share it. The same gap runs through the whole period: a shrinking workforce holds down total output, as the sources stress, while a shrinking population props up income per person, which has averaged 1.0 percent a year since 1990."
+  }
+}

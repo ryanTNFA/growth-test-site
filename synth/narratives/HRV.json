@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "iso3": "HRV",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "HRV",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "query: Croatia Article IV consultation 2025 IMF staff concluding statement",
+        "query: Croatia economic survey OECD 2025 growth EU funds euro adoption",
+        "query: Croatia six-year recession 2009-2014 credit boom pre-crisis growth IMF",
+        "query: Croatia 1993 stabilization program hyperinflation war recovery growth 1990s",
+        "opened: imf.org 2025 Article IV staff concluding statement (2025-11; read by drafter, not quoted, not re-checked)",
+        "opened: thedocs.worldbank.org Croatia Macro Poverty Outlook October 2026",
+        "opened: oecd.org OECD Economic Surveys: Croatia 2026 (PDF)",
+        "opened: thedocs.worldbank.org Croatia Systematic Country Diagnostic summary (2018)",
+        "opened: documents1.worldbank.org Croatia Economic Vulnerability and Welfare Study (2001)",
+        "opened (critic): documents1.worldbank.org Croatia Country Economic Memorandum 2022, text version (the PDF exceeded the fetch size limit)",
+        "opened (critic): documents.worldbank.org document detail page for 099094501312328131",
+        "critic: one further tier 1 search attempted, not run (session web-search budget used up)",
+        "tier 2 (UN) not searched: tier 1 gave 2 recent sources"
+      ],
+      "critic_changes": [
+        "tier1_recent_found 3 -> 2: only the OECD survey (2026-01) and the World Bank MPO (2026-10) are recent tier 1 sources that are cited and were checked; the IMF 2025 statement was not cited and could not be re-checked. Two is still enough for tier 1.",
+        "Arc: '19.6 percent ... cut output' corrected; 19.6 is the 1991 fall in income per person, not output. 'Hard break from the Yugoslav economy' changed to 'hard transition from socialism' to match the source's 'transitional recession'.",
+        "Arc: dropped 'as many workers left the country' as a cause of the 2008-2015 slump; no cited passage links emigration to the slump. Added the source's 'six-year recession'.",
+        "Arc: dropped tourism as a driver of growth since 2016 (no cited support), and said wages, public spending and EU funds lifted demand 'since the pandemic', the period the OECD and World Bank passages describe.",
+        "Headline: added 'lately' so EU money and spending are not credited with the whole 2016-2025 era.",
+        "Thread 'War and a hard transition': dropped 'destroyed homes and roads' and 'cut trade with the rest of former Yugoslavia' (not in the cited passages). Added the 2001 report's footnote on tourism collapsing as a citation. Changed 'after 1994' to 'in 1994' (the data show growth of 4.7 in 1994). Dropped 'because deeper reforms lagged' to stay within the quoted passage.",
+        "Thread 'A borrowed boom, then bust': 'cheap money' changed to 'plentiful money' to match the source's 'abundant liquidity'. Both quotes were checked word for word.",
+        "Thread on the pandemic (retitled 'Pandemic and earthquakes in 2020'): the cited CEM PDF was too large to fetch, so the citation now points to the World Bank's text version of the same document, which was opened and checked. Dropped 'harder than most of Europe'. Added the CEM earthquake passage and the OECD passage on earthquake rebuilding to support the claims the thread had left uncited.",
+        "Thread 'EU money and spending lead': 'generous public budgets' changed to 'loose public budgets' and 'EU recovery and cohesion funds' to 'EU funds' (cohesion funds are not in the cited passages). Added the OECD passage on the euro and fiscal policy to support the second sentence.",
+        "Thread 'Fewer people, more migrants': dropped 'older' (not in the cited passages) and 'firms still report'; the text now says shortages of workers and skills persist.",
+        "since_last_year: added the World Bank MPO passage on fewer work permits to support that claim. The other quotes and the 2026-10 date were checked against the page.",
+        "Tension: corrected 'the OECD ... describes catch-up as continuing'. The OECD measures catch-up toward the OECD average, while the World Bank measures it against the EU average, and the text now says so. The OECD date is now January 2026.",
+        "All numbers were checked against desk/data/HRV.json (-1.0, 5.1, -0.4, 4.3, 0.7, 19.6, 1,500, 6.7, 7.5, 13.7, 3.1, 3.7, 17,225, 18,414 and the 2025 peak) and all match. All quotes are 25 words or fewer and no banned phrases appear."
+      ]
+    },
+    "headline": "After war and a long post-2008 slump, Croatia's growth sped up to 4.3 percent a year from 2016, lifted lately by EU money and spending, and is now cooling.",
+    "arc": "In 1991-1999 income per person shrank by 1.0 percent a year on average: war and a hard transition from socialism cut it by 19.6 percent in 1991 alone, and prices rose 1,500 percent in 1993. From 2000 to 2007 growth averaged 5.1 percent a year, but the World Bank says this boom ran on spending at home and plentiful money from abroad rather than on exports. When the 2008 global crisis cut off that money, a six-year recession followed: income per person fell 6.7 percent in 2009, and growth averaged -0.4 percent over 2008-2015. Since 2016 growth has averaged 4.3 percent a year, up from 0.7 in the decade before; the pandemic cut income per person by 7.5 percent in 2020 before a 13.7 percent rebound in 2021, and since then rising wages, public spending and EU funds have lifted demand. Income per person reached a new high in 2025, but growth has eased since the rebound, to 3.1 percent in 2025.",
+    "threads": [
+      {
+        "title": "War and a hard transition",
+        "text": "War from 1991 and the break with socialism caused a severe crisis, and tourism, a key source of foreign money, collapsed while prices ran out of control. Growth returned in 1994, but the World Bank judged that recovery unsustainable and said the economy lost competitiveness.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/709081468770636975/pdf/multi0page.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia: Economic Vulnerability and Welfare Study (Report No. 22079-HR)",
+            "date": "2001-04-18",
+            "quote": "Between 1990 and 1993, the combination of war and transitional recession contributed to a particularly severe economic crisis."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/709081468770636975/pdf/multi0page.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia: Economic Vulnerability and Welfare Study (Report No. 22079-HR)",
+            "date": "2001-04-18",
+            "quote": "A key source of foreign exchange before the war, tourism revenues dropped to 10 percent of pre-war levels by 1993."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/709081468770636975/pdf/multi0page.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia: Economic Vulnerability and Welfare Study (Report No. 22079-HR)",
+            "date": "2001-04-18",
+            "quote": "made the past-war economic recovery unsustainable and resulted in the loss of competitiveness"
+          }
+        ]
+      },
+      {
+        "title": "A borrowed boom, then bust",
+        "text": "The World Bank says growth before 2008 rested on spending at home, paid for with plentiful money from abroad, more than on exports. When the global crisis hit, that money stopped and a six-year recession followed.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/211001535731693568-0080022018/original/CroatiaSCDSummaryweb.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia - Systematic Country Diagnostic: Summary",
+            "date": "2018",
+            "quote": "Growth prior to the 2008 crisis was to a large extent driven by an increase in domestic demand, rather than exports."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/211001535731693568-0080022018/original/CroatiaSCDSummaryweb.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia - Systematic Country Diagnostic: Summary",
+            "date": "2018",
+            "quote": "When the crisis hit, interest rates rose, capital flows came to a sudden stop and exports plummeted. The bubble burst, and a six-year long …"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and earthquakes in 2020",
+        "text": "Because so much income comes from foreign visitors, the 2020 pandemic caused the deepest recession in Croatia's history. Two earthquakes the same year damaged Zagreb and the area around it, and the rebuilding later added to investment.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099094501312328131/txt/P1752220c6def203a0b7f00017cc624fc24.txt",
+            "publisher": "World Bank",
+            "title": "Croatia Country Economic Memorandum: Laying the Foundations - Boosting Productivity to Ensure Future Prosperity",
+            "date": "2022",
+            "quote": "The COVID-19 pandemic, however, derailed Croatia's growth path and caused the deepest recession in the country's history, given its dependence on tourism."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099094501312328131/txt/P1752220c6def203a0b7f00017cc624fc24.txt",
+            "publisher": "World Bank",
+            "title": "Croatia Country Economic Memorandum: Laying the Foundations - Boosting Productivity to Ensure Future Prosperity",
+            "date": "2022",
+            "quote": "The country also suffered from two earthquakes in 2020, with significant damage to infrastructure in the central-north part of the country, including the capital Zagreb."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-croatia-2026_2b5c8f99/b52e3ac0-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Croatia 2026",
+            "date": "2026-01",
+            "quote": "investment surged due to the accelerated use of EU Recovery and Resilience funds and continued earthquake-related reconstruction"
+          }
+        ]
+      },
+      {
+        "title": "EU money and spending lead",
+        "text": "Since the pandemic, growth has come mostly from spending at home: rising wages, loose public budgets and large EU funds. Croatia joined the euro area in 2023, which leaves the budget as its main tool for steadying the economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-croatia-2026_2b5c8f99/b52e3ac0-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Croatia 2026",
+            "date": "2026-01",
+            "quote": "Buoyant wage growth fuelled private consumption, while investment surged due to the accelerated use of EU Recovery and Resilience funds"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-hrv.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Robust household consumption, EU-funded investment and procyclical fiscal policy have supported economic activity, while strong employment and wage growth have sustained household incomes."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-croatia-2026_2b5c8f99/b52e3ac0-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Croatia 2026",
+            "date": "2026-01",
+            "quote": "fiscal policy is the main domestic macroeconomic stabilisation tool since Croatia joined the euro area in 2023"
+          }
+        ]
+      },
+      {
+        "title": "Fewer people, more migrants",
+        "text": "Waves of emigration, during the war and again after EU entry in 2013, have left Croatia with a smaller population. In recent years foreign workers have arrived in large numbers, but shortages of workers and skills persist.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-croatia-2026_2b5c8f99/b52e3ac0-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Croatia 2026",
+            "date": "2026-01",
+            "quote": "notably in the 1990s related to the War of Independence and again in the period between 2013 and 2017."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/01/oecd-economic-surveys-croatia-2026_2b5c8f99/b52e3ac0-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Croatia 2026",
+            "date": "2026-01",
+            "quote": "Croatia has seen a sharp rise in labour migration in recent years, reversing historical emigration trends, driven by improved living standards and streamlined immigration procedures."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-hrv.pdf",
+            "publisher": "World Bank",
+            "title": "Croatia: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "enduring labor and skills shortages across sectors continue to weigh on growth, even as firms increasingly turn to foreign workers to fill workforce gaps"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth has kept slowing. Income per person grew 3.1 percent in 2025, down from 3.7 in 2024. The World Bank's October 2026 update says growth slowed further in the first half of 2026, as household spending and EU-funded investment grew more slowly, tourism stalled and fewer work permits went to foreign workers.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-hrv.pdf",
+          "publisher": "World Bank",
+          "title": "Croatia: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Real GDP grew by 1.9 percent in the first six months, significantly below 3.4 percent recorded for 2025 overall."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-hrv.pdf",
+          "publisher": "World Bank",
+          "title": "Croatia: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Tourism activity stagnated: foreign tourist arrivals and overnight stays declined slightly, pointing to persistent price-competitiveness challenges"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-hrv.pdf",
+          "publisher": "World Bank",
+          "title": "Croatia: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "slower annual employment growth and decline in the number of work permits issued to foreign workers point to weakening labor demand"
+        }
+      ]
+    },
+    "tension": "The World Bank says Croatia's catch-up with average EU incomes has stalled since 2023. In the data, though, income per person kept rising, from 17,225 dollars in 2023 to a new high of 18,414 in 2025, and the OECD, writing in January 2026, says catch-up toward average OECD living standards continues. Both can be true if the rest of the EU grew about as fast, and the two sources compare Croatia with different groups. The sources and the data also measure the 2008-2015 slump differently: the World Bank describes a six-year recession in the whole economy, while income per person fell less, perhaps partly because many people emigrated."
+  }
+}

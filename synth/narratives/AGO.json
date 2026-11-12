@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "AGO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AGO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Angola Article IV 2025 IMF staff concluding statement oil production growth\"",
+        "tier 1 domains: \"Angola Macro Poverty Outlook World Bank 2025 economic update\"",
+        "tier 1 domains: \"Angola recession 2016 2020 oil price collapse 2014 oil production decline growth history\"",
+        "tier 1 domains: \"Angola end of civil war 2002 economy reconstruction oil boom 1990s war\"",
+        "opened: imf.org/en/news/articles/2026/05/01/pr26135imf-executive-board-concludes-2026-article-iv-consultation-with-angola",
+        "opened: thedocs.worldbank.org/.../mpo-ago.pdf (Macro Poverty Outlook, October 2026)",
+        "opened: documents1.worldbank.org/.../P507068-...pdf (Angola Economic Update, 1st edition, 2025)",
+        "opened: worldbank.org/en/country/angola/overview (not cited: page date unclear)",
+        "opened: imf.org/en/news/articles/2015/09/28/04/52/mcs032906 (2006 mission note, not cited)",
+        "critic: re-opened all three cited URLs; PDF texts extracted and every quote checked against the page text"
+      ],
+      "critic_changes": [
+        "Checked every number in the headline, arc, threads, since_last_year and tension against desk/data/AGO.json. These all match: -2.0, 26.4 (1993), 6.4, -0.2, 2014 peak, -2.4, -8.3 (2020), 25.2, 1980, 1.8 (2024) and 0.1 (2025). No number changes were needed. The headline is 151 characters.",
+        "Thread 'Oil price slump and recession': dropped the quote 'The economy suffered from declining global oil prices, maturing oil fields and declining investments in the oil sector which accounts for a quarter of GDP.' The sentence is split across a page break in the PDF, with another sentence in between, so it is not a continuous passage on the page. I replaced it with the continuous passage 'With the decline of global oil prices from the mid of the 2010s, Angola sled into a recession'. I also added 'These shocks started with the 2016-2020 recession, followed by the COVID-19 pandemic' to support the COVID-19 claim. I kept the 10.4 percent quote, which was verified.",
+        "Thread 'Oil price slump and recession': removed 'ageing oil fields and falling oil investment' from the thread text. None of the thread's remaining continuous quotes supports it. The arc keeps it, because the Economic Update does state it.",
+        "Thread 'Oil boom after the war': changed 'paid for rebuilding' to 'helped pay for the post-war years' to match the source ('This helped finance the post-war era').",
+        "Thread 'Population growing faster than output': added the Economic Update passage on population growth of 3.3 percent over 2015-23. It directly supports the claim about fast population growth. The previous support was only a forecast sentence.",
+        "since_last_year: changed 'as public spending and non-oil activity held up' to 'partly on public spending'. The cited IMF passage names only public spending, and no opened passage states non-oil support for 2025. Added the IMF oil-decline quote to support the first clause.",
+        "since_last_year: the claim that growth was led by manufacturing, communications and commerce, with a recovery in oil output, had no supporting quote. Added the MPO passage 'Growth reflected strong non-oil activity...'. Dropped 'falling inflation', which no cited passage supported.",
+        "Tension: 'a recovery since 2021' is not in any cited source. Changed it to 'a recovery in 2024', which the Economic Update reports. The cause of the gap with the World Bank's estimate is now 'measures income in local currency'. This matches the MPO chart label 'Real GDP per capita (constant LCU)'. The 31 percent figure is not quoted in our own words.",
+        "All other quotes were checked against the page text (the PDFs were extracted with pdftotext) and appear verbatim. The MPO em dashes appear in its extracted text as '--'. Dates were confirmed: the IMF press release is 2026-05-01, the MPO footer reads 'Macro Poverty Outlook / October 2026', and the Economic Update shows © 2025. There are three distinct recent tier 1 sources, and both 'present' threads cite sources from 2025 or 2026. No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "Angola's post-war oil boom lifted income per person, but lower oil prices and shrinking oil output since 2014 have left it 25.2 percent below its peak.",
+    "arc": "In the war years of the 1990s, income per person fell by 2.0 percent a year over 1990–2000, with a drop of 26.4 percent in 1993 alone. After the long civil war ended, rising oil output, high oil prices and oil-backed loans drove a boom, and income per person grew 6.4 percent a year over 2001–2008. Growth then stalled at -0.2 percent a year over 2009–2016: income per person peaked in 2014, and falling world oil prices, maturing oil fields and lower oil investment tipped the economy into recession. Since 2017 income per person has shrunk by 2.4 percent a year, with the worst year in 2020 at -8.3 percent as the COVID-19 pandemic deepened the slump. By 2025 it was still 25.2 percent below its 2014 peak and lower than in 1980, the first year of the record.",
+    "threads": [
+      {
+        "title": "Oil boom after the war",
+        "about": "history",
+        "text": "Once the civil war was over, rising oil output, high oil prices and loans backed by oil drove fast growth and helped pay for the post-war years. The World Bank notes that the oil money did not build the infrastructure, skills or institutions that other industries needed.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "From 2004 to 2014, Angola saw strong economic growth thanks to increasing oil production, high oil prices, and oil-backed loans."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "This helped finance the post-war era after a 27-year civil war."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "However, oil wealth did not create necessary infrastructure, skilled workers, or institutional capacity to promote sustainable and inclusive economic diversification."
+          }
+        ]
+      },
+      {
+        "title": "Oil price slump and recession",
+        "about": "history",
+        "text": "From the mid-2010s, falling world oil prices pushed the economy into a recession that ran from 2016 to 2020. The COVID-19 pandemic followed and made it worse.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "With the decline of global oil prices from the mid of the 2010s, Angola sled into a recession"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "These shocks started with the 2016-2020 recession, followed by the COVID-19 pandemic"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "Real GDP decreased by about 10.4 percent cumulatively between 2016 and 2020"
+          }
+        ]
+      },
+      {
+        "title": "Shrinking oil output",
+        "about": "present",
+        "text": "Proven oil reserves have shrunk and oil production fell sharply in 2025, which weakened public finances and the external accounts. The World Bank describes the oil sector as in structural decline, with farming and services expected to carry growth.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ago.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Angola (October 2026)",
+            "date": "2026-10",
+            "quote": "with proven oil reserves declining from 9.5 billion barrels in 2010 to 2.6 billion in 2025"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/01/pr26135imf-executive-board-concludes-2026-article-iv-consultation-with-angola",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Angola",
+            "date": "2026-05-01",
+            "quote": "A significant decline in oil production weakened fiscal and external positions in 2025."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ago.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Angola (October 2026)",
+            "date": "2026-10",
+            "quote": "Agriculture and services--including logistics, communications, and commerce--will be the main growth engines in the medium term, amid the oil sector's structural decline."
+          }
+        ]
+      },
+      {
+        "title": "Population growing faster than output",
+        "about": "present",
+        "text": "Angola's population grows fast, so years when the economy expands still leave income per person little changed. The long recession cut real incomes deeply, and they have not recovered.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ago.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Angola (October 2026)",
+            "date": "2026-10",
+            "quote": "As GDP growth barely keeps pace with population growth, poverty is expected to remain high around 43 percent"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "the population grew by 3.3 percent over 2015-23, against an average of 2.6 percent for Sub-Saharan Africa (SSA) as a whole"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099071825113513565/pdf/P507068-db94883f-4acc-4fce-8f31-284fdf4dc9cf.pdf",
+            "publisher": "World Bank",
+            "title": "Angola Economic Update, 1st Edition: Boosting Growth with Inclusive Financial Development",
+            "date": "2025",
+            "quote": "The prolonged recession led to a dramatic loss in Angolans' real income."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil production fell sharply in 2025, weakening public finances and the external accounts, but the economy still grew, partly on public spending; income per person rose just 0.1 percent. In the first half of 2026 the World Bank reports a sharp pickup, led by manufacturing, communications and commerce, with a small recovery in oil output.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/01/pr26135imf-executive-board-concludes-2026-article-iv-consultation-with-angola",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Angola",
+          "date": "2026-05-01",
+          "quote": "A significant decline in oil production weakened fiscal and external positions in 2025."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/01/pr26135imf-executive-board-concludes-2026-article-iv-consultation-with-angola",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Angola",
+          "date": "2026-05-01",
+          "quote": "Overall growth held up at 3.1 percent in 2025, partly supported by public spending."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ago.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Angola (October 2026)",
+          "date": "2026-10",
+          "quote": "Following 3.1 percent growth in 2025, Angola's economy accelerated in H1 2026, with real GDP expanding 7.2 percent, year-on-year."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-ago.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Angola (October 2026)",
+          "date": "2026-10",
+          "quote": "Growth reflected strong non-oil activity--particularly manufacturing, communications, and commerce--and a 3 percent oil-production recovery."
+        }
+      ]
+    },
+    "tension": "The sources describe strong growth from 2004 to 2014 and a recovery in 2024, but these are figures for the whole economy. In the data, income per person stalled from 2009 (an average of -0.2 percent a year over 2009–2016) and grew only 1.8 percent in 2024 and 0.1 percent in 2025, because the population grows almost as fast as output. The World Bank's October 2026 outlook also puts the gap from the 2014 level deeper than the 25.2 percent in this data, likely because it measures income in local currency rather than in dollars."
+  }
+}

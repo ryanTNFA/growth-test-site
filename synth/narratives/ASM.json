@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "iso3": "ASM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ASM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "Tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): 'American Samoa economy tuna cannery growth'",
+        "Tier 1: 'American Samoa economic update 2024'",
+        "Tier 1: '\"American Samoa\" StarKist minimum wage economy'",
+        "Tier 1 (worldbank.org, adb.org, imf.org, oecd.org): '\"American Samoa\" territory economy GDP' (only Samoa reports and World Bank data pages; no narrative source on American Samoa)",
+        "Tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): '\"American Samoa\" economy cannery tuna'",
+        "Tier 2: 'American Samoa working paper Special Committee decolonization economy 2024'",
+        "Tier 2 (un.org): 'A/AC.109/2025/1 American Samoa working paper Secretariat'",
+        "Tier 2: 'American Samoa working paper Secretariat Chicken of the Sea cannery closure 2009 minimum wage tsunami'",
+        "Tier 2 (un.org): 'American Samoa working paper Secretariat 2018 Tri Marine Samoa Tuna Processors cannery suspended operations'",
+        "Opened: documents.un.org UN Secretariat working papers on American Samoa A/AC.109/2026/1, 2025/1, 2024/1, 2022/1, 2018/1, 2015/12",
+        "Critic: re-opened and text-checked documents.un.org A/AC.109/2026/1, 2025/1, 2022/1, 2018/1, 2015/12"
+      ],
+      "critic_changes": [
+        "Opened all 5 cited UN PDFs (A/AC.109/2026/1, 2025/1, 2022/1, 2018/1, 2015/12) and extracted their text. Every URL works, every title and date matches the document header, and every quoted passage appears on its page (differences are only PDF hyphenation and spacing).",
+        "Checked every number against desk/data/ASM.json: -0.8 and 1.7 era means, 13,202 (2003), 11,872 (2013), 13,709 (2022 peak, first reached 2022, series from 2002), and yearly growth of 4.3 (2015), -0.5 (2016), -5.8 (2017), 5.4 (2020) and 3.6 (2022) all match.",
+        "Thread 'Tuna canning carries exports': the cited passages did not support 'largest private employer', so I added a 2025 citation (largest source of private sector employment). The 'workers from neighbouring Samoa' claim moved to the demography thread with its own 2026 citation. 'Main private industry' became 'drives the economy, earns its export income' to match the passage.",
+        "Thread 'Wage rises and cannery closures': removed 'cannery jobs fell by half' because 'half' is a figure that is not in the data file; it now says 'fell sharply', and the 50 per cent stays only inside the quote. Removed 'later laws slowed it', which the quote did not cover. Swapped the 2025 quote for one from the same sentence that supports 'toward the US level by 2016'.",
+        "Thread 'Tsunami, rebuilding and a closure': retitled. 'Main power plant' became 'Satala power plant' as the source names it. Removed the unsupported link between tsunami rebuilding and the 2015 projects. Removed 'second cannery, opened in 2015' because 'opened in 2015' was outside the quote and the count words were not in the data; it now names the Samoa Tuna Processors cannery.",
+        "Thread 'Federal grants cushion shocks': the 2020 claim about federal pandemic grants had no supporting passage, so I added a 2022 citation (government spending supported by federal grant revenues, including Coronavirus Relief Fund payments). 'Lifted output' was softened to what the passages say.",
+        "Thread 'Fewer people, poorer households': 'the territory's own development plan' became 'the territory's economic development strategy' to match the source's wording.",
+        "Arc: rewrote the garbled second sentence. It no longer says canneries earn 'most' exports, which no passage supports, and it no longer claims the papers tie the tsunami to the income decline. 'A second cannery' became the named cannery. 'Carried income per person to 13,709' became 'supported the economy in 2022, when income per person reached 13,709', because the sources describe support, not a cause of the level. 'One remaining cannery' became 'the last remaining cannery'.",
+        "since_last_year: now names the Office of Insular Affairs and states the purpose of the pause as the 2026 page gives it. It is within the 18-month window.",
+        "Tier 2 kept, tier1_recent_found 0: 2 distinct recent tier 2 sources (2025-03 and 2026-03) and 5 threads survive. Every present thread cites a 2025 or 2026 document. No banned phrases and no recommendation language found."
+      ]
+    },
+    "headline": "American Samoa's income per person slid for a decade as canneries closed, then climbed to a 2022 peak on tuna exports and federal money.",
+    "arc": "From 2003 to 2013 income per person in American Samoa fell by 0.8 percent a year on average, from 13,202 to 11,872 constant dollars. From 2007, the UN Secretariat papers report, federal minimum wage rises and tougher competition led to closures at the tuna canneries that drive the economy, and the September 2009 earthquake and tsunami badly damaged the Satala power plant. From 2014 to 2022 growth averaged 1.7 percent a year but swung hard, from 4.3 percent in 2015 to -5.8 percent in 2017, after investment projects wound down and the Samoa Tuna Processors cannery closed, and back to 5.4 percent in 2020. Federal pandemic grants, canned tuna exports and visitor spending supported the economy in 2022, when income per person reached 13,709, its highest level since the series began in 2002. The economy still rests on federal funds and the last remaining cannery, and no official GDP estimate has been made after 2022.",
+    "threads": [
+      {
+        "title": "Tuna canning carries exports",
+        "about": "present",
+        "text": "Tuna canning drives the economy, earns its export income and is the largest source of private jobs. Only a single cannery is left, and the UN papers describe the economy's long-term stability as resting on it and on federal funds.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2026/1)",
+            "date": "2026-03-26",
+            "quote": "The tuna canning industry is the main component that drives the economy of American Samoa, generating export earnings"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2025/1)",
+            "date": "2025-03-06",
+            "quote": "The tuna canning industry, the largest source of private sector employment in the Territory, is subject to a minimum wage of $6.36 per hour"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2025/1)",
+            "date": "2025-03-06",
+            "quote": "its long-term economic stability are solely dependent on federal Government funds and the continued operations of the only remaining tuna cannery"
+          }
+        ]
+      },
+      {
+        "title": "Wage rises and cannery closures",
+        "about": "history",
+        "text": "A 2007 federal law set a schedule of minimum wage rises meant to reach the US level by 2016. Rising wages and tougher competition led to cannery closures between 2007 and 2018, and cannery jobs fell sharply from 2007 to 2014.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2025/1)",
+            "date": "2025-03-06",
+            "quote": "in 2007 created a schedule of periodic increases to minimum wage rates in American Samoa to raise them to the federal level by 2016"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2022/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2022/1)",
+            "date": "2022-03-09",
+            "quote": "the tuna canning industry faces multiple challenges, including increased competition and minimum wage increases, which led to cannery closures between 2007 and 2018"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2018/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2018/1)",
+            "date": "2018-02-21",
+            "quote": "During the same period, cannery employment decreased by 50 per cent, and the minimum wage for cannery workers rose."
+          }
+        ]
+      },
+      {
+        "title": "Tsunami, projects end, cannery shuts",
+        "about": "history",
+        "text": "The earthquake, tsunami and flood of September 2009 severely damaged the Satala power plant. Several public and private investment projects ended or neared their end in 2015, and the Samoa Tuna Processors cannery closed in December 2016. Income per person fell 0.5 percent in 2016 and 5.8 percent in 2017.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2015/12&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2015/12)",
+            "date": "2015-03-04",
+            "quote": "the capacity lost when the Satala power plant was severely damaged by the earthquake, tsunami and flood of 29 September 2009."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2018/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2018/1)",
+            "date": "2018-02-21",
+            "quote": "several investment projects in both the government and private sectors had ended or entered their final stages in 2015."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2018/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2018/1)",
+            "date": "2018-02-21",
+            "quote": "the owner of Samoa Tuna Processors, one of the two tuna canneries in American Samoa, announced that it was closing its operations in December 2016"
+          }
+        ]
+      },
+      {
+        "title": "Federal grants cushion shocks",
+        "about": "present",
+        "text": "In 2020 tuna canning was a main source of growth, and federal grants, including pandemic relief, supported government spending; income per person rose 5.4 percent. In 2022 federal pandemic grants were still supporting the economy, and income per person rose 3.6 percent.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2022/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2022/1)",
+            "date": "2022-03-09",
+            "quote": "Activity related to the tuna canning industry was a significant source of growth in the economy of American Samoa."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2022/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2022/1)",
+            "date": "2022-03-09",
+            "quote": "Spending by the American Samoan Government was supported by federal grant revenues, including under Coronavirus Relief Fund payments."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2026/1)",
+            "date": "2026-03-26",
+            "quote": "the territorial economy was supported by the continued federal grant revenues related to the COVID-19 pandemic"
+          }
+        ]
+      },
+      {
+        "title": "Fewer people, poorer households",
+        "about": "present",
+        "text": "The territory's economic development strategy, as the UN reports it, names a shrinking population, very high poverty and a fragile economy. Local workers leave for the United States, and foreign cannery and fishing workers take their place, most cannery workers coming from neighbouring Samoa.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2025/1)",
+            "date": "2025-03-06",
+            "quote": "the Territory faces many challenges including, but not limited to, a shrinking population, extremely high poverty rates and a fragile insular economy."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2025/1)",
+            "date": "2025-03-06",
+            "quote": "the emigration of workers from the Territory to the United States was balanced by the immigration of foreign tuna cannery and fishery workers."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/1&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2026/1)",
+            "date": "2026-03-26",
+            "quote": "employs mostly foreign labour from neighbouring Samoa."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In March 2026 the UN Secretariat reported that no official estimate of GDP has been made since 2022, because the US Interior Department's Office of Insular Affairs paused its funding of the work so the territory's source data could be assessed. The data here therefore stop in 2022 and show nothing yet for 2023 onward.",
+      "citations": [
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/1&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "American Samoa: Working paper prepared by the Secretariat (A/AC.109/2026/1)",
+          "date": "2026-03-26",
+          "quote": "There has been no formal analysis of GDP for American Samoa since 2022."
+        }
+      ]
+    },
+    "tension": "The sources describe a shrinking population and a fragile economy, yet income per person reached its highest level in 2022. The sources' own figures for total output in 2015, 2020 and 2022 show slower growth than the data show for income per person in those years, which fits a falling population: part of the gain in income per person comes from fewer people, not more output."
+  }
+}

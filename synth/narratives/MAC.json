@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "MAC",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MAC",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Macao SAR Article IV staff report 2025 gaming diversification\"",
+        "imf.org, worldbank.org, adb.org: \"Macao economy 2014 2015 gaming revenue decline anticorruption VIP contraction IMF\"",
+        "imf.org, worldbank.org, adb.org: \"Macao SAR pandemic border restrictions 2022 contraction gaming law junket IMF\"",
+        "Opened by drafter: IMF 2026 Article IV concluding statement (July 2026), IMF 2024 Article IV concluding statement (March 2024), IMF Country Report 24/142 text, IMF Country Report 17/50 (February 2017), IMF 2022 Article IV concluding statement (January 2022), IMF press release 22/116 (April 2022)",
+        "Critic re-opened every cited URL: imf.org 2026 concluding statement, imf.org 2024 concluding statement, imf.org 2022 concluding statement, imf.org cr1750.pdf (text extracted from the PDF)"
+      ],
+      "critic_changes": [
+        "Re-opened all four cited URLs. Every quoted passage appears on its page. Dates match: Country Report 17/50 is February 2017, the 2022 statement January 2022, the 2024 statement March 2024 and the 2026 statement 29 July 2026.",
+        "Country Report 17/50 title: the document is titled '2016 Article IV Consultation—Press Release; and Staff Report', not 'Consultation Discussions'. Corrected in every citation that uses it.",
+        "Thread 'The VIP gaming slump': 'gaming exports fell by half' put a source figure that is not in the data file into my own words. Reworded to 'fell sharply' and added a citation quoting the IMF's 'cumulative 50 percent' line, so the figure appears only inside a quote.",
+        "Thread 'Casinos open': 'fast-rising spending by mainland visitors' changed to 'fast-rising spending power on the Mainland', which is what the IMF actually says.",
+        "Thread 'Pandemic closure and reopening': extended the 2024 quote to the full sentence (verified on the page) so it supports the claim that the 2023 rebound followed Mainland China lifting its COVID-19 controls. That claim also appears in the arc.",
+        "Thread 'Leaning less on gaming': dropped 'Gaming still dominates the economy', which no cited passage states. Dropped 'partly through the Hengqin cooperation zone', because the page mentions Hengqin but does not link it to the 2030 target in the cited text. Reworded the first sentence to match the 2024 quote.",
+        "since_last_year: added a second 2026 citation (tourist arrivals passed pre-pandemic levels) to support the tourism claim. The page says growth was 'supported by strong gaming and tourism activity', which backs 'led by gaming and tourism'.",
+        "Tension: reworded 'looks strong mainly because it includes the rebound' to say the average of yearly rates is lifted by the 2023 rebound, which made up only part of the 2020 fall. The series supports this: 75,725 in 2019, 33,854 in 2020, 59,474 in 2023.",
+        "tier1_recent_found: lowered from 3 to 2. Only the 2024 and 2026 IMF concluding statements are cited and verified. Country Report 24/142 was neither cited nor re-opened. Two recent sources still meets the minimum, so the story stays tier 1.",
+        "All numbers in the headline, arc, threads, since_last_year and tension checked against desk/data/MAC.json: 1.4, 5.4, 9.3 and 1.1 era means; 2013 peak; 32.9 percent shortfall; level first reached in 2010; -24.3 (2015), -55.3 (2020), +74.9 (2023), 4.8 (2025); 4.4 average for 2016–2025. All match. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Macao's gaming boom lifted income per person to a 2013 peak; a VIP slump and the pandemic left it 32.9 percent lower in 2025.",
+    "arc": "Income per person in Macao grew slowly in 1990–1997, at 1.4 percent a year, and faster in 1998–2005, at 5.4 percent a year. The fastest era, 2006–2013 at 9.3 percent a year, followed the opening of the gaming sector to outside investment in 2002 and a sharp rise in visitors from Mainland China, and it carried income per person to its peak in 2013. The boom ended in 2014 as high-stakes VIP gambling fell during an anti-corruption campaign on the Mainland, and income per person dropped 24.3 percent in 2015. The pandemic then cut off visitors: income per person fell 55.3 percent in 2020 and bounced back 74.9 percent in 2023 after Mainland China lifted its controls. Across 2014–2025 growth averaged 1.1 percent a year, and in 2025 income per person was still 32.9 percent below the 2013 peak, about where it first was in 2010.",
+    "threads": [
+      {
+        "title": "Casinos open, mainland visitors arrive",
+        "about": "history",
+        "text": "Macao is the only place in China where casino gambling is legal. The IMF links the long boom after 1999 to that monopoly, to the opening of gaming to outside investors in 2002, and to fast-rising spending power on the Mainland, which brought a sharp rise in mainland visitors. This is the background to the 9.3 percent a year growth of 2006–2013.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr1750.pdf",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: 2016 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 17/50)",
+            "date": "2017-02",
+            "quote": "primarily reflects the de jure monopoly on gambling within China, the liberalization of the gaming sector to outside investment in 2002"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr1750.pdf",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: 2016 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 17/50)",
+            "date": "2017-02",
+            "quote": "The large size of the tourism sector today has been driven by the sharp rise in visitors from Mainland China"
+          }
+        ]
+      },
+      {
+        "title": "The VIP gaming slump",
+        "about": "history",
+        "text": "From 2014 the high-stakes VIP side of the casino business shrank fast and gaming exports fell sharply. The IMF ties this to a wider fall in luxury spending and the anti-corruption campaign on the Mainland. Income per person fell in 2014, 2015 and 2016.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr1750.pdf",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: 2016 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 17/50)",
+            "date": "2017-02",
+            "quote": "the economic boom came to an abrupt end in 2014 with gaming exports falling by a cumulative 50 percent."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr1750.pdf",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: 2016 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 17/50)",
+            "date": "2017-02",
+            "quote": "This development mirrored trends in luxury markets in Hong Kong SAR and came amid a sustained anti-corruption campaign on the Mainland."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic closure and reopening",
+        "about": "history",
+        "text": "When visitors stopped coming in 2020, Macao's exports of services collapsed and income per person fell 55.3 percent. The sharp rebound came in 2023, after Mainland China lifted its COVID-19 controls.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/01/21/peoples-republic-of-china-macao-sar-concluding-statement",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: Staff Concluding Statement of the 2022 Article IV Mission",
+            "date": "2022-01",
+            "quote": "Aggregate GDP shrank by 54 percent in 2020, mostly on the collapse of services exports."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/06/mcs030624-peoples-republic-of-china-macao-special-admin-region-staff-cs-2024-art-iv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03",
+            "quote": "Macao SAR’s economy expanded by 80.5 percent in 2023, driven by a surge in services export after Mainland China lifted COVID-19 containment measures."
+          }
+        ]
+      },
+      {
+        "title": "Uneven recovery, weak private investment",
+        "about": "present",
+        "text": "Tourists have returned, but gaming revenue has not regained its pre-pandemic peak. The IMF describes private investment held back by tight credit, a slow property market and unspent public budgets.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs-07292026-peoples-republic-china-macao-sar-cs-2026-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China-Macao Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-07-29",
+            "quote": "gaming revenues remain 15 percent below their pre-pandemic peak"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs-07292026-peoples-republic-china-macao-sar-cs-2026-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China-Macao Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-07-29",
+            "quote": "Domestic demand and private investment constrained by tight credit conditions, heightened uncertainty, a sluggish property sector, and under-execution of public spending"
+          }
+        ]
+      },
+      {
+        "title": "Leaning less on gaming",
+        "about": "present",
+        "text": "After reopening, gaming bounced back faster than the rest of the economy. The government has set a goal of raising non-gaming activity to a larger share of output by 2030, while new casino centers elsewhere in Asia add competition.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/06/mcs030624-peoples-republic-of-china-macao-special-admin-region-staff-cs-2024-art-iv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03",
+            "quote": "The gaming sector witnessed a sharp rebound; non-gaming sector’s performance was less impressive."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs-07292026-peoples-republic-china-macao-sar-cs-2026-aiv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China-Macao Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-07-29",
+            "quote": "Achieving the target of increasing the share of non-gaming activities to 60 percent of GDP by 2030 will require"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/06/mcs030624-peoples-republic-of-china-macao-special-admin-region-staff-cs-2024-art-iv-mission",
+            "publisher": "IMF",
+            "title": "People's Republic of China—Macao Special Administrative Region: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03",
+            "quote": "Emerging gaming centers elsewhere in Asia could reduce tourism to Macao SAR."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth stayed positive in 2025, with income per person up 4.8 percent, led by gaming and tourism. In July 2026 IMF staff reported that tourist arrivals had passed pre-pandemic levels, while gaming revenue was still below its earlier peak and private investment was held back by tight credit.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs-07292026-peoples-republic-china-macao-sar-cs-2026-aiv-mission",
+          "publisher": "IMF",
+          "title": "People's Republic of China-Macao Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-07-29",
+          "quote": "Real GDP expanded by 4.7 percent (y/y) in 2025"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs-07292026-peoples-republic-china-macao-sar-cs-2026-aiv-mission",
+          "publisher": "IMF",
+          "title": "People's Republic of China-Macao Special Administrative Region: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-07-29",
+          "quote": "Tourist arrivals have surpassed pre-pandemic levels and hotels and restaurants activity has picked up"
+        }
+      ]
+    },
+    "tension": "The IMF describes a recovery in which tourist arrivals have passed pre-pandemic levels, but income per person in 2025 was still below its 2019 level and 32.9 percent under the 2013 peak. The 4.4 percent a year average for 2016–2025 is lifted by the 74.9 percent rebound in 2023, which made up only part of the 55.3 percent fall in 2020; the era since 2014 averages 1.1 percent."
+  }
+}

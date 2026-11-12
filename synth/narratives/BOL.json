@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "BOL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BOL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Bolivia Article IV staff report gas production decline growth",
+        "same tier 1 list: Bolivia Macro Poverty Outlook 2025",
+        "imf.org, worldbank.org, iadb.org: IMF staff-level agreement Bolivia 2026 Extended Fund Facility",
+        "imf.org, worldbank.org, iadb.org, oecd.org: Bolivia natural gas boom 2006-2014 growth poverty reduction commodity prices hydrocarbons nationalization",
+        "imf.org: IMF Executive Board concludes 2021 Article IV consultation Bolivia pandemic political crisis contraction 2020",
+        "critic: opened imf.org CR 17/395 PDF, imf.org CR 25/116 PDF, thedocs.worldbank.org MPO Bolivia PDF (October 2026), worldbank.org MPO LAC landing page, imf.org PR 26/268"
+      ],
+      "critic_changes": [
+        "Spending through the price fall: the World Bank citation pointed at the MPO LAC landing page (worldbank.org/en/publication/macro-poverty-outlook/mpo_lac), which does not contain the quoted passage; re-pointed to the Bolivia MPO PDF on thedocs.worldbank.org, where the passage appears verbatim.",
+        "Spending through the price fall: 'turned surpluses into deficits and used up savings built in the boom' was not supported by the cited passages; replaced with 'brought large deficits and losses of foreign reserves' and added the supporting IMF 2017 passage on deficits and reserve losses. 'State-led investment plan' changed to 'state-led development plan' to match the source.",
+        "The gas boom years: the IMF 2017 quote fixed to the page's en-dash ('2006–2014'); 'brought a surge in export and tax revenue after 2006' softened to 'raised government revenue in the boom years', which is what the cited passage supports.",
+        "Arc: 'roads, power and social programs' changed to 'infrastructure and wider social programs' (the source says infrastructure, not roads and power); dropped 'pandemic' from the 2020 fall because no opened source explains 2020.",
+        "Headline: 'lifted income per person until 2017' changed to 'drove growth until 2017', since income per person kept rising slightly to its 2019 peak.",
+        "Gas fields running down: 'as the old fields age' was unsupported by the cited passages; added the IMF 2025 passage on reservoirs maturing. 'Imports fuel it once produced' reworded to match the source (a net fuel importer since 2022).",
+        "Deficits, dollar and fuel shortages: the first MPO quote was replaced by the passage on deficits, monetary financing and lost access to credit, which supports 'deficits paid for by the central bank drained reserves'; dropped 'road blockages' (the cited passage mentions protests, not blockages). The 19.5 inflation figure is in the series (FP.CPI.TOTL.ZG 2025) and was kept.",
+        "Controls and weak private investment: '16.6 in 2024' (series) clashes with the 17.2 that growth_problem's statement prints for 2024, so the sentence now uses 23.1 (2017) and 15.8 (2020) from the series and says it has not recovered (17.0 to 17.7 in 2021 to 2024).",
+        "since_last_year: 'still needs approval at home' was not supported by the cited IMF passage; the press release says the agreement is subject to IMF Executive Board approval, so the text now says that and the IMF quote was replaced with that sentence. Added the MPO outlook passage to support the 2026 contraction claim, which was uncited. 'Raised domestic fuel prices' changed to 'adjusted', matching the source.",
+        "Tension: 'drawn-down savings' removed as unsupported; 'the sources date the turning point to 2014' kept (MPO: since the commodity boom ended in 2014).",
+        "All other numbers checked against desk/data/BOL.json: 2.4, 3.3, 2.7 (2016 and 2017), -0.6, 2019 peak, -13.8 (2020), declines in 2024 and 2025, 7.8, 2014 level, 0.0. Three distinct recent tier 1 sources (IMF CR 25/116 June 2025, World Bank MPO October 2026, IMF PR 26/268 July 2026) remain, so the story stays tier 1."
+      ]
+    },
+    "headline": "Bolivia's gas boom drove growth until 2017; as gas output fell and dollars and fuel ran short, income per person slid back to its 2014 level.",
+    "arc": "From 1990 to 2017 Bolivia's income per person grew 2.4 percent a year, and faster in the decade to 2015, at 3.3 percent a year, as high world prices for natural gas and minerals raised export and tax revenues. The IMF credits the years 2006 to 2014 with large economic and social gains, as higher gas revenues paid for more infrastructure and wider social programs. When gas and mineral prices fell in 2014, the government kept spending to hold up growth, so income per person still rose 2.7 percent in both 2016 and 2017, while deficits widened and reserves fell. Since 2018 growth has averaged -0.6 percent a year: income per person peaked in 2019, fell 13.8 percent in 2020, and after a rebound shrank again in 2024 and 2025 as gas output kept falling and dollars and fuel ran short. By 2025 it was 7.8 percent below its 2019 peak, about where it first was in 2014, and the last decade averaged 0.0 percent a year.",
+    "threads": [
+      {
+        "title": "The gas boom years",
+        "text": "High prices for natural gas and minerals raised government revenue in the boom years. The state spent much of it on infrastructure and social programs, and income per person grew 3.3 percent a year over 2006 to 2015.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr17395-boliviabundle.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2017 Article IV Consultation - Press Release; Staff Report; and Statement by the Authorities of Bolivia (IMF Country Report No. 17/395)",
+            "date": "2017-12",
+            "quote": "Bolivia achieved impressive economic and social advances from 2006–2014. During that period, real GDP averaged about 5.1 percent annually"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr17395-boliviabundle.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2017 Article IV Consultation - Press Release; Staff Report; and Statement by the Authorities of Bolivia (IMF Country Report No. 17/395)",
+            "date": "2017-12",
+            "quote": "Higher hydrocarbon revenues facilitated more infrastructure spending and expanded social programs"
+          }
+        ]
+      },
+      {
+        "title": "Spending through the price fall",
+        "text": "When gas and mineral prices dropped in 2014, the government kept up public spending and a state-led development plan. This held growth up for a few more years but brought large deficits and losses of foreign reserves.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr17395-boliviabundle.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2017 Article IV Consultation - Press Release; Staff Report; and Statement by the Authorities of Bolivia (IMF Country Report No. 17/395)",
+            "date": "2017-12",
+            "quote": "Since the decline in natural gas and minerals prices in 2014, the government has implemented counter-cyclical macro policies"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2017/cr17395-boliviabundle.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2017 Article IV Consultation - Press Release; Staff Report; and Statement by the Authorities of Bolivia (IMF Country Report No. 17/395)",
+            "date": "2017-12",
+            "quote": "this approach has contributed to large fiscal and external current account deficits and foreign reserve losses"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bolivia",
+            "date": "2026-10",
+            "quote": "Falling gas production and export receipts weakened fiscal revenues and foreign exchange earnings, yet public spending failed to adjust."
+          }
+        ]
+      },
+      {
+        "title": "Gas fields running down",
+        "text": "Natural gas output keeps falling as the existing fields age, cutting both export earnings and government revenue. Since 2022 Bolivia has bought more fuel abroad than it sells.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1bolea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2025 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Bolivia (IMF Country Report No. 25/116)",
+            "date": "2025-06",
+            "quote": "The production of natural gas continues to drop rapidly, undermining export and fiscal revenues"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1bolea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2025 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Bolivia (IMF Country Report No. 25/116)",
+            "date": "2025-06",
+            "quote": "natural gas exports continue their secular decline as the existing reservoirs mature"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1bolea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2025 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Bolivia (IMF Country Report No. 25/116)",
+            "date": "2025-06",
+            "quote": "Bolivia turned into a net importer of fuels in 2022 for the first time in decades"
+          }
+        ]
+      },
+      {
+        "title": "Deficits, dollar and fuel shortages",
+        "text": "Years of deficits paid for by the central bank drained reserves and cut Bolivia off from international credit, so dollars and imported fuel became scarce and a parallel exchange rate opened up. Social protests hit activity, and consumer prices rose 19.5 percent in 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bolivia",
+            "date": "2026-10",
+            "quote": "persistent fiscal deficits, monetary financing, rising debt, and dwindling reserves that ultimately cut off access to international credit markets"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1bolea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Bolivia: 2025 Article IV Consultation - Press Release; Staff Report; and Statement by the Executive Director for Bolivia (IMF Country Report No. 25/116)",
+            "date": "2025-06",
+            "quote": "Political tensions and social protests are hampering economic activity"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bolivia",
+            "date": "2026-10",
+            "quote": "The economy contracted 1.6 percent in 2025 amid fuel shortages, parallel exchange rate depreciation, weak investment, and declining real incomes."
+          }
+        ]
+      },
+      {
+        "title": "Controls and weak private investment",
+        "text": "Price controls, export limits, directed credit and a large role for state firms have held back private business. Investment fell from 23.1 percent of GDP in 2017 to 15.8 in 2020 and has not recovered since.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Bolivia",
+            "date": "2026-10",
+            "quote": "Price distortions, export restrictions, regulated credit, and heavy state intervention (including state-owned enterprises) constrained private activity, and investment."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Since December 2025 the government has adjusted domestic fuel prices, frozen public wages and hiring, and cut public investment. In June 2026 it moved toward a flexible exchange rate, and in July 2026 it reached a staff-level agreement with the IMF on a loan program that still needs approval by the IMF's Executive Board. The World Bank expects output to shrink again in 2026 as spending cuts and tighter money weigh on demand.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bolivia",
+          "date": "2026-10",
+          "quote": "Beginning in December 2025, the government responded with adjustments to domestic fuel prices, a freeze on public wages and hiring, and cuts in public investment."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bolivia",
+          "date": "2026-10",
+          "quote": "Also, in June 2026, the government moved toward a flexible exchange rate regime, and the currency depreciated by 18.6 percent by mid-August."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26268-bolivia-imf-reaches-staff-level-agreement-on-an-extended-fund-facility-arrangement",
+          "publisher": "IMF",
+          "title": "IMF Reaches Staff-Level Agreement with Bolivia on an Extended Fund Facility Arrangement (Press Release No. 26/268)",
+          "date": "2026-07-29",
+          "quote": "Agreement is subject to IMF Executive Board approval and contingent on the implementation of agreed prior actions."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-bol.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Bolivia",
+          "date": "2026-10",
+          "quote": "GDP is expected to contract by 2.8 percent in 2026, as fiscal consolidation and monetary tightening weigh on domestic demand."
+        }
+      ]
+    },
+    "tension": "The sources date the turn to 2014, when the commodity boom ended, but the data show no break until 2018: public spending kept income per person growing 2.7 percent a year in 2016 and 2017. And the boom growth the IMF reports for 2006 to 2014 is for the whole economy; income per person grew more slowly, 3.3 percent a year over 2006 to 2015, because the population grew too."
+  }
+}

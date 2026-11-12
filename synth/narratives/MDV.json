@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "iso3": "MDV",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MDV",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Maldives Article IV consultation staff report tourism growth debt\"",
+        "same tier 1 domains: \"Maldives Development Update World Bank 2025 growth tourism\"",
+        "same tier 1 domains: \"IMF Maldives 2025 Article IV press release executive board\"",
+        "same tier 1 domains: \"Maldives 2004 tsunami economy contraction tourism 2009 global crisis\"",
+        "opened: worldbank.org Maldives Development Update 2026 (June 2026)",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Maldives (October 2026)",
+        "opened: imf.org 2025 Article IV mission press release (February 2025)",
+        "opened: imf.org 2024 Article IV Executive Board press release (May 2024)",
+        "opened: imf.org Country Report 11/293, 2010 Article IV staff report",
+        "opened: documents1.worldbank.org Maldives Development Update June 2020, In Stormy Seas",
+        "critic: re-opened all six cited URLs; PDF text extracted locally to check quotes",
+        "tier 2 (UN) not searched: tier 1 gave 4 recent sources"
+      ],
+      "critic_changes": [
+        "All 6 cited URLs opened again. All 15 quoted passages appear on their pages, and all dates match: MPO October 2026, MDU 11 June 2026, IMF press releases 18 Feb 2025 and 13 May 2024, IMF CR 11/293 dated September 2011, MDU June 2020. No citation was dropped.",
+        "Headline: removed the claim that the 'borrowed building boom' keeps growth volatile. No source links volatility to the building programme; the sources tie it to outside shocks. The new headline names shocks and high debt.",
+        "Arc: 'money shortages' became 'dollar shortages' and 'heavy public spending' became 'unsustainable rise in public spending', both the IMF's words. 'Record tourist arrivals' in 2017–2025 became 'tourism'. The building programme now drives growth only 'until 2018', since the MDU 2020 shows construction slowing in 2019. 'thin foreign reserves left by the building boom' became 'strained foreign reserves left in part by the building of the past decade', because the MPO also blames subsidies and the wage bill.",
+        "Thread 'One industry, many shocks': dropped 'from disasters to wars and flight disruptions far away', which the cited passages do not support. 'Main reason income per person has risen' was softened to the source's 'driven gains in living standards'.",
+        "Thread 'Tsunami, spending and the 2009 slump': dropped 'fast rebound as tourists returned' and 'pushing the economy into recession', which the quoted passages do not cover. In their place go the data's own figures: -12.6 in 2005, +20.7 in 2006 and -11.5 in 2009.",
+        "Thread 'A building boom on borrowed money': 'bridge linking Malé to the airport island' became 'the Sinamalé bridge', as the page names it. 'Second driver of growth' became 'the other main driver of growth', backed by a newly quoted MDU 2020 passage. Removed 'widened both the budget and the external deficits', because the quoted MPO passage stops before that clause and the full clause runs past 25 words. 47.8 for 2018 was checked against the NE.GDI.FTOT.ZS series.",
+        "Thread 'Pandemic collapse and rebound': 'regaining its 2019 level in 2023' was checked (2019 11,195; 2022 10,940; 2023 11,440) and kept as 'passed its 2019 level in 2023'.",
+        "Thread 'High debt and thin reserves': 'the IMF and World Bank rate' became 'the IMF rates', because only the IMF's rating is quoted. Dropped 'Large foreign repayments drain the dollars the country earns from tourism', which no citation supports.",
+        "since_last_year: 'tourist arrivals hit a record' became 'strong tourist arrivals', since the MDU 2026 says 'strong', not 'record'. 'mid-2026' became 'the first half of 2026', matching the MPO's March to end-June.",
+        "Tension: dropped the claim that the World Bank calls 2016–2018 years of fast GDP growth, because it could not be found on any opened page. Also dropped the claim that population growth absorbed the expansion; the data file has no population series to support it. Replaced both with the World Bank's 'public investment boom began in 2014' set against income per person growth in 2014–2018 (4.3, 0.3, 2.7, 3.6, 5.2), all from the series. Other figures checked and kept: 5,580 in 1995 and 12,499 in 2025.",
+        "All remaining numbers were checked against desk/data/MDV.json: eras 4.8/0.8/4.1, SD 12.6 over 20 years, peak 12,499 in 2025, and growth of 5.9 in 2025, -34.8, 33.8 and 12.1. No banned phrases and no recommendations remain."
+      ]
+    },
+    "headline": "Tourism lifted income per person in the Maldives to a record in 2025, but shocks make its growth among the most volatile anywhere, and debt is high",
+    "arc": "From 1990 to 2008 income per person grew 4.8 percent a year as the Maldives built a high-end resort economy, though the 2004 tsunami brought a fall of 12.6 percent in 2005 and a rebound of 20.7 percent in 2006. Growth slowed to 0.8 percent a year in 2009–2016: the global crisis cut tourism and income per person fell 11.5 percent in 2009, while the IMF described an unsustainable rise in public spending after the tsunami, dollar shortages and deep political division. From 2017 to 2025 growth picked up to 4.1 percent a year, carried by tourism and, until 2018, a public building programme paid for largely with foreign loans. The pandemic closed the borders in 2020 and income per person fell 34.8 percent, then rose 33.8 percent in 2021 and 12.1 percent in 2022. By 2025 income per person reached 12,499 in constant dollars, its highest level yet, but growth swings more than in almost any other economy (a standard deviation of 12.6 over 20 years), and the sources describe high public debt and strained foreign reserves left in part by the building of the past decade.",
+    "threads": [
+      {
+        "title": "One industry, many shocks",
+        "about": "present",
+        "text": "Luxury tourism is the engine of the economy and has driven gains in living standards over three decades. The same reliance leaves the islands exposed to shocks from abroad. A larger airport terminal is expected to ease limits on tourist numbers.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2026: Maldives",
+            "date": "2026-10",
+            "quote": "A high-end tourism model has driven gains in living standards and poverty reduction over the past three decades."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2026: Maldives",
+            "date": "2026-10",
+            "quote": "However, tourism dependence leaves the economy highly exposed to external shocks"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/02/18/pr25037-maldives-imf-staff-completes-2025-article-iv-mission-to-the-maldives",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to the Maldives",
+            "date": "2025-02-18",
+            "quote": "The opening of airport terminal expansion would ease supply-side bottleneck for tourism"
+          }
+        ]
+      },
+      {
+        "title": "Tsunami, spending and the 2009 slump",
+        "about": "history",
+        "text": "The 2004 tsunami brought the largest yearly drop in GDP on record: income per person fell 12.6 percent in 2005 before rising 20.7 percent in 2006. The IMF later described an unsustainable rise in public spending after the tsunami that the global crisis made worse, and income per person fell 11.5 percent in 2009. Deep political divisions then held back reform.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/336011591808041663/pdf/Maldives-Development-Update-In-Stormy-Seas.pdf",
+            "publisher": "World Bank",
+            "title": "Maldives Development Update, June 2020: In Stormy Seas",
+            "date": "2020-06",
+            "quote": "The tsunami resulted in the largest recorded yearly drop in GDP in the Maldives' history."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr11293.pdf",
+            "publisher": "IMF",
+            "title": "Maldives: 2010 Article IV Consultation—Staff Report; Staff Statement and Supplement; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Maldives",
+            "date": "2011-09",
+            "quote": "The effects of an unsustainable increase in public spending after the 2004 tsunami were exacerbated by the global crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr11293.pdf",
+            "publisher": "IMF",
+            "title": "Maldives: 2010 Article IV Consultation—Staff Report; Staff Statement and Supplement; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Maldives",
+            "date": "2011-09",
+            "quote": "Deep political polarization is constraining advancement of the economic reform agenda at all levels."
+          }
+        ]
+      },
+      {
+        "title": "A building boom on borrowed money",
+        "about": "present",
+        "text": "A public building programme began in 2014, with projects such as the Sinamalé bridge, and construction became the other main driver of growth beside tourism. Investment reached 47.8 percent of GDP in 2018. The World Bank says the building of the past decade was paid for with foreign loans, alongside rising subsidies and a larger public wage bill.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/336011591808041663/pdf/Maldives-Development-Update-In-Stormy-Seas.pdf",
+            "publisher": "World Bank",
+            "title": "Maldives Development Update, June 2020: In Stormy Seas",
+            "date": "2020-06",
+            "quote": "Buoyant tourism activity partially compensated for a slowdown in construction, the other major driver of growth."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/336011591808041663/pdf/Maldives-Development-Update-In-Stormy-Seas.pdf",
+            "publisher": "World Bank",
+            "title": "Maldives Development Update, June 2020: In Stormy Seas",
+            "date": "2020-06",
+            "quote": "This marked the slowest rate of construction growth since the public investment boom began in 2014."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2026: Maldives",
+            "date": "2026-10",
+            "quote": "Infrastructure programs over the past decade financed through external borrowing, combined with increase in subsidies and the wage bill"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse and rebound",
+        "about": "history",
+        "text": "In 2020 the Maldives shut its borders to tourists for the first time, and income per person fell 34.8 percent, the deepest drop in the series. Tourism led the recovery once travel resumed: income per person rose 33.8 percent in 2021 and 12.1 percent in 2022, and passed its 2019 level in 2023.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/336011591808041663/pdf/Maldives-Development-Update-In-Stormy-Seas.pdf",
+            "publisher": "World Bank",
+            "title": "Maldives Development Update, June 2020: In Stormy Seas",
+            "date": "2020-06",
+            "quote": "Tourist arrivals further dropped to zero in Q2 2020 as the Maldives closed its borders to incoming tourists indefinitely for the first time in history"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/10/pr-24152-maldives-imf-executive-board-concludes-2024-art-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Maldives",
+            "date": "2024-05-13",
+            "quote": "The economy grew by 13.9 percent in 2022, with the tourism sector contributing to about one third of growth."
+          }
+        ]
+      },
+      {
+        "title": "High debt and thin reserves",
+        "about": "present",
+        "text": "Public debt is now larger than the whole economy, and the IMF rates the risk of external and overall debt distress as high. Foreign reserves fell sharply in 2026 after a large sukuk bond was repaid.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/maldives/publication/maldives-development-update-2026",
+            "publisher": "World Bank",
+            "title": "Maldives Development Update 2026",
+            "date": "2026-06-11",
+            "quote": "Total public and publicly guaranteed debt reached an estimated 129.7 percent of GDP in 2025."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/10/pr-24152-maldives-imf-executive-board-concludes-2024-art-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Maldives",
+            "date": "2024-05-13",
+            "quote": "Without significant policy changes, the Maldives remains at high risk of external and overall debt distress."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, October 2026: Maldives",
+            "date": "2026-10",
+            "quote": "After the US$500 million Sukuk repayment, gross official reserves declined from US$1.3 billion in March to US$686.8 million (approximately 1.3 months of imports) at end-June."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 5.9 percent to its highest level, on strong tourist arrivals and a recovery in fishing. Since March 2026 the conflict in the Middle East has cut arrivals from Western markets, and reserves fell sharply in the first half of 2026 after a large sukuk bond was repaid. The World Bank's October 2026 note expects growth to slow in 2026 before picking up again in 2027.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/country/maldives/publication/maldives-development-update-2026",
+          "publisher": "World Bank",
+          "title": "Maldives Development Update 2026",
+          "date": "2026-06-11",
+          "quote": "Real GDP grew by an estimated 6.3 percent in 2025, driven by strong tourist arrivals and a recovery in fisheries."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook, October 2026: Maldives",
+          "date": "2026-10",
+          "quote": "the Middle East conflict led to a sharp decline in tourist arrivals from Western markets since March, contracting 2026H1 arrivals by 5.7 percent (y-o-y)."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/5d1783db09a0e09d15bbcea8ef0cec0b-0500052021/related/mpo-mdv.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook, October 2026: Maldives",
+          "date": "2026-10",
+          "quote": "Real GDP growth is projected to moderate to 2.2 percent in 2026, reflecting the impact of the Middle East conflict, before rebounding in 2027."
+        }
+      ]
+    },
+    "tension": "The World Bank describes a public investment boom from 2014, and investment peaked at 47.8 percent of GDP in 2018, yet income per person grew only 4.3, 0.3, 2.7, 3.6 and 5.2 percent in 2014 to 2018. The boom also sits awkwardly with the eras: it began inside the 0.8 percent era, and growth in 2017–2025 (4.1 percent a year) stayed below the 1990–2008 pace. The World Bank's long-run story of rising living standards is told in current dollars; in constant prices the data show income per person a little more than doubling, from 5,580 in 1995 to 12,499 in 2025."
+  }
+}

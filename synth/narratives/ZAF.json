@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "iso3": "ZAF",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ZAF",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): South Africa Article IV 2025 staff report growth electricity logistics",
+        "WebSearch tier 1 (worldbank.org, oecd.org, growthlab.hks.harvard.edu): South Africa economic update World Bank 2025 growth",
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, oecd.org, afdb.org): South Africa growth slowdown since 2008 commodity boom state-owned enterprises load-shedding decade",
+        "Opened: imf.org 2025 Article IV concluding statement (2025-12-09)",
+        "Opened: imf.org Executive Board press release PR26/039 (2026-02-11)",
+        "Opened: worldbank.org South Africa country overview (2026)",
+        "Opened: worldbank.org press release 2025-02-28",
+        "Opened: growthlab.hks.harvard.edu Growth Through Inclusion in South Africa (2023-11-15)",
+        "Tried: oecd.org Economic Survey South Africa 2025 electricity chapter (HTTP 403, not cited)",
+        "Tier 2 not searched: tier 1 gave 5 recent sources",
+        "Check pass: re-opened all 5 cited URLs (WebFetch, plus the raw page text and PDF text) and matched each quoted passage"
+      ],
+      "critic_changes": [
+        "All 5 cited pages opened and every quoted passage found on the page; dates confirmed (Growth Lab PDF dated November 15, 2023; WB press release February 28, 2025; IMF concluding statement December 9, 2025; IMF PR26/039 February 11, 2026). The World Bank country overview shows no date; kept as 2026 because it reports Q2 2026 data.",
+        "Tension: dropped 'The World Bank also says income per person is back at its 2007 level': the World Bank country page has no such statement.",
+        "Arc: removed 'cheap coal power underpinned mining and metals and world prices for minerals were strong' from the 2000-2008 sentence: no cited passage supports it.",
+        "Arc: changed 'the sources tie this long stall ... to investment that fell from 21.6 to 13.9' to a plain data statement, since no cited passage ties the stall to investment. Both figures (2008: 21.6, 2025: 13.9) match the NE.GDI.FTOT.ZS series.",
+        "Headline: replaced 'and investment fell' with 'and mines and exports faded' to match the causes the cited sources give.",
+        "Power cuts thread: removed 'a state of disaster was declared in early 2023', 'cheap coal power had been the base of mining and metals', 'the state power company' and 'after 2008', none of which was in the cited passages. Added the Growth Lab passage 'Since then, the electricity issue has only worsened...' to support 'grew worse'.",
+        "Mines, factories and exports thread: 'manufacturing shed jobs after 2008' had no supporting quote, so added the Growth Lab passage 'Manufacturing shed jobs since 2008...'.",
+        "Reform thread: removed 'run by the Treasury and the Presidency': the World Bank press release names neither.",
+        "Jobs thread: replaced 'Slow growth has not created enough jobs' (unsupported) with the World Bank's statement, cited by its passage 'Economic growth has been insufficient to create enough jobs...'; replaced 'one far poorer' with the source's 'much lower levels'. 32.3 percent unemployment matches growth_problem G11 (32.256, 2025).",
+        "since_last_year: the World Bank's credit to reforms had no supporting citation, so added the World Bank sentence 'Economic growth increased ... as structural reforms began to yield results'. Removed 'again' from 'shrank again': the source says the economy grew in Q1 2026. Checked the IMF citation (2026-02): it falls within 18 months.",
+        "Numbers checked against ZAF.json: -0.3, 3.1, -0.3 eras; -2.7 (2009); peak 2013, 7.4 shortfall, 2006 level; -7.7 (2020), 3.3 (2021); -0.6 and 1.3 decade averages; -0.0 (2025); 21.6 (2008) and 13.9 (2025) investment. All correct.",
+        "No banned phrases and no recommendation or verdict language found."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "South Africa's income per person climbed in 2000–2008, then stalled as power cuts spread and mines and exports faded; it is now back at its 2006 level.",
+    "arc": "Income per person drifted down in the 1990s, at -0.3 percent a year. From 2000 to 2008 it grew 3.1 percent a year. The 2009 global crisis cut it by 2.7 percent, and from 2009 to 2025 it averaged -0.3 percent a year: it peaked in 2013 and is now 7.4 percent below that peak, about where it first was in 2006. The sources tie this long stall to power cuts that began in 2007 and worsened, and to fading mines, factories and exports; investment also fell, from 21.6 percent of GDP in 2008 to 13.9 in 2025. The pandemic drop of 7.7 percent in 2020 was only partly made up by 3.3 percent growth in 2021, so over 2016–2025 income per person fell 0.6 percent a year, against 1.3 in the decade before. Recent reforms in power, rail and ports have lifted total output a little, but not yet income per person.",
+    "threads": [
+      {
+        "title": "Power cuts from 2007",
+        "about": "history",
+        "text": "From 2007 Eskom could not meet peak demand for electricity and began rolling power cuts, which grew worse in the years after. The Growth Lab ties a large part of South Africa's growth slowdown to the collapse of its utilities.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "Beginning in 2007, peak demand for electricity began to outstrip supply, and Eskom started to use load-shedding to balance the system."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "Since then, the electricity issue has only worsened with load-shedding intensifying and electricity prices rising."
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "The collapse of utilities overall can explain around 40% of South Africa’s growth slowdown even before the recent escalation of the crisis"
+          }
+        ]
+      },
+      {
+        "title": "Mines, factories and exports faded",
+        "about": "history",
+        "text": "Mining began to weaken before 2008, even while world prices were still strong, and manufacturing has shed jobs since 2008. Export volumes stalled too, so the slowdown was more than a fall in commodity prices.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "The weakening of mining began before 2008 — despite global commodity prices remaining strong for several years after"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "Manufacturing shed jobs since 2008 at a pace well beyond what global trends of “premature deindustrialization” can explain"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/sites/projects.iq.harvard.edu/files/growthlab/files/2023-11-cid-wp-434-south-africa-growth-through-inclusion.pdf",
+            "publisher": "Growth Lab",
+            "title": "Growth Through Inclusion in South Africa",
+            "date": "2023-11-15",
+            "quote": "This change cannot be explained by a decline in commodity prices alone because export volumes also stagnated."
+          }
+        ]
+      },
+      {
+        "title": "Reform of power, rail, ports",
+        "about": "present",
+        "text": "Under Operation Vulindlela, rules were changed to deepen competition in power, rail and telecoms. The World Bank reports far fewer power cuts, more rail freight and smoother ports, while the IMF judges the pace of reform still too slow for lasting growth and jobs.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/02/28/new-world-bank-report-highlights-four-pathways-to-spur-job-afe-growth-in-south-africa",
+            "publisher": "World Bank",
+            "title": "New World Bank Report Highlights Four Pathways to Spur Job Creation and Inclusive Growth in South Africa",
+            "date": "2025-02-28",
+            "quote": "the first phase of Operation Vulindlela, which among its key interventions was reforms to regulation that deepened competition in sectors like electricity, rail and telecoms"
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/southafrica",
+            "publisher": "World Bank",
+            "title": "South Africa (country overview)",
+            "date": "2026",
+            "quote": "Performance at key state-owned enterprises is improving, with a substantial reduction in load-shedding, increased rail freight, and more efficient port operations."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/08/cs-south-africa-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "South Africa: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-12-09",
+            "quote": "Assessment: pace of reforms not yet commensurate with needs to generate sustainable growth and jobs."
+          }
+        ]
+      },
+      {
+        "title": "Jobs in a split economy",
+        "about": "present",
+        "text": "Unemployment was 32.3 percent in 2025 and rose further in 2026, and the World Bank says growth has been too weak to create enough jobs. It describes two economies side by side, one with high levels of development and productivity and one with much lower levels.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/ext/en/country/southafrica",
+            "publisher": "World Bank",
+            "title": "South Africa (country overview)",
+            "date": "2026",
+            "quote": "The unemployment rate rose to 33.6% in Q2 of 2026, leaving 8.5 million people unemployed."
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/southafrica",
+            "publisher": "World Bank",
+            "title": "South Africa (country overview)",
+            "date": "2026",
+            "quote": "Economic growth has been insufficient to create enough jobs or significantly reduce poverty."
+          },
+          {
+            "url": "https://www.worldbank.org/ext/en/country/southafrica",
+            "publisher": "World Bank",
+            "title": "South Africa (country overview)",
+            "date": "2026",
+            "quote": "South Africa remains a dual economy - one with high levels of development, technology, and productivity, and one with much lower levels"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Total output picked up in 2025, which the IMF credits to strong household spending and the World Bank to reforms beginning to show results. The economy then shrank in the second quarter of 2026 as oil prices rose and demand weakened.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/10/pr-26039-south-africa-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with South Africa",
+          "date": "2026-02-11",
+          "quote": "Economic activity picked up in 2025, with growth estimated at 1.3 percent, supported by robust private consumption."
+        },
+        {
+          "url": "https://www.worldbank.org/ext/en/country/southafrica",
+          "publisher": "World Bank",
+          "title": "South Africa (country overview)",
+          "date": "2026",
+          "quote": "Economic growth increased from 0.5% in 2024 to 1.1% in 2025, as structural reforms began to yield results."
+        },
+        {
+          "url": "https://www.worldbank.org/ext/en/country/southafrica",
+          "publisher": "World Bank",
+          "title": "South Africa (country overview)",
+          "date": "2026",
+          "quote": "After expanding by 0.5% in Q1 of 2026, the economy contracted by 0.2% in Q2 as higher oil prices and weaker demand weighed on activity."
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe 2025 as a year when growth picked up, but in the data income per person was flat in 2025: the gain in total output was roughly matched by population growth."
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "OMN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "OMN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Oman Article IV consultation staff report 2025",
+        "same tier 1 domains: Oman economic update World Bank Macro Poverty Outlook 2025",
+        "same tier 1 domains: Oman population growth expatriate workers 2012 2013 Article IV staff report",
+        "same tier 1 domains: Oman 2015 oil price decline fiscal deficit growth slowdown IMF",
+        "imf.org: Oman Article IV 2021 press release COVID-19 oil prices contraction fiscal balance plan",
+        "critic: opened all six cited URLs (imf.org x4, thedocs.worldbank.org x1, imf.org PDF CR 26/4) and checked the quotes against page text"
+      ],
+      "critic_changes": [
+        "All numbers in the headline, arc, threads, since_last_year and tension were checked against desk/data/OMN.json (G1, G3, G4.eras, series). All match as rounded: 25.2, 1984, 1.3, -1.9, -0.9, -0.3, -7.8, -5.6, -3.0, -2.9, -1.9, 3.1, 2.7, -5.0, -2.8, -1.6. No number was changed.",
+        "Public hiring thread: dropped the 'hydrocarbon reserves are relatively modest' citation because it does not back the thread. Replaced it with the same page's 'Overall real GDP growth projected to reach 5.5 percent in 2011', which backs the claim that growth was expected. Removed 'mostly by hiring Omanis' because the page says only that hiring drove the spending rise.",
+        "Arc: 'government hiring surging' toned down to 'public spending and hiring rose' to match the 2011 source.",
+        "2015 press release: date made precise as 2015-05-05, the date printed on the page. Retitled the thread from 'The 2014 to 2016 oil slump' to 'The oil price fall of 2014', and in the arc 'the oil price slump of 2014 to 2016 pushed the budget into deep deficit' became 'the fall in oil prices from 2014 pushed the budget into deficit'. A May 2015 source cannot support the 2016 end or 'deep'. Dropped 'from surplus' because the quoted passages do not say it.",
+        "2021 press release: the page prints September 12, 2021, so the date was changed from 2021-09 to 2021-09-12. Removed 'government debt rose steeply' because no cited passage supports it. Changed 'many foreign workers left' to the source's 'fewer foreign workers', with wage cuts.",
+        "Budget repair thread: renamed from 'Budget repair under Vision 2040' because no cited passage ties the repair to Vision 2040. Added a World Bank MPO passage on spending controls, targeted subsidies and the tax base to back the policy claims. The IMF 'low valueadded' passage was near-verbatim, with a line-break hyphen. It is kept, using the page's words.",
+        "Oil output caps thread: 'held down oil production through 2025, so hydrocarbon output shrank' was not supported. The World Bank MPO reports oil sector growth of 1.1 percent in 2025, and the IMF reports hydrocarbon contractions only in 2024 and the first half of 2025. Reworded to 'weighed on oil output in 2024 and early 2025', and added fishing to match the IMF passage.",
+        "Since last year: 'ports and energy sites outside the Strait of Hormuz' reworded to the cited passage's 'access to shipping routes and undamaged energy facilities'. 'Oil output rose as OPEC+ caps eased' was backed only by a projection, so it now reads 'crude oil output rose', with a new MPO citation on crude production by mid-2026.",
+        "Tension: 'solid' changed to 'strong' to match the wording elsewhere. The content is otherwise unchanged, since the 2023 to 2025 growth figures are confirmed in IMF CR 26/4 and the World Bank MPO.",
+        "All six cited URLs were opened. The quotes were checked against the page text, extracted with pdftotext for the two PDFs. Two distinct recent tier 1 sources were confirmed: World Bank MPO (October 2026) and IMF Country Report 26/4 (January 2026). The story stays tier 1.",
+        "No banned phrases or recommendation language was found in the story's own text."
+      ]
+    },
+    "headline": "Oman's income per person peaked in 2009 and is now 25.2 percent lower, back near its 1984 level, after oil slumps, a pandemic and caps on oil output.",
+    "arc": "From 1990 to 2010 income per person in Oman grew about 1.3 percent a year and reached its peak in 2009, though the sources read here say little about that long era. Since 2011 it has shrunk by about 1.9 percent a year, starting with falls of 7.8 percent in 2011 and 5.6 percent in 2012, even though the IMF expected strong overall growth in 2011 as public spending and hiring rose. The fall in oil prices from 2014 pushed the budget into deficit, and in 2020 the pandemic and an oil price collapse struck together, so growth averaged -0.9 percent a year over 2016 to 2025, against -0.3 over 2006 to 2015. After a short rebound in 2021 and 2022, income per person fell again from 2023 to 2025 while OPEC+ curbs held back oil output, even as activity outside oil kept growing. By 2025 it was 25.2 percent below the 2009 peak, about where it first was in 1984.",
+    "threads": [
+      {
+        "title": "Public hiring push of 2011",
+        "about": "history",
+        "text": "In 2011 government spending rose sharply, driven by more public hiring, and the IMF expected strong growth that year. Income per person still fell 7.8 percent in 2011 and 5.6 percent in 2012, the start of the slower era.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs121911",
+            "publisher": "IMF",
+            "title": "Oman-2011 Article IV Consultation Concluding Statement of the IMF Mission",
+            "date": "2011-12-19",
+            "quote": "Government expenditure expected to increase by 17 percent in 2011 (driver: increased hiring)."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs121911",
+            "publisher": "IMF",
+            "title": "Oman-2011 Article IV Consultation Concluding Statement of the IMF Mission",
+            "date": "2011-12-19",
+            "quote": "Overall real GDP growth projected to reach 5.5 percent in 2011."
+          }
+        ]
+      },
+      {
+        "title": "The oil price fall of 2014",
+        "about": "history",
+        "text": "When oil prices fell from 2014, the budget and the external accounts moved into deficit, and the IMF warned that large deficits would persist without reform. Income per person fell 3.0 percent in 2014 and 2.9 percent in 2017, with little growth in between.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr15189",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2015 Article IV Consultation with Oman",
+            "date": "2015-05-05",
+            "quote": "Decline in oil prices expected to push fiscal and current account balances to deficits from 2014/15."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr15189",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Concludes 2015 Article IV Consultation with Oman",
+            "date": "2015-05-05",
+            "quote": "Fiscal deficits would remain in double digits over the medium-term in the absence of fiscal reforms."
+          }
+        ]
+      },
+      {
+        "title": "The double shock of 2020",
+        "about": "history",
+        "text": "In 2020 the pandemic and an oil price collapse hit at once, and the job market adjusted through temporary wage cuts and fewer foreign workers. Income per person fell 1.9 percent that year before rising 3.1 percent in 2021 and 2.7 percent in 2022.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/09/10/pr21259-oman-imf-executive-board-concludes-2021-article-iv-consultation-with-oman",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2021 Article IV Consultation with Oman",
+            "date": "2021-09-12",
+            "quote": "The Omani economy was hit by a dual shock of the pandemic and a collapse in oil prices in 2020."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/09/10/pr21259-oman-imf-executive-board-concludes-2021-article-iv-consultation-with-oman",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2021 Article IV Consultation with Oman",
+            "date": "2021-09-12",
+            "quote": "Labor market adjustment was facilitated by temporary wage cuts and a reduction in expatriate employment."
+          }
+        ]
+      },
+      {
+        "title": "Budget repair since 2020",
+        "about": "present",
+        "text": "Since 2020 Oman has tightened spending, broadened its tax base and moved toward targeted subsidies, and government debt has fallen by about half. The IMF notes that activity outside oil is still concentrated in low value, non-traded sectors with small productivity gains.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Oman",
+            "date": "2026-10",
+            "quote": "Government debt was 35.4 percent of GDP in 2025, down from 68.8 percent of GDP in 2020, reflecting fiscal consolidation"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Oman",
+            "date": "2026-10",
+            "quote": "by tightening public spending controls, advancing the transition toward targeted subsidies, and broadening its tax base"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Oman: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Oman (IMF Country Report No. 26/4)",
+            "date": "2026-01",
+            "quote": "Despite some progress, economic activity remains concentrated in low value-added, non-tradable sectors generating limited productivity gains"
+          }
+        ]
+      },
+      {
+        "title": "Oil output caps",
+        "about": "present",
+        "text": "OPEC+ limits weighed on oil output in 2024 and early 2025, while construction, farming and fishing, tourism and logistics grew. The World Bank expects oil output to recover as the caps ease.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Oman: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Oman (IMF Country Report No. 26/4)",
+            "date": "2026-01",
+            "quote": "While OPEC+ production curbs continued to weigh on hydrocarbon output, nonhydrocarbon growth reached 3.5 percent (year on year) in the first half of 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Oman",
+            "date": "2026-10",
+            "quote": "The oil sector is projected to grow by more than 4 percent, rebounding as OPEC+ production caps ease"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In January 2026 Oman launched its 11th Five-Year Development Plan for 2026 to 2030. In 2026 conflict in the Middle East hurt logistics and tourism, but access to shipping routes and undamaged energy facilities kept oil, gas and fertilizer exports going, and crude oil output rose. Income per person fell 1.6 percent in 2025, the third fall in a row.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Oman: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Oman (IMF Country Report No. 26/4)",
+          "date": "2026-01",
+          "quote": "In January 2026, Oman launched its 11th Five-Year Development Plan (2026-2030)"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Oman",
+          "date": "2026-10",
+          "quote": "However, the conflict had adverse effects on key sectors including logistics and tourism."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Oman",
+          "date": "2026-10",
+          "quote": "Strategic access to global shipping routes and uncompromised energy infrastructure have sustained hydrocarbon and fertilizers exports"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-omn.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Oman",
+          "date": "2026-10",
+          "quote": "By mid-2026, daily crude oil production expanded (+10.6 percent y-o-y), alongside natural gas extraction (+7 percent y-o-y)"
+        }
+      ]
+    },
+    "tension": "The sources describe an economy that was growing: the IMF expected strong growth in 2011, and both the IMF and the World Bank report overall growth in each year from 2023 to 2025. Yet in the data, income per person fell in 2011 and 2012 and again in 2023, 2024 and 2025, by 5.0, 2.8 and 1.6 percent. Output can rise while income per person falls only if the number of people grows faster, but the sources read here do not link the gap to population growth directly."
+  }
+}

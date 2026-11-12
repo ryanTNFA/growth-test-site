@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "iso3": "CYP",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CYP",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 6,
+      "sources_searched": [
+        "imf.org: Cyprus Article IV 2025 staff concluding statement",
+        "imf.org: Cyprus economy growth 2026 IMF press release",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Cyprus 2013 banking crisis ex-post evaluation exceptional access arrangement IMF",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Cyprus selected issues ICT sector foreign companies relocation migration labor force growth",
+        "Opened: IMF 2026 Article IV concluding statement (2026-05-04), IMF PR 26/215 (2026-06-23), IMF 2025 concluding statement (2025-03-28), IMF 2024 concluding statement (2024-03-29), IMF 2023 concluding statement (2023-03-30), IMF Country Report 23/192 (2023-06), IMF Country Report 13/125 (2013-05)",
+        "Critic check: re-opened all seven cited URLs on imf.org; both PDFs (CR 13/125, CR 23/192) checked against their extracted full text"
+      ],
+      "critic_changes": [
+        "Checked all seven cited URLs on imf.org (tier 1). The two PDFs were checked against their full extracted text. All quotes in the 2013 report (CR 13/125, dated May 2013) and the 2023 report (CR 23/192, dated June 2023) match word for word, and both dates are right.",
+        "since_last_year: replaced the 2026 concluding statement quote 'public debt has fallen below 60 percent of GDP and was reduced to 55 percent of GDP'. The page's wording of the second half could not be confirmed word for word. Used the PR 26/215 sentence on continued surpluses and debt below 60 percent of GDP instead, which was confirmed.",
+        "since_last_year: added the 2026 concluding statement passage 'the outlook remains favorable', so the claim that the IMF still calls the outlook favorable is cited. The press release does not use that word for the outlook, so the text now says 'its mission'.",
+        "Tension: 'among the highest in the euro area' changed to 'among the highest in the EU'. Both 2026 IMF pages say EU, not euro area. The claim that more people share the output is now hedged ('may be', 'can lift') because no cited passage or data series measures it.",
+        "Thread 'A workforce near full': 'output per worker' changed to 'productivity and investment' to match the source. 'Job openings' became 'job vacancies'. Added the confirmed quote 'Unemployment is at the lowest rate since 2008 and vacancies remain elevated.' so the unemployment claim is cited.",
+        "Thread 'From Russian links to ICT hub' and the arc: removed the causal claim that foreign firms moved because of Russia's 2022 invasion. CR 23/192 reports the relocation in 2022 but does not say the war caused it. The text now says 'from 2022'. 'Main export engines' changed to 'leading services exports behind growth', in line with the quoted 'particularly ICT and tourism'.",
+        "Arc: 'consumption' changed to 'strong domestic demand', as in PR 26/215. Added 'before the global financial crisis' to the boom sentence, because the IMF ties the inflows to the run-up to that crisis, not to the whole 1990-2006 era.",
+        "Thread 'A slow cleanup of crisis debts': 'domestic credit' changed to 'bank credit' to match the FS.AST.PRVT.GD.ZS series. 'Came with far less borrowing' changed to 'much less bank credit relative to the size of the economy', because a falling ratio to GDP is not the same as less borrowing.",
+        "Checked every number against desk/data/CYP.json and found no corrections: 2.9, -2.0, 3.8 (G4 eras), 3.9 and -1.0 (G1), 27,449 (2008), 22,374 (2014), 33,527 (2025 peak), -4.5, 9.7, 6.7, 1.6, 2.3, 2.3, credit 254.7 (2013) and 56.7 (2024). Income per person passing its 2008 level in 2019, and falling every year from 2009 to 2014, also match the series.",
+        "No banned phrases or recommendation language found. Five threads and five distinct recent tier 1 sources are cited, so the story stays tier 1."
+      ]
+    },
+    "headline": "Cyprus fell hard when its oversized banks failed in 2013, then grew fast on services exports; income per person reached a new high in 2025.",
+    "arc": "From 1990 to 2006 income per person grew 2.9 percent a year, and the IMF describes money from abroad, drawn by low company taxes, swelling the banks and feeding a credit and housing boom before the global financial crisis. From 2007 to 2014 growth averaged -2.0 percent a year: the banks were heavily exposed to Greece, and Greek debt losses plus a falling housing market led to the 2013 banking crisis, when the two largest banks were resolved and uninsured depositors took losses. Income per person fell from 27,449 constant dollars in 2008 to 22,374 in 2014. From 2015 to 2025 growth averaged 3.8 percent a year (3.9 over 2016 to 2025, after -1.0 in the decade before), with a pandemic drop of -4.5 in 2020 and a rebound of 9.7 in 2021. The IMF credits strong domestic demand and services exports, above all ICT and tourism, helped by foreign companies moving to Cyprus from 2022. Income per person passed its 2008 level in 2019 and reached a new high of 33,527 in 2025, though yearly growth has slowed to 1.6 in 2023 and 2.3 in both 2024 and 2025.",
+    "threads": [
+      {
+        "title": "Foreign money builds a boom",
+        "about": "history",
+        "text": "Before the 2008 crisis, money from abroad, drawn by low company taxes, poured into Cypriot banks. It paid for fast lending and a housing boom, and the banks grew far larger than the economy around them.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13125.pdf",
+            "publisher": "IMF",
+            "title": "Cyprus: Request for Arrangement under the Extended Fund Facility (IMF Country Report No. 13/125)",
+            "date": "2013-05",
+            "quote": "Sizeable non-resident inflows attracted by the low corporate tax regime led to a rapid increase in the size of the banking sector"
+          }
+        ]
+      },
+      {
+        "title": "Greek losses and a bank collapse",
+        "about": "history",
+        "text": "Cypriot banks lent heavily in Greece and held Greek government bonds. When Greece restructured its debt and Cypriot house prices fell, the two largest banks were found insolvent, and in 2013 they were resolved with losses for uninsured depositors. Income per person fell every year from 2009 to 2014.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13125.pdf",
+            "publisher": "IMF",
+            "title": "Cyprus: Request for Arrangement under the Extended Fund Facility (IMF Country Report No. 13/125)",
+            "date": "2013-05",
+            "quote": "an oversized and weak banking sector (with assets of over 800 percent of GDP) heavily exposed to Greece"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13125.pdf",
+            "publisher": "IMF",
+            "title": "Cyprus: Request for Arrangement under the Extended Fund Facility (IMF Country Report No. 13/125)",
+            "date": "2013-05",
+            "quote": "Troubled banks were resolved or restructured and recapitalized through participation of bank creditors, including uninsured depositors."
+          }
+        ]
+      },
+      {
+        "title": "A slow cleanup of crisis debts",
+        "about": "present",
+        "text": "Bad loans left over from the crisis keep falling but remain high, and many have moved out of the banks. Bank credit to the private sector shrank from 254.7 percent of GDP in 2013 to 56.7 in 2024, so the recent growth has come with much less bank credit relative to the size of the economy.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/29/mcs032924-cyprus-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Cyprus: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03-29",
+            "quote": "Large stock of legacy nonperforming loans (NPLs) remains a drag on private sector balance sheets"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/03/27/cs-032825-cyprus-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Cyprus: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-03-28",
+            "quote": "Legacy NPLs continue to fall but remain elevated; many NPLs migrated from the banking sector."
+          }
+        ]
+      },
+      {
+        "title": "From Russian links to ICT hub",
+        "about": "present",
+        "text": "Cyprus used to earn much from financial and professional services tied to Russia. From 2022, foreign companies moved to Cyprus and ICT and business services grew. The IMF now names ICT and tourism as the leading services exports behind growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1cypea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Cyprus: 2023 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 23/192)",
+            "date": "2023-06",
+            "quote": "Cyprus used to benefit from strong financial connections with Russia, generating significant business in professional services and spillovers to other segments of the economy."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1cypea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Cyprus: 2023 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 23/192)",
+            "date": "2023-06",
+            "quote": "Export-oriented ICT and business services continued to expand, underpinned by foreign companies relocating to Cyprus."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/18/pr-26215-cyprus-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Cyprus",
+            "date": "2026-06-23",
+            "quote": "supported by robust domestic demand and strong services exports, particularly ICT and tourism"
+          }
+        ]
+      },
+      {
+        "title": "A workforce near full",
+        "about": "present",
+        "text": "Unemployment is at its lowest since 2008 and job vacancies remain high. The IMF says that with employment high, future growth rests more on productivity and investment than on adding workers.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/04/mcs-05042026-cyprus-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Cyprus: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-04",
+            "quote": "Unemployment is at the lowest rate since 2008 and vacancies remain elevated."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/04/mcs-05042026-cyprus-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Cyprus: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-04",
+            "quote": "future growth depends more on productivity and investment than on adding more workers"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2026 the war in the Middle East raised energy prices and hit tourism, and the IMF expects growth to slow this year, though its mission still called the outlook favorable. Public debt kept falling on continued budget surpluses.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/18/pr-26215-cyprus-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Cyprus",
+          "date": "2026-06-23",
+          "quote": "higher energy prices and geopolitical tensions weigh on real incomes, tourism, and confidence"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/04/mcs-05042026-cyprus-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Cyprus: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-04",
+          "quote": "Despite disruption from the war in the Middle East, the outlook remains favorable"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/18/pr-26215-cyprus-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Cyprus",
+          "date": "2026-06-23",
+          "quote": "Fiscal performance has remained strong, with continued surpluses and public debt declining below 60 percent of GDP."
+        }
+      ]
+    },
+    "tension": "The IMF calls Cyprus's recent growth among the highest in the EU, but in the data income per person grew only 1.6 percent in 2023 and 2.3 in 2024 and 2025, far below the 6.7 of 2022 and 9.7 of 2021. Part of the gap may be that more people are sharing the output: the IMF describes foreign companies and their staff moving to Cyprus, which can lift total output faster than income per person."
+  }
+}

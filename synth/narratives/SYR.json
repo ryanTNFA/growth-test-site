@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "iso3": "SYR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SYR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Syria economic monitor 2025 World Bank\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"IMF Syria staff visit 2025 statement\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Syria Article IV 2009 oil production decline reforms social market economy\"",
+        "worldbank.org, imf.org: \"Syria Macro Poverty Outlook 2026 World Bank growth\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Syria 1990s growth oil production Investment Law No. 10 1991 economy\"",
+        "critic check: opened all 8 cited URLs with WebFetch (IMF and World Bank PDFs read from their extracted text)"
+      ],
+      "critic_changes": [
+        "All 8 cited URLs opened; every page exists on a tier 1 domain, dates match the documents, and all original quotes were found on their pages (the two IMF PDFs and the World Bank MPO PDF were checked from extracted text). All numbers in headline, arc, threads, since_last_year and tension match desk/data/SYR.json (4.3, 0.7, -5.5, -2.1, 26.0, 22.6, 53.5, -3.9, 2011 peak, 1972 level).",
+        "Thread 'The rise and fall of oil': the claim about 1970s–1990s discoveries lifting output, exports and revenue had no supporting quote, so added the Article IV Box 1 sentence on discoveries; extended the 'Since 1995' quote to include 'Consequently, Syria became a net oil importer' (25 words); changed 'by 2007' to 'by the late 2000s' because the quoted passages do not give 2007.",
+        "Thread 'Slow reforms, uneven gains': dropped 'private banks were allowed to open in 2004' and 'joblessness rose', which no quoted passage supported; added the working paper's verbatim sentence on the multi-year drought hitting farmers to support the drought claim.",
+        "Thread 'Civil war splits the economy': added the quote 'the country has disintegrated into multiple war economies' to support the fragmentation claim, reworded 'areas held by rival forces' accordingly, and changed 'Oil and gas output collapsed' to 'was badly disrupted' to match the source's 'severely disrupted'.",
+        "Thread 'Damaged capital, cut-off banks': 'roads, power lines and homes' was not in the quote, so reworded to 'capital stock'; added the press release's 'nearly ten times Syria's projected 2024 GDP' passage to support the rebuilding-cost claim; replaced the July 2025 'frozen assets ... hinder energy supply' citation with the October 2026 MPO passage on limited access to international banking, since 'still' needs a current source and 'lending' was unsupported.",
+        "Thread 'Sanctions lifted, people return': added the MPO passage 'Returnees boost demand and labor supply' to support 'adding to spending and to the number of people looking for work'.",
+        "since_last_year: 'a modest, fragile recovery' was not supported by any cited passage, so changed to 'early signs of recovery' (IMF, November 2025); added the MPO sentence on the Middle East conflict raising energy costs and fuelling inflation; trimmed the IMF February 2026 quote to end at a complete clause instead of the dangling 'driven by', using the page's typographic apostrophe.",
+        "Arc: 'a recovery that began in 2025' softened to 'a recovery under way since 2025'.",
+        "Tension: 'fast population growth, including refugees from Iraq, and falling oil output absorbed much of the gain' was an inference the sources do not quantify; reworded to what the sources say (declining oil production held overall growth down; population grew fast, with Iraqi refugees)."
+      ]
+    },
+    "headline": "Oil lifted Syria in the 1990s and faded after; war from 2011 more than halved income per person, and a recovery since 2025 is not yet in the data.",
+    "arc": "Income per person grew 4.3 percent a year in 1990–1998, when new oil fields lifted output, exports and state revenue. Oil production turned down after 1995, and growth slowed to 0.7 percent a year in 1999–2006 even as the government slowly opened a state-run economy. Income per person peaked in 2011, the year the uprising began and turned into civil war; it then fell 26.0 percent in 2012 and 22.6 percent in 2013, so the 2007–2014 era averaged -5.5 percent a year as fighting destroyed capital, cut oil output and split the country. The fall slowed but did not stop in 2015–2022, at -2.1 percent a year, and by 2022 income per person was 53.5 percent below its 2011 peak, about where it first was in 1972. The data end in 2022, while the IMF and World Bank describe a recovery under way since 2025 as sanctions were lifted and refugees came home.",
+    "threads": [
+      {
+        "title": "The rise and fall of oil",
+        "about": "history",
+        "text": "Oil fields found from the 1970s to the 1990s lifted output, exports and state revenue, and income per person grew 4.3 percent a year in 1990–1998. Production then turned down after 1995 while home use of energy kept rising, and by the late 2000s Syria again bought more oil than it sold.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr0955.pdf",
+            "publisher": "IMF",
+            "title": "Syrian Arab Republic: 2008 Article IV Consultation—Staff Report (IMF Country Report No. 09/55)",
+            "date": "2009-02",
+            "quote": "Substantial oil discoveries were made in Syria during 1970–1990s."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr0955.pdf",
+            "publisher": "IMF",
+            "title": "Syrian Arab Republic: 2008 Article IV Consultation—Staff Report (IMF Country Report No. 09/55)",
+            "date": "2009-02",
+            "quote": "Since 1995, Syria’s oil production has been on a downward trend and domestic energy consumption has been increasing. Consequently, Syria became a net oil importer"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/pn0907",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Executive Board Concludes 2008 Article IV Consultation with the Syrian Arab Republic",
+            "date": "2009-01-26",
+            "quote": "Syria has become a net oil importer."
+          }
+        ]
+      },
+      {
+        "title": "Slow reforms, uneven gains",
+        "about": "history",
+        "text": "From the early 2000s the government slowly opened a tightly run, state-led economy. The gains did not reach everyone: a drought that lasted several years hit farmers, and poverty rose in the second half of the 2000s.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "In the early 2000s, Syria embarked on a gradual economic liberalization to spur growth."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "farmers in particular were affected by a multi-year drought."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "after falling between 1997 and 2004, poverty rose in the second half of the 2000s."
+          }
+        ]
+      },
+      {
+        "title": "Civil war splits the economy",
+        "about": "history",
+        "text": "The uprising of March 2011 became a violent civil war, and the country broke apart into several war economies. Oil and gas output was badly disrupted, and income per person fell 26.0 percent in 2012 and 22.6 percent in 2013.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "Starting in March 2011, Syria has witnessed an extremely violent civil war."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "the country has disintegrated into multiple war economies."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2016/wp16123.pdf",
+            "publisher": "IMF",
+            "title": "Syria’s Conflict Economy (IMF Working Paper WP/16/123)",
+            "date": "2016-06",
+            "quote": "Oil and gas production has been severely disrupted and the well-developed energy infrastructure has been damaged."
+          }
+        ]
+      },
+      {
+        "title": "Damaged capital, cut-off banks",
+        "about": "present",
+        "text": "The war damaged a large share of the country's capital stock, and the World Bank puts the cost of rebuilding at many times the size of the economy. Weak links to the world's banks and weak infrastructure still leave the economy exposed.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/21/syria-s-post-conflict-reconstruction-costs-estimated-at-216-billion",
+            "publisher": "World Bank",
+            "title": "Syria’s Post-Conflict Reconstruction Costs Estimated at $216 billion",
+            "date": "2025-10-21",
+            "quote": "The conflict has damaged nearly one-third of Syria’s pre-conflict gross capital stock"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/10/21/syria-s-post-conflict-reconstruction-costs-estimated-at-216-billion",
+            "publisher": "World Bank",
+            "title": "Syria’s Post-Conflict Reconstruction Costs Estimated at $216 billion",
+            "date": "2025-10-21",
+            "quote": "The estimated physical reconstruction costs are nearly ten times Syria’s projected 2024 GDP"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-syr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Syrian Arab Republic",
+            "date": "2026-10",
+            "quote": "Limited access to international banking, weak infrastructure, and the absence of an effective monetary policy framework leave the economy vulnerable"
+          }
+        ]
+      },
+      {
+        "title": "Sanctions lifted, people return",
+        "about": "present",
+        "text": "Under a new government, sanctions are being lifted step by step and Syria is rejoining regional and world trade. Millions of refugees and displaced people have gone home since December 2024, adding to spending and to the number of people looking for work.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/17/pr-25377-syria-imf-staff-concludes-staff-visit-to-damascus",
+            "publisher": "IMF",
+            "title": "Syria—IMF Staff Concludes Staff Visit to Damascus",
+            "date": "2025-11-17",
+            "quote": "Syria's gradual re-integration with the regional and global economy as sanctions are being lifted."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-syr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Syrian Arab Republic",
+            "date": "2026-10",
+            "quote": "From December 2024 to end-July 2026, over 1.75 million refugees and 1.97 million internally displaced persons returned"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-syr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Syrian Arab Republic",
+            "date": "2026-10",
+            "quote": "Returnees boost demand and labor supply and bring skills and capital"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the IMF and World Bank have gone from describing early signs of recovery to a quickening one. The World Bank's October 2026 outlook says activity strengthened in the first half of 2026 on rebuilding, better transport links, and higher farm and oil output, and that most remaining restrictions were eased. It also says the Middle East conflict raised energy costs and brought inflation back.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-syr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Syrian Arab Republic",
+          "date": "2026-10",
+          "quote": "Syria’s recovery strengthened in H1 2026, driven by reconstruction, connectivity, and rising agricultural and oil output."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-syr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Syrian Arab Republic",
+          "date": "2026-10",
+          "quote": "The conflict in the Middle East increased energy costs, fueling inflation."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/25/pr26062-syria-imf-staff-concludes-staff-visit-to-syria",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Staff Visit to Syria",
+          "date": "2026-02-25",
+          "quote": "Syria’s economy continues to recover, with activity increasing at an accelerating pace"
+        }
+      ]
+    },
+    "tension": "In 2009 the IMF called Syria's economic performance strong, with robust growth outside oil, yet income per person rose only 0.7 percent a year in 1999–2006 and fell in 2007: falling oil output held down overall growth, and the population grew fast, swelled by refugees from Iraq. Today the sources describe a recovery that is speeding up, but the data stop in 2022, when income per person was still falling (-3.9 percent), and the millions of returning Syrians raise the population that any new output is shared among."
+  }
+}

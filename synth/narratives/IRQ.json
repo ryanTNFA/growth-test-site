@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "iso3": "IRQ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IRQ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Iraq Article IV consultation staff report 2025\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Iraq Economic Monitor World Bank 2025 oil production non-oil growth\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Iraq Country Economic Memorandum World Bank diversification oil dependence history sanctions conflict\"",
+        "worldbank.org: \"Iraq Economic Monitor 2026 World Bank\"",
+        "imf.org: \"IMF Iraq 2026 Article IV mission concluding statement\"",
+        "Critic opened and checked: thedocs.worldbank.org MPO Iraq October 2026; documents1.worldbank.org MPO Iraq April 2026; documents1.worldbank.org Iraq Economic Monitor Spring/Summer 2023; documents1.worldbank.org CEM 'Breaking Out of Fragility' (2020) text; imf.org 2025 Article IV concluding statement (2025-05-15)"
+      ],
+      "critic_changes": [
+        "Opened all five cited documents (the two World Bank MPO PDFs and the 2023 Iraq Economic Monitor PDF after text extraction, the 2020 CEM text, the IMF 2025 concluding statement). Every quoted passage is on its page, and every date matches the document. No citation was dropped.",
+        "Headline: 'slid for nine years' became 'fell back over nine years', because income per person rose in some years after 2016 (2018, 2019, 2022), so the fall was not steady.",
+        "Thread 'Sanctions, then the 2003 war': 'The 2003 war then destroyed factories' became 'Conflict since 2003 has destroyed many factories', to match the CEM passage, which ties the destruction to 'Iraq's state of conflict and fragility since 2003' and not to the 2003 war alone. 'The World Bank says' now goes with the business-climate claim.",
+        "Thread 'An economy run on oil' and the arc: 'through most of 2025' became 'were still in force for most of 2025' in the thread and 'into 2025' in the arc. The April 2026 MPO puts OPEC+ limits on the first nine months of 2025, with quotas unwinding in the last quarter.",
+        "Thread 'Wages first, building last': 'cuts capital spending first' became 'cuts capital spending while wages and other running costs stay put'. The October 2026 MPO says capital spending was cut while recurrent spending stayed broadly unchanged, not that capital spending is cut first. 'Investment' became 'total investment' because the series is all gross fixed capital formation.",
+        "since_last_year: the recovery sentence now gives the sources' wording: June and July, the ceasefire, partial flows through Hormuz, re-routing through Syria. Added the October 2026 MPO passage that supports it.",
+        "Tension: 'The sources point to two reasons' became 'The sources offer two reasons', which is closer to what they say. It still rests on the IMF line 'Non-oil GDP grew 13.8 percent in 2023', which was checked on the page, and on the 2023 Monitor's OPEC+ and population passages.",
+        "Every number in the headline, arc, threads, since_last_year and tension was checked against growth_problem and series in desk/data/IRQ.json and all are correct: 11.4, 64.4, 1.3, 38.5, 49.1, 3.5, -2.1, 18.8, 2000, 11.1, 26.0, 7.8, 1.7, 3.6, 4.2.",
+        "No banned phrases or recommendation language found. The 2020 pandemic and oil price shock in the arc is supported by the CEM, which names 'an oil price shock, the COVID-19 pandemic'.",
+        "tier1_recent_found changed from 5 to 4. The four recent tier 1 sources checked and cited are the World Bank MPO from October 2026, the MPO from April 2026, the Iraq Economic Monitor from 2023 and the IMF statement from May 2025. The IMF Board press release from July 2025 named in sources_searched was neither cited nor checked."
+      ]
+    },
+    "headline": "Iraq's income per person rises and falls with oil and war: it peaked in 2016, then fell back over nine years to about where it stood in 2000.",
+    "arc": "From 1990 to 2000 growth in income per person averaged 11.4 percent a year, but that mostly reflects recovery from the collapse after the 1990–91 war over Kuwait: income per person fell 64.4 percent in 1991, and sanctions cut oil exports to almost nothing until limited sales resumed under the UN Oil-for-Food program from 1996. From 2001 to 2008 growth averaged 1.3 percent, as the 2003 war cut income per person by 38.5 percent before a 49.1 percent rebound in 2004. From 2009 to 2016 it averaged 3.5 percent; oil output kept growing even through the 2014 oil price crash and the war with ISIS, which the World Bank says hit the non-oil economy hard, and income per person peaked in 2016. Since 2017 growth has averaged -2.1 percent, with the 2020 pandemic and oil price shock, OPEC+ limits on oil output from late 2022 into 2025, and falling oil revenue all weighing on output. By 2025 income per person was 18.8 percent below its 2016 peak and about where it first was in 2000.",
+    "threads": [
+      {
+        "title": "An economy run on oil",
+        "about": "present",
+        "text": "Oil makes up almost all of Iraq's exports, most of government revenue and more than half of output, so growth follows oil prices and how much oil Iraq can or may pump. OPEC+ output limits held oil production down from late 2022 and were still in force for most of 2025, and income per person fell in each year from 2023 to 2025.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irq.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Iraq (October 2026)",
+            "date": "2026-10",
+            "quote": "with oil accounting for 95.8 percent of exports, 87.9 percent of fiscal revenues, and 57.8 percent of real GDP in 2025."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099453507282342287/pdf/IDU0b9f5dc440cf2f047f9098e202d3dab0861c7.pdf",
+            "publisher": "World Bank",
+            "title": "Iraq Economic Monitor: Reemerging Pressures: Iraq's Recovery at Risk (Spring/Summer 2023)",
+            "date": "2023",
+            "quote": "Since November 2022, new OPEC+ production cuts announced in response to declining prices led crude production to fall"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099614308062626168/pdf/Bulk-eaaa4e2e-3eb7-48df-8cfd-bd971b8cdd54.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Iraq (April 2026)",
+            "date": "2026-04",
+            "quote": "oil production was constrained by the Organization of the Petroleum Exporting Countries and its partners (OPEC+) production limits"
+          }
+        ]
+      },
+      {
+        "title": "Sanctions, then the 2003 war",
+        "about": "history",
+        "text": "After the 1990–91 war over Kuwait, sanctions cut Iraq's oil exports to almost nothing, and limited oil sales resumed only under the UN Oil-for-Food program from 1996. Conflict since 2003 has destroyed many factories, and the World Bank says a poor business climate still holds back non-oil firms.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "when Iraq’s oil exports fell to virtually zero during the sanctions period following the war over Kuwait in 1990–91"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "Between 1996 and 2003, exports and imports to Iraq were closely regulated through the United Nations (UN)–authorized Oil-for-Food (OFF) program."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "The destruction of many factories, the poor business environment (de facto and de jure), and insufficient investment continue to hamper growth"
+          }
+        ]
+      },
+      {
+        "title": "ISIS and the 2014 oil crash",
+        "about": "history",
+        "text": "From 2014 the war with ISIS and the fall in oil prices hit the non-oil economy hard. Oil output kept growing through the fighting, and income per person, after an 11.1 percent jump in 2016, reached its peak that year.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "although Iraq’s oil GDP grew steadily during the conflict, the country’s nonoil GDP is estimated to be about 33 percent lower in 2018"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "Although some of this weakness reflects the 2014 oil price shock and the conflict with the Islamic State of Iraq and the Levant (ISIS)"
+          }
+        ]
+      },
+      {
+        "title": "Wages first, building last",
+        "about": "present",
+        "text": "Oil money has gone mostly to public wages and pensions rather than to building things. When oil revenue falls, the state falls behind on payments and cuts capital spending while wages and other running costs stay put; total investment fell from 26.0 percent of GDP in 2015 to 7.8 percent in 2020.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/573051601533287890/txt/Breaking-Out-of-Fragility-A-Country-Economic-Memorandum-for-Diversification-and-Growth-in-Iraq.txt",
+            "publisher": "World Bank",
+            "title": "Breaking Out of Fragility: A Country Economic Memorandum for Diversification and Growth in Iraq",
+            "date": "2020",
+            "quote": "Pervasive political patronage distorts fiscal resource allocation in Iraq by inflating the wage bill at the expense of public investment."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/15/mcs-iraq-concluding-statement-of-the-2025-imf-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Iraq: Concluding Statement of the 2025 IMF Article IV Mission",
+            "date": "2025-05-15",
+            "quote": "Financing constraints have led to reemergence of arrears notably in energy and capital expenditure."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irq.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Iraq (October 2026)",
+            "date": "2026-10",
+            "quote": "Capital spending was cut by 46 percent, while rigid recurrent expenditures remained broadly unchanged."
+          }
+        ]
+      },
+      {
+        "title": "A thin non-oil economy",
+        "about": "present",
+        "text": "Outside oil, firms face power and water shortages and tight credit when oil revenue drops. The population grows fast, so total output has to grow quickly just to keep income per person flat.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099614308062626168/pdf/Bulk-eaaa4e2e-3eb7-48df-8cfd-bd971b8cdd54.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Iraq (April 2026)",
+            "date": "2026-04",
+            "quote": "Non-oil GDP growth also slowed to 1.5 percent y/y due to water and electricity shortages and a liquidity crunch caused by falling oil revenues."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/15/mcs-iraq-concluding-statement-of-the-2025-imf-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Iraq: Concluding Statement of the 2025 IMF Article IV Mission",
+            "date": "2025-05-15",
+            "quote": "Chronic power shortages, electricity losses and excessive tariff subsidization continue to weigh on the economy."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099453507282342287/pdf/IDU0b9f5dc440cf2f047f9098e202d3dab0861c7.pdf",
+            "publisher": "World Bank",
+            "title": "Iraq Economic Monitor: Reemerging Pressures: Iraq's Recovery at Risk (Spring/Summer 2023)",
+            "date": "2023",
+            "quote": "Iraq’s rapid population growth (2.4 percent per annum) highlights the need for higher growth to improve welfare outcomes"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2026 the conflict in the Middle East and the disruption of shipping through the Strait of Hormuz cut Iraq's oil output and exports sharply. Output and exports began to recover in June and July after a ceasefire, a partial reopening of flows through Hormuz and the re-routing of some exports through Syria, but the World Bank's October 2026 outlook still expects a deep fall in output for the year. This came after income per person had already fallen 1.7 percent in 2023, 3.6 percent in 2024 and 4.2 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Iraq (October 2026)",
+          "date": "2026-10",
+          "quote": "Oil production fell from about 4.1 million barrels per day (mbpd) pre-conflict to around 1.5 mbpd in April."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Iraq (October 2026)",
+          "date": "2026-10",
+          "quote": "Production and exports began to recover in June–July following the ceasefire announcement, the partial resumption of flows through Hormuz"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Iraq (October 2026)",
+          "date": "2026-10",
+          "quote": "The economy is projected to contract by 12.4 percent in 2026, with widening twin deficits and declining reserves."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099614308062626168/pdf/Bulk-eaaa4e2e-3eb7-48df-8cfd-bd971b8cdd54.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Iraq (April 2026)",
+          "date": "2026-04",
+          "quote": "the blockade of the Strait of Hormuz—through which most of Iraq’s oil transits—has significantly reduced export capacity and slowed production."
+        }
+      ]
+    },
+    "tension": "The IMF describes a burst of non-oil growth in 2023, yet income per person in the data fell 1.7 percent that year. The sources offer two reasons the boom does not show: OPEC+ limits held down oil output, which is most of the economy, and the population grows fast, so more output is shared among more people."
+  }
+}

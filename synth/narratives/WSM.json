@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "iso3": "WSM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "WSM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "WebSearch (tier 1 domains): Samoa IMF Article IV 2025 staff concluding statement growth",
+        "WebSearch (tier 1 domains): Samoa economic outlook ADB World Bank 2025 growth tourism remittances",
+        "WebSearch (tier 1 domains): Samoa Country Growth and Jobs Report World Bank",
+        "WebSearch (tier 1 domains): Samoa economic reforms 1990s cyclones Ofa Val taro leaf blight growth",
+        "WebSearch (tier 1 domains): Samoa 2009 tsunami Cyclone Evan 2012 economy growth contraction",
+        "WebSearch (worldbank.org): Samoa Macro Poverty Outlook 2026",
+        "WebSearch (imf.org, worldbank.org, adb.org): Samoa Article IV 2024 mission press release IMF staff (critic)",
+        "imf.org: 2026 Article IV concluding statement (opened)",
+        "imf.org: 2025 Executive Board press release PR25/23 (opened)",
+        "imf.org: 2024 Article IV mission press release PR24/446 (opened)",
+        "imf.org: Country Report 2025 publication page (opened by drafter)",
+        "adb.org: Samoa Private Sector Assessment 2008 (opened)",
+        "worldbank.org: Second Resilience DPO program document 2018 (opened)",
+        "blogs.worldbank.org: Rebuilding paradise 2011 (opened)",
+        "Not opened (404 or too large): World Bank Samoa Country Growth and Jobs Report 2026, World Bank MPO Oct 2025 and 2026, IMF Country Report 25/32 PDF"
+      ],
+      "critic_changes": [
+        "Thread 'Disasters and a 1990s slump': the draft tied cyclones to 1990-1991 crop damage and called taro the 'main farm export', which the cited passages do not say. Reworded to what the ADB supports (cyclones hurt farming; blight in 1994 cut taro output), added the ADB's verified cyclone passage, and added 1992 to the years income per person fell (-0.8 in the series).",
+        "Arc first sentence: replaced 'a farm-based economy that had seen little or no growth since the mid-1980s' with 'after little or no growth since 1986', to match the ADB passage (1986 to the mid-1990s). The ADB says farming is largely part-time, so 'farm-based' was dropped.",
+        "Arc and thread 'Reforms open the economy': removed 'shrank the role of the state', which no cited passage supports. Added the verified ADB passage on stabilized policy, fewer price distortions, a rationalized trade regime and lower tariffs.",
+        "Thread 'Tsunami, crisis and Cyclone Evan': replaced the DPO quote on 3.1 percent average growth after Evan, which did not show the setback, with the same document's verified passage on Evan's damage. Added the blog's verified passage that the tsunami came at the height of the global crisis. Dropped the unsupported mention of the country's one large factory. Gave the DPO's full title from its cover.",
+        "Thread 'Migration, remittances and labour', retitled 'Migration, remittances and tourism': the draft said remittances support spending and that the IMF names seasonal work as a limit on the workforce. The quotes do not say either, and the seasonal-workers passage comes from an IMF recommendation. Dropped that citation, added the verified PR24/446 passage (2024-11-27) listing rising outward migration as a medium-term challenge, and quoted the 2026 'Key constraints' bullet from its start.",
+        "since_last_year: 'much slower growth' changed to the IMF's own word 'subdued', and added the verified passage on weak household consumption and subdued private investment, which supports that sentence.",
+        "Tension: removed the unsourced guess that a shrinking population explains the gap. It now says only that fiscal against calendar years explains part of the gap, and that a falling population would widen it.",
+        "Checked every number against desk/data/WSM.json: era means 0.6, 4.0 and 1.6; 2.3 over 2016-2025 against 0.9 before; the yearly changes 2020 -4.1, 2021 -5.9, 2023 14.5 and 2025 3.6; the falls in 2009 and 2012-2014; the 2025 peak. All are correct. No banned phrases.",
+        "All kept quotes were checked on the opened pages: the ADB and DPO PDFs through text extraction, the blog through its HTML, and the IMF pages through WebFetch. Dates were confirmed: ADB June 2008, DPO 31 October 2018, blog 21 April 2011, IMF 27 November 2024, 31 January 2025 and 29 July 2026."
+      ]
+    },
+    "headline": "Samoa's reform boom faded into slow growth broken by disasters, until a tourism-led rebound lifted income per person to a new high in 2025.",
+    "arc": "From 1990 to 1998 income per person grew just 0.6 percent a year, as cyclones and pests hurt farming and a taro leaf blight struck in 1994, after little or no growth since 1986. Reforms from the mid-1990s steadied economic policy, reduced price distortions and cut tariffs, and growth rose to 4.0 percent a year in 1999–2006. From 2007 to 2025 growth slowed to 1.6 percent a year, as the global crisis and the 2009 tsunami, Cyclone Evan in 2012 and then the pandemic each pushed income down. Within that era the last decade ran faster, at 2.3 percent a year over 2016–2025 against 0.9 in the decade before, helped by a quick return of tourists after the pandemic. Income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Disasters and a 1990s slump",
+        "text": "Income per person fell in 1990, 1991, 1992 and 1994. The ADB describes zero or negative growth from 1986 to the mid-1990s, with cyclones hurting farming and a taro leaf blight in 1994 cutting taro output.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/32220/psa-sam.pdf",
+            "publisher": "ADB",
+            "title": "Samoa: Consolidating Reform for Faster Economic Growth (Private Sector Assessment)",
+            "date": "2008-06",
+            "quote": "In the period from 1986 to the mid-1990s, there was zero or even negative growth."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/32220/psa-sam.pdf",
+            "publisher": "ADB",
+            "title": "Samoa: Consolidating Reform for Faster Economic Growth (Private Sector Assessment)",
+            "date": "2008-06",
+            "quote": "Samoa is also susceptible to natural disasters, including periodic droughts and especially cyclones, from which the agriculture sector in particular, has suffered greatly"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/32220/psa-sam.pdf",
+            "publisher": "ADB",
+            "title": "Samoa: Consolidating Reform for Faster Economic Growth (Private Sector Assessment)",
+            "date": "2008-06",
+            "quote": "production continues to suffer the after effects of the devastating taro leaf blight outbreak in 1994."
+          }
+        ]
+      },
+      {
+        "title": "Reforms open the economy",
+        "text": "From the mid-1990s Samoa steadied economic policy, reduced price distortions, opened its trade rules and cut tariffs. The ADB links these reforms to a faster trend, which matches the 4.0 percent a year the data show for 1999–2006.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/32220/psa-sam.pdf",
+            "publisher": "ADB",
+            "title": "Samoa: Consolidating Reform for Faster Economic Growth (Private Sector Assessment)",
+            "date": "2008-06",
+            "quote": "Since the mid-1990s, the trend has risen substantially to around 4% per year."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/institutional-document/32220/psa-sam.pdf",
+            "publisher": "ADB",
+            "title": "Samoa: Consolidating Reform for Faster Economic Growth (Private Sector Assessment)",
+            "date": "2008-06",
+            "quote": "macroeconomic policy has been stabilized, price distortions have been reduced, the trade regime has been rationalized, and tariffs have been brought down substantially."
+          }
+        ]
+      },
+      {
+        "title": "Tsunami, crisis and Cyclone Evan",
+        "text": "The 2009 tsunami struck as the global crisis cut into remittances and tourism, and income per person fell in 2009. Cyclone Evan in December 2012 caused heavy damage, and income per person fell in 2012, 2013 and 2014 before growth picked up again.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://blogs.worldbank.org/en/eastasiapacific/rebuilding-paradise-samoas-recovery-from-the-2009-tsunami",
+            "publisher": "World Bank",
+            "title": "Rebuilding paradise – Samoa's recovery from the 2009 tsunami",
+            "date": "2011-04-21",
+            "quote": "And the tsunami struck exactly when Samoa was already facing the full force of the global economic crisis."
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/eastasiapacific/rebuilding-paradise-samoas-recovery-from-the-2009-tsunami",
+            "publisher": "World Bank",
+            "title": "Rebuilding paradise – Samoa's recovery from the 2009 tsunami",
+            "date": "2011-04-21",
+            "quote": "Reliant on remittances and tourism, the economy of Samoa shrunk by 5.2 percent in 2009, as things got tougher in sending countries"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/288361543806075496/pdf/Samoa-Second-Resilience-DPO-Program-Document-for-clearance-updated-11062018-636793848699267205.pdf",
+            "publisher": "World Bank",
+            "title": "Program Document for a Proposed Development Policy Grant to the Independent State of Samoa for a Second Resilience Development Policy Operation with a Catastrophe-Deferred Drawdown Option",
+            "date": "2018-10-31",
+            "quote": "In December 2012, Tropical Cyclone (TC) Evan caused further damage and losses amounting to around 28 percent of 2011 GDP."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse and tourism rebound",
+        "text": "Income per person fell 4.1 percent in 2020 and 5.9 percent in 2021 during the pandemic. It then jumped 14.5 percent in 2023 as tourists came back quickly, and kept growing in 2024 and 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/31/pr25023-samoa-imf-executive-board-concludes-2024-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Samoa",
+            "date": "2025-01-31",
+            "quote": "GDP contracted 15 percent over 3 years during the pandemic"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/01/31/pr25023-samoa-imf-executive-board-concludes-2024-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Samoa",
+            "date": "2025-01-31",
+            "quote": "driven by a quick recovery in the tourism sector"
+          }
+        ]
+      },
+      {
+        "title": "Migration, remittances and tourism",
+        "text": "Tourism and money sent home by Samoans abroad bring large inflows into the country. The IMF listed rising outward migration among Samoa's medium-term challenges in 2024 and named it a key constraint again in 2026.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs072926-samoa-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "2026 Article IV Consultation for Samoa: IMF Staff Concluding Statement",
+            "date": "2026-07-29",
+            "quote": "supported by strong tourism and remittance inflows"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/11/27/pr24446-samoa-imf-staff-completes-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2024 Article IV Mission to Samoa",
+            "date": "2024-11-27",
+            "quote": "Medium-term challenges include: Samoa's small size, climate vulnerabilities, ML/TF concerns, delayed public investments, rising outward migration."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs072926-samoa-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "2026 Article IV Consultation for Samoa: IMF Staff Concluding Statement",
+            "date": "2026-07-29",
+            "quote": "Key constraints: higher global energy prices, climate-related risks, infrastructure gaps, a narrow production base, and outward migration."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In July 2026 the IMF said Samoa's strong recovery after the pandemic was giving way to subdued growth in the year to June 2026. It pointed to weak household spending, low private investment and the end of the one-off lift from hosting the 2024 Commonwealth Heads of Government Meeting.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs072926-samoa-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "2026 Article IV Consultation for Samoa: IMF Staff Concluding Statement",
+          "date": "2026-07-29",
+          "quote": "Samoa's strong post-pandemic recovery is giving way to subdued growth"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs072926-samoa-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "2026 Article IV Consultation for Samoa: IMF Staff Concluding Statement",
+          "date": "2026-07-29",
+          "quote": "Weak household consumption and subdued private investment."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/29/mcs072926-samoa-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "2026 Article IV Consultation for Samoa: IMF Staff Concluding Statement",
+          "date": "2026-07-29",
+          "quote": "Unwinding of one-off boost from 2024 CHOGM."
+        }
+      ]
+    },
+    "tension": "The IMF describes a sharp slowdown in the year to June 2026, but the data file ends in 2025, with income per person up 3.6 percent and at a record high, so the slowdown does not show yet. The data file also has income per person growing 14.5 percent in 2023, faster than the IMF's figures for growth of the whole economy in the years around it. Part of that gap comes from the IMF counting in fiscal years and the data file in calendar years; a falling population would also widen it, and the IMF lists outward migration among Samoa's challenges."
+  }
+}

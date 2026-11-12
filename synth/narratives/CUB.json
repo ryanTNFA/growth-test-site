@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "iso3": "CUB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CUB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "Critic: opened every cited URL. WebFetch returned raw bytes for 5 PDFs, so their text was pulled out locally with pypdf and every quoted passage was matched against it: World Bank 2004 Mesa-Lago case study (all 3 quotes found), Growth Lab CID WP 327 (November 2016, both quotes found), OECD International Migration Outlook 2024 ('Revised version, December 2024', both quotes found), World Bank Migration and Development Brief 38 (June 2023, quote found), OECD/IDB Caribbean Development Dynamics 2026 (all 4 quotes found; the hurricane is dated 'October 2025' in the text). IMF WP/01/48 landing page: May 1, 2001, and the abstract sentence was found.",
+        "Critic, to date CDD 2026: oecd.org, iadb.org: \"Caribbean Development Dynamics 2026 Investing in Sustainable and Resilient Development published\". The OECD book page, the IDB publication and metadata pages and the OECD April 2026 announcement all returned HTTP 403. The PDF itself shows only '2026' (cite as 'OECD/IDB (2026)', © OECD/IDB 2026).",
+        "Critic, for a month-dated source on Hurricane Melissa in Cuba: tier 1 domains: \"Hurricane Melissa Cuba damage displaced homes health facilities\" and \"Cuba Hurricane Melissa 2025 economy\". Opened the World Bank press release of 2025-11-19 (no mention of Cuba). The World Bank opinion piece of 2025-12-03 returned 404, the OECD CDD chapter HTML returned 403, and the CDB Caribbean Economic Review 2025-26 PDF was too large to fetch.",
+        "Draft's searches: Tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Cuba economy growth crisis 2024\"; \"Cuba economic outlook GDP contraction tourism remittances\"; \"Cuba economy blackouts inflation emigration 2025\"; iadb.org, caribank.org, oecd.org: \"Cuba Caribbean economic outlook Cuba migration\"; imf.org, iadb.org, worldbank.org: \"Cuba economy IMF Western Hemisphere regional outlook Cuba energy crisis\"; \"Cuba Special Period 1990s Soviet collapse economy Venezuela oil\"; imf.org: \"Fall and Recovery of the Cuban Economy IMF working paper pdf\"; \"Cuba Venezuela oil professional services exports growth 2000s economy\"; oecd.org: \"International Migration Outlook 2025 Cuba new migrants doubled\"; \"Hurricane Melissa Cuba damage World Bank GRADE estimate\"",
+        "Cuba is not a member of the IMF, World Bank or IDB, so there is no Article IV, Macro Poverty Outlook or IDB country note. Tier 1 gave 3 distinct recent sources (OECD CDD 2026, OECD IMO 2024, World Bank MDB 38 of June 2023), so tier 2 was not searched.",
+        "Checks run on the corrected story: synth/check_sources.py OK; synth/validate_numbers.mjs --growth-story: 60 of 60 numbers matched desk/data/CUB.json"
+      ],
+      "critic_changes": [
+        "since_last_year dropped (now null). Its only source, OECD/IDB Caribbean Development Dynamics 2026, shows just '2026' as its date. The draft's '2026-02' came from the URL path, not the document, and pages found by search point to an April 2026 release. Without a source dated to the month, check_sources.py would reject the section. Its pages on oecd.org and iadb.org returned 403, and no other tier 1 source dated to the month and covering Cuba could be opened. The October 2025 hurricane damage is still mentioned in the arc, which the CDD text supports ('Hurricane Melissa (October 2025) ... caused severe damage in ... Cuba').",
+        "Date of every CDD 2026 citation changed from '2026-02' to '2026', for the same reason: never guess a month.",
+        "Date of the OECD International Migration Outlook 2024 made more precise, from '2024' to '2024-12', as the PDF shows 'Revised version, December 2024'.",
+        "Venezuela oil thread: removed the line that the study 'describes that industry as weathering collapse in 2016, the year Cuba's slow era began'. It linked Cuba's 2016 break to the title of a Venezuelan oil study, and nothing quoted supports that link. Replaced it with 'The study does not measure what the deal meant for Cuba's growth.' The second quote now starts at 'as well as bilateral agreements', which is still verbatim and reads better.",
+        "Arc: 'beyond noting that Venezuela sold Cuba oil' became 'beyond a 2016 study's note that Venezuela sold oil to Cuba'. The study does not date the deal, so the line no longer implies it explains 1999–2007. 'Large-scale emigration' became 'many Cubans leaving', closer to what the sources show (asylum seekers in the US, not total emigration).",
+        "Emigration thread: 'Emigration has surged during the slow era' softened to 'Many Cubans have left during the slow era'. The OECD passage covers asylum applicants in the United States only, and those fell 37% in 2023.",
+        "Foreign investment thread: the first quote now runs from the Dominican Republic to Cuba, so it shows Cuba's second place. The text now says Guyana is left out, as the source does, and 'hotels and food' became the source's 'accommodation and food'.",
+        "Tension: dropped the IMF 'mirage' half. It was not a disagreement between the sources and the data, and 'judged reform the most likely cause' overstated an abstract that only finds a productivity surge after the 1993–94 reforms the most persuasive of three explanations. Kept the clear tension: greenfield investment from 2014 to 2024 against net FDI inflows of 0.0 percent of GDP in the data's statement.",
+        "Verified and kept unchanged: all 6 remaining sources and every quoted passage (checked against the extracted PDF text or the IMF landing page), all dates except the CDD and IMO ones, and every number in the headline, arc, threads and tension against growth_problem and series (eras -3.4, 6.0, 2.8, -0.4; a fall every year 1990–1993; -15.3 in 1993; 7.5 in 1996; 11.9 in 2006; 4.1 in 2006–2015; peak in 2019; -10.7 in 2020; 9.1 below the peak; level first reached in 2013). No banned phrases. The headline is about 142 characters."
+      ]
+    },
+    "headline": "Cuba's income per person collapsed in the 1990s, recovered strongly, then stalled after 2016; in 2024 it was about where it first was in 2013.",
+    "arc": "Since 1990, Cuba's income per person has grown in four eras: -3.4 percent a year in 1990–1998, 6.0 in 1999–2007, 2.8 in 2008–2015 and -0.4 in 2016–2024. The first era began with a collapse: the fall of the Soviet bloc ended Cuba's preferential trade and aid, and income per person fell every year from 1990 to 1993, by 15.3 percent in 1993 alone. Limited market reforms in 1993–94 came before a strong recovery in 1994–96, but a World Bank study says reform was virtually halted in 1996. The sources found say little about the fast growth of 1999–2007, which reached 11.9 percent in 2006, or the slower years to 2015, beyond a 2016 study's note that Venezuela sold oil to Cuba on heavily subsidized terms. Since 2016 growth has averaged -0.4 percent a year, against 4.1 in 2006–2015; income per person peaked in 2019, fell 10.7 percent in 2020, and by 2024 was 9.1 percent below that peak, about where it first was in 2013. Recent sources describe many Cubans leaving and, in October 2025, severe hurricane damage, but they say little about what caused the slowdown itself.",
+    "threads": [
+      {
+        "title": "Soviet aid ends",
+        "about": "history",
+        "text": "The collapse of socialism in the Soviet Union and Eastern Europe ended the preferential trade and generous aid Cuba had relied on. Income per person fell in each year from 1990 to 1993, and the 1990–1998 era averaged -3.4 percent a year.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/711591468746733248/pdf/308080CU0socia1ess01see0also0307591.pdf",
+            "publisher": "World Bank",
+            "title": "Achievement and Deterioration of Universal Access to Social Services in Cuba",
+            "date": "2004",
+            "quote": "The collapse of socialism in the Soviet Union and Eastern Europe ended the preferential trade relations and generous aid Cuba enjoyed from those countries."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/wp/issues/2016/12/30/the-fall-and-recovery-of-the-cuban-economy-in-the-1990-s-mirage-or-reality-4066",
+            "publisher": "IMF",
+            "title": "The Fall and Recovery of the Cuban Economy in the 1990's: Mirage or Reality?",
+            "date": "2001-05-01",
+            "quote": "The collapse of the Cuban economy following the cessation of Soviet assistance gave way to a strong recovery in 1994-96."
+          }
+        ]
+      },
+      {
+        "title": "Timid reforms, then a halt",
+        "about": "history",
+        "text": "Cuba answered the crisis with an adjustment program and market-oriented reforms in 1993–94, which a World Bank study calls timid next to those of other socialist economies. A strong recovery followed, with income per person up 7.5 percent in 1996, but reform was virtually halted that same year.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/711591468746733248/pdf/308080CU0socia1ess01see0also0307591.pdf",
+            "publisher": "World Bank",
+            "title": "Achievement and Deterioration of Universal Access to Social Services in Cuba",
+            "date": "2004",
+            "quote": "These problems forced an adjustment program as well as a market-oriented reform, though one considerably more timid in scope and depth"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/711591468746733248/pdf/308080CU0socia1ess01see0also0307591.pdf",
+            "publisher": "World Bank",
+            "title": "Achievement and Deterioration of Universal Access to Social Services in Cuba",
+            "date": "2004",
+            "quote": "Despite positive outcomes, the reform was virtually halted in 1996."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/wp/issues/2016/12/30/the-fall-and-recovery-of-the-cuban-economy-in-the-1990-s-mirage-or-reality-4066",
+            "publisher": "IMF",
+            "title": "The Fall and Recovery of the Cuban Economy in the 1990's: Mirage or Reality?",
+            "date": "2001-05-01",
+            "quote": "The collapse of the Cuban economy following the cessation of Soviet assistance gave way to a strong recovery in 1994-96."
+          }
+        ]
+      },
+      {
+        "title": "Subsidized oil from Venezuela",
+        "about": "history",
+        "text": "Venezuela shipped part of its oil abroad on heavily subsidized terms, and a 2016 Growth Lab study of its oil industry names the bilateral deal with Cuba as the most important of these. The study does not measure what the deal meant for Cuba's growth.",
+        "citations": [
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2016/11/venezuela_oil_cidwp_327.pdf",
+            "publisher": "Growth Lab",
+            "title": "Weathering Collapse: An Assessment of the Financial and Operational Situation of the Venezuelan Oil Industry",
+            "date": "2016-11",
+            "quote": "a portion of the exports is heavily subsidized, because of regional cooperation agreements"
+          },
+          {
+            "url": "https://growthlab.hks.harvard.edu/wp-content/uploads/2016/11/venezuela_oil_cidwp_327.pdf",
+            "publisher": "Growth Lab",
+            "title": "Weathering Collapse: An Assessment of the Financial and Operational Situation of the Venezuelan Oil Industry",
+            "date": "2016-11",
+            "quote": "as well as bilateral agreements, the most important one with Cuba"
+          }
+        ]
+      },
+      {
+        "title": "Cubans leave in large numbers",
+        "about": "present",
+        "text": "Many Cubans have left during the slow era. Cuban asylum seekers in the United States reached decades-high numbers in 2022 and were still among the largest groups in 2023, and sending money home from the United States to Cuba grew more costly.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/international-migration-outlook-2024_c6f3e803/50b0353e-en.pdf",
+            "publisher": "OECD",
+            "title": "International Migration Outlook 2024",
+            "date": "2024-12",
+            "quote": "Arrivals from Cuba, which were at decades-high levels in 2022, fell by 37% in 2023."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/international-migration-outlook-2024_c6f3e803/50b0353e-en.pdf",
+            "publisher": "OECD",
+            "title": "International Migration Outlook 2024",
+            "date": "2024-12",
+            "quote": "Nevertheless, with over 99 000 applicants, Cubans were still the third top nationality of asylum seekers in the United States in 2023."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099755208142498760/pdf/IDU-88f10cd7-ae72-48f1-b63b-6ef304800a43.pdf",
+            "publisher": "World Bank",
+            "title": "Migration and Development Brief 38: Remittances Remain Resilient but Are Slowing",
+            "date": "2023-06",
+            "quote": "The cost of sending money from the United States to Cuba remained high and increased to 21.7 percent in 2022Q4 from a year earlier"
+          }
+        ]
+      },
+      {
+        "title": "Foreign investment in services",
+        "about": "present",
+        "text": "Foreign firms have put new projects into Cuba. Leaving out Guyana, the OECD and IDB rank Cuba second only to the Dominican Republic among Caribbean destinations for greenfield foreign investment over 2014–2024, and across the region this money went mostly to services such as accommodation and food.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/caribbean-development-dynamics-2026_f2a57eab/5c92507d-en.pdf",
+            "publisher": "OECD",
+            "title": "Caribbean Development Dynamics 2026: Investing in Sustainable and Resilient Development",
+            "date": "2026",
+            "quote": "the Dominican Republic accounting for USD 18 billion (46% of the total), followed by Cuba with USD 7 billion (19%)"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/caribbean-development-dynamics-2026_f2a57eab/5c92507d-en.pdf",
+            "publisher": "OECD",
+            "title": "Caribbean Development Dynamics 2026: Investing in Sustainable and Resilient Development",
+            "date": "2026",
+            "quote": "Greenfield FDI targeted predominantly the services sector, including accommodation and food, information and communication technology, and financial services"
+          }
+        ]
+      }
+    ],
+    "since_last_year": null,
+    "tension": "The OECD and IDB count Cuba among the largest Caribbean destinations for greenfield foreign investment over 2014–2024, yet the data record net foreign investment inflows of 0.0 percent of GDP."
+  }
+}

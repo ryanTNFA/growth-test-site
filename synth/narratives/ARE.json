@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "iso3": "ARE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ARE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: United Arab Emirates Article IV consultation 2025 staff concluding statement",
+        "imf.org, worldbank.org and other tier 1 domains: United Arab Emirates Macro Poverty Outlook non-oil growth",
+        "imf.org, worldbank.org, oecd.org: UAE Article IV Dubai World debt restructuring real estate 2009 population expatriate",
+        "imf.org, worldbank.org: UAE 2016 Article IV oil price decline growth slowdown fiscal consolidation",
+        "imf.org: IMF Executive Board concludes 2025 Article IV consultation United Arab Emirates",
+        "imf.org: IMF staff 2026 Article IV mission United Arab Emirates",
+        "worldbank.org: Gulf Economic Update 2025 United Arab Emirates non-oil growth population",
+        "Opened: imf.org PR 25/326 (2025-10-02), imf.org PR 26/250 (2026-07-17), imf.org Selected Issues CR 25/328 (2025-12), imf.org CR 10/42 (2010-02), imf.org CR 16/251 (2016-07), imf.org PR 24/450 (2024-12-05), worldbank.org GEU press release (2025-12-04)",
+        "Critic check: re-opened every cited URL with WebFetch; PDF text extracted locally to verify passages"
+      ],
+      "critic_changes": [
+        "Headline: removed 'not more output per worker'. The cited IMF passage names TFP (productivity) alongside labor as the largest sources of non-oil growth, so it contradicted the source. Rewrote it around the data (64.5 percent below the 1980 peak, lower than in 1970).",
+        "Arc: changed 'run largely by expatriate workers' to 'in a city whose people were mostly expatriates', because the IMF passage is about Dubai's population, not its workforce. Changed 'trade' to 'logistics' to match the IMF's wording.",
+        "Arc: replaced the causal 'so income per person averaged -0.8 percent' with 'while', because no source links the labor contribution to the per-person average.",
+        "Thread 'Hub and property boom': removed the unsupported claim that output grew with the population. 'Workforce' is now 'Dubai's people'. The expatriate quote is extended to the page's exact words so it covers the hub sectors.",
+        "Thread 'The 2009 property bust': extended the quote to the page's words ('hit simultaneously'). Added a verified CR 10/42 passage to support the Dubai World debt claim, and changed 'had to restructure its debt' to 'sought to restructure part of its debt' to match it.",
+        "Thread 'Growth from more workers': the PR 25/326 quote 'Real estate activity remains buoyant, supported by...' is not on the page. Replaced it with the page's exact words 'External demand, strong non-hydrocarbon and population growth, structural reforms'. Changed 'barely moved' to 'edged down' to fit -0.8.",
+        "Thread 'Diversification and trade deals': the PR 25/326 quote on Comprehensive Economic Partnership Agreements does not appear on that page. Replaced it with a verified passage from CR 25/328 on the 13 ratified agreements, the first with India. Changed 'has widened the markets' to 'could spread its sales across more markets', because the IMF writes 'could diversify its markets'. Changed the non-oil share quote to an exact passage that names the leading sectors.",
+        "since_last_year: the quote 'following robust expansion in 2025, overall GDP is expected to be slightly lower in 2026, driven by a slowdown in non-hydrocarbon activity' is not on the PR 26/250 page. Replaced it with the page's exact lines on GDP and on the slowdown in tourism, and added the Strait of Hormuz line. Dropped the PR 25/326 quote ('GDP is projected to expand by 4.8 percent in 2025, driven by...'), which is not on the page as written, along with the claim it supported that 2025 growth came from oil output and non-oil sectors. Narrowed 'hit tourism, transport, trade and real estate' to what the verified quotes support.",
+        "Tension: replaced 'Much of the gap comes from a fast-growing, mostly expatriate workforce' with a claim tied to the IMF labor-contribution finding. The expatriate share is from a 2010 report on Dubai only.",
+        "Checked every number against desk/data/ARE.json: 64.5, 0.5, -2.9, -0.1, 11.0 (2009), 4.2 (2017), 8.3 (2020), -0.8 (2016–2024 average and 2024) and the 1970 level comparison all match. No number changed.",
+        "All five threads keep citations. Recent tier 1 sources verified: PR 25/326, PR 26/250, CR 25/328 and the World Bank release of 2025-12-04, so the story stays tier 1 with 4 recent sources."
+      ]
+    },
+    "headline": "The UAE economy keeps growing as workers arrive, but income per person is still 64.5 percent below its 1980 peak and lower than in 1970.",
+    "arc": "Income per person in the United Arab Emirates peaked in 1980 and in 2024 was still 64.5 percent below that peak, and lower than in 1970, the first year of the record. From 1990 to 1997 it held roughly steady, growing 0.5 percent a year. From 1998 to 2009 it fell 2.9 percent a year: the IMF describes a Dubai-led push into logistics, tourism and property, in a city whose people were mostly expatriates, that broke in 2009 when the global recession and the bursting of the Dubai property bubble hit together, and income per person fell 11.0 percent that year. Since 2010 it has been almost flat, at -0.1 percent a year, with falls of 4.2 percent in 2017 after the oil price slump and 8.3 percent in 2020, the COVID-19 year. The sources credit expanding non-oil sectors such as tourism, construction, finance and real estate for strong GDP growth, and the IMF finds that added labor was one of the two largest sources of that growth, while income per person averaged -0.8 percent a year over 2016–2024.",
+    "threads": [
+      {
+        "title": "Hub and property boom",
+        "about": "history",
+        "text": "In the 2000s Dubai built a second engine beside oil: logistics, business services, tourism and property, opened to foreign buyers around 2004. Most of Dubai's people were expatriates. Income per person fell 2.9 percent a year over 1998–2009.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1042.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: 2009 Article IV Consultation—Staff Report; Public Information Notice; and Statement by the Executive Director for United Arab Emirates",
+            "date": "2010-02",
+            "quote": "A new diversification push into commercial and residential real estate came around 2004 following the decision to allow foreigners to own property in designated areas"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1042.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: 2009 Article IV Consultation—Staff Report; Public Information Notice; and Statement by the Executive Director for United Arab Emirates",
+            "date": "2010-02",
+            "quote": "global hubbing (logistics, business services, and tourism) and construction/property, with 90 percent of Dubai’s population being expatriates"
+          }
+        ]
+      },
+      {
+        "title": "The 2009 property bust",
+        "about": "history",
+        "text": "In 2009 the global recession, the collapse of Dubai property prices and the closing of world capital markets hit oil, trade and property at once, and Dubai World sought to restructure part of its debt. Income per person fell 11.0 percent that year, closing the 1998–2009 era.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1042.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: 2009 Article IV Consultation—Staff Report; Public Information Notice; and Statement by the Executive Director for United Arab Emirates",
+            "date": "2010-02",
+            "quote": "The global recession, the bursting of the Dubai property bubble, and the post-Lehman shutdown of international capital markets hit simultaneously"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1042.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: 2009 Article IV Consultation—Staff Report; Public Information Notice; and Statement by the Executive Director for United Arab Emirates",
+            "date": "2010-02",
+            "quote": "The announcement in late November that Dubai World (DW) would seek a standstill and the restructuring of part of its debt"
+          }
+        ]
+      },
+      {
+        "title": "Oil price slump, 2015–16",
+        "about": "history",
+        "text": "When oil prices fell, the government cut spending, and the IMF reports that this cutback slowed non-oil growth and hurt banks. Income per person fell 4.2 percent in 2017, one of the dips in an otherwise flat era since 2010.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16251.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: 2016 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for the United Arab Emirates",
+            "date": "2016-07",
+            "quote": "Substantial fiscal consolidation was achieved in 2015, but it has weighed on non-oil growth and banks’ asset quality."
+          }
+        ]
+      },
+      {
+        "title": "Growth from more workers",
+        "about": "present",
+        "text": "The IMF finds that more labor and better productivity were the two largest sources of non-oil growth, and it names population growth among the forces behind the property market. GDP rises as people arrive, but income per person has edged down, averaging -0.8 percent a year over 2016–2024.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: Selected Issues (IMF Country Report No. 25/328)",
+            "date": "2025-12",
+            "quote": "The largest contributions in driving non-hydrocarbon GDP growth were TFP and labor"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/10/02/pr-25326-united-arab-emirates-imf-staff-completes-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to United Arab Emirates",
+            "date": "2025-10-02",
+            "quote": "External demand, strong non-hydrocarbon and population growth, structural reforms"
+          }
+        ]
+      },
+      {
+        "title": "Diversification and trade deals",
+        "about": "present",
+        "text": "The non-oil economy has grown as a share of output, led by tourism, finance, construction, real estate and trade. In recent years the UAE has ratified a run of trade and investment agreements, the first with India, which the IMF says could spread its sales across more markets.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: Selected Issues (IMF Country Report No. 25/328)",
+            "date": "2025-12",
+            "quote": "increased from 71 percent in 2010 to 75.5 percent in 2024, supported by growth in tourism, financial services, manufacturing, construction, real estate, and wholesale trade"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "United Arab Emirates: Selected Issues (IMF Country Report No. 25/328)",
+            "date": "2025-12",
+            "quote": "The UAE has ratified 13 such agreements (Text Figure 10) in the last three years, the first of which was with India"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/04/gcc-economies-demonstrate-resilience-advance-diversification-and-accelerate-digital-transformation",
+            "publisher": "World Bank",
+            "title": "GCC Economies Demonstrate Resilience, Advance Diversification, and Accelerate Digital Transformation",
+            "date": "2025-12-04",
+            "quote": "The UAE continues to post strong, broad-based growth with a balanced oil and non-oil mix."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "After robust growth in 2025, the conflict in the Middle East and the on-and-off closure of the Strait of Hormuz weighed on activity in 2026, and uncertainty slowed tourism and other non-oil sectors. In July 2026 the IMF expected GDP to be slightly lower for the year. It also reports that the UAE has left OPEC, and it expects oil output to pick up in the second half of 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/17/pr26250-united-arab-emirates-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to United Arab Emirates",
+          "date": "2026-07-17",
+          "quote": "Overall GDP: expected to be slightly lower in 2026 following robust expansion in 2025."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/17/pr26250-united-arab-emirates-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to United Arab Emirates",
+          "date": "2026-07-17",
+          "quote": "slowdown in non-hydrocarbon activity as heightened uncertainty weighed on tourism"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/17/pr26250-united-arab-emirates-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to United Arab Emirates",
+          "date": "2026-07-17",
+          "quote": "The on-and-off closure of the Strait of Hormuz is weighing on activity."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/17/pr26250-united-arab-emirates-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to United Arab Emirates",
+          "date": "2026-07-17",
+          "quote": "the ramp-up in production following the UAE's exit from OPEC more than offset conflict-related disruptions"
+        }
+      ]
+    },
+    "tension": "The sources describe a strong, broad-based economy with fast GDP growth and booming non-oil sectors, both now and in the 2000s. The data on income per person do not show that: it fell 2.9 percent a year over 1998–2009, has averaged -0.1 percent a year since 2010, and fell 0.8 percent in 2024. Part of the gap is the growing number of people: the IMF counts more labor among the largest sources of non-oil growth, and output per person has not kept pace. The sources rarely talk about income per person."
+  }
+}

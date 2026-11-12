@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "FIN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "FIN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Finland Article IV consultation 2025 staff concluding statement",
+        "oecd.org/imf.org/worldbank.org (tier 1 list): OECD Economic Surveys Finland 2025 (oecd.org pages returned 403, not cited)",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Finland Nokia decline forest industry Russia sanctions recession 2012-2015 productivity",
+        "imf.org, worldbank.org, oecd.org: Finland 1990s depression collapse Soviet trade banking crisis recovery electronics Nokia growth",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Finland economy 2026 IMF OR OECD outlook unemployment productivity",
+        "Opened: imf.org 2026 Article IV concluding statement (Nov 2025), IMF PR 26/7 (Jan 2026), IMF PR 25/5 (Jan 2025), IMF Country Report 26/6, IMF 2015 concluding statement, IMF Country Report 16/370, World Bank 'Finland as a Knowledge Economy' (2006)",
+        "Critic re-opened every cited URL: World Bank 2006 PDF, IMF 2015 concluding statement, IMF CR 16/370 PDF, IMF CR 26/6 PDF, IMF 2026 Article IV concluding statement (all quotes verified in page text)"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/FIN.json (1991 -6.4; eras 0.7, 3.5, -0.1; 2009 -8.5; peak 2008, 3.1 percent shortfall, level first reached 2006; 1997 6.1; 2006-2015 0.1; 2016-2025 0.6 vs structural median 1.3; 2023 -1.8; 2025 -0.3, third straight fall): all match, none changed.",
+        "Opened all five cited documents; every quoted passage was found verbatim on its page and the dates match (IMF CR 26/6 is (c) 2026 with a January 19, 2026 press release; CR 16/370 is dated December 2016).",
+        "Arc and Nokia thread: changed 'Nokia's phone business' to 'Nokia' because the cited IMF passages name Nokia, not its phone business; reworded 'two pillars of exports shrank after 2008' to 'in the early 2010s Nokia and the paper industry declined at the same time, and exports fell', which matches the cited passages.",
+        "Soviet collapse thread: 'credit boom in the late 1980s ended in 1990' was not backed by any cited passage, so I added the World Bank quote 'The boom ended abruptly in 1990.' and changed 'credit boom' to 'lending boom' to match the source's wording.",
+        "Electronics thread: 'with Nokia at the center' was not backed by the only citation, so I added the World Bank passage on the 'Nokia-driven ICT cluster'.",
+        "Stalled productivity thread: the claim that higher interest rates hit housing and construction had no supporting citation. I replaced the productivity-only quote with the IMF CR 26/6 passage covering both the effect of monetary tightening on housing and construction and stagnant labor productivity. I also changed 'labor productivity has not grown' to 'has stagnated' to match the source.",
+        "More workers thread: 'since 2023' was not in the source ('in recent years'), so I corrected it. 'Health and pension costs' was not supported by the aging quote, so I added the IMF passage on aging-related spending on health and social security and reworded the text to match.",
+        "since_last_year: added the IMF passage on the slow recovery since the 2023 downturn, to back the first clause.",
+        "Tension: changed 'labor supply rising with immigration' to 'immigration adding to the labor force', which matches the sources more closely; no numbers outside the data were added.",
+        "tier1_recent_found left at 3 from the draft's search; the critic directly confirmed 2 distinct recent tier 1 sources that are cited (IMF CR 26/6, January 2026; IMF 2026 Article IV concluding statement, November 2025)."
+      ]
+    },
+    "headline": "Finland grew fast on electronics until 2008, then stalled as Nokia and paper faded and new shocks hit; income per person is back near its 2006 level.",
+    "arc": "Finland began the 1990s in a deep slump: income per person fell 6.4 percent in 1991 as trade with the Soviet Union collapsed and a banking crisis followed, so growth averaged only 0.7 percent a year over 1990–1997. Recovery came through exports and a fast-growing electronics industry led by Nokia, and from 1998 to 2007 income per person grew 3.5 percent a year. Income per person peaked in 2008, fell 8.5 percent in 2009, and then fell again from 2012 to 2014 as Nokia and the paper industry declined. Since 2008 growth has averaged -0.1 percent a year, and in 2025 income per person was 3.1 percent below its 2008 peak, about where it first was in 2006. In recent years the IMF points to lost trade with Russia after the invasion of Ukraine, higher interest rates that hit housing and construction, a downturn in 2023, and stagnant labor productivity. Over 2016–2025 growth averaged 0.6 percent a year, below the 1.3 median of similar economies.",
+    "threads": [
+      {
+        "title": "Soviet collapse and banking crisis",
+        "text": "A lending boom in the late 1980s ended in 1990, and the loss of Soviet trade deepened the fall. Bankruptcies led to a banking crisis, and income per person shrank in 1991, 1992 and 1993 before growth returned in 1994.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/656941468281386712/pdf/393780FI0Knowledge0economy01PUBLIC1.pdf",
+            "publisher": "World Bank",
+            "title": "Finland as a Knowledge Economy: Elements of Success and Lessons Learned",
+            "date": "2006",
+            "quote": "The boom ended abruptly in 1990."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/656941468281386712/pdf/393780FI0Knowledge0economy01PUBLIC1.pdf",
+            "publisher": "World Bank",
+            "title": "Finland as a Knowledge Economy: Elements of Success and Lessons Learned",
+            "date": "2006",
+            "quote": "the collapse of the Soviet Union wiped out 15 percent of Finland's foreign trade with that country"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/656941468281386712/pdf/393780FI0Knowledge0economy01PUBLIC1.pdf",
+            "publisher": "World Bank",
+            "title": "Finland as a Knowledge Economy: Elements of Success and Lessons Learned",
+            "date": "2006",
+            "quote": "A wave of personal and company bankruptcies resulted in a banking crisis that eventually cost taxpayers an estimated 7.5 percent of GDP."
+          }
+        ]
+      },
+      {
+        "title": "The electronics boom",
+        "text": "Exports and telecom equipment pulled Finland out of the slump, with Nokia at the center. Growth reached 6.1 percent in 1997 and averaged 3.5 percent a year over 1998–2007.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/656941468281386712/pdf/393780FI0Knowledge0economy01PUBLIC1.pdf",
+            "publisher": "World Bank",
+            "title": "Finland as a Knowledge Economy: Elements of Success and Lessons Learned",
+            "date": "2006",
+            "quote": "the economy was already recovering from the depression, thanks primarily to rising exports and fast growth in the electronics industry, mainly telecommunication equipment"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/656941468281386712/pdf/393780FI0Knowledge0economy01PUBLIC1.pdf",
+            "publisher": "World Bank",
+            "title": "Finland as a Knowledge Economy: Elements of Success and Lessons Learned",
+            "date": "2006",
+            "quote": "The core of the Finnish knowledge economy is the Nokia-driven ICT cluster."
+          }
+        ]
+      },
+      {
+        "title": "Nokia and paper decline",
+        "text": "In the early 2010s Nokia and the paper industry declined at the same time, and exports fell. Income per person fell in 2012, 2013 and 2014, and growth over 2006–2015 averaged 0.1 percent a year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/52/mcs091515",
+            "publisher": "IMF",
+            "title": "Finland—Concluding Statement for the 2015 Article IV Consultation",
+            "date": "2015-09-15",
+            "quote": "Weak external demand and parallel declines of Nokia and the paper industry reduced exports."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr16370.pdf",
+            "publisher": "IMF",
+            "title": "Finland: Financial System Stability Assessment (IMF Country Report No. 16/370)",
+            "date": "2016-12",
+            "quote": "The decline of the paper industry and the technology company Nokia, exacerbated by weak external, demand contributed to a 3 percent drop in GDP"
+          }
+        ]
+      },
+      {
+        "title": "Stalled productivity, repeated shocks",
+        "text": "The IMF describes years of underperformance: Russia's invasion of Ukraine cut old trade ties, higher interest rates hit housing and construction, and labor productivity has stagnated. Income per person fell 1.8 percent in 2023 and has not recovered since.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+            "date": "2026-01",
+            "quote": "The invasion of Ukraine disrupted long-standing trade ties with Russia and raised economic uncertainty"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+            "date": "2026-01",
+            "quote": "monetary tightening sharply curtailed activity by weighing on housing, construction, and interest-sensitive consumption, and labor productivity has stagnated amid weak investment"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/07/cs-finland-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Finland: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2025-11-10",
+            "quote": "The Finnish economy continues to underperform amid slow productivity growth and persistently weak private demand."
+          }
+        ]
+      },
+      {
+        "title": "More workers, older population",
+        "text": "Immigration and benefit reforms have added workers in recent years, even as the population ages. The IMF links ageing to rising spending on health and social security.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+            "date": "2026-01",
+            "quote": "labor supply has increased significantly in recent years, supported by immigration and reforms that strengthened job-search incentives"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+            "date": "2026-01",
+            "quote": "Finland is affected by population aging which require a wide-ranging set of fiscal and structural reforms."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+            "date": "2026-01",
+            "quote": "Long-term risks are moderate as aging-related expenditures on health and social security feed into debt dynamics."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the IMF reported that the recovery from the 2023 downturn stayed slow, that unemployment kept rising as more people looked for work, and that public debt kept climbing. In the data, income per person fell 0.3 percent in 2025, its third straight year of decline.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+          "date": "2026-01",
+          "quote": "Since the 2023 downturn, the economic recovery has been slow as consumption has remained weak and construction investment fell."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+          "date": "2026-01",
+          "quote": "The unemployment rate rose to 9.6 percent in October 2025 to be among the highest in Europe."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1finea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Finland: 2026 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 26/6)",
+          "date": "2026-01",
+          "quote": "Since 2019, Finland's public debt has increased by 20 percent of GDP, more than any country in the euro area."
+        }
+      ]
+    },
+    "tension": "The IMF describes a slow recovery since the 2023 downturn, but income per person fell in each of 2023, 2024 and 2025. Part of the gap may be people: the IMF reports immigration adding to the labor force, so a little more output is shared among more residents."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "UGA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "UGA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Uganda IMF Article IV 2025 staff report growth oil'",
+        "tier 1 domains: 'Uganda economic update World Bank 2025 growth'",
+        "tier 1 domains: 'Uganda growth slowed since 2011 per capita income population growth reforms 1990s'",
+        "worldbank.org: 'Uganda Country Economic Memorandum Growth Trade and Transformation'",
+        "critic opened: worldbank.org Uganda Economic Update 27th edition page (2026-07-02)",
+        "critic opened: worldbank.org press release 2025-12-24 (26th Uganda Economic Update)",
+        "critic opened: worldbank.org press release 2025-09-30 (25th Uganda Economic Update)",
+        "critic opened: documents1.worldbank.org Country Economic Memorandum for Uganda (2022) PDF",
+        "critic opened: worldbank.org Uganda Economic Update 5th edition PDF (Feb 2015)"
+      ],
+      "critic_changes": [
+        "Opened all five cited documents (UEU 27th edition page, the 2025-12-24 and 2025-09-30 World Bank press releases, the 2022 CEM PDF, the Feb 2015 UEU PDF). Every quote was found on its page, and every date and title matched. The only fix was the CEM 'peace-dividend' quote, now in the page's straight quotation marks.",
+        "Every number was checked against desk/data/UGA.json: 3.8 and 1.6 (G4 eras), 1.7 (G1 avg_10y), 3.2 and 3.5 (2024 and 2025 series), the small falls in 2017 and 2020 (-0.4 each), and the 2025 peak (G3). All match. The arc now says plainly that 3.2 and 3.5 are income-per-person growth, not 'growth'.",
+        "Arc: replaced 'peace in the north' with 'the end of the conflict with the Lord's Resistance Army', because no cited passage mentions the north. Named South Sudan as the outside condition the CEM gives. Changed 'expect oil production to start in 2027' to 'oil revenue to start in 2027', which is what the cited passage says. Changed 'debt and interest costs keep rising' to 'have risen', the supported past-tense claim.",
+        "Thread 'Reforms and peace drive the boom': its claim about new regional markets including South Sudan had no supporting quote, so I added a CEM citation that names South Sudan as a trading partner. Changed 'sold' to 'sold or closed' state firms, because the CEM says firms were privatized or liquidated.",
+        "Thread 'A fast-growing population': dropped the sentence 'even in years the sources describe as good', which no cited passage supports.",
+        "Thread 'The long wait for oil': lengthened the 2025-09-30 quote so that it names the export pipeline, as the thread text does.",
+        "since_last_year: the claim that election spending widened the budget gap had no citation, and nor did the claim that building work was linked to oil. Added two exact passages from the 27th Update for these. 'roads' became 'infrastructure projects' to match the source.",
+        "Tension: dropped the claim that the sources call Uganda 'one of the faster-growing economies in its region', which no cited passage supports. It now reads 'the sources describe Uganda's recent growth as strong', which is supported. 'The last decade' is now stated as the data years, 2016 to 2025.",
+        "tier1_recent_found: lowered from 4 to 3. The draft counted an IMF press release (pr26265), but the draft did not give its URL and the likely URL returned 404, so it could not be checked. The three World Bank sources from 2023 or later (the July 2026 update, and the Dec 2025 and Sep 2025 press releases) are verified, which is above the minimum of 2.",
+        "Checked for banned phrases and for recommendations or verdicts: none found. The story has 5 threads (3 history, 2 present), and each present thread has a citation from 2025 or 2026."
+      ]
+    },
+    "headline": "Reforms and peace lifted Uganda's income per person 3.8 percent a year from 1990 to 2011; since 2012 it has grown 1.6 percent a year, and oil is close.",
+    "arc": "From 1990 to 2011, Uganda's income per person grew 3.8 percent a year. The World Bank credits economic reforms, the end of the conflict with the Lord's Resistance Army and good outside conditions, including South Sudan as a new trading partner. From 2012 the pace fell to 1.6 percent a year, as reform momentum slowed, outside conditions turned and droughts hit, while public investment became the main engine of the growth that remained. A fast-growing population meant that growth in the whole economy turned into only modest gains per person, with small falls in 2017 and 2020. Income per person then grew 3.2 percent in 2024 and 3.5 percent in 2025, when it reached its highest level yet. The World Bank now expects oil revenue to start in 2027, while public debt and the cost of servicing it have risen.",
+    "threads": [
+      {
+        "title": "Reforms and peace drive the boom",
+        "about": "history",
+        "text": "In the 1990s and 2000s Uganda steadied its economy, freed prices and the exchange rate, and sold or closed loss-making state firms. The end of the conflict with the Lord's Resistance Army and new regional markets, including South Sudan, added to growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099350101122340031/pdf/P1748881fb923f01e1988311c26b55e05f1.pdf",
+            "publisher": "World Bank",
+            "title": "Growth, Trade, and Transformation: A Country Economic Memorandum for Uganda",
+            "date": "2022",
+            "quote": "macro-stabilization reforms to establish fiscal discipline and bring inflation under control, price liberalization in coffee"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099350101122340031/pdf/P1748881fb923f01e1988311c26b55e05f1.pdf",
+            "publisher": "World Bank",
+            "title": "Growth, Trade, and Transformation: A Country Economic Memorandum for Uganda",
+            "date": "2022",
+            "quote": "a 'peace-dividend' that materialized as the conflict with the Lord's Resistance Army subsided"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099350101122340031/pdf/P1748881fb923f01e1988311c26b55e05f1.pdf",
+            "publisher": "World Bank",
+            "title": "Growth, Trade, and Transformation: A Country Economic Memorandum for Uganda",
+            "date": "2022",
+            "quote": "an emergence of favorable external conditions, including the creation of South Sudan as a trading partner"
+          }
+        ]
+      },
+      {
+        "title": "The slowdown after 2011",
+        "about": "history",
+        "text": "After 2011, reform momentum slowed, outside conditions turned and droughts hit. By 2014 growth had stayed below its long-run pace for three years in a row, and public investment had become the main engine of growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099350101122340031/pdf/P1748881fb923f01e1988311c26b55e05f1.pdf",
+            "publisher": "World Bank",
+            "title": "Growth, Trade, and Transformation: A Country Economic Memorandum for Uganda",
+            "date": "2022",
+            "quote": "With slowing reform momentum, the reversal of external factors, and a number of exogenous shocks like droughts, growth slowed to 4.3 percent per year"
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/Africa/Uganda/Report/uganda-economic-update-march-2015.pdf",
+            "publisher": "World Bank",
+            "title": "Uganda Economic Update 5th Edition: The Growth Challenge: Can Ugandan Cities get to Work?",
+            "date": "2015-02",
+            "quote": "Uganda has recorded a rate of growth lower than its long-term (1990s and early 2000s) average of seven percent for three consecutive years."
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/Africa/Uganda/Report/uganda-economic-update-march-2015.pdf",
+            "publisher": "World Bank",
+            "title": "Uganda Economic Update 5th Edition: The Growth Challenge: Can Ugandan Cities get to Work?",
+            "date": "2015-02",
+            "quote": "The main engine of growth remained public investment"
+          }
+        ]
+      },
+      {
+        "title": "A fast-growing population",
+        "about": "history",
+        "text": "Uganda's population grows very fast. After 2011, growth in the whole economy only just outpaced it, which left little gain in income per person.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099350101122340031/pdf/P1748881fb923f01e1988311c26b55e05f1.pdf",
+            "publisher": "World Bank",
+            "title": "Growth, Trade, and Transformation: A Country Economic Memorandum for Uganda",
+            "date": "2022",
+            "quote": "barely surpassing the stubbornly high population growth rate of over 3 percent per year"
+          }
+        ]
+      },
+      {
+        "title": "Rising public debt and interest",
+        "about": "present",
+        "text": "Heavy public spending on roads and other infrastructure has been paid for partly by borrowing. Interest on that debt now takes a large share of the government's revenue.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/uganda/publication/uganda-economic-update-27",
+            "publisher": "World Bank",
+            "title": "Uganda Economic Update: Building on Urban Transformation - Construction as a Jobs Engine (27th Edition)",
+            "date": "2026-07-02",
+            "quote": "Interest payments on public debt now consume nearly a third of all domestic revenues collected"
+          }
+        ]
+      },
+      {
+        "title": "The long wait for oil",
+        "about": "present",
+        "text": "Oil revenue was already expected a decade ago, but production has taken longer to arrive. The World Bank now expects revenue from 2027, and building the export pipeline is one reason the timing is uncertain.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/Africa/Uganda/Report/uganda-economic-update-march-2015.pdf",
+            "publisher": "World Bank",
+            "title": "Uganda Economic Update 5th Edition: The Growth Challenge: Can Ugandan Cities get to Work?",
+            "date": "2015-02",
+            "quote": "the revenues expected to be derived from the exploitation of oil"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/24/agro-industrialization-offers-clear-path-toward-increased-economic-growth-and-job-creation-in-uganda",
+            "publisher": "World Bank",
+            "title": "Agro-industrialization Offers Clear Path Toward Increased Economic Growth and Job-creation in Uganda",
+            "date": "2025-12-24",
+            "quote": "the accrual of oil revenues expected to start in 2027"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/09/30/improving-revenue-collection-and-public-spending-can-accelerate-job-creation-and-uganda-s-economic-growth",
+            "publisher": "World Bank",
+            "title": "Improving Revenue Collection and Public Spending can Accelerate Job-creation and Uganda's Economic Growth",
+            "date": "2025-09-30",
+            "quote": "Oil production timing remains uncertain including completion of large infrastructure, such as the crude oil export pipeline"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year, growth stayed strong, helped by household spending and building work linked to oil and infrastructure projects, and commercial oil production came closer. Spending around the election widened the budget gap, and public debt rose above the government's own ceiling.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/country/uganda/publication/uganda-economic-update-27",
+          "publisher": "World Bank",
+          "title": "Uganda Economic Update: Building on Urban Transformation - Construction as a Jobs Engine (27th Edition)",
+          "date": "2026-07-02",
+          "quote": "driven by strong household consumption, and a sharp acceleration in industry, particularly a surging construction sector bolstered by advancing oil and infrastructure projects"
+        },
+        {
+          "url": "https://www.worldbank.org/en/country/uganda/publication/uganda-economic-update-27",
+          "publisher": "World Bank",
+          "title": "Uganda Economic Update: Building on Urban Transformation - Construction as a Jobs Engine (27th Edition)",
+          "date": "2026-07-02",
+          "quote": "widened to an estimated 6.5% of GDP in FY2026, partly due to election-related spending"
+        },
+        {
+          "url": "https://www.worldbank.org/en/country/uganda/publication/uganda-economic-update-27",
+          "publisher": "World Bank",
+          "title": "Uganda Economic Update: Building on Urban Transformation - Construction as a Jobs Engine (27th Edition)",
+          "date": "2026-07-02",
+          "quote": "Public debt has crossed the government's own ceiling, reaching 52.3% of GDP, and could rise further without corrective action."
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/24/agro-industrialization-offers-clear-path-toward-increased-economic-growth-and-job-creation-in-uganda",
+          "publisher": "World Bank",
+          "title": "Agro-industrialization Offers Clear Path Toward Increased Economic Growth and Job-creation in Uganda",
+          "date": "2025-12-24",
+          "quote": "Uganda's economic growth remains strong, with real gross domestic product (GDP) rising to 6.3% in FY2024/2025, up from 6.1% the previous year."
+        }
+      ]
+    },
+    "tension": "The sources describe Uganda's recent growth as strong, yet income per person grew only 1.6 percent a year from 2012 to 2025 and 1.7 percent a year from 2016 to 2025. Much of the gap is population growth: the World Bank notes that growth in the whole economy after 2011 only just outpaced it, so the strong headline figures overstate the gains for the average person."
+  }
+}

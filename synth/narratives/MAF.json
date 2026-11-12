@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "iso3": "MAF",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MAF",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 0,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Saint-Martin French part economy Hurricane Irma recovery\"",
+        "imf.org, worldbank.org, oecd.org, iadb.org, caribank.org: \"Saint-Martin collectivité economy tourism 2024\"",
+        "cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org: \"Saint-Martin French part economy Hurricane Irma\"",
+        "cepal.org, unctad.org, undp.org, un.org, imf.org, worldbank.org, oecd.org: \"\\\"Saint Martin\\\" French collectivity economy 2023 OR 2024 OR 2025\""
+      ],
+      "critic_changes": [],
+      "reason": "No tier 1 or tier 2 source from 2023 or later analyses the economy of St. Martin (French part). Recent IMF and World Bank work covers only Dutch Sint Maarten, and UN material on Hurricane Irma dates from 2017-18."
+    }
+  }
+}

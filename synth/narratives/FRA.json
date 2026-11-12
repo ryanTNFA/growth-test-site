@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "iso3": "FRA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "FRA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"France Article IV 2025 IMF staff concluding statement growth fiscal deficit\"",
+        "tier 1 domains: \"OECD Economic Surveys France 2024 2025 productivity growth\" (OECD survey pages returned HTTP 403, not cited)",
+        "imf.org, worldbank.org, oecd.org: \"France productivity slowdown since global financial crisis IMF selected issues\"",
+        "critic: opened all 7 cited imf.org URLs (3 PDFs read as extracted text)"
+      ],
+      "critic_changes": [
+        "All 7 cited URLs opened (the three IMF PDFs read from extracted text); every quoted passage found on its page and every date matches the document. All numbers in the headline, arc, threads, since_last_year and tension match FRA.json (1.1 for 1990-2025, -3.3 in 2009, 0.5 for 2006-2015, 0.9 for 2016-2025, -7.7 in 2020, 6.5 in 2021, 0.6 in 2025, peak in 2025, slowing every year since 2021).",
+        "since_last_year: removed 'the IMF has cut its outlook'. Neither IMF page describes a downgrade. The cited projection compares 2026 with 2025 growth, so the text now says the IMF expects slower growth in 2026. Removed 'raised energy prices', which the quoted passages do not support. Added the 2026 concluding statement's passage on Middle East spillovers so the war claim is quoted.",
+        "Thread 'Deficits, politics and energy' renamed 'Deficits, politics and war'. Replaced 'a divided parliament has made fiscal plans and reforms harder to pass', which no cited passage supports, with the IMF's 2025 warning that political fragmentation could delay consolidation and reforms (new quote from the same 2025 statement). Replaced 'pushed up energy prices' with the quoted claim that the war raised inflation and dampened domestic demand.",
+        "Arc's last sentence: replaced 'large budget deficits' and 'an energy shock as the main drags on the pace' with 'budget slippages' and 'spillovers from the war in the Middle East as weighing on growth'. These match the cited wording and no longer rank causes.",
+        "Thread 'Productivity slowdown since the 2000s': replaced 'gains in output per worker', which the source does not say (it says TFP), with 'productivity gains'. Added quotes from the same 2015 report supporting 'as in many other rich economies' (TFP drop 'mirrored in many other advanced countries') and 'fast growth in the workforce at first hid part of this slowdown' (offset by dynamic labor force growth).",
+        "Thread 'Financial crisis scars': removed 'and the euro area crisis that followed', which the cited passages do not support. Extended the 2021 Selected Issues quote to include 'especially those riddled with excessive debt', which supports the 'heavily indebted' claim; it is now 24 words.",
+        "Thread 'Labour reforms and more jobs': added the 2024 statement's passage on pension and unemployment benefit reforms, which supports naming those reforms.",
+        "Thread 'Productivity drop after the pandemic': added two quotes from the 2025 Article IV staff report supporting the causes given (labor hoarding, survival of unproductive firms on crisis support) and the widening income gap with the US since the early 2000s; that claim was previously unquoted.",
+        "No banned phrases or recommendations found. Tier 1 stands with 5 distinct recent sources (2024 and 2025 concluding statements, 2025 Article IV report, 2026 concluding statement, 2026 Board press release)."
+      ]
+    },
+    "headline": "France's income per person has grown slowly but steadily since 1990 and hit a new high in 2025, as more people worked while productivity lagged.",
+    "arc": "Since 1990 France's income per person has grown slowly and steadily, at 1.1 percent a year on average over 1990-2025, with no lasting change in pace. The IMF traces a fall in the economy's growth potential back to the early 2000s, first from slower productivity gains and then from the scars of the 2008-09 financial crisis: income per person fell 3.3 percent in 2009, and growth averaged only 0.5 percent a year over 2006-2015. Over 2016-2025 the pace picked up to 0.9 percent a year, even with a 7.7 percent fall in 2020 during the pandemic and a 6.5 percent rebound in 2021, and the IMF credits labour and benefit reforms with lifting employment. Income per person reached its highest level yet in 2025, but growth has slowed each year since 2021, to 0.6 percent in 2025. Recent IMF reports point to weak productivity since the pandemic, budget slippages, political uncertainty and, in 2026, spillovers from the war in the Middle East as weighing on growth.",
+    "threads": [
+      {
+        "title": "Productivity slowdown since the 2000s",
+        "text": "The IMF dates the slowdown in France's growth potential to the early 2000s, when productivity gains began to shrink, as in many other rich economies. Fast growth in the workforce at first hid part of this slowdown.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15178.pdf",
+            "publisher": "IMF",
+            "title": "France: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 15/178)",
+            "date": "2015-07",
+            "quote": "Potential growth has declined significantly since the early 2000s, driven initially by a sustained decline in TFP and thereafter by crisis legacies."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15178.pdf",
+            "publisher": "IMF",
+            "title": "France: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 15/178)",
+            "date": "2015-07",
+            "quote": "The drop in TFP growth, mirrored in many other advanced countries, may be related to lower growth returns from ICT"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15178.pdf",
+            "publisher": "IMF",
+            "title": "France: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 15/178)",
+            "date": "2015-07",
+            "quote": "In France, this decline was initially partly offset by higher potential employment growth related to dynamic labor force growth."
+          }
+        ]
+      },
+      {
+        "title": "Financial crisis scars",
+        "text": "The 2008-09 crisis left a long slow patch, with growth of 0.5 percent a year over 2006-2015. The IMF links it to weak investment, rising unemployment and productivity losses inside existing firms, especially heavily indebted ones.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15178.pdf",
+            "publisher": "IMF",
+            "title": "France: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 15/178)",
+            "date": "2015-07",
+            "quote": "During the crisis years, potential growth collapsed to less than 1 percent, reflecting a prolonged slowdown in investment and a rise in structural unemployment."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2021/english/1fraea2021002.pdf",
+            "publisher": "IMF",
+            "title": "France: Selected Issues (IMF Country Report No. 21/16)",
+            "date": "2021-01",
+            "quote": "“cleansing” effects of the crisis on aggregate productivity was dampened by internal productivity losses of continuing firms and especially those riddled with excessive debt"
+          }
+        ]
+      },
+      {
+        "title": "Labour reforms and more jobs",
+        "text": "Reforms to pensions, unemployment benefits and job programmes raised employment above its pre-pandemic trend, the IMF says. Strong state support also softened the blow of the pandemic and the energy crisis, and income per person grew faster in 2016-2025 than in the decade before.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/23/france-2024-mission-concluding-statement",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-05-23",
+            "quote": "Recent labor programs and reforms have increased employment above its pre-pandemic trend and supported real GDP growth."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/23/france-2024-mission-concluding-statement",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-05-23",
+            "quote": "Pension and unemployment benefit reforms are supporting labor force participation by increasing work incentives."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/05/23/france-2024-mission-concluding-statement",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-05-23",
+            "quote": "A strong and timely policy response cushioned the impact of the pandemic and the energy crisis"
+          }
+        ]
+      },
+      {
+        "title": "Productivity drop after the pandemic",
+        "text": "Since the pandemic, output per worker has fallen, partly because firms kept staff and weak firms survived on crisis support, and partly for lasting reasons. The IMF notes the income gap with the United States has widened since the early 2000s.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1fraea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "France: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 25/179)",
+            "date": "2025-07",
+            "quote": "In the recent post-pandemic era, France’s labor productivity has fallen significantly including relative to peers, despite some sectoral differences."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1fraea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "France: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 25/179)",
+            "date": "2025-07",
+            "quote": "This decline is partly due to temporary factors, such as labor hoarding or higher survival of unproductive firms due to crisis-related support measures"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1fraea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "France: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for France (IMF Country Report No. 25/179)",
+            "date": "2025-07",
+            "quote": "The per capita income gap between France and the US has increased since the early 2000s and now exceeds 20 percent"
+          }
+        ]
+      },
+      {
+        "title": "Deficits, politics and war",
+        "text": "Budget slippages in 2023 and 2024 weakened the public debt outlook, and the IMF warned in 2025 that political fragmentation could delay budget repair and reforms. In 2026, the IMF says, the war in the Middle East raised inflation and weighed on spending at home.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/22/cs-france-2025",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-22",
+            "quote": "Debt dynamics have weakened significantly after fiscal slippages in 2023 and 2024."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/22/cs-france-2025",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-22",
+            "quote": "Political fragmentation and social tensions could delay fiscal consolidation and reform efforts, raising fiscal risks."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/21/mcs-052126-france-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "France: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-05-21",
+            "quote": "Spillovers from the war in the Middle East are raising inflation and dampening domestic demand."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the IMF has come to expect slower growth in 2026, as spillovers from the war in the Middle East raise inflation and dampen demand at home. It also says political uncertainty ahead of the 2027 presidential election is delaying budget repair and reforms. In the data, growth in income per person slowed to 0.6 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/22/pr26255-france-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with France",
+          "date": "2026-07-22",
+          "quote": "Real GDP growth is projected to slow from 0.9 to 0.6 percent in 2026"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/21/mcs-052126-france-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "France: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-21",
+          "quote": "Spillovers from the war in the Middle East are raising inflation and dampening domestic demand."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/21/mcs-052126-france-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "France: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-05-21",
+          "quote": "Domestic political uncertainty ahead of 2027 presidential elections delaying fiscal consolidation and structural reforms."
+        }
+      ]
+    },
+    "tension": "The IMF says output per worker has fallen since the pandemic, yet income per person grew faster over 2016-2025 (0.9 percent a year) than over 2006-2015 (0.5) and reached a new high in 2025. The sources' own account suggests the gap is closed by more people working rather than by each worker producing more."
+  }
+}

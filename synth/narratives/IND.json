@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "iso3": "IND",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IND",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: India Article IV consultation 2025 staff report press release",
+        "worldbank.org (tier 1 list): India Development Update World Bank 2025 growth",
+        "imf.org/worldbank.org/oecd.org/adb.org: India 2019 Article IV growth slowdown nonbank financial sector",
+        "imf.org/worldbank.org/oecd.org/adb.org: India 1991 balance of payments crisis reforms growth",
+        "imf.org/worldbank.org/oecd.org/adb.org: India COVID-19 2020 lockdown contraction recovery",
+        "imf.org/worldbank.org/oecd.org/adb.org: India investment boom 2003-2008, slowdown 2011-2013, corporate debt",
+        "Critic re-opened: imf.org/external/pubs/nft/2001/crossrds/; imf.org WP/14/47 PDF (text extracted); imf.org PR 19/488; worldbank.org press release 2020-10-08; imf.org PR 25/392; worldbank.org press release 2025-02-28; thedocs.worldbank.org India Development Update April 2026 PDF (text extracted)"
+      ],
+      "critic_changes": [
+        "Checked every cited page. All seven URLs open on tier 1 domains (imf.org, worldbank.org), all quoted passages appear on the pages, and all dates match the documents.",
+        "IMF 2001 citation: the quote now starts with the page's own words ('the broad-ranging fiscal and structural reforms...') so it is an exact substring of the page.",
+        "IMF WP 14/47: the claim that the study 'gives most of the weight' to uncertainty, and the arc's 'tie mainly to', overstated the paper. The paper says real rates explain only a quarter of the downturn and that uncertainty and confidence 'played a key role'. Thread and arc reworded to match, and the quote was lengthened to the full clause from the abstract.",
+        "Arc, last sentence: dropped 'more private and public investment'. The World Bank passage gives domestic demand, low inflation, income tax and GST cuts and easier monetary conditions, not investment. The causes are now tied to the latest year the update covers, not stated for all of 2022 to 2025.",
+        "Arc: dropped 'In the 2000s' from a sentence that starts its numbers in 1990.",
+        "'Demand at home' thread: removed 'and the IMF' from the domestic-demand claim, because the IMF 2025 press release does not mention domestic demand. The IMF is now cited only for the GST reform cushioning the tariffs, which its passage supports.",
+        "'Credit squeeze' thread and arc: 'linked the slower spending to weak non-bank lenders' changed to say the weak lenders made the slowdown worse, matching 'exacerbated' in the IMF passage.",
+        "Labor thread: retitled from 'Few people in work' to 'Low labor force participation', because the passage measures participation, not employment. The 2047 sentence was reworded to describe the report's context.",
+        "Investment thread: 'by 2016 and 2017' changed to 'in 2016 and 2017'.",
+        "Numbers checked against desk/data/IND.json: 4.5 (G4 era mean), 537.9 to 2,523.4, -1.1 (1991), 5.4 (1995, 1996), 26.1 (1990) and 35.8 (2007) investment, 28.2 (2016, 2017), 2.8 (2019), -6.7 (2020), 8.8 (2021), 6.1 to 6.8 (2022 to 2025), 6.6 (2025), 4.9 and 5.3 (G1 avg_10y and avg_prior_10y). All match, and no number was changed.",
+        "No banned phrases or recommendation language found. There are 3 recent tier 1 sources (IMF 2025-11-26, World Bank 2025-02-28, World Bank 2026-04), so the story stays tier 1."
+      ]
+    },
+    "headline": "Income per person in India has grown about 4.5 percent a year since 1990, with no lasting shift through crisis, boom, credit squeeze and pandemic.",
+    "arc": "Since 1990, income per person in India has grown by an average of 4.5 percent a year with no lasting shift. The data show one long era rather than a boom and a bust, and income per person rose from about 538 dollars in 1990 to about 2,523 in 2025 (constant 2015 dollars), its highest level yet. The era opened with the 1991 balance of payments crisis, when income per person fell 1.1 percent; the IMF credits the fiscal and structural reforms that followed with a strong recovery. Investment rose from 26.1 percent of GDP in 1990 to 35.8 percent in 2007, then fell back after the global financial crisis, and IMF researchers found that policy uncertainty and weak business confidence played a key role in that slump. Growth dipped to 2.8 percent in 2019, a slowdown the IMF said weak non-bank lenders made worse, and the COVID-19 lockdown cut income per person by 6.7 percent in 2020 before an 8.8 percent rebound in 2021. From 2022 to 2025, growth stayed between 6.1 and 6.8 percent a year, and the World Bank puts the latest gains down to strong demand at home, helped by low inflation and cuts to income tax and GST.",
+    "threads": [
+      {
+        "title": "The 1991 crisis and reforms",
+        "about": "history",
+        "text": "In 1991 India ran short of foreign currency, and income per person fell 1.1 percent. The IMF credits the fiscal and structural reforms that followed for the recovery, and growth in income per person reached 5.4 percent in 1995 and 1996.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/nft/2001/crossrds/",
+            "publisher": "IMF",
+            "title": "India at the Crossroads: Sustaining Growth and Reducing Poverty",
+            "date": "2001-02-15",
+            "quote": "the broad-ranging fiscal and structural reforms undertaken following the 1991 balance of payments crisis"
+          }
+        ]
+      },
+      {
+        "title": "Investment boom, then slump",
+        "about": "history",
+        "text": "Investment climbed from 26.1 percent of GDP in 1990 to a peak of 35.8 percent in 2007. After the global financial crisis it slid to 28.2 percent in 2016 and 2017. An IMF study found that real interest rates explain only part of the slump, and that uncertainty about policy and weak business confidence played a key role.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/wp/2014/wp1447.pdf",
+            "publisher": "IMF",
+            "title": "Disentangling India's Investment Slowdown (Working Paper 14/47)",
+            "date": "2014-03",
+            "quote": "the results suggest that heightened uncertainty and deteriorating business confidence have played a key role in the recent investment slowdown"
+          }
+        ]
+      },
+      {
+        "title": "Credit squeeze, then pandemic",
+        "about": "history",
+        "text": "Growth in income per person fell to 2.8 percent in 2019, and the IMF said weak non-bank lenders made the slowdown in spending worse. The national lockdown in 2020 then cut income per person by 6.7 percent, before an 8.8 percent rebound in 2021.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2019/12/23/pr19488-india-imf-executive-board-concludes-2019-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2019 Article IV Consultation with India",
+            "date": "2019-12-23",
+            "quote": "The deceleration of consumption and investment was exacerbated by weaknesses in the non-bank financial sector"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2020/10/08/india-needs-to-sustain-reforms-to-stem-economic-slowdown",
+            "publisher": "World Bank",
+            "title": "India Needs to Sustain Reforms to Stem Economic Slowdown",
+            "date": "2020-10-08",
+            "quote": "The government implemented a national lockdown to contain the health emergency."
+          }
+        ]
+      },
+      {
+        "title": "Demand at home carries growth",
+        "about": "present",
+        "text": "Growth in income per person reached 6.6 percent in 2025, even though the United States raised tariffs on Indian goods. The World Bank points to demand at home, helped by low inflation and cuts to income tax and GST. The IMF expected the GST reform, which lowered the effective tax rate, to help cushion the tariffs.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/4262e1e15b463ecb360cec4ad78cf062-0310012026/original/April-2026-India-Development-Update.pdf",
+            "publisher": "World Bank",
+            "title": "India Development Update",
+            "date": "2026-04",
+            "quote": "Growth accelerated to 7.6 percent in FY26, up from 7.1 percent in FY25, reflecting robust domestic demand supported by low inflation"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/24/pr-25392-india-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with India",
+            "date": "2025-11-26",
+            "quote": "GST reform: reform and resulting reduction in the effective rate expected to help cushion adverse impact of tariffs."
+          }
+        ]
+      },
+      {
+        "title": "Low labor force participation",
+        "about": "present",
+        "text": "The World Bank reports that a low share of working-age people in India are in the labor force. It notes this in a report on the faster growth India aims for to reach high-income status by 2047.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/02/28/india-accelerated-reforms-needed-to-speed-up-growth-and-achieve-high-income-status-by-2047",
+            "publisher": "World Bank",
+            "title": "India: Accelerated Reforms Needed to Speed up Growth and Achieve High-Income Status by 2047",
+            "date": "2025-02-28",
+            "quote": "Overall labor force participation rates have remained low in India (56.4 percent)"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The United States raised tariffs on Indian goods in August 2025, and a GST reform cut the effective tax rate. In February 2026 India moved its GDP figures to a new base year, which lowered the measured size of the economy. The World Bank now expects the conflict in the Middle East to slow growth in the year to March 2027.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/4262e1e15b463ecb360cec4ad78cf062-0310012026/original/April-2026-India-Development-Update.pdf",
+          "publisher": "World Bank",
+          "title": "India Development Update",
+          "date": "2026-04",
+          "quote": "In FY27, growth is projected at 6.6 percent, reflecting headwinds from the Middle East conflict."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/4262e1e15b463ecb360cec4ad78cf062-0310012026/original/April-2026-India-Development-Update.pdf",
+          "publisher": "World Bank",
+          "title": "India Development Update",
+          "date": "2026-04",
+          "quote": "This process led to a downward revision of nominal GDP levels, reflecting a reassessment of the size of the informal economy."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/11/24/pr-25392-india-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with India",
+          "date": "2025-11-26",
+          "quote": "Baseline assumption: prolonged 50 percent U.S. tariffs."
+        }
+      ]
+    },
+    "tension": "The sources call India the fastest-growing major economy and describe growth as speeding up. In the data, though, income per person grew 4.9 percent a year over 2016 to 2025, a little slower than the 5.3 percent of 2006 to 2015, because of the 2019 dip and the 2020 fall. The growth rates the sources quote are for total output, which runs ahead of income per person because the population also grew. The February 2026 rebasing also changed the official GDP figures, so the levels in this data may later be revised."
+  }
+}

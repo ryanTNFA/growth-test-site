@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "ATG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ATG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Antigua and Barbuda Article IV consultation 2024 2025 IMF\"",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Antigua and Barbuda economic review tourism growth Caribbean Development Bank\"",
+        "imf.org: \"Antigua and Barbuda 2026 Article IV consultation press release growth tourism\"",
+        "imf.org, worldbank.org, caribank.org, iadb.org: \"Antigua and Barbuda Stand-By Arrangement 2010 global crisis tourism decline Stanford\"",
+        "imf.org, worldbank.org, caribank.org: \"Antigua and Barbuda Hurricane Irma Barbuda damage growth 2018 Article IV\""
+      ],
+      "critic_changes": [
+        "All cited URLs opened (the two IMF PDFs read in full by extracting their text). Every quote, title and date was found on its page as given. All numbers in the headline, arc, threads, since_last_year and tension match desk/data/ATG.json: 1.9, 4.0, -3.0, 2.1, 11.3, -13.3, -9.1, -19.3, 7.6, 7.9 (2022 growth), 7.9 percent below the 2007 peak, level first reached in 2006, 4.5 for 2025. Income per person in 2024 (18,305) is below 2019 (18,525), and 2025 (19,130) is above it, so the tension holds.",
+        "Tourism sets the pace: extended the 2025 IMF press release quote to its exact wording, 'with growth estimated at 4.3 percent, driven by strong tourism and one-off events'. The shorter fragment did not support the claim that tourism drove the 2024 recovery.",
+        "Building boom before 2008: added two quotes from the same 2007 IMF report, on the hotel and housing construction boom and on growth cooling as the boom wound down. Before this, the text's 'hotel and housing' and 'growth then slowed' had no supporting quote. Reworded the second sentence to say the IMF expected growth to cool, and added 7.8 percent for 2007 from the series.",
+        "Crisis hits tourism hard: replaced the 2013 IMF Public Information Notice citation with a passage from the 2012 Article IV staff report on the US and UK markets. The text's claim about American and British visitors had no supporting quote. The notice's quote was accurate but did not add support, and a thread can carry only three citations.",
+        "Debt crisis and repair: extended the 2012 staff report quote to the exact sentence, 'The program was requested in response to...'. This ties the debt crisis to the 2010 IMF program the text names.",
+        "Arc: small wording changes so it matches the sources (a 'building boom in hotels and housing', a 'looming' debt crisis). No numbers changed.",
+        "tier1_recent_found: changed from 4 to 3. Only three distinct recent tier 1 sources could be verified: the 2025 IMF press release, the 2026 IMF press release and the 2026 IMF staff concluding statement. Tier 1 stays, since there are at least 2 recent sources and 5 threads survive.",
+        "No recommendation, verdict language or banned phrases were found."
+      ]
+    },
+    "headline": "Antigua and Barbuda's income per person has climbed back since 2016 on tourism and building, yet in 2025 it was still below its 2007 peak.",
+    "arc": "In the 1990s income per person grew 1.9 percent a year, and the sources opened say little about that decade. From 2000 to 2007 growth rose to 4.0 percent a year, with 11.3 percent in 2006, as a building boom in hotels and housing and work for the 2007 Cricket World Cup drove the fastest growth in decades. From 2008 to 2015 income per person shrank 3.0 percent a year: the global crisis hit the visitors the island depends on, the Stanford business group collapsed, and a looming debt crisis led the government to an IMF program in 2010. Since 2016 growth has averaged 2.1 percent a year, led by tourism and construction, though the pandemic cut income per person by 19.3 percent in 2020 before rebounds of 7.6 and 7.9 percent in 2021 and 2022. Even so, income per person in 2025 was 7.9 percent below its 2007 peak and about where it first was in 2006.",
+    "threads": [
+      {
+        "title": "Tourism sets the pace",
+        "text": "Tourism is the island's main business, so growth rises and falls with visitor numbers. Tourism drove the recovery that took output past its pre-pandemic level in 2024. When tourism slowed in 2025, construction carried growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1376.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Report for the 2012 Article IV Consultation",
+            "date": "2013-03",
+            "quote": "Tourism drives 60–70 percent of economic activity in Antigua and Barbuda, and its slowdown has hit the economy hard."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/03/17/pr25067-antigua-and-barbuda-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Antigua and Barbuda",
+            "date": "2025-03-17",
+            "quote": "Real output in 2024 is estimated to have surpassed pre-pandemic levels, with growth estimated at 4.3 percent, driven by strong tourism and one-off events"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/07/pr26142-antigua-and-barbuda-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Antigua and Barbuda",
+            "date": "2026-05-07",
+            "quote": "Real GDP grew by an estimated 3 percent in 2025, supported by a pick-up in construction despite slowing tourism activity"
+          }
+        ]
+      },
+      {
+        "title": "Building boom before 2008",
+        "text": "A building boom in hotels and housing, and work for the 2007 Cricket World Cup, lifted growth in income per person to 11.3 percent in 2006. The IMF expected growth to cool as the boom wound down, and in 2007 it slowed to 7.8 percent.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr07238.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: 2006 Article IV Consultation—Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Authorities of Antigua and Barbuda",
+            "date": "2007-07",
+            "quote": "Antigua and Barbuda is experiencing its fastest growth in decades, led by private investment and preparations for the 2007 Cricket World Cup."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr07238.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: 2006 Article IV Consultation—Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Authorities of Antigua and Barbuda",
+            "date": "2007-07",
+            "quote": "driven by a construction boom in hotels and housing, as well as projects related to the 2007 Cricket World Cup"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2007/cr07238.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: 2006 Article IV Consultation—Staff Report; Staff Statement; Public Information Notice on the Executive Board Discussion; and Statement by the Authorities of Antigua and Barbuda",
+            "date": "2007-07",
+            "quote": "GDP growth will likely cool in 2007−08 as the construction boom winds down"
+          }
+        ]
+      },
+      {
+        "title": "Crisis hits tourism hard",
+        "text": "The global crisis hit the American and British visitors the island relies on, and the collapse of the Stanford business group may have deepened the blow. The IMF judged that most of the fall in output from 2009 to 2011 came from tourism. Income per person fell 13.3 percent in 2009 and 9.1 percent in 2010.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1376.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Report for the 2012 Article IV Consultation",
+            "date": "2013-03",
+            "quote": "the two largest tourism source markets (the US and the UK) were severely impacted by the global crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1376.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Report for the 2012 Article IV Consultation",
+            "date": "2013-03",
+            "quote": "the collapse of the Stanford business group may have contributed to the severity of the tourism shock faced by the island"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1376.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Report for the 2012 Article IV Consultation",
+            "date": "2013-03",
+            "quote": "about three-quarters of the economic contraction in Antigua and Barbuda from 2009–11 is estimated to have come from the slowdown of tourism related subsectors"
+          }
+        ]
+      },
+      {
+        "title": "Debt crisis and repair",
+        "text": "Large deficits and fast-rising debt before the global crisis led the government to an IMF program in 2010. Public debt has fallen a long way since 2020.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1376.pdf",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Report for the 2012 Article IV Consultation",
+            "date": "2013-03",
+            "quote": "The program was requested in response to a looming fiscal crisis precipitated by large fiscal deficits and a rapid increase in debt"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/07/pr26142-antigua-and-barbuda-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Antigua and Barbuda",
+            "date": "2026-05-07",
+            "quote": "Public debt as a share of GDP declined from 101 percent of GDP in 2020 to an estimated 68 percent in 2025."
+          }
+        ]
+      },
+      {
+        "title": "Citizenship sales and building",
+        "text": "Money from selling citizenship helped the public finances in 2025. That year building work picked up and drew in more imports while tourist arrivals flattened. The IMF notes that these citizenship inflows face risk after recent US travel policy announcements.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/07/pr26142-antigua-and-barbuda-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Antigua and Barbuda",
+            "date": "2026-05-07",
+            "quote": "stronger inflows under the Citizenship-by-Investment Program (CIP)"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/02/mcs-02022026-antigua-and-barbuda-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-02-03",
+            "quote": "increased construction-related imports and flattening tourist arrivals"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/02/mcs-02022026-antigua-and-barbuda-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Antigua and Barbuda: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-02-03",
+            "quote": "CIP-related inflows subject to downside risks after recent U.S. travel policy announcements"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In May 2026 the IMF reported that construction picked up in 2025 while tourism slowed. In February 2026 it flagged that money from selling citizenship faces risk after US travel policy announcements. In the data, income per person grew 4.5 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/07/pr26142-antigua-and-barbuda-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Antigua and Barbuda",
+          "date": "2026-05-07",
+          "quote": "Real GDP grew by an estimated 3 percent in 2025, supported by a pick-up in construction despite slowing tourism activity"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/02/mcs-02022026-antigua-and-barbuda-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Antigua and Barbuda: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-02-03",
+          "quote": "CIP-related inflows subject to downside risks after recent U.S. travel policy announcements"
+        }
+      ]
+    },
+    "tension": "The IMF says total output passed its pre-pandemic level in 2024, but in the data income per person stayed below its 2019 level until 2025. For 2025 the data show income per person growing 4.5 percent, faster than the IMF's May 2026 estimate for growth of the whole economy."
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "NZL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NZL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org (tier 1): New Zealand Article IV 2025 staff concluding statement recession productivity",
+        "oecd.org (tier 1): OECD Economic Survey New Zealand 2024 productivity growth",
+        "tier 1 domains: New Zealand economic reforms 1984 1990s recession growth lessons",
+        "tier 1 domains: New Zealand GDP per capita declined population growth net migration 2023 2024 recession",
+        "Opened: imf.org 2026 Article IV concluding statement (2026-06-30)",
+        "Opened: imf.org 2025 Article IV concluding statement (2025-03-11)",
+        "Opened: imf.org 2024 Article IV concluding statement (2024-03-19)",
+        "Opened: imf.org Country Report 04/127, New Zealand: Selected Issues (2004-05)",
+        "Opened: oecd.org OECD Economic Surveys: New Zealand 2026 PDF (2026-05)",
+        "Opened: oecd.org OECD Economic Surveys: New Zealand 2024 PDF (2024-05)",
+        "Blocked (403): oecd.org HTML chapter pages; elibrary.imf.org 2000 article",
+        "Critic check: reopened every cited URL; read the IMF 04/127 and both OECD PDFs as extracted full text"
+      ],
+      "critic_changes": [
+        "Slow productivity growth thread: the OECD 2026 quote 'Even as the recovery gathers pace, underlying growth prospects remain modest, held back by weak investment, high energy costs and persistent productivity gaps' could not be found in the cited OECD 2026 PDF; replaced it with a passage from that PDF that lists the factors weighing on investment and productivity, including high energy costs, and rewrote the thread text to match what the three passages say (dropped 'weak investment' as a joint OECD/IMF claim).",
+        "Post-pandemic thread: the cited passages did not support 'grew faster than it could supply'; added the OECD 2024 passage 'the rapid expansion outran capacity', which does, and said 'after the 2020 dip' instead of 'after 2020'.",
+        "Reforms thread: the text's claims that the reform years had slower growth and that income per person had not caught up with richer OECD countries had no supporting passage; added two passages from the same IMF 2004 report and changed 'weak growth' to 'slow growth' to match the source's comparison.",
+        "since_last_year: 'lower interest rates and strong prices for farm exports' and 'raised fuel costs' went beyond the cited passages; reworded to 'easing debt costs and strong commodity prices' and 'delayed that recovery', and added the IMF 2026 passage on the late-2025 recovery.",
+        "Checked all other citations against the opened pages (IMF 2026 and 2024 concluding statements, IMF Country Report 04/127, OECD Surveys 2024 and 2026): the quotes, dates and domains are correct.",
+        "Checked every number against desk/data/NZL.json: 1.3 (1990-2025 era), -5.8 (1991), 5.2 (1993), declines in 2008-09, 1.0 (avg_prior_10y 0.97) and 0.7, -2.2 (2020), 4.0 and 3.4 (2021-22), declines in 2023-25, -0.2 (2025), 3.2 percent below the 2022 peak, level first reached in 2019. All match; no changes needed.",
+        "Found no recommendation, verdict or banned phrase."
+      ]
+    },
+    "headline": "New Zealand's income per person has grown slowly but steadily since 1990; a post-pandemic slump has left it 3.2 percent below its 2022 peak.",
+    "arc": "Since 1990 the data show one long era: income per person grew about 1.3 percent a year over 1990-2025, with no lasting shift up or down. The era opened with a deep fall in 1991 (-5.8 percent), after reforms that began in the mid-1980s, and a strong rebound from 1993 (5.2 percent); IMF staff later described growth in the decade after 1993 as much improved. Growth then cooled: income per person fell in 2008 and 2009, the OECD notes that productivity has slowed since that crisis, and the average dropped from 1.0 percent a year over 2006-2015 to 0.7 over 2016-2025. After a dip in 2020 (-2.2 percent) the economy bounced back in 2021 and 2022 (4.0 and 3.4 percent), and the OECD says this expansion outran capacity and pushed up inflation. Sharp interest-rate rises then slowed the economy while record migration lifted the population, so income per person fell three years running, from 2023 to 2025. In 2025 it was 3.2 percent below its 2022 peak and about where it first was in 2019.",
+    "threads": [
+      {
+        "title": "Reforms and the 1990s rebound",
+        "about": "history",
+        "text": "Wide reforms from the mid-1980s came with slow growth, and income per person fell 5.8 percent in 1991 before rising 5.2 percent in 1993. IMF staff found that growth improved markedly in the decade after 1993, yet income per person still had not caught up with richer OECD countries.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04127.pdf",
+            "publisher": "IMF",
+            "title": "New Zealand: Selected Issues (IMF Country Report No. 04/127)",
+            "date": "2004-05",
+            "quote": "the economy’s growth performance has significantly improved, with New Zealand’s real GDP growing at a 3.6 percent annual rate between 1993 and 2002"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04127.pdf",
+            "publisher": "IMF",
+            "title": "New Zealand: Selected Issues (IMF Country Report No. 04/127)",
+            "date": "2004-05",
+            "quote": "This is significantly better than New Zealand’s 1.6 percent a year GDP growth during the reform period (1984–1992)"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2004/cr04127.pdf",
+            "publisher": "IMF",
+            "title": "New Zealand: Selected Issues (IMF Country Report No. 04/127)",
+            "date": "2004-05",
+            "quote": "why per capita GDP in New Zealand has not caught up faster with the rest of the OECD countries"
+          }
+        ]
+      },
+      {
+        "title": "Slow productivity growth",
+        "about": "present",
+        "text": "The OECD dates a slowdown in productivity to the 2008 global financial crisis, and labour productivity remains weak next to other rich countries. The OECD lists a small home market, shallow capital markets, distance and high energy costs among the things weighing on investment and productivity, and the IMF points to low capital per worker and limited innovation.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/oecd-economic-surveys-new-zealand-2024_42678d02/603809f2-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2024",
+            "date": "2024-05",
+            "quote": "productivity has slowed in New Zealand since the 2008 Global Financial Crisis and labour productivity remains weak compared to other OECD countries"
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/05/oecd-economic-surveys-new-zealand-2026_27daa8d8/3ec5de98-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2026",
+            "date": "2026-05",
+            "quote": "investment in key sectors and productivity performance, including a small domestic market, shallow capital markets, geographic remoteness, declining education outcomes, high energy costs"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/30/cs-06302026-new-zealand-concluding-statement-of-the-2026-aiv-consultation-mission",
+            "publisher": "IMF",
+            "title": "New Zealand: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-06-30",
+            "quote": "Weak labor productivity growth, low capital intensity, limited innovation"
+          }
+        ]
+      },
+      {
+        "title": "Post-pandemic boom, then tightening",
+        "about": "present",
+        "text": "After the 2020 dip the economy bounced back faster than it could supply, and inflation rose. The central bank raised interest rates quickly, and investment and spending slowed, which lines up with income per person falling from 2023.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/oecd-economic-surveys-new-zealand-2024_42678d02/603809f2-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2024",
+            "date": "2024-05",
+            "quote": "The New Zealand economy bounced back quickly following the Covid-19 recession, but the rapid expansion outran capacity."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/oecd-economic-surveys-new-zealand-2024_42678d02/603809f2-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2024",
+            "date": "2024-05",
+            "quote": "This rapid tightening of monetary policy, declining household real incomes, along with a cooling of global growth and international merchandise trade, slowed growth"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/03/19/mcs-new-zealand-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "New Zealand: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03-19",
+            "quote": "Economic activity slowed following monetary policy tightening and a decline in investment."
+          }
+        ]
+      },
+      {
+        "title": "Migration and income per person",
+        "about": "present",
+        "text": "Record migration in 2023 kept total output growing while income per person fell, because the population grew faster than the economy. Net migration then dropped sharply from its late-2023 peak, slowing growth in the number of workers.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/oecd-economic-surveys-new-zealand-2024_42678d02/603809f2-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2024",
+            "date": "2024-05",
+            "quote": "However, the economy has not grown as fast as the population, and GDP per capita fell 3.1% in the year to December 2023."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/03/19/mcs-new-zealand-staff-concluding-statement-of-the-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "New Zealand: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-03-19",
+            "quote": "Record net migration in 2023 helped address supply-side bottlenecks and labor shortages."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/05/oecd-economic-surveys-new-zealand-2026_27daa8d8/3ec5de98-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: New Zealand 2026",
+            "date": "2026-05",
+            "quote": "A sharp drop in net inward migration from its earlier peak in late 2023 reduced labour supply growth"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Easing debt costs and strong commodity prices helped the economy begin to recover in late 2025, after more than two years of weak growth. In 2026 a jump in oil prices delayed that recovery, and the OECD finds New Zealand lagging other rich countries.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/30/cs-06302026-new-zealand-concluding-statement-of-the-2026-aiv-consultation-mission",
+          "publisher": "IMF",
+          "title": "New Zealand: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-30",
+          "quote": "The economy had begun to recover in late 2025, supported by easing debt-service costs and strong commodity prices."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/30/cs-06302026-new-zealand-concluding-statement-of-the-2026-aiv-consultation-mission",
+          "publisher": "IMF",
+          "title": "New Zealand: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-30",
+          "quote": "New Zealand’s economic recovery is being delayed by the oil price shock and elevated uncertainty"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/05/oecd-economic-surveys-new-zealand-2026_27daa8d8/3ec5de98-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: New Zealand 2026",
+          "date": "2026-05",
+          "quote": "After overheating and then more than two years of rebalancing, the economy has entered a gradual recovery but is lagging peer OECD countries"
+        }
+      ]
+    },
+    "tension": "The sources describe a recovery under way from late 2025, but the data show income per person still slipping in 2025 (-0.2 percent), 3.2 percent below its 2022 peak. In 2023 the sources stress that migration kept total output growing, while income per person fell. The two can both be true because the population grew faster than the economy."
+  }
+}

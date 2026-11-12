@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "ISL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ISL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Iceland Article IV 2025 staff concluding statement IMF'",
+        "same tier 1 domains: 'OECD Economic Survey Iceland 2025' (OECD pages returned HTTP 403, not used)",
+        "same tier 1 domains: 'Iceland banking collapse 2008 recovery tourism boom IMF capital controls lifted'",
+        "imf.org, worldbank.org, oecd.org: 'Iceland 2026 Article IV press release Executive Board Play airline aluminium'",
+        "Opened: imf.org 2026 Article IV staff report (CR 26/208), 2026 press release PR26/263, 2026 and 2025 staff concluding statements, 2015 IMF Survey on recovery, 2008 IMF Survey on the crisis",
+        "Critic check: re-opened every cited URL on imf.org (2008 IMF Survey, 2015 IMF Survey, 2025 staff concluding statement, CR 26/208 PDF read in full text)",
+        "Tier 2 not searched: tier 1 gave enough recent sources"
+      ],
+      "critic_changes": [
+        "Tension: removed the IMF figures 0.9 percent (income per person growth) and 2.8 percent (output growth). Neither is in desk/data/ISL.json, and the tension field has no citation for them to sit in. The point is now made in words, and it rests on the verified CR 26/208 passages already cited in the tourism thread.",
+        "All citations to IMF Country Report No. 26/208: date changed from 2026-07-10 to 2026-07. 10 July 2026 is the date the staff report was completed. The cover shows July 2026 and the press release inside is dated 30 July 2026, so the month is the precise date the document supports for publication.",
+        "Since_last_year: dropped the data centers and fishing-season claims, because no cited quote supported them. Added a verified CR 26/208 quote ('Economic activity recovered in 2025...') to support 'output grew again in 2025'. Softened 'because the population kept growing' to 'as the population kept growing'.",
+        "Tourism thread: 'led the recovery' softened to 'helped the recovery'. The 2015 IMF Survey lists booming tourism since 2010 as one factor, not the leading one.",
+        "Slower productivity thread: 'wages' made 'real wages' to match the cited passage. The 2025 concluding-statement quote was lengthened to the page's own words ('a lower share of jobs in high productivity sectors (financial sector shrinkage and tourism expansion)') so that it supports the claim that jobs shifted.",
+        "Pandemic thread: the first quote was lengthened to 'in 2022-2024, with the surge in tourism following the pandemic' to match the page.",
+        "Verified unchanged: every other quote appears on its page (the 2008 and 2015 IMF Surveys, the 2025 concluding statement and the CR 26/208 PDF text), and the 2008-12-02, 2015-03-13 and 2025-05-06 dates are correct. All numbers in the headline, arc and threads match the data file: eras 0.5/3.7/0.4; credit 61.4 (1998) and 301.0 (2006); -8.6 (2009); -2.1 (2010); 2016 as the first year back above the 2007 level; -8.1 (2020); 6.2 (2022); 4.0 (2023); CPI 8.3 and 8.7; -0.2 (2025); 1.7 percent below the 2023 peak; 1.0 percent over 2016-2025, ranked 11 of 11.",
+        "No recommendation language or banned phrases were found. tier1_recent_found was left at the draft's 4 because it rests on pages the drafter opened; 2 distinct recent tier 1 sources are cited and verified here (the 2025 concluding statement and CR 26/208)."
+      ]
+    },
+    "headline": "Iceland's bank boom ended in the 2008 crash; tourism and workers from abroad then lifted output, but income per person has grown slowly since.",
+    "arc": "From 1990 to 1997 income per person grew 0.5 percent a year, with falls in 1991 and 1992 that the sources gathered here do not explain. From 1998 to 2007 growth ran at 3.7 percent a year while the newly private banks grew far larger than the economy, and credit to the private sector rose from 61.4 percent of GDP in 1998 to 301.0 percent in 2006. The three big banks collapsed in 2008, income per person fell 8.6 percent in 2009, and it did not get back to its 2007 level until 2016. Recovery after that rested on a tourism boom and on workers arriving from abroad, so total output grew faster than income per person, and growth from 2008 to 2025 averaged only 0.4 percent a year, including a fall of 8.1 percent in the pandemic year 2020. Income per person bounced back to a peak in 2023, then fell in 2024 and 2025 amid high inflation, tight policy and one-off shocks, and in 2025 it was 1.7 percent below that peak.",
+    "threads": [
+      {
+        "title": "Bank boom and crash",
+        "about": "history",
+        "text": "After the banks were privatized, their assets grew to many times the size of the economy, and credit to the private sector reached 301.0 percent of GDP in 2006. Within a week in 2008 the three main banks failed; income per person fell 8.6 percent in 2009 and fell again in 2010, and years of repairing balance sheets followed.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/soint111908a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Iceland Gets Help to Recover From Historic Crisis",
+            "date": "2008-12-02",
+            "quote": "bank assets rose from being worth slightly more than 100 percent of GDP to being worth close to 1,000 percent of GDP"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/soint111908a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Iceland Gets Help to Recover From Historic Crisis",
+            "date": "2008-12-02",
+            "quote": "Within a week the three banks collapsed."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "the credit boom leading up to the 2008 crisis and the years of balance sheet repair that followed"
+          }
+        ]
+      },
+      {
+        "title": "Tourism and workers from abroad",
+        "about": "present",
+        "text": "A tourism boom from 2010 helped the recovery from the crash. Over the last decade output has grown mainly through tourism and the workers from abroad it drew in, and both that boom and the flow of workers are now fading.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/socar031315a",
+            "publisher": "IMF",
+            "title": "IMF Survey : Iceland Makes Strong Recovery from 2008 Financial Crisis",
+            "date": "2015-03-13",
+            "quote": "Booming tourism industry since 2010"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "GDP growth over the last decade has been driven largely by the expansion of tourism and associated foreign-labor inflows."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "weaker labor inflows amid the waning tourism boom"
+          }
+        ]
+      },
+      {
+        "title": "Slower productivity since 2008",
+        "about": "present",
+        "text": "Output per worker has grown more slowly since the 2008 crisis, partly because jobs moved out of high-productivity finance and into tourism. In 2025 real wages rose faster than productivity.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/05/mcs-iceland-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Iceland: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-06",
+            "quote": "productivity growth has slowed since the global financial crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/05/mcs-iceland-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Iceland: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-06",
+            "quote": "a lower share of jobs in high productivity sectors (financial sector shrinkage and tourism expansion)"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "As a result, real wage growth jumped to 3.7 percent, outpacing productivity growth."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic swing, then inflation",
+        "about": "present",
+        "text": "Income per person fell 8.1 percent in 2020, then rose 6.2 percent in 2022 and 4.0 percent in 2023 as tourists came back. Prices rose 8.3 percent in 2022 and 8.7 percent in 2023, and growth has slowed sharply since mid-2023 under tight policy and one-off shocks.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "in 2022-2024, with the surge in tourism following the pandemic"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+            "date": "2026-07",
+            "quote": "Since mid-2023, growth has slowed sharply amid tight macroeconomic policies and idiosyncratic shocks."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Output grew again in 2025, but exports were held back by one-off shocks, among them the collapse of the airline Play and disruptions to aluminum production. Income per person still fell 0.2 percent in 2025, as the population kept growing.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+          "date": "2026-07",
+          "quote": "Economic activity recovered in 2025, with GDP expanding by 1.3 percent after a 1.3 percent contraction in 2024."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+          "date": "2026-07",
+          "quote": "exports remained subdued in 2025 partly due to a series of idiosyncratic shocks, including the bankruptcy of Play Airlines, disruptions to aluminum production"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1islea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Iceland: 2026 Article IV Consultation-Press Release; and Staff Report (IMF Country Report No. 26/208)",
+          "date": "2026-07",
+          "quote": "The contraction of the labor force despite continued population growth provides further evidence of labor market slack."
+        }
+      ]
+    },
+    "tension": "The IMF describes a decade of output growth among the highest in advanced economies, driven by tourism and construction, but in the data income per person grew only 1.0 percent a year over 2016 to 2025, last among its 11 structural peers. The gap is the population: output grew mostly through more workers, many from abroad, rather than through more output per person, and the IMF itself says gains in living standards have been more modest than output growth."
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "iso3": "VUT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "VUT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: Vanuatu Article IV consultation 2025 staff report",
+        "imf.org, worldbank.org, adb.org (tier 1 list): Vanuatu economic outlook 2025 earthquake growth",
+        "tier 1 list: Vanuatu COVID-19 border closure tourism collapse Cyclone Harold 2020",
+        "tier 1 list: Vanuatu Cyclone Pam 2015 economic impact growth tourism construction boom 2000s",
+        "imf.org, worldbank.org, adb.org: Vanuatu Article IV 2009 strong growth since 2003 tourism construction aid-financed",
+        "opened: imf.org 2025 Article IV staff report PDF, 2025 Board press release, July 2025 mission press release, 2021 mission press release, 2015 financial support press release",
+        "opened: adb.org ADO April 2026 Vanuatu chapter, Vanuatu Economic Report 2009",
+        "opened: documents1.worldbank.org December 2024 earthquake phone survey update (June 2025)",
+        "critic re-opened all 7 cited URLs (PDF text extracted locally) and confirmed each quoted passage"
+      ],
+      "critic_changes": [
+        "Headline: changed 'keep wiping out Vanuatu's gains, leaving income per person below its 1979 level' to 'have set Vanuatu back again and again, and income per person is still below'. The sources do not explain the fall since 1979, which started in the 1980s, so the headline no longer says these shocks caused it.",
+        "IMF 2025 staff report: date made more precise, from 2025-09 to 2025-09-08, because the document's title gives 'September 8, 2025'.",
+        "Thread 'Disasters that undo gains': replaced the Cyclone Pam quote ('damage and losses ... exceed 60 percent of GDP') with the press release's own line on housing, tourist facilities and crops, which is what the text claims. Replaced the World Bank damage-cost quote with the passage on Shefa employment staying below pre-disaster levels, which is what the text claims. Dropped 'wage income' from the text so it matches that quote. Changed 'every few years' to 'again and again', since no cited passage gives a frequency.",
+        "World Bank phone survey: date changed from 2025-06 to 2025. 'June 2025 Update' is the survey round in the title, not a publication date; the PDF was produced in August 2025 and disclosed in September.",
+        "Thread 'Tourism and the national airline': dropped 'Tourism drives much of the wider economy' and the cruise-terminal damage claim, because no citation in the thread supported them. Swapped in the IMF passage that dates Air Vanuatu's liquidation to May 2024 and links it to tourism disruptions. Kept the IMF 'modest 0.9 percent' quote, which the tension relies on. Changed 'foreign airlines brought in many more air visitors' to 'air arrivals rose sharply', because the cited ADB quote does not mention foreign airlines.",
+        "Thread 'Workers leaving for seasonal jobs': added the IMF passage on farmers and unskilled workers leaving for seasonal work abroad. 'Fewer hands on farms' had no support from the brain-drain quote alone.",
+        "Thread 'Pandemic border closure': 'the deepest drop in the record since 1980' was misleading. The two-year fall over 2001–2002 was larger than 2020–2021. The text now says 2020's 7.9 percent fall was the deepest in any single year since 1980, which the data confirm.",
+        "since_last_year: 'while the port was repaired' changed to 'because of earthquake damage in Port Vila', and 'risk of debt distress' changed to 'external risk of debt distress', to match the ADB wording. Added ADB citations for what drove growth, for cruise tourism staying low, and for the 3.8 percent estimate for both years. The debt quote now includes the Air Vanuatu restructuring clause, trimmed to 23 words.",
+        "Tension: removed the claim that the ADB called growth resilient in 2024 (it says that only of 2025), and the claim that chain-linked national accounts explain the ADB–IMF gap. The ADB says only that the switch changed growth rates slightly for some years, so the tension now says just that. Also removed 'because the population was growing fast': it is now hedged as 'part of the gap'. Phrased the ADB–IMF disagreement for 2024 without figures outside quotes.",
+        "All 7 cited URLs opened; all are on tier 1 domains and every quote was found on its page. Every number in the headline, arc, threads, since_last_year and tension was checked against desk/data/VUT.json (series and growth_problem); all matched. No banned phrases. tier1_recent_found left at the draft's 5: the cited pages give 4 distinct recent tier 1 sources, and the 2025 IMF Board press release the drafter opened is not cited."
+      ]
+    },
+    "headline": "Cyclones, a pandemic, an airline collapse and an earthquake have set Vanuatu back again and again, and income per person is still below its 1979 level.",
+    "arc": "Since 1990 Vanuatu's income per person has grown about 0.5 percent a year with no lasting change of pace, and in 2025 it was still a little below its level in 1979, the first year of the record. Within that long flat line, gains were repeatedly undone: income per person fell 5.8 percent in 2001 and 7.5 percent in 2002, then rose through the mid-2000s, by 5.9 percent in 2006, when the ADB describes fast growth driven by tourism, construction and aid. Growth averaged 0.9 percent a year over 2006–2015 and slowed to 0.2 percent over 2016–2025. Income per person peaked in 2019, then fell 7.9 percent in 2020 and 3.4 percent in 2021 as the pandemic border closure brought tourism to a near stop and Cyclone Harold struck. It recovered by 3.2 percent in 2022 and 3.4 percent in 2023, but three severe cyclones in 2023, the liquidation of Air Vanuatu in 2024 and the Port Vila earthquake in December 2024 weighed on activity. Income per person grew 1.4 percent in 2024 and 0.8 percent in 2025 and remains 3.0 percent below its 2019 peak.",
+    "threads": [
+      {
+        "title": "Disasters that undo gains",
+        "about": "present",
+        "text": "Large disasters have hit Vanuatu again and again. Cyclone Pam in 2015 destroyed a large share of the country's housing, crops and tourist facilities, and the December 2024 earthquake in Port Vila followed three severe cyclones in 2023. World Bank phone surveys found that jobs in Shefa, the province that holds the capital, were still below pre-quake levels in mid-2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Vanuatu: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2025-09-08",
+            "quote": "the earthquake followed three severe cyclones in 2023 and the liquidation of the national carrier Air Vanuatu in 2024"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099092825213511664/pdf/P177189-9ea1de10-c481-42c2-a627-0bd005f0e068.pdf",
+            "publisher": "World Bank",
+            "title": "Socio-economic Impacts of the December 2024 Earthquake in Vanuatu: Insights from High-frequency Phone Surveys [June 2025 Update]",
+            "date": "2025",
+            "quote": "The employment level in Shefa remained low. Although the most recent data shows some recovery, employment is still lower than the pre-disaster level."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/14/01/49/pr15264",
+            "publisher": "IMF",
+            "title": "Press Release: IMF Executive Board Approves US$23.8 Million in Financial Support for Vanuatu",
+            "date": "2015-06-08",
+            "quote": "Destroyed a large share of Vanuatu’s housing stock, infrastructure, tourist facilities, crops, and livestock."
+          }
+        ]
+      },
+      {
+        "title": "Tourism and the national airline",
+        "about": "present",
+        "text": "Air Vanuatu, the national airline, was liquidated in May 2024 and its international flights stopped, disrupting tourism. The IMF expected these travel disruptions to have slowed growth in 2024. In 2025 air arrivals rose sharply, but cruise arrivals fell.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Vanuatu: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2025-09-08",
+            "quote": "Air Vanuatu’s liquidation in May 2024 and the closure of its international flights caused significant tourism disruptions."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Vanuatu: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2025-09-08",
+            "quote": "Growth is projected to have slowed to a modest 0.9 percent y/y in 2024, weighed down by travel disruptions, weaker agriculture, and delayed public investment"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1135881/van-ado-april-2026.pdf",
+            "publisher": "ADB",
+            "title": "Asian Development Outlook (ADO) April 2026: Vanuatu",
+            "date": "2026-04",
+            "quote": "a 66% increase in air arrivals to November 2025 was more than offset by a 19% drop in cruise ship tourists"
+          }
+        ]
+      },
+      {
+        "title": "Workers leaving for seasonal jobs",
+        "about": "present",
+        "text": "A growing number of workers from Vanuatu take seasonal jobs in Australia and New Zealand. The IMF links this to fewer workers and farmers on the land and a loss of skills in key sectors at home, and lists skills shortages among the country's main risks.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Vanuatu: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2025-09-08",
+            "quote": "Vanuatu’s growing participation in labor mobility schemes in Australia and New Zealand has led to brain drain in various critical sectors"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Vanuatu: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2025-09-08",
+            "quote": "the agriculture sector is being affected by the departure of unskilled workers and farmers for seasonal work abroad, leading to reduced output and export earnings"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/07/22/PR25260---Vanuatu---IMF-Staff-Completes-2025-Article-IV-Mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to Vanuatu",
+            "date": "2025-07-23",
+            "quote": "Vanuatu faces high risk of natural disasters, skills shortages, governance weaknesses, and political fragmentation"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic border closure",
+        "about": "history",
+        "text": "When the borders closed in 2020, tourism came to a near halt and building projects were delayed, while Cyclone Harold and a volcanic eruption on Tanna caused heavy damage. Income per person fell 7.9 percent in 2020, the deepest fall in any year since 1980, and a further 3.4 percent in 2021.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/07/23/pr21225-vanuatu-imf-staff-concludes-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes 2021 Article IV Mission to Vanuatu",
+            "date": "2021-07-23",
+            "quote": "The border closure brought tourism to a virtual stop and delayed infrastructure projects."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2021/07/23/pr21225-vanuatu-imf-staff-concludes-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes 2021 Article IV Mission to Vanuatu",
+            "date": "2021-07-23",
+            "quote": "Tropical Cyclone Harold and a volcanic eruption in Tanna Island caused extensive damage in the first half of 2020."
+          }
+        ]
+      },
+      {
+        "title": "A boom on aid and building",
+        "about": "history",
+        "text": "After a decade of slow growth, the economy expanded quickly from 2003 to 2008 on tourism, construction and aid inflows. Investment rose to 40.4 percent of GDP in 2008, then fell back to 15.0 percent by 2014.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/27516/van-economic-report-2009.pdf",
+            "publisher": "ADB",
+            "title": "Vanuatu Economic Report 2009: Accelerating Reform",
+            "date": "2009",
+            "quote": "After a decade of stagnation, Vanuatu grew at an average rate of 6.0% per year between 2003 and 2008"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/27516/van-economic-report-2009.pdf",
+            "publisher": "ADB",
+            "title": "Vanuatu Economic Report 2009: Accelerating Reform",
+            "date": "2009",
+            "quote": "Vanuatu has become one of the fastest growing economies in the Pacific region driven primarily by tourism, construction, and aid inflows."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The economy held up through 2025 after the earthquake. The ADB credits tourism, government support and rebuilding, though cruise visits stayed low because of earthquake damage in Port Vila. In September 2025 the IMF lowered Vanuatu's external risk of debt distress after Air Vanuatu's debt restructuring was resolved. Income per person grew 0.8 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/van-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook (ADO) April 2026: Vanuatu",
+          "date": "2026-04",
+          "quote": "Growth remained resilient in 2025 despite the December 2024 earthquake. The economy expanded by an estimated 3.8%, unchanged from 2024"
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/van-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook (ADO) April 2026: Vanuatu",
+          "date": "2026-04",
+          "quote": "The impact of the earthquake on growth was offset by resilient tourism, a domestic rebound supported by government stimulus, and post-earthquake reconstruction."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/van-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook (ADO) April 2026: Vanuatu",
+          "date": "2026-04",
+          "quote": "Cruise ship tourism, by contrast, remained subdued due to Port Vila’s earthquake damage."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1135881/van-ado-april-2026.pdf",
+          "publisher": "ADB",
+          "title": "Asian Development Outlook (ADO) April 2026: Vanuatu",
+          "date": "2026-04",
+          "quote": "the International Monetary Fund reduced Vanuatu’s external risk of debt distress from “high” to “moderate”, following the resolution of Air Vanuatu’s debt restructuring"
+        }
+      ]
+    },
+    "tension": "The sources describe booms and resilience that income per person barely shows. The ADB counted Vanuatu among the fastest-growing economies in the Pacific in 2003–2008, yet income per person rose only 0.4 percent in 2007; part of the gap is that the population was growing. For 2025 the ADB describes resilient growth, but income per person rose just 0.8 percent. The sources also disagree with each other: the ADB estimates that the economy grew as fast in 2024 as in 2025, while the IMF expected growth in 2024 to have slowed. The ADB notes that Vanuatu changed how it measures growth in 2023, which shifted growth rates slightly for some years."
+  }
+}

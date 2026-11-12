@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "GNB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GNB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Guinea-Bissau IMF Article IV 2025 staff report cashew growth'",
+        "same tier 1 domains: 'Guinea-Bissau Macro Poverty Outlook economic update World Bank'",
+        "opened by drafter: imf.org PR 25/230 (2025 Article IV), imf.org Country Report 26/83 (April 2026), worldbank.org press release 2026-06-24, thedocs.worldbank.org MPO Guinea-Bissau October 2026, documents1.worldbank.org Systematic Country Diagnostic Update (September 2023)",
+        "re-opened by critic and text checked: imf.org Country Report 26/83, worldbank.org press release 2026-06-24, thedocs.worldbank.org MPO Guinea-Bissau (October 2026), documents1.worldbank.org SCD Update (September 2023)"
+      ],
+      "critic_changes": [
+        "Checked all 4 cited documents. I re-opened each one and checked the quoted passages against the extracted text of the three PDFs and against the press-release page. Every quote, URL, title and date matched: SCD Update September 2023, IMF CR 26/83 April 2026, World Bank press release 2026-06-24, MPO October 2026. No citation was dropped.",
+        "Headline: changed 'civil war and coups' to 'civil war and political turmoil' and 'carried by its cashew crop' to 'with cashew at the center'. The opened sources do not date any coup to 1998–2014. They describe cashew as the backbone of the economy, but they also credit donor-financed investment for growth after 2016, so 'carried by' overstated it.",
+        "Arc: replaced 'coups, assassinations' with frequent changes of government and the killing of senior officials, including the president in 2009, which the SCD dates to this era. I also softened 'set much of each year's pace' to 'move growth from year to year' so it does not overstate the sources.",
+        "Thread 'Civil war and coups': added a second SCD citation ('Between 1999 and 2009 ... frequent government turnover') so the claim that instability lasted for years afterward has a citation behind it.",
+        "Thread 'More jobs, not more output': dropped 'Growth has come more from more people working than from each worker producing more'. It is an economy-wide claim the cited passages do not support. The thread now restates only what the quotes say.",
+        "Thread 'Instability returns in 2025': added the IMF passage on relative calm and the World Bank passage on subdued investment and political uncertainty, which support the thread's second sentence. It had no citation before.",
+        "since_last_year: added the MPO (October 2026) passage on the December 2026 elections so the elections claim has a citation behind it.",
+        "Tension: replaced 'the steadiest era since 1990'. Era volatility is not a figure in growth_problem, and the sentence mixed the 2015–2025 era with the 2016–2025 G1 window. It now says income per person grew every year from 2015 to 2025, which matches the series, plus G1's 2.4 against 0.8.",
+        "Numbers checked against desk/data/GNB.json: eras 2.5 / -0.1 / 2.5, 1998 -23.9, 1999 14.6, 2012 -4.3, 2025 3.6 (fastest since 2011's 5.3), G1 2.4 and 0.8, peak in 2025, 1997 level first passed again in 2016. All are correct.",
+        "tier1_recent_found: set to 4, the distinct recent tier 1 sources I verified (2023, 2026-04, 2026-06, 2026-10). The drafter also listed IMF PR 25/230, but no citation uses it and I did not re-check it.",
+        "No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "After civil war and political turmoil stalled it for 17 years, Guinea-Bissau's income per person has grown steadily since 2015, with cashew at the center.",
+    "arc": "Guinea-Bissau's income per person grew 2.5 percent a year from 1990 to 1997, then stalled for 17 years, averaging -0.1 percent a year from 1998 to 2014. That era opened with a civil war in 1998–99, when income per person fell 23.9 percent in a single year, and went on through frequent changes of government and the killing of senior officials, including the president in 2009. Politics calmed somewhat after 2015, donor money revived public investment, and growth returned to 2.5 percent a year from 2015 to 2025. Cashew is the backbone of the economy and its main export, so the size of the harvest and the world cashew price move growth from year to year. Income per person reached a new high in 2025, but it only passed its 1997 level again in 2016, nearly two decades after the war.",
+    "threads": [
+      {
+        "title": "Civil war and coups",
+        "about": "history",
+        "text": "A short civil war in 1998–99 cut income per person by 23.9 percent in 1998, and a partial rebound of 14.6 percent in 1999 did not undo it. Coups, coup attempts, killings of senior officials and frequent changes of government kept politics unstable for years afterward, and growth averaged -0.1 percent a year from 1998 to 2014.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099110323163018763/pdf/BOSIB0f7d3f3e401e0a2a3015c9e962aff5.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Guinea-Bissau: Addressing fragility for sustained poverty reduction and shared prosperity",
+            "date": "2023-09",
+            "quote": "four successful coups d’états, 17 coup attempts, a short but devastating civil war from 1998 to 1999"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099110323163018763/pdf/BOSIB0f7d3f3e401e0a2a3015c9e962aff5.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Guinea-Bissau: Addressing fragility for sustained poverty reduction and shared prosperity",
+            "date": "2023-09",
+            "quote": "Between 1999 and 2009, political and institutional fragility also manifested itself in frequent government turnover."
+          }
+        ]
+      },
+      {
+        "title": "Turbulence, then calmer politics",
+        "about": "history",
+        "text": "Public investment fell during the turbulent years from 2008 to 2013, and income per person dropped 4.3 percent in 2012. After 2015 politics steadied a little, a president served a full term for the first time, and donor money revived public investment as growth picked up.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099110323163018763/pdf/BOSIB0f7d3f3e401e0a2a3015c9e962aff5.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Guinea-Bissau: Addressing fragility for sustained poverty reduction and shared prosperity",
+            "date": "2023-09",
+            "quote": "Public investment declined sharply during the politically turbulent period of 2008–13 but a rebound in donor financing contributed more to growth after 2016"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099110323163018763/pdf/BOSIB0f7d3f3e401e0a2a3015c9e962aff5.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Guinea-Bissau: Addressing fragility for sustained poverty reduction and shared prosperity",
+            "date": "2023-09",
+            "quote": "The political situation improved marginally after 2015, with President José Mário Vaz becoming the first Head of State to complete a full term"
+          }
+        ]
+      },
+      {
+        "title": "An economy built on cashew",
+        "about": "present",
+        "text": "Cashew is the main export and a large part of the economy, so good harvests and high prices lift growth and poor ones hold it back. A bigger crop and better prices drove the 2025 upswing, when income per person grew 3.6 percent.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Guinea-Bissau",
+            "date": "2026-10",
+            "quote": "Cashew production remains the backbone of Guinea-Bissau’s economy, accounting directly for about 11 percent of GDP and serving as the country’s main export."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1gnbea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Guinea-Bissau: Ninth and Tenth Reviews Under the Extended Credit Facility Arrangement (IMF Country Report No. 26/83)",
+            "date": "2026-04",
+            "quote": "A strong increase in cashew production and higher international prices for cashews supported economic growth and improved the balance of payments in 2025."
+          }
+        ]
+      },
+      {
+        "title": "More jobs, not more output",
+        "about": "present",
+        "text": "Most rural adults work, but fewer than one in ten holds a wage job. A 2026 World Bank survey of firms finds them hiring more workers without producing more.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Guinea-Bissau",
+            "date": "2026-10",
+            "quote": "Although over 80 percent of rural adults work, including unpaid family workers, fewer than one in ten holds a salaried job."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/06/24/world-bank-group-report-pathways-for-unlocking-productivity-led-private-sector-growth-in-guinea-bissau",
+            "publisher": "World Bank",
+            "title": "World Bank Group Report: Pathways for Unlocking Productivity-Led Private Sector Growth in Guinea-Bissau",
+            "date": "2026-06-24",
+            "quote": "Firms are hiring more workers without expanding output, pointing to a pattern of low-quality job creation"
+          }
+        ]
+      },
+      {
+        "title": "Instability returns in 2025",
+        "about": "present",
+        "text": "The military took over the government in November 2025, days after elections, a return of the kind of upheaval that marked the stalled era. The sources report calm since then, but they expect the uncertainty to weigh on investment in 2026.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1gnbea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Guinea-Bissau: Ninth and Tenth Reviews Under the Extended Credit Facility Arrangement (IMF Country Report No. 26/83)",
+            "date": "2026-04",
+            "quote": "Before the release of the election results, the military took control over the government on November 26 without casualties."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1gnbea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Guinea-Bissau: Ninth and Tenth Reviews Under the Extended Credit Facility Arrangement (IMF Country Report No. 26/83)",
+            "date": "2026-04",
+            "quote": "The social situation is relatively calm following the military takeover of the government in November 2025."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/06/24/world-bank-group-report-pathways-for-unlocking-productivity-led-private-sector-growth-in-guinea-bissau",
+            "publisher": "World Bank",
+            "title": "World Bank Group Report: Pathways for Unlocking Productivity-Led Private Sector Growth in Guinea-Bissau",
+            "date": "2026-06-24",
+            "quote": "GDP growth is projected to ease to 4.8% in 2026, reflecting subdued investment and lingering political uncertainty following the political transition of November 2025."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 3.6 percent in 2025, its fastest pace since 2011, on a large cashew harvest and higher cashew prices. After elections in November 2025 the military took over the government, and the World Bank now expects growth to ease in 2026 as investment slows amid political uncertainty, with new elections planned for December 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1gnbea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Guinea-Bissau: Ninth and Tenth Reviews Under the Extended Credit Facility Arrangement (IMF Country Report No. 26/83)",
+          "date": "2026-04",
+          "quote": "Real GDP growth is estimated to have increased to 5.5 percent in 2025. This reflects mainly strong growth in cashew production"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/24/world-bank-group-report-pathways-for-unlocking-productivity-led-private-sector-growth-in-guinea-bissau",
+          "publisher": "World Bank",
+          "title": "World Bank Group Report: Pathways for Unlocking Productivity-Led Private Sector Growth in Guinea-Bissau",
+          "date": "2026-06-24",
+          "quote": "GDP growth is projected to ease to 4.8% in 2026, reflecting subdued investment and lingering political uncertainty following the political transition of November 2025."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnb.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Guinea-Bissau",
+          "date": "2026-10",
+          "quote": "Risks include uncertainty surrounding the December 2026 elections, global trade tensions, and climate shocks."
+        }
+      ]
+    },
+    "tension": "The sources describe brisk growth in 2025, but income per person in the data rose a smaller 3.6 percent, because a fast-growing population takes a large share of the gains. The World Bank's 2023 diagnostic also calls growth low and volatile, yet in the data income per person has grown every year since 2015, averaging 2.4 percent a year over 2016–2025 against 0.8 in the decade before."
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "iso3": "ALB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ALB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains): Albania IMF Article IV 2025 staff concluding statement growth",
+        "tier 1 domains: Albania World Bank Macro Poverty Outlook Western Balkans Regular Economic Report 2025 Albania growth tourism",
+        "worldbank.org: Albania Macro Poverty Outlook April 2026 tourism matures growth",
+        "worldbank.org: Albania World Bank press release 2025 2026 economic growth tourism emigration Western Balkans Regular Economic Report",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Albania pyramid schemes 1997 collapse economy transition lessons",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: Albania growth slowdown after 2008 global crisis Greece Italy remittances decline credit",
+        "imf.org: Albania November 2019 earthquake COVID-19 pandemic IMF Rapid Financing Instrument 2020 economy",
+        "imf.org, worldbank.org, ebrd.com, oecd.org: Albania IMF staff visit 2026 statement",
+        "critic re-opened: imf.org F&D March 2000 Jarvis; imf.org PR 25/442 (2025-12-23); imf.org 2025 Article IV concluding statement (2025-11-20); imf.org PR 20/148 (2020-04-10); documents1.worldbank.org SCD Next Generation Albania April 2015 (text extracted locally); documents1.worldbank.org WB RER No.28 Fall 2025 (text extracted locally, Albania country note p.66)",
+        "tier 2 not searched: tier 1 gave 3 distinct recent sources"
+      ],
+      "critic_changes": [
+        "All 16 citations re-opened and checked: every URL exists on a tier 1 domain, and the quotes and dates match the pages (the SCD cover reads April 2015; the RER reads Fall 2025, kept as 2025).",
+        "Arc: 'growth was at its weakest in 2011 and 2012' was wrong because 2020 (-1.8) was weaker in that era. It now says income per person grew only 2.7 and 2.6 percent in 2011 and 2012.",
+        "Arc and thread 1: 'fell by more than a quarter' changed to the data's 27.6 percent for 1991. Arc: 'averaged -1.9 percent' reworded as 'shrank 1.9 percent a year on average'.",
+        "Thread 1: removed 'worth almost half of GDP', a figure that is not in the data file (it stays only inside the removed quote). Replaced that citation with a verified Jarvis passage on the rioting and the government falling, which the text claimed but no citation supported before.",
+        "Thread 2 and arc: 'fast-rising wages and a credit boom' was not supported by the cited passages. Replaced the 'Strong growth continued in 2000-2008 ... 6 percent' citation with the SCD passage on wages and strong growth in credit, and reworded the text to match.",
+        "Thread 3: the claim that bank credit slowed sharply had no supporting citation. Replaced the Greece/Italy citation with the SCD passage on banks reducing the supply of credit and dropped the Greece/Italy clause from the text. Changed 'growth fell to' to 'income per person grew only'.",
+        "Thread 5: removed 'about a third of the European Union average', a figure not in the data file (it is kept inside the World Bank quote), and now says 'far below'. Softened 'are shrinking the working-age population' to 'weigh on the number of workers' to match the sources.",
+        "since_last_year: the emigration clause was supported by neither of its citations (the PR has no emigration statement). Reworded to the PR's verified warning about the working-age population falling.",
+        "Tension: 'steady, moderate output growth' was trimmed to 'steady', the RER's own word (it reports steady growth averaging 4.2 percent in 2022–2024). The population claim is now framed as arithmetic plus the sources' demographic findings, because the data file has no population series."
+      ]
+    },
+    "headline": "Albania's income per person collapsed after communism, boomed on remittances to 2008, slowed, then climbed on tourism to a record high in 2025.",
+    "arc": "From 1990 to 1997 income per person shrank 1.9 percent a year on average. It fell 27.6 percent in 1991 as the communist economy broke down, grew fast from 1993 to 1996, then fell sharply again in 1997 when pyramid schemes collapsed and unrest halted production. From 1998 to 2008 growth averaged 7.6 percent a year, the fastest era; the World Bank links it to construction and services, and to consumption paid for by remittances from Albanians abroad, wages and strong growth in credit. From 2009 to 2025 growth slowed to 4.4 percent a year: the 2008 global crisis cut remittances and credit, and income per person grew only 2.7 percent in 2011 and 2.6 percent in 2012. Growth then picked up to 5.1 percent a year over 2016–2025, up from 4.5 over 2006–2015; after a dip in 2020 with the 2019 earthquake and the pandemic, income per person rebounded 10.7 percent in 2021, and the IMF credits tourism for lifting output well above its pre-pandemic trend. Income per person reached a new high in 2025, while the IMF and World Bank point to emigration, an ageing population and weak productivity as forces slowing convergence with the European Union.",
+    "threads": [
+      {
+        "title": "Collapse and pyramid schemes",
+        "about": "history",
+        "text": "Albania began its move to a market economy in 1991 in deep poverty, and income per person fell 27.6 percent that year. After fast growth from 1993 to 1996, huge pyramid investment schemes collapsed in 1997, setting off riots and the fall of the government, and output fell as production stopped during the disorder.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/jarvis.htm",
+            "publisher": "IMF",
+            "title": "The Rise and Fall of Albania's Pyramid Schemes (Finance & Development)",
+            "date": "2000-03",
+            "quote": "When transition began in 1991, the country had been reduced to desperate poverty"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/jarvis.htm",
+            "publisher": "IMF",
+            "title": "The Rise and Fall of Albania's Pyramid Schemes (Finance & Development)",
+            "date": "2000-03",
+            "quote": "When the schemes collapsed, there was uncontained rioting, the government fell, and the country descended into anarchy"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/fandd/2000/03/jarvis.htm",
+            "publisher": "IMF",
+            "title": "The Rise and Fall of Albania's Pyramid Schemes (Finance & Development)",
+            "date": "2000-03",
+            "quote": "Output fell by about 7 percent in 1997, with most of the decline being due to interruptions in production during the civil disorder."
+          }
+        ]
+      },
+      {
+        "title": "Remittances and a building boom",
+        "about": "history",
+        "text": "From 1998 to 2008 income per person grew 7.6 percent a year. The World Bank finds that construction and services led output, while consumption was paid for by remittances from Albanians working abroad, by wages and by strong growth in credit.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "The construction and services sectors were the drivers of economic and employment growth in 2000–2008"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "The rapid expansion of consumption was fueled by: (1) remittances (peaking at $1.5 billion in 2008)"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "(2) domestic sources such as wages, other nonwage income, strong growth in credit as well as expanding fiscal deficit."
+          }
+        ]
+      },
+      {
+        "title": "The 2008 shock",
+        "about": "history",
+        "text": "After 2008 the global crisis cut remittances from Albanians abroad, and banks cut the supply of credit. The World Bank says the shock exposed a growth model that relied on money from abroad to pay for consumption; income per person grew only 2.7 percent in 2011 and 2.6 percent in 2012.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "Remittances fell from 10.3 percent of GDP in 2008 to 6.8 percent in 2013"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "The financial sector reacted to the shock by reducing the supply of credit to the economy."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/369731467992488252/pdf/95980-REVISED-SCD-Box393175B-PUBLIC-new-Albania-SCD-Final-4.pdf",
+            "publisher": "World Bank",
+            "title": "Next Generation Albania: A Systematic Country Diagnostic",
+            "date": "2015-04",
+            "quote": "The 2008 external shock exposed the limitations of the domestic-driven growth model that depended on foreign flows to finance domestic consumption"
+          }
+        ]
+      },
+      {
+        "title": "Tourism after the pandemic",
+        "about": "present",
+        "text": "An earthquake in November 2019 and the pandemic brought a dip in 2020, then income per person rebounded 10.7 percent in 2021. Since then a tourism boom and private consumption have driven growth, and the IMF says tourism has carried output well above its pre-pandemic trend.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2020/04/10/pr20148-albania-imf-executive-board-approves-us-in-emergency-support-to-combat-covid-19-pandemic",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Approves US$190.5 Million in Emergency Support to Albania to Combat COVID-19 Pandemic",
+            "date": "2020-04-10",
+            "quote": "Albania experienced two consecutive shocks: an earthquake (November 26, 2019) and the global COVID-19 pandemic."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/23/pr-25442-albania-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Albania",
+            "date": "2025-12-23",
+            "quote": "Albania is one of the fastest growing economies in Europe, with output well above its pre-pandemic trend due to tourism."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/23/pr-25442-albania-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Albania",
+            "date": "2025-12-23",
+            "quote": "Growth primarily driven by private consumption and a booming tourism sector."
+          }
+        ]
+      },
+      {
+        "title": "Fewer workers, slow productivity",
+        "about": "present",
+        "text": "Emigration and an ageing population weigh on the number of workers, and the IMF finds that output per hour worked has barely improved in a decade. Income per person is still far below the European Union average.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/19/cs-albania-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Albania: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-11-20",
+            "quote": "Emigration and potential rise with EU accession risk deepening labor shortages."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/19/cs-albania-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Albania: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-11-20",
+            "quote": "Albania’s output per hour worked is below the EU average with little improvement over the last decade."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100625100539134/pdf/P512916-fe1dc2c8-b236-4cfe-ad18-88303a06122e.pdf",
+            "publisher": "World Bank",
+            "title": "Western Balkans Regular Economic Report No.28, Fall 2025: Towards Better Jobs",
+            "date": "2025",
+            "quote": "Per capita income is still one-third of the EU average, with long-term convergence constrained by demographic pressures including outmigration and an aging population"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In late 2025 the IMF found growth driven mainly by private consumption and a booming tourism sector, but it flagged risks to how long tourism-led growth can last and warned that a faster fall in the working-age population could deepen labour shortages.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/11/19/cs-albania-staff-concluding-statement-of-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Albania: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-11-20",
+          "quote": "risks to the sustainability of tourism-led growth"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/23/pr-25442-albania-imf-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Albania",
+          "date": "2025-12-23",
+          "quote": "A sharper-than-anticipated decline in the working age population could exacerbate labor shortages"
+        }
+      ]
+    },
+    "tension": "The World Bank describes steady output growth in 2022–2024, yet income per person rose faster, by 6.5, 5.7 and 5.6 percent in those years. Income per person can grow faster than output only when the number of people falls, and the World Bank and IMF point to outmigration, an ageing population and a shrinking working-age population, so part of the climb to a record level in 2025 reflects fewer people rather than faster output alone."
+  }
+}

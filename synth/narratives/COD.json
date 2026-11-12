@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "iso3": "COD",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "COD",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Democratic Republic of the Congo IMF Article IV 2025 press release growth mining (tier 1 domain list)",
+        "worldbank.org and tier 1 list: Democratic Republic of Congo Macro Poverty Outlook economic update growth copper cobalt conflict east",
+        "tier 1 list: Democratic Republic of Congo wars 1990s economic collapse hyperinflation recovery 2002 growth HIPC completion point",
+        "imf.org: IMF Democratic Republic of the Congo 2026 review Extended Credit Facility press release",
+        "imf.org, worldbank.org, afdb.org: IMF staff-level agreement Democratic Republic of Congo fourth review ECF November 2026 Ebola",
+        "worldbank.org: Macro Poverty Outlook Democratic Republic of Congo 2026",
+        "Opened: imf.org PR 25/439 (2025-12-19); imf.org PR 26/233 (2026-06-30); thedocs.worldbank.org MPO DRC October 2026; documents1.worldbank.org DRC Systematic Country Diagnostic (March 2018); worldbank.org/ext/en/country/drc (undated, not cited); afdb.org outlook and elibrary.imf.org staff report (403, not cited); imf.org PR 26/350 (404, not cited)",
+        "Critic check: re-opened all four cited URLs with WebFetch; the two World Bank PDFs were text-extracted locally to verify every quoted passage and the dates (MPO footer 'October 2026'; SCD cover 'March 2018')"
+      ],
+      "critic_changes": [
+        "Arc: 'The slide began when commodity prices collapsed in the 1980s' contradicted the data, which show income per person falling sharply from 1975; reworded to 'It fell from 1974, and the slide deepened when commodity prices collapsed in the 1980s' (split into its own sentence; arc stays at 6 sentences).",
+        "Arc: 'Growth returned from 2021 on copper-led mining' attributed 2021-23 growth to mining without a source covering those years; reworded so mining is credited for carrying growth through 2025, which the IMF and World Bank 2025-26 sources support.",
+        "Thread 'Commodity bust, then war': 'drifted down after 1974 as commodity prices fell' was not supported (the source dates the commodity collapse to the 1980s, and the 1975-78 fall was steep, not a drift); 'wrecked roads, power and schools' went beyond the source's 'physical and social infrastructure'; hyperinflation was not in this thread's citations. Rewrote the text to match the passages.",
+        "Thread 'Commodity bust, then war': the quote used hyphens '1996-1997 and 1998-2002'; corrected to the page's en dashes '1996–1997 and 1998–2002'.",
+        "Thread 'The copper slump of 2015–16': dropped 'a large producer' (not in the source) and specified 'in the DRC ... from August 2015' as the passage states; changed the copper quote's apostrophe to the page's curly one.",
+        "Thread 'Conflict in the east': 'disrupts trade and farming' was not in the cited passages; changed to 'disrupts economic activity' as the World Bank says.",
+        "Thread 'Copper-led mining growth': changed 'so most workers remain' to 'leaving most workers', following the source's wording rather than adding a causal claim.",
+        "since_last_year: 'higher energy prices tied to the Middle East war' was not in the cited passages; changed to 'the effects of the war in the Middle East', which the IMF passage supports. Changed 'large' to 'major' to follow the World Bank's description of the Ebola outbreak.",
+        "Tension: the cited sources describe robust or resilient growth only for 2025, not 2024, so the 2024 figure (2.7 percent) was removed. The claim that per-person growth was low 'because ... mining creates few jobs' was also removed, since it confused a jobs point with the gap between total and per-person growth. Both the population point and the jobs point are now attributed to the World Bank, and both appear in the MPO.",
+        "Headline: 'collapsed in the 1990s wars' changed to 'collapsed in the 1990s amid war'. The 1990–2001 collapse began before the 1996 war.",
+        "Checked against the source and kept: every number (1974 peak, 59.9, 1960, -8.3 for 1990–2001, 2.5 since 2002, 1.4 vs 3.6, shrinking in 2016/2019/2020, -3.1 in 2016, 2.4 in 2025) matches growth_problem and series in desk/data/COD.json. All cited URLs are on tier 1 domains, and every quote matches its page. There are 3 distinct recent tier 1 sources (IMF 2025-12-19, IMF 2026-06-30, World Bank MPO 2026-10), and no banned phrases."
+      ]
+    },
+    "headline": "DR Congo's income per person collapsed in the 1990s amid war and has climbed slowly on mining since 2002, yet it is still below its 1960 level.",
+    "arc": "Income per person in DR Congo peaked in 1974 and is now 59.9 percent below that peak, lower even than in 1960, the first year of the record. It fell from 1974, and the slide deepened when commodity prices collapsed in the 1980s. It became a collapse in 1990–2001, when income per person shrank by 8.3 percent a year amid hyperinflation and a two-phase war. A program begun in 2001 halted hyperinflation and a peace agreement in 2002 ended the war, opening a second era: since 2002, growth has averaged 2.5 percent a year, led by a mining boom financed by foreign investors. The last decade was slower, at 1.4 percent a year against 3.6 in the decade before, as copper prices fell in 2015–16, and income per person shrank in 2016, 2019 and 2020. Growth returned from 2021 and mining, led by copper, carried it through 2025, but with conflict in the east and a fast-growing population, income per person rose 2.4 percent in 2025.",
+    "threads": [
+      {
+        "title": "Commodity bust, then war",
+        "text": "Income per person fell after 1974, and the policies of the time became unsustainable when commodity prices collapsed in the 1980s. A two-phase war followed, in 1996–1997 and 1998–2002, which cost millions of lives and wrecked infrastructure and social services.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "However, prevailing policies became unsustainable when commodity prices collapsed in the 1980s."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "The country lived through a two-phase war in the 1990s (1996–1997 and 1998–2002) which claimed millions of lives"
+          }
+        ]
+      },
+      {
+        "title": "Peace, stability and mining boom",
+        "text": "A government program begun in 2001 stopped hyperinflation, and a peace agreement in 2002 ended the war. Foreign money then fueled a mining boom, and growth resumed.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "it brought hyperinflation to a halt, strengthened public finances, and laid the groundwork for the resumption of growth"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "the war officially ended with the signing of the all-inclusive, Sun City peace agreement in 2002"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "The boom in the mining sector since 2002 was fueled by FDI and has generated a large stream of income for large foreign investors."
+          }
+        ]
+      },
+      {
+        "title": "The copper slump of 2015–16",
+        "text": "Copper prices fell, and Glencore halted output in the DRC for 18 months from August 2015. Income per person shrank 3.1 percent in 2016, ending the faster growth of the decade before.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "The price of copper, the country’s major export commodity, has followed the same trend, falling by 19.7 percent in 2015"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/171101529346675751/pdf/DRC-SCD-FINAL-ENGLISH-06132018.pdf",
+            "publisher": "World Bank",
+            "title": "Democratic Republic of Congo Systematic Country Diagnostic: Policy Priorities for Poverty Reduction and Shared Prosperity in a Post-Conflict Country and Fragile State",
+            "date": "2018-03",
+            "quote": "The decision by Glencore to suspend production for 18 months starting at the end of August 2015 in the DRC and Zambia"
+          }
+        ]
+      },
+      {
+        "title": "Copper-led mining growth",
+        "text": "Mining, led by copper, drives growth today, and it kept going through a ban on cobalt exports for most of 2025. But mining employs few people, leaving most workers in farming and informal services.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/19/pr-25439-drc-imf-completes-2nd-rev-under-ecf-arrang-and-1st-rev-under-rsf-arrang",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Second Review under the Extended Credit Facility Arrangement and the First Review under the Resilience and Sustainability Facility Arrangement for the Democratic Republic of the Congo",
+            "date": "2025-12-19",
+            "quote": "External stability strengthened on the back of high copper exports and prices, notwithstanding the temporary suspension of cobalt exports for most of 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cod.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Democratic Rep. of Congo",
+            "date": "2026-10",
+            "quote": "Mining generates over 36 percent of GDP but only 2.5 percent of jobs, leaving most workers in low-productivity agriculture and informal services."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/30/pr26233-drc-imf-executive-board-concludes-2026-aiv-consult-completes-3rd-rev-ecf-arr-2nd-rev-rsf-arr",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes the 2026 Article IV Consultation and Completes the Third Review under the Extended Credit Facility Arrangement and the Second Review under the Resilience and Sustainability Facility Arrangement for the Democratic Republic of the Congo",
+            "date": "2026-06-30",
+            "quote": "Economic activity remained resilient in 2025 and the outlook is positive, supported by robust extractive sector activity and a strengthening non-extractive sector."
+          }
+        ]
+      },
+      {
+        "title": "Conflict in the east",
+        "text": "Fighting in the east has not stopped. It disrupts economic activity, drives people from their homes and pushes up security spending, which strains the budget.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cod.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Democratic Rep. of Congo",
+            "date": "2026-10",
+            "quote": "Persistent conflict in the eastern DRC disrupts economic activity, displaces communities, weakens investor confidence, and diverts resources from development."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/19/pr-25439-drc-imf-completes-2nd-rev-under-ecf-arrang-and-1st-rev-under-rsf-arrang",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Second Review under the Extended Credit Facility Arrangement and the First Review under the Resilience and Sustainability Facility Arrangement for the Democratic Republic of the Congo",
+            "date": "2025-12-19",
+            "quote": "The armed conflict in the eastern part of the country persists and continues to exert significant pressure on public finances"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cod.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Democratic Rep. of Congo",
+            "date": "2026-10",
+            "quote": "The fiscal deficit (cash basis) widened to 2.4 percent of GDP in 2025, driven by a significant increase in security expenditure in eastern DRC."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Cobalt exports resumed after an eight-month ban, and copper earnings stayed strong. But a major Ebola outbreak in 2026, the effects of the war in the Middle East, and the eastern conflict now weigh on the budget and cloud the outlook for growth.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cod.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Democratic Rep. of Congo",
+          "date": "2026-10",
+          "quote": "underpinned by rising copper revenues and a resumption of cobalt exports after eight months of temporary ban"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cod.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Democratic Rep. of Congo",
+          "date": "2026-10",
+          "quote": "The Ebola outbreak further clouds growth prospects."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/30/pr26233-drc-imf-executive-board-concludes-2026-aiv-consult-completes-3rd-rev-ecf-arr-2nd-rev-rsf-arr",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes the 2026 Article IV Consultation and Completes the Third Review under the Extended Credit Facility Arrangement and the Second Review under the Resilience and Sustainability Facility Arrangement for the Democratic Republic of the Congo",
+          "date": "2026-06-30",
+          "quote": "The impacts of the war in the Middle East and the Ebola outbreak are weighing on the budget"
+        }
+      ]
+    },
+    "tension": "The sources describe robust, mining-led growth in 2025, yet income per person rose only 2.4 percent that year; the World Bank notes that rapid population growth has outpaced gains in household welfare and that mining creates few jobs. And more than two decades of recovery since 2002 have not brought income per person back to its 1960 level."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "SWE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SWE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "WebSearch (allowed_domains = tier 1 list): 'Sweden Article IV consultation 2025 staff report' and 'OECD Economic Surveys Sweden 2025'. Neither ran because the shared web search budget for this turn was used up, so no search results were returned",
+        "imf.org/en/Countries/SWE and its index.json (opened directly; they list only the 2025 Article IV)",
+        "imf.org: 2025 Article IV publication page and PDF 1sweea2025001 (Country Report 25/79), opened and read",
+        "imf.org: 2025 Selected Issues PDF 1sweea2025002 (Country Report 25/80), opened and read",
+        "imf.org: 2026 Article IV PDF at the matching URL pattern returned 404",
+        "oecd.org/en/countries/sweden.html returned 403",
+        "Tier 2 (UN) not searched: tier 1 gave 2 distinct recent sources",
+        "Critic: re-opened both IMF PDFs (1sweea2025001, 1sweea2025002) with WebFetch, extracted the text and checked every quoted passage verbatim"
+      ],
+      "critic_changes": [
+        "Checked all 12 quoted passages against the text of both IMF PDFs (Country Reports 25/79 and 25/80). All appear verbatim, so every original citation was kept.",
+        "Article IV citations: date changed from 2025-04-01 to 2025-04, the date on the Country Report 25/79 cover (April 1, 2025 is only the press release inside it, and the quoted staff-report text is dated March 13, 2025). Added 'IMF Country Report No. 25/79' to the title so it matches the Selected Issues citation.",
+        "Headline: 'grew fast' replaced with the data file's 3.0 percent a year for 1998–2007, so the headline gives the era numbers.",
+        "Arc: the draft said tight policy and variable-rate debt 'brought a fall of 0.7 percent in 2023'. The IMF names those causes for weak activity in 2024, not for 2023, so the sentence now says that. The 1998–2007 sentence now gives what the IMF actually says (reforms led to strong productivity growth until the GFC) instead of saying the IMF 'links' the era to them.",
+        "Reforms and IT boom thread: the claim that new firms replacing old ones drove 1990s gains had no citation in this thread, so the Selected Issues passage beginning 'In the 1990s, the entry of new, productive firms...' was added (19 words, verbatim).",
+        "Productivity thread: removed 'slower spread of technology from leading firms' and 'as in other rich economies'. Neither is in the thread's cited passages, and the passages that do say this would exceed the 3-citation or 25-word limits.",
+        "Inflation and housing thread: removed 'households paid down debt' and 'hit households hard', since no cited passage supports them. The text now follows the cited passage on why activity was subdued in 2024.",
+        "Export thread: removed the list of exported goods (machinery, vehicles, chemicals, electronics, services), which is not in the cited passages. The trading-partner growth claim was reworded to the cited passage's 'more challenging external backdrop'.",
+        "Tension: the population claim was reworded. The IMF reports growth for the whole economy in 2024 and a smaller fall in 2023 than income per person shows, which is consistent with a rising population. 'Recovery' became 'moderate recovery' to match the IMF's wording.",
+        "All numbers in the headline, arc, threads and tension match desk/data/SWE.json when rounded: 0.6, 3.0, 0.6 era means; -2.6 (1993); -5.1 (2009); -2.6 (2020); 4.6 (2021); inflation 8.4 (2022) and 8.5 (2023); -0.7 (2023); 0.7 (2024); 0.7, 1.1 and 1.4 averages; rank 9 of 11; peak in 2025. No banned phrases and no recommendation language were found.",
+        "since_last_year stays null: both sources are from April 2025, more than 18 months before 2026-11-09."
+      ]
+    },
+    "headline": "Sweden's income per person grew 3.0 percent a year in 1998–2007, then just 0.6 percent a year since 2008 as productivity growth faded and shocks hit.",
+    "arc": "Sweden's income per person grew 0.6 percent a year in 1990–1997, an era that opened with falls in 1991, 1992 and 1993 (the worst was 2.6 percent in 1993) before growth returned in 1994. From 1998 to 2007 growth ran at 3.0 percent a year; the IMF says reforms of the late 1980s and early 1990s that strengthened competition led to strong productivity growth until the global financial crisis, and Sweden was an early leader in information technology. Since 2008 growth has averaged 0.6 percent a year: income per person fell 5.1 percent in 2009 during the global financial crisis, and the IMF describes a lasting decline in productivity growth since then. The pandemic cut income per person by 2.6 percent in 2020 before a 4.6 percent rebound in 2021. Inflation then reached 8.4 percent in 2022 and 8.5 percent in 2023, income per person fell 0.7 percent in 2023, and the IMF links weak activity in 2024 to lower real incomes, much variable-rate debt and the tight policy used to bring inflation down. Growth over 2016–2025 averaged 0.7 percent a year, down from 1.1 over 2006–2015 and below the structural-peer median of 1.4, though income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Reforms and the IT boom",
+        "text": "Reforms in the late 1980s and early 1990s strengthened competition and, the IMF says, led to strong productivity growth until the global financial crisis. Sweden was ahead of many rich countries in information technology, and in the 1990s new firms replacing less productive ones drove productivity gains. This was the backdrop to growth of 3.0 percent a year in 1998–2007.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "the structural reforms implemented in the late 1980s and early 1990s bolstered competition and led to strong productivity growth until the GFC."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "Sweden was already ahead of many OECD countries during the IT boom, capitalizing on its comparative advantage in related sectors."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "In the 1990s, the entry of new, productive firms and the exit of less productive ones drove productivity growth"
+          }
+        ]
+      },
+      {
+        "title": "Productivity slows after 2008",
+        "text": "Output per worker in Sweden is among the highest in Europe, but its growth has slowed since the global financial crisis. The IMF finds that established firms now drive most productivity gains rather than new firms replacing old ones, and that work hours have shifted toward slower-growing sectors such as construction.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "Labor productivity in Sweden is among the highest in Europe but has experienced a secular growth decline since the GFC"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "the entry of new, productive firms and the exit of less productive ones drove productivity growth; however, incumbent firms now dominate the process."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025002-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: Selected Issues (IMF Country Report No. 25/80)",
+            "date": "2025-04",
+            "quote": "about 20 percent of the total hours worked has shifted from manufacturing to construction since the mid-1990s"
+          }
+        ]
+      },
+      {
+        "title": "Inflation, interest rates and housing",
+        "text": "Inflation reached 8.4 percent in 2022 and 8.5 percent in 2023. The IMF says lower real incomes, a high share of variable-rate mortgages and the tight policy needed to bring inflation down kept activity subdued in 2024, while house prices fell for a second year. Income per person fell 0.7 percent in 2023 and grew 0.7 percent in 2024.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "economic activity was subdued in 2024 amid lower real incomes, a high share of variable rate debt, and the tight policies required to reduce inflation."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "About two-thirds of Swedish household mortgages carry variable interest rates."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "House prices fell for a second year in a row (about 10-19 percent from their peak depending on the data source)."
+          }
+        ]
+      },
+      {
+        "title": "An ageing, slower-growing population",
+        "text": "The IMF expects an ageing population and slower population growth than in the previous decade to hold down how fast the economy can grow over the long run, alongside slower productivity growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "Potential GDP growth is estimated at around 1½–1¾ percent, reflecting lower population and productivity growth relative to the previous decade."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "slowing productivity growth and an aging population weigh on long-term growth."
+          }
+        ]
+      },
+      {
+        "title": "A very open, export-led economy",
+        "text": "Sweden trades far more with the world than it did in the 1980s, across a wide range of products and markets. The IMF says high uncertainty and a tougher world economy are set to test this export-oriented economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "Trade openness rose to over 100 percent in 2023 from about 40 percent in the 1980's, with highly diversified trade across products and markets."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1sweea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Sweden: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Sweden (IMF Country Report No. 25/79)",
+            "date": "2025-04",
+            "quote": "High uncertainty and a more challenging external backdrop are poised to test Sweden's export-oriented economy"
+          }
+        ]
+      }
+    ],
+    "since_last_year": null,
+    "tension": "The IMF calls Sweden a strong and resilient economy with some of the highest output per worker in Europe. Yet income per person has grown only 0.6 percent a year since 2008, and over 2016–2025 it ranked 9 of 11 among structural peers. The IMF also describes a moderate recovery in 2024, but income per person grew just 0.7 percent that year after falling 0.7 percent in 2023. The IMF's figures for the whole economy are higher, because the population kept rising."
+  }
+}

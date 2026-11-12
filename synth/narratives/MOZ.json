@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "iso3": "MOZ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MOZ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Mozambique IMF Article IV 2025 staff report growth'",
+        "same tier 1 domains: 'Mozambique Macro Poverty Outlook 2025 post-election unrest growth'",
+        "same tier 1 domains: 'Mozambique country economic memorandum growth since end of civil war 1992 hidden debt 2016 slowdown'",
+        "opened: imf.org IMF Country Report No. 26/45 (2025 Article IV staff report)",
+        "opened: imf.org Selected Issues Paper SIP/2026/014",
+        "opened: thedocs.worldbank.org Macro Poverty Outlook Mozambique, October 2026",
+        "opened: worldbank.org Mozambique Country Economic Memorandum page (2022)",
+        "opened: imf.org press release PR25/387 (2025-11-21), not cited",
+        "critic: re-opened all four cited URLs (PDFs text-extracted locally) and checked every quote, date and number against desk/data/MOZ.json"
+      ],
+      "critic_changes": [
+        "Checked all four cited URLs. The IMF and World Bank PDFs were text-extracted locally. Every quote appears on its page, and dates match: SIP/2026/014 and Country Report 26/45 are dated February 2026, the MPO October 2026, the CEM page 2022-06-22. All numbers in the prose match MOZ.json: 1.5, 5.2, -0.4, -4.1 (2020), -3.3 (2025), -3.8 (1995), the 2018 peak, 5.7 percent below peak, 2014 level.",
+        "Arc: removed 'large mining and energy projects lifted output' as a cause of the 1998–2015 era. The CEM page does not give that as the growth driver; replaced it with 'as peace allowed a long recovery'.",
+        "Gas thread: dropped 'largest' because no cited passage says it. Replaced 'Work resumed in late 2025' with the pause ending in October 2025, which the quote supports. Replaced 'main support for a modest recovery' with the World Bank's projection and added the MPO sentence that supports it. Reworded 'the sources note it creates few jobs' because that passage is about extractive industries generally.",
+        "Unrest thread: dropped 'closed businesses' and 'unpaid government bills and costly borrowing', which the cited passages did not support. Extended the IMF quote to include the October 2024 unrest sentence, and added the MPO sentence naming fiscal pressures and foreign exchange shortages as what holds the recovery back.",
+        "since_last_year: removed 'helped by restarted gas construction'. The MPO credits the Q2 2026 pickup to agriculture and services, and a quote was added saying so. Removed 'government arrears' and the claim that the Mozal closure 'weighs on activity': the passage ties Mozal to lower aluminum exports, so the text now says that. Dropped the uncited 'struggled to shake off the unrest' framing.",
+        "Tension: removed 'weak but positive economic growth', because the MPO reports a 0.2 percent contraction in 2025. Removed the uncited 'young, fast-growing population' claim and replaced it with a plain statement that output has not kept pace with the population, using the -0.4 era average from the data."
+      ]
+    },
+    "headline": "Mozambique's post-war boom ended with the 2016 hidden-debt scandal; conflict, shocks and debt strain have left income per person about where it was in 2014.",
+    "arc": "Mozambique's income per person grew only 1.5 percent a year in 1990–1997, a stretch that spans the last years of the civil war and the early peace. From 1998 to 2015 it grew 5.2 percent a year, one of the fastest runs in Africa, as peace allowed a long recovery. Growth broke in 2016, when hidden state borrowing came to light and outside financing dried up, and since then income per person has shrunk by 0.4 percent a year on average. Insurgency in the north from 2017, the storms of 2019 and the pandemic, when income per person fell 4.1 percent in 2020, deepened the slump. After the unrest that followed the October 2024 elections, income per person fell 3.3 percent in 2025. It peaked in 2018, is now 5.7 percent below that peak, and is about where it first was in 2014.",
+    "threads": [
+      {
+        "title": "Peace and a long catch-up",
+        "text": "The end of the civil war in 1992 opened two decades of fast growth, among the highest in the region. In the data, income per person climbs steadily from 1998 to 2015, at 5.2 percent a year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/region/afr/publication/mozambique-country-economic-memorandum-mozambique-needs-a-new-growth-model-for-sustained-inclusive-development",
+            "publisher": "World Bank",
+            "title": "Mozambique Country Economic Memorandum: Mozambique Needs a New Growth Model for Sustained, Inclusive Development",
+            "date": "2022-06-22",
+            "quote": "Growth accelerated remarkably following the end of the civil war, averaging 7.9% between 1993 and 2015—among the highest in sub-Saharan Africa (SSA)."
+          }
+        ]
+      },
+      {
+        "title": "Hidden debts come to light",
+        "text": "In 2016, large loans taken on in secret by state companies were revealed. Outside lending stopped, and the IMF dates the long slowdown from that shock, with weaker investment and productivity since. Debt strain still shapes the economy today.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/selected-issues-papers/2026/english/sipea2026014.pdf",
+            "publisher": "IMF",
+            "title": "Growth Challenges and Policy Priorities in Mozambique (Selected Issues Paper SIP/2026/014)",
+            "date": "2026-02",
+            "quote": "In 2016, previously undisclosed debt that included borrowing of about US$1.4 billion by two SOEs (Proindicus and MAM) came to light."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mozea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Mozambique: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of Mozambique",
+            "date": "2026-02",
+            "quote": "Since the hidden debt scandal in 2016, growth performance has weakened (SIP), poverty rates have risen (Figure 2), and external financing has declined."
+          }
+        ]
+      },
+      {
+        "title": "Insurgency, storms and pandemic",
+        "text": "An insurgency in the north grew from 2017, cyclones struck in 2019 and the pandemic hit in 2020. Each deepened the slowdown that began with the debt crisis; income per person fell 4.1 percent in 2020.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/region/afr/publication/mozambique-country-economic-memorandum-mozambique-needs-a-new-growth-model-for-sustained-inclusive-development",
+            "publisher": "World Bank",
+            "title": "Mozambique Country Economic Memorandum: Mozambique Needs a New Growth Model for Sustained, Inclusive Development",
+            "date": "2022-06-22",
+            "quote": "The slowdown has been exacerbated by the natural disasters in 2019, the escalation of insurgency in Northern Mozambique since 2017, and the pandemic since 2020."
+          }
+        ]
+      },
+      {
+        "title": "Gas project paused, then restarted",
+        "text": "Insecurity in the north paused the onshore gas project in 2021, and the pause ended in October 2025. The World Bank expects gas construction to support a modest recovery. Growth has leaned on mining and gas, which create few jobs.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mozea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Mozambique: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of Mozambique",
+            "date": "2026-02",
+            "quote": "TotalEnergies lifted force majeure on the onshore LNG project in October 2025, ending a pause declared in 2021 due to insecurity in the north."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mozambique",
+            "date": "2026-10",
+            "quote": "Growth is projected to recover to 0.6 percent in 2026, supported by construction activity associated with the TotalEnergies-led LNG project."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mozambique",
+            "date": "2026-10",
+            "quote": "Growth has been concentrated in capital-intensive extractive industries, which generate relatively few jobs and limited spillovers to the broader economy."
+          }
+        ]
+      },
+      {
+        "title": "Unrest and money shortages",
+        "text": "Protests after the October 2024 elections cut output sharply, and the recovery since has been fragile. Shortages of foreign currency and strained public finances have held it back.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1mozea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Mozambique: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Republic of Mozambique",
+            "date": "2026-02",
+            "quote": "The recovery from the post-election social unrest of October 2024 remains fragile. Real GDP contracted by 8 percent q/q in 2024Q4"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mozambique",
+            "date": "2026-10",
+            "quote": "Recovery will remain modest due to fiscal pressures, foreign exchange shortages, and flood-related damage."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Mozambique",
+            "date": "2026-10",
+            "quote": "Foreign exchange shortages, with a backlog estimated at over US$500 million, continued to constrain business activity."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person fell 3.3 percent in 2025. The World Bank reports a modest pickup in the second quarter of 2026, led by farming and services, while foreign currency shortages kept constraining business. The closure of the Mozal aluminum plant is expected to cut aluminum exports.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mozambique",
+          "date": "2026-10",
+          "quote": "Economic activity picked up modestly in the second quarter of 2026, following a 0.2 percent contraction in 2025."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mozambique",
+          "date": "2026-10",
+          "quote": "Real GDP grew by 1.7 percent year-on-year, supported by agriculture and services"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-moz.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Mozambique",
+          "date": "2026-10",
+          "quote": "driven by LNG-related capital imports and lower aluminum exports, due to the closure of Mozal"
+        }
+      ]
+    },
+    "tension": "The sources date the take-off to the end of the civil war, with fast growth from 1993. In the data, income per person still swung hard until 1997, falling 3.8 percent in 1995, so the steady climb only starts in 1998. Since 2016 the sources describe slow economic growth, while income per person has shrunk by 0.4 percent a year, because output has not kept pace with the population."
+  }
+}

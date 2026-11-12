@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "iso3": "UZB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "UZB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Uzbekistan Article IV consultation 2025 staff report",
+        "same tier 1 domains: Uzbekistan Macro Poverty Outlook 2025 growth reforms",
+        "same tier 1 domains: Uzbekistan transition 1990s gradual reform state-led growth 2004-2015 cotton gold gas exports remittances",
+        "same tier 1 domains: Uzbekistan 2017 exchange rate unification currency liberalization reforms growth slowed",
+        "worldbank.org: Uzbekistan Macro Poverty Outlook 2026 mpo-uzb",
+        "Opened: imf.org 2026 Article IV (CR 26/152), imf.org PR 25/206, imf.org 2018 Article IV concluding statement, worldbank.org MPO October 2026, worldbank.org country page, adb.org 2020 country diagnostic study",
+        "Critic re-opened: adb.org 2020 study (PDF text), imf.org 2018 concluding statement, imf.org CR 26/152 (PDF text), thedocs.worldbank.org MPO October 2026 (PDF text)"
+      ],
+      "critic_changes": [
+        "Re-opened all four cited documents (the three PDFs were read as extracted text). The ADB 2020 quotes, the IMF 2018 quote, the IMF CR 26/152 quotes on reform dividends, the fiscal deficit and running above potential, and the World Bank MPO (October 2026) quotes on credit constraints, remittances and H1 2026 growth all appear on the pages with the dates given.",
+        "Thread 'Investment, credit and the state': the IMF quote 'Domestic risks include pressures for procyclical fiscal spending, the continued use of directed and preferential lending, and delays in addressing structural bottlenecks' is not on the page. Replaced it with the page's actual sentence ('Domestic risks include pressures to boost demand through procyclical fiscal spending and directed and preferential lending programs') and reworded the text so it says only that the IMF lists such lending among the risks and that the World Bank ties credit constraints to state dominance and directed lending.",
+        "Thread 'The 2017 opening': removed 'the official exchange rate lost half its value' because that figure is not in the data file and not in a quoted passage; it now says the government freed the currency market. Removed the trailing full stop from the IMF 2018 quote, since the page's line ends with a semicolon. Replaced the World Bank quote 'GDP per capita grew at 4 percent per annum in 2017–25' with the page's sentence that links progress since 2017 to adopting a market-based system. That sentence supports the claim, and the swap keeps a non-data growth figure out of the thread's support. Softened 'describe growth since then as the return on' to 'link growth since then to'.",
+        "Thread 'Gold and money from abroad': the cited passages did not support 'help pay for imports'. The text now says only what the sources show: gold prices helped narrow the 2025 deficit, remittances are mostly from Russia and eased in H1 2026, and gold exports normalized. Added the World Bank sentence on gold exports to support that last claim.",
+        "Arc: removed remittances as a driver of the 2006–2015 boom (the ADB credits the commodity price boom; it mentions remittances only in the 2014–2015 bust). Changed 'ended that boom' to 'slowed growth' to match the source. Changed 'than in most former Soviet economies' to 'than in other' to match the ADB wording. Fixed 'Since then [2017] growth has averaged 4.1 percent a year over 2016–2025', which mismatched the dates, to 'Over 2016–2025 income per person grew 4.1 percent a year'.",
+        "Headline: replaced 'since its 2017 opening' with 'since 2016', because the 4.1 percent era in G4 runs from 2016; also added that the new high was reached in 2025.",
+        "Tension: changed 'exceptionally strong' to 'strong', since the sources say 'robust' or 'strong'. Hedged the population sentence to 'reflects a growing population'.",
+        "All numbers were checked against desk/data/UZB.json: era means -3.6, 3.5, 6.4 and 4.1; income per person first passes its 1990 level in 2006 (1990: 1726.3, 2006: 1807.9); a new high in 2025; growth of 5.7 in 2025, the highest since 6.1 in 2021; investment of 20.2 (2016), 35.3 (2019) and 34.0 (2025); private credit of 10.3 (2016) and 31.2 (2025). All correct.",
+        "Kept tier 1 with 2 distinct recent tier 1 sources cited (IMF CR 26/152, June 2026; World Bank MPO, October 2026). tier1_recent_found stays at the drafter's count of 4. No banned phrases."
+      ]
+    },
+    "headline": "Uzbekistan grew fastest in the 2006–2015 commodity boom; since 2016 income per person has grown more slowly but steadily, reaching a new high in 2025.",
+    "arc": "After independence, income per person fell by 3.6 percent a year over 1990–1997, though output fell less than in other former Soviet economies, helped by rising world prices for cotton. Under a gradual reform that kept a high level of state control, income per person grew 3.5 percent a year over 1998–2005 and did not pass its 1990 level until 2006. Growth then rose to 6.4 percent a year over 2006–2015, carried by high world prices for the country's export commodities. Falling commodity prices from mid-2014 and Russia's 2014–2015 crisis slowed growth, and after President Karimov's death in 2016 the government began in 2017 to free the currency and prices and open the economy. Over 2016–2025 income per person grew 4.1 percent a year, slower than in the boom decade but steady, while investment rose sharply, and it reached a new high in 2025.",
+    "threads": [
+      {
+        "title": "A gradual exit from planning",
+        "about": "history",
+        "text": "After independence the government moved slowly away from central planning, freeing some prices, especially for energy and fuel, while keeping a high level of state control. Output fell less than in other former Soviet economies, helped by rising world prices for cotton, then the main export.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/605746/uzbekistan-job-creation-economic-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Uzbekistan: Quality Job Creation as a Cornerstone for Sustainable Economic Growth",
+            "date": "2020-05",
+            "quote": "It involved cautiously liberalizing prices, especially those of energy and fuel, and maintaining a high level of state control."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/605746/uzbekistan-job-creation-economic-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Uzbekistan: Quality Job Creation as a Cornerstone for Sustainable Economic Growth",
+            "date": "2020-05",
+            "quote": "After independence, Uzbekistan’s output decline was moderate in comparison to that in other ex-Soviet economies"
+          }
+        ]
+      },
+      {
+        "title": "Commodity boom, then a bust",
+        "about": "history",
+        "text": "From 2004 to 2015 growth was fast and rested on high world prices for the country's exports. From mid-2014, lower prices for gas, gold and copper and a financial crisis in Russia cut exports and the money migrant workers sent home.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/605746/uzbekistan-job-creation-economic-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Uzbekistan: Quality Job Creation as a Cornerstone for Sustainable Economic Growth",
+            "date": "2020-05",
+            "quote": "This rapid economic expansion was driven by the global commodity price boom"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/605746/uzbekistan-job-creation-economic-growth.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Uzbekistan: Quality Job Creation as a Cornerstone for Sustainable Economic Growth",
+            "date": "2020-05",
+            "quote": "Furthermore, the Russian Federation suffered from a financial crisis in 2014–2015 that reduced both exports and migrant workers’ remittances."
+          }
+        ]
+      },
+      {
+        "title": "The 2017 opening",
+        "about": "present",
+        "text": "Before 2017, policy favoured state intervention, import substitution and controls on foreign exchange. In September 2017 the government freed the currency market, and reforms to prices and state firms followed. The IMF and the World Bank both link growth since then to this turn to the market.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2018/03/14/ms031418-uzbekistan-staff-concluding-statement-of-the-2018-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Uzbekistan: Staff Concluding Statement of the 2018 Article IV Mission",
+            "date": "2018-03-14",
+            "quote": "Historic policy stance emphasized state intervention, import substitution, FX restrictions, and limited regional trade"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1uzbea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Uzbekistan: 2026 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-06",
+            "quote": "Uzbekistan has been reaping dividends from its reform agenda launched in 2017 to strengthen policies and liberalize the economy."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-uzb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Uzbekistan",
+            "date": "2026-10",
+            "quote": "Since 2017 Uzbekistan has made significant progress in transforming its economy and accelerating job creation by adopting a market-based system."
+          }
+        ]
+      },
+      {
+        "title": "Investment, credit and the state",
+        "about": "present",
+        "text": "Investment rose from 20.2 percent of GDP in 2016 to 35.3 percent in 2019 and was 34.0 percent in 2025, while bank credit to the private sector grew from 10.3 to 31.2 percent of GDP between 2016 and 2025. The IMF lists directed and preferential lending among the risks, and the World Bank says state dominance and directed lending leave many smaller firms short of credit.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1uzbea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Uzbekistan: 2026 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-06",
+            "quote": "Domestic risks include pressures to boost demand through procyclical fiscal spending and directed and preferential lending programs"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-uzb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Uzbekistan",
+            "date": "2026-10",
+            "quote": "over 40 percent of micro, small, and medium-sized enterprises are credit-constrained due to state dominance, directed lending, and gaps in financial infrastructure"
+          }
+        ]
+      },
+      {
+        "title": "Gold and money from abroad",
+        "about": "present",
+        "text": "High gold prices helped narrow the budget deficit in 2025, and money sent home by workers abroad, mostly from Russia, remains large. Remittances eased a little in the first half of 2026, while gold exports fell back after strong growth a year earlier.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1uzbea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Uzbekistan: 2026 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-06",
+            "quote": "The consolidated fiscal deficit narrowed to 2.1 percent in 2025, supported by buoyant economic activity and high gold prices."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-uzb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Uzbekistan",
+            "date": "2026-10",
+            "quote": "Net remittances reached 9 percent of GDP in H1 2026 (from 10 percent of GDP a year earlier), with Russia remaining the main source"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-uzb.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Uzbekistan",
+            "date": "2026-10",
+            "quote": "Exports decreased by 8.8 percent yoy in H1 2026 (in USD terms) as gold exports normalized after high growth in the same period last year."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up. Income per person grew 5.7 percent in 2025, the fastest since 2021, and the economy kept speeding up into 2026 on strong spending by households and on investment. In June 2026 the IMF judged that the economy is probably running above its potential.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1uzbea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Republic of Uzbekistan: 2026 Article IV Consultation-Press Release; and Staff Report",
+          "date": "2026-06",
+          "quote": "economic activity is likely running above potential amid strong domestic demand, and global uncertainty and risks loom large"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-uzb.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Uzbekistan",
+          "date": "2026-10",
+          "quote": "Real GDP grew by 8.5 percent in H1 2026, driven by domestic demand."
+        }
+      ]
+    },
+    "tension": "The IMF and the World Bank describe the years since 2017 as a reform success and recent growth as strong. The data agree that income per person is at a new high, but they show the decade since 2016 growing more slowly, at 4.1 percent a year, than the commodity-boom decade before it, at 6.4. Part of the gap between the fast GDP growth the sources report and the slower rise in income per person reflects a growing population."
+  }
+}

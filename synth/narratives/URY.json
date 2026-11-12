@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "iso3": "URY",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "URY",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'Uruguay Article IV consultation 2025 staff report growth'",
+        "tier 1 domains: 'Uruguay economic outlook World Bank Macro Poverty Outlook 2025'",
+        "tier 1 domains: 'Uruguay 2002 banking crisis Argentina contagion recovery commodity boom growth'",
+        "tier 1 domains: 'Uruguay systematic country diagnostic growth slowdown after 2014 end of commodity boom'",
+        "Opened: imf.org IMF Country Report 25/287 (2025 Article IV) and PR 25/352; thedocs.worldbank.org Macro Poverty Outlook Uruguay (October 2026); documents1.worldbank.org Uruguay Systematic Country Diagnostic Update (March 2022); imf.org IMF Country Report 05/202 (June 2005)",
+        "Tier 2 (UN) not searched: tier 1 gave 2 recent sources",
+        "Critic: re-opened all four cited documents (imf.org CR 05/202, documents1.worldbank.org SCD Update txt, thedocs.worldbank.org mpo-ury.pdf, imf.org CR 25/287) and checked every passage against the extracted text"
+      ],
+      "critic_changes": [
+        "All four cited documents re-opened and their text extracted; every quoted passage was found verbatim (one small fix: 'banking system— dollarization' rendered as on the page without the line-break space). Dates confirmed: CR 05/202 June 2005, SCD Update March 2022, MPO October 2026, CR 25/287 October 2025 (Board 24 Oct 2025).",
+        "Every number checked against desk/data/URY.json: eras 3.7/0.1/5.2/1.3, 2002 -7.9, 2020 -7.4, 2023 0.8, 2024 3.4, 2025 1.8, G1 avg_10y 1.3 over 2016–2025, G3 peak 2025 all match; no changes needed.",
+        "Arc: 'worst financial crisis' changed to 'most severe financial crisis' to match the IMF's words; added that Brazil and Argentina were the main trading partners (IMF passage) instead of the looser 'hit exports'; dropped 'as the economy rebounded' as redundant.",
+        "Thread 'Contagion from Argentina': 'Uruguay sold much of what it made to Brazil and Argentina' overstated the source (main trading partners, about half of exports) and was reworded; dropped the dated crisis years 1999/2002 pairing for Brazil and Argentina; replaced the 'rapid growth in 1990–98' citation (did not support the thread) with the IMF passages on the trading-partner crises and on dollarization.",
+        "Thread 'The commodity boom and its end': 'high prices for farm exports' and 'strong growth in the region ... through 2013' were not in the passages; reworded to commodity prices, good external conditions and investment, and added the SCD's 2012–13 passage as a citation.",
+        "Thread 'Weather and a narrow export base': 'earns much of its income from a few farm and forest exports' overstated the MPO's 'relatively narrow commodity export base'; reworded. 'A severe drought cut output in 2023' recast so the drought is a fact of 2023 rather than an unsourced causal claim on output; the 2024 rebound now tied to the IMF's 'surge in agricultural exports'.",
+        "Thread 'A shrinking, ageing population': dropped the speculative sentence 'Fewer workers ahead will weigh on total output, even as each person's share of it can still rise' (not in any cited passage); replaced with the IMF's statement that aging poses risks to growth, cited.",
+        "Thread 'A new government in 2025': 'keeping prices and public finances stable' narrowed to 'keeping the economy stable' to match 'macroeconomic stability'; added the IMF passage that confirms the March 2025 change of government.",
+        "since_last_year: 'says growth slowed again in 2026' changed to 'expects growth to slow again in 2026', since the MPO gives a 2026 estimate; noted that the net-exports passage refers to the second quarter of 2026; 'slower than in 2024' now gives the 2024 figure from the data (3.4).",
+        "Tension: 'The sources also date the turn to 2012–13 or 2015' corrected: the SCD dates the fall in export prices and partner growth to 2012–13; no source dates the turn to 2015.",
+        "No banned phrases and no recommendation or verdict language found. Recent tier 1 sources: IMF CR 25/287 (2025-10) and World Bank MPO (2026-10) = 2, so the story stays tier 1."
+      ]
+    },
+    "headline": "Uruguay's income per person surged in the commodity boom after the 2002 crisis, but has grown only 1.3 percent a year since 2014.",
+    "arc": "Income per person in Uruguay grew 3.7 percent a year in 1990–1997, a time the IMF calls rapid growth. In 1998–2005 growth averaged just 0.1 percent a year: crises in Brazil and Argentina, its main trading partners, pushed it into recession, and in 2002 a run on the banks that began with Argentine depositors became the country's most severe financial crisis, with income per person falling 7.9 percent that year. Growth then ran at 5.2 percent a year in 2006–2013, as commodity prices boomed, investment rose and economic management improved after the crisis. Since 2014 growth has averaged 1.3 percent a year, as export prices and growth in trading partners fell and productivity stalled, and the pandemic (a fall of 7.4 percent in 2020) and a severe drought in 2023 added fresh shocks. Even so, income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Contagion from Argentina, 2002",
+        "text": "Brazil and Argentina were Uruguay's main trading partners, so their crises dragged it into a long recession from 1999. In 2002 Argentine savers pulled money out of Uruguayan banks, and the run spread through a banking system that relied heavily on dollars.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05202.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: Ex Post Assessment of Longer-Term Program Engagement—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Uruguay (IMF Country Report No. 05/202)",
+            "date": "2005-06",
+            "quote": "The crisis was triggered by deposit withdrawals from cash-strapped Argentine residents and soon developed into a more generalized run on the banks."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05202.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: Ex Post Assessment of Longer-Term Program Engagement—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Uruguay (IMF Country Report No. 05/202)",
+            "date": "2005-06",
+            "quote": "These included crises in Brazil and Argentina—Uruguay’s main trading partners, jointly accounting for almost one half of Uruguay’s exports in the mid-1990s"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr05202.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: Ex Post Assessment of Longer-Term Program Engagement—Staff Report; Public Information Notice on the Executive Board Discussion; and Statement by the Executive Director for Uruguay (IMF Country Report No. 05/202)",
+            "date": "2005-06",
+            "quote": "the crisis was made possible and more damaging by long standing vulnerabilities in the banking system—dollarization but also insufficient prudential regulation"
+          }
+        ]
+      },
+      {
+        "title": "The commodity boom and its end",
+        "text": "After the crisis, a boom in commodity prices, good conditions abroad and a wave of investment lifted growth. By 2012–13 export prices and growth in the main trading partners had started to fall, and growth later slowed with them.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/894701647439124965/txt/Uruguay-Systematic-Country-Diagnostic-Update.txt",
+            "publisher": "World Bank",
+            "title": "Uruguay Systematic Country Diagnostic Update",
+            "date": "2022-03",
+            "quote": "In line with the region, the end of the commodity price boom ushered in a period of lower growth rates and less poverty reduction"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/894701647439124965/txt/Uruguay-Systematic-Country-Diagnostic-Update.txt",
+            "publisher": "World Bank",
+            "title": "Uruguay Systematic Country Diagnostic Update",
+            "date": "2022-03",
+            "quote": "Export prices and economic growth among main trading partners had already started to decline by 2012–13."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/894701647439124965/txt/Uruguay-Systematic-Country-Diagnostic-Update.txt",
+            "publisher": "World Bank",
+            "title": "Uruguay Systematic Country Diagnostic Update",
+            "date": "2022-03",
+            "quote": "The share of investment over GDP nearly doubled, from 12 percent in 2002 to a high of 22 percent in 2012."
+          }
+        ]
+      },
+      {
+        "title": "Weather and a narrow export base",
+        "text": "Uruguay's exports rest on a fairly narrow set of commodities, so rain and world prices move growth. In 2023, a year of severe drought, income per person grew 0.8 percent; it rebounded to 3.4 percent in 2024 on a surge in farm exports.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ury.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Uruguay",
+            "date": "2026-10",
+            "quote": "Uruguay remains exposed to external and climate-related shocks, largely due to its relatively narrow commodity export base, reliance on imported fuels and production inputs"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1uryea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Uruguay (IMF Country Report No. 25/287)",
+            "date": "2025-10",
+            "quote": "After a severe drought in 2023, Uruguay’s economy rebounded strongly in 2024 driven by a surge in agricultural exports."
+          }
+        ]
+      },
+      {
+        "title": "A shrinking, aging population",
+        "text": "Uruguay's population stopped growing around 2020 and is getting older. The IMF sees this aging as a risk to growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1uryea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Uruguay (IMF Country Report No. 25/287)",
+            "date": "2025-10",
+            "quote": "Uruguay’s population peaked at 3.5 million in 2020 and is expected to decline steadily to 3.0 million in 2070 alongside population aging."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1uryea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Uruguay (IMF Country Report No. 25/287)",
+            "date": "2025-10",
+            "quote": "Population aging poses risks to growth and sustainability"
+          }
+        ]
+      },
+      {
+        "title": "A new government in 2025",
+        "text": "A new government took office in March 2025. It has set out plans to raise private investment while keeping the economy stable and widening social protection.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1uryea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Uruguay (IMF Country Report No. 25/287)",
+            "date": "2025-10",
+            "quote": "A new administration led by president Yamandú Orsi took office in March 2025, marking the return of the Frente Amplio coalition to power."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1uryea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Uruguay: 2025 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Uruguay (IMF Country Report No. 25/287)",
+            "date": "2025-10",
+            "quote": "The new administration’s agenda seeks to balance inclusive growth with macroeconomic stability, boosting private investment and strengthening social protection."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 1.8 percent in 2025, down from 3.4 percent in 2024. The World Bank's October 2026 note expects growth to slow again in 2026. Last summer's drought cut soybean yields, and in the second quarter weaker net exports outweighed strong spending at home.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ury.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Uruguay",
+          "date": "2026-10",
+          "quote": "Real GDP growth is expected to moderate to 1.2 percent in 2026, reflecting external headwinds and reduced soybean yields"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ury.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Uruguay",
+          "date": "2026-10",
+          "quote": "Strong domestic demand was outweighed by weaker net exports."
+        }
+      ]
+    },
+    "tension": "The sources describe a decade of weak growth in total output. Income per person did a little better, at 1.3 percent a year over 2016–2025, and reached its highest level yet in 2025, because the population has stopped growing. The sources also date the start of the turn to 2012–13, when export prices and growth in trading partners began to fall, while the data put the break in 2014."
+  }
+}

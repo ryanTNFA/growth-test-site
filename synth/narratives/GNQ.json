@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "GNQ",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GNQ",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Equatorial Guinea IMF Article IV 2025 staff report press release'",
+        "same tier 1 domains: 'Equatorial Guinea Macro Poverty Outlook economic outlook hydrocarbon decline'",
+        "same tier 1 domains: 'Equatorial Guinea oil discovery 1990s Zafiro production boom growth history'",
+        "opened: imf.org PR 25/267 press release; imf.org Country Report 25/224 (PDF); thedocs.worldbank.org MPO October 2026 (PDF); worldbank.org Country Economic Memorandum 2025 page; worldbank.org Economic Update 2025 page; afdb.org economic outlook (403, not used)",
+        "critic re-opened: worldbank.org CEM 2025 page; worldbank.org Economic Update 2025 page; thedocs.worldbank.org mpo-gnq.pdf (text extracted); imf.org Country Report 25/224 PDF (text extracted)"
+      ],
+      "critic_changes": [
+        "All 14 citations checked against the pages (the two PDFs by extracting their text): every quote, URL, publisher and date matched, and none was dropped. The IMF quote 'Since the 2014 oil price crisis...' comes from the Executive Director's statement inside Country Report 25/224. It is kept because it is on the cited page.",
+        "Every number in the story was checked against desk/data/GNQ.json (29.9, 10.4, -6.1 era means; 2008 peak; 65.5 shortfall; 2001 level; 140.5 in 1997; 6.7 over 2016–2025; 8.1 in 2025; 13.0 in 2010; investment 53.6 in 2009, 46.6 in 2012, 6.4 in 2025). All matched.",
+        "Arc: replaced 'heavy public spending on roads, ports and public buildings' with 'from 2008, by large infrastructure projects'. The sources mention infrastructure projects from 2008 but say nothing about ports or public buildings.",
+        "Headline: changed 'fell 65.5 percent below' to 'fell to 65.5 percent below' (149 characters).",
+        "Thread 'A building spree, then cuts': replaced 'Oil money paid for a wave of public works in the late 2000s and early 2010s' with what the source says (infrastructure projects under a national development plan from 2008).",
+        "Thread 'A narrow economy beyond oil': dropped 'Farming, services and industry ... never grew big enough', which overstates the sources. Added the World Bank MPO passage saying the non-oil economy was too small and undiversified to compensate. Changed 'held back private firms' to 'held back private investment' to match the IMF passage.",
+        "Thread 'Governance and a reform program': 'since 2024 ... staff-monitored program' had no supporting passage. Added the IMF passage dating the program's approval to June 2024. Swapped the MPO 'ambitious reform agenda' quote for the MPO passage that lists the tax, anti-corruption and procurement reforms the text names.",
+        "since_last_year: the text said the economy kept shrinking into 2026, but it cited only a projection. Added the MPO passage reporting the Q1 2026 contraction (cut to 22 words), and reworded the second sentence to match the sources: falling oil and gas output outweighed growth elsewhere."
+      ]
+    },
+    "headline": "Oil made Equatorial Guinea one of Africa's fastest-growing economies; as its fields aged, income per person fell to 65.5 percent below its 2008 peak.",
+    "arc": "Income per person in Equatorial Guinea grew by 29.9 percent a year over 1990–2001, as large oil reserves found in the 1990s made the country one of Sub-Saharan Africa's biggest oil producers. Growth slowed to 10.4 percent a year in 2002–2009, still carried by oil and, from 2008, by large infrastructure projects, and income per person peaked in 2008. Since 2010 it has fallen by 6.1 percent a year on average, as oil revenues dropped after the 2014 price crash and output from maturing fields declined from 2015. The economy outside oil and gas was too small and too narrow to fill the gap, and investment fell from 53.6 percent of GDP in 2009 to 6.4 percent in 2025. By 2025 income per person was 65.5 percent below its 2008 peak, about where it first was in 2001.",
+    "threads": [
+      {
+        "title": "Oil discovery and the boom",
+        "text": "Large oil finds in the 1990s turned a shrinking economy into one of the region's fastest growers. Income per person grew by 140.5 percent in 1997 alone, and growth averaged 29.9 percent a year over 1990–2001.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/equatorialguinea/publication/equatorial-guinea-country-economic-memorandum-2025-building-the-foundations-for-renewed-more-diversified-and-inclusive-growth",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum report on Equatorial Guinea 2025: building the foundations for renewed, more diversified and inclusive growth in Equatorial Guinea",
+            "date": "2025-03-04",
+            "quote": "The discovery of large oil reserves in the 1990s propelled Equatorial Guinea to become the third-largest oil producer in Sub-Saharan Africa (SSA)"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/equatorialguinea/publication/equatorial-guinea-country-economic-memorandum-2025-building-the-foundations-for-renewed-more-diversified-and-inclusive-growth",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum report on Equatorial Guinea 2025: building the foundations for renewed, more diversified and inclusive growth in Equatorial Guinea",
+            "date": "2025-03-04",
+            "quote": "Between 1996 and 2004, annual per capita GDP growth averaged 40% with Equatorial Guinea reaching Upper-Middle-Income status in 2004."
+          }
+        ]
+      },
+      {
+        "title": "A building spree, then cuts",
+        "text": "A national development plan brought a wave of infrastructure projects from 2008, and investment reached 53.6 percent of GDP in 2009. After oil revenues fell in 2014, public investment was cut back, and investment dropped to 6.4 percent of GDP by 2025.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/country/equatorialguinea/publication/equatorial-guinea-economic-update-2025-managing-equatorial-guinea-wealth-for-sustainable-growth-and-development",
+            "publisher": "World Bank",
+            "title": "Equatorial Guinea Economic Update 2025: Managing Equatorial Guinea's Wealth for Sustainable Growth and Development",
+            "date": "2025-07-21",
+            "quote": "The 2008-2017 period marked a transformative era for the nation, with substantial infrastructure development projects under the National Development Plan 2020"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/equatorialguinea/publication/equatorial-guinea-economic-update-2025-managing-equatorial-guinea-wealth-for-sustainable-growth-and-development",
+            "publisher": "World Bank",
+            "title": "Equatorial Guinea Economic Update 2025: Managing Equatorial Guinea's Wealth for Sustainable Growth and Development",
+            "date": "2025-07-21",
+            "quote": "since the end of the oil boom in 2014, the accumulation has slowed due to falling oil revenues and lower public investment."
+          }
+        ]
+      },
+      {
+        "title": "Ageing oil and gas fields",
+        "text": "Oil output has been falling for a decade as the main fields mature, and the economy has shrunk in most years since. Income per person fell by an average of 6.7 percent a year over 2016–2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+            "date": "2026-10",
+            "quote": "Equatorial Guinea’s heavy dependence on hydrocarbons, limited economic diversification, and declining oil production from maturing fields have driven a decade-long contraction."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1gnqea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Equatorial Guinea: Staff Report for the 2025 Article IV Consultation and First and Second Reviews Under the Staff-Monitored Program (IMF Country Report No. 25/224)",
+            "date": "2025-08",
+            "quote": "The economy has contracted in seven of the past nine years, as hydrocarbon production collapsed"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1gnqea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Equatorial Guinea: Staff Report for the 2025 Article IV Consultation and First and Second Reviews Under the Staff-Monitored Program (IMF Country Report No. 25/224)",
+            "date": "2025-08",
+            "quote": "Since the 2014 oil price crisis, Equatorial Guinea (EG) continues to confront the challenge of the depleting hydrocarbon production and volatile oil prices."
+          }
+        ]
+      },
+      {
+        "title": "A narrow economy beyond oil",
+        "text": "The economy outside oil and gas stayed too small and too narrow to take over as oil faded. The IMF adds that weak banks and little access to finance have held back private investment.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+            "date": "2026-10",
+            "quote": "With the non-oil economy too small and undiversified to compensate, over 2016 to 2025 the economy recorded seven recessions"
+          },
+          {
+            "url": "https://www.worldbank.org/en/country/equatorialguinea/publication/equatorial-guinea-country-economic-memorandum-2025-building-the-foundations-for-renewed-more-diversified-and-inclusive-growth",
+            "publisher": "World Bank",
+            "title": "Country Economic Memorandum report on Equatorial Guinea 2025: building the foundations for renewed, more diversified and inclusive growth in Equatorial Guinea",
+            "date": "2025-03-04",
+            "quote": "the secular decline of Equatorial Guinea’s hydrocarbon production and revenues since 2015, combined with past shortfalls in diversifying the economy"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1gnqea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Equatorial Guinea: Staff Report for the 2025 Article IV Consultation and First and Second Reviews Under the Staff-Monitored Program (IMF Country Report No. 25/224)",
+            "date": "2025-08",
+            "quote": "Private sector investment has been stifled by low financial inclusion and a weakened banking system."
+          }
+        ]
+      },
+      {
+        "title": "Governance and a reform program",
+        "text": "The IMF describes weak governance that raises the cost of doing business. An IMF staff-monitored program began in June 2024, and the government has set out reforms to taxes, procurement and anti-corruption rules.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1gnqea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Equatorial Guinea: Staff Report for the 2025 Article IV Consultation and First and Second Reviews Under the Staff-Monitored Program (IMF Country Report No. 25/224)",
+            "date": "2025-08",
+            "quote": "A deficient governance framework makes doing business costly."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1gnqea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Equatorial Guinea: Staff Report for the 2025 Article IV Consultation and First and Second Reviews Under the Staff-Monitored Program (IMF Country Report No. 25/224)",
+            "date": "2025-08",
+            "quote": "Fund Management approved a 12-month Staff Monitored Program (SMP) in June 2024 to establish the reform track record required for a potential IMF financing arrangement."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+            "date": "2026-10",
+            "quote": "Reforms relate to tax and anti-corruption reforms, a new procurement law, state-owned enterprise audits, customs digitalization, progress toward a Treasury Single Account"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil output fell sharply in 2025 as disruptions hit maturing fields, and income per person fell by 8.1 percent that year. The World Bank's October 2026 outlook says the downturn continued in 2026, as falling oil and gas output outweighed growth in the rest of the economy.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+          "date": "2026-10",
+          "quote": "GDP contracted by an estimated 5.8 percent in 2025 as oil production declined by 19 percent amid disruptions at maturing fields."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+          "date": "2026-10",
+          "quote": "The downturn continued in 2026, with GDP contracting by 4.1 percent year-on-year in Q1, as an 11.1 percent decline in hydrocarbon output"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-gnq.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Equatorial Guinea (October 2026)",
+          "date": "2026-10",
+          "quote": "GDP projected to contract by about 1 percent per year over 2026–27 as declining hydrocarbon production outweighs gains in the non-oil economy"
+        }
+      ]
+    },
+    "tension": "The sources date the end of the oil boom to 2014 and the fall in oil output to 2015. In the data, income per person peaked in 2008 and fell by 13.0 percent in 2010, while investment was still 46.6 percent of GDP in 2012. The sources do not explain this earlier turn."
+  }
+}

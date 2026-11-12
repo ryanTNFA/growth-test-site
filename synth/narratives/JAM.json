@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "iso3": "JAM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "JAM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "WebSearch (tier 1: imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Jamaica Article IV 2025 IMF staff report Hurricane Melissa growth",
+        "WebSearch (tier 1 domains): Jamaica Macro Poverty Outlook World Bank growth debt reduction",
+        "WebSearch (tier 1 domains): Jamaica decades of low growth high debt 1990s financial crisis debt exchange 2010 2013 Extended Fund Facility",
+        "Opened: thedocs.worldbank.org Jamaica MPO (October 2026)",
+        "Opened: imf.org F&D 'Debt Reduction Lessons from Jamaica' (March 2026)",
+        "Opened: imf.org PR 26/8 (16 January 2026)",
+        "Opened: imf.org PR 25/219 (25 June 2025)",
+        "Opened: imf.org Country Report 13/126 (May 2013)",
+        "Opened: imf.org Country Report 22/44, Selected Issues (February 2022)",
+        "Opened: imf.org IMF Survey on the 2013 Extended Arrangement (not cited)",
+        "Tried: publications.iadb.org 'Development Challenges in Jamaica' (HTTP 403, not cited)",
+        "Critic: re-opened every cited URL with WebFetch; PDF text extracted locally to check quotes word for word"
+      ],
+      "critic_changes": [
+        "I opened all six cited documents. For the three World Bank and IMF PDFs I extracted the text locally. Every quote in the draft appears on its page word for word, and every date matches the document (MPO October 2026, F&D March 2026, PR 25/219 25 June 2025, PR 26/8 16 January 2026, CR 13/126 May 2013, CR 22/44 February 2022).",
+        "Headline: changed 'a hard-won reset lifted income per person to a record' to 'after a hard-won reset, income per person hit a record'. The sources do not say the reset caused the record. Also changed 'just before' to 'two years before', because the gap was 2023 to 2025.",
+        "Thread 'Debt cut, credibility rebuilt': removed the claim that the IMF and World Bank call the record 'rare'. Neither the F&D article nor the MPO says this. I replaced the IMF PR 25/219 citation with two World Bank MPO passages. They support the large surpluses, the credibility gain and the claim that the fiscal position helped cushion the hurricane, which the draft had stated without support.",
+        "Thread 'A failed program, then a reset': changed 'cross-party agreement' and 'a committee that publicly tracked its progress' to what the F&D article says. The agreement was signed by the government, the opposition, unions and employers, and the committee was set up 'to monitor and report on implementation'. I added the passage on the agreement, and extended the EPOC quote to the full clause on the page. I removed 'began with a debt exchange' because no cited passage supports it.",
+        "Thread 'A banking crisis and heavy debt': changed 'was contained' to match the source, which says the deposit guarantee restored stability. I added the CR 22/44 passage on high interest rates, because the claim about a decade of high interest costs had no support.",
+        "Thread 'Storms and a tourism economy': the claim that Melissa's damage was more than half a year's output had no cited passage, so I added the MPO passage (56.7 percent of 2024 GDP). To stay within 3 citations, I dropped the 2022 pandemic quote and the pandemic mention from this thread. The pandemic stays in the arc as data (the 8.5 percent fall in 2020), and the arc's tourism cause comes from CR 22/44, which is still cited.",
+        "Thread 'Low productivity, crime, informality': removed 'record-low unemployment'. Unemployment is not among the allowed data fields, and no cited passage supports it. I changed 'stable finances' to 'stronger public finances'. I replaced 'high costs for business' with 'barriers to competition', which the cited IMF passage does support.",
+        "Arc: changed 'a period the IMF ties to a mid-1990s banking crisis' to 'an era the IMF links to a 1996 banking crisis', and 'a decade of large budget surpluses' to 'more than a decade', to match the F&D article. All figures match desk/data/JAM.json: 1.2, -0.8, 1.4, -4.7 in 2009, -8.5 in 2020, the 2023 peak, 0.4 percent below the peak, and 2022 as the first year above the 1972 level.",
+        "since_last_year: changed 'emergency loan' to 'emergency disbursement', following the IMF press release title. I added the MPO passage on the projected 2026 contraction and the recovery through reconstruction, which the draft had stated without support. I removed the specific 'rebound in 2027' because the passage I added does not name the year.",
+        "Kept tier 1, with 4 distinct recent tier 1 sources (MPO 2026-10, F&D 2026-03, PR 26/8 2026-01, PR 25/219 2025-06). Each 'present' thread still has a citation from 2023 or later. No banned phrases and no recommendations."
+      ]
+    },
+    "headline": "Jamaica spent decades under heavy debt; after a hard-won reset, income per person hit a record in 2023, two years before Hurricane Melissa struck.",
+    "arc": "Income per person in Jamaica grew 1.2 percent a year from 1990 to 2007, an era the IMF links to a 1996 banking crisis whose rescue added heavily to public debt. From 2008 to 2015 it shrank by 0.8 percent a year, including a 4.7 percent fall in 2009, while a 2010 IMF-backed program went off track and debt stayed very high. A new program in 2013 began more than a decade of large budget surpluses that cut public debt, and growth recovered to 1.4 percent a year in 2016–2025, despite an 8.5 percent fall in 2020 when the pandemic hit tourism hard. In 2022 income per person passed its 1972 level for the first time, and in 2023 it reached the highest level on record. It then slipped after storms in 2024, and by 2025 it was 0.4 percent below the 2023 peak, with Hurricane Melissa striking in October 2025. The World Bank calls growth modest despite this progress, and lists low productivity, crime and informality among the long-running drags.",
+    "threads": [
+      {
+        "title": "A banking crisis and heavy debt",
+        "about": "history",
+        "text": "The IMF traces Jamaica's long stretch of weak growth to a cycle of deficits and debt. A banking crisis broke out in 1996; a blanket deposit guarantee restored stability, but the rescue added a large share of a year's output to public debt, and high interest costs followed for more than a decade.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1jamea2022002.pdf",
+            "publisher": "IMF",
+            "title": "Jamaica: Selected Issues (IMF Country Report No. 22/44)",
+            "date": "2022-02",
+            "quote": "In 1996, a banking crisis ensued. A blanket deposit guarantee helped restore stability but added almost 40 percent of GDP to the debt."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2022/english/1jamea2022002.pdf",
+            "publisher": "IMF",
+            "title": "Jamaica: Selected Issues (IMF Country Report No. 22/44)",
+            "date": "2022-02",
+            "quote": "High interest rates and rising debt then led to a renewed vicious cycle, with interest payments peaking at 17 percent of GDP in 2009"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13126.pdf",
+            "publisher": "IMF",
+            "title": "Jamaica: Request for an Extended Arrangement under the Extended Fund Facility (IMF Country Report No. 13/126)",
+            "date": "2013-05",
+            "quote": "During most of the past three decades, Jamaica has suffered from very low growth, high public debt, and serious social challenges."
+          }
+        ]
+      },
+      {
+        "title": "A failed program, then a reset",
+        "about": "history",
+        "text": "An IMF-backed program in 2010 went off track within a year, which the IMF says hurt confidence and growth; this was the era when income per person shrank. In 2013 a new program started, backed by an agreement signed by the government, the opposition, unions and employers, and a committee set up to monitor and report on it.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13126.pdf",
+            "publisher": "IMF",
+            "title": "Jamaica: Request for an Extended Arrangement under the Extended Fund Facility (IMF Country Report No. 13/126)",
+            "date": "2013-05",
+            "quote": "A Stand-By Arrangement approved by the Fund Board in February 2010 soon went off-track, which eroded confidence, lowered economic growth"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/fandd/issues/2026/03/debt-reduction-lessons-from-jamaica",
+            "publisher": "IMF",
+            "title": "Debt Reduction Lessons from Jamaica",
+            "date": "2026-03",
+            "quote": "negotiated and signed by the government, political opposition, labor unions, and employer associations"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/fandd/issues/2026/03/debt-reduction-lessons-from-jamaica",
+            "publisher": "IMF",
+            "title": "Debt Reduction Lessons from Jamaica",
+            "date": "2026-03",
+            "quote": "The Economic Programme Oversight Committee (EPOC) was created in 2013 to monitor and report on implementation"
+          }
+        ]
+      },
+      {
+        "title": "Debt cut, credibility rebuilt",
+        "about": "present",
+        "text": "For more than a decade Jamaica ran large budget surpluses and cut public debt sharply, which the World Bank says strengthened policy credibility. That stronger fiscal position framed the 2016–2025 recovery, and the World Bank says it helped cushion the 2025 hurricane.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/publications/fandd/issues/2026/03/debt-reduction-lessons-from-jamaica",
+            "publisher": "IMF",
+            "title": "Debt Reduction Lessons from Jamaica",
+            "date": "2026-03",
+            "quote": "Jamaica reduced its public-debt-to-GDP ratio from 140 percent in 2012 to 62 percent in 2024."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "Over the past decade, Jamaica sustained large primary surpluses and implemented reforms that strengthened policy credibility"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "A strong fiscal framework, disaster-risk financing arrangements, and multilateral support helped cushion the shock."
+          }
+        ]
+      },
+      {
+        "title": "Storms and a tourism economy",
+        "about": "present",
+        "text": "Tourism and farming carry much of Jamaica's jobs, so storms hit income quickly: Hurricane Beryl in 2024 and Hurricane Melissa in October 2025. The World Bank puts Melissa's damage and losses at more than half of a year's output.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "Jamaica remains highly exposed to climate and external shocks, particularly through tourism and agriculture, which together account for more than one-third of employment."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "caused damages and losses estimated at US$12.2 billion (56.7 percent of 2024 GDP), disrupted the recovery"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/25/pr25219-jamaica-imf-executive-board-concludes-2025-article-iv-consultation-with-jamaica",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Jamaica",
+            "date": "2025-06-25",
+            "quote": "The economy declined in FY2024/25 due to hurricane Beryl and tropical storm Raphael"
+          }
+        ]
+      },
+      {
+        "title": "Low productivity, crime, informality",
+        "about": "present",
+        "text": "Even with stronger public finances, growth in income per person stayed slow. Both the World Bank and the IMF describe the same long-running drags: low productivity, crime, a large informal sector and barriers to competition.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "Crime and labor informality, which accounts for roughly half of non-agricultural employment, further weigh on competitiveness, investment climate and job quality."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/25/pr25219-jamaica-imf-executive-board-concludes-2025-article-iv-consultation-with-jamaica",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Jamaica",
+            "date": "2025-06-25",
+            "quote": "Low productivity from misallocation of resources, high crime, barriers to competition, poor educational outcomes,"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Jamaica",
+            "date": "2026-10",
+            "quote": "despite considerable macroeconomic progress, growth has remained modest, with real GDP per capita rising by 1.4 percent over the past decade."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Hurricane Melissa struck in October 2025 and reversed the recovery. The fiscal rules were suspended to pay for relief and rebuilding, the IMF approved an emergency disbursement in January 2026, and output fell sharply in early 2026. The World Bank expects the economy to shrink in 2026 and recover through reconstruction after that.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Jamaica",
+          "date": "2026-10",
+          "quote": "GDP contracted by 4.1 percent year-on-year in Q1 2026 amid ongoing sectoral weakness and delays in restoring productive capacity."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Jamaica",
+          "date": "2026-10",
+          "quote": "The fiscal rules were suspended under the escape clause to facilitate recovery efforts."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-jam.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Jamaica",
+          "date": "2026-10",
+          "quote": "Economic activity is projected to contract in 2026 before recovering through reconstruction, though risks remain."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/01/16/pr-26008-jamaica-imf-approves-a-usd-415-million-disburse-to-address-hurricane-melissa",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Approves a US$ 415 Million Disbursement to Jamaica to Address the Impact of Hurricane Melissa",
+          "date": "2026-01-16",
+          "quote": "Hurricane Melissa has caused unprecedented destruction"
+        }
+      ]
+    },
+    "tension": "The annual data end in 2025 and show income per person only 0.4 percent below its 2023 peak, which reads as a small dip. The sources describe a much larger shock: Hurricane Melissa struck late in 2025, the IMF calls the destruction unprecedented, and the World Bank expects the economy to shrink in 2026. Most of that hit falls after the last year in the data."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "iso3": "DNK",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "DNK",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org: Denmark Article IV consultation 2025 staff concluding statement",
+        "oecd.org: OECD Economic Surveys Denmark 2025",
+        "imf.org, worldbank.org, oecd.org: Denmark slow recovery after global financial crisis housing bust productivity growth weak IMF",
+        "opened: imf.org 2026 Article IV concluding statement; imf.org Country Report 25/165; imf.org Country Report 14/332; imf.org PR 17/234; oecd.org Economic Survey of Denmark 2026 executive summary (oecd.org press release and survey landing page returned 403)",
+        "critic check: re-opened all five cited URLs (imf.org CR 25/165 PDF, oecd.org Denmark 2026 brochure PDF, imf.org CR 14/332 PDF, imf.org PR 17/234, imf.org 2026 concluding statement) and checked each quote against the page text"
+      ],
+      "critic_changes": [
+        "All five cited URLs re-opened; every original quote was found on its page, with dates matching (IMF CR 25/165 July 2025; OECD survey January 2026; IMF CR 14/332 December 2014; PR 17/234 20 June 2017; IMF concluding statement 9 September 2026). All numbers in the prose (1.3, 0.2, -5.5, 1.6, -2.1, 6.0, -0.3, -0.1, 2.4; 2007 level passed in 2016; peak in 2025) checked against DNK.json.",
+        "Headline: 'one drug industry' changed to 'the drug industry' (plain English).",
+        "Arc: 'as indebted households held back spending' changed to 'as households paid down high debts slowly', because the cited IMF 2014 passage links the anemic recovery to slow deleveraging, not directly to cut spending.",
+        "Housing thread: added two IMF CR 14/332 passages (house prices peaked in 2007 and fell sharply; slow deleveraging led to the anemic recovery) to support the 2007 peak and debt claims, which the original citations did not cover; the old 'anemic' quote is replaced by a longer passage from the same page that includes it. Rewrote the text to match: 'well below its pre-crisis pace for years' became 'markedly slower than before the crisis'.",
+        "Productivity thread: quote extended to the passage that names pharmaceuticals, construction and information and communication, which the original quote did not support; 'productivity has grown little' softened to 'productivity growth has been weaker' to match 'less impressive'.",
+        "Working-age thread: dropped the unsupported sentence 'Fewer people of working age means less labour to draw on.'",
+        "Defence thread: 'few Danish-made goods pass through US customs' was a misreading (the 3 percent is goods made in Denmark passing through customs as a share of total exports); rewrote it, extended the quote to include the link to US tariffs, and added the passage on wider trade tensions to support 'cloud the outlook'.",
+        "since_last_year: added an IMF CR 25/165 citation for the mid-2025 expectation of slowing growth, which had no source; replaced the second 2026 quote with the full clause so it also supports 'the rest of the economy grew at a more moderate pace'; 'pick up again' changed to 'strengthen in 2026' to match the source.",
+        "Tension: 'sources describe' narrowed to 'the IMF describes'; '2008–2015 as a sharp break' (not a data window, and an overstatement of the IMF's 'markedly slower') changed to the IMF's own wording, with the data's 2006–2015 decade; 'fits the data better than the headline growth figures' changed to the more neutral 'sits closer to what income per person shows'."
+      ]
+    },
+    "headline": "Denmark's income per person is at its highest yet after decades of steady, modest growth, but recent gains rest heavily on the drug industry.",
+    "arc": "Since 1990 Denmark's income per person has grown at a steady, modest pace, averaging 1.3 percent a year over 1990–2025, with no lasting shift in that trend. The weakest stretch was 2006–2015, when growth averaged 0.2 percent a year: a housing boom that peaked in 2007 ended in large price falls, income per person fell 5.5 percent in 2009, and the IMF called the recovery anemic as households paid down high debts slowly. Income per person did not pass its 2007 level until 2016. Growth then picked up to 1.6 percent a year over 2016–2025, despite a fall of 2.1 percent in 2020 and a rebound of 6.0 percent in 2021. Since 2022 the IMF and the OECD describe an economy running at two speeds, with pharmaceutical exports driving output while the rest of the economy grew slowly, and income per person reached its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "A two-speed economy since 2022",
+        "about": "present",
+        "text": "Recent growth has come mostly from pharmaceutical exports, while spending at home stayed weak. Outside the drug industry, output shrank in 2022 and 2023 and recovered only slowly after that.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "Strong growth has continued, primarily driven by the expansion of pharmaceutical exports, while domestic demand has been relatively sluggish."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/support-materials/2026/01/oecd-economic-surveys-denmark-2026_985d3771/Denmark-brochure-2026-Final.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Denmark 2026 (Executive Summary)",
+            "date": "2026-01",
+            "quote": "Excluding the buoyant pharmaceutical industry, GDP declined in both 2022 and 2023 before slowly recovering in 2024 and in the first half of 2025"
+          }
+        ]
+      },
+      {
+        "title": "Housing bust and slow recovery",
+        "about": "history",
+        "text": "House prices rose fast until 2007, then fell sharply, leaving households with high debts that they paid down only slowly. The IMF judged the recovery after the global financial crisis anemic, with growth markedly slower than before the crisis.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14332.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: Selected Issues (IMF Country Report No. 14/332)",
+            "date": "2014-12",
+            "quote": "This coincided with the period of rapid house price appreciation that peaked in 2007. The housing boom eventually ended with large house price corrections,"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14332.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: Selected Issues (IMF Country Report No. 14/332)",
+            "date": "2014-12",
+            "quote": "the deleveraging process has been slow. As a result, the recovery after the global financial crisis has been anemic."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2017/06/20/pr17234-imf-executive-board-concludes-2017-article-iv-consultation-with-denmark",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2017 Article IV Consultation with Denmark",
+            "date": "2017-06-20",
+            "quote": "growth in recent years has been markedly slower than before the crisis."
+          }
+        ]
+      },
+      {
+        "title": "Narrow productivity gains",
+        "about": "present",
+        "text": "The IMF finds that the recent rise in productivity comes mostly from pharmaceuticals, with smaller gains in construction and information and communication. Elsewhere in the economy, productivity growth has been weaker.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "largely reflects pharmaceuticals and, to a lesser extent, construction and information and communication industries. Productivity growth in the rest of the economy is less impressive."
+          }
+        ]
+      },
+      {
+        "title": "A shrinking working-age population",
+        "about": "present",
+        "text": "The IMF expects growth to slow in the medium term as the drug industry matures and the working-age population declines.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "Medium-term growth is projected at around 1.5 percent, assuming a maturing pharmaceutical sector and a declining working-age population."
+          }
+        ]
+      },
+      {
+        "title": "Defence spending and trade tensions",
+        "about": "present",
+        "text": "Rising geopolitical tension led the government to raise defence spending sharply from early 2025. The IMF expects US tariffs to hit Denmark only lightly, because goods made in Denmark that pass through customs are a small share of its exports, but wider trade tensions cloud the outlook for a small, open economy.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "In response to increasing geopolitical tensions, early in 2025, the government announced a substantial increase in defense spending."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "exports of goods produced in Denmark passing through customs make up only 3 percent of total exports, limiting the direct impact of U.S. tariffs"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+            "date": "2025-07",
+            "quote": "While direct impacts from U.S. tariffs are expected to be limited, the escalated global trade tensions pose risks to the outlook."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In mid-2025 the IMF expected growth to slow as the pharmaceutical boom began to normalize. By September 2026 it expected growth to strengthen in 2026, still led by drug exports, while the rest of the economy grew at a more moderate pace. Income per person rose 2.4 percent in 2025 and reached a new high.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1dnkea2025001-print-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Denmark: 2025 Article IV Consultation—Press Release; and Staff Report (IMF Country Report No. 25/165)",
+          "date": "2025-07",
+          "quote": "Staff expects growth to moderate in the near term as external demand weakens, and the exceptional pharmaceutical expansion begins to normalize."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/09/09/mcs090926-denmark-staff-concluding-statement-2026-aiv-mission",
+          "publisher": "IMF",
+          "title": "Denmark: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-09-09",
+          "quote": "Output growth is projected to strengthen from 3.5 percent in 2025 to 3.7 percent in 2026, above potential,"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/09/09/mcs090926-denmark-staff-concluding-statement-2026-aiv-mission",
+          "publisher": "IMF",
+          "title": "Denmark: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-09-09",
+          "quote": "Strong pharmaceutical exports have been an important driver of growth; the rest of the economy has expanded at a more moderate pace."
+        }
+      ]
+    },
+    "tension": "The IMF describes strong growth since 2022, but income per person dipped in 2022 (-0.3 percent) and 2023 (-0.1 percent) before rising in 2024 and 2025. The OECD's finding that output outside the drug industry shrank in those two years sits closer to what income per person shows. The IMF also described growth after the global financial crisis as markedly slower than before it, yet the data's era test finds no lasting shift in growth since 1990, only a weak decade averaging 0.2 percent a year over 2006–2015."
+  }
+}

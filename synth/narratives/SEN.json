@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "iso3": "SEN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SEN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "WebFetch (critic check of every cited URL): imf.org/external/np/hipc/2000/sen/index.htm; imf.org/external/pubs/ft/dp/2015/afr1501.pdf; imf.org/external/pubs/ft/scr/2016/cr1603.pdf; ebrd.com Transition Report 2025-26 Senegal PDF; imf.org press release 2025-11-06; thedocs.worldbank.org MPO 04/2026 SSA PDF (Senegal pp. 76-77); imf.org press release 2026-06-22",
+        "Drafter's searches: WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Senegal IMF Article IV 2025 hidden debt hydrocarbon production growth",
+        "WebSearch tier 1: Senegal Macro Poverty Outlook 2025 World Bank economic update growth",
+        "WebSearch tier 1: Senegal 1994 CFA franc devaluation growth recovery late 1990s stagnation",
+        "WebSearch tier 1: Senegal Country Economic Memorandum growth slowdown 2006-2013 energy crisis Plan Senegal Emergent acceleration",
+        "WebSearch worldbank.org: Senegal Macro Poverty Outlook 2026 oil gas production plateau agriculture poverty debt"
+      ],
+      "critic_changes": [
+        "Checked all 7 cited URLs. Read the PDFs from their extracted text. Every quoted passage was found word for word on its page, and every date matches the document (IMF CR 16/3 is dated January 2016; World Bank MPO April 2026, with both quotes on the Senegal pages 76-77).",
+        "Checked every number against SEN.json and all matched: -0.8 (1990-1997), 1.8 (1998-2025), 0.9 (2006-2015), 2.7 (2016-2025), 4.0 (2024), 4.3 (2025), -0.4 (1996), 0.6 (1997). The 1960 level was first passed in 2010. 2025 is the record peak and the fastest rise since 2017's 4.35.",
+        "Arc: removed 'and volatile' from the IMF description of 2006-2015. The IMF's 'modest and volatile' refers to 1995-2013, not that decade.",
+        "Arc: replaced 'gas followed' with the cited fact that 2025 was the first full year of oil and gas output. Replaced 'audits found' with 'government-led investigations found' to match the World Bank wording, and 'passes its peak' with 'eases from its 2025 peak'.",
+        "Thread 'A sluggish decade to 2015': the IMF passage on growth fluctuations covers 1995-2013, so the text now says it links the swings 'since the mid-1990s' to their causes, not swings in 2006-2015 alone. Also changed 'patchy' to 'uneven' to match the source.",
+        "Thread 'The Plan Senegal Emergent': changed 'By 2015' to 'By late 2015' (the review is from December 2015 and was published in January 2016).",
+        "Thread 'Oil and gas arrive': 'as output levels off' becomes 'as oil output eases from its 2025 peak', which is what the World Bank wrote. The 4.3 percent rise is now stated as an outcome in 2025, not as wholly caused by oil.",
+        "Thread 'Hidden debt': the IMF November 2025 quote (debt of 132 percent of GDP) did not support any claim in the text, so it was replaced. The new quote, from the IMF's 22 June 2026 press release, shows the government was still seeking a new programme in 2026; nothing cited had supported that claim before. The World Bank quote was extended, still under 25 words, so it covers the claims about borrowing costs and rating downgrades.",
+        "since_last_year: removed 'sharply' and the claim that public finances were 'already weighed down by the hidden debt'. The June 2026 IMF release links the oil-price pressure to subsidy costs, not to the hidden debt. Lengthened the June 2026 quote to its full clause and added the November 2025 IMF citation for the farm rebound.",
+        "Tension: softened 'much larger jump' to 'larger jump'. The sources put 2025 output growth at about 6.7 to 7.9 percent, against 4.3 percent for income per person.",
+        "No banned phrases and no recommendation or verdict language found. The headline is 153 characters. Four distinct recent tier 1 sources survive (EBRD 2025, IMF 2025-11, World Bank 2026-04, IMF 2026-06), and both present threads have citations from 2023 or later."
+      ]
+    },
+    "headline": "Senegal's income per person barely moved for decades, then climbed from the late 1990s; new oil and gas lifted growth just as a hidden-debt crisis broke.",
+    "arc": "Income per person in Senegal was lower in 1990 than in 1960, and from 1990 to 1997 it shrank by 0.8 percent a year. After the CFA franc devaluation of January 1994 and years of stabilization and reform, growth turned up in 1998, and from 1998 to 2025 income per person grew 1.8 percent a year; it only passed its 1960 level in 2010. That long era ran at two speeds: 0.9 percent a year over 2006–2015, years the IMF called sluggish, then 2.7 percent over 2016–2025 as the Plan Sénégal Emergent got under way. Oil from the Sangomar field began flowing in 2024, 2025 was the first full year of oil and gas output, and income per person rose 4.0 percent in 2024 and 4.3 percent in 2025, reaching its highest level on record. At the same time, government-led investigations found that spending and debt in 2019–2023 had been far larger than reported, and the World Bank expects growth to slow as oil output eases from its 2025 peak.",
+    "threads": [
+      {
+        "title": "Devaluation and the late-1990s turn",
+        "text": "The CFA franc, which Senegal shares with its neighbours, was devalued in January 1994. The IMF and World Bank later described a record of stabilization and reform after it, with output growing strongly in the late 1990s, and the data show growth turning up in 1998.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/hipc/2000/sen/index.htm",
+            "publisher": "IMF",
+            "title": "Senegal Decision Point Document under the Enhanced Heavily Indebted Poor Countries (HIPC) Initiative",
+            "date": "2000-06-01",
+            "quote": "favorable track record of macroeconomic stabilization and reform since the devaluation of the CFA franc in January 1994"
+          },
+          {
+            "url": "https://www.imf.org/external/np/hipc/2000/sen/index.htm",
+            "publisher": "IMF",
+            "title": "Senegal Decision Point Document under the Enhanced Heavily Indebted Poor Countries (HIPC) Initiative",
+            "date": "2000-06-01",
+            "quote": "Average real GDP growth exceeded 5 percent between 1996 and 1999"
+          }
+        ]
+      },
+      {
+        "title": "A sluggish decade to 2015",
+        "text": "Income per person grew only 0.9 percent a year over 2006–2015. By 2015 the IMF described recent growth as sluggish, and it linked the swings in growth since the mid-1990s to uneven harvests, outside shocks and supply bottlenecks.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2015/afr1501.pdf",
+            "publisher": "IMF",
+            "title": "Making Senegal a Hub for West Africa",
+            "date": "2015",
+            "quote": "Growth in the past few years has been sluggish and did not make a meaningful dent in poverty."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2015/afr1501.pdf",
+            "publisher": "IMF",
+            "title": "Making Senegal a Hub for West Africa",
+            "date": "2015",
+            "quote": "These growth fluctuations were partly caused by uneven agricultural production, exogenous shocks, and—most important—major bottlenecks in the supply side of the economy"
+          }
+        ]
+      },
+      {
+        "title": "The Plan Sénégal Emergent",
+        "text": "In the mid-2010s the government launched a new development plan to make the country a hub for West Africa. By late 2015 the IMF saw growth breaking with its historical pace, helped by the plan's first steps, trade with Mali and cheaper oil, and income per person grew 2.7 percent a year over 2016–2025.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2015/afr1501.pdf",
+            "publisher": "IMF",
+            "title": "Making Senegal a Hub for West Africa",
+            "date": "2015",
+            "quote": "To exit the trap of low growth and high poverty, the authorities have launched a new development strategy: Plan Sénégal Emergent (PSE)."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1603.pdf",
+            "publisher": "IMF",
+            "title": "Senegal: First Review under the Policy Support Instrument (IMF Country Report No. 16/3)",
+            "date": "2016-01",
+            "quote": "Growth has begun to break with the historical average of 3–3.5 percent of the last 30 years"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2016/cr1603.pdf",
+            "publisher": "IMF",
+            "title": "Senegal: First Review under the Policy Support Instrument (IMF Country Report No. 16/3)",
+            "date": "2016-01",
+            "quote": "These developments mainly reflect initial implementation of the PSE, strengthened trade with Mali, and falling oil prices."
+          }
+        ]
+      },
+      {
+        "title": "Oil and gas arrive",
+        "text": "Oil began flowing from the offshore Sangomar field in June 2024, and 2025 was the first full year of oil and gas output. Together with a better harvest, this lifted growth in 2025, when income per person rose 4.3 percent, the fastest rise since 2017. The World Bank expects growth to slow as oil output eases from its 2025 peak.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Sub-Saharan-Africa/transition-report-2025-26-CA-Senegal.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country Assessments, Senegal",
+            "date": "2025",
+            "quote": "This followed the start of operations of the Sangomar oil field off the West African coast in June 2024, where daily extraction exceeded 100,000 barrels."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/06/pr-25360-senegal-imf-concludes-visit",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Visit to Senegal",
+            "date": "2025-11-06",
+            "quote": "Drivers of resilience in 2025: start/first full year of oil and gas production and a rebound in agriculture."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/77351105a334213c64122e44c2efe523-0500072021/related/mpo-sm26-ssa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 04/2026: Sub-Saharan Africa (Senegal)",
+            "date": "2026-04",
+            "quote": "as hydrocarbon production, already at capacity, eases from its 2025 peak and fiscal consolidation weighs on domestic activity"
+          }
+        ]
+      },
+      {
+        "title": "Hidden debt and a suspended programme",
+        "text": "Government-led investigations found that public spending and debt in 2019–2023 had been much larger than reported, which raised borrowing costs and brought credit rating downgrades. The IMF suspended its lending programme in October 2024, and in 2026 the government was still seeking a new one.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/77351105a334213c64122e44c2efe523-0500072021/related/mpo-sm26-ssa.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 04/2026: Sub-Saharan Africa (Senegal)",
+            "date": "2026-04",
+            "quote": "unreported public expenditure and debt between 2019–2023—following government-led investigations—has materially worsened macro-fiscal and debt sustainability prospects, raising borrowing costs, and triggering credit rating downgrades"
+          },
+          {
+            "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/transition-report-archive/transition-report-2025/country-assessments/Sub-Saharan-Africa/transition-report-2025-26-CA-Senegal.pdf",
+            "publisher": "EBRD",
+            "title": "Transition Report 2025-26: Country Assessments, Senegal",
+            "date": "2025",
+            "quote": "In this context, in October 2024, the IMF suspended Senegal’s lending programme pending the conclusion of the audit."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26216-senegal-imf-staff-concludes-visit",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Visit to Senegal",
+            "date": "2026-06-22",
+            "quote": "Authorities reiterated their interest in a new IMF-supported program."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Oil and gas output and a farm rebound lifted growth in 2025, and income per person rose 4.3 percent. In April 2026 the World Bank expected growth to slow in 2026 as oil output eased from its 2025 peak, and in June 2026 the IMF said that higher world oil prices after the start of the war in the Middle East would add pressure on public finances.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/11/06/pr-25360-senegal-imf-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Senegal",
+          "date": "2025-11-06",
+          "quote": "Drivers of resilience in 2025: start/first full year of oil and gas production and a rebound in agriculture."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/77351105a334213c64122e44c2efe523-0500072021/related/mpo-sm26-ssa.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook 04/2026: Sub-Saharan Africa (Senegal)",
+          "date": "2026-04",
+          "quote": "Real GDP growth is forecasted to slow to 2.2 percent in 2026 and average 2.8 percent over 2027–2028"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/22/pr26216-senegal-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Senegal",
+          "date": "2026-06-22",
+          "quote": "Higher global oil prices since the start of the war in the Middle East are expected to put additional pressure on Senegal’s public finances"
+        }
+      ]
+    },
+    "tension": "The sources describe strong output growth in the late 1990s, yet in the data income per person fell 0.4 percent in 1996 and rose only 0.6 percent in 1997, so a fast-growing population appears to have absorbed much of the gain. A similar gap shows in 2025: the sources report a larger jump in total output from oil and gas than the 4.3 percent rise in income per person."
+  }
+}

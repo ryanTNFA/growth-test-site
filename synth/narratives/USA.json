@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "USA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "USA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org: United States 2025 Article IV consultation IMF staff concluding statement (tier 1 domains)",
+        "oecd.org: OECD Economic Surveys United States 2024 productivity growth (tier 1 domains)",
+        "imf.org: IMF United States Article IV 2024 press release recovery pandemic (tier 1 domains)",
+        "imf.org: IMF United States 2010 Article IV recession financial crisis housing (tier 1 domains)",
+        "oecd.org: OECD Economic Surveys United States 2026",
+        "Critic re-opened: imf.org 2026 Article IV concluding statement (2026-02-25), imf.org PR 26/102 (2026-04-02), imf.org PR 24/281 (2024-07-18), imf.org Country Report 09/228 (2009-07), oecd.org Economic Survey United States 2024 PDF, oecd.org Economic Outlook Interim Report September 2026 PDF",
+        "Tier 2 (UN) not searched: tier 1 gave 5 recent sources"
+      ],
+      "critic_changes": [
+        "All 6 cited URLs opened; every quoted passage found on its page (the 2009 IMF PDF and both OECD PDFs checked from extracted text). All publishers, titles and dates match; all domains are tier 1. Five distinct recent tier 1 sources confirmed.",
+        "All numbers checked against desk/data/USA.json (1.6, 3.6 in 1999, -3.4 in 2009, 0.8 over 2006-2015, -2.5 in 2020, 6.0 in 2021, 1.8 over 2016-2025, 1.6 in 2025, peak level in 2025): all correct, none changed.",
+        "Arc: 'the next boom' made 'the boom of the mid-2000s'; 'its bust brought a fall' made 'after the bust income per person fell', because no cited passage links the bust to the 2009 fall. 'Households paying down debt' became 'households repairing their finances' to match 'balance-sheet adjustment'.",
+        "Arc: the IMF no longer credits the 2025 peak level to productivity. The IMF passage credits 2025 growth only, so the sentence now says that.",
+        "Housing thread: 'easy mortgage credit' and 'the bust turned into a deep recession' replaced. The passages speak of a credit-fuelled bubble and do not describe the recession.",
+        "Productivity thread: 'the opposite turn' and 'carried the economy' softened to 'a different picture for 2025' and 'drove'. The IMF says 'continued' strong productivity growth, which is not a reversal.",
+        "Immigration thread: 'helped the economy grow through higher interest rates' changed to 'helped soften the effect of higher interest rates', matching 'monetary tightening was cushioned'.",
+        "Tariffs thread: the claim that tariffs rose 'sharply in 2025' is removed because no cited passage states it. 'A cost to the economy's supply side' is replaced with the IMF's own description (distorting resource allocation, disrupting supply chains).",
+        "since_last_year: the OECD finding is now dated September 2026 and limited to the second quarter, as the passage is. Energy prices are described as rising worldwide with Gulf disruptions, because the passage is global and does not name a Middle East conflict.",
+        "Tension: dropped the closing sentence saying ageing slows total output more than income per person. It was the drafter's own unsourced reasoning and is doubtful."
+      ]
+    },
+    "headline": "US income per person has grown about 1.6 percent a year since 1990, with sharp but short falls in 2009 and 2020 and a firmer last decade.",
+    "arc": "Since 1990 the data show one long era: income per person in the United States grew 1.6 percent a year on average over 1990-2025, with no lasting shift up or down. Within that era growth was strong in the late 1990s, reaching 3.6 percent in 1999. The IMF traces the boom of the mid-2000s to a credit-fuelled housing bubble, and after the bust income per person fell 3.4 percent in 2009. Over 2006-2015 growth averaged only 0.8 percent a year, after the IMF had warned in 2009 that households repairing their finances would weigh on growth. The pandemic cut income per person by 2.5 percent in 2020, but it bounced back 6.0 percent in 2021, and the IMF found no lasting scar. Over 2016-2025 growth averaged 1.8 percent and income per person reached its highest level yet in 2025; the IMF credits growth in 2025 to strong productivity growth, while the OECD describes a longer slowing tied to weaker productivity growth and an ageing population.",
+    "threads": [
+      {
+        "title": "Housing bust and financial crisis",
+        "about": "history",
+        "text": "In the mid-2000s a credit-fuelled housing bubble pushed up house prices, and rising housing wealth fed spending. After the bust, income per person fell 3.4 percent in 2009. In 2009 the IMF expected households' repair of their finances to hold growth back for years, and growth over 2006-2015 averaged 0.8 percent.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr09228.pdf",
+            "publisher": "IMF",
+            "title": "United States: 2009 Article IV Consultation—Staff Report; Staff Supplement; and Public Information Notice on the Executive Board Discussion",
+            "date": "2009-07",
+            "quote": "As the credit-fueled housing bubble inflated, rising real estate prices fed consumption out of housing wealth"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2009/cr09228.pdf",
+            "publisher": "IMF",
+            "title": "United States: 2009 Article IV Consultation—Staff Report; Staff Supplement; and Public Information Notice on the Executive Board Discussion",
+            "date": "2009-07",
+            "quote": "Household balance-sheet adjustment will likely weigh on growth over the medium term while narrowing the external imbalance"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic fall and fast rebound",
+        "about": "history",
+        "text": "Income per person fell 2.5 percent in 2020 and rose 6.0 percent in 2021. By 2024 the IMF found that output and jobs had passed the levels expected before the pandemic, so the shock left no lasting scar.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/07/18/pr24281-usa-imf-exec-board-concludes-2024-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with the United States",
+            "date": "2024-07-18",
+            "quote": "Hysteresis effects from the pandemic did not materialize; both activity and employment now exceed pre‑pandemic expectations."
+          }
+        ]
+      },
+      {
+        "title": "Productivity and an ageing population",
+        "about": "present",
+        "text": "The OECD describes a long fall in productivity growth since the early 1990s, along with signs of weaker competition and an ageing population. More recent IMF reports paint a different picture for 2025, when continued strong productivity growth drove the economy.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/06/oecd-economic-surveys-united-states-2024_d98318b3/cdfff156-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United States 2024",
+            "date": "2024-06",
+            "quote": "A structural slowing in real GDP growth over recent decades has reflected weakening productivity growth coupled with population ageing."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/06/oecd-economic-surveys-united-states-2024_d98318b3/cdfff156-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United States 2024",
+            "date": "2024-06",
+            "quote": "A structural decline in productivity growth from the early 1990s has been accompanied by indicators of declining competition."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/25/cs-02252026-united-states-of-america-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "United States of America: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-02-25",
+            "quote": "Growth reached 2.2 percent (q4/q4) in 2025, driven by continued strong productivity growth."
+          }
+        ]
+      },
+      {
+        "title": "Immigration swings and labor supply",
+        "about": "present",
+        "text": "After the pandemic, a wave of immigrant workers added to the labor force and helped soften the effect of higher interest rates. In 2025 that inflow fell sharply, and the IMF links slower job growth partly to lower immigration.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/07/18/pr24281-usa-imf-exec-board-concludes-2024-art-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with the United States",
+            "date": "2024-07-18",
+            "quote": "Monetary tightening was cushioned by supply-side gains, including expanded labor supply from immigrant inflows,"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/25/cs-02252026-united-states-of-america-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "United States of America: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-02-25",
+            "quote": "Inflow of foreign-born workers fell sharply; labor force participation of prime age workers rose."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/01/pr-26102-usa-imf-executive-board-concludes-2026-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the United States",
+            "date": "2026-04-02",
+            "quote": "Employment growth slowed, in part due to sharply lower immigration flows."
+          }
+        ]
+      },
+      {
+        "title": "Tariffs and policy shifts",
+        "about": "present",
+        "text": "By 2024 the OECD found that trade policy had become restrictive. In 2026 the IMF said higher tariffs create costs by distorting how resources are used and disrupting supply chains, even as growth held up in 2025 through major policy shifts and a government shutdown.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/06/oecd-economic-surveys-united-states-2024_d98318b3/cdfff156-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: United States 2024",
+            "date": "2024-06",
+            "quote": "Trade policies have become restrictive and new industrial policies have focused more on increasing domestic production in some sectors."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/25/cs-02252026-united-states-of-america-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "United States of America: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-02-25",
+            "quote": "Higher tariffs create costs by distorting resource allocation, disrupting global supply chains"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/01/pr-26102-usa-imf-executive-board-concludes-2026-article-iv-consult",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the United States",
+            "date": "2026-04-02",
+            "quote": "GDP growth reached 2 percent in 2025 despite major policy shifts and a Q4 government shutdown"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 1.6 percent, and the IMF notes that growth held up through major policy shifts and a government shutdown. In September 2026 the OECD reported that investment in data centres and technology equipment, tied to artificial intelligence, lifted US growth in the second quarter. Over the same period energy prices rose again worldwide as disruptions in the Gulf economies deepened.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/01/pr-26102-usa-imf-executive-board-concludes-2026-article-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the United States",
+          "date": "2026-04-02",
+          "quote": "GDP growth reached 2 percent in 2025 despite major policy shifts and a Q4 government shutdown"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/oecd-economic-outlook-interim-report-september-2026_8312492f/f751d02b-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Outlook, Interim Report: Weathering Successive Shocks",
+          "date": "2026-09",
+          "quote": "real GDP growth in the second quarter was boosted by investment in data centre structures and technology equipment"
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/oecd-economic-outlook-interim-report-september-2026_8312492f/f751d02b-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Outlook, Interim Report: Weathering Successive Shocks",
+          "date": "2026-09",
+          "quote": "Energy prices have recently risen again amidst intensified disruptions to production and exports in the Gulf economies."
+        }
+      ]
+    },
+    "tension": "The OECD describes a long structural slowing in growth and a fall in productivity growth since the early 1990s. Yet the data on income per person show no lasting shift since 1990 (1.6 percent a year), and the last decade (1.8) ran faster than the one before (0.8)."
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "iso3": "COM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "COM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Comoros IMF Article IV 2025 staff report growth\"",
+        "same tier 1 domains: \"Comoros Macro Poverty Outlook World Bank 2025\"",
+        "same tier 1 domains: \"Comoros economic update 2026 growth political instability secession 1997 history\"",
+        "Opened: imf.org IMF Country Report No. 26/47 (PDF, includes press release PR 26/045); documents1.worldbank.org MPO October 2025 Sub-Saharan Africa (PDF); worldbank.org/ext/en/country/comoros; afdb.org Comoros economic outlook (returned 403, not used)",
+        "Critic re-opened all three cited URLs and checked every quoted passage against the page text"
+      ],
+      "critic_changes": [
+        "Headline: removed '35 years', a derived figure not in the data file; now says 'since 1990' and names 2025 (G3 peak year) instead of 'only now'.",
+        "Arc: 'improved a little' softened to 'edged up a little' to sit with G4's single era; last sentence changed from 'household spending funded by money sent home from abroad' to 'leans on household spending, imports, money sent home from abroad and aid', since no cited passage says remittances fund most household spending.",
+        "Thread 2 (renamed 'Weddings, remittances and imports'): removed the unsupported claims that remittances pay for much of household spending and that weddings 'account for a large share' of it; text now matches the World Bank and IMF passages. Fixed a curly apostrophe in the IMF quote to match the page ('Comoros'').",
+        "Thread 3: 'earns most of its export income from a few crops' was not supported by the cited passage; changed to 'main exports are a few crops' and added a second verbatim IMF citation ('Main products and exports: Cloves, ylang-ylang, vanilla'). Changed 'electricity' to 'energy' to match the source.",
+        "since_last_year: removed 'slowed the government's reform program', which the IMF report does not say (it says structural reform progress improved); replaced with the IMF's account of the airport concession, layoffs and a modest fiscal slip, with a new verbatim IMF citation. Replaced the World Bank overview quote with the passage that actually mentions higher energy and food import costs (figures appear only inside the quote); 'fuel' changed to 'energy' to match.",
+        "Verified all citations: the IMF Country Report No. 26/47 (February 2026), the World Bank MPO 10/2025 Comoros page and the World Bank Comoros overview page all exist on tier 1 domains and contain the quoted passages. The overview page shows no date beyond the year 2026, stated in its own text.",
+        "Checked all numbers against desk/data/COM.json: 0.5 (G4 era mean), 8.4 (1991), 5.7 (1994), 2000 below 1990 level, 0.4 (avg_prior_10y), 0.7 (avg_10y), 1.2 (structural median), 2.1 (2020), 1.8 (2025), peak 2025 are all correct.",
+        "Edited by hand (9 November 2026): two figures from the sources moved out of the prose (\"four decades\", \"hundreds of workers\")."
+      ]
+    },
+    "headline": "Comoros has inched ahead since 1990: income per person grew about 0.5 percent a year, and in 2025 it reached its highest level yet.",
+    "arc": "Since 1990, income per person in the Comoros has grown by about 0.5 percent a year on average, and the data show no lasting change of pace: 1990 to 2025 reads as one long era. The 1990s were the roughest stretch, with falls of 8.4 percent in 1991 and 5.7 percent in 1994, and by 2000 income per person was below its 1990 level. Growth then edged up a little, to 0.4 percent a year over 2006–2015 and 0.7 percent over 2016–2025, against a peer median of 1.2. A cyclone in 2019 and the pandemic in 2020, when income per person fell 2.1 percent, interrupted the gains of the late 2010s, but a rise of 1.8 percent in 2025 took income per person to its highest level yet. The sources trace the slow pace to weak institutions, a small and remote market, unreliable electricity and water, past political turmoil, and an economy that leans on household spending, imports, money sent home from abroad and aid.",
+    "threads": [
+      {
+        "title": "Small, remote and fragile",
+        "text": "The Comoros is a small island state far from big markets, and the sources describe weak institutions and missing basics such as reliable power and water. They say these features make it hard to draw in investment and have kept growth low for decades.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+            "date": "2026-02",
+            "quote": "The small size, relative isolation, and the absence of basic infrastructure such as reliable electricity and water supply make it difficult to attract investment."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099746010032519147/pdf/IDU-a40d865c-cdbc-4bef-b176-b97561a7ac76.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 10/2025: Sub-Saharan Africa Country-by-country Analysis and Projections",
+            "date": "2025-10",
+            "quote": "Weak institutions, a small domestic market, and geographic remoteness have hindered broader economic progress"
+          }
+        ]
+      },
+      {
+        "title": "Weddings, remittances and imports",
+        "text": "Household spending is the main engine of the economy, and the World Bank points in particular to big traditional weddings. The IMF describes an economy that depends on imports, money sent home from abroad and aid, with narrow exports and production, which leaves it open to shocks.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099746010032519147/pdf/IDU-a40d865c-cdbc-4bef-b176-b97561a7ac76.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 10/2025: Sub-Saharan Africa Country-by-country Analysis and Projections",
+            "date": "2025-10",
+            "quote": "The economy relies heavily on private consumption, particularly from grands mariages, large traditional weddings that drive household spending but do little to foster sustainable growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+            "date": "2026-02",
+            "quote": "Comoros' narrow export and production bases, and dependency on imports, remittances and aid, render it vulnerable to shocks."
+          }
+        ]
+      },
+      {
+        "title": "Cash crops and power shortages",
+        "text": "The country's main exports are a few crops: cloves, ylang-ylang and vanilla. In 2025, falling prices for key exports and shortages of energy weighed on activity, though strong spending at home kept the recovery going.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+            "date": "2026-02",
+            "quote": "Despite headwinds from energy shortages and declining prices for key export commodities, the recovery gained further momentum in 2025, underpinned by robust domestic demand."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+            "date": "2026-02",
+            "quote": "Main products and exports: Cloves, ylang-ylang, vanilla"
+          }
+        ]
+      },
+      {
+        "title": "Politics and volatile growth",
+        "text": "The World Bank links the ups and downs of Comorian growth over the past four decades to the country's politics. It notes that politics has been more stable in the last two decades, the years when growth in the data steadied and edged a little higher, yet progress has stayed slow.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099746010032519147/pdf/IDU-a40d865c-cdbc-4bef-b176-b97561a7ac76.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 10/2025: Sub-Saharan Africa Country-by-country Analysis and Projections",
+            "date": "2025-10",
+            "quote": "Political economy factors have shaped Comoros' trajectory, contributing to growth volatility over the past four decades."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099746010032519147/pdf/IDU-a40d865c-cdbc-4bef-b176-b97561a7ac76.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook 10/2025: Sub-Saharan Africa Country-by-country Analysis and Projections",
+            "date": "2025-10",
+            "quote": "Despite improved political stability in the last two decades, economic progress remains sluggish."
+          }
+        ]
+      },
+      {
+        "title": "Cyclone, then pandemic",
+        "text": "Cyclone Kenneth struck in 2019 and the pandemic followed in 2020, and both times the country turned to the IMF for emergency support. Income per person dipped in 2019 and fell 2.1 percent in 2020, ending several years of steady gains.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+            "date": "2026-02",
+            "quote": "Comoros received RCF/RFI support in July 2019 following Cyclone Kenneth and again in April 2020 following the outbreak of the COVID-19 pandemic."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The IMF reported in February 2026 that the recovery gained momentum in 2025 as inflation eased, and the data show income per person up 1.8 percent that year to its highest level yet. In mid-2025, the government handed the international airport to an Emirati operator and hundreds of workers were laid off, and the IMF says payments to calm the social pressure that followed led to a modest slip in the budget. The World Bank reports that in 2026 the Middle East conflict raised the cost of imported energy and food.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+          "date": "2026-02",
+          "quote": "The economic recovery gained further momentum in 2025, amid gradual disinflation, while the external position remained stable, with ample reserve buffers."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1comea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Union of the Comoros: 2025 Article IV Consultation, Fifth Review under the Extended Credit Facility Arrangement (IMF Country Report No. 26/47)",
+          "date": "2026-02",
+          "quote": "the authorities' decision to grant a concession of the international airport to an Emirati operator was followed by the layoff of over 500 employees"
+        },
+        {
+          "url": "https://www.worldbank.org/ext/en/country/comoros",
+          "publisher": "World Bank",
+          "title": "Comoros: Overview",
+          "date": "2026",
+          "quote": "Growth is estimated at 3.2%, as higher energy and food import costs pushed inflation to an estimated 6.1%"
+        }
+      ]
+    },
+    "tension": "The sources describe a recovery that gained momentum in 2025, and the growth figures they give for the whole economy run well above the income per person figures in the data: income per person grew 0.7 percent a year over 2016–2025 and 1.8 percent in 2025. A growing population takes much of the gain, so the recovery looks slower per person than it does for the economy as a whole."
+  }
+}

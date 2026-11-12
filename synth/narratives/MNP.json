@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "iso3": "MNP",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MNP",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 3,
+      "tier1_recent_found": 1,
+      "sources_searched": [
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): \"Northern Mariana Islands economy\"",
+        "WebSearch tier 1: \"Saipan CNMI tourism casino economic decline\"",
+        "WebSearch tier 1: \"Northern Mariana Islands\" OR \"CNMI\" garment industry tourism Covid recovery report",
+        "WebSearch tier 1: \"Commonwealth of the Northern Mariana Islands Saipan economy 2024\"",
+        "Opened aric.adb.org: Levin, 'Sustainable Economic Development in the Midst of Growing Uncertainty: The Federated States of Micronesia Case' (April 2023), with one passing mention of the CNMI economy",
+        "worldbank.org results were data pages only. The World Bank's 'The Future of Pacific Tourism' (March 2023) leaves out the Northern Marianas because it is not a World Bank member",
+        "WebSearch tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): \"Northern Mariana Islands economy tourism\"",
+        "WebSearch tier 2 (unescap.org, un.org, undp.org, unctad.org): \"Northern Mariana Islands\" growth tourism decline casino pandemic",
+        "Tier 2 returned only UNCTADstat general and maritime data profiles and UN reports on small islands in general, with nothing specific to the Northern Mariana Islands"
+      ],
+      "critic_changes": [],
+      "reason": "The two tiers together give fewer than 2 recent sources that explain the Northern Mariana Islands' growth: it is a US territory and not a member of the World Bank, IMF or ADB. The only recent tier 1 source is an April 2023 conference paper about the FSM, hosted on aric.adb.org, that mentions the territory in passing. Tier 2 turned up only UNCTADstat data profiles."
+    }
+  }
+}

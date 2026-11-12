@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "iso3": "DOM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "DOM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Dominican Republic Article IV 2025 IMF staff concluding statement\"",
+        "tier 1 domains: \"Dominican Republic Macro Poverty Outlook World Bank growth 2025\"",
+        "tier 1 domains: \"Dominican Republic 2003 banking crisis Baninter growth recovery\"",
+        "imf.org, worldbank.org, iadb.org: \"Dominican Republic Article IV 2021 COVID-19 tourism collapse rebound IMF\"",
+        "worldbank.org, imf.org: \"Dominican Republic Macro Poverty Outlook October 2026\"",
+        "Critic re-opened: thedocs.worldbank.org MPO DOM October 2026 (PDF text extracted); documents1.worldbank.org MPO DOM April 2026 (PDF text extracted); imf.org PIN 03/123; imf.org PR 22/248; imf.org PR 25/378; imf.org 2025 Article IV concluding statement"
+      ],
+      "critic_changes": [
+        "Opened all six cited URLs. The two World Bank MPO PDFs were read from their extracted text. Every quoted passage was found on its page, and every date matches the document (October 2026 MPO, April 2026 MPO, IMF PIN 2003-10-14, PR 22/248 2022-07-06, PR 25/378 2025-11-18, IMF concluding statement 2025-09-15).",
+        "2003 bank collapse thread: the second quote was extended to the page's full clause ('...and granted considerable liquidity assistance.'). Added the page's sentence 'Contagion extended to two other medium-sized banks...' to support 'two other banks were drawn in', which no quote had covered. Dropped 'The peso fell sharply': no cited passage supported it within the citation limit.",
+        "Pandemic thread: dropped the 'Real GDP increased by 12.3 percent in 2021' citation, which gave a GDP figure easy to confuse with the 12.8 percent per-person figure. Replaced it with the page's passage crediting sound policies, a nimble vaccination campaign and a well-attuned reopening, which the thread text claimed but no citation supported. Reworded 'when tourist arrivals passed their 2019 level' to 'from late 2021' to match 'since last fall' in a July 2022 release.",
+        "Dear credit thread: added the April 2026 MPO passage on construction falling 1.8 percent and investment falling 3.0 percent, to support 'Building shrank, investment fell'.",
+        "Energy and disasters thread: dropped the IMF 2025 concluding-statement citation, which repeated the World Bank's natural-disaster point. Replaced it with the April 2026 MPO passage on transfers covering energy-sector losses, which supports 'the state covers large losses in the power sector'. Removed 'so oil price swings reach both prices and the budget', which no cited passage supported. Changed 'Storms and floods' to 'Natural disasters' to match the quote.",
+        "since_last_year: replaced the first October 2026 MPO quote with the same page's passage on mining and construction, so that 'led by investment, mining and construction' is supported. Added the April 2026 MPO passage to support the 2025 slowdown and its cause.",
+        "Arc: changed 'Growth came back quickly' to 'Growth came back by 2005'. The data show 1.2 percent in 2004 and 8.0 percent in 2005, so the recovery was not immediate. The PIN supports 'strong performance from 1992 to 2000'.",
+        "Tension: softened 'the difference is population growth' to 'much of the difference is population growth'. The World Bank's two-decade window and output measure are not the same as the data file's 2006-2025 per-person average.",
+        "Numbers checked against desk/data/DOM.json. 3.3 is the 1990-2025 era mean (3.276). The rest are series values: -7.4 (1990), -2.8 (2003), -8.9 (2020), 12.8 (2021), 1.3 (2023 and 2025), and the peak of 9,287 in 2025. 4.1 and 3.3 are the prior and current 10-year averages, and 3.7 is the 20-year average. All are correct. No banned phrases and no recommendation language.",
+        "tier1_recent_found set to 4 (from 5): only four recent tier 1 sources were opened and verified (World Bank MPO October 2026 and April 2026, IMF PR 25/378, IMF 2025 concluding statement). The Poverty and Equity Brief was not cited and was not re-verified."
+      ]
+    },
+    "headline": "Steady growth since 1990 on tourism and an open economy, broken by a 2003 bank crash and the pandemic, and cooling in recent years",
+    "arc": "The data show one long era since 1990: income per person grew 3.3 percent a year on average from 1990 to 2025, with no lasting shift up or down. After a fall of 7.4 percent in 1990, the IMF describes strong performance from 1992 to 2000; the run then faded and turned into a fall of 2.8 percent in 2003, the year a large private bank failed after fraud came to light. Growth came back by 2005, and the World Bank credits an open economy, a business-friendly setting, a strong tourism sector and steady policy for two decades of fast growth. The pandemic cut income per person by 8.9 percent in 2020, and the reopening, with tourists returning fast, brought a 12.8 percent rebound in 2021. Growth has cooled since then: 4.1 percent a year in 2006 to 2015, 3.3 percent in 2016 to 2025, and 1.3 percent in 2025 as high interest rates held back credit and building, though income per person still reached a new high of about 9,287 dollars (in constant prices) in 2025.",
+    "threads": [
+      {
+        "title": "Open economy, tourism, steady policy",
+        "text": "The World Bank links the country's long run of fast growth to an open economy, a business-friendly setting and a strong tourism sector. It also points to careful monetary and budget policy that kept prices stable and jobs growing.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dom.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Dominican Republic (October 2026)",
+            "date": "2026-10",
+            "quote": "averaging 5.2 percent growth over the past two decades, supported by a favorable business environment, open economy, and strong tourism sector"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+            "date": "2026-04",
+            "quote": "Prudent monetary and fiscal policies anchored macroeconomic stability, underpinning growth, containing inflation, and supporting a dynamic labor market."
+          }
+        ]
+      },
+      {
+        "title": "The 2003 bank collapse",
+        "text": "In April 2003 the central bank took over Baninter, a large private bank, after fraud came to light, and the trouble spread to two other banks. Income per person dropped 2.8 percent that year.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn03123",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2003 Article IV Consultation with the Dominican Republic",
+            "date": "2003-10-14",
+            "quote": "with a larger shock in 2003 from the failure of a large private bank after revelations of fraud."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn03123",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2003 Article IV Consultation with the Dominican Republic",
+            "date": "2003-10-14",
+            "quote": "Baninter was intervened by the Central Bank in April 2003 and granted considerable liquidity assistance."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/pn03123",
+            "publisher": "IMF",
+            "title": "Public Information Notice: IMF Concludes 2003 Article IV Consultation with the Dominican Republic",
+            "date": "2003-10-14",
+            "quote": "Contagion extended to two other medium-sized banks with management deficiencies."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic fall and fast rebound",
+        "text": "The pandemic cut income per person by 8.9 percent in 2020. The IMF credits sound policy, a quick vaccine drive and a well-timed reopening for the recovery, and tourist arrivals passed their 2019 level from late 2021.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/07/06/pr22248-imf-executive-board-concludes-2022-article-iv-consultation-with-the-dominican-republic",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2022 Article IV Consultation with the Dominican Republic",
+            "date": "2022-07-06",
+            "quote": "supported by sound policies, monetary policy support, a nimble COVID vaccination campaign and a well-attuned reopening"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2022/07/06/pr22248-imf-executive-board-concludes-2022-article-iv-consultation-with-the-dominican-republic",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2022 Article IV Consultation with the Dominican Republic",
+            "date": "2022-07-06",
+            "quote": "Tourism recovered notably, with arrivals exceeding 2019 levels since last fall."
+          }
+        ]
+      },
+      {
+        "title": "Dear credit slows 2025",
+        "text": "From late 2024, tighter money worldwide and high interest rates at home cut lending, above all for homes. Building shrank, investment fell, and income per person grew only 1.3 percent in 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+            "date": "2026-04",
+            "quote": "GDP decelerated to 2.1 percent in 2025, as tighter global conditions translated into high domestic interest rates weakening credit, particularly mortgages, and demand."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+            "date": "2026-04",
+            "quote": "construction fell 1.8 percent, its sharpest non-crisis decline in two decades. On the demand side, investment fell 3.0 percent"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/18/pr-25378-dominican-republic-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with the Dominican Republic",
+            "date": "2025-11-18",
+            "quote": "Growth slowed in late 2024 and the first half of 2025 due to increased uncertainty and tighter financial conditions"
+          }
+        ]
+      },
+      {
+        "title": "Imported energy and natural disasters",
+        "text": "The country depends on imported fuel, and the state pays to cover losses in the power sector. Natural disasters are a standing risk; Hurricane Melissa pushed up food prices in late 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dom.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Dominican Republic (October 2026)",
+            "date": "2026-10",
+            "quote": "The DR is highly exposed to shocks owing to dependence on energy imports, inefficient energy mix, and vulnerability to natural disasters"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+            "date": "2026-04",
+            "quote": "Transfers to cover losses in the energy sector exceed 1 percent of GDP"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+            "date": "2026-04",
+            "quote": "December inflation reached 4.9 percent, reflecting higher food prices after Hurricane Melissa and a more accommodative stance."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slipped in 2025, when income per person rose only 1.3 percent as high interest rates held back credit and building. The World Bank reports a rebound in the first half of 2026, led by investment, mining and construction, with gold exports and tourism earnings rising fast.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dom.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Dominican Republic (October 2026)",
+          "date": "2026-10",
+          "quote": "GDP rebounded in 2026H1 on strong investment and net exports. Mining, construction, and financial services expanded 11.3, 6.7, and 7.5 percent, respectively."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-dom.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Dominican Republic (October 2026)",
+          "date": "2026-10",
+          "quote": "External inflows remained strong: export values grew 16.6 percent, driven by a 68.8 percent increase in gold exports, while tourism revenues rose 15.3 percent."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099723108052658709/pdf/Bulk-e19c7fcd-d981-423c-a2cf-8a1bd72a5ed8.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook for Dominican Republic: April 2026",
+          "date": "2026-04",
+          "quote": "GDP decelerated to 2.1 percent in 2025, as tighter global conditions translated into high domestic interest rates weakening credit, particularly mortgages, and demand."
+        }
+      ]
+    },
+    "tension": "The sources call this one of Latin America's fastest-growing economies and cite a two-decade average for total output that is well above the 3.7 percent a year that income per person grew from 2006 to 2025; much of the difference is population growth. The data also show a slowdown the sources' long-run framing does not stress: income per person grew 4.1 percent a year in 2006 to 2015 but 3.3 percent in 2016 to 2025, with 2023 and 2025 both at 1.3 percent."
+  }
+}

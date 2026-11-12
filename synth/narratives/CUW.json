@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "CUW",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CUW",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1)",
+        "Curaçao Sint Maarten Article IV staff report 2025",
+        "Curaçao economy growth refinery tourism IMF",
+        "Curaçao 2026 Article IV concluding statement",
+        "Curaçao economy 2026",
+        "Curaçao Sint Maarten 2026 Article IV IMF (critic check: no 2026 IMF document found)"
+      ],
+      "critic_changes": [
+        "Arc: 'slipped in almost every year through the 2000s and 2010s' overstated the series (2001, 2002, 2007 and 2008 grew); replaced with 'fell in all but two years from 2003 to 2019', which matches NY.GDP.PCAP.KD.ZG.",
+        "Arc: tied the Venezuela spillover to the refinery decline, as the 2021 IMF statement does, rather than listing it as a separate cause.",
+        "Pandemic thread: 'emptied the island of visitors' is not in the cited passages; softened to 'when travel stopped'. Added a verified 2021 IMF citation for the Netherlands' liquidity support, which the text claimed without a citation.",
+        "Tourism rebound thread: added the verified 2025 IMF passage on holiday homes and hotels to support that claim; softened 'replaced ... as the main engine' to 'taken the place of ... as the main source of growth'.",
+        "Jobs thread: dropped 'even during the rebound', which the passages do not state; added the verified 2025 IMF passage 'Tourism and construction offer more informal opportunities.'",
+        "Energy thread: added the verified 2024 IMF passage on the solar park and wind upgrades to support 'a shift to wind and solar power is under way'.",
+        "since_last_year: 'house building fed by fast mortgage lending' and 'as tourism nears its limits' were not supported as worded; rewritten to match the 2025 passages (holiday homes and hotels, credit growth driven by mortgages, growth easing to the medium term, weaker world demand named as a risk) and added the verified risk passage from the September 2025 press release.",
+        "Tension: 'record tourist arrivals' is not in any cited passage; changed to 'fast growth in tourist arrivals' (double-digit stayover growth).",
+        "All 8 citation URLs opened; every quote, title and date matched the IMF pages. All numbers (0.6, 17.4, 5.2, 7.3, 3.3, 4.1, 18.8; 2024 below 2018 and 2000; 2024 above 2019) checked against desk/data/CUW.json. No banned phrases. A search for a 2026 IMF document on Curaçao found none, so the 2025 sources stay as the latest, which is within the 18-month window."
+      ]
+    },
+    "headline": "Curaçao's income per person has drifted down since 2002; a tourism boom since 2021 has made up the pandemic loss but not the old peak.",
+    "arc": "The record shows one long era: income per person peaked in 2002 and shrank by an average of 0.6 percent a year from 2001 to 2024. It fell in all but two years from 2003 to 2019, and the IMF ties a decade of negative growth to a shrinking offshore financial sector and the closure of the oil refinery, which suffered from the crisis in Venezuela. The pandemic then cut income per person by 17.4 percent in 2020, when travel stopped. Since then, growth of 5.2, 7.3, 3.3 and 4.1 percent a year from 2021 to 2024 has come mostly from tourism, which the IMF calls a pivot to a tourism-led growth model. Even so, income per person in 2024 was still 18.8 percent below its 2002 peak and below its level in 2000.",
+    "threads": [
+      {
+        "title": "Offshore finance and refinery fade",
+        "text": "For about two decades, Curaçao's old earners shrank. The IMF links a decade of negative growth to the decline of the offshore financial sector and the closure of the oil refinery, which was hit by the crisis in neighbouring Venezuela.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/06/25/mcs-06252024-kingdom-of-the-netherlands-curacao-concluding-statement-of-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-06-25",
+            "quote": "Recent exit from a decade of negative growth driven by decline in offshore financial sector and closure of oil refinery"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2021/06/22/mcs062221-curacao-and-sint-maarten-staff-concluding-statement-of-the-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Curaçao and Sint Maarten: Staff Concluding Statement of the 2021 Article IV Mission",
+            "date": "2021-06-22",
+            "quote": "Curaçao suffered spillovers from the crisis in Venezuela, leading to a decline of the oil refining sector."
+          }
+        ]
+      },
+      {
+        "title": "The pandemic collapse",
+        "text": "When travel stopped in the pandemic, income per person fell by 17.4 percent in 2020, the deepest drop in the record. The Netherlands gave liquidity support to help the islands through it.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2021/06/22/mcs062221-curacao-and-sint-maarten-staff-concluding-statement-of-the-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Curaçao and Sint Maarten: Staff Concluding Statement of the 2021 Article IV Mission",
+            "date": "2021-06-22",
+            "quote": "Real GDP declined by an estimated 20 percent in 2020."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2021/06/22/mcs062221-curacao-and-sint-maarten-staff-concluding-statement-of-the-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Curaçao and Sint Maarten: Staff Concluding Statement of the 2021 Article IV Mission",
+            "date": "2021-06-22",
+            "quote": "The Netherlands extended liquidity support in 2020 equal to 13.3 percent of the monetary union's GDP"
+          }
+        ]
+      },
+      {
+        "title": "A tourism-led rebound",
+        "text": "Since 2021, stayover tourists and the building of hotels and holiday homes have driven growth, and income per person rose every year from 2021 to 2024. Tourism has taken the place of refining and offshore finance as the main source of growth.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/06/25/mcs-06252024-kingdom-of-the-netherlands-curacao-concluding-statement-of-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-06-25",
+            "quote": "Curaçao's economy expanded by 4.2 percent in 2023, continuing its pivot towards a tourism-led growth model."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/02/07022025-curacao-staff-concluding-statement-of-the-2025-article-iv",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-02",
+            "quote": "Stayover arrivals grew at double digits and continued to outperform Caribbean peers."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/02/07022025-curacao-staff-concluding-statement-of-the-2025-article-iv",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-02",
+            "quote": "Construction activity was driven mostly by holiday homes and hotels"
+          }
+        ]
+      },
+      {
+        "title": "Growth without formal jobs",
+        "text": "The new jobs have come mainly in informal, low-skilled work in tourism and building. Registered formal employment has fallen over the past decade.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/09/17/pr-24330-curacao-and-sint-maarten-imf-board-concludes-2024-article-iv-consultation-discussions",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation Discussions with the Kingdom of the Netherlands—Curaçao and Sint Maarten",
+            "date": "2024-09-17",
+            "quote": "Shift to tourism-led growth created near-term gains but resulted in a low-skilled, informal labor market recovery"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/02/07022025-curacao-staff-concluding-statement-of-the-2025-article-iv",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-02",
+            "quote": "Strong decline in formal employment over the past decade driven mostly by a drop in registered jobs among men"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/02/07022025-curacao-staff-concluding-statement-of-the-2025-article-iv",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-02",
+            "quote": "Tourism and construction offer more informal opportunities."
+          }
+        ]
+      },
+      {
+        "title": "Costly imported energy",
+        "text": "The island runs largely on imported fuel, and its power is among the dearest in the region. A shift to wind and solar power is under way.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/06/25/mcs-06252024-kingdom-of-the-netherlands-curacao-concluding-statement-of-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-06-25",
+            "quote": "Curaçao has one of the highest electricity prices in the region and relies on imported fuel."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/06/25/mcs-06252024-kingdom-of-the-netherlands-curacao-concluding-statement-of-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-06-25",
+            "quote": "Planned solar park and upgrades to older wind parks would increase share to 70 percent by 2027."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In mid-2025 the IMF reported that tourism and construction kept growth strong in 2024, with building focused on holiday homes and hotels and credit growth driven by mortgages. It expected growth to ease over the medium term, and named weaker world demand as a risk.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/09/09/pr-25290-the-kingdom-of-the-netherlands-imf-concludes-2025-article-iv-consultation-discussions",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Curaçao and Sint Maarten",
+          "date": "2025-09-09",
+          "quote": "Economic activity in both islands was strong, driven by tourism and construction; near-term outlooks remain favorable."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/07/02/07022025-curacao-staff-concluding-statement-of-the-2025-article-iv",
+          "publisher": "IMF",
+          "title": "Kingdom of the Netherlands – Curaçao: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-07-02",
+          "quote": "Medium-term growth projected to gradually converge to 2 percent."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/09/09/pr-25290-the-kingdom-of-the-netherlands-imf-concludes-2025-article-iv-consultation-discussions",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation Discussions with The Kingdom of the Netherlands—Curaçao and Sint Maarten",
+          "date": "2025-09-09",
+          "quote": "Risks: downside tilt from weaker global demand or trade shocks"
+        }
+      ]
+    },
+    "tension": "The IMF describes strong expansion since the pandemic, with fast growth in tourist arrivals. The data show that most of this growth won back the 2020 loss: income per person in 2024 was still below its 2018 level, 18.8 percent below the 2002 peak and below 2000. Growth has also come with fewer formal jobs."
+  }
+}

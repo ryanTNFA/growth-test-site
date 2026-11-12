@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "iso3": "SLB",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SLB",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Solomon Islands Article IV consultation 2024 2025 growth logging",
+        "worldbank.org: Solomon Islands economic update Macro Poverty Outlook",
+        "imf.org, worldbank.org, mcc.gov, adb.org, oecd.org (tier 1 list): Solomon Islands ethnic tensions 1998 2003 economy contracted RAMSI recovery logging",
+        "Opened: imf.org PR 26/237 (2026 Article IV), imf.org PR 25/042 (2024 Article IV), documents1.worldbank.org Solomon Islands Economic Update June 2026, assets.mcc.gov Solomon Islands Constraints Analysis (published December 2023), documents1.worldbank.org Systematic Country Diagnostic 2017, documents.worldbank.org MPO April 2026 landing page (no text), aric.adb.org Logging Off paper (not cited: no date shown in document)",
+        "Critic check: re-opened every cited URL (imf.org PR 26/237, imf.org PR 25/042, World Bank Economic Update June 2026 PDF, World Bank SCD 2017 PDF, MCC constraints analysis PDF); the PDFs were checked against their extracted text"
+      ],
+      "critic_changes": [
+        "All 5 cited URLs re-opened. Every quote was found on its page and every date matches the document: the MCC PDF prints 'Publication Date: December 2023', the SCD 'June 1, 2017', the World Bank update 'June 2026', and the IMF press releases July 7, 2026 and February 25, 2025. All numbers in the prose match desk/data/SLB.json: 20.5, 1995, 1980, era means 2.4/-2.4/2.5/-1.3, -16.2 in 2000, -9.7 in 2001, 0.4/0.6/1.2 for 2023 to 2025, and 2025 below 2019.",
+        "since_last_year: the draft said both the World Bank and the IMF call the rebound fragile. The IMF press release does not, so only the World Bank is credited. Both slowdown claims hold up (WB: growth slows to 2.8 percent in 2026; IMF: 2.6 percent, down from 3.5 in 2025).",
+        "Thread 'From logs to gold': the draft said the World Bank and the IMF both describe a swap of one extractive sector for another. Only the World Bank says that. The text now gives the World Bank's view and the IMF's list of limits separately. The IMF quote is trimmed to the passage verified on the page.",
+        "Thread 'Pandemic, unrest and rising debt': dropped the unsupported cause 'as revenue from logging fell' (the IMF does not link the rise in debt to logging). Added the IMF 2024 passage that supports the civil-unrest claim, which had no citation.",
+        "Thread 'The Tensions': added the SCD passage saying the Gold Ridge mine and much of the market economy ceased during the tension, which supports a claim that had no citation. Dropped 'the economy has not regained its pre-conflict output', which had no cited passage. 'Ended the fighting' is softened to 'helped end the fighting', as the MCC says.",
+        "Thread 'The logging boom and its end': dropped 'of native forests' and 'just before income per person began to fall'. Income per person was already falling in 1996 and 1997, so the text now says only that the era of shrinking income began in 1998. The money link to politics is reworded to match the SCD (logging rents that funded MPs and their supporters).",
+        "Thread 'Post-conflict growth on logs and aid': added the SCD passage on extraction far above the sustainable yield, which supports a claim the draft's citations did not.",
+        "Arc: 'a regional peace mission arrived in 2003' changed to 'helped end the fighting in 2003', as the source says. 'Gold Ridge mine stalled, logging began to decline' re-timed to match the sources: the restart faded around 2013 to 2014, and logging shrank later. 'Return of gold mining' changed to 'surge in gold mining', the World Bank's wording."
+      ]
+    },
+    "headline": "Logs, conflict and now gold: income per person in the Solomon Islands is still 20.5 percent below its 1995 peak, and below its 1980 level.",
+    "arc": "Income per person in the Solomon Islands peaked in 1995 and in 2025 was still 20.5 percent below that peak, and lower than in 1980, the first year of the record. From 1990 to 1997 it grew 2.4 percent a year on a logging boom that, the World Bank says, ended with the Asian financial crisis in 1997. From 1998 to 2005 it shrank 2.4 percent a year: ethnic conflict, known as the Tensions, brought a collapse of government, with falls of 16.2 percent in 2000 and 9.7 percent in 2001, until a regional peace mission helped end the fighting in 2003. From 2006 to 2013 growth came back at 2.5 percent a year, carried by logging at rates far above what the forests can sustain, by aid and by public spending. Since 2014 income per person has fallen 1.3 percent a year, first as a short restart of the Gold Ridge mine faded, and later as logging shrank and the pandemic and the 2022 fuel price shock brought three years of contraction from 2020 to 2022. Growth turned positive again in 2023, 2024 and 2025, at 0.4, 0.6 and 1.2 percent, led by a surge in gold mining.",
+    "threads": [
+      {
+        "title": "The logging boom and its end",
+        "about": "history",
+        "text": "Growth in the early 1990s was rapid but uneven, driven mostly by logging. The World Bank links the end of that boom to the Asian financial crisis of 1997, which set off a fiscal crisis and cut the logging rents that had funded politicians and their supporters. The era of shrinking income per person began in 1998.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "Economic growth, though rapid in the first half of the 1990s, was highly uneven, driven by logging"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "The logging boom ended with the Asian Financial Crisis in 1997, provoking a fiscal crisis"
+          }
+        ]
+      },
+      {
+        "title": "The Tensions, 1998 to 2003",
+        "about": "history",
+        "text": "From 1998 a conflict between ethnic groups over land and economic grievances broke down government and stopped much of the market economy, including the Gold Ridge mine. An Australian-led regional mission helped end the fighting in 2003.",
+        "citations": [
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-solomon-islands.pdf",
+            "publisher": "MCC",
+            "title": "Solomon Islands 2017 Constraints Analysis Report",
+            "date": "2023-12",
+            "quote": "Referred to as \"The Tensions\", the conflict led to a collapse of governance and an economic contraction of over 40%."
+          },
+          {
+            "url": "https://assets.mcc.gov/content/uploads/constraints-analysis-solomon-islands.pdf",
+            "publisher": "MCC",
+            "title": "Solomon Islands 2017 Constraints Analysis Report",
+            "date": "2023-12",
+            "quote": "An Australian-led peacekeeping force, the Regional Assistance Mission to Solomon Islands (RAMSI), helped to end the fighting in 2003 and remained through 2017."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "While the Gold Ridge mine, oil palm plantation, and many other aspects of the market economy (including copra exports) ceased during the tension"
+          }
+        ]
+      },
+      {
+        "title": "Post-conflict growth on logs and aid",
+        "about": "history",
+        "text": "The recovery after 2003 leaned on logging at rates well above the sustainable yield, on large aid flows and on a bigger public sector. A short restart of the Gold Ridge mine added to growth in 2011 and 2012 and then pulled it down in 2013 and 2014, as the 2006 to 2013 era gave way to decline.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "The main contributors to economic growth have been logging (with rates of extraction significantly exceeding the estimated sustainable yield)"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "In the post-conflict period, Solomon Islands has depended to a significant extent on logging and aid for growth, government revenue, and foreign exchange."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/112901498499975277/pdf/Solomon-Islands-Systematic-Country-Diagnostic-2017-06222017.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Systematic Country Diagnostic: Priorities for Supporting Poverty Reduction & Promoting Shared Prosperity",
+            "date": "2017-06-01",
+            "quote": "The temporary resumption of mining at Gold Ridge contributed to growth in 2011-12, before detracting from it in 2013-14."
+          }
+        ]
+      },
+      {
+        "title": "From logs to gold",
+        "about": "present",
+        "text": "Logging, long the main export, is shrinking, and gold from the reopened Gold Ridge mine now leads exports and growth. The World Bank describes this as a shift from one extractive sector to another, with mining creating far fewer jobs than logging did. The IMF lists declining logging, a narrow economy and weak governance as limits on growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081426062536779/pdf/P519042-995a7ff7-3a27-4a20-862b-aa432408d12e.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Economic Update: Harnessing the New Roots of Growth",
+            "date": "2026-06",
+            "quote": "Forestry and logging output has declined by 23 percent over five years"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081426062536779/pdf/P519042-995a7ff7-3a27-4a20-862b-aa432408d12e.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Economic Update: Harnessing the New Roots of Growth",
+            "date": "2026-06",
+            "quote": "Mining is capital-intensive and generates only a fraction of the jobs that logging did."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/07/07/pr26237-solomon-islands-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Solomon Islands",
+            "date": "2026-07-07",
+            "quote": "constrained by declining logging activity, limited diversification, and weak governance"
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, unrest and rising debt",
+        "about": "present",
+        "text": "Civil unrest, the pandemic and the 2022 fuel price shock hit the economy, and income per person fell in 2020, 2021 and 2022, leaving the economy below its earlier path. Public debt has climbed sharply since before the pandemic.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099081426062536779/pdf/P519042-995a7ff7-3a27-4a20-862b-aa432408d12e.pdf",
+            "publisher": "World Bank",
+            "title": "Solomon Islands Economic Update: Harnessing the New Roots of Growth",
+            "date": "2026-06",
+            "quote": "The pandemic and the 2022 fuel price shock brought three consecutive years of contraction, leaving the economy significantly below its structural path"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/02/25/pr25042-solomon-islands-imf-executive-board-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Solomon Islands",
+            "date": "2025-02-25",
+            "quote": "Solomon Islands has experienced civil unrest and the pandemic"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/02/25/pr25042-solomon-islands-imf-executive-board-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Solomon Islands",
+            "date": "2025-02-25",
+            "quote": "public debt has nearly tripled since before the pandemic"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2026 two new shocks hit a narrow rebound that the World Bank calls fragile. The war in the Middle East pushed up the price of imported fuel, on which the country depends almost entirely, and Cyclone Maila struck in April. Both the World Bank and the IMF expect growth to slow in 2026.",
+      "citations": [
+        {
+          "url": "https://documents1.worldbank.org/curated/en/099081426062536779/pdf/P519042-995a7ff7-3a27-4a20-862b-aa432408d12e.pdf",
+          "publisher": "World Bank",
+          "title": "Solomon Islands Economic Update: Harnessing the New Roots of Growth",
+          "date": "2026-06",
+          "quote": "The economy is recovering from a three-year downturn but remains vulnerable to shocks such as the current energy crisis and the recent Cyclone Maila"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/07/pr26237-solomon-islands-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Solomon Islands",
+          "date": "2026-07-07",
+          "quote": "The war in the Middle East is expected to slow growth to 2.6 percent in 2026"
+        }
+      ]
+    },
+    "tension": "The sources tell of a gold-led rebound, with mining now the engine of growth, but income per person grew only 0.4, 0.6 and 1.2 percent in 2023, 2024 and 2025 and in 2025 was still below its 2019 level. Population growth takes up much of the growth in total output, as the MCC analysis already noted for the years before the pandemic, so a recovery that looks real in the economy as a whole is barely visible per person."
+  }
+}

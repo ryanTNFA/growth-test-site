@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "iso3": "DZA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "DZA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org (tier 1): Algeria Article IV 2025 IMF staff concluding statement growth hydrocarbon",
+        "worldbank.org (tier 1): Algeria Economic Update World Bank 2025 growth",
+        "imf.org, worldbank.org (tier 1): Algeria stabilization and transition to the market 1990s oil price collapse 1986 debt crisis IMF",
+        "imf.org, worldbank.org: Algeria 2021 Article IV IMF COVID-19 pandemic oil price shock contraction 2020",
+        "opened: imf.org PR 26/290 (2026-09-21), imf.org PR 26/236 (2026-07-06), imf.org PR 25/305 (2025-09-18), imf.org PR 21/341 (2021-11), imf.org CR 18/169, imf.org CR 05/52, worldbank.org press releases 2025-06-03 and 2025-12-04",
+        "tried, not readable (403/404): elibrary.imf.org Algeria: Stabilization and Transition to Market chapters, imf.org CR 17/142",
+        "critic: re-opened all 9 cited URLs with WebFetch; extracted CR 18/169 and CR 05/52 PDF text locally to verify quotes"
+      ],
+      "critic_changes": [
+        "Headline: replaced 'grew slowly for two decades on oil-funded public spending' (the sources tie only the pre-2014 years to windfall spending, not 2016–2025) with the data's era rates 3.1 and 0.7 and 'still tied to oil and gas'.",
+        "Arc, 1998–2005 sentence: the sources say the 1994–98 adjustment tightened fiscal policy and that stability was restored by the end of the 1990s, not that the adjustment itself restored stability; reworded accordingly.",
+        "Thread 'Oil crash and civil strife': lengthened the CR 18/169 quote to the full clause on 'severe macroeconomic imbalances' so it supports the thread's claim about imbalances.",
+        "Thread 'Stability, then an oil boom': fixed '1994-98' to the page's '1994–98'; replaced the Economic Recovery Program quote with the CR 05/52 passage on 'continually high hydrocarbon prices since 2000', because the thread's claim that high prices paid for the spending was not in the ERP passage; dropped the ERP mention from the text.",
+        "Thread 'Spending the oil windfall': dropped the claim that returns on public investment fell (ICOR) to make room for a citation on the 2014 oil price fall; replaced the 2021 PR quote 'Accumulated shocks since 2014' (which does not mention oil prices) with CR 18/169 'Prolonged lower oil prices since 2014' and the 2021 PR passage on the concomitant Covid-19 pandemic and oil shocks in 2020; removed 'From the mid-2000s', which no source dates.",
+        "Thread 'Still tied to oil and gas': 'set the pace' softened to 'still move with oil and gas prices' to match the World Bank passage; 'savings' changed to 'financial buffers' to match the IMF wording.",
+        "since_last_year: the December 2025 World Bank release does not say oil and gas growth was weak, so that claim is now cited to the IMF July 2026 passage 'growth in the hydrocarbon sector remained subdued'; 'higher oil and gas prices are lifting' changed to 'the IMF expects ... to lift', because the source gives a projection.",
+        "Tension: 'the population keeps growing' reworded as growth shared among a growing population; all numbers (35.8, 0.5, 2016 and 2024 levels) checked against growth_problem and series.",
+        "All other numbers checked against desk/data/DZA.json: -1.3, 3.1, 0.7, 1.0, 0.5, -6.6 in 2020, 2.0–2.6 for 2021–2025, falls in 2017–2019 and new high in 2025 all match; all dates checked (2021 PR shows 22 November 2021; CR 18/169 June 2018; CR 05/52 February 2005)."
+      ]
+    },
+    "headline": "Algeria's income per person grew 3.1 percent a year in 1998–2005, then only 0.7 for two decades still tied to oil and gas; it reached a new high in 2025.",
+    "arc": "Algeria's income per person fell by 1.3 percent a year on average from 1990 to 1997, in the years after the 1986 oil price crash and during a decade of civil strife. From 1998 to 2005 it grew by 3.1 percent a year: an IMF-supported adjustment had tightened public finances, stability returned by the end of the 1990s, and oil and gas output and prices rose. Since 2006 growth has averaged only 0.7 percent a year. It ran at 1.0 in 2006–2015, when the oil windfall paid for heavy public spending, and at 0.5 in 2016–2025, after oil prices fell in 2014 and the pandemic and an oil shock struck together in 2020. A recovery since 2021, which the sources link to public investment and to growth outside oil and gas, took income per person to its highest level yet in 2025.",
+    "threads": [
+      {
+        "title": "Oil crash and civil strife",
+        "text": "The 1986 collapse in oil prices left Algeria with severe economic imbalances, and a decade of civil strife followed. Income per person fell in most years from 1990 to 1997.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18169.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 18/169)",
+            "date": "2018-06",
+            "quote": "given the severe macroeconomic imbalances resulting from the oil price crash in 1986"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr0552.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 05/52)",
+            "date": "2005-02",
+            "quote": "After a decade of civil strife and economic difficulties, Algeria has recently been experiencing a renewed growth performance"
+          }
+        ]
+      },
+      {
+        "title": "Stability, then an oil boom",
+        "text": "An IMF-supported adjustment from 1994 to 1998 tightened public finances while oil prices were low. From 1999 the oil and gas sector expanded, and high prices from 2000 paid for expansionary public spending. Income per person grew 3.1 percent a year in 1998–2005.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr0552.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 05/52)",
+            "date": "2005-02",
+            "quote": "In the context of the 1994–98 IMF supported adjustment program and a period of low hydrocarbon prices, fiscal policy was tightened"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr0552.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 05/52)",
+            "date": "2005-02",
+            "quote": "in large part aided by the strong development of the hydrocarbon sector since 1999"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2005/cr0552.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 05/52)",
+            "date": "2005-02",
+            "quote": "Supported by continually high hydrocarbon prices since 2000, the Algerian government has pursued an expansionary fiscal policy in recent years."
+          }
+        ]
+      },
+      {
+        "title": "Spending the oil windfall",
+        "text": "The oil windfall paid for heavy public spending. After oil prices fell in 2014, income per person shrank from 2017 to 2019, then fell 6.6 percent in 2020 when the pandemic and an oil shock hit together.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18169.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 18/169)",
+            "date": "2018-06",
+            "quote": "The oil windfall was used to build a growth model based on redistributing the hydrocarbon resources through public spending"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18169.pdf",
+            "publisher": "IMF",
+            "title": "Algeria: Selected Issues (IMF Country Report No. 18/169)",
+            "date": "2018-06",
+            "quote": "Prolonged lower oil prices since 2014 have added to the challenge"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2021/11/19/pr21341-algeria-imf-executive-board-concludes-2021-article-iv-consultation-with-algeria",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2021 Article IV Consultation with Algeria",
+            "date": "2021-11-22",
+            "quote": "Algeria recovering from the concomitant Covid-19 pandemic and oil shocks in 2020."
+          }
+        ]
+      },
+      {
+        "title": "An investment-led recovery",
+        "text": "Since 2021 income per person has grown by between 2.0 and 2.6 percent a year. The World Bank and the IMF link this to strong public investment, household spending and growth in sectors outside oil and gas.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/03/algeria-boosting-productivity-to-achieve-sustainable-and-diversified-growth",
+            "publisher": "World Bank",
+            "title": "Algeria: Boosting productivity to achieve sustainable and diversified growth",
+            "date": "2025-06-03",
+            "quote": "non-hydrocarbon GDP expanding by 4.8 percent, driven by strong public investment and robust household consumption."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/21/pr26290-algeria-imf-concludes-2026-aiv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Algeria",
+            "date": "2026-09-21",
+            "quote": "Real GDP growth is estimated at 3.9 percent in 2025 (from 3.7 percent in 2024) supported by strong investment."
+          }
+        ]
+      },
+      {
+        "title": "Still tied to oil and gas",
+        "text": "Exports and public finances still move with oil and gas prices. OPEC+ production cuts shrank the oil and gas sector in 2024, and large budget deficits have run down the government's financial buffers.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/03/algeria-boosting-productivity-to-achieve-sustainable-and-diversified-growth",
+            "publisher": "World Bank",
+            "title": "Algeria: Boosting productivity to achieve sustainable and diversified growth",
+            "date": "2025-06-03",
+            "quote": "the fiscal and external balance remain highly sensitive to oil and gas prices"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/18/pr-25305-algeria-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Algeria",
+            "date": "2025-09-18",
+            "quote": "Hydrocarbon sector contracted in 2024 due to OPEC+ cuts"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/21/pr26290-algeria-imf-concludes-2026-aiv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Algeria",
+            "date": "2026-09-21",
+            "quote": "large fiscal deficits have depleted fiscal buffers"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the World Bank reported strong growth outside oil and gas in 2025, and the IMF called growth in 2025 robust while oil and gas growth stayed weak. The IMF expects higher oil and gas prices to lift export and budget revenue in 2026. It also reports that public debt and reliance on central-bank financing have risen.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/04/algeria-responding-to-climate-challenges-and-supporting-sustainable-development",
+          "publisher": "World Bank",
+          "title": "Algeria: Responding to Climate Challenges and Supporting Sustainable Development",
+          "date": "2025-12-04",
+          "quote": "Non-hydrocarbon sectors expanded by 5.4 percent"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/06/pr26236-algeria-imf-staff-completes-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Algeria",
+          "date": "2026-07-06",
+          "quote": "growth in the hydrocarbon sector remained subdued"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/06/pr26236-algeria-imf-staff-completes-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Algeria",
+          "date": "2026-07-06",
+          "quote": "higher hydrocarbon prices are expected to boost export and fiscal revenues"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/09/21/pr26290-algeria-imf-concludes-2026-aiv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Algeria",
+          "date": "2026-09-21",
+          "quote": "public debt and reliance on central-bank financing increased"
+        }
+      ]
+    },
+    "tension": "The sources call recent growth robust and investment strong, and investment is high at 35.8 percent of GDP, well above what Algeria's income would predict. Yet income per person grew only 0.5 percent a year over 2016–2025. In 2024 it was only back to about its 2016 level, because the losses from 2017 to 2020 were large and the economy's growth is shared among a growing population."
+  }
+}

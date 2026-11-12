@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "iso3": "AZE",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "AZE",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Azerbaijan Article IV 2025 staff report non-oil growth",
+        "tier 1 domains: Azerbaijan Macro Poverty Outlook economic update oil production decline",
+        "tier 1 domains: Azerbaijan 2015 devaluation oil price shock manat banking crisis 2016 recession",
+        "tier 1 domains: Azerbaijan oil boom 2005-2007 Azeri-Chirag-Guneshli BTC pipeline growth 1990s collapse Nagorno-Karabakh",
+        "imf.org: IMF Executive Board concludes 2026 Article IV consultation Republic of Azerbaijan",
+        "Opened: imf.org pr-26056 (2026-02-19), imf.org pr-26131 (2026-04-30), imf.org pr-25118 (2025-04-22), thedocs.worldbank.org MPO Azerbaijan (October 2026), documents1.worldbank.org Azerbaijan Country Economic Memorandum (2022-02-11), ebrd.com Transition Report 2025-26 Azerbaijan",
+        "Critic: re-opened all five cited URLs (World Bank PDFs read through local text extraction); ebrd.com search attempted but the web search budget was used up"
+      ],
+      "critic_changes": [
+        "Checked all five cited URLs. Every quoted passage appears on its page, and the dates match: the MPO says October 2026, the CEM 11 February 2022, and the IMF releases 19 February 2026, 22 April 2025 and 30 April 2026 (the last one's URL says 04/29, but the page is dated 30 April).",
+        "Checked every number against desk/data/AZE.json: -8.7, 15.1, 33.0 (2006), 2.9, 0.8, 8.0, -4.1 (2016), the 2020 fall, the 2025 peak, 1.0 (2025), 8.3 (2008) and the falls in 2011 and 2015 all match. No number needed correcting.",
+        "Headline: changed 'with oil prices down' to 'as output from ageing oil fields declines'. Oil prices spiked in 2026 (MPO), so 'prices down' does not hold for the whole period, and the declining output is what the sources stress.",
+        "Arc: removed 'the pandemic year of', because no cited source explains the 2020 fall.",
+        "Thread 'Ageing oil fields': removed 'and gas has only partly made up for it'. The MPO says the hydrocarbon drop was partly offset by non-hydrocarbon growth, and that gas export volumes were broadly unchanged. It does not say gas made up for anything. Also removed 'for years' and named crude oil export volumes, matching the page.",
+        "Thread 'Public spending sets the pace': the claim that oil money went into infrastructure was not in the quoted passage. Replaced the CEM quote with the sentence on the same page that says spending was skewed toward public investment in infrastructure, and reworded the text to match.",
+        "Thread 'From collapse to oil boom': the deal with oil companies was not in either quoted passage. Added a citation to the CEM's production sharing agreement sentence, and changed 'signed deals with foreign oil companies' to 'a production sharing agreement with a consortium of oil companies', which is how the page puts it.",
+        "Thread 'Oil price crash and devaluation': 'growth slowed after 2010' was not in the quoted passage. Added the CEM sentence 'After slowing since 2010...' as a citation.",
+        "since_last_year: the oil price spike raising export earnings was not covered by any quote. Added the MPO passage 'Higher oil prices sharply boosted export revenue'.",
+        "Tension: changed 'well above' to 'above', because the MPO's decade average for GDP growth is about 1.4 percent against 0.8, a modest gap. Changed 'because a growing population shared the gains' to 'partly because the population grew', since the sources do not break the gap down.",
+        "tier1_recent_found: changed from 5 to 4. Four recent tier 1 sources were opened and verified (MPO October 2026 and IMF releases of February 2026, April 2026 and April 2025). The drafter also listed an EBRD Transition Report 2025-26 page, but that report is not cited in the story. I could not re-check it because this turn's web search budget was used up.",
+        "No recommendation or verdict language and no banned phrases found. The tier stays 1, with five threads and four distinct recent sources."
+      ]
+    },
+    "headline": "Oil lifted Azerbaijan's income per person fast until 2007; since 2016, as output from ageing oil fields declines, growth has averaged 0.8 percent a year.",
+    "arc": "Income per person fell by 8.7 percent a year over 1991–1998, as the fall of the Soviet Union and the turmoil of the early 1990s brought a deep recession. From 1999 to 2007 it grew by 15.1 percent a year, the fastest era in the record, as oil production and exports from the Caspian rose during a global commodity boom; growth reached 33.0 percent in 2006. Growth slowed to 2.9 percent a year over 2008–2015 as the boom faded after the global financial crisis, and the 2014 fall in oil prices brought it to a halt. Since 2016 it has averaged 0.8 percent a year, against 8.0 in the decade before: income per person fell 4.1 percent in 2016 after two devaluations and a banking crisis, fell again in 2020, and output from mature oil fields keeps declining. In 2025 income per person reached its highest level so far, yet it grew only 1.0 percent that year.",
+    "threads": [
+      {
+        "title": "Ageing oil fields",
+        "about": "present",
+        "text": "Oil output has been falling as the main fields age. The decline continued in 2025 and into 2026, pulling down both output and crude oil export volumes.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-aze.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan, Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "a 0.7 percent contraction in the hydrocarbon sector as production from mature oil fields continued to decline"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/19/pr-26056-azerbaijan-imf-staff-completes-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Azerbaijan",
+            "date": "2026-02-19",
+            "quote": "Hydrocarbon output declined considerably in 2025"
+          }
+        ]
+      },
+      {
+        "title": "Public spending sets the pace",
+        "about": "present",
+        "text": "In the oil years the state was a main investor, and its spending leaned toward public investment in infrastructure. That spending is now being cut back, and in 2026 lower government capital spending held down building work and investment.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "Spending composition was skewed toward public investment, with a focus on rebuilding infrastructure that had deteriorated during the 1990s economic downturn."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-aze.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan, Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "investment was held back by a government-driven contraction—capital expenditure fell 23.8 percent in nominal terms"
+          }
+        ]
+      },
+      {
+        "title": "Large state firms, thin competition",
+        "about": "present",
+        "text": "Outside oil and gas, private firms invest little and productivity is weak. The sources link this partly to the large place of state-owned firms and limits on trade in services.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-aze.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan, Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "weak market competition resulting from the large footprint of state-owned enterprises and from restrictions on services trade"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/04/22/pr-25118-azerbaijan-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with the Republic of Azerbaijan",
+            "date": "2025-04-22",
+            "quote": "Presence of inefficient SOEs could undermine private sector development and diversification."
+          }
+        ]
+      },
+      {
+        "title": "From collapse to oil boom",
+        "about": "history",
+        "text": "After a deep recession in the early 1990s, the country stabilised and put in place a production sharing agreement with a consortium of oil companies to develop its Caspian fields. Rising oil output and exports, during a global commodity boom, drove the very fast growth of 1999–2007.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "After the fall of the Soviet Union and the geopolitical turmoil of the early 1990s, the country experienced a deep recession"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "Shortly after the energy production sharing agreement (PSA) was implemented, both public and private capital was poured into the exploration of hydrocarbon resources"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "A sharp increase in oil production and exports, starting in the late 1990s, coinciding with the global commodity super-cycle"
+          }
+        ]
+      },
+      {
+        "title": "Oil price crash and devaluation",
+        "about": "history",
+        "text": "Growth slowed after 2010, and the fall in oil prices in 2014 wiped out external surpluses. The central bank spent heavily to hold the exchange rate before the currency was devalued twice in 2015, and a credit crunch and banking crisis led into the 2016 recession.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "After slowing since 2010, Azerbaijan experienced its first recession since the turn of the century in 2016."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100009222236784/pdf/P17532606988e2056084e603c9c48ddc618.pdf",
+            "publisher": "World Bank",
+            "title": "Azerbaijan Country Economic Memorandum",
+            "date": "2022-02-11",
+            "quote": "the national currency was devaluated twice and lost half of its value. A credit crunch in the financial sector and a banking crisis followed."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth slowed sharply in the first half of 2026 as oil output kept falling and the government cut its capital spending. A spike in oil prices tied to conflict in the Middle East raised export earnings and the budget surplus, but not output. The IMF said in April 2026 that progress on a peace agreement with Armenia could support growth.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-aze.pdf",
+          "publisher": "World Bank",
+          "title": "Azerbaijan, Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "Azerbaijan's growth slowed sharply in the first half of 2026 as hydrocarbon output declined"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-aze.pdf",
+          "publisher": "World Bank",
+          "title": "Azerbaijan, Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "Higher oil prices sharply boosted export revenue"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/29/pr-26131-azerbaijian-imf-executive-board-concludes-2026-article-iv-consult",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with the Republic of Azerbaijan",
+          "date": "2026-04-30",
+          "quote": "Progress in peace agreement with Armenia could foster stronger economic growth."
+        }
+      ]
+    },
+    "tension": "The sources date the slowdown from 2010 and treat 2008 as part of the oil boom, but the data place 2008 in the slower era even though income per person still grew 8.3 percent that year. The World Bank also calls 2016 the first recession since the turn of the century, while the data show income per person already fell in 2011 and 2015. Finally, the World Bank's average for total GDP growth over the past decade is above the 0.8 percent a year that income per person managed over 2016–2025, partly because the population grew."
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "iso3": "MUS",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MUS",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: 'Mauritius Article IV consultation 2025 staff report growth'",
+        "same tier 1 domains: 'Mauritius Macro Poverty Outlook economic update growth tourism'",
+        "opened: imf.org 2026 Article IV press release (2026-07-15); imf.org 2025 Article IV end-of-mission press release (2025-04); documents1.worldbank.org Mauritius Country Growth and Jobs Report 2026 (PDF, quotes checked against extracted text)",
+        "afdb.org Country Focus Report 2026 page returned 403 and was not cited",
+        "critic: re-opened all three cited URLs with WebFetch; World Bank PDF text extracted and every quote matched verbatim"
+      ],
+      "critic_changes": [
+        "Checked every cited URL again: the two IMF press releases and the World Bank Country Growth and Jobs Report 2026 PDF. All quoted passages appear word for word, and the dates match the documents (the 2025 IMF release is dated April 2025; 2025-04 kept).",
+        "Checked every number against desk/data/MUS.json: 3.5 (G4 era mean 1990–2025), 4.0 (avg_prior_10y 2006–2015), 2.7 (avg_10y 2016–2025), -14.2 (2020), 8.7 (2022), 5.9 (2023), 5.2 (2024), 3.3 (2025) and the 2025 peak (G3) all match. The claim that 2020 accounts for more than the 4.0-to-2.7 gap also holds: the other nine years average about 4.5.",
+        "Thread 'Sugar and textile preferences end': the text names 2017, but no quoted passage covered 2017. Added a third verified quote from the same World Bank report covering the 2017 EU sugar quota change and the weakening of textile and sugar exports.",
+        "Thread 'Tourism and finance take over': 'From the 2000s, tourism became the anchor' said more than the source. The source dates only the rise of financial and business services to the 2000s, so the sentence now follows the source.",
+        "Thread 'Pandemic collapse and tourism rebound': 'lifted growth to 8.7 percent' changed to 'lifted income per person by 8.7 percent' so the figures read as income per person, matching the data series.",
+        "Thread 'Consumption, debt and ageing': the quoted passages did not support the claims that investment fell into real estate or that the working-age share is shrinking. Replaced the 65-and-over quote, which contained figures not used in the prose, with verified passages on investment shifting to real estate and the working-age population shrinking.",
+        "since_last_year: the text names the war in the Middle East, but no quote did. Added the verified IMF passage that names it. The quote about spillovers from the war was checked against the page and is verbatim.",
+        "Arc: 'wore down' changed to 'weakened' for plainer wording. Tension: 'the old growth model has weakened over the past two decades' changed to 'the old export-led model is under increasing strain', which is what the source says. No banned phrases or recommendation language were found."
+      ]
+    },
+    "headline": "Income per person in Mauritius has grown about 3.5 percent a year since 1990 as tourism and finance took over from sugar and textiles; it is at a record high.",
+    "arc": "Since 1990, income per person in Mauritius has grown by about 3.5 percent a year, and the data show no lasting shift in that pace, so the whole period reads as one era. The World Bank ties the earlier years to export-led growth from a strong manufacturing base, with textiles and sugar as the main goods exports, which weakened after trade preferences ended in 2004, 2009 and 2017. Tourism and financial and business services took up much of the slack, and income per person grew 4.0 percent a year over 2006–2015. In 2020 the pandemic cut income per person by 14.2 percent, the deepest fall in the record, before a tourism-led recovery brought growth of 8.7 percent in 2022 and 5.9 percent in 2023. That one bad year pulls the 2016–2025 average down to 2.7 percent, yet income per person reached its highest level ever in 2025, when it grew 3.3 percent. The World Bank now describes growth as led by consumption and public transfers, with falling investment and a fast-ageing population.",
+    "threads": [
+      {
+        "title": "Sugar and textile preferences end",
+        "about": "history",
+        "text": "Through the 1980s and 1990s, a strong manufacturing base drove jobs and income growth. The end of global textile quotas in 2004 and changes to Europe's special sugar arrangements in 2009 and 2017 gradually weakened exports of textiles and sugar.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "During the 1980s and 1990s, a strong manufacturing base supported job creation and income growth."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "the end of the Multi-Fiber Arrangement in 2004, the dissolution of the Sugar Protocol in 2009"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "the lifting of EU sugar import quotas in 2017 gradually weakened Mauritius’s competitiveness in traditional goods exports, particularly textiles and sugar"
+          }
+        ]
+      },
+      {
+        "title": "Tourism and finance take over",
+        "about": "present",
+        "text": "Tourism anchored the economy as it diversified, with financial and business services playing a larger part from the 2000s. Services, construction and tourism still led growth in 2024.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "Anchored by tourism, the economy has diversified, with financial and business services playing a larger role in the 2000s."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/04/10/pr-25100-mauritius-imf-staff-completes-2025-article-iv-mission-to-mauritius",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2025 Article IV Mission to Mauritius",
+            "date": "2025-04",
+            "quote": "Real GDP grew by 4.7 percent in 2024, driven by services, construction, and tourism."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic collapse and tourism rebound",
+        "about": "history",
+        "text": "The COVID-19 pandemic brought the deepest fall in the record, with income per person down 14.2 percent in 2020. A recovery in tourism then lifted income per person by 8.7 percent in 2022 and 5.9 percent in 2023.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "That upward trajectory was interrupted by the COVID-19 pandemic, which triggered a sharp 14.9 percent contraction in GDP."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "with growth averaging 7 percent in 2022 and 2023, fueled largely by a recovery in tourism"
+          }
+        ]
+      },
+      {
+        "title": "Consumption, debt and ageing",
+        "about": "present",
+        "text": "The World Bank finds that growth now leans on household spending and on public transfers financed by borrowing, while investment has fallen and gone mostly into real estate. The population is also ageing fast, so the share of people of working age is shrinking.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "Growth has been consumption-led and increasingly supported by debt-financed transfers, contributing to persistent deficits and elevated public debt."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "Public and private investment, already modest, have declined and shifted mainly toward real estate, while export competitiveness has weakened."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099093026022015480/pdf/P513706-134060ae-b1c4-4750-aca9-a7ee63040b04.pdf",
+            "publisher": "World Bank",
+            "title": "Mauritius Country Growth and Jobs Report 2026: Riding the Next Wave: Rewiring Institutions, Infrastructure, and Incentives",
+            "date": "2026",
+            "quote": "Mauritius faces mounting hurdles in sustaining economic growth as the nation’s population continues to age and the working-age population shrinks"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth eased in 2025, with income per person up 3.3 percent after 5.2 percent in 2024. In July 2026 the IMF expected slower growth in 2026, as the war in the Middle East weakens tourism and raises commodity prices.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/15/pr26246-mauritius-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Mauritius",
+          "date": "2026-07-15",
+          "quote": "The Mauritian economy remains resilient, with growth of 3.2 percent in 2025 and easing inflation in early 2026."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/15/pr26246-mauritius-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Mauritius",
+          "date": "2026-07-15",
+          "quote": "Near-term outlook has weakened amid heightened global uncertainty and the war in the Middle East."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/07/15/pr26246-mauritius-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Mauritius",
+          "date": "2026-07-15",
+          "quote": "reflecting adverse spillovers from the war—via weaker tourism and higher commodity prices"
+        }
+      ]
+    },
+    "tension": "The World Bank says the old export-led model is under increasing strain, but the data find no lasting break since 1990. Income per person grew 4.0 percent a year in 2006–2015 and 2.7 percent in 2016–2025, and the single fall of 2020 accounts for more than that whole gap; in 2025 income per person was at its highest level ever."
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "iso3": "BDI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BDI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org (tier 1): Burundi Article IV staff report 2025 growth",
+        "worldbank.org (tier 1): Burundi Macro Poverty Outlook economic update",
+        "tier 1 domains: Burundi civil war 1993 economic decline income per capita 2015 political crisis aid suspension",
+        "tier 1 domains: Burundi 2015 political crisis donors suspended budget support economy contracted",
+        "opened: imf.org PR 26/210 (2026-06-17), imf.org PR 26/158 (2026-05-18), thedocs.worldbank.org MPO Burundi (October 2026), documents1.worldbank.org Burundi CPF FY19-FY23 (2019-06-10)",
+        "failed to open: documents1.worldbank.org Burundi Poverty Assessment 2016 (too large), elibrary.imf.org 2020 CCRT report (403)",
+        "critic re-opened all four cited URLs; both World Bank PDFs read as extracted text"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/BDI.json, and all are correct: 28.8 shortfall, 1991 peak, 1967 level first reached, -3.5 for 1990-1997, 0.0 since 1998, 0.1 for 2006-2015, 0.7 for 2016-2025, -13.3 in 1995, -8.1 in 1996, -2.6 in 2015 and 1.8 in 2025. Headline is 150 characters.",
+        "Opened all four cited URLs. Every quoted passage appears on its page, and every date matches the document (World Bank partnership framework dated June 10, 2019; Macro Poverty Outlook marked October 2026; IMF press releases dated 2026-06-17 and 2026-05-18).",
+        "Arc: said plainly that the 0.0 average since 1998 is growth in income per person. Replaced 'tore through the economy' with 'spread'. The draft said high inflation and scarce foreign currency 'held back gains per person', but no cited passage says that. The arc now says fast population growth limited gains per person, which the Macro Poverty Outlook supports, and that inflation and scarce foreign currency strained the economy. Split one long sentence; the arc has 5 sentences.",
+        "Thread 'The 2015 crisis and lost aid': no cited passage supported the claim that donors suspended budget support, so a 2019 World Bank passage that says so was added. The contraction quote was widened to include 'interrupted a decade of growth', which the tension relies on. The grants quote was extended to its next sentence, which supports 'less foreign currency and less room in the budget'. Changed 'contested elections led to violence' to 'a political crisis around the 2015 elections', the wording the quotes support.",
+        "Thread 'Scarce foreign currency, high inflation': no cited passage supported the claim that an overvalued exchange rate and central bank financing pushed inflation up. Added the Macro Poverty Outlook passage on deficits, monetary financing and low reserves fueling inflation. Dropped the exchange-rate claim and reworded the text to match.",
+        "Thread 'Coffee and gold exports': dropped 'and brought in foreign currency', which the cited passages do not state.",
+        "since_last_year: dropped 'growth picked up on higher coffee and gold exports'. Its citations do not support it, and the data show only a small rise (1.5 percent in 2024 to 1.8 percent in 2025). The export point remains in its own thread.",
+        "No banned phrases or recommendation language found. 5 threads and 3 distinct recent tier 1 sources survive, so the story stays tier 1."
+      ]
+    },
+    "headline": "Burundi's income per person is still 28.8 percent below its 1991 peak, after a civil war, a 2015 crisis and more than two decades of near-zero growth.",
+    "arc": "Burundi's income per person peaked in 1991, and in 2025 it was still 28.8 percent below that peak, about where it first stood in 1967. From 1990 to 1997 it fell by 3.5 percent a year, with the worst losses in 1995 (13.3 percent) and 1996 (8.1 percent), as a civil war that began in 1993 spread. Since 1998 income per person has grown by an average of 0.0 percent a year: the 2000 Arusha Accord brought relative calm, but income per person rose only 0.1 percent a year over 2006–2015. The 2015 political crisis brought a fall of 2.6 percent and the loss of donor budget support. Income per person grew 0.7 percent a year over 2016–2025 and 1.8 percent in 2025, when stronger coffee and gold exports supported growth, but fast population growth limited the gains per person, and high inflation and scarce foreign currency strained the economy.",
+    "threads": [
+      {
+        "title": "Civil war and its long shadow",
+        "text": "A civil war driven by ethnic conflict began in 1993 and ended with the 2000 Arusha Accord. Income per person fell steeply through the mid-1990s and has never regained its 1991 level.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/282471563156135424/pdf/Burundi-Country-Partnership-Framework-for-the-Period-FY19-FY23.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Burundi for the Period FY19-FY23",
+            "date": "2019-06-10",
+            "quote": "Stability was temporarily gained under the 2000 Arusha Accord, which ended a civil war driven by ethnic conflicts that had begun in 1993."
+          }
+        ]
+      },
+      {
+        "title": "The 2015 crisis and lost aid",
+        "text": "A political crisis around the 2015 elections ended a decade of growth and brought a contraction, and donors suspended budget support. Grants from abroad remain far below their pre-2015 level, which leaves less foreign currency and less room in the budget.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/282471563156135424/pdf/Burundi-Country-Partnership-Framework-for-the-Period-FY19-FY23.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Burundi for the Period FY19-FY23",
+            "date": "2019-06-10",
+            "quote": "The 2015 political crisis interrupted a decade of growth and development. Real GDP contracted by 3.9 percent in 2015 and 0.6 percent in 2016"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/282471563156135424/pdf/Burundi-Country-Partnership-Framework-for-the-Period-FY19-FY23.pdf",
+            "publisher": "World Bank",
+            "title": "Country Partnership Framework for the Republic of Burundi for the Period FY19-FY23",
+            "date": "2019-06-10",
+            "quote": "The suspension of external budget support by donors in response to the 2015 crisis heightened the need for the Government to mobilize additional domestic revenue"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "external grants equaled 2.6 percent of GDP, about one-quarter of pre-2015 levels. Lower financial inflows have reduced foreign-currency availability and fiscal space."
+          }
+        ]
+      },
+      {
+        "title": "Scarce foreign currency, high inflation",
+        "text": "Large budget and external deficits, financed partly by the central bank, and low reserves fueled inflation, and fuel stayed scarce. Inflation fell sharply between 2025 and 2026, but reserves remain thin.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "Large fiscal and current account deficits, monetary financing, high domestic debt, and low reserves have fueled inflation, crowded out productive spending, and weakened resilience."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/17/imf-pr-26210-burundi-imf-executive-board-concludes-2026-article-iv-consultation-with-burundi",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Burundi",
+            "date": "2026-06-17",
+            "quote": "Inflation fell from 45 percent in April 2025 to 8.6 percent in April 2026."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "International reserves remained low at 1.5 months of imports in June; net foreign assets were negative, and fuel shortages persisted."
+          }
+        ]
+      },
+      {
+        "title": "Coffee and gold exports",
+        "text": "Higher coffee and gold exports lifted growth in 2025. Gold output rose sharply, though mining is still a small part of the economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/17/imf-pr-26210-burundi-imf-executive-board-concludes-2026-article-iv-consultation-with-burundi",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Burundi",
+            "date": "2026-06-17",
+            "quote": "Real GDP growth reached 4.2 percent in 2025, supported by stronger coffee and gold exports."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/18/pr26158-burundi-imf-staff-completes-2026-aiv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Burundi",
+            "date": "2026-05-18",
+            "quote": "Gold volumes increased from about 400 kg in 2024 to 1.2 tons in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "mining, despite its potential, contributed only 3.8 percent of GDP in 2025."
+          }
+        ]
+      },
+      {
+        "title": "Subsistence farming, fast population growth",
+        "text": "Most workers still farm mainly to feed their own households, and productivity is low. The population grows fast, so gains in total output become small gains in income per person.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "Over 85 percent of the labor force remains in subsistence agriculture"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Burundi",
+            "date": "2026-10",
+            "quote": "Rapid population growth will limit per capita income gains"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Inflation fell steeply between April 2025 and April 2026. Foreign currency stayed scarce through mid-2026, with low reserves and continuing fuel shortages.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/17/imf-pr-26210-burundi-imf-executive-board-concludes-2026-article-iv-consultation-with-burundi",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Burundi",
+          "date": "2026-06-17",
+          "quote": "Inflation fell from 45 percent in April 2025 to 8.6 percent in April 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-bdi.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Burundi",
+          "date": "2026-10",
+          "quote": "International reserves remained low at 1.5 months of imports in June; net foreign assets were negative, and fuel shortages persisted."
+        }
+      ]
+    },
+    "tension": "The World Bank describes the years before 2015 as a decade of growth, but income per person rose only 0.1 percent a year over 2006–2015. The same gap shows now: the sources report strong growth in 2025, while income per person grew 1.8 percent, because the population keeps growing fast."
+  }
+}

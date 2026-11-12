@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "iso3": "NCL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "NCL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 2,
+      "tier1_recent_found": 1,
+      "sources_searched": [
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): New Caledonia economy nickel 2024 unrest (drafting run)",
+        "WebSearch tier 1 (imf.org, worldbank.org, oecd.org, adb.org): New Caledonia economic impact riots May 2024 nickel sector crisis (drafting run)",
+        "WebSearch imf.org: France Article IV 2025 staff report New Caledonia (drafting run)",
+        "WebSearch worldbank.org: nickel prices New Caledonia smelter closures (drafting run)",
+        "WebSearch tier 1: Koniambo / Societe Le Nickel / New Caledonia nickel 2024 2025 (drafting run)",
+        "oecd.org: OECD Trade Policy Papers No. 300 (2025-12), the one recent tier 1 source (drafting run)",
+        "WebSearch tier 2 (cepal.org, unescap.org, uneca.org, unescwa.org, unece.org, unctad.org, undp.org, un.org): New Caledonia working paper Secretariat economy nickel 2025 (drafting run)",
+        "documents.un.org: A/AC.109/2024/11, A/AC.109/2025/11, A/AC.109/2026/11 re-opened with WebFetch at check; text extracted from the PDFs and every quote matched",
+        "unctad.org: A/80/120 (dated 9 July 2025) re-opened with WebFetch at check; quote matched"
+      ],
+      "critic_changes": [
+        "Re-opened all four cited documents (A/AC.109/2024/11 dated 14 March 2024, A/AC.109/2025/11 dated 18 March 2025, A/AC.109/2026/11 dated 31 March 2026, UNCTAD A/80/120 dated 9 July 2025). Every original quote appears on its page and every date matches, so all original citations were kept.",
+        "Every number checked against desk/data/NCL.json: 32.3 (1988), 0.1 (1990-1997 era), -2.2 (1998-2024 era), 43.1 (2010 investment), 2.3 (10-year average), 14.3 (2024), 22.1 (2024 investment), 11.0 (2025 unemployment, G11) and 292,614 (G12 population) all match.",
+        "Arc and nickel thread: removed 'high costs and hard processing'. No cited passage supports it. The arc now says the plants 'ran into trouble', which A/AC.109/2025/11 supports ('problems encountered by metallurgical operators').",
+        "Arc: the Koniambo closure was moved out of the riots sentence and tied to the shareholder pulling its funding. The plant went on standby in February 2024, before the riots. 'Closed for good' was kept because A/AC.109/2025/11 calls cold standby 'the irretrievable shutdown of the plant'.",
+        "Arc: 'a period the sources link to new nickel plants' became 'the sources describe new nickel plants ... in the years after the 1998 Nouméa Accord'. The sources give no dates for the plants.",
+        "May 2024 riots thread: 'shut mines, cut off a processing plant and destroyed many businesses, and the job losses have only recently stopped' went beyond the cited passages. It now says the riots badly damaged an already fragile economy and many jobs were lost over two years. Added a citation for the cause of the riots: the constitutional reform of the provincial electorate.",
+        "Transfers thread: dropped 'grew sharply after the riots', which no cited passage supported. It now says that in 2024 French money also covered crisis costs and aid, with a new quote from A/AC.109/2025/11.",
+        "People leaving thread: changed 'fewer babies were born' to match the source's 'decrease in the natural population change'. Added a citation for the claim that consumption fell after the riots because buying power collapsed and people left.",
+        "History thread: dropped 'alongside a plant in the South'. None of its three cited passages covers it.",
+        "since_last_year: added citations for jobs stabilising, household consumption not recovering, and the FLNKS rejection of the Bougival draft. 'Were still unsettled' became a description of the FLNKS rejection followed by the January 2026 signing, as the source gives them.",
+        "Tension: removed the guess that the 14.3 percent fall 'may be measured against too many people'. No source says so. The tension now states only that the data's population is higher than the 2025 figure the sources report."
+      ]
+    },
+    "headline": "A nickel slump and the 2024 riots cut income per person in New Caledonia by 14.3 percent in one year, capping a decade of decline.",
+    "arc": "Income per person in New Caledonia jumped 32.3 percent in 1988, the year the Matignon Agreements ended years of violence, then grew by just 0.1 percent a year from 1990 to 1997. The data place a second era from 1998 to 2024 at -2.2 percent a year. But they have no figures for 2001 to 2017, when investment rose as high as 43.1 percent of GDP in 2010, and the sources describe new nickel plants in the North and South provinces in the years after the 1998 Nouméa Accord. Over the last decade income per person fell 2.3 percent a year on average, as the nickel plants ran into trouble and low world nickel prices strained them in 2023. Riots that began in May 2024 shut mines, cut off a plant and wrecked many businesses, and income per person fell 14.3 percent that year, while investment dropped to 22.1 percent of GDP. The same year the Koniambo plant in the North closed for good after its main shareholder stopped funding it.",
+    "threads": [
+      {
+        "title": "Nickel at the centre",
+        "about": "present",
+        "text": "Nickel mining and processing drive most other activity, through the jobs and spending they create. Low world nickel prices strained the plants in 2023, and the Koniambo plant in the North shut down in 2024 after its main shareholder stopped funding it.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "According to the Overseas Issuing Institute, the Territory's entire economy depends on the health of the nickel sector."
+          },
+          {
+            "url": "https://unctad.org/system/files/official-document/a_80_120_en.pdf",
+            "publisher": "UNCTAD",
+            "title": "World commodity trends and prospects: Report of the Secretary-General (A/80/120)",
+            "date": "2025-07-09",
+            "quote": "falling nickel prices in 2023 caused financial strain for plants in Australia and New Caledonia"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2025/11)",
+            "date": "2025-03-18",
+            "quote": "KNS was put into cold standby on 1 September 2024, following the suspension of financing by its reference shareholder."
+          }
+        ]
+      },
+      {
+        "title": "The May 2024 riots",
+        "about": "present",
+        "text": "Riots broke out in May 2024, after a constitutional change to who could vote in provincial elections stirred tension among Kanak supporters of independence. They badly damaged an already fragile economy, and many jobs were lost over the next two years.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2025/11)",
+            "date": "2025-03-18",
+            "quote": "This constitutional reform has caused a great deal of tension among the Kanak pro-independence population."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2025/11)",
+            "date": "2025-03-18",
+            "quote": "the riots that broke out on 13 May 2024 have seriously damaged the already fragile economy and infrastructure of New Caledonia"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "over the past two years, New Caledonia has lost more than 13,000 jobs, or 15% of its salaried workforce"
+          }
+        ]
+      },
+      {
+        "title": "Leaning on transfers from France",
+        "about": "present",
+        "text": "The economy leans heavily on money from the French government, and in 2024 that money also covered crisis costs and aid after the riots. The territory keeps little of the tax it collects, which leaves its own budget with little room.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2024/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2024/11)",
+            "date": "2024-03-14",
+            "quote": "The economy is highly dependent on financial transfers from the Government of France."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2025/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2025/11)",
+            "date": "2025-03-18",
+            "quote": "In 2024, the State allocated 3 billion euros to New Caledonia, including the usual contributions, crisis management costs and economic aid specific to the crisis."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "New Caledonia remits more than 83% of the taxes it collects, which severely limits its fiscal space."
+          }
+        ]
+      },
+      {
+        "title": "People leaving",
+        "about": "present",
+        "text": "The population shrank between the 2019 and 2025 censuses, because more people left than arrived and births outnumbered deaths by less than before. After the riots, people leaving and lost buying power cut spending on local food.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "This decline is driven both by the widening of the negative net migration balance and by the decrease in the natural population change."
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "Following the May 2024 riots, the decline in consumption caused by the collapse in purchasing power and significant outward migration had a substantial impact"
+          }
+        ]
+      },
+      {
+        "title": "Peace accords and nickel plants",
+        "about": "history",
+        "text": "The 1988 Matignon Agreements ended the violence of the 1980s. The 1998 Nouméa Accord set out to spread jobs and income more evenly across the provinces, and that aim led to a nickel plant in the North Province, built with Glencore.",
+        "citations": [
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "The violence was eventually halted with the conclusion of the Matignon Agreements on 26 June 1988"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "economic rebalancing is rooted in the Nouméa Accord and in the aim of achieving a more harmonious distribution of job and wealth creation"
+          },
+          {
+            "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+            "publisher": "United Nations",
+            "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+            "date": "2026-03-31",
+            "quote": "the establishment of a nickel plant in the Province (Koniambo Nickel, in partnership with Glencore)"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Since mid-2025 there have been early signs of recovery from a low base. Mines shut during the riots reopened, so mining output in late 2025 was well above a year earlier, and salaried jobs stopped falling in the second quarter of 2025. But household spending had not recovered, more businesses failed in 2025, and the main pro-independence party rejected the Bougival draft agreement of July 2025 before the Élysée-Oudinot Agreement was signed in January 2026. Unemployment was 11.0 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+          "date": "2026-03-31",
+          "quote": "the resumption of operations at several mining sites that had been shut down or severely disrupted during the events of 2024"
+        },
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+          "date": "2026-03-31",
+          "quote": "after a year and a half of sharp decline, salaried employment stabilized in the second quarter of 2025"
+        },
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+          "date": "2026-03-31",
+          "quote": "household consumption has yet to recover, business insolvencies rose in 2025, and many sectors are facing serious difficulties"
+        },
+        {
+          "url": "https://documents.un.org/api/symbol/access?s=A/AC.109/2026/11&l=en&t=pdf",
+          "publisher": "United Nations",
+          "title": "New Caledonia: Working paper prepared by the Secretariat (A/AC.109/2026/11)",
+          "date": "2026-03-31",
+          "quote": "In August 2025, FLNKS adopted a general policy resolution in which it formally rejected the Bougival draft agreement"
+        }
+      ]
+    },
+    "tension": "The data's -2.2 percent era from 1998 to 2024 rests on only ten years, 1998 to 2000 and 2018 to 2024. It misses the 2000s and early 2010s, when investment reached 43.1 percent of GDP in 2010 and the sources describe new nickel plants. The level series has a single year, 2015, so \"at its peak\" says nothing about the years since. The sources also report that the population shrank between the 2019 and 2025 censuses as people left, but the data put the population at 292,614, higher than the figure the sources give for 2025."
+  }
+}

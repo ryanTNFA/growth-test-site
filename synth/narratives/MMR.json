@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "iso3": "MMR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MMR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "worldbank.org, imf.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Myanmar Economic Monitor 2025 growth earthquake conflict",
+        "adb.org, imf.org: Myanmar Asian Development Outlook economy",
+        "worldbank.org: World Bank Myanmar Economic Monitor June 2026 press release fuel shock",
+        "worldbank.org, imf.org, adb.org: Myanmar economy 2021 military coup COVID-19 contraction 18 percent",
+        "imf.org, worldbank.org, adb.org: Myanmar official GDP growth statistics overstated 2000s double-digit data quality",
+        "Opened: worldbank.org press releases 2021-07, 2024-12, 2025-06, 2025-12, 2026-06; blogs.worldbank.org 2023-09; World Bank SCD 2014 and PER 2015 PDFs; adb.org feature 2016-04",
+        "Critic check: re-opened all 9 cited URLs and matched each quote against the page text"
+      ],
+      "critic_changes": [
+        "Arc: 'conflict, floods, the March 2025 earthquake and power shortages kept it falling' was wrong against the series (income per person rose 3.3 percent in 2022 and 0.3 in 2023). It now says that after a small rebound in 2022 these shocks pushed it down again in 2024 and 2025. 'Floods' was dropped because no thread cites it.",
+        "Tension: dropped 'its own estimate for the late 2000s was far lower', which no cited passage supports, and changed 'the fastest era on record' to 'the fastest of the four eras since 1990' to match G4.eras.",
+        "Earthquake thread: the text said the quake damaged 'factories, homes and roads in the centre of the country', but the cited pages mention neither homes, roads nor the centre. It was rewritten to factory closures, supply chains and infrastructure damage. The US$11 billion damages citation was replaced with two passages from the same 2025-06-12 page (factory closures; conflict and power shortages) that support the text.",
+        "Pandemic thread: 'broken banking' was not supported by the quoted passage. The text now says protests, labour shortages and disruption to logistics and telecoms, with a second verbatim quote from the same page added. The citation date was corrected from 2021-07-26 (the dateline) to 2021-07-23, the page's content date and the date in its URL.",
+        "Conflict thread: 'Fighting spread after the takeover' and 'pushing workers out of factories' went beyond the passages. The text now reports more than half of townships in conflict by late 2024 and says conflict is 'likely' reversing the usual path of development, with skilled workers moving into farm work. A verbatim blog quote on workers diverted to agriculture was added.",
+        "since_last_year: 'firms worked closer to capacity' had no citation, so the 2025-12-08 World Bank quote was added (11 months before writing). 'Raised transport and production costs and pushed prices up again' was cut to 'added to the strain', which the quoted passage supports. The activity quote was extended verbatim to cover the easing of power supply constraints.",
+        "All 9 cited URLs were opened. Every quote was checked word for word against the page text, or against the PDF text for the 2014 SCD and 2015 PER. All appear on the pages, and the other dates match (SCD November 2014; PER cover September 2015; ADB 14 April 2016; blog 13 September 2023). Every number in the story (4.2, 11.3, 6.4, 5.5, 5.8, -9.7, -12.6, -1.5, -2.6, 21.7, 2015, 2019) matches desk/data/MMR.json."
+      ]
+    },
+    "headline": "Myanmar's income per person grew fast for two decades, then the pandemic, the 2021 coup, conflict and an earthquake erased a decade of gains.",
+    "arc": "Myanmar's income per person grew 4.2 percent a year over 1990–1998, while the country stayed largely closed to the world and under Western sanctions. Growth then ran at 11.3 percent a year over 1999–2009, as gas exports came fully on stream, though the World Bank has said the official growth figures from those years do not fit the rest of the economy. After political and economic reforms opened the country in 2011, growth held at 6.4 percent a year over 2010–2017, and was still 5.5 percent in 2018 and 5.8 in 2019. The pandemic and the February 2021 military takeover then cut income per person by 9.7 percent in 2020 and 12.6 percent in 2021, and after a small rebound in 2022, conflict, the March 2025 earthquake and power shortages pushed it down again in 2024 and 2025, so the 2018–2025 era averaged -1.5 percent a year. By 2025 income per person was 21.7 percent below its 2019 peak, about where it first was in 2015.",
+    "threads": [
+      {
+        "title": "Isolation, sanctions and gas",
+        "about": "history",
+        "text": "For decades Myanmar was closed to most of the world and under Western sanctions, with trade and investment limited to a few neighbours. Gas exports, in full flow from 2002, brought in foreign currency during the fast 1999–2009 era. The World Bank later judged the official growth figures from those years hard to square with the rest of the economy.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/EAP/Myanmar/WBG_SCD_Full_Report_English.pdf",
+            "publisher": "World Bank",
+            "title": "Myanmar: A Systematic Country Diagnostic",
+            "date": "2014-11",
+            "quote": "For over a quarter of a century, Myanmar was under self-imposed isolation from the rest of the world, and under economic sanctions by the West."
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/document/EAP/Myanmar/WBG_SCD_Full_Report_English.pdf",
+            "publisher": "World Bank",
+            "title": "Myanmar: A Systematic Country Diagnostic",
+            "date": "2014-11",
+            "quote": "Full scale commencement of production and exportation of gas was achieved in 2002."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/504121467987907393/pdf/103993-WP-P132668-PUBLIC-Myanmar-PER-Dec-2015.pdf",
+            "publisher": "World Bank",
+            "title": "Myanmar Public Expenditure Review: Realigning the Union Budget to Myanmar's Development Priorities",
+            "date": "2015-09",
+            "quote": "Historical data show high real growth rates that are inconsistent with economic fundamentals and available data from key sectors."
+          }
+        ]
+      },
+      {
+        "title": "Opening up after 2011",
+        "about": "history",
+        "text": "Political and economic reforms from 2011 opened the economy and growth stayed strong through the 2010s. That growth leaned on a narrow base of natural resource exports, building and tourism.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/news/features/whats-fastest-growing-country-asia-surprise-its-myanmar",
+            "publisher": "ADB",
+            "title": "What's the Fastest Growing Country in Asia? Surprise! It's Myanmar.",
+            "date": "2016-04-14",
+            "quote": "Since a series of political and economic reforms began in 2011, the Myanmar economy has experienced strong growth"
+          },
+          {
+            "url": "https://www.adb.org/news/features/whats-fastest-growing-country-asia-surprise-its-myanmar",
+            "publisher": "ADB",
+            "title": "What's the Fastest Growing Country in Asia? Surprise! It's Myanmar.",
+            "date": "2016-04-14",
+            "quote": "The economy is narrowly based, with growth depending on natural resource exports, construction, and tourism."
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/developmenttalk/reversal-hard-won-gains-conflict-and-structural-transformation-myanmar",
+            "publisher": "World Bank",
+            "title": "Reversal of hard-won gains: conflict and structural transformation in Myanmar",
+            "date": "2023-09-13",
+            "quote": "Myanmar's transition to an open market economy in 2011 led to significant gains in GDP per capita and poverty reduction."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic and military takeover",
+        "about": "history",
+        "text": "The pandemic hit first in 2020, then the February 2021 military takeover brought protests, labour shortages and disruption to business services such as logistics and telecoms. Income per person fell 9.7 percent in 2020 and 12.6 percent in 2021.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2021/07/23/myanmar-economy-expected-to-contract-by-18-percent-in-fy2021-report",
+            "publisher": "World Bank",
+            "title": "Myanmar Economy Expected to Contract by 18 Percent in FY2021: Report",
+            "date": "2021-07-23",
+            "quote": "the country’s economy is around 30 percent smaller than it would have been in the absence of COVID-19 and the military takeover of February 2021"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2021/07/23/myanmar-economy-expected-to-contract-by-18-percent-in-fy2021-report",
+            "publisher": "World Bank",
+            "title": "Myanmar Economy Expected to Contract by 18 Percent in FY2021: Report",
+            "date": "2021-07-23",
+            "quote": "Economic activity has been hit by reduced mobility and incomes, protests and labor shortages, as well as the ongoing disruption of critical business services"
+          }
+        ]
+      },
+      {
+        "title": "Conflict and lost jobs",
+        "about": "present",
+        "text": "By late 2024 more than half of the country's townships saw active fighting, which disrupted supply chains and border trade. The World Bank finds conflict is likely reversing the usual path of development, with even skilled workers moving into low-paid farm work.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2024/12/11/compounding-crises-hit-myanmar-s-economy-and-its-people",
+            "publisher": "World Bank",
+            "title": "Compounding crises hit Myanmar's economy and its people",
+            "date": "2024-12-11",
+            "quote": "Over half of Myanmar’s townships are experiencing active conflict, which continues to disrupt supply chains and border trade."
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/developmenttalk/reversal-hard-won-gains-conflict-and-structural-transformation-myanmar",
+            "publisher": "World Bank",
+            "title": "Reversal of hard-won gains: conflict and structural transformation in Myanmar",
+            "date": "2023-09-13",
+            "quote": "conflict is likely causing a reversal of structural transformation and driving relatively higher wage reductions in richer than poorer areas"
+          },
+          {
+            "url": "https://blogs.worldbank.org/en/developmenttalk/reversal-hard-won-gains-conflict-and-structural-transformation-myanmar",
+            "publisher": "World Bank",
+            "title": "Reversal of hard-won gains: conflict and structural transformation in Myanmar",
+            "date": "2023-09-13",
+            "quote": "more productive workers, such as college-educated or those with more years of work experience, are being diverted to low-productivity agriculture sector."
+          }
+        ]
+      },
+      {
+        "title": "Earthquake and power cuts",
+        "about": "present",
+        "text": "The March 2025 earthquake closed factories, broke supply chains and damaged infrastructure, on top of conflict and power shortages, and output fell again. Thin money for rebuilding, insecurity and unreliable electricity still hold back the recovery.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/12/earthquake-compounds-myanmar-s-economic-challenges",
+            "publisher": "World Bank",
+            "title": "Earthquake compounds Myanmar's economic challenges",
+            "date": "2025-06-12",
+            "quote": "Production across all sectors has been disrupted by factory closures, supply chain constraints, labor shortages, and damage to infrastructure."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/06/12/earthquake-compounds-myanmar-s-economic-challenges",
+            "publisher": "World Bank",
+            "title": "Earthquake compounds Myanmar's economic challenges",
+            "date": "2025-06-12",
+            "quote": "The economic aftershocks of the earthquake have struck amidst ongoing challenges related to conflict, power shortages, and trade and exchange rate restrictions."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+            "publisher": "World Bank",
+            "title": "Myanmar's Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+            "date": "2025-12-08",
+            "quote": "economy continues to face formidable obstacles, including constrained reconstruction financing, ongoing conflict and insecurity, and unreliable electricity supply."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "After the March 2025 earthquake the economy steadied a little: firms worked closer to capacity by late 2025, and some power shortages eased into early 2026. Then a fuel shock from Middle East tensions in early 2026 added to the strain. The data show income per person fell 2.6 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/08/myanmar-s-economy-shows-moderate-signs-of-recovery-amid-earthquake-and-conflict-impacts",
+          "publisher": "World Bank",
+          "title": "Myanmar's Economy Shows Moderate Signs of Recovery Amid Earthquake and Conflict Impacts",
+          "date": "2025-12-08",
+          "quote": "The report finds that firms operated at higher capacity in October 2025 compared to April"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/16/myanmar-s-economy-shows-tentative-stabilization-but-fuel-shock-intensifies-pressures",
+          "publisher": "World Bank",
+          "title": "Myanmar's Economy shows tentative stabilization, but fuel shock intensifies pressures",
+          "date": "2026-06-16",
+          "quote": "Economic activity improved modestly through late 2025 and early 2026, supported by partial normalization after the March 2025 earthquake, some easing of power supply constraints"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/06/16/myanmar-s-economy-shows-tentative-stabilization-but-fuel-shock-intensifies-pressures",
+          "publisher": "World Bank",
+          "title": "Myanmar's Economy shows tentative stabilization, but fuel shock intensifies pressures",
+          "date": "2026-06-16",
+          "quote": "A fuel shock driven by Middle East tensions in early 2026 has amplified existing economic pressures."
+        }
+      ]
+    },
+    "tension": "The data put growth in income per person at 11.3 percent a year over 1999–2009, the fastest of the four eras since 1990, but the World Bank has said Myanmar's historical official growth rates do not fit the economy's fundamentals or the data from key sectors. The boom of that era may be smaller than the data show."
+  }
+}

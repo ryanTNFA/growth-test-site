@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "CAN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CAN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Canada 2025 Article IV consultation staff report productivity tariffs (tier 1 domains)",
+        "oecd.org: OECD Economic Surveys Canada 2025 productivity population growth (tier 1 domains)",
+        "imf.org, worldbank.org, oecd.org: Canada oil price decline 2015 economy adjustment IMF selected issues",
+        "imf.org, oecd.org: Canada global financial crisis 2009 recession recovery IMF Article IV",
+        "imf.org, oecd.org: Canada COVID-19 pandemic recession 2020 economy rebound Article IV 2021",
+        "imf.org, oecd.org, worldbank.org: Canada economy 2026 outlook growth tariffs CUSMA review",
+        "imf.org: Canada 2026 IMF staff country report OR selected issues OR press release",
+        "imf.org, oecd.org: Canada 1990s recession fiscal consolidation deficit elimination growth recovery",
+        "Critic check: re-opened every cited URL (IMF 2025 concluding statement, IMF PR 26/12, IMF CR 2026 page, OECD Economic Surveys Canada 2025 PDF with text extracted, IMF Survey June 2016, IMF 2010 and 2021 concluding statements)"
+      ],
+      "critic_changes": [
+        "All numbers checked against desk/data/CAN.json (1.0, 0.5, 0.6, -3.3, 4.3, 4.2, -4.0, -0.1, -6.1, 5.4, -0.8, -1.0, 0.8, 1.0 below the 2022 peak, level first reached in 2018); all match, none changed.",
+        "All quoted passages confirmed on their pages; the OECD PDF was read by extracting its text.",
+        "Arc: the 2009 recovery was credited to 'banks that kept lending and fast policy support'. The 2010 IMF statement supports the lending and the rapid recovery but not policy support, so the sentence now says 'a rapid recovery, with a financial system that kept lending through the crisis'.",
+        "Productivity thread: the claim about low investment and research spending had no quote behind it. Added the next OECD sentence ('low investment activity and low business R&D spending') as a citation and changed 'research spending' to 'business research spending' to match it.",
+        "Population thread: dropped claims the cited passages do not support: 'capital per worker did not keep up', 'students and temporary workers', 'almost all through international migration' and 'the government then cut its immigration targets' (the OECD says 'adjust and recalibrate'). The text now follows the OECD passage: more workers, but more strain on already weak productivity.",
+        "Tariff thread: the supply-chain sentence cited only the staff report page, whose quotes do not mention supply chains. Added the IMF PR 26/12 passage on supply chains, and changed 'in decades' to 'since NAFTA' to match the source.",
+        "Oil thread: 'Energy firms cut their investment plans' is not in the quoted passage, so the text now matches the quote ('a slump in business investment').",
+        "Deep shocks thread: added the 2010 IMF passage 'Canada has rapidly emerged from the crisis' to back the quick recovery. Changed 'banks' to 'financial system' to match the source.",
+        "Citation dates made more precise to match the pages: the 2010 IMF statement is now 2010-10-28 (its published date) and the 2021 IMF statement is now 2021-02-16 (the page shows 16 February 2021, not the month the URL suggests).",
+        "since_last_year: 'immigration and commodity prices slowed' changed to 'commodity prices fell and immigration slowed' to match the IMF passage.",
+        "Tension: added that the OECD itself notes per capita performance has lagged. The same page says this right after 'resilient', so the tension is not an unacknowledged gap.",
+        "Tier stays 1, with 4 distinct recent tier 1 sources (OECD survey May 2025; IMF concluding statement 2025-12-05; IMF staff report and IMF PR, both 2026-01-21). All 5 threads keep their citations, and each present thread has a 2023-or-later source. No banned phrases and no recommendation language found."
+      ]
+    },
+    "headline": "Canada's income per person has grown 1.0 percent a year since 1990, slowing to 0.5 in the last decade as productivity lagged and population surged.",
+    "arc": "Since 1990, Canada's income per person has grown at a steady average of 1.0 percent a year with no lasting change of pace: the data show one long era, broken by short recessions. Income per person fell 3.3 percent in the early-1990s recession of 1991, then grew 4.3 percent in 1999 and 4.2 in 2000. The 2009 global crisis cut it by 4.0 percent, but the IMF describes a rapid recovery, with a financial system that kept lending through the crisis. Growth then eased, from 0.6 percent a year over 2006-2015 to 0.5 over 2016-2025, as the oil price collapse that began in 2014 hit investment and as productivity kept trailing other rich economies. After a 6.1 percent fall in the 2020 pandemic and a rebound, income per person peaked in 2022, then fell in 2023 and 2024 while the population grew very fast through immigration. Higher U.S. tariffs added a new shock in 2025: income per person grew 0.8 percent that year, but it is still 1.0 percent below its 2022 peak and about where it first was in 2018.",
+    "threads": [
+      {
+        "title": "Productivity trailing other rich economies",
+        "about": "present",
+        "text": "Sources describe productivity growth that has trailed the best-performing rich economies for many years, with low investment and low business research spending. The IMF says the 2025 trade shock reinforced these long-standing weaknesses.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/oecd-economic-surveys-canada-2025_ee18a269/28f9e02c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Canada 2025",
+            "date": "2025-05",
+            "quote": "Canada’s productivity growth has been lagging best performing OECD countries for many years."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/oecd-economic-surveys-canada-2025_ee18a269/28f9e02c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Canada 2025",
+            "date": "2025-05",
+            "quote": "Factors such as low investment activity and low business R&D spending contribute to this productivity gap."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/01/21/canada-2025-article-iv-consultation-press-release-and-staff-report-573340",
+            "publisher": "IMF",
+            "title": "Canada: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-21",
+            "quote": "Long-standing weaknesses in productivity and competitiveness have been reinforced."
+          }
+        ]
+      },
+      {
+        "title": "A population surge from immigration",
+        "about": "present",
+        "text": "Canada's population grew very fast in 2023 and 2024. More people added to the workforce, but this further strained already weak productivity, and income per person fell in both years. The IMF lists slowing immigration among the drags on growth in 2025.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/oecd-economic-surveys-canada-2025_ee18a269/28f9e02c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Canada 2025",
+            "date": "2025-05",
+            "quote": "Canada’s population grew rapidly, by close to 3.0% in 2023 and 2024."
+          },
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/05/oecd-economic-surveys-canada-2025_ee18a269/28f9e02c-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Canada 2025",
+            "date": "2025-05",
+            "quote": "While high population growth has bolstered labour input growth, it has also further strained an already subdued labour productivity performance."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/12/05/cs-canada-staff-concluding-statement-of-the-2025-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Canada: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-12-05",
+            "quote": "Lower commodity prices, softer external demand, slowing immigration, and tariff uncertainty added to the drag"
+          }
+        ]
+      },
+      {
+        "title": "The U.S. tariff shock",
+        "about": "present",
+        "text": "Higher U.S. tariffs in 2025 disrupted supply chains closely tied to the United States, the largest change in North American trade policy since NAFTA. Uncertainty about trade weighed on exports, investment and confidence.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/21/pr-26012-canada-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Canada",
+            "date": "2026-01-21",
+            "quote": "Higher U.S. tariffs have disrupted tightly integrated North American supply chains"
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/01/21/canada-2025-article-iv-consultation-press-release-and-staff-report-573340",
+            "publisher": "IMF",
+            "title": "Canada: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-21",
+            "quote": "Canada is adjusting to the largest shift in North American trade policy since NAFTA."
+          },
+          {
+            "url": "https://www.imf.org/en/publications/cr/issues/2026/01/21/canada-2025-article-iv-consultation-press-release-and-staff-report-573340",
+            "publisher": "IMF",
+            "title": "Canada: 2025 Article IV Consultation-Press Release; and Staff Report",
+            "date": "2026-01-21",
+            "quote": "Elevated trade uncertainty has weighed on exports, investment, and confidence."
+          }
+        ]
+      },
+      {
+        "title": "The oil price collapse",
+        "about": "history",
+        "text": "Oil is a major export, and it lost more than half its value from 2014, which brought a slump in business investment. Income per person slipped 0.1 percent in both 2015 and 2016.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/53/socar061316a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Canada Copes Well With Lower Oil Prices",
+            "date": "2016-06-13",
+            "quote": "Oil, a major Canadian export, lost more than half its value since 2014, triggering a slump in business investment"
+          }
+        ]
+      },
+      {
+        "title": "Deep shocks, quick recoveries",
+        "about": "history",
+        "text": "In the 2009 global crisis, Canada's financial system kept lending and the economy came out of the crisis quickly. The 2020 pandemic brought the deepest fall since 1990, 6.1 percent, which was met by fast policy action and followed by a 5.4 percent rebound in 2021.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs102710",
+            "publisher": "IMF",
+            "title": "Canada -- 2010 Article IV Mission: Concluding Statement",
+            "date": "2010-10-28",
+            "quote": "Canada’s financial system maintained the ability to intermediate funds during the crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/52/mcs102710",
+            "publisher": "IMF",
+            "title": "Canada -- 2010 Article IV Mission: Concluding Statement",
+            "date": "2010-10-28",
+            "quote": "Canada has rapidly emerged from the crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2021/02/11/mcs021221-canada-staff-concluding-statement-of-the-2021-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Canada - Staff Concluding Statement of the 2021 Article IV Mission",
+            "date": "2021-02-16",
+            "quote": "The authorities took timely, decisive, and well-coordinated policy actions at the onset of the pandemic."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025, higher U.S. tariffs disrupted trade and weighed on investment, while commodity prices fell and immigration slowed. Income per person grew 0.8 percent in 2025 after falling in 2023 and 2024, but it is still 1.0 percent below its 2022 peak.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/05/cs-canada-staff-concluding-statement-of-the-2025-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Canada: Staff Concluding Statement of the 2025 Article IV Mission",
+          "date": "2025-12-05",
+          "quote": "Lower commodity prices, softer external demand, slowing immigration, and tariff uncertainty added to the drag"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/01/21/pr-26012-canada-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Canada",
+          "date": "2026-01-21",
+          "quote": "Higher U.S. tariffs have disrupted tightly integrated North American supply chains"
+        }
+      ]
+    },
+    "tension": "The OECD calls the economy resilient, with growth picking up over 2024, yet income per person fell 1.0 percent in 2024 after a 0.8 percent fall in 2023. Total output grew, but the population grew faster, so the pickup the sources describe does not show up per person; the OECD itself notes that per capita performance has lagged."
+  }
+}

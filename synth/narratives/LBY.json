@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "iso3": "LBY",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LBY",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 8,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Libya economic update 2025 oil production growth\"",
+        "same tier 1 domains: \"IMF Libya Article IV consultation staff concluding statement\"",
+        "same tier 1 domains: \"Libya Economic Monitor 2026 World Bank unified budget\"",
+        "imf.org, worldbank.org, afdb.org: \"Libya Article IV 2007 2008 lifting of sanctions oil production growth non-hydrocarbon\"",
+        "opened: imf.org 2026 Article IV concluding statement; imf.org Nov 2025 staff visit; imf.org Jun 2025 Board press release; imf.org May 2023 Board press release; imf.org Mar 2023 concluding statement; imf.org 2013 concluding statement; imf.org 2009 concluding statement; imf.org 2012 departmental paper 'Libya beyond the Revolution'",
+        "opened: worldbank.org Dec 2025 and Dec 2024 press releases; worldbank.org Libya overview (undated, not cited); thedocs.worldbank.org Macro Poverty Outlook Libya October 2026",
+        "afdb.org Libya Economic Outlook page returned 403 (not cited)",
+        "tier 2 not searched: tier 1 gave enough recent sources",
+        "critic: re-opened every cited URL (IMF 2023-05-25, 2025-11-14, 2026-04-10, 2013-03-06, 2012 departmental paper PDF; World Bank 2025-12-17 press release and October 2026 Macro Poverty Outlook PDF)"
+      ],
+      "critic_changes": [
+        "Every cited URL was re-opened, and every quote was found on its page with the date matching (the two PDFs were checked from their extracted text). All numbers in the headline, arc, threads and tension match desk/data/LBY.json (era means -0.1, 3.3, -1.4, 3.7; 2011 -49.1; 2012 91.8; 2020 -30.4; 2025 12.2; 57.0 percent below the 1979 peak; 1965; -0.1 and 3.0 decade averages; 2025 below every year from 2005 to 2010).",
+        "Arc: 'after a 91.8 percent rebound in 2012 the state fragmented and output fell again' changed to 'income per person fell again in 2013 and 2014'. No cited source says oil output fell again then, but the data show the 2013 and 2014 falls.",
+        "Arc: 'a large public investment program spread oil money through the economy' changed to 'drove growth outside oil and gas', which is closer to the IMF wording. 'in 2025' added to the peak and level sentence.",
+        "Thread 'Growth follows the oil fields': 'blockades, field shutdowns and restarts drive most of the year-to-year swings' was not supported, because no cited page mentions field shutdowns. The text is rewritten around the IMF's 'exceptional swings' passage and a new IMF 2023 quote on the 2020 oil blockade, which also supports the arc's 2020 claim. The World Bank pre-2010 sentence and its quote were dropped to keep three citations. That PDF splits the quote across a figure caption, and the MPO is still cited under since_last_year.",
+        "Thread 'Rival authorities, rising spending': 'growing faster than the economy can carry' and 'the spending it allows' (a causal link no source makes) are reworded to the sources' own claims: beyond sustainable levels, and risks from uncontrolled spending and political fragmentation.",
+        "Thread 'Sanctions lifted, steady 2000s': the claim about a public investment program had no supporting quote, so the IMF 2012 passage 'non-hydrocarbon sectors grew rapidly, underpinned by an ambitious public investment program' was added.",
+        "Thread 'Revolution and a fragmented state': 'Oil came back quickly in 2012' changed to 'The economy came back quickly', which matches the cited 2013 IMF passage.",
+        "since_last_year: 'growth to slow sharply ... as oil output levels off' cut to 'growth to slow in 2026'. The 1.4 percent quote is replaced by the full sentence from the same page (22 words), and the levelling of oil output is no longer claimed without a quote."
+      ]
+    },
+    "headline": "Libya's income per person rises and falls with its oil output; growth since 2017 has not won back the levels it had before 2011.",
+    "arc": "Libya's income per person has moved with its oil output, and since 1990 it has passed through four eras. It shrank by 0.1 percent a year in 1990–1999, then grew by 3.3 percent a year in 2000–2007, as activity picked up after UN sanctions were lifted in 2003 and a large public investment program drove growth outside oil and gas. In 2008–2016 it fell by 1.4 percent a year: the 2011 revolution shut down most oil output and cut income per person by 49.1 percent, and after a 91.8 percent rebound in 2012 the state fragmented and income per person fell again in 2013 and 2014. Since 2017 growth has averaged 3.7 percent a year as oil output recovered, but with sharp swings, from a 30.4 percent fall in 2020, when an oil blockade hit, to a 12.2 percent rise in 2025. Even so, income per person in 2025 was 57.0 percent below its 1979 peak and about where it first was in 1965.",
+    "threads": [
+      {
+        "title": "Growth follows the oil fields",
+        "about": "present",
+        "text": "Libya's output rises and falls with oil production, which has swung sharply since 2011. An oil blockade and lower oil prices brought the 30.4 percent fall in income per person in 2020, and higher oil output lifted it by 12.2 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/05/25/pr23181-libya-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with Libya",
+            "date": "2023-05-25",
+            "quote": "Oil production and revenues experienced exceptional swings since 2011; GDP closely tracks oil production."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/05/25/pr23181-libya-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with Libya",
+            "date": "2023-05-25",
+            "quote": "2020: sharp contraction due to an oil blockade and decline in oil prices."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/14/pr-25376-libya-imf-staff-concludes-visit",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Visit to Libya",
+            "date": "2025-11-14",
+            "quote": "GDP growth in 2025 is supported by an increase in oil production."
+          }
+        ]
+      },
+      {
+        "title": "Rival authorities, rising spending",
+        "about": "present",
+        "text": "Libya has been governed by rival authorities with parallel budgets, which the World Bank says has weakened fiscal discipline. The IMF describes public spending that has grown beyond sustainable levels, and it names further uncontrolled spending and political fragmentation as the main risks.",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/12/17/libya-sustained-strong-growth-requires-structural-change-to-improve-transparency-and-public-financial-management",
+            "publisher": "World Bank",
+            "title": "Libya: Sustained Strong Growth Requires Structural Change to Improve Transparency and Public Financial Management",
+            "date": "2025-12-17",
+            "quote": "institutional fragmentation, parallel budget structures, and heavy reliance on oil revenues have weakened fiscal discipline"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/10/mcs-04102026-libya-staff-concluding-statement-of-the-2026-article-iv-consultation-mission",
+            "publisher": "IMF",
+            "title": "Libya: Staff Concluding Statement of the 2026 Article IV Consultation Mission",
+            "date": "2026-04-10",
+            "quote": "Public spending has expanded beyond sustainable levels and is the principal source of imbalances."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/11/14/pr-25376-libya-imf-staff-concludes-visit",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Visit to Libya",
+            "date": "2025-11-14",
+            "quote": "Risks mainly relate to further uncontrolled spending and ongoing political fragmentation."
+          }
+        ]
+      },
+      {
+        "title": "Sanctions lifted, steady 2000s",
+        "about": "history",
+        "text": "After UN sanctions were lifted in 2003, the IMF records seven years of steady growth, with activity outside oil and gas carried by a large public investment program. It also notes that the small private sector stayed hemmed in by the state.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2012/1201mcd.pdf",
+            "publisher": "IMF",
+            "title": "Libya beyond the Revolution: Challenges and Opportunities",
+            "date": "2012",
+            "quote": "Following the lifting of earlier United Nations (UN) sanctions in 2003, economic activity increased steadily for seven years."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2012/1201mcd.pdf",
+            "publisher": "IMF",
+            "title": "Libya beyond the Revolution: Challenges and Opportunities",
+            "date": "2012",
+            "quote": "the non-hydrocarbon sectors grew rapidly, underpinned by an ambitious public investment program"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2012/1201mcd.pdf",
+            "publisher": "IMF",
+            "title": "Libya beyond the Revolution: Challenges and Opportunities",
+            "date": "2012",
+            "quote": "its small private sector was handicapped by the ubiquitous dominance of the state and by crippling institutional failures."
+          }
+        ]
+      },
+      {
+        "title": "Revolution and a fragmented state",
+        "about": "history",
+        "text": "The 2011 revolution shut down most oil output, and income per person fell by 49.1 percent that year. The economy came back quickly in 2012, but the IMF dates the country's fragmentation from the fall of the old regime, and income per person fell again in 2013 and 2014.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/dp/2012/1201mcd.pdf",
+            "publisher": "IMF",
+            "title": "Libya beyond the Revolution: Challenges and Opportunities",
+            "date": "2012",
+            "quote": "As a consequence of the conflict, crude oil production fell to 22,000 barrels per day in July 2011"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2015/09/28/04/52/mcs030613",
+            "publisher": "IMF",
+            "title": "Libya: 2013 Article IV Consultation Concluding Statement",
+            "date": "2013-03-06",
+            "quote": "The economy is recovering rapidly from the conflict-induced collapse in economic activity"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2023/05/25/pr23181-libya-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with Libya",
+            "date": "2023-05-25",
+            "quote": "fragmentation following the fall of the Ghaddafi regime in 2011"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In April 2026 the rival legislatures agreed Libya's first unified budget since 2013. But the World Bank's October 2026 outlook expects growth to slow in 2026, and a weaker dinar has pushed up consumer prices.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-lby.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Libya, October 2026",
+          "date": "2026-10",
+          "quote": "In April 2026, the HoR and HCS agreed to Libya's first unified state budget since 2013"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-lby.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Libya, October 2026",
+          "date": "2026-10",
+          "quote": "With non-oil GDP projected to expand by 2.5 percent, driven primarily by private consumption, overall GDP growth is expected to reach 1.4 percent."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-lby.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Libya, October 2026",
+          "date": "2026-10",
+          "quote": "The weaker Libyan Dinar and the higher costs of imported goods have fed through to a marked pickup in consumer prices"
+        }
+      ]
+    },
+    "tension": "The sources describe a strong, oil-led rebound, and the data agree that growth has sped up, from -0.1 percent a year in 2006–2015 to 3.0 in 2016–2025. But the data show this mostly as lost ground being won back: income per person in 2025 was still below its level in every year from 2005 to 2010, 57.0 percent below the 1979 peak and about where it first was in 1965."
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "BTN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "BTN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Bhutan Article IV consultation staff report hydropower growth",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: Bhutan Macro Poverty Outlook economic update growth",
+        "imf.org: IMF Executive Board concludes 2025 Article IV consultation with Bhutan press release",
+        "imf.org, worldbank.org, adb.org: Bhutan Tala hydropower 2007 growth rupee shortage 2012 credit curbs",
+        "imf.org, worldbank.org, adb.org: Bhutan Punatsangchhu delays construction slowdown growth economic update",
+        "worldbank.org: Bhutan Systematic Country Diagnostic Taking Bhutan's Development Success to the Next Level",
+        "Critic check: opened all 6 cited URLs with WebFetch (imf.org x2, worldbank.org x3, adb.org x1); PDF text extracted locally to verify quotes"
+      ],
+      "critic_changes": [
+        "Tension: '47.3 percent of GDP in 2024' replaced. 47.3 is the growth_problem G6 reference value, which matches the 2022–2024 average of the series (55.1, 44.6, 42.1). The series gives 42.1 for 2024. The sentence now uses series values: 69.2 percent in 2012 and 42.1 in 2024.",
+        "since_last_year: dropped 'from the Middle East conflict'. The ADB September 2026 Bhutan section blames higher diesel costs but does not tie them to the Middle East conflict; only the regional text does. Added the cited ADB Punatsangchhu-I passage so the 'further hold-up' claim has a citation in this section.",
+        "Thread 'Delayed dams and costly inputs': changed 'plants and roads' to 'hydropower and government projects' to match the ADB passage, which does not mention roads.",
+        "Thread 'Pandemic, then emigration': dropped 'The pandemic closed the country to visitors'. No cited passage supports it. The 2020 fall of 10.8 percent comes from the data and stays.",
+        "IMF 2025 youth emigration quote: lengthened to the page's exact wording ('need to expand beyond hydropower and low-productivity activities to create private-sector jobs and reduce youth emigration pressures'). It is 17 words.",
+        "Thread 'New plants, new upswing': the draft said 'Both the IMF and the World Bank' tie the outlook to Punatsangchhu-II, but only the World Bank passage was cited, so the sentence now names only the World Bank. Replaced the IMF 2025 'recovery gained momentum' quote with the page's 'Key growth drivers' passage, which supports the hydropower claim directly.",
+        "Thread 'Dams as the engine': 'each big plant since has moved the growth line' softened to 'big plants have made growth swing ever since', in line with the SCD passages.",
+        "Thread 'The 2012 rupee squeeze': 'curbed credit and imports' changed to 'brought in measures to stop the shortage'. The cited passage says only 'corrective administrative measures'.",
+        "Arc: 'sold hydropower to India' changed to 'exported hydropower'. The cited Chukha passage says 'export' but does not name India.",
+        "Tension: 'The IMF also calls 2023 subdued because of large-scale emigration' rephrased. The page says 'Growth remained subdued during 2023' and, in a separate sentence, that emigration hindered the recovery.",
+        "Verified and kept unchanged: all quotes (they match page text exactly), dates (SCD PDF metadata created 2020-01-30, so '2020'; 2014 update dated April 2014; IMF 2024-09-19 and 2026-01-27; World Bank 2026-04-09; ADO September 2026), and all other numbers (4.8, 6.9, 3.3, 68.9 in 2004, 14.8 in 2007, -10.8 in 2020, 3.9 in 2023, 6.8 in 2024, 7.3 in 2025, 3.2, 6.2, peak 2025). Distinct recent tier 1 sources: 4. No banned phrases."
+      ]
+    },
+    "headline": "Bhutan's growth has risen and fallen with its dams: 6.9 percent a year in 2002–2011, 3.3 since 2012, and new plants now lift income per person to a peak.",
+    "arc": "Bhutan's income per person grew 4.8 percent a year in 1990–2001, in an economy that had exported hydropower since the Chukha plant opened in 1988. Growth sped up to 6.9 percent a year in 2002–2011, when fixed investment reached 68.9 percent of GDP in 2004 and the Tala plant was built; the year it opened, 2007, was the era's best at 14.8 percent. Since 2012 growth has averaged 3.3 percent a year: curbs to stop a shortage of Indian rupees halted building and services in 2012, geology held up the Punatsangchhu-I dam, and income per person fell 10.8 percent in the 2020 pandemic. Large-scale emigration slowed the recovery in 2023, but new hydropower and capital spending lifted growth to 6.8 percent in 2024 and 7.3 percent in 2025. Income per person is now at its highest level, yet the last decade's average of 3.2 percent a year is well below the 6.2 of the decade before.",
+    "threads": [
+      {
+        "title": "Dams as the engine",
+        "text": "Bhutan's large-scale power exports began with the Chukha plant in 1988, and big plants have made growth swing ever since. When the Tala plant opened in 2007, income per person grew 14.8 percent, the best year of the 2002–2011 era.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/162771580405026027/pdf/Bhutan-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Bhutan Systematic Country Diagnostic: Taking Bhutan's Development Success to the Next Level",
+            "date": "2020",
+            "quote": "Large scale electricity generation for both domestic consumption and export began with the commissioning of the 336 MW Chukha hydropower project in 1988"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/162771580405026027/pdf/Bhutan-Systematic-Country-Diagnostic.pdf",
+            "publisher": "World Bank",
+            "title": "Bhutan Systematic Country Diagnostic: Taking Bhutan's Development Success to the Next Level",
+            "date": "2020",
+            "quote": "when the Tala hydropower project was commissioned in 2007, GDP growth spiked to 18 percent"
+          }
+        ]
+      },
+      {
+        "title": "The 2012 rupee squeeze",
+        "text": "Building plants and importing for them drained Bhutan's holdings of Indian rupees. In 2012 the authorities brought in measures to stop the shortage, and construction and services stalled, which opened the slower era that has run since.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/400481468017990321/pdf/870290REVISED00nt0Update0April02014.pdf",
+            "publisher": "World Bank",
+            "title": "Bhutan Development Update",
+            "date": "2014-04",
+            "quote": "In 2012, corrective administrative measures to stop the rupee shortage led to a sudden halt in construction and service growth in 2012"
+          }
+        ]
+      },
+      {
+        "title": "Delayed dams and costly inputs",
+        "text": "Hydropower building kept investment high after 2012, but the Punatsangchhu-I dam ran into geological problems early and is still held up. In 2026 higher diesel costs have also raised the cost of hydropower and government projects.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/400481468017990321/pdf/870290REVISED00nt0Update0April02014.pdf",
+            "publisher": "World Bank",
+            "title": "Bhutan Development Update",
+            "date": "2014-04",
+            "quote": "Delays in construction of Punatshantchu I, following unforeseen geological challenges, have reportedly delayed commissioning of the plant"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1174871/south-asia-ado-september-2026.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Asian Development Outlook September 2026: South Asia",
+            "date": "2026-09",
+            "quote": "Approval of the design and the agreement for resuming dam construction at the Punatsangchhu-I project have been delayed, tempering the pace of works."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/1174871/south-asia-ado-september-2026.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Asian Development Outlook September 2026: South Asia",
+            "date": "2026-09",
+            "quote": "Higher diesel costs have raised construction and freight charges, including for hydropower and government projects, and eroded household purchasing power."
+          }
+        ]
+      },
+      {
+        "title": "Pandemic, then emigration",
+        "text": "Income per person fell 10.8 percent in the 2020 pandemic. The recovery that followed was held back by large-scale emigration and import curbs, and the IMF links the lack of private jobs to young people leaving.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/09/19/pr-24336-bhutan-imf-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Bhutan",
+            "date": "2024-09-19",
+            "quote": "Large-scale emigration and policies to curb imports hindered a more robust recovery."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/04/09/bhutan-s-growth-outlook-remains-strong",
+            "publisher": "World Bank",
+            "title": "Bhutan's Growth Outlook Remains Strong, Job Creation Must Accelerate Amid Global Uncertainty",
+            "date": "2026-04-09",
+            "quote": "approximately 9 percent of Bhutan's population emigrated as of 2025"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/26/pr-2619-bhutan-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Bhutan",
+            "date": "2026-01-27",
+            "quote": "need to expand beyond hydropower and low-productivity activities to create private-sector jobs and reduce youth emigration pressures"
+          }
+        ]
+      },
+      {
+        "title": "New plants, new upswing",
+        "text": "Growth picked up to 6.8 percent in 2024 and 7.3 percent in 2025, and the IMF counts the opening of major hydropower plants among the drivers, alongside grant-financed public investment. The World Bank ties the near-term outlook to the Punatsangchhu-II plant running at full capacity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/01/26/pr-2619-bhutan-imf-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Bhutan",
+            "date": "2026-01-27",
+            "quote": "Key growth drivers: rebound in industry, resilience in services, commissioning of major hydropower projects."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/09/19/pr-24336-bhutan-imf-concludes-2024-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2024 Article IV Consultation with Bhutan",
+            "date": "2024-09-19",
+            "quote": "boosted by hydropower projects and grant-financed capital investment"
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/04/09/bhutan-s-growth-outlook-remains-strong",
+            "publisher": "World Bank",
+            "title": "Bhutan's Growth Outlook Remains Strong, Job Creation Must Accelerate Amid Global Uncertainty",
+            "date": "2026-04-09",
+            "quote": "primarily underpinned by the full commissioning of the Punatsangchhu-II Hydroelectric Project"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year the story has turned on hydropower and fuel. In April 2026 the World Bank tied its forecast to the full opening of the Punatsangchhu-II plant. In September 2026 ADB reported softer growth in early 2026, higher diesel costs raising building costs, and a further hold-up at Punatsangchhu-I.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/04/09/bhutan-s-growth-outlook-remains-strong",
+          "publisher": "World Bank",
+          "title": "Bhutan's Growth Outlook Remains Strong, Job Creation Must Accelerate Amid Global Uncertainty",
+          "date": "2026-04-09",
+          "quote": "primarily underpinned by the full commissioning of the Punatsangchhu-II Hydroelectric Project"
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/south-asia-ado-september-2026.pdf",
+          "publisher": "Asian Development Bank",
+          "title": "Asian Development Outlook September 2026: South Asia",
+          "date": "2026-09",
+          "quote": "The forecast incorporates softer first quarter (Q1) 2026 growth of 5.8% year on year, 2 percentage points lower than a year earlier."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/south-asia-ado-september-2026.pdf",
+          "publisher": "Asian Development Bank",
+          "title": "Asian Development Outlook September 2026: South Asia",
+          "date": "2026-09",
+          "quote": "Higher diesel costs have raised construction and freight charges, including for hydropower and government projects, and eroded household purchasing power."
+        },
+        {
+          "url": "https://www.adb.org/sites/default/files/publication/1174871/south-asia-ado-september-2026.pdf",
+          "publisher": "Asian Development Bank",
+          "title": "Asian Development Outlook September 2026: South Asia",
+          "date": "2026-09",
+          "quote": "Approval of the design and the agreement for resuming dam construction at the Punatsangchhu-I project have been delayed, tempering the pace of works."
+        }
+      ]
+    },
+    "tension": "The sources present hydropower building as the engine of growth, yet the slowest era, 2012–2025 at 3.3 percent a year, came while fixed investment stayed high: 69.2 percent of GDP in 2012 and still 42.1 percent in 2024. The IMF also calls growth in 2023 subdued and links the weak recovery to large-scale emigration, but income per person still grew 3.9 percent that year: people leaving shrinks the population base, so the per-person measure can look steadier than the economy itself."
+  }
+}

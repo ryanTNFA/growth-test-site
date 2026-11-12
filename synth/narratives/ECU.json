@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "iso3": "ECU",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ECU",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): \"Ecuador IMF Article IV staff report 2025 growth\"",
+        "tier 1 domains: \"Ecuador Macro Poverty Outlook World Bank 2025\"",
+        "tier 1 domains: \"Ecuador oil boom 2000s dollarization 2000 crisis growth decline after 2014 oil price collapse\"",
+        "opened: thedocs.worldbank.org MPO Ecuador (October 2026); imf.org IMF Country Report 26/84 (April 2026); imf.org press release PR 25/433 (2025-12-18); documents1.worldbank.org IEG Country Program Evaluation FY2008-22 (2024-08-05)",
+        "critic: re-opened and text-checked documents1.worldbank.org IEG CPE FY2008-22, imf.org Country Report 26/84, thedocs.worldbank.org MPO Ecuador October 2026"
+      ],
+      "critic_changes": [
+        "Opened all three cited documents (IEG CPE dated 2024-08-05, IMF Country Report 26/84 dated April 2026, World Bank MPO dated October 2026) and checked every quoted passage against the extracted text. All passages appear on the pages; the only differences are line-break hyphens, so no quote wording changed. Titles and dates match.",
+        "Banking crisis thread: the draft blamed 'low oil prices, El Nino crop losses and a weak banking system' and said dollarization 'brought down inflation', but the cited passages supported neither claim. Added the IEG passage on external shocks (depressed oil prices, El Nino crop failures). Replaced the dollarize quote with the IEG passage saying the measures lowered inflation. Dropped 'weak banking system'. Changed 'banks closed and deposits were frozen in 1999' to match the source: banks were shut down and deposits were frozen in March 1999.",
+        "Arc: the source dates record oil prices to 2007-14, so 'carried by record oil prices' became 'carried in its later years by record oil prices'. 'Debt rose' became 'Government debt rose'. All numbers checked against ECU.json: 0.2, 6.4 (1999), 3.1, 0.3, 0.4, 2.7, 10.3 (2020), 2.8 (2024), 2.9 (2025), the 2023 peak and level_first_reached 2014.",
+        "Droughts thread: no cited passage supported the hydropower claim. Added the MPO passage saying Ecuador is 'largely dependent on hydroelectricity generation'. Reworded the World Bank link so it matches the cited passage on underinvestment.",
+        "Insecurity thread: the claim that insecurity raises costs and uncertainty for households and firms had no supporting citation. Added the MPO passage that says it.",
+        "Fiscal thread: removed 'Since 2024 an IMF-supported program has cut deficits'. No cited passage supports it, and the MPO table shows the fiscal deficit widening in 2025. Retitled the thread 'IMF program and a rebound'.",
+        "since_last_year: removed 'which lifts oil revenue', which the cited passage does not support. 'Slow growth from late 2026' became 'slow growth into 2027', and a second MPO passage was added to support it.",
+        "Headline and tension: numbers checked against the data file; no banned phrases or recommendation language were found, so no change."
+      ]
+    },
+    "headline": "Ecuador's oil-boom gains stalled after 2015: despite a 2025 rebound, income per person is about where it first was in 2014.",
+    "arc": "From 1990 to 2000 income per person grew just 0.2 percent a year, and the decade ended in a banking collapse: income per person fell 6.4 percent in 1999, and Ecuador adopted the US dollar in January 2000. From 2001 to 2014 growth picked up to 3.1 percent a year, carried in its later years by record oil prices that paid for a large rise in public spending and investment. When oil prices fell after 2014, growth slowed to 0.3 percent a year over 2015 to 2025, and to 0.4 over the last decade against 2.7 in the decade before. Government debt rose, the pandemic cut income per person by 10.3 percent in 2020, and droughts that disrupted power and worsening insecurity added to the strain in 2024, when it fell 2.8 percent. A 2.9 percent rebound in 2025, under an IMF-supported program, brought income per person back to its 2023 peak, about where it first stood in 2014.",
+    "threads": [
+      {
+        "title": "Banking crisis and the dollar",
+        "about": "history",
+        "text": "In the late 1990s low oil prices and crop failures from El Nino hit the economy, leading banks were shut down and deposits were frozen in March 1999. Ecuador answered by adopting the US dollar in January 2000, and with other crisis measures this brought inflation down.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "external shocks (including depressed oil prices, widespread crop failures stemming from El Niño, and a worldwide shrinking of external credit)"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "A number of leading financial institutions were shut down between 1998 and 2000, and in March 1999, the government ordered bank deposits frozen."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "decision to dollarize in January 2000. Taken together, the measures lowered inflation and improved fiscal and debt balances."
+          }
+        ]
+      },
+      {
+        "title": "Oil boom, then oil bust",
+        "about": "history",
+        "text": "Record oil prices lifted growth and public revenue until 2014 and paid for more social programs and public investment. When prices fell, growth stalled in 2015 and turned negative in 2016, deficits widened and government debt climbed.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "Ecuador's economy benefited from record high oil prices, boosting economic growth and public revenues and enabling a rapid expansion of social programs and public investment"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "GDP growth stagnated in 2015 and turned negative in 2016 (contracting by 1.2 percent), and the government deficit grew"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099225208012411558/pdf/SECBOS1dc1232709e1a4b4148a2e2e96afb.pdf",
+            "publisher": "World Bank",
+            "title": "The World Bank Group in Ecuador: Country Program Evaluation, Fiscal Years 2008-22",
+            "date": "2024-08-05",
+            "quote": "High fiscal deficits and weak growth prospects led to a rapid rise in government debt"
+          }
+        ]
+      },
+      {
+        "title": "Droughts, power cuts and heavy rain",
+        "about": "present",
+        "text": "Ecuador depends largely on hydropower, and the droughts of 2023 and 2024 cut electricity supply, while heavy rain shut oil pipelines in 2025. The World Bank says too little investment in power generation and transmission made these weather shocks worse.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+            "date": "2026-04",
+            "quote": "the 2023 and 2024 droughts that triggered electricity supply disruptions and the heavy rainfall that forced the closure of oil pipelines in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ecuador",
+            "date": "2026-10",
+            "quote": "climate-related disruptions compounded by underinvestment in energy generation and transmission have added to these pressures"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ecuador",
+            "date": "2026-10",
+            "quote": "In a country largely dependent on hydroelectricity generation, a severe El Niño could impair hydroelectric output"
+          }
+        ]
+      },
+      {
+        "title": "Rising crime and insecurity",
+        "about": "present",
+        "text": "Violence has risen, mostly in the coastal provinces, and homicides rose again in 2025. The World Bank says worsening insecurity has raised costs and uncertainty for households and firms.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+            "date": "2026-04",
+            "quote": "The security situation remains challenging and geographically concentrated in the coastal provinces."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+            "date": "2026-04",
+            "quote": "Homicides rose by 30 percent in 2025"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ecuador",
+            "date": "2026-10",
+            "quote": "worsening insecurity has increased costs and uncertainty for households and firms"
+          }
+        ]
+      },
+      {
+        "title": "IMF program and a rebound",
+        "about": "present",
+        "text": "An IMF-supported program helped lower borrowing costs, and investment and consumption picked up in 2025. Non-oil exports grew fast while oil exports fell.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ecuador",
+            "date": "2026-10",
+            "quote": "lower sovereign spreads, facilitated by the International Monetary Fund (IMF)-supported program, underpinned stronger investment and consumption dynamics that resulted in a growth rebound in 2025"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+            "date": "2026-04",
+            "quote": "Total exports rose by 8 percent in 2025, driven by an 18 percent increase in non-oil exports, while oil exports fell 19 percent."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.9 percent in 2025 after falling in 2024. In January 2026 Ecuador sold bonds abroad for the first time since 2019, and oil prices rose sharply from March 2026. The World Bank's October 2026 note expects a strong El Nino to hit Ecuador and slow growth into 2027.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+          "date": "2026-04",
+          "quote": "Ecuador returned to international capital markets in January 2026 for the first time since 2019, with a bond issuance of US$4 billion"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ecuea2026001-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Ecuador: Fifth Review Under the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/84)",
+          "date": "2026-04",
+          "quote": "Oil prices rose sharply in March 2026 amid the conflict in the Middle East and disruptions to maritime flows through the Strait of Hormuz."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Ecuador",
+          "date": "2026-10",
+          "quote": "A strong El Niño is expected to impact Ecuador"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-ecu.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Ecuador",
+          "date": "2026-10",
+          "quote": "into 2027, lowering economic growth to 2 percent with its combination of extreme rainfall in the coast with drought conditions inland"
+        }
+      ]
+    },
+    "tension": "The IMF and World Bank describe a strong rebound in 2025 and growth that keeps beating forecasts. In the data, the 2025 gain only brought income per person back to its 2023 peak, about where it first stood in 2014. Part of the gap is that the sources track total output, which grows faster than income per person while the population keeps growing."
+  }
+}

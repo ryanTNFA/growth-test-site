@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "iso3": "LSO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LSO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "WebSearch allowed_domains tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Lesotho Article IV consultation press release 2025",
+        "WebSearch allowed_domains tier 1: Lesotho Macro Poverty Outlook economic update growth textiles SACU",
+        "Opened: imf.org 2025 Article IV press release (PR 25/301)",
+        "Opened: imf.org 2025 Article IV staff concluding statement",
+        "Opened: thedocs.worldbank.org Macro Poverty Outlook Lesotho, October 2026",
+        "Opened: worldbank.org press release April 2025 (not cited)",
+        "Opened: documents1.worldbank.org Lesotho Systematic Country Diagnostic Update, December 2021",
+        "Tried: afdb.org Lesotho Economic Outlook (HTTP 403, not used)",
+        "Critic: re-opened all four cited URLs with WebFetch; PDF text extracted locally to check quotes word for word"
+      ],
+      "critic_changes": [
+        "All four cited URLs were re-opened. For both PDFs the text was extracted locally and every quoted passage was found word for word. All dates match the documents: the SCD Update is dated December 2021, the MPO October 2026, the IMF concluding statement 7 July 2025 and PR 25/301 18 September 2025. No citation was dropped.",
+        "Headline: the draft credited clothing, diamonds and water for the whole quarter century. The SCD says the 1990s rested on subsistence farming and remittances, and that those three exports drove growth in the 2000s. The headline now says 'helped in the 2000s' and gives the years 1990 to 2016 (154 characters).",
+        "Arc: 'a large public sector leading in the 2010s' became 'government spending leading in the 2010s', to match the SCD, which says 2010s growth was dominated by services as seen in government consumption.",
+        "Arc: 'credit construction on the Highlands Water Project for much of the recent pickup' was an overreach. The MPO credits recent growth to services, manufacturing, construction, finance and other sectors, and treats the water project as part of a projected offset. It now reads that the sources credit services and large building projects for supporting recent growth.",
+        "Thread 'Clothing exports under US preferences': 'took a share of the US market' became 'competed hard in the US market' to match the cited passage, and 'Asian and other African suppliers' now names Asia, Ethiopia and Kenya as the source does.",
+        "Thread 'Recession and unstable coalitions': transport was added to the sectors leading the recession, as in the quoted passage. The IMF quote's 12 percent figure for 2016 to 2023 is a source figure inside a quote, so it was kept.",
+        "Thread 'A large state funded by transfers': removed the claim that the IMF also describes SACU swings as a recurring strain, because the cited IMF passage is about the size of spending, not volatility. Only the World Bank is now credited with that point.",
+        "Thread 'Water works and a tariff shock': the draft said construction 'has supported recent activity', but the cited MPO passage is a projection. The text now says the World Bank expects the work to offset part of the weakness in textiles and diamonds. Also removed the claim that the World Bank lists US tariff shifts as a main risk, which the cited passages do not support. The IMF warning is now attributed to the IMF alone.",
+        "since_last_year: 'diamond mining stayed weak' became 'mining stayed under pressure' to match the quoted passage.",
+        "Tension: 'strong years for the economy' became 'well above the past decade's average', the MPO's own wording. All numbers were checked against desk/data/LSO.json: 3.0, -1.2, 9.2, 11.0, 4.1, 0.9, the peak year 2016 and level_first_reached 2011 all match.",
+        "tier1_recent_found: lowered from 4 to 3, the number of distinct recent tier 1 sources cited and verified here (IMF concluding statement 2025, IMF PR 25/301 2025, World Bank MPO October 2026). The April 2025 World Bank press release was not cited, so it could not be verified."
+      ]
+    },
+    "headline": "Lesotho grew steadily from 1990 to 2016, helped in the 2000s by clothing, diamonds and water, then slid; income per person is back only to its 2011 level.",
+    "arc": "From 1990 to 2016, income per person in Lesotho grew 3.0 percent a year and reached its peak in 2016. The World Bank traces growth in the 2000s to exports of diamonds, clothing sold under US trade preferences, and water sold to South Africa, with government spending leading in the 2010s, paid for in good part by customs-union transfers. Since 2017 the average has been -1.2 percent a year: four years of recession from 2017 to 2020, with a fall of 9.2 percent in 2020, then a slow climb. In 2025 income per person was still 11.0 percent below its 2016 peak, about where it first was in 2011. The sources link the slide to unstable coalition governments, customs-union transfers that rise and fall, and clothing makers losing ground to rival suppliers, and they credit services and large building projects for supporting recent growth.",
+    "threads": [
+      {
+        "title": "Clothing exports under US preferences",
+        "about": "history",
+        "text": "In the 2000s, the World Bank finds, growth came from exports of diamonds, clothing and water to South Africa. US trade preferences under AGOA made clothing an engine of growth and jobs, but producers in Asia, Ethiopia and Kenya later competed hard in the US market.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "with growth driven by increasing net exports from, particularly, diamonds, textile and apparel manufacturing, and water to South Africa"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "In earlier years, AGOA boosted the textile and apparel manufacturing sector, after which it became an engine of growth and job creation."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "textile industry has faced strong competition in the United States (US) market from Asian producers and increasingly Ethiopian and Kenyan producers"
+          }
+        ]
+      },
+      {
+        "title": "Recession and unstable coalitions",
+        "about": "history",
+        "text": "Income per person fell every year from 2017 to 2020, by 9.2 percent in 2020 alone. The World Bank describes four years of recession led by construction, transport and trade, alongside unstable coalition governments and frequent turnover of ministers that delayed reforms.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "The economy was in recession for four years from 2017 to 2020, driven by contractions in the construction, transport and storage"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "Instability of government coalitions in recent years, which is associated with a high turnover of ministers and principal secretaries between elections"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/07/kingdom-of-lesotho-staff-concluding-statement-of-the-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of Lesotho: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-07",
+            "quote": "Real per capita incomes shrunk by 12 percent between 2016 and 2023."
+          }
+        ]
+      },
+      {
+        "title": "A large state funded by transfers",
+        "about": "present",
+        "text": "Government spending is large by international standards, and much of it has rested on transfers from the Southern African Customs Union. These transfers rise and fall from year to year, and the World Bank describes the swings as a recurring strain on public finances.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/07/kingdom-of-lesotho-staff-concluding-statement-of-the-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of Lesotho: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-07",
+            "quote": "Government spending as a share of GDP is well above international norms—more than double the SACU average."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lso.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Lesotho",
+            "date": "2026-10",
+            "quote": "Dependence on volatile Southern African Customs Union (SACU) transfers also exposes public finances to recurrent revenue fluctuations."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/144821643290068758/pdf/Lesotho-Systematic-Country-Diagnostic-Update.pdf",
+            "publisher": "World Bank",
+            "title": "Lesotho Systematic Country Diagnostic Update: Bridging Implementation Gaps to Accelerate Development",
+            "date": "2021-12",
+            "quote": "Reliance on SACU transfers, which averaged 35 percent of GDP over the previous 15 years, has historically created space"
+          }
+        ]
+      },
+      {
+        "title": "Water works and a tariff shock",
+        "about": "present",
+        "text": "The World Bank expects building work on the Lesotho Highlands Water Project to make up for part of the weakness in textiles and diamonds. In 2025 the IMF warned that sudden shifts in US tariff and aid policy would hit the economy hard.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lso.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Lesotho",
+            "date": "2026-10",
+            "quote": "construction related to the Lesotho Highlands Water Project partly offsets weakness in textiles and diamonds"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/07/kingdom-of-lesotho-staff-concluding-statement-of-the-2025-art-iv-mission",
+            "publisher": "IMF",
+            "title": "Kingdom of Lesotho: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-07-07",
+            "quote": "Sudden shift in U.S. policies on tariffs and official development assistance (ODA) will hit the economy hard"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The World Bank reports that growth held up into early 2026, led by services, while manufacturing shrank and mining stayed under pressure. In September 2025 the IMF pointed to a recent tariff shock on top of long-standing problems in textiles.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lso.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Lesotho",
+          "date": "2026-10",
+          "quote": "Manufacturing contracted and mining remained under pressure, reflecting persistent challenges in export-oriented sectors."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/09/17/pr-25301-the-kingdom-of-lesotho-imf-executive-board-concludes-2025-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2025 Article IV Consultation with the Kingdom of Lesotho",
+          "date": "2025-09-18",
+          "quote": "Given long-standing competitiveness issues in textiles and recent tariff shock"
+        }
+      ]
+    },
+    "tension": "The World Bank describes growth in 2024 and 2025 as well above the past decade's average. In the data, income per person grew 4.1 percent in 2024 but only 0.9 percent in 2025, and in 2025 it was still 11.0 percent below the 2016 peak."
+  }
+}

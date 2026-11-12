@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "CMR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "CMR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Cameroon IMF Article IV 2025 staff report growth\"",
+        "tier 1 domains: \"Cameroon Macro Poverty Outlook World Bank economic update 2025\"",
+        "tier 1 domains: \"Cameroon economic crisis 1986 terms of trade oil decline devaluation 1994 growth recovery\"",
+        "imf.org, worldbank.org, afdb.org: \"Cameroon economic update North-West South-West crisis Far North security impact growth\"",
+        "Opened (draft and critic): imf.org PR 26/096 (2026-03-30), imf.org PR 26/049 (2026-02-13), imf.org Country Report 25/222 (2025-08), thedocs.worldbank.org MPO Cameroon (2026-10), documents1.worldbank.org CPSD Cameroon (2022-12), documents1.worldbank.org Development Policy Review (2009), imf.org I-PRSP Cameroon (2000-08-23)"
+      ],
+      "critic_changes": [
+        "Checked all 7 cited documents. The PDFs were extracted locally because WebFetch could not read them. Every quoted passage, title and date was confirmed on the page, including the MPO edition 'October 2026' and IMF CR 25/222 'August 2025'. All numbers match desk/data/CMR.json: -3.7, 1.1, 1.1 to 0.5, -2.4 in 2020, 19.2, 1986, 1981, 0.6 in 2025 and 0.9 in 2024. The year claims also hold: income per person fell every year 1987-1994, turned positive in 1995 and grew every year 1995-2004.",
+        "Arc: 'the currency became overvalued' changed to 'the real exchange rate rose', to match the source's wording ('appreciation of the real effective exchange rate').",
+        "Thread 'Oil and commodity bust': removed 'then' from 'oil, then coffee and cocoa'. The IMF source lists these prices falling together, not one after another.",
+        "Thread 'Conflict in three regions': the 'Since 2014 Boko Haram' claim had no supporting citation, so the 'Security challenges burden...' quote was replaced with the CPSD passage that dates Boko Haram to 2014. The 2016 quote was extended to include 'violent secessionist movement' so it supports 'separatist'. The sentence about public finances and private investment was dropped because its citation was replaced.",
+        "Thread 'Falling oil output': the IMF quote was extended to the full clause 'oil revenues were below program projections...' so it supports the 2024 revenue claim (the page context confirms 2024). The World Bank quote was extended to show it concerns the current account deficit, and the text now says 'keep the external deficit high' instead of 'weighing on exports'.",
+        "Thread 'Debt and unpaid bills': 'rising interest costs squeeze the budget' was dropped because no cited passage supports it. The 'judged sustainable' claim is now attributed to the World Bank and supported by an extended MPO quote. 'Unpaid bills to firms' became 'unpaid domestic bills', since the source says domestic arrears and does not name firms.",
+        "since_last_year: 'October 2025 presidential election' changed to '2025 election'. The month and the type of election are not in the cited passage."
+      ]
+    },
+    "headline": "Cameroon's income per person collapsed after 1986, and three decades of slow recovery have brought it back only to where it stood in 1981.",
+    "arc": "Income per person in Cameroon peaked in 1986, at the end of a boom built on oil and farm exports, and then fell for years as prices for oil, coffee and cocoa dropped, oil output shrank and the real exchange rate rose. From 1990 to 1997 it shrank by 3.7 percent a year on average; the sources date the turn to the January 1994 devaluation of the CFA franc, and the data show growth turning positive from 1995. Since 1998 income per person has grown by 1.1 percent a year, a period the sources link to structural reforms, with debt relief completed in 2006. Growth then slowed from 1.1 percent a year in 2006–2015 to 0.5 percent in 2016–2025, as oil output kept falling, conflicts hit the Far North and the North-West and South-West, and the pandemic cut income per person by 2.4 percent in 2020. Income per person is now 19.2 percent below its 1986 peak, about where it first was in 1981.",
+    "threads": [
+      {
+        "title": "Oil and commodity bust",
+        "about": "history",
+        "text": "From the mid-1980s, falling prices for oil, coffee and cocoa sharply worsened what Cameroon earned for its exports. Oil output declined and the real exchange rate rose, and income per person fell every year from 1987 to 1994.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/prsp/2000/cmr/01/cmr.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Cameroon: Interim Poverty Reduction Strategy Paper",
+            "date": "2000-08-23",
+            "quote": "Growth rates turned negative between 1985 and 1988, as the terms of trade deteriorated by half."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099945102202316750/pdf/IDU-429f0760-47b5-4b6c-920d-b854326d2e2f.pdf",
+            "publisher": "World Bank",
+            "title": "Creating Markets in Cameroon: Unleashing Private Sector Growth (Country Private Sector Diagnostic)",
+            "date": "2022-12",
+            "quote": "from 1987 to 1993 marked by a decline in oil production and an appreciation of the real effective exchange rate"
+          }
+        ]
+      },
+      {
+        "title": "Devaluation, reform and debt relief",
+        "about": "history",
+        "text": "The January 1994 devaluation of the CFA franc ended the slump, and reform programs followed; the World Bank records much faster overall growth in the decade after 1994 than during the crisis. The data show income per person growing every year from 1995 to 2004, and Cameroon completed debt relief under the HIPC initiative in April 2006.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/np/prsp/2000/cmr/01/cmr.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Cameroon: Interim Poverty Reduction Strategy Paper",
+            "date": "2000-08-23",
+            "quote": "these shocks plunged Cameroon into a severe recession, from which the economy emerged only after the January 1994 devaluation of the CFA franc."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/257351468227696503/pdf/509370PUB0Came101Official0Use0Only1.pdf",
+            "publisher": "World Bank",
+            "title": "Sustaining Reforms for Inclusive Growth in Cameroon: A Development Policy Review",
+            "date": "2009",
+            "quote": "growth has stabilized at an average rate of 4.5 percent a year between 1994 and 2003, up from –2.7 percent between 1986 and 1993"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/257351468227696503/pdf/509370PUB0Came101Official0Use0Only1.pdf",
+            "publisher": "World Bank",
+            "title": "Sustaining Reforms for Inclusive Growth in Cameroon: A Development Policy Review",
+            "date": "2009",
+            "quote": "led to the attainment of the completion point of the Enhanced Heavily Indebted Poor Countries (HIPC) initiative in April 2006."
+          }
+        ]
+      },
+      {
+        "title": "Conflict in three regions",
+        "about": "present",
+        "text": "Since 2014 the Boko Haram insurgency in the Far North has cut economic activity, including trade across the border, and from 2016 a separatist conflict has spread in the North-West and South-West. The IMF still lists security among the challenges weighing on growth in 2026.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099945102202316750/pdf/IDU-429f0760-47b5-4b6c-920d-b854326d2e2f.pdf",
+            "publisher": "World Bank",
+            "title": "Creating Markets in Cameroon: Unleashing Private Sector Growth (Country Private Sector Diagnostic)",
+            "date": "2022-12",
+            "quote": "Security threats in the Far North from Boko Haram that commenced in 2014 have helped contract economic activity, including cross-border trade"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099945102202316750/pdf/IDU-429f0760-47b5-4b6c-920d-b854326d2e2f.pdf",
+            "publisher": "World Bank",
+            "title": "Creating Markets in Cameroon: Unleashing Private Sector Growth (Country Private Sector Diagnostic)",
+            "date": "2022-12",
+            "quote": "starting in 2016, another conflict rooted in the neglected identity of this part of the country has rapidly escalated, giving way to a violent …"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/03/30/pr-26096-cameroon-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Cameroon",
+            "date": "2026-03-30",
+            "quote": "Security and climate-related challenges weighing on growth."
+          }
+        ]
+      },
+      {
+        "title": "Falling oil output",
+        "about": "present",
+        "text": "Oil production keeps declining, which cuts export earnings and public revenue. In 2024 oil revenue came in below the IMF program's plan, and the World Bank expects falling oil output, along with weaker other exports, to keep the external deficit high.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1cmrea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Cameroon: Eighth Reviews Under the Extended Arrangement Under the Extended Fund Facility and the Arrangement Under the Extended Credit Facility, and Third Review Under the Resilience and Sustainability Facility Arrangement",
+            "date": "2025-08",
+            "quote": "Cameroon’s oil revenues were below program projections, primarily due to lower-than-projected SNH royalty transfers, a sharper decline in oil production"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cmr.pdf",
+            "publisher": "World Bank",
+            "title": "Cameroon: Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "The current account deficit is expected to remain elevated at about 4.5 percent of GDP, reflecting weaker non-hydrocarbon exports, declining oil production"
+          }
+        ]
+      },
+      {
+        "title": "Debt and unpaid bills",
+        "about": "present",
+        "text": "The World Bank judges public debt sustainable, but both the IMF and the World Bank rate Cameroon at high risk of debt distress. The government has also run up new unpaid domestic bills.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cmr.pdf",
+            "publisher": "World Bank",
+            "title": "Cameroon: Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "Public debt remains sustainable and is expected to stay just above 40 percent of GDP, but Cameroon remains at high risk of debt distress"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cmr.pdf",
+            "publisher": "World Bank",
+            "title": "Cameroon: Macro Poverty Outlook",
+            "date": "2026-10",
+            "quote": "new domestic arrears increased from 1.8 percent of GDP in 2018 to 2.5 percent in 2025."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/13/pr-26049-cameroon-imf-staff-completes-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Cameroon",
+            "date": "2026-02-13",
+            "quote": "Debt sustainability analysis continues to show high overall risk of debt distress."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Unrest after the 2025 election disrupted trade, services and investment, and income per person rose 0.6 percent in 2025, down from 0.9 in 2024. In early 2026 revenue fell short and capital spending dropped, and prices began rising faster again as Middle East shocks fed through.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/02/13/pr-26049-cameroon-imf-staff-completes-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "IMF Staff Completes 2026 Article IV Mission to Cameroon",
+          "date": "2026-02-13",
+          "quote": "post-election unrest that disrupted trade, services, and investment"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cmr.pdf",
+          "publisher": "World Bank",
+          "title": "Cameroon: Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "In the first quarter of 2026 revenue underperformed and capital spending fell sharply because of delays in public finance digitalization reforms."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-cmr.pdf",
+          "publisher": "World Bank",
+          "title": "Cameroon: Macro Poverty Outlook",
+          "date": "2026-10",
+          "quote": "as Middle East-related shocks fed through to domestic prices."
+        }
+      ]
+    },
+    "tension": "The sources describe a stable economy with steady overall growth since the mid-1990s, but income per person grew only 0.5 percent a year over 2016–2025 and is still 19.2 percent below its 1986 peak. Most of that overall growth has only kept pace with a growing population. The sources also place the recovery's start at the 1994 devaluation, while the data's era break comes in 1998, because the weak years just after 1994 sit inside the 1990–1997 era."
+  }
+}

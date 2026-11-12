@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "iso3": "LBN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LBN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 7,
+      "sources_searched": [
+        "worldbank.org, imf.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Lebanon economic monitor World Bank 2025\"",
+        "same tier 1 domains: \"IMF Lebanon Article IV staff concluding statement 2025\"",
+        "worldbank.org: \"Lebanon Economic Monitor Summer 2026 conflict-torn economy contract 2026\"",
+        "worldbank.org, imf.org: \"Lebanon deliberate depression financial crisis Ponzi Syrian conflict spillover growth\"",
+        "worldbank.org, imf.org: \"Lebanon Syrian conflict impact growth refugees economic slowdown 2013 2014\"",
+        "worldbank.org, imf.org: \"Lebanon post-war reconstruction 1990s growth capital inflows remittances 2007-2010 boom real estate\"",
+        "Pages opened: imf.org pr26297 (2026-09-18), pr-25182 (2025-06-05), 2023 Article IV concluding statement, Occasional Paper 176; worldbank.org press releases 2026-08-21, 2026-01-22, 2025-06-19, 2023-12-21, 2022-08-02, 2020-11-30, and the Fall 2013 Lebanon Economic Monitor PDF",
+        "Critic pass: re-opened all 11 cited URLs with WebFetch (Fall 2013 LEM PDF read via extracted text)"
+      ],
+      "critic_changes": [
+        "Syria thread and arc: removed 'cut Lebanon's trade routes' / 'hit trade' because the Fall 2013 Lebanon Economic Monitor does not say this. It names tourism, confidence and refugee pressure on public services, so the arc now says 'tourism' in place of 'trade'. Changed 'social cohesion' to 'its social fabric' to match the quoted passage. Added a second citation from the same report, on tourism.",
+        "Since last year: the IMF statement of 18 September 2026 says activity will 'contract significantly', not 'sharply', so the wording was corrected.",
+        "Since last year: replaced 'In 2026 parliament also amended the law' with 'By September 2026, amendments ... had been approved'. The IMF page reports only the 'recent approval' of the Bank Resolution Law amendments and names neither parliament nor a date.",
+        "Debt thread: dropped 'Lebanon defaulted into its crisis', because no cited passage mentions a default. Dated the 'talks have not started' claim to August 2026, which is when the cited World Bank release appeared.",
+        "Arc: softened 'Renewed conflict cut income per person a further 7.6 percent in 2024' to 'As conflict returned, income per person fell a further 7.6 percent in 2024', so the arc does not claim more cause than the sources show.",
+        "Tension: 'In 2013 and 2014 the World Bank described a slowing economy' changed to 2013 only, since the cited 2013 report covers 2013 and no opened source describes 2014.",
+        "Conflict thread: 'hit tourism and spending' changed to 'weighed on tourism and spending' to follow the 21 August 2026 World Bank wording ('weighed heavily on tourism and domestic demand').",
+        "All 18 citations checked: every URL is on a tier 1 domain, every quote matches its page (curly or straight apostrophes are the only differences), and every date matches the document. None was dropped.",
+        "All numbers checked against desk/data/LBN.json and found correct: 39.8, 2010, 14.0, 2.7, 3.9, 6.9 to 8.8 (2007-2010), 20.1 (2020), 7.6 (2024), 1994, investment 21.8 (2018) and 1.4 (2024), inflation 221.3 (2023) and 14.6 (2025), 43.6 (1989), 5.4 (2013) and 7.3 (2014). There is no recommendation or verdict language and no banned phrase."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Lebanon's income per person is 39.8 percent below its 2010 peak, after war next door, a banking collapse and renewed conflict undid three decades of gains.",
+    "arc": "After the civil war, Lebanon's income per person grew 14.0 percent a year from 1990 to 1997, partly a rebound from a deep fall in 1989, as rebuilding drew in large capital inflows. Growth slowed to 2.7 percent a year from 1998 to 2012, with a burst of 6.9 to 8.8 percent a year from 2007 to 2010 that carried income per person to its 2010 peak; the sources opened here do not explain that burst. From 2013 to 2024 income per person shrank 3.9 percent a year. The war in Syria hit tourism, confidence and public services first, then a banking and currency crisis that broke in 2019 brought a fall of 20.1 percent in 2020. As conflict returned, income per person fell a further 7.6 percent in 2024, leaving it about where it first was in 1994.",
+    "threads": [
+      {
+        "title": "Rebuilding after the civil war",
+        "text": "The 1990s boom was a postwar rebuilding of damaged roads, power and ports. It was paid for by large capital inflows, drawn by high interest rates and a stable exchange rate, and by fast-rising public debt.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/nft/op/176/",
+            "publisher": "IMF",
+            "title": "Back to the Future: Postwar Reconstruction and Stabilization in Lebanon (Occasional Paper 176)",
+            "date": "1999",
+            "quote": "During 1991–97, the average annual growth rate of GDP amounted to 9.7 percent"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/nft/op/176/",
+            "publisher": "IMF",
+            "title": "Back to the Future: Postwar Reconstruction and Stabilization in Lebanon (Occasional Paper 176)",
+            "date": "1999",
+            "quote": "These large inflows, induced in part by high interest rates and exchange rate stability,"
+          }
+        ]
+      },
+      {
+        "title": "Spillover from Syria's war",
+        "text": "From 2012 the war in Syria hurt tourism and confidence, and a large influx of refugees put public services under strain. The World Bank described a heavy toll on the economy, its social fabric and public services, as income per person began to fall in 2013.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/Feature%20Story/mena/Lebanon/lebanon-lEM-fall-2013.pdf",
+            "publisher": "World Bank",
+            "title": "Lebanon Economic Monitor, Fall 2013: The Brunt of the Syrian Conflict",
+            "date": "2013",
+            "quote": "The conflict in Syria is having a large, negative, and rapidly growing impact on Lebanon's economy, its social fabric, and its public services"
+          },
+          {
+            "url": "https://www.worldbank.org/content/dam/Worldbank/Feature%20Story/mena/Lebanon/lebanon-lEM-fall-2013.pdf",
+            "publisher": "World Bank",
+            "title": "Lebanon Economic Monitor, Fall 2013: The Brunt of the Syrian Conflict",
+            "date": "2013",
+            "quote": "tourism, a central source of employment and growth for the Lebanese economy, is negatively affected."
+          }
+        ]
+      },
+      {
+        "title": "A financial system that collapsed",
+        "text": "The World Bank describes years of borrowing that kept deposits flowing in and gave an illusion of stability, until the system broke in 2019. Banks stopped lending and savers lost access to their deposits, and investment fell from 21.8 percent of GDP in 2018 to 1.4 in 2024. Years on, the banking sector is still deeply weakened.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2022/08/02/lebanon-s-ponzi-finance-scheme-has-caused-unprecedented-social-and-economic-pain-to-the-lebanese-people",
+            "publisher": "World Bank",
+            "title": "Lebanon's Ponzi Finance Scheme Has Caused Unprecedented Social and Economic Pain to the Lebanese People",
+            "date": "2022-08-02",
+            "quote": "Excessive debt accumulation was used to give the illusion of stability"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2023/03/23/lebanon-staff-concluding-statement-of-the-2023-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Lebanon: Staff Concluding Statement of the 2023 Article IV Mission",
+            "date": "2023-03-23",
+            "quote": "Banks are unable to extend credit to the economy and bank deposits are mostly inaccessible to customers."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/08/21/renewed-conflict-derails-lebanon-s-fragile-economic-recovery",
+            "publisher": "World Bank",
+            "title": "Renewed Conflict Derails Lebanon's Fragile Economic Recovery",
+            "date": "2026-08-21",
+            "quote": "the banking sector remains deeply weakened, despite some progress on parts of the restructuring agenda."
+          }
+        ]
+      },
+      {
+        "title": "Conflict keeps returning",
+        "text": "Fighting on the southern border from late 2023 pulled the economy back into recession, and income per person fell 7.6 percent in 2024. A new escalation in March 2026 damaged homes and infrastructure again and weighed on tourism and spending.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2023/12/21/lebanon-s-fragile-economy-pulled-back-into-recession",
+            "publisher": "World Bank",
+            "title": "Lebanon's Fragile Economy Pulled Back into Recession",
+            "date": "2023-12-21",
+            "quote": "Lebanon's economy is now projected to be back in recession in 2023."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/08/21/renewed-conflict-derails-lebanon-s-fragile-economic-recovery",
+            "publisher": "World Bank",
+            "title": "Renewed Conflict Derails Lebanon's Fragile Economic Recovery",
+            "date": "2026-08-21",
+            "quote": "the March 2026 escalation in conflict, which further damaged housing and infrastructure"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/18/pr26297-lebanon-imf-staff-concludes-visit-to-lebanon",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Visit to Lebanon",
+            "date": "2026-09-18",
+            "quote": "have once again taken a heavy toll on the Lebanese economy and living conditions"
+          }
+        ]
+      },
+      {
+        "title": "Debt still unresolved",
+        "text": "Public debt has still not been restructured, and the state has little room to borrow even as rebuilding needs grow. As of August 2026, talks with creditors had not begun.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/06/05/pr-25182-lebanon-imf-staff-concludes-mission-to-lebanon",
+            "publisher": "IMF",
+            "title": "IMF Staff Concludes Mission to Lebanon",
+            "date": "2025-06-05",
+            "quote": "Lebanon has substantial reconstruction needs, limited fiscal space, and lack of capacity to borrow."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/08/21/renewed-conflict-derails-lebanon-s-fragile-economic-recovery",
+            "publisher": "World Bank",
+            "title": "Renewed Conflict Derails Lebanon's Fragile Economic Recovery",
+            "date": "2026-08-21",
+            "quote": "Public debt remains unsustainable, and debt restructuring negotiations have yet to begin."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The World Bank reported a rebound in 2025, led by private spending, and inflation fell from 221.3 percent in 2023 to 14.6 in 2025. The March 2026 escalation of conflict reversed the rebound: the World Bank now expects the economy to shrink in 2026, and the IMF said in September 2026 that activity will contract significantly. By September 2026, amendments to the law for resolving failed banks had been approved, which the IMF called a significant step in restructuring the banks.",
+      "citations": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/01/22/lebanon-economic-rebound-marks-cautious-recovery-amidst-progress-on-reforms",
+          "publisher": "World Bank",
+          "title": "Lebanon: Economic Rebound Marks Cautious Recovery amidst Progress on Reforms",
+          "date": "2026-01-22",
+          "quote": "The 2025 economic upturn was driven mainly by increased private consumption"
+        },
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2026/08/21/renewed-conflict-derails-lebanon-s-fragile-economic-recovery",
+          "publisher": "World Bank",
+          "title": "Renewed Conflict Derails Lebanon's Fragile Economic Recovery",
+          "date": "2026-08-21",
+          "quote": "Lebanon's economy is projected to contract by 6.4% in 2026"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/09/18/pr26297-lebanon-imf-staff-concludes-visit-to-lebanon",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Lebanon",
+          "date": "2026-09-18",
+          "quote": "marks a significant step forward in advancing the banking sector restructuring strategy."
+        }
+      ]
+    },
+    "tension": "The data's 14.0 percent a year for 1990 to 1997 owes much to bouncing back from 1989, when income per person fell 43.6 percent, so it overstates the postwar pace the IMF describes for GDP. In 2013 the World Bank described an economy that was slowing, not shrinking, yet income per person fell 5.4 percent in 2013 and 7.3 in 2014; the refugee influx the sources describe likely enlarged the population sharing the same output. And the World Bank reports growth in 2025 that the data, which end in 2024, do not yet show."
+  }
+}

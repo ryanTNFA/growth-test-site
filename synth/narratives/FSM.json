@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "iso3": "FSM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "FSM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "WebSearch tier 1 (imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org): Federated States of Micronesia Article IV consultation 2024 Compact",
+        "WebSearch tier 1: Micronesia economic update Macro Poverty Outlook 2025",
+        "WebSearch tier 1: Federated States of Micronesia Compact grants decrement fiscal cliff 2023 private sector growth",
+        "WebSearch adb.org, worldbank.org: Micronesia COVID-19 border closure economy contraction ADB Asian Development Outlook",
+        "WebSearch adb.org: Federated States of Micronesia Asian Development Outlook 2025 economy fisheries construction emigration",
+        "WebSearch worldbank.org: Federated States of Micronesia Macro Poverty Outlook October 2025 FY24 growth fisheries",
+        "WebSearch imf.org, worldbank.org, adb.org: Federated States of Micronesia 1997 step-down Compact funding public sector reform economic contraction",
+        "Opened: imf.org 2026 Article IV press release (May 2026)",
+        "Opened: imf.org 2023 Article IV press release (March 2024)",
+        "Opened: imf.org 2015 Article IV staff report (cr15128.pdf)",
+        "Opened: adb.org Pacific Economic Monitor August 2023",
+        "Opened: adb.org news release 30 September 2025 (ADO September 2025)",
+        "Opened: adb.org Development Effectiveness Brief FSM (2012)",
+        "Opened: thedocs.worldbank.org Macro Poverty Outlook North Pacific Islands (October 2026)",
+        "Tried, not readable: imf.org 2019 Article IV (404), elibrary.imf.org 1998 report (403)",
+        "Critic re-check: opened all 7 cited URLs with WebFetch; PDFs text-extracted to verify quotes"
+      ],
+      "critic_changes": [
+        "Opened all 7 cited URLs (IMF 2026 and 2024 press releases, IMF 2015 staff report, ADB PEM August 2023, ADB 2012 brief, ADB 30 Sep 2025 release, World Bank MPO October 2026); all are on tier 1 domains, all quoted passages were found and all dates match.",
+        "Arc: replaced 'the IMF expects growth to stay close to its historical average' with 'the IMF sees medium-term growth prospects as subdued'; the IMF 2026 page says growth prospects 'remain subdued' and says nothing about a historical average.",
+        "Arc: replaced 'the cost-cutting of 1996–1997' and 'the halt to new Compact infrastructure grants before 2014' with 'in the late 1990s and again around 2014'. The ADB brief dates the cost-cutting programme to 1997–2002, and the IMF 2015 report describes the grant suspension around FY2014.",
+        "Arc: 'slow spending of the money, thin capacity and steady emigration' reworded to 'slow use of the money, limited capacity and sustained emigration' to match the sources' wording.",
+        "Thread 'An economy run on grants': dropped the unsupported causal clause 'which helps explain why income per person has risen only slowly since 1990'; 'stayed small' changed to the IMF's 'yet to become the engine of growth'; ADB brief title completed with its subtitle 'Opening for Business'.",
+        "Thread 'Grant cuts and stalled projects': the 1996–1997 sentence no longer claims the falls were caused by cost-cutting in those years; it now says that, with Compact grants being reduced, the government set out from 1997 to cut costs, as the source says. The 2012–2014 sentence now names slow building projects and the suspension of grants for new projects, as in the IMF 2015 passage. PEM quote minus sign normalised to the page's '-1.0'.",
+        "Thread 'A long border closure': removed 'as further shocks followed' for 2022, which no source supports; it now says the IMF calls the 2021 recovery short-lived. The IMF quote was extended to the page's full clause, ending 'but economic activity has since stagnated'.",
+        "Thread 'Emigration and labour shortages': IMF 2026 quote corrected to the page's exact wording ('medium-term growth prospects remain subdued due to capacity constraints, sustained emigration, and intensifying effects of climate change'); 'expects growth to stay subdued' changed to 'sees medium-term growth prospects as subdued'.",
+        "Thread 'Renewed Compact, slow spending': removed 'grants under the first amended Compact ended in 2023' (no cited passage supports it), 'lack the staff and systems' (the ADB says only 'capacity constraints') and 'so the boost to growth has been small so far' (unsupported).",
+        "since_last_year: removed 'Since then', because the World Bank places Typhoon Sinlaku within its FY25 developments and its timing relative to the 2025 data is unclear. Added the MPO passage on infrastructure damage and crop losses so the typhoon-damage claim is cited. 'slow again' changed to 'slow'.",
+        "Tension: 'A shrinking population should make...' reworded to the conditional 'If emigration shrinks the population...would'. The fiscal year ending in September is confirmed by the ADB PEM, and the IMF 2026 page reports FY2024 and FY2025 growth above the per-person data.",
+        "All numbers checked against desk/data/FSM.json: 0.7 (1990–2025 era mean), $2,394 and $3,020 (1990 and 2025 levels), 0.1 and 0.5 (decade averages), 0.8 below the 2019 peak, level first reached in 2011, -3.8/-6.5 (1996/1997), declines in 2012–2014 of up to 3.9, -2.6/+2.4/-3.5 (2020–2022), and 1.8/0.6 (2024/2025) all match the data file. Headline is 153 characters, and no banned phrases appear."
+      ]
+    },
+    "headline": "Micronesia's income per person has grown about 0.7 percent a year since 1990, carried by US Compact grants and set back by cuts, closures and emigration.",
+    "arc": "The data show one long era since 1990: income per person in the Federated States of Micronesia grew 0.7 percent a year on average from 1990 to 2025, from about $2,394 to about $3,020 in constant dollars. Within that era the pace was 0.1 percent a year in 2006–2015 and 0.5 percent in 2016–2025, and in 2025 income per person was 0.8 percent below its 2019 peak and about where it first stood in 2011. The sources tie this slow pace to an economy built on US grants under the Compact of Free Association: government spending is the main source of income, and the private sector mostly serves the public sector. The sharp falls came when that support was cut or stalled, in the late 1990s and again around 2014, and when the borders stayed shut from March 2020 to September 2022. The Compact has since been renewed with larger grants, but the sources describe slow use of the money, limited capacity and sustained emigration, and the IMF sees medium-term growth prospects as subdued.",
+    "threads": [
+      {
+        "title": "An economy run on grants",
+        "text": "US grants under the Compact of Free Association pay for most government spending, and that spending is the main source of income for the rest of the economy. The private sector has yet to become the engine of growth and mostly serves the public sector.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29539/decb-fsm.pdf",
+            "publisher": "ADB",
+            "title": "Development Effectiveness Brief: Federated States of Micronesia — Opening for Business",
+            "date": "2012",
+            "quote": "the principal source of income is government expenditure, which ripples through the rest of the economy"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15128.pdf",
+            "publisher": "IMF",
+            "title": "Federated States of Micronesia: 2015 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director",
+            "date": "2015-05",
+            "quote": "The private sector has yet to become the engine of growth for the economy, and caters largely to the needs of the public sector."
+          }
+        ]
+      },
+      {
+        "title": "Grant cuts and stalled projects",
+        "text": "Income per person fell 3.8 percent in 1996 and 6.5 percent in 1997. With Compact grants being reduced, the government set out from 1997 to cut the cost of its operations. It fell again in 2012, 2013 and 2014, by up to 3.9 percent a year, as building projects moved slowly and Compact infrastructure grants for new projects were suspended; over 2010–2019, investment in buildings and equipment pulled growth down rather than lifting it.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29539/decb-fsm.pdf",
+            "publisher": "ADB",
+            "title": "Development Effectiveness Brief: Federated States of Micronesia — Opening for Business",
+            "date": "2012",
+            "quote": "From 1997 to 2002, ADB supported these objectives through a Public Sector Reform Program, which aimed to reduce costs of government operations"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15128.pdf",
+            "publisher": "IMF",
+            "title": "Federated States of Micronesia: 2015 Article IV Consultation—Staff Report; Press Release; and Statement by the Executive Director",
+            "date": "2015-05",
+            "quote": "delays in updating the infrastructure development plan of 2004 have resulted in the temporary suspension of Compact infrastructure grants for new projects."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "ADB",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "During the decade from FY2010–FY2019, gross fixed capital formation contributed about -1.0 percentage points to overall GDP growth in the FSM"
+          }
+        ]
+      },
+      {
+        "title": "A long border closure",
+        "text": "The country kept its borders shut from March 2020 to September 2022, one of the longest closures in the world, which cut trade, tourism and the arrival of workers and equipment for building projects. Income per person fell 2.6 percent in 2020, rose 2.4 percent in 2021 and fell 3.5 percent in 2022; the IMF describes the 2021 recovery as short-lived.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "ADB",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "the FSM and the Marshall Islands had among the longest border closures globally, lasting from March 2020 to September 2022"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/04/pr2466-micronesia-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with the Federated States of Micronesia",
+            "date": "2024-03-04",
+            "quote": "FSM experienced a short-lived recovery in 2021 from Covid, but economic activity has since stagnated"
+          }
+        ]
+      },
+      {
+        "title": "Emigration and labour shortages",
+        "text": "Because the Compact lets citizens live and work in the United States, many young people leave. The IMF links this steady outflow to labour shortages and sees medium-term growth prospects as subdued.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/News/Articles/2024/03/04/pr2466-micronesia-imf-executive-board-concludes-2023-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2023 Article IV Consultation with the Federated States of Micronesia",
+            "date": "2024-03-04",
+            "quote": "Significant labor shortages exacerbated by outward emigration"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/05/pr26138-micronesia-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with The Federated States of Micronesia",
+            "date": "2026-05-05",
+            "quote": "medium-term growth prospects remain subdued due to capacity constraints, sustained emigration, and intensifying effects of climate change"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/29539/decb-fsm.pdf",
+            "publisher": "ADB",
+            "title": "Development Effectiveness Brief: Federated States of Micronesia — Opening for Business",
+            "date": "2012",
+            "quote": "Seeing relatively few opportunities at home, many young people take advantage of their freedom to live and work in nearby Guam or in the US"
+          }
+        ]
+      },
+      {
+        "title": "Renewed Compact, slow spending",
+        "text": "The Compact has been renewed, with larger yearly sector grants and new money for the Compact Trust Fund. The ADB reports that the larger states have been slow to use the new assistance because of capacity constraints.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/05/pr26138-micronesia-imf-executive-board-concludes-2026-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation with The Federated States of Micronesia",
+            "date": "2026-05-05",
+            "quote": "Directors welcomed the renewal of the Compact of Free Association"
+          },
+          {
+            "url": "https://www.adb.org/news/growth-pacific-accelerate-4-1-percent-2025-moderate-3-4-percent-2026-adb",
+            "publisher": "ADB",
+            "title": "Growth in the Pacific to Accelerate to 4.1% in 2025, Moderate to 3.4% in 2026 — ADB",
+            "date": "2025-09-30",
+            "quote": "Utilization of financial assistance under the renewed Compact of Free Association in FSM's larger states has been slow"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/publication/899671/pem-august-2023.pdf",
+            "publisher": "ADB",
+            "title": "Pacific Economic Monitor, August 2023",
+            "date": "2023-08",
+            "quote": "increased sector grants to an annual $140 million (or $2.8 billion over 20 years), and a $500 million funding infusion into the FSM Compact …"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In the data, income per person grew 1.8 percent in 2024 and 0.6 percent in 2025. The World Bank reports that Typhoon Sinlaku damaged infrastructure and crops and further slowed public building work, while higher world oil prices have raised the cost of imports. The IMF and the World Bank both expect growth to slow in the 2026 fiscal year.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-npi.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: North Pacific Islands",
+          "date": "2026-10",
+          "quote": "Public investment execution slowed, especially in Chuuk and Pohnpei, and was further disrupted by Typhoon Sinlaku."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-npi.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: North Pacific Islands",
+          "date": "2026-10",
+          "quote": "The typhoon is expected to have increased extreme poverty through infrastructure damage and crop losses."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-npi.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: North Pacific Islands",
+          "date": "2026-10",
+          "quote": "growth is estimated to moderate to 0.7 percent in FY26 as the oil price shock raises inflation and erodes purchasing power"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/05/pr26138-micronesia-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with The Federated States of Micronesia",
+          "date": "2026-05-05",
+          "quote": "real income compression and elevated import costs weigh on activity"
+        }
+      ]
+    },
+    "tension": "The sources stress steady emigration. If emigration shrinks the population, income per person would grow faster than the economy as a whole. Yet in the data, income per person grew more slowly in 2024 and 2025 than the total growth the World Bank and IMF report for those years. Part of the gap may come from fiscal years, which end in September, and part from uncertain population estimates for a small country whose people move freely."
+  }
+}

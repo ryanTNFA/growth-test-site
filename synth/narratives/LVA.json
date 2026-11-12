@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "iso3": "LVA",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "LVA",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Latvia Article IV consultation staff report 2025\"",
+        "same tier 1 domains: \"OECD Economic Survey Latvia 2024 growth productivity\"",
+        "same tier 1 domains: \"Latvia boom bust 2008 2009 crisis credit boom internal devaluation convergence\"",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: \"Latvia 2026 Article IV IMF concluding statement\"",
+        "imf.org, worldbank.org, oecd.org, ebrd.com: \"Latvia transition 1990s output collapse independence 1991 stabilization lats 1998 Russian crisis\"",
+        "Opened: OECD Economic Surveys: Latvia 2026 (PDF); IMF 2025 Article IV press release; IMF 2025 Article IV staff concluding statement; IMF 2025 Article IV staff report page; IMF Country Report 10/356 (Dec 2010); IMF Country Report 14/115 (May 2014); IMF WP/03/241 (Dec 2003); IMF F&D Sept 2000 (not cited)",
+        "Critic pass: reopened every cited URL (IMF WP/03/241, IMF CR 10/356, IMF CR 14/115, IMF 2025 concluding statement, IMF PR 25/304, OECD Economic Surveys: Latvia 2026) and checked each passage against the full text"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/LVA.json: -1.9 (1991–1999), -31.2 (1992), 10.1 (2000–2007), -14.6 (2009), 1.7 (2008–2025), 2007 level passed in 2015, -1.2 (2023), 3.2 (2025, peak), 38.1 (2007 investment), 20.2–24.0 (investment range since 2016), 96.6 to 29.3 (private credit 2010–2024), 2.4 and 2.6 (G1) all match. No number needed correcting.",
+        "IMF Country Report 10/356: corrected the title. The cover reads '2010 Article IV Consultation', not 'Third Review Under the Stand-By Arrangement'. Both quotes were verified in the full text.",
+        "IMF Country Report 14/115: changed the date from 2014-04-08 to 2014-05. April 8 is when the staff report was completed; the published report is dated May 2014.",
+        "Crash thread: replaced the 'Wages fell 10 percent' quote and the CR 14/115 'internal devaluation' quote with passages that support the thread's actual claims. A CR 10/356 passage on keeping the peg and one defining internal devaluation as wage and price cuts back the devaluation claim. A CR 14/115 passage backs the 2014 euro adoption, which no quote supported before. 'Regained competitiveness' became 'cut wages and prices to improve competitiveness', because the source states this as an aim.",
+        "Credit boom thread: added a CR 10/356 citation for EU entry and growth acceleration, and extended the Nordic-banks quote to cover the foreign-currency claim. Dropped 'much of it going into property', which no cited passage supported.",
+        "Low investment thread: replaced the truncated IMF concluding-statement quote with the full verified sentence on productivity and capital accumulation. That sentence backs the thread's productivity claim directly.",
+        "Shrinking workforce thread: removed 'every year since 1990'. The OECD gives an average annual decline, not a decline in each year. Also wrote 'unfavourable demographic trends' to match the IMF passage.",
+        "Arc: changed 'convergence with richer Europe' to 'richer economies'. The OECD benchmark is the OECD average.",
+        "since_last_year: 'a sharp rise in defence spending' became 'rising defence spending lifting public investment', matching the OECD's words. Added the verified OECD passage on EU funds and defence spending.",
+        "Tension: rewrote the population sentence. Population numbers are not in the allowed data fields, so the sentence now rests on the OECD's emigration finding rather than asserting 'part of the gap'.",
+        "All other citations were verified verbatim on their pages, with matching dates and allowed tier 1 domains: IMF WP/03/241 (Dec 2003), OECD Economic Surveys: Latvia 2026 (June 2026, three passages), IMF concluding statement (June 9, 2025) and IMF press release 25/304 (Sept 19, 2025). Three distinct recent tier 1 sources remain, so the story stays tier 1."
+      ]
+    },
+    "headline": "Latvia went from post-Soviet collapse to a credit-fuelled boom and a deep 2009 crash; since 2008 income per person has grown 1.7 percent a year on average.",
+    "arc": "After independence, income per person fell by 1.9 percent a year on average in 1991–1999, including a drop of 31.2 percent in 1992, as Soviet trade links broke apart and the prices Latvia paid Russia for energy jumped. Growth returned in the mid-1990s, and in 2000–2007 income per person grew 10.1 percent a year, a boom the IMF links to EU entry in 2004 and to fast credit funded by Nordic parent banks. The boom ended in a crash: income per person fell 14.6 percent in 2009, and Latvia kept its currency peg by cutting wages and prices instead. Since 2008 growth has averaged 1.7 percent a year, and income per person passed its 2007 level only in 2015; the IMF and OECD say convergence with richer economies slowed as investment, productivity and the workforce lagged. After a fall of 1.2 percent in 2023 and slow growth in 2024, income per person rose 3.2 percent in 2025 to its highest level yet.",
+    "threads": [
+      {
+        "title": "Collapse after the Soviet break-up",
+        "about": "history",
+        "text": "When Soviet central planning collapsed, Latvia lost much of its export market and suddenly had to pay world prices for Russian energy and raw materials. Output fell steeply until stabilisation took hold, and income per person grew again from 1994.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/websites/imf/imported-full-text-pdf/external/pubs/ft/wp/2003/_wp03241.pdf",
+            "publisher": "IMF",
+            "title": "IMF and the Baltics: A Decade of Cooperation (Working Paper WP/03/241)",
+            "date": "2003-12",
+            "quote": "the Baltic countries faced a severe terms of trade shock in the beginning of 1992, as Russia moved to world market prices for energy"
+          }
+        ]
+      },
+      {
+        "title": "Credit boom after EU entry",
+        "about": "history",
+        "text": "Growth sped up after Latvia joined the EU in 2004, fed by bank credit from Nordic parent banks, much of it in foreign currency. Investment climbed to 38.1 percent of GDP in 2007.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10356.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: 2010 Article IV Consultation (IMF Country Report No. 10/356)",
+            "date": "2010-12",
+            "quote": "Following EU membership in 2004, growth accelerated into double digits"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10356.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: 2010 Article IV Consultation (IMF Country Report No. 10/356)",
+            "date": "2010-12",
+            "quote": "Substantial inflows from Nordic parent banks into Latvia’s small economy fuelled rapid credit expansion, largely foreign currency-denominated"
+          }
+        ]
+      },
+      {
+        "title": "Crash and internal devaluation",
+        "about": "history",
+        "text": "When the credit bubble burst, income per person fell 14.6 percent in 2009. Latvia kept its fixed exchange rate and instead cut wages and prices to improve competitiveness, a path the IMF calls internal devaluation, and it adopted the euro in 2014.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10356.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: 2010 Article IV Consultation (IMF Country Report No. 10/356)",
+            "date": "2010-12",
+            "quote": "the authorities insisted on basing the program strategy on maintaining the peg—a pillar of economic stability since 1994"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr10356.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: 2010 Article IV Consultation (IMF Country Report No. 10/356)",
+            "date": "2010-12",
+            "quote": "The program is built on fiscal adjustment and internal devaluation—wage and price cuts and productivity boosting reforms—to improve competitiveness"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2014/cr14115.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: 2014 Article IV Consultation—Staff Report (IMF Country Report No. 14/115)",
+            "date": "2014-05",
+            "quote": "Latvia adopted the euro on January 1, 2014, fulfilling a long-desired policy goal."
+          }
+        ]
+      },
+      {
+        "title": "Low investment, slow productivity",
+        "about": "present",
+        "text": "Since the crisis, investment has stayed far below its boom level, between 20.2 and 24.0 percent of GDP since 2016, and credit to the private sector fell from 96.6 percent of GDP in 2010 to 29.3 percent in 2024. The IMF and OECD tie the slower catch-up with richer economies to this thin capital base and to weak productivity growth.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-latvia-2026_56c9a4f2/34d15460-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Latvia 2026",
+            "date": "2026-06",
+            "quote": "Convergence to OECD average living standards has slowed since the global financial crisis."
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/06/06/mcs060925-Latvia-Staff-Concluding-Statement-2025-Article-IV-Mission",
+            "publisher": "IMF",
+            "title": "Republic of Latvia: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-06-09",
+            "quote": "Latvia’s low productivity growth is driven by sluggish capital accumulation and inefficient allocation of productive resources."
+          }
+        ]
+      },
+      {
+        "title": "A shrinking workforce",
+        "about": "present",
+        "text": "Large-scale emigration has shrunk the working-age population since 1990, and many skilled young adults have left to work abroad. The IMF lists unfavourable demographic trends among the forces holding growth back.",
+        "citations": [
+          {
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-latvia-2026_56c9a4f2/34d15460-en.pdf",
+            "publisher": "OECD",
+            "title": "OECD Economic Surveys: Latvia 2026",
+            "date": "2026-06",
+            "quote": "Owing to large scale emigration, the working age population has declined by more than 1% per year since 1990"
+          },
+          {
+            "url": "https://www.imf.org/en/News/Articles/2025/09/18/pr-25304-republic-of-latvia-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with the Republic of Latvia",
+            "date": "2025-09-19",
+            "quote": "weak total factor productivity, limited capital deepening, unfavorable demographic trends, and skill mismatches in the labor market"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "The OECD reported in June 2026 that, after stalling in 2023 and 2024, the economy had begun to recover from the energy shock that followed Russia's war in Ukraine, with EU funds and rising defence spending lifting public investment. In the data, income per person rose 3.2 percent in 2025.",
+      "citations": [
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-latvia-2026_56c9a4f2/34d15460-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Latvia 2026",
+          "date": "2026-06",
+          "quote": "After stagnating in 2023 and 2024, the economy has started to recover from the consequences of the energy crisis following the war in Ukraine."
+        },
+        {
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-latvia-2026_56c9a4f2/34d15460-en.pdf",
+          "publisher": "OECD",
+          "title": "OECD Economic Surveys: Latvia 2026",
+          "date": "2026-06",
+          "quote": "Public investment has strongly expanded due to significant inflow of EU funds and rising defence spending"
+        }
+      ]
+    },
+    "tension": "The sources describe slower catch-up since the 2008–2009 crisis and two years of stagnation. Yet income per person reached its highest level in 2025 and grew 2.4 percent a year over 2016–2025, close to the structural-peer median of 2.6. Emigration, which the OECD describes, means fewer people share the economy's output, so income per person can grow faster than the economy as a whole."
+  }
+}

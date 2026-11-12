@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "iso3": "UKR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "UKR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "query: Ukraine IMF Extended Fund Facility review 2026 staff report growth",
+        "query: Ukraine Macro Poverty Outlook World Bank 2026",
+        "query: Ukraine 2014 2015 crisis conflict in the east banking sector cleanup recession IMF staff report",
+        "query: Ukraine 2009 output collapse steel prices credit boom 2000s growth IMF",
+        "query: Ukraine 1990s output decline hyperinflation transition independence 1991 economy contraction World Bank evaluation",
+        "query: \"Ukraine Growth Study\" \"Faster, Lasting and Kinder\" World Bank documents",
+        "query: Ukraine real GDP contracted 2022 full-scale invasion rebound 2023 IMF extended arrangement request March 2023",
+        "critic query (worldbank.org): \"Ukraine Growth Study\" \"Faster, Lasting and Kinder\" World Bank 2019",
+        "critic opened with WebFetch and checked verbatim with pdftotext: thedocs.worldbank.org MPO Ukraine (October 2026); imf.org CR 26/188, 23/132, 15/69, 11/325; documents1.worldbank.org Ukraine Growth Study PDF and TXT; documents.worldbank.org document detail page",
+        "opened but not used: documents1.worldbank.org Ukraine Country Assistance Evaluation (2000), a scanned PDF with no extractable text",
+        "tier 2 (UN) not searched: tier 1 gave 3 recent sources"
+      ],
+      "critic_changes": [
+        "Thread 'Conflict in the East': the second IMF 15/69 quote ('The escalation of the conflict in August-September 2014 took a significant toll on the real and financial sectors.') is not in the report. Replaced it with a passage from the same report, copied exactly: 'Domestic and external shocks as well as the escalation of the conflict in the East have taken a significant toll on the economy'.",
+        "Thread 'Conflict in the East': dropped 'and hit both firms and banks' from the text. The bank-stress sentence in IMF 15/69 is outside the quoted passages, and the replacement quote does not name firms or banks.",
+        "Thread 'Full-scale war': changed 'Attacks on energy and transport' to 'Attacks on energy infrastructure and ongoing hostilities', because the cited MPO passages name energy infrastructure and hostilities, not transport.",
+        "All other citations kept. Each PDF was opened with WebFetch, its text extracted with pdftotext, and every quote matched word for word, apart from line-break whitespace in the IMF 26/188 'High consumption and low investment' sentence.",
+        "Dates confirmed from the documents: IMF 11/325 (November 2011), 15/69 (March 2015), 23/132 (March 2023), 26/188 (July 2026), and the MPO footer ('Macro Poverty Outlook / October 2026').",
+        "World Bank Growth Study date kept at '2019'. The PDF gives no explicit date, but it says it was written 'five years after the Maidan uprising', and a 2020 World Bank approach paper calls it the 2019 study.",
+        "Arc: kept 'credit and real estate boom'. IMF 11/325 supports it: imports 'had surged on the back of a credit and real estate boom and an overheating economy'.",
+        "Arc: kept 'high steel prices'. The same report says steel prices increased fourfold from 2003 to mid-2008.",
+        "Numbers checked against desk/data/UKR.json and all match as rounded: 33.9 shortfall, 1989 peak, 1987 first level, eras -10.7, 6.6, -1.9 and 0.9, growth of -14.8 (2009), -9.3 (2015), -22.7 (2022), 15.4 (2023) and -1.3 (2025), levels 2,197 (2025) and 2,427 (2021).",
+        "Checked that 2022 is the deepest fall in the record: -22.7, against -22.5 in 1994.",
+        "Headline is 149 characters. No banned phrases. No recommendation or verdict language found.",
+        "Tier 1 stands: 3 distinct recent tier 1 sources (IMF 23/132, IMF 26/188, World Bank MPO October 2026)."
+      ]
+    },
+    "headline": "Ukraine's income per person is 33.9 percent below its 1989 peak after a 1990s collapse, a steel boom and bust, conflict from 2014 and full-scale war.",
+    "arc": "Ukraine's income per person peaked in 1989. In 2025 it was 33.9 percent below that peak and lower than in 1987, the first year of the record. From 1990 to 1997 it fell by 10.7 percent a year, as the first decade of transition brought late reforms, rising inflation and a long recession. From 1998 to 2007 it grew by 6.6 percent a year, a fast catch-up helped by high steel prices and a credit and real estate boom. From 2008 to 2015 it fell by 1.9 percent a year, with a 14.8 percent drop in 2009 when steel prices and foreign capital collapsed, and a 9.3 percent drop in 2015 after conflict in the East hit trade and industry. From 2016 to 2025 it grew by 0.9 percent a year: steady gains to 2019, a 22.7 percent fall in 2022 when Russia launched its full-scale invasion, a 15.4 percent rebound in 2023 and a 1.3 percent fall in 2025, so that over 20 years its growth has swung more than in most economies.",
+    "threads": [
+      {
+        "title": "A late, slow transition",
+        "text": "After independence, reforms started late and moved slowly. The World Bank describes the 1990s as a decade of reform delays, rising inflation and a deep, long recession. The data show this as the fall of 1990 to 1997.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/543041554211825812/pdf/Ukraine-Growth-Study-Final-Document-Faster-Lasting-and-Kinder.pdf",
+            "publisher": "World Bank",
+            "title": "Ukraine Growth Study Final Document: Faster, Lasting and Kinder",
+            "date": "2019",
+            "quote": "the first decade of transition was characterized by reform delays, increasing inflation and deep and protracted recession"
+          }
+        ]
+      },
+      {
+        "title": "Steel boom and bust",
+        "text": "Fast growth from 1998 to 2007 leaned on high prices for steel, the main export. The IMF says this hid weaknesses that surfaced in 2008, when steel prices collapsed and capital left, and income per person fell 14.8 percent in 2009. The World Bank links Ukraine's repeated crises before 2013 to inconsistent policies.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr11325.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: Ex Post Evaluation of Exceptional Access Under the 2008 Stand-By Arrangement (IMF Country Report No. 11/325)",
+            "date": "2011-11",
+            "quote": "Vulnerabilities had built up for years along several dimensions, but were masked by strong catch up growth and terms-of-trade windfalls."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr11325.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: Ex Post Evaluation of Exceptional Access Under the 2008 Stand-By Arrangement (IMF Country Report No. 11/325)",
+            "date": "2011-11",
+            "quote": "Steel prices tumbled by 80 percent between July and November 2008"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/543041554211825812/pdf/Ukraine-Growth-Study-Final-Document-Faster-Lasting-and-Kinder.pdf",
+            "publisher": "World Bank",
+            "title": "Ukraine Growth Study Final Document: Faster, Lasting and Kinder",
+            "date": "2019",
+            "quote": "Inconsistent economic policies deployed prior to 2013 made Ukraine vulnerable to recurrent crises and growth volatility."
+          }
+        ]
+      },
+      {
+        "title": "Conflict in the East",
+        "text": "In 2014 conflict broke out in eastern Ukraine. The IMF says it disrupted trade and industry and shook confidence, which drove capital out. Income per person fell 9.3 percent in 2015, closing the weak era of 2008 to 2015.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr1569.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: Request for Extended Arrangement Under the Extended Fund Facility and Cancellation of Stand-By Arrangement (IMF Country Report No. 15/69)",
+            "date": "2015-03",
+            "quote": "The economy has been hit hard by the disruption in trade and industrial production, and the subsequent loss of confidence, which fueled capital outflows"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr1569.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: Request for Extended Arrangement Under the Extended Fund Facility and Cancellation of Stand-By Arrangement (IMF Country Report No. 15/69)",
+            "date": "2015-03",
+            "quote": "Domestic and external shocks as well as the escalation of the conflict in the East have taken a significant toll on the economy"
+          }
+        ]
+      },
+      {
+        "title": "Full-scale war",
+        "text": "Russia's full-scale invasion in 2022 caused the deepest fall in income per person in the record. Attacks on energy infrastructure and ongoing hostilities keep holding back supply, while defense spending and household consumption keep demand high.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2023/english/1ukrea2023001.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: Request for an Extended Arrangement Under the Extended Fund Facility and Review of Program Monitoring with Board Involvement (IMF Country Report No. 23/132)",
+            "date": "2023-03",
+            "quote": "The war has had a profound impact on the economy: activity contracted by 30 percent in 2022"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-ukr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ukraine (October 2026)",
+            "date": "2026-10",
+            "quote": "Ukraine's economy has endured a series of supply shocks, including attacks on the energy infrastructure during the winter, rising global fuel prices"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-ukr.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Ukraine (October 2026)",
+            "date": "2026-10",
+            "quote": "Capacity remains constrained by ongoing hostilities, limiting growth, while rising defense spending and high private consumption sustain demand"
+          }
+        ]
+      },
+      {
+        "title": "Low investment, shrinking workforce",
+        "text": "The IMF notes that growth was weak next to Ukraine's neighbors even before 2022, with a shrinking labor force and little investment. It describes high consumption and low investment as long-standing features of the economy.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ukrea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: 2026 Article IV Consultation and First Review of the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/188)",
+            "date": "2026-07",
+            "quote": "Even before the full-scale war, Ukraine had a weak growth performance by regional comparison, characterized by a shrinking labor force and scarce investment."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ukrea2026002.pdf",
+            "publisher": "IMF",
+            "title": "Ukraine: 2026 Article IV Consultation and First Review of the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/188)",
+            "date": "2026-07",
+            "quote": "High consumption and low investment rates have been longstanding features of the Ukrainian economy, including before the war."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth has slowed again. Income per person fell 1.3 percent in 2025, and the World Bank reports that output shrank slightly in the first half of 2026. In July 2026 the IMF said the outlook had weakened, mainly because of heavier attacks on infrastructure and spillovers from the war in the Middle East.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-ukr.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Ukraine (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP declined by 0.1 percent over the first half of 2026, marking a sharp deceleration from the 1.8 percent growth recorded in 2025."
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1ukrea2026002.pdf",
+          "publisher": "IMF",
+          "title": "Ukraine: 2026 Article IV Consultation and First Review of the Extended Arrangement Under the Extended Fund Facility (IMF Country Report No. 26/188)",
+          "date": "2026-07",
+          "quote": "Nevertheless, the economic outlook has weakened, mostly due to intensified attacks on critical infrastructure and adverse spillovers from the war in the Middle East."
+        }
+      ]
+    },
+    "tension": "The IMF writes that income per person had likely closed in on its pre-war level by 2025 because the population fell (\"Per capita real GDP likely closed in on its pre-war level given the population decline\", IMF Country Report No. 26/188, July 2026). The data file does not show this. In 2025 income per person was about 2,197 constant 2015 dollars, still below the 2,427 of 2021. It also fell 1.3 percent in 2025, while the sources report that total output grew."
+  }
+}

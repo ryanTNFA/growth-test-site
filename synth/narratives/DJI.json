@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "DJI",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "DJI",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 5,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Djibouti Article IV 2025 staff report growth port Ethiopia\"",
+        "same tier 1 domains: \"Djibouti Macro Poverty Outlook economic update growth transshipment Red Sea\"",
+        "worldbank.org, afdb.org: \"Djibouti economic update World Bank 2025 growth Ethiopia port jobs\"",
+        "Opened and checked: imf.org PR25/292 (2025-09-11), imf.org Country Report 25/276 PDF (2025-09), imf.org PR26/005 (2026-01-15), worldbank.org press release (2026-05-07), thedocs.worldbank.org Macro Poverty Outlook Djibouti (October 2026)"
+      ],
+      "critic_changes": [
+        "Checked every number against desk/data/DJI.json. 4.1, 5.3/5.5/5.3, 25.0 and 30.3 investment, 3.1, -0.3, 2.9, 3.7, 5.3/5.5/5.1, 3.8, 2,140 and 3,118 all match growth_problem or series. No number changes were needed.",
+        "Arc: removed 'Ethiopia kept buying port services' in 2023-25. The IMF Article IV says port traffic for Ethiopia slowed in 2024, so the claim contradicted the source.",
+        "Arc and Red Sea thread: the transshipment surge is now dated to 2024 as the IMF reports it, not credited to the whole of 2023-25.",
+        "Red Sea thread: dropped 'competition from other ports in the region' because no cited passage supports it. Lengthened the transshipment quote to the page's words, which name the Red Sea rerouting.",
+        "Thread 1: 'a railway to Addis Ababa and a water pipeline from Ethiopia' corrected to the source's 'a railway and a water pipeline to Ethiopia'. Replaced the 'doubling GDP per capita' quote with the passage on ports, railway and pipeline, which supports this thread; the doubling claim now appears only in the tension.",
+        "Debt thread: dropped 'arrears built up with several creditors' and 'talks with creditors were still under way in 2026', which the cited passages did not support. Added the Article IV passage linking the debt rise to infrastructure projects and the October 2026 MPO passage that debt restructuring is still required. Text now says the IMF judged Djibouti in debt distress in 2025 and the World Bank said in 2026 that the debt still needed restructuring.",
+        "Jobs thread: added the MPO passage dating the first Labor Force Survey to 2025, since the press release does not give the year. Extended the World Bank press release quote to its exact words on young people and women. Text now matches those passages.",
+        "since_last_year: 'eased from its 2024 peak' changed to 'fell back from 2024' and the IMF quote extended to its words on reduced transshipments. Dropped the Strait of Hormuz from the freight and insurance claim because the MPO ties those costs to Red Sea insecurity. Added the MPO passage on freight and insurance costs. Corrected the hyphen in 'National Development Plan 2025–30' to the en dash the page uses.",
+        "Tension: now states the IMF's doubling claim directly with its source and says the data fall short of doubling. The wording no longer points to a quote that has moved.",
+        "Citations: all five opened pages are verified on imf.org or worldbank.org (two PDFs read from text extracted locally). Every kept quote appears on its page, and the dates match: CR 25/276 September 2025, MPO October 2026. tier1_recent_found corrected from 4 to 5 distinct recent tier 1 documents.",
+        "Edited by hand (12 November 2026): an IMF report number removed from the prose."
+      ]
+    },
+    "headline": "Djibouti's income per person has grown 4.1 percent a year since 2014 on ports and a railway serving Ethiopia, leaving high debt and few formal jobs.",
+    "arc": "The data show one era from 2014 to 2025, with income per person growing 4.1 percent a year and no lasting break. The early years ran at 5.3 to 5.5 percent as Djibouti built new ports, a railway and a water pipeline to Ethiopia, largely with borrowed money, and investment reached 30.3 percent of GDP in 2015. Growth then eased, to 3.1 percent in 2018, and dipped to -0.3 percent in 2020, the year of COVID-19, before recovering to 3.7 percent in 2022 through shocks that included the Tigray crisis in Ethiopia. From 2023 it picked up again, to 5.3, 5.5 and 5.1 percent, helped in 2024 by a surge in transshipment as ships rerouted around Red Sea tensions. Income per person reached its highest level so far in 2025, but the IMF and World Bank say the build-out left heavy debt and that growth has created few jobs.",
+    "threads": [
+      {
+        "title": "Building a port for Ethiopia",
+        "about": "history",
+        "text": "Over the past decade Djibouti built new ports, a railway and a water pipeline to Ethiopia, making itself the main port for its large neighbor. Investment rose from 25.0 percent of GDP in 2013 to 30.3 percent in 2015, and income per person grew 5.3 to 5.5 percent a year in 2014 to 2016.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/11/pr25292-djibouti-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Djibouti",
+            "date": "2025-09-11",
+            "quote": "Logistics investments over the past decade have boosted growth and economic transformation but increased external debt"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "The development of new ports and high-quality infrastructure—including a railway and a water pipeline to Ethiopia—has propelled average growth rates to about 6 percent"
+          }
+        ]
+      },
+      {
+        "title": "Shocks from next door",
+        "about": "history",
+        "text": "Growth slowed after the build-out, to 3.1 percent in 2018, and dipped to -0.3 percent in 2020, the year of COVID-19. The authorities name COVID-19, the 2022 Tigray crisis in Ethiopia and the Ukraine war among the shocks of recent years; income per person grew 2.9 percent in 2021 and 3.7 percent in 2022. The sources say little more about why these years were slower.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "Djibouti has successfully navigated several shocks in recent years, including COVID-19, the 2022 Tigray crisis, the Ukraine war"
+          }
+        ]
+      },
+      {
+        "title": "Red Sea detours and Ethiopian demand",
+        "about": "present",
+        "text": "Income per person grew 5.3, 5.5 and 5.1 percent in 2023 to 2025. In 2024 transshipment at Djibouti's ports surged as shipping rerouted around Red Sea tensions. The Ethiopia corridor remains a main source of trade, which ties Djibouti's growth to its neighbor's demand.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "The increase in port activity was dominated by a 98 percent surge in transshipments, as shipping operators rerouted to circumvent Red Sea tensions"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+            "date": "2026-10",
+            "quote": "The Ethiopia corridor has been a main source of trade but also ties Djibouti's fortunes to its neighbor's demand."
+          }
+        ]
+      },
+      {
+        "title": "Debt from the build-out",
+        "about": "present",
+        "text": "The ports, railway and pipeline were paid for largely with loans, so public debt rose steeply. The IMF judged Djibouti to be in debt distress in 2025, and in 2026 the World Bank said the debt still needed restructuring.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "Debt-to-GDP increased from 34.9 percent in 2013 to 68.9 percent by the end of 2024. This rise was primarily driven by major infrastructure projects"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "Djibouti remains in debt distress, and debt is deemed unsustainable."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+            "date": "2026-10",
+            "quote": "debt restructuring is still required to curb high debt service needs in the short term."
+          }
+        ]
+      },
+      {
+        "title": "Growth with few jobs",
+        "about": "present",
+        "text": "Growth built on ports and logistics has not brought many jobs. Djibouti's first labor force survey, in 2025, found more than half of working-age people outside the labor force, with unemployment highest among young people and women.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1djiea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Djibouti: 2025 Article IV Consultation-Press Release and Staff Report (IMF Country Report No. 25/276)",
+            "date": "2025-09",
+            "quote": "Despite high growth, fewer than one third of the working-age population are formally employed."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2026/05/07/djibouti-s-economy-shows-resilience-amid-global-uncertainty",
+            "publisher": "World Bank",
+            "title": "Djibouti's Economy Shows Resilience Amid Global Uncertainty",
+            "date": "2026-05-07",
+            "quote": "more than half of the working-age population remains outside the labor force, unemployment is particularly high among young people and women"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+            "date": "2026-10",
+            "quote": "Evidence from Djibouti's first Labor Force Survey (EDST, 2025) points to high inactivity, elevated unemployment, widespread informality, and persistent gender disparities."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth held up in 2025 on strong port activity, though transshipment fell back from 2024; income per person grew 5.1 percent. In 2026 renewed insecurity in the Red Sea raised freight and insurance costs, and the World Bank cut its 2026 forecast. A new National Development Plan for 2025-30, adopted in February 2026, aims to move the economy beyond trade and logistics.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/01/15/pr26005-djibouti-imf-staff-concludes-visit-to-djibouti",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Djibouti",
+          "date": "2026-01-15",
+          "quote": "2025 growth is estimated at 6.5 percent, driven by robust port activity, though slightly weaker than in 2024 due to reduced transshipments"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+          "date": "2026-10",
+          "quote": "The recent escalation in Red Sea insecurity is disrupting shipping, raising freight and insurance costs, and making carriers and investors more cautious."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+          "date": "2026-10",
+          "quote": "Maritime and fiscal risks intensified in 2026H1, trimming projected 2026 GDP growth to 5.7 percent."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-dji.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Djibouti (October 2026)",
+          "date": "2026-10",
+          "quote": "The National Development Plan 2025–30 adopted in February 2026 aims to shift Djibouti's current development model, concentrated in trade and logistics"
+        }
+      ]
+    },
+    "tension": "The IMF says growth of about 6 percent a year doubled GDP per capita between 2013 and 2023. In the data, income per person rose from about 2,140 in 2013 to about 3,118 in 2023, well short of doubling, and grew 3.8 percent a year over 2016 to 2025. The sources give whole-economy growth rates and do not say how much of the gap comes from population growth or from a different data series."
+  }
+}

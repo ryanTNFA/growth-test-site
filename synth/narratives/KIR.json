@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "iso3": "KIR",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "KIR",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Kiribati Article IV consultation 2025\"",
+        "tier 1 domains: \"Kiribati economic update fishing license revenue growth\"",
+        "tier 1 domains: \"Kiribati phosphate mining Banaba ended 1979 economy decline\"",
+        "worldbank.org: \"Kiribati Macro Poverty Outlook 2025\"",
+        "imf.org: \"Kiribati 2026 Article IV staff report fishing license revenues stagnant since 2015\"",
+        "Opened: imf.org press release PR26/153 (May 2026); IMF Country Report 25/172 PDF; IMF Country Report 13/158 PDF; World Bank Macro Poverty Outlook East Asia and Pacific (October 2026) PDF; World Bank P508550 ESMF (September 2025) PDF; ADB RRP KIR 47314 linked document PDF",
+        "Critic re-opened every cited URL (PDF text checked after extraction)",
+        "Tried but blocked or missing: elibrary.imf.org 2026 Article IV staff report (403); imf.org 2026 Kiribati country report PDF (404)"
+      ],
+      "critic_changes": [
+        "All six cited documents were re-opened and their PDF text extracted. Every quoted passage was found on its page, and every number in the prose matches desk/data/KIR.json (25.1, 1974, 1975, -26.4 in 1976, 0.5, -1.5, 3.2, 2.6, 1.9, 9.8 and 38.6 in 2015, 13.7 inflation in 2008, 6.5 inflation in 2025, 2.7 in 2025, 3.1 in 2024).",
+        "IMF Country Report 13/158: changed the date from 2013-05 to 2013-06, because the cover reads 'June 2013'.",
+        "IMF PR26/153: changed the date from 2026-05 to 2026-05-15, the date shown on the page.",
+        "since_last_year: the page makes average inflation, not the economy in general, the subject of 'under renewed pressure'. The prose now says inflation was under renewed pressure, and the quote begins with 'after beginning to recede,' so its subject stays clear.",
+        "Thread 'Fishing rents fund the state': removed the unsupported 'as a share of the economy' and reworded the claim to match the IMF passage (a trend decline in fishing revenue plus higher spending, measured against before COVID).",
+        "Thread 'Public pay drives recent growth': added a citation from IMF CR 25/172 that supports the 2024 public pay rise lifting consumption. The draft's quotes did not cover that claim.",
+        "Thread 'A lost decade of deficits': added an IMF 13/158 citation on deficits funded by reserve-fund drawdowns and non-concessional borrowing, to support 'costly borrowing'.",
+        "Thread 'Fishing fees reset in 2012': changed 'marks the turn to faster growth after 2011' to 'supported steady growth from 2011', as the ADB wrote. The 2015 figures (9.8 percent income per person growth, 38.6 percent investment) now stand as a separate description of the data, no longer credited to the fishing scheme.",
+        "Arc: 'the reserve fund ... shrank' became 'shrank per person'. IMF 13/158 reports the RERF in constant per capita terms at almost half its 2000 level by 2011-12.",
+        "No banned phrases, recommendations or 'per head' were found. Tier 1 holds 4 distinct recent sources (IMF PR 2026, IMF CR 25/172, WB MPO Oct 2026, WB ESMF Sep 2025), so the story stays tier 1."
+      ]
+    },
+    "headline": "Kiribati's income per person is still 25.1 percent below its 1975 phosphate-era peak, though fishing fees and public spending have lifted growth since 2011.",
+    "arc": "Income per person in Kiribati peaked in 1975, near the end of phosphate mining on Banaba, and in 2025 it was still 25.1 percent below that peak, about where it first was in 1974. It fell 26.4 percent in 1976 and drifted lower through the 1980s, and the phosphate deposits were gone by independence in 1979, taking the main export earner with them. Growth averaged 0.5 percent a year from 1990 to 2000 and -1.5 percent from 2001 to 2010, when spending ran ahead of revenue, the reserve fund built from phosphate money shrank per person, and the global crisis and high food and fuel prices brought contractions in 2009 and 2010. Since 2011 growth has averaged 3.2 percent a year, helped first by a regional scheme that raised the fees foreign fleets pay to fish from 2012 and by donor-funded airport and seaport works. More recently growth has rested mostly on public spending, including higher public wages, while the sources describe private production as subdued. Growth averaged 2.6 percent a year over 2016 to 2025, up from 1.9 over 2006 to 2015.",
+    "threads": [
+      {
+        "title": "Phosphate runs out",
+        "about": "history",
+        "text": "Phosphate mining on Banaba was the country's main export earner until the deposits ran out by independence in 1979. The money was partly saved in a reserve fund, but output has long struggled to keep up with a growing population, so income per person has stayed flat for decades.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100925231513688/pdf/P508550-19887f32-ca7f-4eff-a6d8-0a074d11a2a7.pdf",
+            "publisher": "World Bank",
+            "title": "Pacific Health Islands Transformation Regional Project (P508550): Environmental and Social Management Framework (ESMF)",
+            "date": "2025-09-23",
+            "quote": "The phosphate deposits on Banaba were exhausted by independence in 1979, removing what had been the country's main export earner."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099100925231513688/pdf/P508550-19887f32-ca7f-4eff-a6d8-0a074d11a2a7.pdf",
+            "publisher": "World Bank",
+            "title": "Pacific Health Islands Transformation Regional Project (P508550): Environmental and Social Management Framework (ESMF)",
+            "date": "2025-09-23",
+            "quote": "Economic growth has historically struggled to keep pace with population growth, resulting in stagnant real GDP per capita."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13158.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2013 Article IV Consultation, Staff Report (IMF Country Report No. 13/158)",
+            "date": "2013-06",
+            "quote": "a sovereign wealth fund established in 1956 and capitalized using phosphate mining proceeds before phosphate deposits were exhausted in 1979"
+          }
+        ]
+      },
+      {
+        "title": "A lost decade of deficits",
+        "about": "history",
+        "text": "In the 2000s government revenue fell behind spending, and the gap was filled by drawing down the phosphate reserve fund and by costly borrowing. High food and fuel prices and the global crisis then brought contractions in 2009 and 2010; inflation reached 13.7 percent in 2008.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13158.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2013 Article IV Consultation, Staff Report (IMF Country Report No. 13/158)",
+            "date": "2013-06",
+            "quote": "Since the mid-2000s, revenues have not kept pace with expenditures, leading to increased demands on RERF financing."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr13158.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2013 Article IV Consultation, Staff Report (IMF Country Report No. 13/158)",
+            "date": "2013-06",
+            "quote": "The worsening fiscal position led to high current deficits financed by unsustainable RERF drawdowns and non-concessional borrowing."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/linked-documents/47314-001-sd-02.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Macroeconomic Performance: Overview (Strengthening Fiscal Stability Program, RRP KIR 47314)",
+            "date": "2014",
+            "quote": "Lingering impacts of the global financial and economic crisis contributed to successive contractions in 2009 and 2010."
+          }
+        ]
+      },
+      {
+        "title": "Fishing fees reset in 2012",
+        "about": "history",
+        "text": "From 2012 a regional scheme that sells fishing days to foreign fleets sharply raised what Kiribati earns from its tuna waters. Together with donor-funded airport and seaport works, it supported steady growth from 2011. Income per person grew 9.8 percent in 2015, a year when investment reached 38.6 percent of GDP.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/linked-documents/47314-001-sd-02.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Macroeconomic Performance: Overview (Strengthening Fiscal Stability Program, RRP KIR 47314)",
+            "date": "2014",
+            "quote": "Kiribati also benefitted from the implementation of a regional vessel day scheme for charging fishing license fees for foreign fleets starting in 2012."
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/linked-documents/47314-001-sd-02.pdf",
+            "publisher": "Asian Development Bank",
+            "title": "Macroeconomic Performance: Overview (Strengthening Fiscal Stability Program, RRP KIR 47314)",
+            "date": "2014",
+            "quote": "Major development partner-financed infrastructure projects, including airport and seaport renovation, supported steady growth."
+          }
+        ]
+      },
+      {
+        "title": "Fishing rents fund the state",
+        "about": "present",
+        "text": "The government still lives mainly on fishing fees, grants and withdrawals from the reserve fund, and spends close to the size of the whole economy. A trend decline in fishing revenue, together with higher spending, has weakened the budget and the external accounts compared with before COVID.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-eap.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, East Asia and Pacific: Central Pacific Islands",
+            "date": "2026-10",
+            "quote": "The public sector-dominated economy relies on fishing fees, grants, taxes, and withdrawals from the Revenue Equalization Reserve Fund (RERF)"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1kirea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2025 Article IV Consultation, Press Release and Staff Report (IMF Country Report No. 25/172)",
+            "date": "2025-07",
+            "quote": "a trend decline in fishing revenues and higher government spending have weighed on fiscal and current account balances relative to pre-COVID"
+          }
+        ]
+      },
+      {
+        "title": "Public pay drives recent growth",
+        "about": "present",
+        "text": "Growth since COVID has leaned on the public sector, including a large public pay rise in 2024 that lifted household spending. Higher wages and subsidies have widened the budget deficit, which is paid for from cash reserves and the reserve fund.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1kirea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2025 Article IV Consultation, Press Release and Staff Report (IMF Country Report No. 25/172)",
+            "date": "2025-07",
+            "quote": "An increase in public sector salaries of around 40 percent in 2024 supported consumption."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1kirea2025001-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Kiribati: 2025 Article IV Consultation, Press Release and Staff Report (IMF Country Report No. 25/172)",
+            "date": "2025-07",
+            "quote": "Despite overall resilience, recent growth has largely been supported by an expansion of the public sector amid relatively subdued private production."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-eap.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook, East Asia and Pacific: Central Pacific Islands",
+            "date": "2026-10",
+            "quote": "Kiribati's fiscal deficit grew over the past five years due to higher wages and subsidies, and is now 15 percent of GDP."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 2.7 percent in 2025, after 3.1 percent in 2024, and inflation rose to 6.5 percent in 2025 as regulated fuel and power prices were raised. In May 2026 the IMF said Kiribati's recent growth had outpaced other Pacific islands and poverty had fallen, but that inflation was under renewed pressure from higher fuel and shipping costs caused by the war in the Middle East. In October 2026 the World Bank expected growth to ease in 2026, with a wider deficit as the government absorbs part of higher oil prices.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Kiribati",
+          "date": "2026-05-15",
+          "quote": "Kiribati’s recent GDP growth has exceeded that of other Pacific Island countries and poverty has declined significantly."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation with Kiribati",
+          "date": "2026-05-15",
+          "quote": "after beginning to recede, is under renewed pressure amid higher fuel and shipping costs triggered by the Middle East war."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/c6aceb75bed03729ef4ff9404dd7f125-0500012021/related/mpo-eap.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook, East Asia and Pacific: Central Pacific Islands",
+          "date": "2026-10",
+          "quote": "The fiscal deficit is set to expand to 17 percent of GDP in 2026 as the government partly absorbs higher oil prices"
+        }
+      ]
+    },
+    "tension": "The ADB describes four straight years of economic growth in 2001 to 2004, yet in the data income per person fell in every year from 2001 to 2005, because output did not keep up with a growing population. In the same way, the IMF said in 2025 that the economy was close to its pre-COVID trend, while income per person in 2025 was still 25.1 percent below its 1975 peak."
+  }
+}

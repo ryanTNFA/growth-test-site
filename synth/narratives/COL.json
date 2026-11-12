@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "COL",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "COL",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Colombia Article IV 2025 staff concluding statement growth\"",
+        "same tier 1 domains: \"Colombia Macro Poverty Outlook 2025 World Bank growth investment\"",
+        "same tier 1 domains: \"Colombia oil price decline 2014 2015 terms of trade shock growth slowdown\"",
+        "oecd.org: \"OECD Economic Survey Colombia 2024 productivity investment growth\" (survey pages returned HTTP 403, not cited)",
+        "Critic re-opened every cited page: thedocs.worldbank.org MPO Colombia October 2026; documents1.worldbank.org MPO Colombia April 2026; imf.org PR 25/320 (30 Sep 2025); imf.org PR 25/274 (1 Aug 2025); imf.org IMF Survey (8 Jun 2015); imf.org WP/17/238 (Nov 2017)"
+      ],
+      "critic_changes": [
+        "All six cited documents re-opened (PDFs extracted to text); every quoted passage was found verbatim on its page and every date matches the document (MPO October 2026 and April 2026 footers, WP/17/238 dated November 2017, IMF Survey 8 June 2015, PR 25/274 1 Aug 2025, PR 25/320 30 Sep 2025). All numbers in headline, arc, threads and tension match COL.json (eras 0.9/3.5/1.3, 10y 1.2 vs prior 3.5, 1999 -5.9, 2020-2025 growth, investment 23.4 in 2015 and 16.0 in 2025 from the series, level first reached 2022).",
+        "PR 25/320 citation date made precise: 2025-09 -> 2025-09-30, as the page shows.",
+        "Thread 'Oil opening and price boom': the claims that the opening came in 2003 and that output roughly doubled were not in the quoted passages; added the WP footnote passage on the 2003 liberalization and extended the first quote to include 'by roughly doubling oil production'.",
+        "Thread 'The 2014 oil price collapse': 'from mid-2014' changed to 'from 2014' (sources say 'since 2014'); 'Investment, much of it tied to oil, slowed and then shrank' rewritten to what the cited WP passage says (decelerated markedly and fell in 2016), and that passage added as a citation.",
+        "Arc: 'a fall in commodity prices ... that cut investment' reworded to 'after which investment slowed and then fell', matching the WP passage; 'consumption and public spending' changed to 'demand and public spending' and 'fiscal room' to 'the room in the budget' to match the cited MPO wording and plain English.",
+        "Thread 'Investment below pre-pandemic levels': 'a drag on private investment' changed to 'could hold back investment further'; the IMF passage says investment, not private investment.",
+        "Thread 'A shrinking fiscal cushion': removed 'pushed deficits and debt up since 2024', which no cited passage supports; kept what the MPO says (eroded fiscal space, fiscal rule suspension, subsequent downgrades).",
+        "Thread 'Stalled productivity': 'barely grown' changed to 'stagnated', the source's word.",
+        "since_last_year: the 'new government took office' claim had no cited support; added the October 2026 MPO passage on the new government.",
+        "tier1_recent_found set from 5 to 4: four distinct tier 1 sources from 2023 or later were verified and cited (two World Bank MPOs, two IMF press releases); the 2024 Article IV concluding statement listed by the drafter was not cited and not re-checked."
+      ]
+    },
+    "headline": "Colombia's oil-fuelled run of 2003-2014 gave way to a decade of 1.2 percent growth in income per person, with investment now far below its 2015 level.",
+    "arc": "From 1990 to 2002 income per person grew only 0.9 percent a year, and the era ended in the 1999 crisis, when it fell 5.9 percent. From 2003 to 2014 growth rose to 3.5 percent a year: an opening of the oil sector let Colombia ride a long rise in oil prices, and more people took jobs, many of them formal. Since 2015 growth has averaged 1.3 percent a year, and the IMF ties the turn to a sharp and largely lasting fall in oil and other commodity prices from 2014, after which investment slowed and then fell. The pandemic brought a fall of 8.5 percent in 2020 and rebounds of 9.6 in 2021 and 6.2 in 2022, but growth then slipped to -0.3 in 2023, 0.4 in 2024 and 1.6 in 2025. Investment fell from 23.4 percent of GDP in 2015 to 16.0 in 2025, and the World Bank describes a recovery carried by demand and public spending while productivity stalls and the room in the budget shrinks. Income per person reached a new high in 2025, but the last decade's 1.2 percent average is far below the 3.5 of the decade before.",
+    "threads": [
+      {
+        "title": "Oil opening and price boom",
+        "text": "In 2003 Colombia opened up and restructured its oil sector, and as oil prices boomed, oil output roughly doubled. More people joined the workforce and moved into formal jobs, which also lifted growth in the 2003-2014 era.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17238.pdf",
+            "publisher": "IMF",
+            "title": "Potential Growth in Colombia (IMF Working Paper WP/17/238)",
+            "date": "2017-11",
+            "quote": "In 2003, Colombia liberalized and restructured the oil sector, modifying the contract and taxation frameworks"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17238.pdf",
+            "publisher": "IMF",
+            "title": "Potential Growth in Colombia (IMF Working Paper WP/17/238)",
+            "date": "2017-11",
+            "quote": "A liberalization of the oil sector allowed the country to further take advantage of the oil price boom, by roughly doubling oil production"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17238.pdf",
+            "publisher": "IMF",
+            "title": "Potential Growth in Colombia (IMF Working Paper WP/17/238)",
+            "date": "2017-11",
+            "quote": "A large increase in labor participation and formalization also supported this growth acceleration"
+          }
+        ]
+      },
+      {
+        "title": "The 2014 oil price collapse",
+        "text": "Oil prices fell sharply from 2014, and the IMF judged most of the fall to be lasting. Investment slowed markedly and fell in 2016, which marks the turn to the slower era that began in 2015.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17238.pdf",
+            "publisher": "IMF",
+            "title": "Potential Growth in Colombia (IMF Working Paper WP/17/238)",
+            "date": "2017-11",
+            "quote": "In contrast, the sharp and largely permanent decline in oil and other commodity prices since 2014 have taken a toll on growth."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/wp/2017/wp17238.pdf",
+            "publisher": "IMF",
+            "title": "Potential Growth in Colombia (IMF Working Paper WP/17/238)",
+            "date": "2017-11",
+            "quote": "Investment decelerated markedly and even declined in 2016, as oil prices more than halved and trading partner growth turned negative."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/socar060815a",
+            "publisher": "IMF",
+            "title": "IMF Survey: Drop in Oil Prices Poses Challenges for Colombia",
+            "date": "2015-06-08",
+            "quote": "The sharp drop in oil prices poses significant challenges to Colombia’s near-term outlook."
+          }
+        ]
+      },
+      {
+        "title": "Investment below pre-pandemic levels",
+        "text": "Investment fell from 23.4 percent of GDP in 2015 to 16.0 in 2025. The World Bank says the recovery after the pandemic leaned on demand and public spending, and the IMF points to uncertainty about policies and reforms as something that could hold back investment further.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-col.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Colombia (October 2026)",
+            "date": "2026-10",
+            "quote": "Growth has relied on demand and fiscal support, while investment remains below pre-pandemic levels and foreign direct investments (FDI) fell to 15-year lows."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/08/01/pr-25274-colombia-imf-staff-completes-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes Article IV Mission to Colombia",
+            "date": "2025-08-01",
+            "quote": "Domestic uncertainty around implementation of policies and reforms could further hold back investment."
+          }
+        ]
+      },
+      {
+        "title": "A shrinking fiscal cushion",
+        "text": "Weak revenues and rigid spending have eaten into the room in the budget. In 2025 the government suspended its fiscal rule through 2027, and the country's credit rating was then cut.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-col.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Colombia (October 2026)",
+            "date": "2026-10",
+            "quote": "Weak revenues, rigid spending, and energy-transition pressures have eroded fiscal space, triggering the fiscal rule suspension and subsequent sovereign downgrades."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/09/30/pr25320-imf-executive-board-concludes-2025-article-iv-consultation-with-colombia",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Colombia",
+            "date": "2025-09-30",
+            "quote": "The government invoked the escape clause to suspend the fiscal rule through 2027."
+          }
+        ]
+      },
+      {
+        "title": "Stalled productivity, commodity exports",
+        "text": "The World Bank describes productivity that has stagnated and exports still concentrated in commodities. It says this has slowed Colombia's catch-up with richer countries.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099719508052623642/pdf/Bulk-401912f3-27a1-479d-8e3e-698cfa663948.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Colombia (April 2026)",
+            "date": "2026-04",
+            "quote": "However, productivity has stagnated, slowing income convergence and gains in poverty and inequality reduction."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099719508052623642/pdf/Bulk-401912f3-27a1-479d-8e3e-698cfa663948.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Colombia (April 2026)",
+            "date": "2026-04",
+            "quote": "Limited global integration constrains diversification beyond commodities."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth picked up in 2025 and early 2026 on consumption and public spending. In 2026 the Chocó earthquake added reconstruction costs to an already strained budget, a new government took office, and the World Bank now expects growth to slow in 2026.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-col.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Colombia (October 2026)",
+          "date": "2026-10",
+          "quote": "Growth is projected at 2.3 percent in 2026, from 2.6 percent in 2025, as the Chocó earthquake compounds pre-existing fiscal fragility."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-col.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Colombia (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP growth accelerated to 2.9 percent in 2026H1, from 2.6 percent in 2025, on stronger-than-expected consumption."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/e408a7e21ba62d843bdd90dc37e61b57-0500032021/related/mpo-col.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Colombia (October 2026)",
+          "date": "2026-10",
+          "quote": "The new government inherits a demanding agenda: restoring fiscal credibility and stabilizing debt"
+        }
+      ]
+    },
+    "tension": "The sources describe growth picking up in 2025 on strong consumption, but income per person rose only 1.6 percent that year. The gap is population growth: part of the headline gain went to a larger population rather than higher incomes. Income per person is at a record in 2025, yet it is little above where it stood in 2022."
+  }
+}

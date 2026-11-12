@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "iso3": "QAT",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "QAT",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Qatar Article IV consultation 2025 IMF staff concluding statement LNG expansion",
+        "worldbank.org (tier 1 list): Qatar Macro Poverty Outlook World Bank 2025 growth",
+        "imf.org: IMF Qatar 2026 Article IV OR staff visit press release",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, oecd.org: Qatar LNG production capacity 77 million tons 2011 moratorium North Field",
+        "imf.org, worldbank.org: Qatar blockade 2017 economy impact IMF Article IV 2018 2019",
+        "imf.org: IMF Qatar Article IV 2012 LNG production capacity growth population",
+        "Opened: imf.org PR 25/034 (Feb 2025), PR 25/313 (Sep 2025), PR 26/041 (Feb 2026), 2010 concluding statement, 2018 concluding statement, 2019 PR 19/192, CR 13/14, CR 19/146",
+        "Opened: worldbank.org MPO Qatar Oct 2026, Oct 2024, Apr 2024, Oct 2021",
+        "Critic re-opened and text-checked every cited URL: imf.org CR 13/14, CR 19/146, PR 26/041; worldbank.org MPO Qatar Oct 2021, Apr 2024, Oct 2024, Oct 2026"
+      ],
+      "critic_changes": [
+        "Opened all 7 cited URLs and found every quoted passage on the page. Fixed small wording differences to match the pages: the curly apostrophe, '2014-16' in CR 19/146, and 'selfimposed' in the October 2021 MPO.",
+        "CR 13/14 date changed from '2013' to '2013-01', because the cover reads 'January, 2013'. All other dates match the documents: CR 19/146 is June 2019, the MPOs are October 2021, April 2024, October 2024 and October 2026, and PR 26/041 is February 2026.",
+        "Headline and arc: 'LNG output stayed flat' changed to a pause on adding LNG capacity. The 2012 IMF passage describes a moratorium on increasing LNG capacity; it does not describe output being held flat.",
+        "Arc and thread 1: 'develop and export the country's gas' / 'mostly as liquefied natural gas' changed to the IMF's own wording: an investment program to commercialize the country's natural resources. The quote names no LNG or export share.",
+        "Arc: dropped the causal 'so' that tied the shocks to the 2016-2025 average, since the sources make no such link. 'Neighbouring states' changed to 'Arab states' because the rift included Egypt.",
+        "Thread 2: 'LNG output stayed flat once the last plants were running' changed to 'LNG capacity stopped growing'; 'slowdown from 2012' changed to 'slowdown in 2012', matching the IMF passage.",
+        "Thread 3: dropped the unsourced inference that total output could rise while income per person did not, and reworded to what the IMF passages say.",
+        "Thread 4: dropped 'closed borders and airspace', which no cited page supports. It now says the rift with Saudi Arabia, the UAE, Bahrain and Egypt led to an embargo resolved by 2021, and a supporting quote from the October 2021 MPO is added.",
+        "Thread 5: dropped 'Qatar began a large expansion of North Field LNG' and 'pushes tourism, services and private firms outside gas'. The cited passages do not support them. The NDS3 quote now covers the strategy's aim to diversify the economy.",
+        "since_last_year: added citations for the Strait of Hormuz disruption and for the rebound once LNG production resumes. Neither claim had a supporting quote. Dropped 'main LNG complex', which no passage states. The North Field East timing now matches the outlook passage.",
+        "Checked every number against desk/data/QAT.json: 2.1, 5.6, -2.0, 26.1, -1.0, 1.1, -8.9 (2020), -4.2 (2024), -1.1 (2025), and the claim that income per person fell every year from 2012 to 2019. All match; no changes needed.",
+        "Tier 1 holds with 4 distinct recent sources: WB MPO April 2024, WB MPO October 2024, IMF PR 26/041 of February 2026 and WB MPO October 2026. All 5 threads survive."
+      ]
+    },
+    "headline": "Qatar's income per person peaked in 2011 as its gas build-out ended, then shrank for over a decade as new LNG capacity stayed on hold and the population grew.",
+    "arc": "Qatar's income per person was lower in 2025 than in 1970, the first year of the record. It grew 2.1 percent a year from 1990 to 2003, then 5.6 percent a year from 2004 to 2011, when a long investment program to bring the country's natural resources to market culminated and income per person reached its peak. From 2012 to 2025 it shrank 2.0 percent a year, and by 2025 it stood 26.1 percent below the 2011 peak. The IMF linked the slowdown in 2012 to a self-imposed pause on adding LNG capacity, and later noted that large inflows of foreign workers drove high population growth. Falling hydrocarbon prices in 2014–16, a 2017 rift with Arab states that led to an embargo, and the 2020 pandemic were further shocks; growth averaged -1.0 percent a year over 2016–2025, against 1.1 over 2006–2015.",
+    "threads": [
+      {
+        "title": "Building out the gas fields",
+        "text": "The 2004–2011 era was the payoff of a long investment program to bring Qatar's natural resources to market. The IMF describes that program as culminating in 2011, the year income per person peaked.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1314.pdf",
+            "publisher": "IMF",
+            "title": "Qatar: 2012 Article IV Consultation (IMF Country Report No. 13/14)",
+            "date": "2013-01",
+            "quote": "Qatar's 20-year investment program, which focused on a strategy to commercialize its substantial natural resources, culminated in 2011."
+          }
+        ]
+      },
+      {
+        "title": "A pause on new gas",
+        "text": "Qatar held back further development of its North Field gas field until early 2017, so LNG capacity stopped growing. The IMF tied the slowdown in 2012 to this pause.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1314.pdf",
+            "publisher": "IMF",
+            "title": "Qatar: 2012 Article IV Consultation (IMF Country Report No. 13/14)",
+            "date": "2013-01",
+            "quote": "mainly due to a slowdown in hydrocarbon sector growth, as the self-imposed moratorium on increasing liquefied natural gas (LNG) capacity kicks in"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bbd3f7e9ca50b79b4d5b4c604f4949e3-0280012021/original/14-mpo-am21-qatar-qat-0925-kcm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Qatar (October 2021)",
+            "date": "2021-10",
+            "quote": "Departing from the twelve-year selfimposed moratorium on further development of the North Field in the first quarter of 2017"
+          }
+        ]
+      },
+      {
+        "title": "More people sharing the output",
+        "text": "Qatar relies on large inflows of foreign workers to make up for a small domestic labour supply. The IMF notes that these inflows drove high population growth.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2013/cr1314.pdf",
+            "publisher": "IMF",
+            "title": "Qatar: 2012 Article IV Consultation (IMF Country Report No. 13/14)",
+            "date": "2013-01",
+            "quote": "To overcome domestic constraints on labor supply, Qatar has relied on large inflows of expatriate workers, who now account for 90 percent of the …"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1qatea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Qatar: 2019 Article IV Consultation—Press Release; Staff Report (IMF Country Report No. 19/146)",
+            "date": "2019-06",
+            "quote": "High population growth has been driven by inflows of expatriate workers"
+          }
+        ]
+      },
+      {
+        "title": "Price falls, a rift, a pandemic",
+        "text": "Hydrocarbon prices fell in 2014–16, and in 2017 a diplomatic rift with Saudi Arabia, the UAE, Bahrain and Egypt led to an embargo against Qatar that was resolved only by 2021. The pandemic and a collapse in oil prices then brought a contraction in 2020, when income per person fell 8.9 percent, the steepest drop of the era.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2019/1qatea2019001.pdf",
+            "publisher": "IMF",
+            "title": "Qatar: 2019 Article IV Consultation—Press Release; Staff Report (IMF Country Report No. 19/146)",
+            "date": "2019-06",
+            "quote": "Qatar's economy has successfully absorbed the shocks from the 2014-16 drop in hydrocarbon prices and the 2017 diplomatic rift."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bbd3f7e9ca50b79b4d5b4c604f4949e3-0280012021/original/14-mpo-am21-qatar-qat-0925-kcm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Qatar (October 2021)",
+            "date": "2021-10",
+            "quote": "the three-year diplomatic rift between Qatar and four Arab states (Saudi Arabia, the UAE, Bahrain and Egypt) that had resulted in an embargo against Qatar"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bbd3f7e9ca50b79b4d5b4c604f4949e3-0280012021/original/14-mpo-am21-qatar-qat-0925-kcm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Qatar (October 2021)",
+            "date": "2021-10",
+            "quote": "contracted by 3.7 percent in 2020 due to the lockdowns following the pandemic and the historic fall in oil prices"
+          }
+        ]
+      },
+      {
+        "title": "Waiting on the North Field",
+        "text": "Hydrocarbon output was expected to stay flat until a large LNG expansion came on stream. Meanwhile the Third National Development Strategy, launched in 2024, aims to diversify the economy, and the IMF reported growth picking up in 2024 and 2025.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099610210152414563/pdf/IDU-7a593ee7-4a20-48a3-b12c-c3fdb6b7b3bf.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook for Qatar: October 2024",
+            "date": "2024-10",
+            "quote": "affected by the hydrocarbon output that is expected to remain stagnant until a significant liquefied natural gas (LNG) expansion in 2026"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099942504052434442/pdf/IDU199e45f021728f14c6a19e3218c07bd1a81be.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Qatar (April 2024)",
+            "date": "2024-04",
+            "quote": "Qatar launched the Third National Development Strategy (NDS3) 2024-2030, the final stage toward achieving Vision 2030. This strategy aims to accelerate economic diversification"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/02/11/pr26041-qatar-imf-staff-completes-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "IMF Staff Completes 2026 Article IV Mission to Qatar",
+            "date": "2026-02",
+            "quote": "Economic growth recovered to 2.4 percent in 2024, strengthened further to around 3 percent through the third quarter of 2025"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2026 the Middle East conflict brought strikes on Ras Laffan that nearly halted Qatar's LNG production, and long disruptions to shipping through the Strait of Hormuz. The World Bank now expects a deep fall in output in 2026 and a rebound once LNG production resumes and the North Field East expansion comes on stream from 2027.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-qat.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Qatar (October 2026)",
+          "date": "2026-10",
+          "quote": "including physical damage to LNG infrastructure and prolonged disruptions to shipping through the Strait of Hormuz"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-qat.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Qatar (October 2026)",
+          "date": "2026-10",
+          "quote": "driven by a 25.8 percent decline in hydrocarbon GDP as strikes on Ras Laffan forced a near-complete halt in LNG production"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-qat.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Qatar (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP is projected to contract by 20.9 percent in 2026, driven by the sharp decline in hydrocarbon output"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-qat.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Qatar (October 2026)",
+          "date": "2026-10",
+          "quote": "before rebounding by 26.7 percent in 2027, assuming LNG production resumes from early 2027 and the North Field East comes on stream progressively"
+        }
+      ]
+    },
+    "tension": "The IMF said in 2019 that Qatar had absorbed the 2014–16 price fall and the 2017 rift, yet income per person fell every year from 2012 to 2019. More recently the IMF reported growth recovering in 2024 and 2025, while income per person fell 4.2 percent in 2024 and 1.1 percent in 2025. A growing population would explain the gap, but the recent sources do not say so."
+  }
+}

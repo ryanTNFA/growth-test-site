@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "iso3": "IRN",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "IRN",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "worldbank.org (tier 1): Iran Macro Poverty Outlook 2025, Iran Economic Monitor 2025/2026, sanctions growth",
+        "imf.org (tier 1): Iran Regional Economic Outlook 2025 sanctions oil inflation; Iran Article IV staff reports",
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): Iran revolution, Iran-Iraq war, oil economy history",
+        "Opened: thedocs.worldbank.org mpo-irn.pdf (October 2026), worldbank.org/ext/en/country/iran (undated, not cited), documents1.worldbank.org Iran Economic Monitor Spring 2024, imf.org REO MCD October 2025, imf.org CR 15/349, imf.org CR 08/285",
+        "Critic: re-opened all five cited PDFs with WebFetch and checked each quote against the extracted text"
+      ],
+      "critic_changes": [
+        "All five cited PDFs re-opened and their text extracted; every quote was found on its page. Dates check out: CR 08/285 August 2008, CR 15/349 December 2015, Iran Economic Monitor Spring 2024 (kept as 2024), REO October 2025, MPO October 2026.",
+        "Quote fixes to match the page: '(1981–88)' changed to '(1981-88)', 'Jan–Mar 2026' changed to 'Jan-Mar 2026', 'April–August 2026' changed to 'April-August 2026'.",
+        "Thread 'Revolution, war and oil collapse': the text said oil output fell after 1979, which no cited passage supported. Added the CR 08/285 passage on falling oil production after the 1979 Revolution, and reworded the war sentence to match the cited passage on war damage to oil facilities.",
+        "Arc and thread 'Oil boom and catch-up': the 2015 IMF convergence passage covers 'the previous decade' before the 2012 sanctions, not 1990–2007, so the claim is now placed in that decade. Dropped 'rather than because each worker produced more', which the cited passage does not say. Changed the long oil boom 'that greatly raised export earnings' to a long rise in oil prices, matching the quote.",
+        "Arc: 'the oil sector recovered from the war' softened to 'recovered somewhat', the IMF's wording. The arc had 7 sentences, more than the 6 allowed, and was merged down to 6.",
+        "Thread 'Sanctions since 2012': swapped the 2012 sharp-contraction quote for the CR 15/349 passage on sanctions pushing productivity growth negative and cutting hydrocarbon output, so the arc's claim that sanctions 'cut oil output and productivity' is now cited. Dropped 'after a short period of relief', which is not supported. The 2024 World Bank oil finding is now dated to 2024 instead of described as lasting to the present. 'High inflation' changed to 'rising inflation', the IMF's wording.",
+        "Thread 'Long strains': 'few working-age Iranians have jobs' changed to 'most working-age Iranians do not have jobs', which the quoted figures support. 'Steady growth from 2020 to 2024 did not close the gap' changed to a 2024 World Bank observation about several years of growth, since the Spring 2024 report cannot cover 2024.",
+        "Thread 'War in 2025 and 2026': 'a wider conflict in 2026' changed to 'a conflict in 2026'. No source describes it as wider.",
+        "since_last_year: removed 'as the conflict spread', which the cited passage does not support.",
+        "Headline: replaced 'sanctions, oil swings and now war have cut short each recovery', an interpretive claim the sources do not make, with a plain list of the shocks the sources describe.",
+        "Tension: the data file disagrees with itself. growth_problem.G6 gives investment at 28.1 percent of GDP with year_ref 2025, while series NE.GDI.FTOT.ZS has 28.1 for 2024 and 28.8 for 2025. The tension now gives both series values by year. The G6 year label should be checked in the data pipeline. Removed the claim that the World Bank's fall 'is heaviest in early 2026': the MPO table shows a -11.9 percent fall in fixed investment for the whole of 2025/26, and it is unclear whether the 12 percent fall in the text refers to Q4 alone.",
+        "All other numbers checked against desk/data/IRN.json and correct: 24.3 shortfall, 1976 peak, 1971 level first reached, 3.2 (1990–2007), 0.6 (2008–2025), 1.3 (2016–2025), 0.7 (2006–2015), -3.7 in 2025, growth positive every year 2020–2024, falls in 10 of 12 years 1977–1988, 25.2 in 2019. No banned phrases found. Three distinct recent tier 1 sources, so the story stays tier 1."
+      ]
+    },
+    "headline": "Iran's income per person is still 24.3 percent below its 1976 peak, after revolution, war with Iraq, sanctions and now a new conflict.",
+    "arc": "Income per person in Iran peaked in 1976 and fell through the revolution and the war with Iraq; in 2025 it was still 24.3 percent below that peak, about where it first stood in 1971. From 1990 to 2007 it grew 3.2 percent a year, as the oil sector recovered somewhat from the war and oil prices rose sharply from 1999. The IMF says that in the decade before the 2012 sanctions Iran's income moved closer to richer countries' levels, mostly because it added capital and workers. From 2008 to 2025 the average fell to 0.6 percent a year: the IMF links the sharp fall after 2012 to sanctions that cut oil output and productivity, and the World Bank reported in 2024 that oil output was still well below its level before US sanctions returned in 2018. Growth rose to 1.3 percent a year over 2016–2025, from 0.7 in 2006–2015, carried by steady growth from 2020 to 2024. Income per person then fell 3.7 percent in 2025, the year of a short war with Israel, and the World Bank describes a 2026 conflict that has damaged the country's productive capacity.",
+    "threads": [
+      {
+        "title": "Revolution, war and oil collapse",
+        "about": "history",
+        "text": "In the 1970s oil made up a large part of the economy. Oil output fell sharply after the 1979 revolution, and the war with Iraq damaged oil facilities. Income per person in the data fell in most years from 1977 to 1988.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08285.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: Selected Issues (IMF Country Report No. 08/285)",
+            "date": "2008-08",
+            "quote": "In the 1970s, oil value added accounted for over 40 percent of GDP due to high oil prices and production volumes."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08285.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: Selected Issues (IMF Country Report No. 08/285)",
+            "date": "2008-08",
+            "quote": "However, following significant declines in oil production, this share shrank to about 10 percent immediately after the 1979 Revolution"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08285.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: Selected Issues (IMF Country Report No. 08/285)",
+            "date": "2008-08",
+            "quote": "During the war with Iraq (1981-88), the contribution of oil value added to GDP bottomed at 3 percent in 1986"
+          }
+        ]
+      },
+      {
+        "title": "Oil boom and catch-up",
+        "about": "history",
+        "text": "The 1990–2007 era ended in a long rise in oil prices. The IMF says that in the decade before the 2012 sanctions Iran's income moved closer to richer countries' levels, mostly because it added capital and workers.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2008/cr08285.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: Selected Issues (IMF Country Report No. 08/285)",
+            "date": "2008-08",
+            "quote": "After bottoming up at about $9 per barrel in 1999, the oil price trended sharply upward, exceeding $100 per barrel in early 2008."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15349.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director",
+            "date": "2015-12",
+            "quote": "Over the previous decade, Iran had achieved significant convergence in per-capita income, mostly led by factor accumulation."
+          }
+        ]
+      },
+      {
+        "title": "Sanctions since 2012",
+        "about": "present",
+        "text": "The IMF says the sanctions tightened in 2012 pushed productivity growth below zero and cut oil output and exports. In 2024 the World Bank reported oil output still well below its level before US sanctions returned in 2018, and the IMF lists sanctions among the causes of Iran's rising inflation in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2015/cr15349.pdf",
+            "publisher": "IMF",
+            "title": "Islamic Republic of Iran: 2015 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director",
+            "date": "2015-12",
+            "quote": "The intensification of sanctions pushed TFP growth into negative territory and led to sharp contractions in production and exports in the hydrocarbon sector."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099051007102421530/pdf/IDU1398008291628d14b5a1a9f91728b946987e4.pdf",
+            "publisher": "World Bank",
+            "title": "Iran Economic Monitor: Sustaining Growth Amid Rising Geopolitical Tensions (Spring 2024)",
+            "date": "2024",
+            "quote": "Despite this recovery, oil production remains well below the pre-sanctions high of an average of 3.8 mbpd in 2017 and the first half of 2018."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/mcd-cca/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Middle East and Central Asia, October 2025 — Resilience amid Uncertainty: Will it Last?",
+            "date": "2025-10",
+            "quote": "The Islamic Republic of Iran remained an outlier, with inflation rising because of exchange rate pressures, loose monetary and fiscal policies, and international sanctions."
+          }
+        ]
+      },
+      {
+        "title": "Long strains on living standards",
+        "about": "present",
+        "text": "The World Bank says high inflation, low investment and instability wore down living standards over decades. It also finds that most working-age Iranians do not have jobs and that youth unemployment has stayed high for two decades. In 2024 it noted that several years of growth had not closed the gap with peer countries.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irn.pdf",
+            "publisher": "World Bank",
+            "title": "Iran, Islamic Republic: Macro Poverty Outlook (October 2026)",
+            "date": "2026-10",
+            "quote": "Decades of economic mismanagement, chronic underinvestment, and macroeconomic instability had eroded living standards."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irn.pdf",
+            "publisher": "World Bank",
+            "title": "Iran, Islamic Republic: Macro Poverty Outlook (October 2026)",
+            "date": "2026-10",
+            "quote": "Only 24.8 million of 66.1 million working-age Iranians were employed, with youth unemployment above 20 percent for two decades"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099051007102421530/pdf/IDU1398008291628d14b5a1a9f91728b946987e4.pdf",
+            "publisher": "World Bank",
+            "title": "Iran Economic Monitor: Sustaining Growth Amid Rising Geopolitical Tensions (Spring 2024)",
+            "date": "2024",
+            "quote": "However, despite the economic expansion over the last four years, Iran has yet to bridge the gap with its peer groups"
+          }
+        ]
+      },
+      {
+        "title": "War in 2025 and 2026",
+        "about": "present",
+        "text": "A short war with Israel in June 2025 was followed by a conflict in 2026. The World Bank reports damage to energy, industry and transport, and income per person in the data fell 3.7 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/reo/mcd-cca/2025/october/english/text.pdf",
+            "publisher": "IMF",
+            "title": "Regional Economic Outlook: Middle East and Central Asia, October 2025 — Resilience amid Uncertainty: Will it Last?",
+            "date": "2025-10",
+            "quote": "Despite ongoing global uncertainty and renewed geopolitical tensions, including a short-lived conflict between the Islamic Republic of Iran and Israel in June"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irn.pdf",
+            "publisher": "World Bank",
+            "title": "Iran, Islamic Republic: Macro Poverty Outlook (October 2026)",
+            "date": "2026-10",
+            "quote": "Direct damage to energy infrastructure, industrial facilities, and transport networks has reduced productive capacity."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Over the past year Iran went from steady growth into decline. Income per person fell 3.7 percent in 2025 in the data. The World Bank's October 2026 update reports that output shrank in early 2026 and that inflation surged in the months after.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irn.pdf",
+          "publisher": "World Bank",
+          "title": "Iran, Islamic Republic: Macro Poverty Outlook (October 2026)",
+          "date": "2026-10",
+          "quote": "Real GDP contracted by over 3.5 percent year-on-year (y-o-y) in Q4 2025/26 (Jan-Mar 2026)."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/65cf93926fdb3ea23b72f277fc249a72-0500042021/related/mpo-irn.pdf",
+          "publisher": "World Bank",
+          "title": "Iran, Islamic Republic: Macro Poverty Outlook (October 2026)",
+          "date": "2026-10",
+          "quote": "with inflation surging to 84.8 percent on average in April-August 2026"
+        }
+      ]
+    },
+    "tension": "The World Bank describes collapsing investment in 2025/26, but in the data fixed investment rose as a share of GDP, from 25.2 percent in 2019 to 28.1 percent in 2024 and 28.8 percent in 2025. Part of the gap may be timing: the World Bank's year 2025/26 runs to March 2026, past the end of the data's last year."
+  }
+}

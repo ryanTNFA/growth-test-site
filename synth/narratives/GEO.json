@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "iso3": "GEO",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "GEO",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1 allowed_domains on every search)",
+        "query: Georgia Article IV 2025 staff report growth",
+        "query: Georgia Macro Poverty Outlook World Bank 2025 economic update growth",
+        "query: Georgia growth inflows of migrants from Russia 2022 re-exports transit growth",
+        "query: Georgia economy collapse after independence 1990s civil war reforms after 2004 Rose Revolution growth 2008 conflict global crisis",
+        "query: Georgia August 2008 conflict global financial crisis economy contraction 2009 FDI fell",
+        "opened: imf.org 2026 Article IV concluding statement (2026-04-07), 2026 Article IV country page and IMF Country Report 26/133 PDF, IMF Country Report 24/135 PDF, IMF Country Report 11/87 PDF",
+        "opened: worldbank.org Macro Poverty Outlook Georgia (October 2026), Country Economic Memorandum Chapter 1 (2022), IEG Country Assistance Evaluation brief 1993-2007 (2008)",
+        "critic: re-opened all six cited PDFs (documents1.worldbank.org IEG brief and CEM, imf.org CR 11/87, 24/135, 26/133, thedocs.worldbank.org MPO) and checked every passage and date against the extracted text",
+        "tier 2 (UN) not searched: tier 1 gave 4 recent sources"
+      ],
+      "critic_changes": [
+        "Opened all six cited URLs (PDFs extracted to text). Every quoted passage was found verbatim, and every date matches the document: IEG brief dated June 30, 2008; IMF CR 11/87 cover April 2011; IMF CR 24/135 cover May 2024; IMF CR 26/133 cover June 2026; MPO footer October 2026; CEM Chapter 1 from 2022.",
+        "Thread 'Collapse, then reform': removed 'cut output by about three-quarters'. That figure is not in GEO.json. The source's own wording ('almost three-quarters') was not quoted, so the text now says 'a sharp and long fall in output'. Removed the mid-1990s stabilization sentence from the thread because no cited passage covered it; it stays in the arc. Added a third IEG citation so the corruption and energy-crisis claim has a cited passage.",
+        "Thread 'War and crisis in 2008': added the IMF 'sharp credit squeeze' passage, since 'credit shrank' had no cited passage. Replaced 'which ended the fast growth of the reform years', a causal reading the passages do not make, with a data statement: 2008 opens the slower era.",
+        "Thread 'Wartime inflows': changed 'tens of thousands of migrants' to 'a surge of migrants' because no cited passage gives that size. Changed 'other services' to 'education services' to match the IMF passage. Dropped 'now carried mainly by household spending', which the quoted passage does not support.",
+        "Thread 'A stalled path to Europe': the claim that the sources list political strain among the risks to growth had no cited passage, so I added the MPO risks passage.",
+        "Thread 'Emigration and scarce good jobs': the passages did not cover the decline since the start of the century or the ageing, so I widened the CEM citation and added a second CEM passage. Attributed the population claim to the 2022 World Bank study, since the data are from that year. The thread stays 'present' through the 2026 IMF citation.",
+        "since_last_year: replaced the MPO first-half-2026 GDP passage with the MPO passage on consumption and credit, which supports 'household spending and credit'. Added the IMF passage on the Middle East war hitting tourism, which had no cited passage.",
+        "Tension: removed 'which the sources do not explain'. The IMF 2024 report does describe a surge in immigration, so the text now says the sources describe that surge but do not say how much of the gap it explains.",
+        "Checked every number against GEO.json; all of these are correct: -10.6, 7.9 and 5.0 era means; 13.2 (2007); -2.8 (2009); -6.4 (2020); 11.1 (2021); 10.8 (2022); 5.4 over 2016–2025; 5.9 over 2006–2015; 6.9 (2024); 4.1 (2025); the 2025 peak; and the 1985 level first passed in 2018 (4688 in 1985, 4442 in 2017, 4714 in 2018). The headline is 155 characters. No banned phrases appear."
+      ]
+    },
+    "headline": "Georgia's income per person collapsed after independence, surged after the 2003 reforms, and has grown 5.0 percent a year since 2008 to a new high in 2025.",
+    "arc": "In 1990–1997 growth in income per person averaged -10.6 percent a year, as independence brought civil war, secessionist conflicts and hyperinflation; a stabilization program in 1994–96 brought growth back before the era ended. In 1998–2007 growth averaged 7.9 percent a year, held back at first by corruption and an energy crisis and then lifted by the reforms that followed the 2003 Rose Revolution, reaching 13.2 in 2007. Since 2008 growth has averaged 5.0 percent a year: the August 2008 war with Russia and the global financial crisis pushed it to -2.8 in 2009, and the pandemic pushed it to -6.4 in 2020. Recovering tourism, and then a surge of migrants, money and transit trade after Russia's invasion of Ukraine, lifted growth to 11.1 in 2021 and 10.8 in 2022. Growth over 2016–2025 averaged 5.4 percent a year, a little below the 5.9 of 2006–2015, and income per person was at its highest level yet in 2025, though it passed its 1985 level only in 2018.",
+    "threads": [
+      {
+        "title": "Collapse, then reform",
+        "about": "history",
+        "text": "After independence in 1991, civil war, breakaway regions and hyperinflation brought a sharp and long fall in output. Corruption, poor management and an energy crisis then held the economy back until the 2003 Rose Revolution brought a fast reform program and rapid growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/687831468030624635/pdf/568100BRI0Box31sk1to1desk1091091100.pdf",
+            "publisher": "World Bank",
+            "title": "Georgia Country Assistance Evaluation, 1993-2007 (IEG Fast Track Brief)",
+            "date": "2008-06-30",
+            "quote": "Civil war, secessionist movements, and economic crises resulted in a sharp and protracted fall in output and hyperinflation in the immediate post-independence years."
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/687831468030624635/pdf/568100BRI0Box31sk1to1desk1091091100.pdf",
+            "publisher": "World Bank",
+            "title": "Georgia Country Assistance Evaluation, 1993-2007 (IEG Fast Track Brief)",
+            "date": "2008-06-30",
+            "quote": "the government failed to overcome problems arising notably from economic mismanagement and widespread corruption, leading to poor public services, a deepening energy crisis"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/687831468030624635/pdf/568100BRI0Box31sk1to1desk1091091100.pdf",
+            "publisher": "World Bank",
+            "title": "Georgia Country Assistance Evaluation, 1993-2007 (IEG Fast Track Brief)",
+            "date": "2008-06-30",
+            "quote": "After the November 2003 Rose Revolution, the new government executed an ambitious reform program that quickly produced results"
+          }
+        ]
+      },
+      {
+        "title": "War and crisis in 2008",
+        "about": "history",
+        "text": "The August 2008 war with Russia and the global financial crisis hit at the same time. Bank deposits fled and credit was squeezed. In the data, 2008 opens the slower era that runs to today.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr1187.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2011 Article IV Consultation—Staff Report (IMF Country Report No. 11/87)",
+            "date": "2011-04",
+            "quote": "The government moved forcefully to counter the economic impact of the August 2008 conflict with Russia and global financial crisis"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr1187.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2011 Article IV Consultation—Staff Report (IMF Country Report No. 11/87)",
+            "date": "2011-04",
+            "quote": "Monetary and prudential policy easing was, however, unable to prevent a sharp credit squeeze."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2011/cr1187.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2011 Article IV Consultation—Staff Report (IMF Country Report No. 11/87)",
+            "date": "2011-04",
+            "quote": "The confidence shock triggered by the war and subsequent political instability led to a 29 percent loss of deposits (exchange rate adjusted)"
+          }
+        ]
+      },
+      {
+        "title": "Wartime inflows of people and money",
+        "about": "present",
+        "text": "Russia's invasion of Ukraine brought a surge of migrants, money and transit trade through Georgia. The boom they started in information technology, transport and education services still carries growth.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2024/english/1geoea2024001.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2024 Article IV Consultation—Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 24/135)",
+            "date": "2024-05",
+            "quote": "a surge in immigration, financial inflows, and transit trade triggered by Russia’s war in Ukraine have boosted GDP growth and fiscal revenues"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1geoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 26/133)",
+            "date": "2026-06",
+            "quote": "activity has been driven by continued strength in information and communication technology (ICT), transport, and education services, initially boosted by financial and migrant inflows"
+          }
+        ]
+      },
+      {
+        "title": "A stalled path to Europe",
+        "about": "present",
+        "text": "Talks on joining the European Union are on hold, and the sources describe episodes of civil unrest and a slower pace of reform. They list this political strain among the risks to growth in the years ahead.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-geo.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Georgia",
+            "date": "2026-10",
+            "quote": "Reform momentum has moderated amid episodes of civil unrest, and the suspension of European Union accession talks until 2028."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-geo.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Georgia",
+            "date": "2026-10",
+            "quote": "domestic political polarization, suspended European Union accession negotiations, and slow structural reforms pose medium-term risks"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1geoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 26/133)",
+            "date": "2026-06",
+            "quote": "Relations with the EU remain strained, with the EU’s 2025 Enlargement Report indicating accession is on hold."
+          }
+        ]
+      },
+      {
+        "title": "Emigration and scarce good jobs",
+        "about": "present",
+        "text": "A 2022 World Bank study found the population smaller than at the start of the century, mostly because people left, and ageing. Even after years of fast growth, unemployment stays high, above all among the young.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099320306302241716/pdf/P1754860e2ca09010a38901096450aa920.pdf",
+            "publisher": "World Bank",
+            "title": "Georgia Country Economic Memorandum Chapter 1: Understanding Georgia’s Growth",
+            "date": "2022",
+            "quote": "is down by a full 7.7 percent compared to the start of this century (Box 1). This is largely due to outward migration"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/099320306302241716/pdf/P1754860e2ca09010a38901096450aa920.pdf",
+            "publisher": "World Bank",
+            "title": "Georgia Country Economic Memorandum Chapter 1: Understanding Georgia’s Growth",
+            "date": "2022",
+            "quote": "Georgia has a small, and aging, population, with a declining rate of participation in the labor market."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1geoea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Georgia: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 26/133)",
+            "date": "2026-06",
+            "quote": "Unemployment remains structurally high, particularly among youth (Figure 1), reflecting persistent skill mismatches and weak work incentives amid low wages"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth stayed strong into 2026, carried by household spending and credit, but higher energy prices pushed inflation back up and the war in the Middle East hit tourism. In the data, growth in income per person slowed to 4.1 in 2025 from 6.9 in 2024.",
+      "citations": [
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-geo.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Georgia",
+          "date": "2026-10",
+          "quote": "Georgia’s economy entered 2026 with strong momentum, as robust consumption and credit supported broad-based growth"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1geoea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Georgia: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 26/133)",
+          "date": "2026-06",
+          "quote": "Real GDP expanded by 7.5 percent in 2025 and remained strong in early 2026, while inflation rose above target due to higher energy prices"
+        },
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1geoea2026001.pdf",
+          "publisher": "IMF",
+          "title": "Georgia: 2026 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Georgia (IMF Country Report No. 26/133)",
+          "date": "2026-06",
+          "quote": "Economic activity remained firm in early 2026, with the impact from the Middle East war largely confined to tourism."
+        }
+      ]
+    },
+    "tension": "The sources describe 2024 and 2025 as boom years for the whole economy, but in the data income per person grew 6.9 in 2024 and only 4.1 in 2025, well below the economy-wide rates the sources report. The gap implies a rising population count in the data; the sources describe a surge in immigration after 2022 but do not say how much of the gap it explains."
+  }
+}

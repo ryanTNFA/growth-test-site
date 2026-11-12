@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "iso3": "ARM",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "ARM",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 2,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): \"Armenia Article IV staff report 2025 growth\"",
+        "tier 1 domains: \"Armenia Macro Poverty Outlook economic update growth 2025\"",
+        "tier 1 domains: \"Armenia country economic memorandum growth construction boom 2008 crisis remittances history\"",
+        "critic opened and checked: imf.org Country Report 25/323 (PDF), thedocs.worldbank.org MPO Armenia October 2026 (PDF), documents1.worldbank.org SCD November 2017 (PDF), adb.org CPS 2014-2018 economic analysis (PDF), imf.org 2009 crisis presentation (PDF)",
+        "critic search imf.org: \"IMF Armenia press release April 2026 stand-by arrangement review\" (not run: search budget used up)"
+      ],
+      "critic_changes": [
+        "All 5 cited PDFs were opened and their text extracted. Every quoted passage was found on its page, and every date and title matches the document (IMF CR 25/323: staff report completed 10 November 2025, Board on 1 December 2025, package and press release dated December 2025, so 2025-12 stands; SCD cover says November 2017; ADB file created December 2014; IMF presentation dated 9 September 2009).",
+        "All numbers were checked against desk/data/ARM.json and match: 1992 -41.1, eras -1.5/12.5/1.7/5.5, 2009 -13.5, 2020 -7.2, 2022 12.3, 2023 8.5, 2024 3.5, 2025 5.4, peak in 2025, and the 1990 level (1644) first passed again in 2003 (2002: 1535; 2003: 1760).",
+        "Thread 'Two shocks from Russia': the ADB quote 'Remittances appear to amplify the business cycle...' was swapped for the ADB passage on the same page that 80–90% of remittances come from Russia, because the thread says 'Most remittances come from Russia' and no cited passage supported that.",
+        "Thread 'Remittances built the 2000s boom': 'construction collapsed and pulled income per person down 13.5 percent' was softened to 'construction output dropped sharply, and income per person fell 13.5 percent that year'. The IMF source says construction explains about three-quarters of the fall in GDP, not the whole fall in income per person.",
+        "Thread 'Inflows after Russia's war': '3.5 percent in 2024 and 5.4 percent in 2025' is now labelled as growth in income per person, so it isn't read as GDP growth (the IMF quote's 8.9 percent is real GDP). The tapering quote was trimmed to the descriptive clause, dropping 'the challenge is to permanently raise...', which reads as policy advice.",
+        "Thread 'Closed borders, new routes': added the IMF citation for the August 2025 initialing of the peace agreement, which the thread claims but no citation supported. Removed 'a new transit route known as TRIPP' because the cited passage does not say what TRIPP is. The thread now says the World Bank counts the agreement's finalization, as its passage does.",
+        "Arc: 'paid for mostly by money that migrants in Russia sent home' was reworded to 'paid for largely by money that migrants, most of them in Russia, sent home', which matches what ADB says: remittances fuelled the construction boom, with FDI to a lesser extent, and 80–90% of remittances came from Russia. 'Carried by' became 'driven mainly by', ADB's own wording.",
+        "Headline: 'money and people from Russia lifted it to a new peak in 2025' became 'inflows from Russia since 2022 helped carry it to a new peak in 2025' (146 characters). The IMF says those drivers were tapering off by 2025, so they are not the sole cause of the 2025 level.",
+        "tier1_recent_found lowered from 4 to 2. Only 2 distinct recent tier 1 sources could be verified: IMF CR 25/323, which contains PR 25/403, and the World Bank MPO of October 2026. The draft also listed IMF PR 26/125 (April 2026), but it is not cited, and the search to confirm it could not run because the shared web-search budget was used up.",
+        "No banned phrases or recommendation language remain in the prose. The 5 threads and 2 distinct recent sources meet the minimums, so the story stays tier 1."
+      ]
+    },
+    "headline": "Armenia's income per person went from collapse to boom, bust and boom again; inflows from Russia since 2022 helped carry it to a new peak in 2025.",
+    "arc": "Income per person fell hard after independence, by 41.1 percent in 1992 alone, and the 1991–2000 era averaged -1.5 percent a year; the sources say little about the causes of that slump. From 2001 to 2008 growth averaged 12.5 percent, driven mainly by a building boom paid for largely by money that migrants, most of them in Russia, sent home. When the global crisis cut those remittances, exports and foreign investment, income per person fell 13.5 percent in 2009, and a second shock from Russia in 2014–15 held the 2009–2016 era to 1.7 percent. Growth picked up to 5.5 percent in 2017–2025, despite a fall of 7.2 percent in 2020, and jumped 12.3 percent in 2022 as foreign currency, migrants and firms moved in from Russia after its war in Ukraine began. Income per person reached its highest level so far in 2025, while the IMF describes those exceptional drivers as gradually tapering off.",
+    "threads": [
+      {
+        "title": "Remittances built the 2000s boom",
+        "about": "history",
+        "text": "In the 2001–2008 era, money sent home by migrants paid for a building boom, and construction grew very fast. When remittances fell in 2009, construction output dropped sharply, and income per person fell 13.5 percent that year.",
+        "citations": [
+          {
+            "url": "https://www.adb.org/sites/default/files/linked-documents/cps-arm-2014-2018-ea.pdf",
+            "publisher": "ADB",
+            "title": "Country Partnership Strategy: Armenia, 2014–2018 — Economic Analysis (Summary)",
+            "date": "2014",
+            "quote": "Construction was growing on average by 28% a year between 2002 and 2008 in real terms"
+          },
+          {
+            "url": "https://www.imf.org/external/country/ARM/rr/2009/090909.pdf",
+            "publisher": "IMF",
+            "title": "The Economic Crisis in Armenia: Causes, Consequences, and Cures",
+            "date": "2009-09-09",
+            "quote": "The drop in remittances led to a large drop in construction output"
+          }
+        ]
+      },
+      {
+        "title": "Two shocks from Russia",
+        "about": "history",
+        "text": "Most remittances come from Russia, so swings in Russia's economy reach Armenia directly. After the 2009 crisis, falling oil prices and sanctions on Russia hit Armenia again in 2014–15. The World Bank judged in 2017 that the model behind the earlier boom was exhausted, and the 2009–2016 era averaged 1.7 percent.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/716961524493794871/pdf/Armenia-SCD-in-Eng-final-04192018.pdf",
+            "publisher": "World Bank",
+            "title": "Future Armenia: Connect, Compete, Prosper — A Systematic Country Diagnostic",
+            "date": "2017-11",
+            "quote": "it was hit again—this time triggered by rapidly falling oil prices and the imposition of international sanctions on Russia"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/716961524493794871/pdf/Armenia-SCD-in-Eng-final-04192018.pdf",
+            "publisher": "World Bank",
+            "title": "Future Armenia: Connect, Compete, Prosper — A Systematic Country Diagnostic",
+            "date": "2017-11",
+            "quote": "the economic model underlying previously strong growth proved to be exhausted"
+          },
+          {
+            "url": "https://www.adb.org/sites/default/files/linked-documents/cps-arm-2014-2018-ea.pdf",
+            "publisher": "ADB",
+            "title": "Country Partnership Strategy: Armenia, 2014–2018 — Economic Analysis (Summary)",
+            "date": "2014",
+            "quote": "The bulk of the remittance inflows (80%–90%) is coming from the Russian Federation."
+          }
+        ]
+      },
+      {
+        "title": "Inflows after Russia's war",
+        "about": "present",
+        "text": "From 2022, foreign currency, migrants and businesses arrived from Russia, and income per person grew 12.3 percent that year and 8.5 percent in 2023. The IMF calls these drivers exceptional and says they are gradually tapering off; income per person grew 3.5 percent in 2024 and 5.4 percent in 2025.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1armea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Armenia: 2025 Article IV Consultation, Sixth Review Under the Stand-By Arrangement (IMF Country Report No. 25/323)",
+            "date": "2025-12",
+            "quote": "Boosted by an influx of foreign exchange, migrants, and businesses from Russia, real GDP grew on average by 8.9 percent annually"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1armea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Armenia: 2025 Article IV Consultation, Sixth Review Under the Stand-By Arrangement (IMF Country Report No. 25/323)",
+            "date": "2025-12",
+            "quote": "As the exceptional drivers of growth are gradually tapering off"
+          }
+        ]
+      },
+      {
+        "title": "Narrow growth, few good jobs",
+        "about": "present",
+        "text": "The World Bank says recent growth is concentrated in finance and technology and creates few good jobs for most workers. The IMF adds that the working-age population is set to peak soon, even after the arrival of migrants.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-arm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Armenia (October 2026)",
+            "date": "2026-10",
+            "quote": "Growth is concentrated in capital- and skill-intensive sectors (e.g., information and communication technology, finance), creating few quality jobs for the majority of workers"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1armea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Armenia: 2025 Article IV Consultation, Sixth Review Under the Stand-By Arrangement (IMF Country Report No. 25/323)",
+            "date": "2025-12",
+            "quote": "despite the recent inflow of migrants, the working-age population is set to peak in the next two years"
+          }
+        ]
+      },
+      {
+        "title": "Closed borders, new routes",
+        "about": "present",
+        "text": "Armenia is landlocked, and its borders with Azerbaijan and Turkey have long been closed, which raises the cost of trade. A peace agreement with Azerbaijan was initialed in August 2025, and the World Bank now counts its finalization, along with continued progress on TRIPP, among the things that could add to growth.",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/716961524493794871/pdf/Armenia-SCD-in-Eng-final-04192018.pdf",
+            "publisher": "World Bank",
+            "title": "Future Armenia: Connect, Compete, Prosper — A Systematic Country Diagnostic",
+            "date": "2017-11",
+            "quote": "In addition to being landlocked, its borders with Azerbaijan and Turkey are closed because of longstanding geopolitical issues"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1armea2025002-source-pdf.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Armenia: 2025 Article IV Consultation, Sixth Review Under the Stand-By Arrangement (IMF Country Report No. 25/323)",
+            "date": "2025-12",
+            "quote": "The initialing of a peace agreement with Azerbaijan in August is a historic breakthrough"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-arm.pdf",
+            "publisher": "World Bank",
+            "title": "Macro Poverty Outlook: Armenia (October 2026)",
+            "date": "2026-10",
+            "quote": "normalization of relations with neighbors, including the finalization of the peace agreement with Azerbaijan, continued progress on TRIPP, operations at the Amulsar mine"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "In 2025 income per person grew 5.4 percent and reached a new peak. In August 2025 Armenia and Azerbaijan initialed a peace agreement. In April 2026 Russia restricted Armenia's farm exports, and farm output fell in the first half of 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/-/media/files/publications/cr/2025/english/1armea2025002-source-pdf.pdf",
+          "publisher": "IMF",
+          "title": "Republic of Armenia: 2025 Article IV Consultation, Sixth Review Under the Stand-By Arrangement (IMF Country Report No. 25/323)",
+          "date": "2025-12",
+          "quote": "The initialing of a peace agreement with Azerbaijan in August is a historic breakthrough"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-arm.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Armenia (October 2026)",
+          "date": "2026-10",
+          "quote": "particularly following the April 2026 restrictions imposed by Russia on Armenia's agricultural exports"
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/d5f32ef28464d01f195827b7e020a3e8-0500022021/related/mpo-arm.pdf",
+          "publisher": "World Bank",
+          "title": "Macro Poverty Outlook: Armenia (October 2026)",
+          "date": "2026-10",
+          "quote": "Agriculture declined (-11 percent, yoy) partly due to reduced demand for related exports."
+        }
+      ]
+    },
+    "tension": "The World Bank's 2017 diagnostic calls Armenia an important success story among transition economies from independence in 1991 until the 2008–09 crisis. The data show a deep fall first: income per person dropped 41.1 percent in 1992, the 1991–2000 era averaged -1.5 percent, and income per person did not pass its 1990 level again until 2003."
+  }
+}

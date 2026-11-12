@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "iso3": "MDG",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "MDG",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "reviewed",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org: Madagascar Article IV staff report 2025 IMF",
+        "worldbank.org, afdb.org (tier 1 list): Madagascar Macro Poverty Outlook economic update growth",
+        "imf.org: IMF Madagascar press release 2026 staff mission",
+        "tier 1 list: Madagascar political crises 2002 2009 growth per capita income decline since independence",
+        "opened: imf.org press releases 2025-09-11, 2026-04-08, 2026-09-30; imf.org Country Report 25/60 page; worldbank.org press release 2025-02-25; worldbank.org country page; World Bank SCD Update 2022; World Bank CEM 2020; afdb.org outlook (403, not cited)",
+        "critic re-opened every cited URL: imf.org 2025-09-11, 2026-04-07 (dated 2026-04-08), 2026-09-30; worldbank.org 2025-02-25; documents1.worldbank.org SCD 2022 and CEM 2020 PDFs (text extracted and quotes matched)"
+      ],
+      "critic_changes": [
+        "Thread 'Crises that end each boom': the draft said the data show 'the deepest falls' in income per person in the crisis years. That is false: 1972 fell only 4.1 percent, and 1981, not a crisis year, fell 12.5 percent. The thread now says income per person fell in each crisis year, giving 1991, 2002 and 2009 (6.8, from the data) as examples.",
+        "Thread 'Crises that end each boom': completed the CEM quote with its closing period, to match the page.",
+        "Thread 'The long 2009-13 crisis': changed 'donors suspended aid and trade preferences' to 'aid and trade preferences were suspended'. The source does not say who suspended them.",
+        "Thread 'Low productivity, unreliable power': changed 'output per worker' to 'productivity', which is the source's word, and changed 'falling for two decades' to 'has long been falling', because the figure is not in the data file and may appear only inside the quote.",
+        "Thread 'A new transition amid shocks': dropped 'public' from 'redirected public investment projects', since the passage says only 'investment projects'. Added the 2026-09-30 passage on tropical cyclones so the cyclone claim has a citation.",
+        "IMF April 2026 mission press release: the date is now 2026-04-08, the date printed on the page, instead of the month-only 2026-04.",
+        "Tension: removed 'population has grown fivefold while output has only tripled'. Those figures are not in the data file, and tension has no citation to quote them in. Replaced the unsourced 'steady output growth in recent years' with the IMF 2026-09-30 statement that output grew in 2025 and is projected to grow faster in 2026, given without its figures.",
+        "tier1_recent_found: changed from 5 to 4. The four distinct recent tier 1 sources were each re-opened and verified: IMF 2025-09-11, IMF 2026-04-08, IMF 2026-09-30 and World Bank 2025-02-25. The uncited Country Report 25/60 page was not verified.",
+        "Checked against desk/data/MDG.json and confirmed correct: every other number (45.9, 1971, 54 years, below 1960, -2.0, -9.1, -15.0, 0.6, 6.6, -6.8, -9.5, 0.3, 1.8 and 0.6 for 2024-25, 2008 level not regained). Every other quote matched its page. No banned phrases and no recommendation language were found."
+      ],
+      "reviewed_by": "Ryan Moore (TNFA)",
+      "reviewed_on": "2026-11-09"
+    },
+    "headline": "Political crises have cut short every growth spurt, and Madagascar's income per person is still 45.9 percent below its 1971 peak.",
+    "arc": "Income per person in Madagascar peaked in 1971 and, 54 years on, is still 45.9 percent below that level; it is lower today than in 1960, the first year of the record. From 1990 to 2002 it fell by 2.0 percent a year on average, an era opened and closed by political crises: income per person dropped 9.1 percent in 1991 and 15.0 percent in 2002. Since 2003 growth has averaged 0.6 percent a year: a rebound of 6.6 percent in 2003 and steady gains through 2008 ended with a fall of 6.8 percent in 2009, when a long political crisis began and aid and trade preferences were suspended. Income per person then barely moved for years, fell 9.5 percent in 2020 as the pandemic hit, and has recovered slowly since, averaging 0.3 percent a year over 2016-2025. World Bank studies describe a repeating pattern in which political crises reverse the gains of each growth spell, while the population grows faster than output.",
+    "threads": [
+      {
+        "title": "Crises that end each boom",
+        "text": "World Bank studies find that political crises in 1972, 1991, 2001-02 and 2009-13 each interrupted a period of growth. Income per person fell in each of those crisis years, including 9.1 percent in 1991, 15.0 percent in 2002 and 6.8 percent in 2009.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/551231652117328109/pdf/Madagascar-Systematic-Country-Diagnostic-The-Urgency-of-Reforms-Structural-Transformation-and-Better-Governance-at-the-Heart-of-the-Strategy-to-Reduce-Poverty.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Madagascar: The Urgency of Reforms",
+            "date": "2022-04",
+            "quote": "Political crises have disrupted all growth spurts since independence in 1960"
+          },
+          {
+            "url": "https://documents1.worldbank.org/curated/en/699781575279412305/pdf/Madagascar-Country-Economic-Memorandum-Scaling-Success-Building-a-Resilient-Economy.pdf",
+            "publisher": "World Bank",
+            "title": "Madagascar Country Economic Memorandum: Scaling Success, Building a Resilient Economy",
+            "date": "2020",
+            "quote": "The post-independence period has been marked by four political crises, in 1972, 1991, 2001-02 and 2009-13."
+          }
+        ]
+      },
+      {
+        "title": "The long 2009-13 crisis",
+        "text": "The crisis that began in 2009 lasted for years, and aid and trade preferences were suspended. Income per person fell 6.8 percent in 2009, kept falling in 2010 and 2011, and has still not regained its 2008 level.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://documents1.worldbank.org/curated/en/551231652117328109/pdf/Madagascar-Systematic-Country-Diagnostic-The-Urgency-of-Reforms-Structural-Transformation-and-Better-Governance-at-the-Heart-of-the-Strategy-to-Reduce-Poverty.pdf",
+            "publisher": "World Bank",
+            "title": "Systematic Country Diagnostic Update for Madagascar: The Urgency of Reforms",
+            "date": "2022-04",
+            "quote": "The 2009-13 crisis was particularly long, and had lasting economic and social impacts, including the suspension of preferential trade agreements and international aid"
+          }
+        ]
+      },
+      {
+        "title": "Low productivity, unreliable power",
+        "text": "The World Bank reports that productivity has long been falling and is now among the lowest in the world. Firms name unreliable electricity and water, weak access to finance and political uncertainty as obstacles, and the IMF still described outages and water shortages in 2026.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/02/25/bridging-the-productivity-divide-unlocking-afe-madagascars-economic-potential",
+            "publisher": "World Bank",
+            "title": "Bridging the Productivity Divide: Unlocking Madagascar's Economic Potential",
+            "date": "2025-02-25",
+            "quote": "Productivity in Madagascar has been declining over the past two decades and is now among the lowest in the world."
+          },
+          {
+            "url": "https://www.worldbank.org/en/news/press-release/2025/02/25/bridging-the-productivity-divide-unlocking-afe-madagascars-economic-potential",
+            "publisher": "World Bank",
+            "title": "Bridging the Productivity Divide: Unlocking Madagascar's Economic Potential",
+            "date": "2025-02-25",
+            "quote": "Limited access to finance, unreliable public services, such as electricity and water, and political uncertainties remain significant obstacles to firm-level productivity."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/30/pr26312-republic-of-madagascar",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with the Republic of Madagascar",
+            "date": "2026-09-30",
+            "quote": "Persistent electricity outages and water shortages."
+          }
+        ]
+      },
+      {
+        "title": "A new transition amid shocks",
+        "text": "Madagascar is again in a political transition, under a new administration that has redirected investment projects. It came as cyclones struck early in 2026 and the war in the Middle East pushed up oil prices.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/30/pr26312-republic-of-madagascar",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with the Republic of Madagascar",
+            "date": "2026-09-30",
+            "quote": "Madagascar is undergoing a political transition amid heightened vulnerability due to:"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/04/07/pr26111-madagascar-imf-concludes-mission-the-combined-3rd-and-4th-rev-of-ecf-and-rsf-arr",
+            "publisher": "IMF",
+            "title": "IMF Concludes Mission on the Combined Third and Fourth Reviews of the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with Madagascar",
+            "date": "2026-04-08",
+            "quote": "reorientation of investment projects by the new administration"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/09/30/pr26312-republic-of-madagascar",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with the Republic of Madagascar",
+            "date": "2026-09-30",
+            "quote": "Tropical cyclones earlier in the year."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Growth in income per person slowed to 0.6 percent in 2025, from 1.8 in 2024. In September 2025 the IMF pointed to outside shocks and problems in the mining sector. By September 2026 it added cyclones early in the year, higher oil prices from the war in the Middle East, and a political transition.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/09/11/pr-25291-madagascar-imf-staff-concludes-visit",
+          "publisher": "IMF",
+          "title": "IMF Staff Concludes Visit to Madagascar",
+          "date": "2025-09-11",
+          "quote": "Recent technical difficulties in the mining sector are compounding external shocks."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/09/30/pr26312-republic-of-madagascar",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with the Republic of Madagascar",
+          "date": "2026-09-30",
+          "quote": "Spillovers from the war in the Middle East and higher global oil prices."
+        }
+      ]
+    },
+    "tension": "The IMF reports that output kept growing in 2025 and expects faster growth in 2026, helped by rebuilding after the cyclones. Income per person tells a flatter story: it rose 1.8 percent in 2024 and 0.6 percent in 2025, and averaged 0.3 percent a year over 2016-2025, because population growth absorbs most of the gain. World Bank studies note that since independence the population has grown much faster than output."
+  }
+}

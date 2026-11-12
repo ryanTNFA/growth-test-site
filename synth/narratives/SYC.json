@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "iso3": "SYC",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.0",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "SYC",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.0",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 3,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org (tier 1): 'Seychelles Article IV staff report 2025 tourism growth'",
+        "tier 1 domains: 'Seychelles Macro Poverty Outlook economic update'",
+        "tier 1 domains: 'Seychelles 2022 census population GDP per capita revision'",
+        "Opened: imf.org IMF Country Report No. 26/122 (2026 Article IV, PDF, cover dated June 2026)",
+        "Opened: imf.org press release PR26/171 (2026-05-26)",
+        "Opened: thedocs.worldbank.org Macro Poverty Outlook Seychelles, October 2026",
+        "Opened: documents1.worldbank.org Macro Poverty Outlook Seychelles, October 2024 (not cited: quotes split by hyphenation)",
+        "Tried: afdb.org Country Focus Report 2025 Seychelles (HTTP 403, not used)",
+        "Check pass: re-opened all three cited URLs (both PDFs text-extracted locally with pdftotext), verified every quote, date and title, and checked every number against desk/data/SYC.json; synth/check_sources.py and synth/validate_numbers.mjs both pass (48 of 48 numbers matched)"
+      ],
+      "critic_changes": [
+        "tier1_recent_found: 4 -> 3. The story cites three distinct recent tier 1 sources: IMF Country Report 26/122 (June 2026), IMF PR26/171 (2026-05-26) and the World Bank MPO (October 2026). The October 2024 MPO was opened but not cited. That is still at least 2, so the story stays tier 1.",
+        "All three cited URLs were re-opened. WebFetch could not read the two PDFs, so I extracted their text locally with pdftotext. Every quote, title and date was checked against the extracted text. The IMF report's cover date is June 2026, as cited.",
+        "Arc, era 1998-2009: the draft blamed the slowdown on public investment falling after 2004. But the slow years in the data are 1998-2004, while 2005-2007 grew strongly. The sentence now lists the causes the IMF gives without putting them in a false order: shocks, loose public spending, rising debt and foreign-exchange shortages, the fall in public investment after 2004, and the 2008 default.",
+        "Arc, era 1990-1997: 'airports, ports and land' became 'the airport, the port and reclaimed land', which matches the IMF's text (one airport, Port Victoria, land reclamation). 'Since 2018 growth has averaged' became 'In 2018-2025', so the sentence names the era as the data file does. Dropped 'read here' from 'the sources read here do not explain'.",
+        "Thread 'Public investment builds tourism': dropped 'and growth weakened' after 2004. Income per person grew 8.5, 7.2 and 8.3 percent in 2005-2007, so the claim contradicts the data. Also dropped 'upscale tourism' and 'private hotel building', which the cited passages did not support. The 1990s quote now runs on to 'and crowded-in private activity', to support 'drew in private investment'. Added the IMF passage on debt and foreign-exchange shortages that 'culminated in the 2008 debt default'.",
+        "Thread 'Debt crisis and 2008 reforms': 'From the mid-1990s' became 'Between 1994 and 2008', the IMF's own years. 'Freed the exchange rate' became 'removed foreign-exchange restrictions'. The quote now runs on to 'remove foreign exchange restrictions and modernize monetary policy' (25 words) so it supports that claim. The 2010s TFP quote was swapped for the IMF passage crediting the program with 'higher and less volatile economic growth', which supports the text's claim about growth after 2008.",
+        "Thread 'A small economy exposed to shocks': dropped 'The pandemic in 2020 was the largest recent shock'. The IMF calls it 'a recent example' of a shock, not the largest. The draft cited the 'remains vulnerable' quote to the press release web page, but it is not on that page. It is in the report PDF (in the press release reproduced there), so the citation now points to the report. 'Imports most of what it uses' became 'relies on imports', backed by a new World Bank quote on dependence on imports. The pandemic debt quote moved to the debt thread.",
+        "Thread 'Public debt brought back down': dropped 'governments have kept spending below revenue before interest since the 2008 restructuring'. No cited passage supports it. Dropped 'fallen steadily': the World Bank's own table shows debt rising from 2023 to 2024. Added the IMF quote on the 2020 pandemic debt jump to support 'jumped'.",
+        "Thread 'Gulf flight links and war': the World Bank quote now runs on to the 11 percent fall in visitor arrivals, using the page's 'conflict-related' (it was cut off at 'exposure to'). Added the IMF report passage on airspace closures and fewer Gulf flights, so the arrivals claim rests on both institutions.",
+        "since_last_year: the EU fishing claim and the IMF's 2026 slowdown were not in any cited passage. Added the World Bank passage on the expiry of the fishing protocol and the press release line 'Real GDP growth expected to fall to 1.5 percent in 2026.' 'A lapse' became 'the expiry ... early in the year' (the protocol expired in February).",
+        "tension: 'The sources describe' became 'The IMF describes', because only the IMF report says 2025 arrivals passed the 2019 pre-pandemic peak (by nearly 4 percent). That passage is in the opened report.",
+        "Verified unchanged: all era and data numbers (4.2, 0.7, 5.1, -0.2; -12.5 percent in 2020 and -9.0 percent in 2022; the 2019 peak, 10.8 percent below it; level first reached in 2017; 1.5 against 3.2). validate_numbers.mjs matched 48 of 48 numbers, and check_sources.py passes. The headline is 157 characters and the arc 5 sentences. No banned phrases and no recommendation language."
+      ]
+    },
+    "headline": "Seychelles grew on tourism and public investment, stalled in a debt crisis, sped up after 2008 reforms, and has not regained its 2019 peak income per person.",
+    "arc": "Income per person in Seychelles grew 4.2 percent a year in 1990–1997, when, the IMF says, public investment in the airport, the port and reclaimed land helped tourism expand. Growth slowed to 0.7 percent a year in 1998–2009, a period the IMF links to shocks, loose public spending, rising debt and foreign-exchange shortages, a sharp fall in public investment after 2004, and a debt default in 2008. After a debt restructuring and a broad reform program that began in 2008, growth rose to 5.1 percent a year in 2010–2017, with the IMF crediting better policy and efficiency more than new capital. In 2018–2025 growth averaged -0.2 percent a year: income per person peaked in 2019, fell 12.5 percent in 2020 when the pandemic struck, and fell again by 9.0 percent in 2022, a drop the sources do not explain. Growth returned from 2023, but in 2025 income per person was still 10.8 percent below its 2019 peak, about where it first was in 2017, and growth over 2016–2025 averaged 1.5 percent a year against 3.2 in the decade before.",
+    "threads": [
+      {
+        "title": "Public investment builds tourism",
+        "about": "history",
+        "text": "In the 1990s, sustained public investment helped tourism expand and drew in private investment. After 2004, public investment fell sharply, held back by rising debt and foreign-exchange shortages that ended in a debt default in 2008.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "Growth strengthened as capital accumulation and effective labor made strong contributions, supported by sustained public investment that facilitated tourism-led expansion and crowded-in private activity"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "Post 2004, public gross fixed capital formation declined sharply, and capital intensity declined"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "rising public debt from a largely debt-driven public investment program, and foreign exchange shortages which culminated in the 2008 debt default"
+          }
+        ]
+      },
+      {
+        "title": "Debt crisis and 2008 reforms",
+        "about": "history",
+        "text": "Between 1994 and 2008, shocks and loose public spending brought repeated slowdowns and fiscal crises. In 2008 the government restructured its debt with foreign creditors, removed foreign-exchange restrictions and modernized monetary policy, and the IMF credits the program with higher and steadier growth afterward.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "Between 1994 and 2008, Seychelles faced a challenging economic situation due to negative shocks and expansionary fiscal policies that led to episodes of economic slowdowns"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "comprehensive restructuring of debt with external creditors and implemented an ambitious reform plan to restore fiscal sustainability, remove foreign exchange restrictions and modernize monetary policy"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "The dividends of the successful implementation of this program contributed to macroeconomic stabilization, higher and less volatile economic growth"
+          }
+        ]
+      },
+      {
+        "title": "A small economy exposed to shocks",
+        "about": "present",
+        "text": "The economy rests on tourism and fisheries and relies on imports, so swings in travel demand, commodity prices and shipping costs hit it hard. Both the IMF and the World Bank describe the islands as exposed to such shocks.",
+        "citations": [
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-syc.pdf",
+            "publisher": "World Bank",
+            "title": "Seychelles: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Its economy depends on tourism and fisheries, along with related activities that support these sectors."
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-syc.pdf",
+            "publisher": "World Bank",
+            "title": "Seychelles: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "Heavy dependence on a few sectors and imports exposes the economy to external shocks, including fluctuations in international travel demand"
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "Seychelles remains vulnerable to disruptions in air travel and tourism activity, as well as higher commodity prices and shipping costs"
+          }
+        ]
+      },
+      {
+        "title": "Public debt brought back down",
+        "about": "present",
+        "text": "Public debt jumped when the pandemic hit in 2020 and has since come back down.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "the COVID-19 pandemic in 2020, when gross debt surged by 28 percentage points of GDP, reaching 77 percent of GDP."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "the debt-to-GDP ratio declined from 77 percent in 2020 to 53.6 percent in 2025."
+          }
+        ]
+      },
+      {
+        "title": "Gulf flight links and war",
+        "about": "present",
+        "text": "Most visitors reach Seychelles through Gulf airline hubs. When war in the Middle East disrupted those routes in 2026, visitor arrivals fell.",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/05/26/pr26171-seychelles-imf-concludes-2026-aiv-consultation-completes-5th-6th-rev-under-eff-and-rsf",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2026 Article IV Consultation and Completes Fifth and Sixth Reviews Under the Extended Fund Facility and Resilience and Sustainability Facility with Seychelles",
+            "date": "2026-05-26",
+            "quote": "About 60 percent of tourist arrivals in Seychelles come through Doha, Dubai, or Abu Dhabi."
+          },
+          {
+            "url": "https://www.imf.org/-/media/files/publications/cr/2026/english/1sycea2026001.pdf",
+            "publisher": "IMF",
+            "title": "Seychelles: 2026 Article IV Consultation, Fifth and Sixth Reviews Under the Arrangements Under the Extended Fund Facility and the Arrangements Under the Resilience and Sustainability Facility (IMF Country Report No. 26/122)",
+            "date": "2026-06",
+            "quote": "With the closure of airspace and curtailment of flights by Gulf airlines in the weeks following the outbreak of hostilities, year-on-year tourist arrivals fell"
+          },
+          {
+            "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-syc.pdf",
+            "publisher": "World Bank",
+            "title": "Seychelles: Macro Poverty Outlook, October 2026",
+            "date": "2026-10",
+            "quote": "as reliance on Middle Eastern aviation hubs increased Seychelles' exposure to conflict-related flight disruptions, with visitor arrivals falling by 11 percent year-on-year"
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "2025 was a strong year, with record tourist arrivals. In 2026, war in the Middle East disrupted flights through the Gulf hubs that bring most visitors, and the expiry of the European Union fishing agreement early in the year hit fisheries. Both the IMF and the World Bank now expect growth to slow sharply in 2026.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/26/pr26171-seychelles-imf-concludes-2026-aiv-consultation-completes-5th-6th-rev-under-eff-and-rsf",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation and Completes Fifth and Sixth Reviews Under the Extended Fund Facility and Resilience and Sustainability Facility with Seychelles",
+          "date": "2026-05-26",
+          "quote": "Real GDP growth for 2025 is estimated at 5.1 percent, driven by record tourist arrivals."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/26/pr26171-seychelles-imf-concludes-2026-aiv-consultation-completes-5th-6th-rev-under-eff-and-rsf",
+          "publisher": "IMF",
+          "title": "IMF Executive Board Concludes 2026 Article IV Consultation and Completes Fifth and Sixth Reviews Under the Extended Fund Facility and Resilience and Sustainability Facility with Seychelles",
+          "date": "2026-05-26",
+          "quote": "Real GDP growth expected to fall to 1.5 percent in 2026."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-syc.pdf",
+          "publisher": "World Bank",
+          "title": "Seychelles: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "In fisheries, the expiry of the EU-Seychelles fishing protocol in February, compounded by higher fuel costs, disrupted industrial fishing."
+        },
+        {
+          "url": "https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-syc.pdf",
+          "publisher": "World Bank",
+          "title": "Seychelles: Macro Poverty Outlook, October 2026",
+          "date": "2026-10",
+          "quote": "Growth is expected to slow to around 1.1 percent in 2026, from 5.8 percent in 2025, as Middle East conflict-related disruptions"
+        }
+      ]
+    },
+    "tension": "The IMF describes 2025 as a record tourism year, with arrivals above their 2019 peak, yet the data show income per person in 2025 still 10.8 percent below its 2019 peak, about where it first was in 2017."
+  }
+}

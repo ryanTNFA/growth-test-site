@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "iso3": "EST",
+    "snapshot_id": "2026-10-24",
+    "rubric_version": "0.3.1",
+    "written_by": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+    "status": "draft"
+  },
+  "growth_story": {
+    "meta": {
+      "iso3": "EST",
+      "snapshot_id": "2026-10-24",
+      "rubric_version": "0.3.1",
+      "written": "2026-11-09",
+      "model": "claude-opus-5-5 (Claude Code workflow growth-stories, drafted then critic-checked)",
+      "prompt_version": "growth-stories v1 (9 November 2026)",
+      "status": "checked",
+      "tier": 1,
+      "tier1_recent_found": 4,
+      "sources_searched": [
+        "imf.org, worldbank.org, growthlab.hks.harvard.edu, mcc.gov, oecd.org, afdb.org, adb.org, iadb.org, ebrd.com, caribank.org: \"Estonia Article IV consultation 2025 staff concluding statement\"",
+        "tier 1 domains: \"OECD Economic Surveys Estonia 2024 2025 recession competitiveness\" (OECD pages returned HTTP 403 and were not used)",
+        "tier 1 domains: \"Estonia boom bust 2008 2009 credit boom currency board recovery lessons\"",
+        "tier 1 domains: \"Estonia transition 1990s reforms currency board output collapse growth\"",
+        "imf.org: \"IMF Executive Board concludes 2026 Article IV consultation Republic of Estonia\"",
+        "critic: opened all 7 cited URLs on imf.org with WebFetch; the two PDFs (c8.pdf, cr1004.pdf) were checked with text extraction"
+      ],
+      "critic_changes": [
+        "All seven cited pages opened. All are on imf.org (tier 1), and every quoted passage was found on its page. Every number was checked against desk/data/EST.json and matches: -7.5, -19.7, 14.3, -0.7, 8.5, -4.9, -14.5, 8.1, -2.5, -4.3, -0.2, 1.0, the eras 0.2/8.5/0.9, 2.1 for 2006–2015, 1.4 for 2016–2025, 6.0 below the 2021 peak, first reached in 2018, every year from 2010 to 2019 positive, and 1999 below 1990 with 2000 above it.",
+        "Thread 1, first citation: fixed the quote to the page's wording. 'arrange-ment' was a PDF line-break hyphen and is now 'arrangement'; the opening words 'The authorities' were added back.",
+        "Thread 1 text: changed 'credits ... for the return to growth' to 'run skillfully and the budget balanced while growth returned', which is what the source says. Dropped the claim that the bubble and the Russian crisis 'help explain' the 1999 dip: the source only says IMF support helped Estonia weather them. Changed 'as the Soviet economy broke apart' to 'after independence'.",
+        "Thread 2 ('Credit boom, then bust'): replaced the 2008 PIN citation with the 2009 staff report's sentence on fiscal reserves and the currency board, because the thread's claim about reserves had no supporting quote (at most 3 citations per thread). Removed the unquoted claims about Nordic-owned banks, 'global finance froze', low public debt and wage cuts. Replaced 'property boom' with construction, finance and real estate, as in the quoted passage. The PIN page was checked and still backs the arc's 'well above' wording ('Output growth rose well above potential in 2005-07').",
+        "Arc: 'credit and property boom' became 'credit boom', in line with the sources.",
+        "Thread 3: renamed 'Slower productivity after 2008' to 'Weaker exports and productivity'. The 2025 statement does not describe 'a long, structural slowdown in productivity growth' (checked: it speaks of declining allocative efficiency and business dynamism), so the text now says only that declining business dynamism has weighed on productivity. The text now names export performance, which matches the 2024 quote.",
+        "Thread 4: the claim about costs rising above the euro area average had no supporting citation. Added the 2024 statement's passage 'price and cost levels have shifted up compared to the euro area average'. Dropped 'lost export markets' from this thread's text because none of its citations supports it; thread 3 covers it.",
+        "Thread 4: the 2025 Executive Board press release date changed from 2025-07 to 2025-07-14, the date printed on the page ('Published: July 14, 2025'). The URL path shows 07/09, the date the Board concluded.",
+        "Thread 5: 'raised its defence spending target sharply since 2025' became 'In 2025 Estonia raised its defence spending target', because 'sharply' is not in the source. Added the 2026 statement's quote on the war in the Middle East and higher energy prices, so the energy claim is now cited.",
+        "since_last_year: added citations from the 2026 statement for household spending after the income tax allowance and for energy prices, so every claim in the text is backed by a quote.",
+        "Tension: 'a weakening' became 'a weakening in export performance', and 'output' became 'output per person' (the IMF history speaks of output per capita), to match the sources.",
+        "Headline: '2000s' became '2000–2007' to match the data's era (144 characters).",
+        "Threads surviving: 5. Distinct recent tier 1 sources: 4 (IMF 2024 concluding statement, 2025 concluding statement, 2025 Board press release, 2026 concluding statement). The story stays tier 1."
+      ]
+    },
+    "headline": "Estonia raced ahead on a 2000–2007 credit boom, crashed in 2008–09, and after a 2022–24 slump its income per person is back near its 2018 level.",
+    "arc": "After independence, income per person fell hard, by 19.7 percent in 1992 alone, so the 1991–1999 era averaged only 0.2 percent a year despite a quick rebound behind a currency board and fast reforms. From 2000 to 2007 growth averaged 8.5 percent a year, as a credit boom pushed output well above what the IMF judged the economy could sustain. The bust was severe: income per person fell 4.9 percent in 2008 and 14.5 percent in 2009, and wage cuts and budget cuts carried the adjustment while the currency board held. Growth came back in the 2010s, but the 2008–2025 era averages just 0.9 percent, pulled down by that crash and by a second downturn in 2022–2024 that the IMF links to supply shocks, high inflation, rising costs and lost export markets. Income per person peaked in 2021 and, after growth of 1.0 percent in 2025, is still 6.0 percent below that peak and about where it first was in 2018.",
+    "threads": [
+      {
+        "title": "Currency board and fast reform",
+        "text": "Income per person fell 7.5 percent in 1991 and 19.7 percent in 1992 after independence, then grew strongly from 1995, including 14.3 percent in 1997. The IMF says the currency board was run skillfully and the budget balanced while growth returned. It also notes a stock market bubble that burst in late 1997 and the Russian financial crisis soon after; income per person dipped 0.7 percent in 1999.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/history/2012/pdf/c8.pdf",
+            "publisher": "IMF",
+            "title": "After the Fall: Building Nations out of the Soviet Union (Tearing Down Walls: The International Monetary Fund 1990–1999, Chapter 8)",
+            "date": "2012",
+            "quote": "The authorities ran the currency board arrangement skillfully and even managed to balance the government budget while restoring growth in real GDP"
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/history/2012/pdf/c8.pdf",
+            "publisher": "IMF",
+            "title": "After the Fall: Building Nations out of the Soviet Union (Tearing Down Walls: The International Monetary Fund 1990–1999, Chapter 8)",
+            "date": "2012",
+            "quote": "helped Estonia weather a stock market bubble that burst in the last quarter of 1997 and the Russian financial crisis that hit a few …"
+          }
+        ]
+      },
+      {
+        "title": "Credit boom, then bust",
+        "text": "Growth of 8.5 percent a year in 2000–2007 rested partly on a credit boom that swelled construction, finance and real estate. Income per person then fell 4.9 percent in 2008 and 14.5 percent in 2009. Fiscal reserves and quick budget measures kept the government funded and supported the currency board.",
+        "about": "history",
+        "citations": [
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1004.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Report for the 2009 Article IV Consultation (IMF Country Report No. 10/4)",
+            "date": "2010-01",
+            "quote": "Following a credit boom, the Estonian economy is now undergoing a severe recession, although a full-fledged crisis has been avoided."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1004.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Report for the 2009 Article IV Consultation (IMF Country Report No. 10/4)",
+            "date": "2010-01",
+            "quote": "Growth in recent years was unsustainably bolstered by a disproportionate rise in nontradable sectors (construction, financial intermediation, real estate), with negative implications for competitiveness."
+          },
+          {
+            "url": "https://www.imf.org/external/pubs/ft/scr/2010/cr1004.pdf",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Report for the 2009 Article IV Consultation (IMF Country Report No. 10/4)",
+            "date": "2010-01",
+            "quote": "Sizable fiscal reserves and swift adjustment measures taken in 2008 and throughout 2009 prevented funding problems of the government and supported the currency board arrangement"
+          }
+        ]
+      },
+      {
+        "title": "Weaker exports and productivity",
+        "text": "Growth averaged 2.1 percent a year in 2006–2015 and 1.4 percent in 2016–2025. The IMF says export performance weakened soon after the 2008–09 crisis, and that declining business dynamism has weighed on productivity.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/04/15/mcs-estonia-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-04-15",
+            "quote": "Estonia lost significant export market shares in the last two years and external performance weakened soon after the Global Financial Crisis"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/19/cs-estonia-2025",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-19",
+            "quote": "declining business dynamism has weighed adversely on productivity."
+          }
+        ]
+      },
+      {
+        "title": "The 2022–2024 downturn",
+        "text": "After a jump of 8.1 percent in 2021, income per person fell three years running: 2.5 percent in 2022, 4.3 percent in 2023 and 0.2 percent in 2024. The IMF ties this to supply shocks and a jump in inflation that left prices and costs above the euro area average. It says higher input costs and trade barriers slowed the rebound.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/04/15/mcs-estonia-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-04-15",
+            "quote": "Recent shocks triggered supply side disruptions and a large rise in inflation"
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2024/04/15/mcs-estonia-2024-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2024 Article IV Mission",
+            "date": "2024-04-15",
+            "quote": "inflation has now eased but price and cost levels have shifted up compared to the euro area average, hurting competitiveness."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/07/09/pr-25245-estonia-imf-executive-board-concludes-2025-article-iv-consultation",
+            "publisher": "IMF",
+            "title": "IMF Executive Board Concludes 2025 Article IV Consultation with Estonia",
+            "date": "2025-07-14",
+            "quote": "higher input costs, a legacy of earlier shocks, global policy uncertainty, and trade barriers are preventing a more vigorous rebound."
+          }
+        ]
+      },
+      {
+        "title": "Defence spending and energy prices",
+        "text": "In 2025 Estonia raised its defence spending target. The IMF notes that much military equipment is imported, which limits the boost to local output, and that the war in the Middle East is weighing on the outlook through higher energy prices.",
+        "about": "present",
+        "citations": [
+          {
+            "url": "https://www.imf.org/en/news/articles/2025/05/19/cs-estonia-2025",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2025 Article IV Mission",
+            "date": "2025-05-19",
+            "quote": "Authorities announced a revised defense spending target of at least 5 percent of GDP from 2026."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-06-09",
+            "quote": "High import content of military equipment dampening multiplier effects of defense spending."
+          },
+          {
+            "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+            "publisher": "IMF",
+            "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+            "date": "2026-06-09",
+            "quote": "The war in the Middle East weighing on the near-term outlook through higher energy prices, restraining consumption, investment, and external demand."
+          }
+        ]
+      }
+    ],
+    "since_last_year": {
+      "text": "Income per person grew 1.0 percent in 2025, the first rise after three years of decline. By mid-2026 the IMF reported faster growth, led by household spending after an income tax change, while exports and investment stayed weak and the war in the Middle East pushed energy prices up.",
+      "citations": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-09",
+          "quote": "Real GDP growth strengthened to 2.4 percent in the first quarter from a year earlier."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-09",
+          "quote": "Expansion driven mainly by private consumption (boosted by the introduction of a universal personal income tax allowance)"
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-09",
+          "quote": "Investment remained subdued despite scaling up of defense equipment; exports also remained subdued."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/06/09/pr26193-republic-of-estonia-staff-concluding-statement-of-the-2026-article-iv-mission",
+          "publisher": "IMF",
+          "title": "Republic of Estonia: Staff Concluding Statement of the 2026 Article IV Mission",
+          "date": "2026-06-09",
+          "quote": "Headline inflation declined to a low of 3.2 percent in April, then rose to 4 percent in May, driven by sharply higher energy prices."
+        }
+      ]
+    },
+    "tension": "The IMF dates a weakening in export performance to soon after the 2008–09 crisis, yet income per person grew every year from 2010 to 2019. Much of the low 0.9 percent average for 2008–2025 comes from two deep falls, in 2008–09 and 2022–24, rather than a decade of weak growth. Also, the IMF history says output per person was far above its pre-independence level by the end of the 1990s, but in these data income per person in 1999 was still a little below 1990 and passed it only in 2000."
+  }
+}
