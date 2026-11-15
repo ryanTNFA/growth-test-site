@@ -290,9 +290,9 @@ export function drawStrip(host, ctx) {
   for (const t of TEST_ORDER) {
     const rs = fams.filter((r) => r.test === t);
     if (!rs.length) continue;
-    // On tests 1 and 4 only class A and B evidence counts toward the rating; quantities and perceptions inform.
+    // On tests 1, 3 and 4 only class A and B evidence counts toward the rating; quantities and perceptions inform (test 3 since rubric 0.4.0).
     // Two blocks keep a reader from taking an informing quantity for a price.
-    const split = (t === 'price' || t === 'camels') && rs.some((r) => !r.votes) && rs.some((r) => r.votes);
+    const split = (t === 'price' || t === 'camels' || t === 'circumvention') && rs.some((r) => !r.votes) && rs.some((r) => r.votes);
     if (split) {
       heads.push({ key: `__${t}`, text: `${TEST_LABEL[t].toUpperCase()} · COUNTS`, test: t, first: true });
       keys.push(`__${t}`, ...rs.filter((r) => r.votes).map((r) => r.id));

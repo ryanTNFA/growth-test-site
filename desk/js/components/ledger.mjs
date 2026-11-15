@@ -125,7 +125,7 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
   el.append(h('p', { class: 'lg-key' },
     'Each bar reaches a measure’s signal, −2 to +2. Most rest on two readings shown under the name: the gap from what income predicts, in ' +
     'standard deviations (sd), and the rank among the comparison countries; a changes bar rests on how often investment moved as predicted. ' +
-    'Thicker counts more: class A (a price) thickest, then B (a workaround), C (a quantity), D (an expert rating), and older data thinner. ' +
+    'Thicker counts more: class A (a price) thickest, then B (a workaround), C (a quantity), D (a composite index), and older data thinner. ' +
     'Hollow bars are shown but not counted. A test’s score is the weighted average of its counted bars, pulled toward 0 when its evidence is ' +
     `thin; the price test counts double in the net score. ${thresholdWords(a)}`));
   return el;
@@ -170,6 +170,11 @@ function ruleWords(a, fork) {
   const N = a.N, th = a.thresholds, k = a.counts, t = a.tier, C = a.C ?? 0, E = a.E ?? 0;
   const side = fork ? ['to costly finance', 'to low returns'] : ['toward a problem', 'away from a problem'];
   const agreeing = `${count(C, 'test agrees', 'tests agree')}, pointing`;
+  if (t === 'candidate' && a.subreason === 'corroborated') {
+    // rubric 0.4.0: flagged by recent measures that are shown but not counted; the net score and its lines did not decide this
+    return `the measures that count are missing, old or neutral, and ${word(a.corroboratedBy)} recent measures shown but not counted ` +
+      `all point ${side[0]}, none against: a closer look on those, not on the net score`;
+  }
   if (t === 'candidate') {
     return N != null && N >= th.lookAlone ? `the net score is at or above ${fmt1(th.lookAlone)}, enough on its own`
       : `the net score is at or above ${fmt1(th.look)} and ${agreeing} ${side[0]}`;

@@ -16,10 +16,10 @@ export const TEST_QUESTION = {
 export const TEST_SHORT = { price: 'Price', changes: 'Changes', circumvention: 'Workarounds', camels: 'Camels' };
 /** What each class of evidence is, in a few words. */
 export const CLASS_WORDS = {
-  A: 'a price: measures the cost directly',
-  B: 'a workaround: behaviour that only makes sense if it binds',
-  C: 'a quantity or a survey answer: cannot tell cause from effect',
-  D: 'an expert rating',
+  A: 'a price, or firms’ own experience of rationing: measures the cost directly',
+  B: 'a workaround: costly behaviour that only makes sense if it binds',
+  C: 'a quantity, a stated reason or an expert’s estimate: cannot tell cause from effect',
+  D: 'a composite index',
 };
 
 /**
@@ -125,6 +125,7 @@ export function ratingAnatomy(node, registry, { snapshotYear, byId = {}, set = '
   return {
     id: node.id, tests, N: Number.isFinite(node.N) ? node.N : null, C: Number.isFinite(node.C) ? node.C : null, E: Number.isFinite(node.E) ? node.E : null,
     R: Number.isFinite(node.R) ? node.R : null, tier: node.tier, subreason: node.tier_subreason || null, reason: cannotTellCode(node),
+    corroboratedBy: (node.corroborated_by || []).length,   // engine 0.3.0: the informing families behind a corroborated flag
     speakingMin: num(P, 'concordance_abs_T_min', 0.5),
     thresholds: { look: num(P.candidate, 'N_min', 0.5), lookAlone: num(P.candidate, 'N_alt_min', 1), not: num(P.probably_not, 'N_max', -0.5),
       notAlone: num(P.probably_not, 'N_alt_max', -1), likely: num(P.likely_binding, 'N_min', 1), ruled: num(P.ruled_out, 'N_max', -1) },

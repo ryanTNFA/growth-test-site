@@ -39,6 +39,7 @@ function uniq(xs) {
 export const PRICE_TEST_RULES = ['ab_only', 'exclude_C_D_when_AB_present', 'all_vote'];
 export const PRICE_INFORMS_NOTE = 'quantity: informs, does not vote on the price test';
 export const CAMELS_INFORMS_NOTE = 'class C/D: informs, does not vote on test 4';
+export const CIRC_INFORMS_NOTE = 'class C/D: informs, does not vote on test 3';
 export const PRICE_INFORMS_NOTE_V011 = 'quantity: informs, does not vote while price evidence exists';
 
 function isAB(f) {
@@ -57,14 +58,16 @@ function isAB(f) {
  *       family is present; with none, every family votes.
  *   "all_vote" (v0.1): every family votes.
  * Test 4 (camels) follows params.tiers.camels_test_quantity_rule (rubric v0.1.6): with "ab_only", class C and D
- * camels families inform but do not vote, as on the price test. Tests 2 and 3 are never filtered.
+ * camels families inform but do not vote, as on the price test. Test 3 (circumvention) follows
+ * params.tiers.circumvention_test_quantity_rule the same way (rubric 0.4.0, engine 0.3.0: a quantity or a stated reason
+ * filed under circumvention is not a behaviour that only pays if the constraint binds). Test 2 is never filtered.
  *
  * Weight floor (v0.1.2, params.tiers.test_weight_floor, 1.0 = the class A weight): a test whose
  * voting weight mass is thinner than the floor is shrunk toward zero, so one class C family at +1
  * gives T = 0.6 and one class A family keeps its full value. Without the floor T_k is the plain
  * weighted mean of v0.1.
  */
-export function testScores(families, tests = TEST_ORDER, priceRule = null, floor = 0, camelsRule = 'all_vote') {
+export function testScores(families, tests = TEST_ORDER, priceRule = null, floor = 0, camelsRule = 'all_vote', circRule = 'all_vote') {
   const rule = priceRule || 'all_vote';
   if (!PRICE_TEST_RULES.includes(rule)) throw new Error(`unknown tiers.price_test_quantity_rule: ${priceRule}`);
   const fl = isNum(floor) && floor > 0 ? floor : 0;
@@ -83,7 +86,7 @@ export function testScores(families, tests = TEST_ORDER, priceRule = null, floor
     } else if (k === 'price' && rule === 'exclude_C_D_when_AB_present' && fams.some(isAB)) {
       voting = fams.filter(isAB);
       informing = fams.filter((f) => !isAB(f));
-    } else if (k === 'camels' && camelsRule === 'ab_only') {
+    } else if ((k === 'camels' && camelsRule === 'ab_only') || (k === 'circumvention' && circRule === 'ab_only')) {
       voting = fams.filter(isAB);
       informing = fams.filter((f) => !isAB(f));
     }
@@ -123,10 +126,11 @@ function hasT(t) {
 export function nodeStats(families, params) {
   const active = families.filter((f) => f.weight > 0);
   const T = params.tiers;
-  const tests = testScores(active, TEST_ORDER, T.price_test_quantity_rule, T.test_weight_floor, T.camels_test_quantity_rule || 'all_vote');
+  const tests = testScores(active, TEST_ORDER, T.price_test_quantity_rule, T.test_weight_floor, T.camels_test_quantity_rule || 'all_vote',
+    T.circumvention_test_quantity_rule || 'all_vote');
   // Informing families are those a test's quantity rule keeps out of its score: the price test's and, under
   // camels_test_quantity_rule "ab_only" (rubric v0.1.6), test 4's. Neither counts toward E.
-  const informingIds = new Set(['price', 'camels'].flatMap((k) => ((tests[k] && tests[k].informing) || []).map((id) => `${k}|${id}`)));
+  const informingIds = new Set(['price', 'camels', 'circumvention'].flatMap((k) => ((tests[k] && tests[k].informing) || []).map((id) => `${k}|${id}`)));
   const isInforming = (f) => informingIds.has(`${f.test}|${f.id}`);
   const countAll = T.evidence_count_rule === 'all_families';
   const voting = countAll ? active : active.filter((f) => !isInforming(f));
@@ -192,11 +196,13 @@ export function nodeStats(families, params) {
     price_not_observed: !!(tests.price && tests.price.not_observed),
     families: active,
     voting_ids: votingIds,
-    informing_families: informing.map((f) => ({ id: f.id, signal: f.signal, class: f.class })),
+    // engine 0.3.0: test, year, measured and downgraded are carried for the corroboration route (assignTier)
+    informing_families: informing.map((f) => ({ id: f.id, signal: f.signal, class: f.class, test: f.test, year: f.year, measured: !!f.measured, downgraded: !!f.downgraded })),
     circumvention_voting: voting.filter((f) => f.test === 'circumvention').map((f) => ({ id: f.id, signal: f.signal, readings: f.readings || [] })),
     test_weights: testWeights,
     price_informing: (tests.price && tests.price.informing) || [],
     camels_informing: (tests.camels && tests.camels.informing) || [],
+    circumvention_informing: (tests.circumvention && tests.circumvention.informing) || [],
   };
 }
 
@@ -228,7 +234,7 @@ function blockers(conds) {
  * which must be present before ruled_out)}.
  * Returns {tier, subreason, reason, blockers: {likely_binding, ruled_out}}.
  */
-export function assignTier(stats, ctx) {
+function assignTierCore(stats, ctx) {
   const P = ctx.params.tiers;
   const F = ctx.F || 0;
   const { N, C, E, R, AB_count, AB_pos, AB_above0, tests } = stats;
@@ -426,6 +432,60 @@ export function assignTier(stats, ctx) {
   };
 }
 
+/**
+ * Corroboration (rubric 0.4.0, engine 0.3.0; params.tiers.corroboration). Where the voting evidence is silent, stale or
+ * neutral, fresh informing evidence that agrees may open a closer look, never more and never a clearance. Returns the
+ * agreeing families, or null. The conditions, all required:
+ *   the node is not excluded (the first decision is a direction; self-discovery's informing families are one construct);
+ *   N, where computed, is not below N_min (the voters do not point away);
+ *   at least families_min distinct informing families no older than max_age_years, not downgraded by a regime rule,
+ *     carry a signal of signal_min or more;
+ *   at least measured_min of them is a measured fact (firms' or markets' own, and not an opinion or an index);
+ *   no such fresh informing family carries a signal of against_signal_max or less.
+ */
+export function corroboration(stats, ctx) {
+  const c = ctx.params.tiers.corroboration;
+  if (!c || !c.enabled || (c.exclude_nodes || []).includes(ctx.nodeId)) return null;
+  if (isNum(stats.N) && stats.N < c.N_min) return null;
+  const fresh = new Map();
+  for (const f of stats.informing_families || []) {
+    if (f.downgraded || !isNum(f.year) || !isNum(f.signal) || ctx.snapshotYear - f.year > c.max_age_years) continue;
+    const prev = fresh.get(f.id);
+    if (!prev || f.signal < prev.signal) fresh.set(f.id, f);   // a family filed under two tests counts once, at its weaker reading
+  }
+  const list = [...fresh.values()];
+  const strong = list.filter((f) => f.signal >= c.signal_min);
+  if (strong.length < c.families_min) return null;
+  if (strong.filter((f) => f.measured).length < c.measured_min) return null;
+  if (list.some((f) => f.signal <= c.against_signal_max)) return null;
+  return strong.sort((a, b) => (a.id < b.id ? -1 : 1));
+}
+
+/**
+ * The tier of a node: the seven-step assignment (assignTierCore), then the corroboration route. A node the seven steps
+ * leave at cannot_tell for want of voting evidence (data gap) or of direction (weak) becomes a candidate, sub-reason
+ * 'corroborated', when fresh informing evidence agrees (corroboration above). A conflicting node is left alone: its voters
+ * disagree, which informing evidence cannot settle. Nothing here can produce probably_not, ruled_out or likely_binding.
+ */
+export function assignTier(stats, ctx) {
+  const core = assignTierCore(stats, ctx);
+  if (core.tier !== 'cannot_tell_data_gap' && core.tier !== 'cannot_tell_weak') return core;
+  const by = corroboration(stats, ctx);
+  if (!by) return core;
+  const list = by.map((f) => `${f.id} ${f.signal > 0 ? '+' : ''}${fmt(f.signal)} (${f.year})`).join(', ');
+  return {
+    tier: 'candidate',
+    subreason: 'corroborated',
+    reason: `candidate (corroborated): the prices and behaviours that vote are silent, stale or neutral here, and ${by.length} recent measures that only inform ` +
+      `all point toward binding (${list}), none against; at least one is a measured fact, not an opinion or an index. A closer look only: ` +
+      `none of this is a price. Voting evidence: ${core.reason}`,
+    blockers: core.blockers,
+    corroborated_by: by.map((f) => f.id),
+    voting_tier: core.tier,
+    voting_subreason: core.subreason,
+  };
+}
+
 /** Data-gap sub-reasons that no economy's data can resolve: the registry has no route to the evidence. */
 const STRUCTURAL_GAP_SUBREASONS = new Set(['connector_not_built', 'no_ab_family', 'no_ab_price_family', 'registry_coverage']);
 export const CANNOT_TELL_REASONS = ['not_connected', 'no_recent_data', 'one_kind', 'mixed'];
@@ -531,8 +591,9 @@ function withoutFamily(families, id) {
   return families.filter((f) => f.id !== id);
 }
 
-function publicFamilies(families, priceInforming = [], camelsInforming = []) {
-  const informing = new Set([...priceInforming.map((id) => `price|${id}`), ...camelsInforming.map((id) => `camels|${id}`)]);
+function publicFamilies(families, priceInforming = [], camelsInforming = [], circInforming = []) {
+  const informing = new Set([...priceInforming.map((id) => `price|${id}`), ...camelsInforming.map((id) => `camels|${id}`),
+    ...circInforming.map((id) => `circumvention|${id}`)]);
   return families.map((f) => {
     const votes = !informing.has(`${f.test}|${f.id}`);
     return {
@@ -545,7 +606,8 @@ function publicFamilies(families, priceInforming = [], camelsInforming = []) {
       indicators: f.indicators,
       readings: f.readings || [],
       votes,
-      vote_note: votes ? null : f.test === 'camels' ? CAMELS_INFORMS_NOTE : PRICE_INFORMS_NOTE,
+      vote_note: votes ? null : f.test === 'camels' ? CAMELS_INFORMS_NOTE : f.test === 'circumvention' ? CIRC_INFORMS_NOTE : PRICE_INFORMS_NOTE,
+      ...(f.measured ? { measured: true } : {}),   // engine 0.3.0: a measured fact (not an opinion, an index or an expert estimate)
       downgraded: !!f.downgraded,              // engine 0.1.9: class C for this economy by a regime rule, with the registry's note
       class_note: f.class_note || null,
     };
@@ -649,7 +711,9 @@ export function evaluateNode({
     price_test_note: priceTestNote,
     informing: informing.slice(),
     informing_dissent: informingDissent,
-    families: publicFamilies(base.families, informing, base.camels_informing || []),
+    families: publicFamilies(base.families, informing, base.camels_informing || [], base.circumvention_informing || []),
+    // engine 0.3.0: for a corroborated candidate, the informing families behind it and the tier the voting evidence alone gave
+    ...(final.corroborated_by ? { corroborated_by: final.corroborated_by, voting_tier: final.voting_tier } : {}),
     tier_by_set: tierBySet,
     fragility: { across_sets: fragileSets, leave_one_family_out: fragileLofo, sets_compared: compared },
     load_bearing: loadBearing.sort(),

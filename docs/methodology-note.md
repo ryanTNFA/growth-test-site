@@ -361,9 +361,11 @@ Within a node, signal-bearing indicators are grouped by (test, family). Family s
 |---|---|---|---|---|
 | A | Prices, shadow prices, hard rationing measures | 1.0 | yes | yes |
 | B | Behaviors that only make sense if the constraint binds (circumvention) | 0.9 | yes | yes |
-| C | Quantities, access measures, perceptions | 0.6 | no (informs) | yes, except Test 4 (informs, rubric 0.1.6) |
-| D | Composite indices and rankings | 0.3 | no (informs) | yes, except Test 4 (informs) |
+| C | Quantities, access measures, stated reasons and perceptions; experts' estimates for a standard case (rubric 0.4.0) | 0.6 | no (informs) | Test 2 only; informs on Tests 3 (rubric 0.4.0) and 4 (rubric 0.1.6) |
+| D | Composite indices | 0.3 | no (informs) | Test 2 only; informs on Tests 3 and 4 |
 | X | Context: displayed, no signal | none | no | no |
+
+**Rubric 0.4.0 (13 November 2026).** The class is derived, not assigned. `registry/evidence_kinds.json` records for each family what it reads and whose experience it records; a family is class A or B only when it reads a price, firms' own experience of rationing, a costly behaviour or latent demand, and the experience is firms' or markets' own. Where the voting evidence leaves an area at cannot tell, recent informing evidence that agrees can make it a candidate (sub-reason `corroborated`; `params.tiers.corroboration`), and nothing more. `docs/CHANGELOG-rubric.md`, v0.4.0, has the changes, the attribution runs and the audit behind them.
 
 Economy-specific downgrades of a class A or B indicator to class C (the registry class is kept as `class_registry`, the reason as `class_note`):
 

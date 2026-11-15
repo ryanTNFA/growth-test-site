@@ -2,7 +2,7 @@
 
 *A plain-language guide for program officers, Hill staff and managers. Companion to the Growth Test Methodology Note, v0.1 (rubric 0.1.7, engine 0.1.5, data snapshot 2026-10-24). The New Foreign Assistance (TNFA), 29 October 2026; updated 31 October.*
 
-**The Growth Test is a prototype.** Its ratings are uncalibrated and may be wrong; most areas read “unclear” because public data cannot settle them. Use it to sharpen questions, not to settle them.
+**The Growth Test is in Beta.** Its ratings are uncalibrated and may be wrong; most areas read “unclear” because public data cannot settle them. Use it to sharpen questions, not to settle them.
 
 ## 1. What question it answers
 
@@ -28,11 +28,11 @@ The ratings are deliberately lopsided. The tool needs much more evidence to rule
 
 ## 3. How confident to be
 
-- **It is a prototype.** Its thresholds are starting points, and some were set after looking at results; none has been calibrated against outside judgement. Treat every rating as a starting point.
-- **Most answers are "unclear".** About nine in ten ratings across all countries are a form of "unclear". Two areas (domestic savings, land) cannot be rated for any country with the data connected today; crime can be rated only where a firm survey since 2018 asked about security costs, because the newest surveys no longer do. Self-discovery is rated from its own trade evidence (the discovery gap), and policy uncertainty is described as context, not rated. Every "unclear" says why: the evidence isn't connected yet, there is no recent data, only one kind of evidence speaks, or the evidence points both ways. An "unclear" is an honest answer, not a failure.
+- **It is a Beta.** Its thresholds are starting points, and some were set after looking at results; none has been calibrated against outside judgement. Treat every rating as a starting point.
+- **Most answers are "unclear".** About nine in ten ratings across all countries are a form of "unclear". Two areas (international finance, land) cannot be rated for any country with the data connected today, and taxes can only be flagged where recent facts corroborate (their price-like measures are experts' estimates for a standard case, or quantities, which inform and do not vote); crime can be rated only where a firm survey since 2018 asked about security costs, because the newest surveys no longer do. Self-discovery is rated from its own trade evidence (the discovery gap), and policy uncertainty is described as context, not rated. Every "unclear" says why: the evidence isn't connected yet, there is no recent data, only one kind of evidence speaks, or the evidence points both ways. An "unclear" is an honest answer, not a failure.
 - **Ratings depend on the comparison countries.** Each country is compared with countries of similar income, size, resource dependence and geography, and also with its region and with countries that grew fast from a similar starting point. A rating that changes a lot across these comparisons cannot reach the top or bottom rating. The page shows which countries were used.
 - **Firm surveys are often several years old.** Older evidence counts for less, and a rating needs at least one price or workaround measure from the last eight years.
-- **The strongest ratings are rare.** In the current run (rubric 0.3.1) four of the roughly 2,800 ratings across 217 countries reach an extreme: one is "ruled out" (business regulation in Uzbekistan) and three are "likely a main constraint" (finance in Maldives, electricity in Niger, human capital in Zambia). An earlier version had seven, all about business regulation, each resting on a count of new firms, a measure too indirect to decide an extreme rating; that route was closed. Expect "worth a closer look" and "probably not" to be the strongest answers you usually see. *(Methodology Note §4.9, §6 and §7.1)*
+- **The strongest ratings are rare.** In the current run (rubric 0.4.0) two of the roughly 2,800 ratings across 217 countries reach an extreme, both "likely a main constraint" (finance in Maldives, electricity in Niger); none is "ruled out". An earlier version had seven, all about business regulation, each resting on a count of new firms, a measure too indirect to decide an extreme rating; that route was closed. Expect "worth a closer look" and "probably not" to be the strongest answers you usually see. *(Methodology Note §4.9, §6 and §7.1)*
 
 ## 4. The four tests in plain words
 
@@ -40,10 +40,25 @@ For each area the tool asks the four questions that growth diagnosticians ask.
 
 1. **Is it expensive or rationed?** If something is truly scarce, its price is high or people cannot get it at any price. High real interest rates point to scarce finance; high pay for educated workers points to scarce skills; firms paying bribes point to costly corruption. This is the most important test and counts double.
 2. **When it changes, does investment respond?** If high interest rates hold investment back, investment should fall when rates rise and recover when they fall. The tool checks whether that happened more often than chance over the last 20 years.
-3. **Are people paying to get around it?** Firms that buy generators, fund everything from their own savings, or stay informal are working around a constraint. Workarounds are strong evidence because they cost money.
+3. **Are people paying to get around it?** Firms that buy generators, fund everything from their own savings, or stay informal are working around a constraint. Workarounds are strong evidence because they cost money. A quantity or a stated reason filed here (firms that say they need no loan) is shown and does not count.
 4. **Do the activities that need it least do best?** In a desert the camels thrive and the hippos do not. If finance is scarce, the economy should export unusually little of what needs a lot of finance. Each version of this test must first beat randomly shuffled versions of itself, a placebo check, before it counts. So far only the skills version passes and counts toward the human-capital rating. The finance and transport versions are shown on the charts but do not count.
 
 Every number is compared with what is normal for countries at a similar income level, because almost everything improves as countries get richer. A low score that is normal for a country's income level is not a warning sign. Any rating other than "unclear" needs at least two independent pieces of evidence, at least one of them a recent price or workaround measure. Quantities (how much credit, how many roads) and broad governance indices are shown as context but are never counted as evidence of a high price, because a low quantity can mean low demand rather than scarcity. *(Methodology Note §3 and §4.2–4.5)*
+
+### What counts, and what only informs
+
+A measure counts toward a rating when two things are true of it. It reads the constraint directly: a price, firms' own experience of being rationed (outages, a loan refused, a bribe asked for), a costly behaviour that only pays if the constraint binds, or the camels test. And it records what firms and markets actually met, not an expert's estimate of what a standard firm would meet on paper. Everything else is shown and can disagree, but does not vote: quantities, stated reasons and opinions, composite indices, and the Doing Business style of time-and-cost estimates. The full table, family by family with the reason for each, is `registry/evidence_kinds.json`.
+
+| | What it is | Examples | Votes? |
+|---|---|---|---|
+| A | A price, or firms' own experience of rationing | Real lending rate, returns to schooling, outages in a typical month, loan applications rejected, bribe requests | Yes |
+| B | A costly behaviour that only pays if the constraint binds; the camels test | Generators, private security, financing investment from own funds, informality | Yes |
+| C | A quantity, a stated reason or an opinion; an expert's estimate for a standard case | Credit to GDP, enrolment, remittances, obstacle rankings, days to start a business | No: informs |
+| D | A composite index | Rule-of-law and economic-freedom scores, the Human Capital Index | No: informs |
+
+One exception runs the other way. Where the measures that vote are missing, old or neutral, and at least two recent measures that only inform all point toward a problem, one of them a measured fact and none against, the tool says **worth a closer look, on recent facts that only inform**, and names them. A homicide rate far above what income predicts, with most firms calling crime a major obstacle, is a reason to look even when the last survey of firms' security costs is years old. This route never clears an area and never reaches the strongest rating.
+
+The method works best where prices exist: finance, skills, power, transport. In the risk and policy areas (macro risk, property rights, taxes, regulation, crime) true prices are scarce, and the ratings rest on fewer and rougher measures. Read those areas with more caution.
 
 ## 5. What it cannot see
 
@@ -59,7 +74,7 @@ Every number is compared with what is normal for countries at a similar income l
 
 **The growth question.** Kenya's income per person grew 2.5 percent a year over 2016–2025, with no single dominant pattern (no recent slowdown, collapse or unusual volatility). Investment was 17.6 percent of GDP, low for Kenya's income level (one standard deviation below what is typical).
 
-**Bottom line.** Nothing is ruled out and nothing is "probably not". One area is worth a closer look: **corruption** (under micro-level risks). Everything else is unclear.
+**Bottom line.** Nothing is ruled out and nothing is "probably not". Two areas are worth a closer look: **micro-level risks**, where crime and corruption are both flagged, and **electricity**. Everything else is unclear.
 
 **Corruption: worth a closer look.** In the 2025 World Bank Enterprise Survey, 33 percent of Kenyan firms reported at least one bribe request. That is far above what is typical at Kenya's income level (3.6 standard deviations above) and the highest of Kenya and its ten comparison countries. Thirty-nine percent reported informal payments to public officials, and 25 percent said they were expected to give gifts in meetings with tax officials; both are also far above expectation.
 
@@ -77,7 +92,7 @@ What it does not mean: it does not say corruption is *the* binding constraint in
 
 The overall score is close to zero, so the rating is "unclear". A program premised on "Kenyan firms cannot get credit" cannot cite this tool in support, and neither can an argument that finance has been ruled out.
 
-**Electricity shows how comparisons matter.** Against the default comparison countries, electricity is "unclear"; against countries that grew fast from a similar starting point, it is "worth a closer look". When a rating depends on the comparison, the page shows it, and the rating cannot reach the strongest levels. *(Methodology Note §3, §4 and §5)*
+**Electricity: worth a closer look, and it shows how comparisons matter.** In the 2025 survey 61 percent of Kenyan firms owned or shared a generator, the most of Kenya and its ten comparison countries, and 75 percent experienced outages. Those are a costly workaround and firms' own experience of rationing, so both count. Only 2 percent of firms named electricity as their biggest obstacle; that is an opinion, so it is shown and does not vote, and it keeps the rating from going higher. Against the default comparison countries and against countries that grew fast from a similar starting point, electricity is "worth a closer look"; against Kenya's region it is "unclear". When a rating depends on the comparison, the page shows it, and the rating cannot reach the strongest levels. *(Methodology Note §3, §4 and §5)*
 
 ## 7. How to cite it
 
@@ -104,4 +119,4 @@ No. It means the evidence points in different directions (interest rates are hig
 No. Every number is a national average. The tool cannot see differences within a country, between sectors, or between kinds of firms.
 
 **5. What must a citation of a Growth Test rating include?**
-The country, the area, the rating's exact name, the version numbers or data snapshot date, and the fact that the tool is an unvalidated prototype. Ideally also the key number behind the rating and its year.
+The country, the area, the rating's exact name, the version numbers or data snapshot date, and the fact that the tool is an unvalidated Beta. Ideally also the key number behind the rating and its year.

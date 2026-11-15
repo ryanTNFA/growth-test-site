@@ -7,7 +7,9 @@
 // State travels in the URL: every tab link carries the comparison set, edited peers and overrides
 // (#set=, #peers=, #o=) read at click time, because the pages rewrite their hash as the user works.
 // Import this module first on every page: it mounts synchronously, before initTheme looks for its button.
-// The footer carries #versions (pages with data fill it), the prototype sentence, the citation and the affiliation note.
+// The footer carries #versions (pages with data fill it), the Beta sentence, the citation and the affiliation note.
+// Beta (13 November 2026): the brand carries a Beta mark, the bar a Feedback button, and any element marked data-feedback
+// on any page opens the feedback box (components/feedback.mjs, loaded on the first click).
 import { h, withData, qs, getJSON, dataBase, SETTINGS, SETTING_LABEL, SETTING_HINT, currentSetting, HASH, CARRIED_KEYS, readHash,
   setHashKeys } from './common.mjs';
 import { fillTestMarks } from './components/testmark.mjs';
@@ -67,8 +69,10 @@ function row1() {
   return h('div', { class: 'nav-global' },
     h('div', { class: 'wrap' },
       h('a', { class: 'brand', href: withData('/growth-test-site/desk/') }, h('img', { class: 'brand-logo', src: '/growth-test-site/desk/img/tnfa-logo.webp',
-        alt: 'The New Foreign Assistance', width: '72', height: '36' }), h('strong', {}, NAME), h('span', {}, 'prototype')),
-      h('nav', { class: 'topnav', 'aria-label': 'Site' }, ...items, menu)));
+        alt: 'The New Foreign Assistance', width: '72', height: '36' }), h('strong', {}, NAME),
+        h('span', { class: 'beta-chip', title: 'Beta: the ratings are uncalibrated and may be wrong' }, 'Beta')),
+      h('nav', { class: 'topnav', 'aria-label': 'Site' }, ...items, menu,
+        h('button', { class: 'btn quiet small fb-open', type: 'button', 'data-feedback': '' }, 'Feedback'))));
 }
 
 const isCurrentTab = (key) => PAGE === key;
@@ -153,13 +157,15 @@ export function refreshNav() {
   if (note) note.textContent = `Compared with ${SET_WORDS[set] || set}`;
 }
 
-/** The footer, the same on every page: the data vintage (filled by pages that have one), the prototype sentence, the citation and the affiliation note. */
+/** The footer, the same on every page: the data vintage (filled by pages that have one), the Beta sentence, the citation and the affiliation note. */
 function footer() {
   return h('div', { class: 'wrap' },
     h('p', { id: 'versions' }),
     h('p', {},
-      `${NAME}, a prototype by The New Foreign Assistance. Overrides and comparator edits live in the page URL and are never sent anywhere. This ` +
-        'tool never recommends funding; it states what the public evidence can and cannot support.'),
+      `${NAME} is in Beta, by The New Foreign Assistance: its ratings are uncalibrated and may be wrong. Overrides and comparator edits live ` +
+        'in the page URL and go nowhere unless you choose to send one. This tool never recommends funding; it states what the public evidence ' +
+        'can and cannot support. ',
+      h('button', { class: 'btn quiet small', type: 'button', 'data-feedback': '' }, 'Tell us what looks off')),
     // R6: the DOI record's own title follows at the next tagged release
     h('p', { id: 'cite-as' }, 'Cite as: Moore, Ryan A., and The New Foreign Assistance, ', h('em', {}, 'The Growth Test'), ', ',
       h('a', { href: 'https://doi.org/10.5281/zenodo.23924472' }, 'doi:10.5281/zenodo.23924472'),
@@ -172,17 +178,27 @@ function footer() {
         'Atlas of Economic Complexity'), ' for the Growth Lab’s own tools.'));
 }
 
+/** Beta: every element marked data-feedback opens the feedback box; the component loads on the first press. No document-level listener (C4). */
+function wireFeedback() {
+  const open = (e) => {
+    e.preventDefault();
+    import('./components/feedback.mjs').then((m) => m.openFeedback()).catch((err) => console.error(err));
+  };
+  for (const el of document.querySelectorAll('[data-feedback]')) el.addEventListener('click', open);
+}
+
 function mount() {
   fillTestMarks(); // the four tests' marks on the static pages (<span data-tmark="price">)
   const foot = document.querySelector('footer.foot');
   if (foot && !foot.childElementCount) foot.replaceChildren(footer());
   const header = document.querySelector('header.topbar');
-  if (!header) return;
+  if (!header) { wireFeedback(); return; }
   const iso = currentIso();
   const showCountry = !!iso && TABS.some((t) => t.key === PAGE);
   if (showCountry) { try { localStorage.setItem('gt-last-iso', iso); } catch { /* the bar falls back to the Countries page */ } }
   header.replaceChildren(row1(), showCountry ? row2(iso) : '');
   header.classList.add('two-row');
+  wireFeedback();
   if (!showCountry) return;
   refreshNav();
   window.addEventListener('hashchange', refreshNav); // back and forward

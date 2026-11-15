@@ -778,3 +778,34 @@ details[open] > .gt-fold-sum::after { transform: rotate(-135deg); }
 .tm-list { list-style: none; margin: 4px 0 8px; padding: 0; }
 .tm-list li { margin: 4px 0; padding-left: 2em; text-indent: -2em; } /* wrapped lines hang under the words, not the mark */
 @media (forced-colors: active) { .tmark { background: none; border: 1px solid CanvasText; } }
+
+/* ---------- Beta and feedback (13 November 2026): shell.mjs, card.mjs, components/feedback.mjs ----------
+   The Beta mark beside the name; the feedback box (a native dialog); the one-line check under a rating; the Beta note. */
+@layer components {
+.brand .beta-chip { display: inline-block; color: var(--text); font-family: var(--sans); font-size: 0.6875rem; letter-spacing: 0.16em;
+  text-transform: uppercase; border: 1px solid var(--brand-amber); padding: 1px 6px; }
+.fb-open { margin-left: 2px; }
+.fb-dialog { width: min(34rem, calc(100vw - 2 * var(--gutter))); max-height: calc(100vh - 2rem); padding: 0; border: 1px solid var(--rule-strong);
+  background: var(--surface); color: var(--text); box-shadow: var(--elev-2); }
+.fb-dialog::backdrop { background: rgba(28, 46, 74, 0.45); }
+.fb-form { display: grid; gap: 8px; padding: 20px 22px; }
+.fb-form h2 { margin: 0 0 2px; font-family: var(--serif); font-weight: 500; font-size: 1.375rem; }
+.fb-form label { font-size: 0.8125rem; color: var(--muted); }
+.fb-form label.btn { color: var(--text); }
+.fb-form textarea { min-height: 96px; font-family: var(--sans); font-size: 0.9375rem; }
+.fb-form input[type="email"] { width: 100%; }
+.fb-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fb-shot { display: flex; align-items: flex-start; gap: 10px; }
+.fb-shot img { max-width: 220px; max-height: 140px; border: 1px solid var(--rule); }
+.fb-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.fb-about, .fb-privacy, .fb-status, .fb-done { margin: 0; }
+.fb-done { font-family: var(--serif); font-size: 1.0625rem; }
+.fb-actions { display: flex; gap: 8px; margin-top: 4px; }
+.fb-check { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule);
+  font-size: 0.8125rem; }
+.fb-check-q { color: var(--muted); }
+.beta-note { margin: 14px 0 0; padding: 8px 12px; border-left: 3px solid var(--brand-amber); background: var(--surface-2); font-size: 0.875rem;
+  max-width: 62ch; }
+.beta-note .btn { margin-left: 6px; }
+@media print { .fb-open, .fb-check, .beta-note .btn, .foot [data-feedback] { display: none; } }
+}

@@ -4,7 +4,7 @@
 // that page's HTML, or one of three shell-drawn controls), the words beside it, and sometimes a check question. Every
 // number and rating quoted here is pinned to desk/data/IDN.json and to the rubric by tests/test_tour.py, so a rubric
 // change cannot silently make a stop lie. The stops speak in the tool's voice only: no TNFA view, no "fund this".
-export const RUBRIC = '0.3.1';
+export const RUBRIC = '0.4.0';
 export const TOUR_ISO = 'IDN';
 export const TOUR_COUNTRY = 'Indonesia';
 
@@ -57,9 +57,9 @@ export const TOUR = [
     n: 4, title: 'The first decision is a direction', page: `/growth-test-site/desk/country.html?iso=${TOUR_ISO}`, anchor: '#k-fork', keep: ['#ctree-host'], anchorName: 'the first decision’s line',
     say: [
       'Above the lists sits the tree’s first fork: is investment held back because finance is dear or rationed, or because there are few projects worth financing? Both are constraints, so the fork is never rated "constraint or not". Its four tests are the finance tests, and its score is the finance side’s: positive leans to costly finance, negative to low returns.',
-      'For Indonesia the four tests lean to costly finance, not established, while the three quick statistics the method reads first fall between the table’s rows. The compact tree beside the question shows the same fork and the two branches below it.',
+      'For Indonesia the four tests cannot tell which side. The share of firms fully credit constrained is high for its income, which points to costly finance; few loan applications are rejected, which points the other way. The three quick statistics the method reads first fall between the table’s rows. The compact tree beside the question shows the same fork and the two branches below it.',
     ],
-    look: ['"Leans to finance", with the fact that carries it: the share of firms fully credit constrained.', 'In the compact tree, the finance branch above and the low-returns branch below, each square an area’s rating.'],
+    look: ['"Cannot tell which side", with the two facts that pull apart: firms fully credit constrained, and loan applications rejected.', 'In the compact tree, the finance branch above and the low-returns branch below, each square an area’s rating.'],
     mindbook: 'Mindbook, the top of the tree: cost of finance versus low returns.',
   },
   {
@@ -76,7 +76,7 @@ export const TOUR = [
     n: 6, title: 'Three statistics, then four tests', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}`, anchor: '#topsplit', anchorName: 'the first-decision table',
     say: [
       'The method starts with three quick statistics: the real lending rate, credit growth and investment. A high rate with slow credit and low investment reads as a finance-supply problem; a low rate with low investment reads as low demand for investment, which points to low returns. Indonesia’s rate is high, credit grew slowly, but investment is not low, so the table says "indeterminate": the pattern fits no row.',
-      'The four finance tests, which add rationing, co-movement and working-around measures, lean to finance. When the two readings differ, the page shows both: a pattern is not a verdict.',
+      'The four finance tests, which add rationing, co-movement and working-around measures, do not settle it either: they point slightly toward costly finance and stop short of a lean. The page shows both readings side by side: a pattern is not a verdict.',
     ],
     look: ['The row the three statistics fall in, and the thresholds beside each statistic.', 'The sentence that reads the fork from the four tests, apart from the table.'],
   },
@@ -84,12 +84,12 @@ export const TOUR = [
     n: 7, title: 'Four tests on one area, and who votes', page: `/growth-test-site/desk/areas.html?iso=${TOUR_ISO}&node=N0`, anchor: '#drawer .ledger', keep: ['#drawer .drawer-head', '#drawer .plain-read'], anchorName: 'the ledger in the open card',
     say: [
       'A binding constraint shows in four ways. Its price is high (test 1). Investment moves when it moves (test 2). Firms pay to work around it (test 3). Activities that need little of it do unusually well (test 4, camels and hippos). One test can be fooled; the method asks several kinds of evidence to agree.',
-      'Each measure carries a class. A measures the cost directly (a price: the real lending rate, the share of firms fully credit constrained). B is behaviour that only makes sense if the constraint binds (borrowers discouraged by terms; firms financing investment from their own funds). C is a quantity or a survey answer that cannot tell cause from effect (bank liquidity, loan rejections): it informs but does not vote on the price test. D is an expert rating; it never decides.',
-      'On the fork for Indonesia the price test points toward costly finance and the workarounds test is near zero; two tests agree, where "points to" would need three. So the card says "leans to finance", and "Why not higher" says exactly why.',
+      'Each measure carries a class, and the class follows from what the measure reads. A reads the cost directly, or firms’ own experience of being rationed (the real lending rate, the share of firms fully credit constrained, loan applications rejected). B is a costly behaviour that only makes sense if the constraint binds (firms financing investment from their own funds). C is a quantity, a stated reason or an opinion, which cannot tell cause from effect (bank liquidity, borrowers who say the terms put them off): it is shown and does not vote. D is a composite index; it never decides. An expert’s estimate for a standard case informs too, whatever it measures.',
+      'On the fork for Indonesia the price test points toward costly finance, mildly: two class A measures say so and loan rejections pull the other way. The changes test agrees, the workarounds test sits at zero, and the net score, about 0.3, is short of the 0.5 a lean needs. So the card says "cannot tell which side" and names the measures on each side.',
     ],
-    look: ['One axis for everything: a measure’s signal, a test’s score, the net score, −2 at the left and +2 at the right.', 'Thicker bars count more; hollow bars are shown but not counted (the class C quantities under the price test).', 'The net score against the dashed lines (±0.5, a rating when two tests agree) and the solid ones (±1, on its own).'],
-    check: { q: 'Two of the four tests agree that finance looks costly in Indonesia. Why does the card stop at "leans to finance"?',
-      a: 'Because a finding needs several kinds of evidence to agree: "points to" needs a score of 1 or more and three agreeing tests, and the fork has a score of about 0.5 with two. One strong test can flag; it takes concordance to establish.' },
+    look: ['One axis for everything: a measure’s signal, a test’s score, the net score, −2 at the left and +2 at the right.', 'Thicker bars count more; hollow bars are shown but not counted (the class C quantities and stated reasons).', 'The net score against the dashed lines (±0.5, a rating when two tests agree) and the solid ones (±1, on its own).'],
+    check: { q: 'Two of the four tests lean toward costly finance in Indonesia. Why does the card say "cannot tell which side"?',
+      a: 'Because both are mild and the other two are silent. A lean needs a net score of 0.5 with two agreeing tests, and the fork scores about 0.3: loan rejections, low for Indonesia’s income, hold the price test down, and the changes test is one thin family. Under the Exploratory reading, which lowers the bar to flag, the same evidence reads "leans to finance".' },
     mindbook: 'Mindbook, the four tests and concordance.',
   },
   {
@@ -124,7 +124,7 @@ export const TOUR = [
     n: 11, title: 'Test 4: camels and hippos', page: `/growth-test-site/desk/evidence.html?iso=${TOUR_ISO}&node=N4&test=c12`, anchor: '#sec-c12', keep: ['#h-node', '#test-tabs'], anchorName: 'the camels test',
     say: [
       'In a desert, camels thrive. If skills were the binding constraint, the activities that need few skilled workers would do unusually well and the skill-hungry ones unusually badly. The chart tilts an economy’s exports against each product’s skill intensity; the slope is θ. A negative θ means camels. The test counts only where it beat a shuffled version of itself.',
-      'For Indonesia the tilt is flat: no camels, no hippos. Skills stay "can’t tell: one kind of evidence". Years of schooling and enrolment are quantities, so they inform and never vote; the price of skills (the return to a year of schooling) is old, and the one behaviour that speaks, educated workers unusually unemployed, points toward a problem on its own.',
+      'For Indonesia the tilt is flat: no camels, no hippos. Skills stay "can’t tell: one kind of evidence". Years of schooling, enrolment and graduate unemployment are quantities, so they inform and never vote; the price of skills (the return to a year of schooling) is old; and the one behaviour that votes, firms training their own workers, is less common than Indonesia’s income predicts, which leans slightly away.',
     ],
     look: ['The fitted tilt and θ; the placebo note under the chart.', 'The hippo gap below: whether the skill-heavy products are the ones missing.'],
     mindbook: 'Mindbook, the camels and hippos test; low quantity is not scarcity.',
@@ -144,7 +144,7 @@ export const TOUR = [
     n: 13, title: 'Three readings of the same evidence', page: `/growth-test-site/desk/country.html?iso=${TOUR_ISO}`, hash: { setting: 'exploratory' }, anchor: '#statements-body', anchorName: 'the three lists',
     say: [
       'The Reading switch in the bar above offers three readings of the same evidence. Standard is the only one to cite. Exploratory makes it easier to flag an area for a closer look, never easier to rule one out; Cautious asks for more and stronger evidence before rating anything. The figures never change; only the ratings do.',
-      'This stop has switched to Exploratory. For Indonesia, bank lending (the list calls it intermediation) and transport join "look closer" (each on evidence that leans toward a problem without reaching the Standard bar). Switch to Cautious and the fork, corruption and macro risk all drop to unclear. If a conclusion survives all three, it is worth more.',
+      'This stop has switched to Exploratory. For Indonesia, transport joins "look closer" and the first decision, unclear under Standard, reads "leans to finance" (each on evidence that leans toward a problem without reaching the Standard bar). Switch to Cautious and savings, corruption and macro risk all drop to unclear. If a conclusion survives all three, it is worth more.',
     ],
     look: ['The "Look closer" list, longer under Exploratory.', 'The tag beside each area that says whether it holds under all three readings.', 'Tap Cautious in the bar and watch the lists change; Standard brings them back.'],
     check: { q: 'Under Exploratory, transport is "worth a closer look" for Indonesia. Should a program be built around it?',
@@ -154,7 +154,7 @@ export const TOUR = [
     n: 14, title: 'Comparators are hypotheses', page: `/growth-test-site/desk/summary.html?iso=${TOUR_ISO}`, hash: { set: 'aspirational' }, anchor: '#heat-wrap', keep: ['#c-set', '#key'], anchorName: 'the heat map',
     say: [
       'A comparison set is a hypothesis about who Indonesia should resemble. The default compares it with economies of similar income and structure; this stop has switched to Aspirational, economies that grew fast from Indonesia’s income. One row per area: the benchmark, the four tests, the rating under the chosen set, and your own conclusion beside it.',
-      'Against the fast growers the fork and electricity turn unclear, and macro risk stays "probably not". A verdict that changes with the comparison set is weaker, and the right next step is to ask why Indonesia looks worse than the fast growers on that measure.',
+      'Against the fast growers electricity turns unclear, and macro risk stays "probably not". A verdict that changes with the comparison set is weaker, and the right next step is to ask why Indonesia looks worse than the fast growers on that measure.',
     ],
     look: ['The comparator control above the table, now on Aspirational.', 'The "Depends on the comparison countries" marks, and the hover that shows each set’s rating.'],
     check: { q: 'Electricity is "probably not" against similar economies and unclear against fast growers. Which is right?',

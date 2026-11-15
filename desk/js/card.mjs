@@ -8,6 +8,7 @@ import { nodeCode, h, fmt, fmtSigned, fmtSignal, fmtValue, tierLabel, tierClass,
 import { ratingAnatomy } from './anatomy.mjs';
 import { ledger } from './components/ledger.mjs';
 import { robustChip, reasonTag } from './components/marks.mjs';
+import { ratingCheck, sendReadingButton } from './components/feedback.mjs';
 export { robustChip, reasonTag }; // moved to components/marks.mjs (C7); re-exported for one release
 
 const FOCUSABLE = 'button, [href], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])';
@@ -120,6 +121,10 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     // "why not higher, why not lower" (teaching plan, Q23): the engine's blockers in plain words, for every user
     const why = whyNotLines(node);
     if (why) plainSec.append(fold('Why not higher, why not lower', why)); // D8: the reasons fold under a heading
+    // Beta: one tap to say whether this rating looks right (components/feedback.mjs)
+    if (node.tier !== 'context_only' && node.tier !== 'desk_undiagnosable') {
+      plainSec.append(ratingCheck({ area: nodeId, area_name: plainShort(registry, nodeId), tool_rating: plainTierOf(nodeId, node.tier) }));
+    }
     // Predict first (teaching plan, Q22): the verdict stays hidden until the learner commits and reveals it
     drawer.dataset.node = nodeId;
     drawer.classList.toggle('revealed', revealedSet().has(nodeId));
@@ -221,9 +226,10 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
         'How to read the table: “vs. what income predicts” is the gap to countries at the same income, in standard deviations ' +
           '(+1 is roughly the top sixth); the percentile is across all economies. “Toward / away” is the score the measure gives, ' +
           'from −2 (clearly away from a problem) to +2 (clearly ' +
-          'toward one). Evidence type: A prices and rationing, B working around the problem, C quantities and opinions, D composite indices.'));
+          'toward one). Evidence type: A prices and rationing, B working around the problem, C quantities, opinions and ' +
+          'expert estimates, D composite indices.'));
       if (fams.some((f) => f.votes === false)) sec.append(h('p', { class: 'small muted', style: 'margin-top:6px' },
-        'Measures marked “informs, does not vote” are quantities or opinions (class C/D): ' +
+        'Measures marked “informs, does not vote” are quantities, opinions, composite indices or experts’ estimates for a standard case (class C/D): ' +
           'they are shown, and listed on the other side where they disagree, ' +
           'but they do not move the score.'));
       drawer.append(sec);
@@ -381,6 +387,11 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     const osec = h('section', {}, h('h3', {}, 'Your override'));
     if (ov) osec.append(h('div', { class: 'override-current' }, h('strong', {}, plainTierOf(nodeId, ov.tier)), ov.note ? ` — ${ov.note}` : '', h('div',
       { class: 'small muted' }, 'Shown next to the tool\'s rating in the memo; lives in this page\'s URL.')));
+    // Beta: the reader may send their rating and its reason to the team; nothing leaves the page otherwise
+    if (ov) {
+      osec.append(sendReadingButton({ area: nodeId, area_name: plainShort(registry, nodeId), tool_rating: plainTierOf(nodeId, node.tier),
+        their_rating: plainTierOf(nodeId, ov.tier), note: ov.note || '' }));
+    }
     const sel = h('select', { id: 'ov-tier', 'aria-label': 'Your rating' }, h('option', { value: '' }, 'Choose a rating…'), USER_TIERS.map((t) => h('option',
       { value: t, selected: ov && ov.tier === t ? true : null }, plainTierOf(nodeId, t))));
     const note = h('textarea', { id: 'ov-note', placeholder: 'Required: why you disagree, with the evidence you rely on.',
@@ -486,12 +497,13 @@ const TEST_NOUN = {
   circumvention: 'firms paying to get around it',
   camels: 'which industries do better without it',
 };
-const CLASS_SHORT = { A: 'price or rationing', B: 'strong indirect evidence', C: 'quantity or opinion', D: 'composite index', X: 'context' };
+const CLASS_SHORT = { A: 'price or rationing', B: 'strong indirect evidence', C: 'quantity, opinion or expert estimate', D: 'composite index', X: 'context' };
 const CLASS_PLAIN = {
-  A: 'Class A: prices, shadow prices and hard measures of rationing (weight 1.0)',
-  B: 'Class B: behaviour that only makes sense if the constraint binds, such as owning a generator (weight 0.9)',
-  C: 'Class C: quantities, access measures and firm or household opinions (weight 0.6)',
-  D: 'Class D: composite indices and rankings (weight 0.3, never decisive)',
+  // rubric 0.4.0 (registry/evidence_kinds.json): the class follows from what a measure reads and whose experience it records
+  A: 'Class A: prices, shadow prices and firms’ own experience of rationing (weight 1.0)',
+  B: 'Class B: costly behaviour that only makes sense if the constraint binds, such as owning a generator, and the camels test (weight 0.9)',
+  C: 'Class C: quantities, stated reasons and opinions, and experts’ estimates for a standard case (weight 0.6; shown, does not vote)',
+  D: 'Class D: composite indices (weight 0.3, never decisive)',
   X: 'Class X: context, no vote',
 };
 const leanWord = (x) => (x == null ? '' : x >= 0.5 ? 'toward a problem' : x <= -0.5 ? 'away from a problem' : 'near zero');
@@ -613,6 +625,20 @@ export function topFacts(node, ctx, side = 1, k = 2) {
     return { family: f, r: rows[0], text: factText(rows[0], ctx) };
   });
 }
+/**
+ * The facts behind a corroborated flag (engine 0.3.0, node.corroborated_by): the informing families that agree, a measured fact
+ * first, each as one sentence. @param {any} node @param {any} ctx @param {number} k
+ */
+export function corroboratingFacts(node, ctx, k = 3) {
+  const ids = (node && node.corroborated_by) || [];
+  const byId = ctx.byId || Object.fromEntries((ctx.indicators || []).map((r) => [r.id, r]));
+  const fams = (node.families || []).filter((f) => ids.includes(f.id));
+  fams.sort((a, b) => (Number(!!b.measured) - Number(!!a.measured)) || (b.signal - a.signal) || (a.id < b.id ? -1 : 1));
+  return fams.slice(0, k).map((f) => {
+    const rows = (f.indicators || []).map((id) => byId[id]).filter((r) => r && r.value_ref != null).sort((a, b) => sigOf(b, ctx) - sigOf(a, ctx));
+    return rows.length ? { family: f, r: rows[0], text: factText(rows[0], ctx) } : null;
+  }).filter(Boolean);
+}
 /** Span of the years behind a node's measures. */
 export function evidenceYears(node) {
   const ys = (node && node.families ? node.families : []).map((f) => f.year).filter((y) => Number.isFinite(y));
@@ -726,7 +752,14 @@ export function plainSummary(node, ctx, { brief = false } = {}) {
   const toward = topFacts(ev, ctx, 1, brief ? 1 : 2), away = topFacts(ev, ctx, -1, 1);
   const s = [];
   const via = ev !== node ? ` The rating comes from ${evShort}, one of ${node.sub_nodes.length} sub-areas.` : '';
-  if (t === 'likely_binding' || t === 'candidate') {
+  if (t === 'candidate' && ev.tier_subreason === 'corroborated') {
+    // rubric 0.4.0: flagged by recent facts that only inform, where the prices and behaviours that vote are missing, old or neutral
+    const by = corroboratingFacts(ev, ctx, brief ? 1 : 3);
+    s.push(`Worth a closer look, on recent facts that only inform.${via}`);
+    if (by.length) s.push(`Pointing toward a problem: ${by.map((x) => x.text).join('; ')}.`);
+    if (!brief) s.push('The prices and behaviours that would settle this are missing, old or neutral here, and none of these facts is a price: ' +
+      'a reason to look, not a finding.');
+  } else if (t === 'likely_binding' || t === 'candidate') {
     s.push(t === 'likely_binding' ? `Likely a main constraint, still to be confirmed in-country.${via}` : `Worth a closer look, not established.${via}`);
     if (toward.length) s.push(`Points toward a problem: ${toward.map((x) => x.text).join('; ')}.`);
     if (!brief) s.push(away.length ? `Points the other way: ${away[0].text}.` : 'No scored measure points the other way.');

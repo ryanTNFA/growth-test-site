@@ -20,7 +20,7 @@ import { evaluateNode, rollupNode, rankNodes, statements, bootstrapRanks, applyT
 import { topSplit, RATE_SOURCES } from './topsplit.mjs';
 import { growthUniverse, growthProblem } from './growth.mjs';
 
-export const ENGINE_VERSION = '0.2.0';
+export const ENGINE_VERSION = '0.3.0';
 export const DEFAULT_SETS = ['structural', 'regional', 'aspirational'];
 export const DESK_SERIES = ['NY.GDP.PCAP.KD', 'NY.GDP.PCAP.KD.ZG', 'NE.GDI.FTOT.ZS', 'FR.INR.RINR', 'FS.AST.PRVT.GD.ZS', 'FP.CPI.TOTL.ZG'];
 export const RATIONING_INDICATOR = 'IC.FRM.CRDC.FL.ZS';
@@ -433,7 +433,10 @@ export function registryVotingCapacity(registry, nodeIds, params) {
   for (const id of nodeIds) sets[id] = new Set();
   for (const ind of R.indicators) {
     if (ind.class === 'X') continue;
-    const canVote = ind.test !== 'price' || rule === 'all_vote' || ind.class === 'A' || ind.class === 'B';
+    // engine 0.3.0: tests 3 and 4 follow their own quantity rules, like the price test
+    const T = (params && params.tiers) || {};
+    const tRule = ind.test === 'price' ? rule : ind.test === 'camels' ? T.camels_test_quantity_rule : ind.test === 'circumvention' ? T.circumvention_test_quantity_rule : 'all_vote';
+    const canVote = ind.class === 'A' || ind.class === 'B' || (tRule || 'all_vote') === 'all_vote';
     if (!canVote) continue;
     for (const n of ind.nodes || []) if (sets[n]) sets[n].add(`${ind.test}|${ind.family}`);
   }
@@ -526,6 +529,9 @@ function unscoredNode(def, tier, reason) {
  */
 export function assembleVerdicts({ indicators, comovement: cm, setMembers, activeSet, registry, params, snapshotYear, topSplitRow = null, topSplit: topSplitObj = null, seed, bootstrap = true, excludeFromPool = [], settings = true, tiersOnly = false }) {
   const R = normalizeRegistry(registry);
+  // engine 0.3.0 (rubric 0.4.0, registry/evidence_kinds.json): a measured fact is firms' or markets' own experience and not an
+  // opinion or an index; only such a family can anchor a corroborated candidate. Read from the registry, not carried on each record.
+  const measuredIds = new Set(R.indicators.filter((d) => d.basis === 'own' && d.reads && d.reads !== 'perception' && d.reads !== 'index').map((d) => d.id));
   const setNames = Object.keys(setMembers);
   // Sets that enter the fragility check and the bootstrap pool: those with members, minus any
   // default set the caller says a custom list replaces (v0.1.2, recomputeWithPeers), so that a
@@ -549,6 +555,7 @@ export function assembleVerdicts({ indicators, comovement: cm, setMembers, activ
           readings: readingsForSet(i, s),
           downgraded: !!i.class_note,
           class_note: i.class_note || null,
+          measured: measuredIds.has(i.id),
         })),
       ...(cm || [])
         .filter((c) => isNum(c.signal) && isNum(c.weight))

@@ -288,7 +288,7 @@ export function buildFamilies(records, nodeId) {
       g = { id: r.family, test: r.test, members: [] };
       groups.set(key, g);
     }
-    g.members.push({ id: r.id, signal: r.signal, weight: r.weight, class: r.class, year: r.year, readings: Array.isArray(r.readings) ? r.readings : null, downgraded: !!r.downgraded, class_note: r.class_note || null });
+    g.members.push({ id: r.id, signal: r.signal, weight: r.weight, class: r.class, year: r.year, readings: Array.isArray(r.readings) ? r.readings : null, downgraded: !!r.downgraded, measured: !!r.measured, class_note: r.class_note || null });
   }
   const families = [];
   for (const g of groups.values()) {
@@ -318,6 +318,7 @@ export function buildFamilies(records, nodeId) {
       readings: [...readings].sort(),
       downgraded,
       class_note: classNote,
+      measured: g.members.some((m) => m.measured),   // engine 0.3.0
       members: g.members,
     });
   }
