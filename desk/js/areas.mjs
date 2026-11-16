@@ -538,7 +538,7 @@ function renderProvenance() {
       const regInd = reg.indicatorById[r.id] || {};
       const formula = r.formula || regInd.formula || null;
       if (r.value_ref == null && r.stale_year != null) flags.push(h('span', { class: 'flag warn' }, `outside window: newest ${r.stale_year}`));
-      else if (r.value_ref == null) flags.push(h('span', { class: 'flag' }, r.source === 'derived' && /unavailable/.test(String(formula || '')) ? 'not available in prototype' : 'no data in window'));
+      else if (r.value_ref == null) flags.push(h('span', { class: 'flag' }, r.source === 'derived' && /unavailable/.test(String(formula || '')) ? 'not available yet' : 'no data in window'));
       else if (isStale(r.year_ref, sy, limit)) flags.push(h('span', { class: 'flag warn' }, `stale: ${sy - r.year_ref} years`));
       if (r.recency_mult != null && r.recency_mult < 1 && r.value_ref != null && r.class !== 'X') flags.push(h('span', { class: 'flag' }, `recency × ${r.recency_mult}`));
       if (r.n_ref != null && r.n_ref > 1) flags.push(h('span', { class: 'flag' }, `${r.n_ref}-year mean`));

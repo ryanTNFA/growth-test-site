@@ -246,7 +246,7 @@ function heatSVG() {
     p.push(`<text x="${cx + 6}" y="${y + 17}" fill="${text}">${e(plainTierOf(r.id, r.tier))}</text>`);
     if (anyOv && state.overrides[r.id]) p.push(`<text x="${cx + 176}" y="${y + 17}" fill="${text}" font-weight="600">${e(plainTierOf(r.id, state.overrides[r.id].tier))}</text>`);
   });
-  p.push(`<text x="8" y="${H - 12}" fill="${muted}" font-size="11">${e(`The Growth Test (TNFA), prototype. Tests use the verdict layer's ${activeSet()} comparators. Analyst conclusions are the analyst's, not the tool's.`)}</text>`, '</svg>');
+  p.push(`<text x="8" y="${H - 12}" fill="${muted}" font-size="11">${e(`The Growth Test (TNFA), Beta. Tests use the verdict layer's ${activeSet()} comparators. Analyst conclusions are the analyst's, not the tool's.`)}</text>`, '</svg>');
   return { text: p.join(''), w: W, h: H };
 }
 function exportSVG() { downloadText(`${fileBase()}.svg`, heatSVG().text, 'image/svg+xml'); }

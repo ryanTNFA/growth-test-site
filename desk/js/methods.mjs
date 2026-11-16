@@ -1,4 +1,4 @@
-// Methods page (front-door PRD W3, level 3): about the prototype, how it is tested, and the method documents,
+// Methods page (front-door PRD W3, level 3): about the Beta, how it is tested, and the method documents,
 // rendered from the Markdown in docs/ that build_site.py publishes (DOCS there must list the same files).
 import './shell.mjs';
 import { initTheme, h, qs, readHash, writeHash, getJSON, loadRegistry, dataBase, tierClass, missingTestKind, missingTestReason, MISSING_TEST_LABEL } from './common.mjs';

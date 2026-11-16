@@ -73,7 +73,7 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
   w(`# Growth-diagnostics briefing: ${name}, ${c.name}`);
   w();
   if (setting !== 'standard') { w(`> **${setting === 'exploratory' ? 'Exploratory' : 'Cautious'} reading, not the one to cite.** The ratings in this file use the ${setting} reading of the evidence; Standard is the only reading to cite. Tell the user this in your answer.`); w(); }
-  w(`*Made by The Growth Test, a prototype of The New Foreign Assistance${pageUrl ? ` (${pageUrl})` : ''}. Public data as of ${m.snapshot_id}; rubric ${m.rubric_version || '—'}, engine ${m.engine_version || '—'}; reading: ${setting === 'standard' ? 'Standard (the reading to cite)' : `${setting}, not the one to cite`}. The prototype's ratings are uncalibrated. This file was built in the user's browser; nothing was sent anywhere.*`);
+  w(`*Made by The Growth Test, a Beta by The New Foreign Assistance${pageUrl ? ` (${pageUrl})` : ''}. Public data as of ${m.snapshot_id}; rubric ${m.rubric_version || '—'}, engine ${m.engine_version || '—'}; reading: ${setting === 'standard' ? 'Standard (the reading to cite)' : `${setting}, not the one to cite`}. Its ratings are uncalibrated and may be wrong. This file was built in the user's browser; nothing was sent anywhere.*`);
   w();
   w('**How to use this file:** give it to the AI assistant you use (attach it or paste it in) and ask it to follow Part 1. Read the answer critically: the assistant can be wrong, and every number it cites should be checkable in Parts 4 and 5.');
   w();
@@ -85,7 +85,7 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
   w('Work through these steps. If the idea leaves out who benefits, where, or how it is meant to raise investment, say what you are assuming. Part 5 is reference: read in full the areas the idea acts on and those that could bind next, and skim the rest.');
   w();
   w('1. **Mechanism.** Restate the idea in one sentence. Name the area or areas of the tree in Part 3 it would act on, by code (for example N5), and the channel: what becomes cheaper, less risky or more available, and who would then invest more. If it acts on no area of the tree, say so.');
-  w('2. **Evidence on the targeted area.** For each area named in step 1, say what Parts 4 and 5 show: the tool\'s rating, the lean, and which of the four tests point which way, citing indicator codes and years. Judge the evidence yourself rather than repeating the rating: the rating is an uncalibrated prototype output, and "unclear" means the evidence is thin or mixed, not that the area is fine.');
+  w('2. **Evidence on the targeted area.** For each area named in step 1, say what Parts 4 and 5 show: the tool\'s rating, the lean, and which of the four tests point which way, citing indicator codes and years. Judge the evidence yourself rather than repeating the rating: the rating is an uncalibrated Beta output, and "unclear" means the evidence is thin or mixed, not that the area is fine.');
   w('3. **Is it binding?** Give your own reading for each targeted area: likely binding, plausibly binding, probably not binding, or the evidence cannot tell. Use the method\'s logic: a binding constraint has a high shadow price; investment moves when it eases or tightens; firms pay to get around it; and the activities that thrive need little of it.');
   w('4. **Knock-on effects.** If the idea worked and the constraint loosened, would private investment respond, or would another constraint bind next? Point to the areas in Part 4 that are "worth a closer look" or lean toward a problem. Note second-round effects that matter for growth.');
   w('5. **Better-aimed alternatives.** If the evidence points to a different area, say which, and whether a version of the idea could aim at it.');
@@ -175,6 +175,6 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
   }
   w('---');
   w();
-  w('*End of briefing. The Growth Test is a prototype; its ratings are uncalibrated and may be wrong.*');
+  w('*End of briefing. The Growth Test is in Beta; its ratings are uncalibrated and may be wrong.*');
   return out.join('\n');
 }

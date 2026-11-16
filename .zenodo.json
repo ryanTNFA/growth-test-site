@@ -1,0 +1,21 @@
+{
+  "title": "The Growth Test: growth-diagnostics triage on public data",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Moore, Ryan A.",
+      "affiliation": "The New Foreign Assistance"
+    },
+    {
+      "name": "The New Foreign Assistance"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "growth diagnostics",
+    "binding constraints",
+    "Hausmann-Rodrik-Velasco",
+    "development economics",
+    "foreign assistance"
+  ]
+}
