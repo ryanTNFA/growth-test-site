@@ -809,3 +809,23 @@ details[open] > .gt-fold-sum::after { transform: rotate(-135deg); }
 .beta-note .btn { margin-left: 6px; }
 @media print { .fb-open, .fb-check, .beta-note .btn, .foot [data-feedback] { display: none; } }
 }
+
+/* ---------- Sub-areas in a roll-up's card (15 November 2026): card.mjs ----------
+   Each sub-area of micro risk is a row to pick; the picked row's tests and measures show below, in the same card. */
+@layer components {
+.subareas .small { max-width: 62ch; }
+.sub-pick { display: grid; gap: 4px; }
+.sub-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; width: 100%; padding: 8px 12px; border: 1px solid var(--rule);
+  background: var(--surface); color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.sub-row:hover { background: var(--surface-2); }
+.sub-row.on { border-color: var(--text); background: var(--surface-2); }
+.sub-name { flex: 0 0 9.5rem; font-family: var(--serif); font-size: 1.0625rem; }
+.sub-row.on .sub-name { font-weight: 600; }
+.sub-sets { font-size: var(--fs-caption); color: var(--accent); }
+.sub-state { margin-left: auto; font-size: var(--fs-caption); color: var(--muted); }
+.sub-row.on .sub-state { color: var(--text); }
+.sub-up { display: block; margin-bottom: 10px; }
+.sub-read { margin-top: 10px; display: grid; gap: 8px; justify-items: start; }
+.sub-read .plain { margin: 0; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.55; }
+@media print { .sub-state, .sub-read .btn { display: none; } }
+}

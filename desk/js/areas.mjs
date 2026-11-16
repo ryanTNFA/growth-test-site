@@ -70,7 +70,7 @@ async function main() {
       drawer: $('drawer'), scrim: $('scrim'), registry: state.registry,
       getState: () => state,
       onOverride: (id, ov) => { if (ov) state.overrides[id] = ov; else delete state.overrides[id]; writeState(state); renderTreePanel(); renderStatements(); renderOverridesBox(); refreshNav(); },
-      onOpenNode: (id) => card.open(id),
+      onOpenNode: (id, sub) => card.open(id, sub),
     });
   }
 

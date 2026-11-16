@@ -18,14 +18,15 @@ const fold = (label, ...body) => h('gt-fold', {}, h('details', { class: 'k-fold'
 
 /**
  * The node card in its side drawer. getState() supplies the current view; onOverride(id, override | null) records the
- * user's call; onOpenNode(id) opens another card.
- * @param {{drawer: HTMLElement, scrim: HTMLElement, registry: any, getState: () => any, onOverride: (id: string, ov: any) => void, onOpenNode?: (id: string) =>
- * void}} parts
- * @returns {{open: (id: string) => void, close: () => void, refresh: () => void, readonly currentId: string | null}}
+ * user's call; onOpenNode(id, sub) opens another card (sub: the sub-area to show first in a roll-up's card).
+ * @param {{drawer: HTMLElement, scrim: HTMLElement, registry: any, getState: () => any, onOverride: (id: string, ov: any) => void,
+ * onOpenNode?: (id: string, sub?: string) => void}} parts
+ * @returns {{open: (id: string, sub?: string) => void, close: () => void, refresh: () => void, readonly currentId: string | null}}
  */
 export function createCard({ drawer, scrim, registry, getState, onOverride, onOpenNode }) {
   let lastFocus = null;
   let currentId = null;
+  let subPick = null; // the sub-area picked inside a roll-up's card (micro risk); null shows the one that sets the rating
 
   function close() {
     // restore focus before hiding the drawer from assistive technology, so no focused element
@@ -39,9 +40,10 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     document.body.style.overflow = '';
     currentId = null;
   }
-  function open(nodeId) {
+  function open(nodeId, sub) {
     lastFocus = document.activeElement;
     currentId = nodeId;
+    subPick = sub || null;
     render(nodeId);
     drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false'); scrim.classList.add('show');
     document.body.style.overflow = 'hidden';
@@ -49,6 +51,15 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     drawer.scrollTop = 0;
   }
   function refresh() { if (currentId) render(currentId); }
+  /** Show another sub-area's tests and measures in place: the card stays where the reader was, and the focus stays on the row. */
+  function pickSub(sid) {
+    if (!currentId) return;
+    subPick = sid;
+    const top = drawer.scrollTop;
+    render(currentId);
+    drawer.scrollTop = top;
+    const row = /** @type {HTMLElement | null} */ (drawer.querySelector(`.sub-row[data-sub="${sid}"]`)); if (row) row.focus();
+  }
   scrim.addEventListener('click', close);
   document.addEventListener('keydown',
     (e) => { if (e.key === 'Escape' && drawer.classList.contains('open') && !(e.target instanceof Node && drawer.contains(e.target))) close(); });
@@ -83,9 +94,13 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     const pctx = { indicators, byId: indById, setKey, fallbackSet: activeSet, country, registry, nodes: view.nodes, snapshotYear };
     drawer.replaceChildren();
 
-    // header
+    // header; a sub-area's card leads back to its roll-up, which opens with this sub-area shown
+    const up = view.nodes.find((n) => (n.sub_nodes || []).includes(nodeId));
+    const upReg = up ? registry.nodeById[up.id] : null;
     drawer.append(h('div', { class: 'drawer-head' },
       h('div', {},
+        up && onOpenNode ? h('button', { class: 'btn quiet small sub-up', type: 'button', onclick: () => onOpenNode(up.id, nodeId) },
+          `Back to ${upReg ? upReg.short.toLowerCase() : up.id} and its other sub-areas`) : null,
         h('span', { class: 'kicker' }, `${nodeCode(nodeId)} · ${reg && reg.branch ? reg.branch : ''}`),
         h('h2', { id: 'drawer-title' }, reg ? reg.short : nodeId),
         h('div', { class: 'small muted' }, reg ? reg.label : ''),
@@ -100,8 +115,12 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
       h('button', { class: 'btn quiet small drawer-close', type: 'button', 'aria-label': 'Close evidence card', onclick: close }, 'Close')));
 
     if (!node) { drawer.append(h('p', { class: 'note' }, 'This area is not scored in the snapshot.')); return; }
-    // a roll-up (micro risk) carries no evidence of its own: show the sub-area that sets its rating
-    const ev = evidenceNode(node, view.nodes);
+    // a roll-up (micro risk) carries no evidence of its own: rep is the sub-area that sets its rating, and ev the sub-area whose
+    // tests and measures are shown below, which is rep until the reader picks another in the list
+    const rep = evidenceNode(node, view.nodes);
+    const repReg = registry.nodeById[rep.id];
+    const picked = node.sub_nodes && subPick && node.sub_nodes.includes(subPick) ? view.nodes.find((n) => n.id === subPick) : null;
+    const ev = picked || rep;
     const evReg = registry.nodeById[ev.id];
 
     // the plain reading comes first; the rule string sits in a disclosure for analysts
@@ -146,9 +165,9 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     const scored = node.scored !== false && node.N != null;
     if (scored) {
       const inf = node.E_informing != null ? node.E_informing : (node.informing || []).length;
-      const eTxt = node.sub_nodes && ev !== node
+      const eTxt = node.sub_nodes && rep !== node
         ? `${node.E ?? '—'} across all ${node.sub_nodes.length} sub-areas${inf ? ` (+ ${inf} informing)` : ''}; ` +
-          `${evReg ? evReg.short.toLowerCase() : ev.id} itself: ${ev.E ?? '—'}`
+          `${repReg ? repReg.short.toLowerCase() : rep.id} itself: ${rep.E ?? '—'}`
         : `${node.E ?? '—'}${inf ? ` + ${inf} informing (do not vote)` : ''}`;
       rule.append(h('dl', { class: 'kv', style: 'margin-top:10px' },
         h('dt', {}, 'Score N (−2 to +2)'), h('dd', { class: 'num' }, fmtSigned(node.N)),
@@ -176,17 +195,28 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
 
     // N11 roll-up: sub-nodes
     if (node.sub_nodes) {
-      const sec = h('section', {}, h('h3', {}, 'Sub-areas'), h('p', { class: 'small muted', style: 'margin:0 0 8px' },
-        'The roll-up takes the most worrying sub-area; among the unclear ones, conflicting before weak before data gap.'));
-      const ul = h('ul', { style: 'list-style:none;padding:0;margin:0;display:grid;gap:6px' });
+      // each sub-area is a row to pick: its own four tests and measures show below, in this card (Ryan, 15 November 2026)
+      const sec = h('section', { class: 'subareas' }, h('h3', {}, 'Sub-areas'), h('p', { class: 'small muted', style: 'margin:0 0 8px' },
+        'The rating above takes the most worrying sub-area; among the unclear ones, conflicting before weak before data gap. ' +
+          'Pick any sub-area to see its own tests and measures below.'));
+      const list = h('div', { class: 'sub-pick', role: 'group', 'aria-label': 'Sub-areas: pick one to show its tests and measures below' });
       for (const sid of node.sub_nodes) {
         const sn = view.nodes.find((n) => n.id === sid); const sr = registry.nodeById[sid];
-        const li = h('li', {}, h('button', { class: 'btn quiet small', type: 'button', onclick: () => onOpenNode(sid) }, `${sr ? sr.short : sid}`), ' ',
-          h('span', { class: `tier-badge ${tierClass(sn && sn.tier)}` }, h('span', {}, plainTier(sn && sn.tier))));
-        if (sid === ev.id) li.append(h('span', { class: 'small', style: 'margin-left:6px;color:var(--accent)' }, 'sets the rating'));
-        ul.append(li);
+        const on = sid === ev.id;
+        list.append(h('button', { class: `sub-row${on ? ' on' : ''}`, type: 'button', 'aria-pressed': String(on), 'data-sub': sid,
+          onclick: () => pickSub(sid) },
+          h('span', { class: 'sub-name' }, sr ? sr.short : sid),
+          h('span', { class: `tier-badge ${tierClass(sn && sn.tier)}` }, h('span', {}, plainTier(sn && sn.tier))),
+          sid === rep.id ? h('span', { class: 'sub-sets' }, 'sets the rating') : null,
+          h('span', { class: 'sub-state' }, on ? 'shown below' : 'show')));
       }
-      sec.append(ul);
+      sec.append(list);
+      // the picked sub-area in plain words (the one that sets the rating is already described above), and the way to its own card
+      const read = h('div', { class: 'sub-read' });
+      if (ev !== rep) read.append(h('p', { class: 'plain' }, h('strong', {}, `${evReg ? evReg.short : ev.id}. `), plainSummary(ev, pctx)));
+      if (ev !== node && onOpenNode) read.append(h('button', { class: 'btn quiet small', type: 'button', onclick: () => onOpenNode(ev.id) },
+        `Open the ${evReg ? evReg.short.toLowerCase() : ev.id} card (rule detail, your own rating)`));
+      if (read.children.length) sec.append(read);
       drawer.append(sec);
     }
 
@@ -210,8 +240,8 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     if (fams.length) {
       const dir = ev.N != null && ev.N < 0 ? -1 : 1;
       const sec = h('section', {}, h('h3', {},
-        ev !== node ? `Evidence for ${evReg ? evReg.short.toLowerCase() : ev.id}, the sub-area that sets this rating` : 'Evidence by measure, with the other ' +
-          'side given equal weight'));
+        ev !== node ? `Evidence for ${evReg ? evReg.short.toLowerCase() : ev.id}${ev === rep ? ', the sub-area that sets this rating' : ''}`
+          : 'Evidence by measure, with the other side given equal weight'));
       const order = (list) => [...list.filter((f) => f.votes !== false), ...list.filter((f) => f.votes === false)];
       const pos = order(fams.filter((f) => f.signal * dir >= 0.5));
       const neg = order(fams.filter((f) => f.signal * dir <= -0.5));
@@ -244,10 +274,12 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
       }
       drawer.append(h('section', {}, h('h3', {}, 'What the measures show'), ul, h('p', { class: 'small muted', style: 'margin-top:6px' },
         'Shown for context. These measures carry no score and do not enter any rating.')));
-    } else if (!node.sub_nodes) {
-      drawer.append(h('section', {}, h('h3', {}, 'Evidence'), h('p', { class: 'note' },
-        node.tier === 'desk_undiagnosable' ? 'Coordination failures cannot be judged from national statistics; this needs sector ' +
-          'work.' : node.tier === 'context_only' ? 'Geography, natural capital and market size are context: they enter every comparison as controls and are ' +
+    } else if (!node.sub_nodes || ev !== node) {
+      // a leaf, or the picked sub-area of a roll-up, with no measure to show
+      const head = ev !== node ? `Evidence for ${evReg ? evReg.short.toLowerCase() : ev.id}` : 'Evidence';
+      drawer.append(h('section', {}, h('h3', {}, head), h('p', { class: 'note' },
+        ev.tier === 'desk_undiagnosable' ? 'Coordination failures cannot be judged from national statistics; this needs sector ' +
+          'work.' : ev.tier === 'context_only' ? 'Geography, natural capital and market size are context: they enter every comparison as controls and are ' +
           'recorded in the growth problem.' : 'No measure with a usable reading for this area in the current window.')));
     }
     // stale A/B indicators for this node
@@ -337,8 +369,9 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     }
 
     // load-bearing
-    if ((ev.load_bearing || []).length) drawer.append(h('section', {}, h('h3', {}, 'Measures the rating depends on'), h('p', { class: 'small' },
-      `Removing any one of these voting measures changes the rating: ${ev.load_bearing.map(prettyFamily).join(', ')}.`)));
+    const ofSub = ev !== node ? ` for ${evReg ? evReg.short.toLowerCase() : ev.id}` : ''; // a roll-up's card names the sub-area these belong to
+    if ((ev.load_bearing || []).length) drawer.append(h('section', {}, h('h3', {}, `Measures the rating${ofSub} depends on`), h('p', { class: 'small' },
+      `Removing any one of these voting measures changes the rating${ofSub}: ${ev.load_bearing.map(prettyFamily).join(', ')}.`)));
     if ((ev.informing_dissent || []).length && ev.tier !== 'elimination') drawer.append(h('section', {}, h('h3', {}, 'Supporting measures that disagree'),
       h('p', { class: 'small' },
       `Quantities or opinions that disagree with the rating by a full point or more. They do not vote, but they block the firmest ratings: ` +
