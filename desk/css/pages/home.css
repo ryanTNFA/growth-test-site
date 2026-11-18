@@ -1,15 +1,19 @@
 /* The Growth Test: the root page, the story (Growth Test PRD, Part 10; D9) (C5, pages layer; cap 300 lines).
-   Six beats, one screen each on a laptop; the two dark bands (beats 1 and 5) bleed to the window's edges; everything else
-   sits on the paper ground with generous white space. Durations and easings live in motion.css; shared pieces (.gt-band,
+   Six beats. Interface PRD E8: the hero and the assistance band keep a full screen on a laptop; beats 2 to 4 take the
+   height of their content, with generous spacing, so they read as one piece and not as slides. The two dark bands bleed
+   to the window's edges and their edges fade into the paper. A rail of the three questions stays in view from beat 2 to
+   beat 5 (sticky; index.mjs marks the current one). The scroll-driven ease-in lives in motion.css. Durations and easings live in motion.css; shared pieces (.gt-band,
    .icon, .elev-1) in components.css. */
 @layer pages {
 /* the page runs edge to edge; each beat's inner column is the wrap (phones: a 16 px gutter) */
 main.story { max-width: none; padding-inline: 0; }
-.beat { display: grid; align-content: center; padding-block: 56px; }
+/* the story keeps the editorial register (interface PRD E1): its accent is TNFA's amber; its shared controls stay ink (--control) */
+main.story { --accent: var(--amber); --accent-hover: var(--amber-hover); --accent-soft: var(--amber-soft); }
+.beat { display: grid; align-content: center; padding-block: clamp(64px, 9vh, 112px); }
 .beat-in { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(16px, 4vw, 60px); min-width: 0; }
 /* grid items never widen past the column, so a wide chart scrolls inside its figure instead of widening the page (phones) */
 .beat-hero-grid > *, .beat-hero-text, .gt-entry > *, .gt-entries > * { min-width: 0; }
-@media (min-width: 900px) and (min-height: 640px) { .beat { min-height: calc(100vh - 56px); } }
+@media (min-width: 900px) and (min-height: 640px) { .beat-hero, .beat-assist { min-height: calc(100vh - 56px); } }
 .beat .kicker { margin-bottom: 14px; }
 .beat h2 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem); line-height: 1.04; letter-spacing: -0.012em; max-width: 20ch; margin-bottom: 18px; }
 .beat .prose { font-size: 1.1875rem; line-height: 1.55; max-width: 62ch; }
@@ -18,7 +22,9 @@ main.story { max-width: none; padding-inline: 0; }
 .gt-cite a { color: inherit; }
 
 /* ---------- beat 1: the hero band ---------- */
-.beat-hero { background: linear-gradient(180deg, color-mix(in srgb, var(--band) 92%, white) 0%, var(--band) 38%, var(--band) 100%); padding-block: 40px 44px; }
+/* the band fades into the paper over its last 40 px (E8 d) */
+.beat-hero { background: linear-gradient(180deg, color-mix(in srgb, var(--band) 92%, white) 0%, var(--band) 38%, var(--band) calc(100% - 40px), var(--bg) 100%);
+  padding-block: 40px 84px; }
 .beat-hero h1 { font-size: clamp(2.5rem, 1.6rem + 4.4vw, 4.5rem); line-height: 1.02; letter-spacing: -0.015em; max-width: 16ch; color: var(--band-text); margin-bottom: 14px; }
 /* on a laptop the headline, the standfirst and the entries sit left and the chart right, so beat 1 is one screen (D5: a country one click away without scrolling) */
 @media (min-width: 1100px) and (min-height: 640px) {
@@ -43,16 +49,34 @@ main.story { max-width: none; padding-inline: 0; }
 .gt-ask-map { display: inline-flex; align-items: center; gap: 6px; color: var(--band-text); text-decoration: none; border-bottom: 1px solid var(--band-link); }
 .gt-ask-map:hover { color: var(--band-link); }
 @media (max-width: 700px) {
-  .beat-hero { padding-block: 28px 32px; }
+  .beat-hero { padding-block: 28px 72px; }
   .gt-ask input[type="search"] { min-width: 0; flex: 1 1 auto; width: 100%; }
   .gt-ask-row { width: 100%; }
 }
 
-/* ---------- beat 2: Pritchett's four questions ---------- */
-.gt-four { counter-reset: q; list-style: none; margin: 22px 0 22px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 36px; max-width: 64rem; }
-.gt-four li { counter-increment: q; font-family: var(--serif); font-size: 1.375rem; line-height: 1.35; padding: 14px 0 0; border-top: 1px solid var(--rule-strong); text-wrap: balance; }
-.gt-four li::before { content: counter(q); display: block; font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.05em; color: var(--accent); margin-bottom: 6px; }
-@media (max-width: 700px) { .gt-four { grid-template-columns: 1fr; gap: 10px; } .gt-four li { font-size: 1.2rem; } }
+/* ---------- beat 2: the three questions, a numbered row (E6, E7) ---------- */
+.gt-three { counter-reset: q; list-style: none; margin: 26px 0 24px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 32px;
+  max-width: 68rem; }
+.gt-three li { counter-increment: q; display: grid; gap: 8px; align-content: start; padding: 14px 0 0; border-top: 2px solid var(--accent); }
+.gt-three li::before { content: counter(q); font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.05em; color: var(--accent); }
+.gt-three strong { font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.2; text-wrap: balance; }
+.gt-three span { font-size: 1rem; line-height: 1.5; color: var(--muted); }
+@media (max-width: 800px) { .gt-three { grid-template-columns: 1fr; gap: 14px; } .gt-three strong { font-size: 1.3rem; } }
+
+/* ---------- the rail of the three questions, beats 2 to 5 (E8 b): sticky; a one-line strip on a phone ---------- */
+.q-rail { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule); }
+.q-rail ol { list-style: none; margin: 0 auto; max-width: var(--maxw); padding: 8px clamp(16px, 4vw, 60px); display: flex; gap: 6px 28px;
+  font-size: 0.875rem; color: var(--muted); overflow: hidden; }
+.q-rail li { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.q-n { display: inline-grid; place-items: center; width: 1.55em; height: 1.55em; border: 1px solid var(--rule-strong); border-radius: 50%;
+  font-family: var(--mono); font-size: var(--fs-label); }
+.q-rail li.on { color: var(--text); font-weight: 600; }
+.q-rail li.on .q-n { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+@media (max-width: 700px) {
+  .q-rail ol { gap: 6px 12px; }
+  .q-rail li:not(.on) .q-text, .q-rail.many .q-text { display: none; }
+}
 
 /* ---------- beat 3: the list, as composition ---------- */
 .beat-cols { display: grid; grid-template-columns: minmax(0, 7fr) minmax(260px, 5fr); gap: 32px 64px; align-items: center; }
@@ -83,8 +107,9 @@ main.story { max-width: none; padding-inline: 0; }
 .gt-fast .prose { margin: 0; max-width: none; }
 .gt-fast .icon { color: var(--accent); }
 
-/* ---------- beat 5: the assistance band ---------- */
-.beat-assist { background: linear-gradient(180deg, var(--band) 0%, color-mix(in srgb, var(--band) 90%, black) 100%); }
+/* ---------- beat 5: the assistance band; both edges fade into the paper (E8 d) ---------- */
+.beat-assist { background: linear-gradient(180deg, var(--bg) 0, var(--band) 40px, var(--band) 30%, color-mix(in srgb, var(--band) 90%, black) calc(100% - 40px),
+  var(--bg) 100%); padding-block: clamp(104px, 12vh, 152px); }
 .beat-assist h2, .beat-assist .prose { color: var(--band-text); }
 .beat-assist .prose.lede { color: var(--band-text); }
 .beat-assist .prose:not(.lede) { color: var(--band-soft); }

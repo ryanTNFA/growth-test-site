@@ -1,0 +1,28 @@
+/* The Growth Test: Compare (compare.html; interface PRD v0.3, D2), C5 pages layer, cap 300 lines. Columns in the order
+   picked, areas as rows in tree order, each cell a rating (square, A6) whose reason opens on tap. No totals, no sort. */
+@layer pages {
+.cmp-head { padding-block: 26px 6px; max-width: 72ch; }
+.cmp-sub { margin: 0 0 6px; color: var(--muted); }
+.cmp-not { margin: 0; }
+.cmp-pick { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 12px; margin: 16px 0 8px; }
+.cmp-picked { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0 0 12px; }
+.cmp-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 4px 2px 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius-pill);
+  font-size: 0.875rem; }
+.cmp-x { font: inherit; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 0 6px; border-radius: var(--radius-pill); }
+.cmp-x:hover { color: var(--text); background: var(--control-soft); }
+.cmp-wrap { margin-bottom: 12px; }
+.cmp-t { table-layout: fixed; }
+.cmp-t th, .cmp-t td { vertical-align: top; }
+.cmp-area-h { width: 13rem; }
+.cmp-area { font-family: var(--sans); font-size: 0.9375rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--text); background: var(--surface); }
+.cmp-cell { padding: 4px 6px; }
+.cmp-d { border: 1px solid var(--rule-strong); }
+/* unclear's data gap keeps its dashed outline here too (A3) */
+.cmp-d.t-cannot_tell_data_gap { border-style: dashed; border-color: var(--tier-cannot-hatch); }
+.cmp-word { cursor: pointer; list-style: none; padding: 6px 8px; font-size: 0.875rem; font-weight: 600; }
+.cmp-word::-webkit-details-marker { display: none; }
+.cmp-d.t-cannot_tell_weak .cmp-word, .cmp-d.t-cannot_tell_conflicting .cmp-word { background: var(--tier-cannot); margin: 4px; padding: 2px 6px; display: inline-block; }
+.cmp-why { margin: 0; padding: 6px 8px 8px; font-size: var(--fs-caption); background: var(--surface); color: var(--text); }
+.cmp-fork { background: var(--surface); }
+@media (max-width: 700px) { .cmp-area-h { width: 8.5rem; } .cmp-t { table-layout: auto; } }
+}

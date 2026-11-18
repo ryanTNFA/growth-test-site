@@ -2,6 +2,7 @@
 // composition (views in evidence_node.mjs); under a node, its tests C5, C6 and C8 (evidence_tests.mjs); then C1 income-trend
 // scatter, C2 peer comparison and C3 over time for one indicator; the year player (player.mjs) animates C1 and C2.
 import { refreshNav } from './shell.mjs';
+import { isNum } from '../../engine/src/stats.mjs';
 import { nodeCode, getJSON, loadRegistry, initTheme, h, fmt, fmtSigned, qs, unitHint, shortName, sourceLink, sourceLabel, dataBase, withData, downloadText, tierLabelOf, tierClass, HASH, TEACHING_KEYS, readHash, writeHash, currentHash } from './common.mjs';
 import { INCOME_ID, refSpan, scatterRows, structureFit, linearFit, lowessFit, lineAndBand, peerRank, residualPercentile, backTransform, referenceTable, viableYears, peerSummary, seriesRows, coverage, changeSinceStart, peerBand, slope, endpoints, stripRows, playerFrames, playerDomains, raceFrames } from './evidence_math.mjs';
 import { createControls, bubbleChart, barRace } from './player.mjs';
@@ -13,9 +14,23 @@ import { pqChoices, drawPriceQty, drawComove, drawBypass, drawCamels, CAMEL_VECT
 initTheme();
 const DATA = dataBase();
 const $ = (id) => document.getElementById(id);
-const CLASS_LABEL = { A: 'price', B: 'behaviour', C: 'quantity or perception', D: 'composite index', X: 'context' };
+// Interface PRD v0.3, 5C and E4: the per-area view moved whole to the area page (area.html), which runs this module in area
+// mode: the area comes from ?area=, there is no rail, and every chart and control of the per-area view stays. This page is
+// "Explore the data": the indicator explorer and the three country views (growth record, what it produces, what firms say).
+// An old link with &node= alone, for an area, opens that area's page (Part 6).
+const AREA_MODE = document.body.dataset.page === 'area';
+const COUNTRY_VIEWS = ['growth', 'composition', 'firms'];
+const areaPageHref = (iso, id) => withData(`/growth-test-site/desk/area.html?iso=${encodeURIComponent(iso)}&area=${encodeURIComponent(id)}`);
+const REDIRECTED = (() => {
+  if (AREA_MODE) return false;
+  const q = new URLSearchParams(location.search); const n = q.get('node');
+  if (!n || COUNTRY_VIEWS.includes(n) || q.get('ind') || q.get('panel') === 'indicator') return false;
+  location.replace(areaPageHref((q.get('iso') || 'KEN').toUpperCase(), n) + currentHash());
+  return true;
+})();
+const CLASS_LABEL = { A: 'price', B: 'behavior', C: 'quantity or perception', D: 'composite index', X: 'context' };
 // Longer readings for the subtitle; the full key is the #class-key table in evidence.html (Workbook 4.6).
-const CLASS_LONG = { A: 'a price or hard measure of rationing', B: 'behaviour that works around the constraint', C: 'a quantity, access measure or perception', D: 'a composite index, never decisive', X: 'context, no vote' };
+const CLASS_LONG = { A: 'a price or hard measure of rationing', B: 'behavior that works around the constraint', C: 'a quantity, access measure or perception', D: 'a composite index, never decisive', X: 'context, no vote' };
 // `custom` has no preset members: the comparators are only the economies the user adds (as published charts do).
 const SET_LABEL = { structural: 'structural', regional: 'regional', aspirational: 'aspirational', custom: 'chosen' };
 const setName = (c) => `${SET_LABEL[state.set]}${state.set !== 'custom' && c && c.added.length ? ' and added' : ''}`;
@@ -24,7 +39,7 @@ const panelCache = new Map();
 const state = {
   iso: (qs('iso') || 'KEN').toUpperCase(),
   ind: qs('ind') || null,
-  node: qs('node') || null,
+  node: (AREA_MODE ? qs('area') : qs('node')) || null,
   // Two views (PRD 8.1): the node (strip and test tabs) or one indicator (charts 1 to 3).
   panel: qs('panel') === 'indicator' ? 'indicator' : 'node',
   test: qs('test') || null,
@@ -44,7 +59,8 @@ function readHashState() {
   const add = p.get('add') || p.get('label');
   if (add) state.added = add.split(',').filter(Boolean);
   if (['10', '20', '30'].includes(p.get('yrs'))) state.c3years = Number(p.get('yrs'));
-  if (p.get('view') === 'change') state.c3view = 'change';
+  // chart 3's view moved from 'view' to 'c3view' when the detail took 'view' (interface PRD L1); old links still read
+  if (p.get('c3view') === 'change' || p.get('view') === 'change') state.c3view = 'change';
   if (p.get('peerlines') === 'band') state.c3peers = 'band';
   if (['1960', '1980', '1990', '2000'].includes(p.get('since'))) state.c4since = Number(p.get('since'));
   if (p.get('measure') === 'major') state.c7measure = 'MAJOR';
@@ -54,7 +70,8 @@ function readHashState() {
 }
 function writeUrl(push = false) {
   const q = new URLSearchParams(location.search);
-  q.set('iso', state.iso); q.set('node', state.node); q.set('ind', state.ind);
+  q.set('iso', state.iso); q.set('ind', state.ind);
+  if (AREA_MODE) { q.set('area', state.node); q.delete('node'); } else q.set('node', state.node);
   if (state.panel === 'indicator') q.set('panel', 'indicator'); else q.delete('panel');
   if (state.test) q.set('test', state.test); else q.delete('test');
   const p = new URLSearchParams();
@@ -62,11 +79,12 @@ function writeUrl(push = false) {
   // keep the country pages' state (peers, overrides, evidence setting) and the tour's keys, so the top bar and the tour carry on
   const prev = readHash();
   for (const k of [HASH.peers, HASH.overrides, HASH.setting, ...TEACHING_KEYS]) if (prev.get(k) != null) p.set(k, prev.get(k));
+  if (prev.get(HASH.view) === 'analyst') p.set(HASH.view, 'analyst');
   if (state.fit !== 'structure') p.set('fit', state.fit);
   if (state.asOf && state.asOf !== snapYear()) p.set('asof', String(state.asOf));
   if (state.added.length) p.set('add', state.added.join(','));
   if (state.c3years !== 20) p.set('yrs', String(state.c3years));
-  if (state.c3view !== 'levels') p.set('view', state.c3view);
+  if (state.c3view !== 'levels') p.set('c3view', state.c3view);
   if (state.c3peers !== 'lines') p.set('peerlines', state.c3peers);
   if (state.c4since !== 1990) p.set('since', String(state.c4since));
   if (state.c7measure !== 'TOP') p.set('measure', 'major');
@@ -169,6 +187,8 @@ function defaultIndFor(view) {
 
 /** Show a rail entry: its view at the top, and a sensible indicator in the charts below. */
 function pickView(view) {
+  // on Explore the data, an area opens its own page (5C); the three country views stay here
+  if (!AREA_MODE && !COUNTRY_VIEWS.includes(view)) { location.href = areaPageHref(state.iso, view) + currentHash(); return; }
   state.node = view;
   state.ind = defaultIndFor(view);
   state.panel = 'node';
@@ -479,7 +499,7 @@ function draw(c) {
   const target = c.target;
   const yType = c.transform === 'log' ? 'log' : c.transform === 'log1p' ? 'symlog' : 'linear';
   const unit = unitOf(c.ind);
-  // The binding side of the line gets a faint tint in the binding colour (above for direction +1, below for -1).
+  // The binding side of the line gets a faint tint in the binding color (above for direction +1, below for -1).
   const bindTint = c.ind.direction ? [P.areaY(c.line, { x: 'income', y1: 'y', y2: () => (upIsBinding(c.ind) ? yhi : ylo), fill: binding, fillOpacity: 0.07, clip: true })] : [];
   const marks = [
     ...bindTint,
@@ -582,14 +602,14 @@ function ordinal(n) { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n 
 function renderText(c) {
   const ind = c.ind;
   const country = nameOf(state.iso);
-  $('page-title').textContent = `${country}: the evidence, node by node`;
+  if (!AREA_MODE) $('page-title').textContent = `${country}: explore the data`;
   document.querySelectorAll('a[data-keep-iso]').forEach((a) => { a.href = withData(`/growth-test-site/desk/country.html?iso=${encodeURIComponent(state.iso)}`); });
   $('ev-title').textContent = `${shortName(ind)}: is it high or low for an economy at ${country}'s income level?`;
   const cls = ind.class || 'X', wt = (state.registry.params.class_weights || {})[cls];
   $('ev-sub').replaceChildren(`${ind.name}. Class ${cls}: ${CLASS_LONG[cls] || 'other'}${wt ? `, weight ${wt.toFixed(1)} in the verdict` : ''} (`, h('a', { href: '#class-key' }, 'what the classes mean'), `). Nodes ${(ind.nodes || []).join(', ') || 'context'}. Each point is an economy; the line is what income predicts.`);
   syncBack(c);
   $('tb-summary').textContent = `${country} · ${shortName(ind)} · ${state.set === 'custom' ? `${c.added.length} chosen comparators` : `${SET_LABEL[state.set]} comparators${c.added.length ? ` + ${c.added.length} added` : ''}`}${c.asOf !== snapYear() ? ` · as of ${c.asOf}` : ''}`;
-  document.title = `${country} · Analyst View · ${shortName(ind)} · The Growth Test`;
+  if (!AREA_MODE) document.title = `${country} · Explore the data · ${shortName(ind)} · The Growth Test`;
   const unit = unitHint(ind);
   const parts = [];
   if (!c.target) {
@@ -624,7 +644,7 @@ function renderText(c) {
   const missing = c.rank && c.rank.peersMissing.length ? ` Comparators without data: ${c.rank.peersMissing.map(nameOf).join(', ')}.` : '';
   const off = c.offChart ? ` ${c.offChart} economies fall outside the plotted range and are not drawn.` : '';
   const asofNote = c.asOf !== snapYear() ? ` Viewing data as of ${c.asOf}: comparators are today's set, and the verdict layer's adjusted figure applies only to the latest data, so it is not shown.` : '';
-  $('foot').innerHTML = `Source: ${sourceLink(ind) ? `<a href="${sourceLink(ind)}" target="_blank" rel="noopener">${src}</a>` : src}. Values are the average of the latest three years within ${c.W} years of ${c.asOf}; hollow points are older than ${c.limit} years. Fit: ${c.fit.ok ? (c.fit.method === 'structure' ? `the verdict layer’s Huber regression on log GDP per capita and ${structureWords(c.fit.controls).join(', ')}; points are values net of the structural terms (component plus residual), so each one’s distance from the line is its residual in the rating` : c.fit.method === 'lowess' ? `LOWESS, span ${c.fit.span}, 2 robustness passes` : 'Huber robust regression on log GDP per capita') : 'none'}, outliers winsorized at the 1st and 99th percentiles for the fit; shaded band is ±1 robust standard deviation. Comparators (${state.set === 'custom' ? 'chosen by you' : `${SET_LABEL[state.set]} set${c.added.length ? ` plus ${c.added.length} you added` : ''}`}, labelled by code): ${c.peers.map((p) => `${nameOf(p)} (${p})`).join(', ') || 'none'}.${missing}${off}${asofNote} ${vintage()}`;
+  $('foot').innerHTML = `Source: ${sourceLink(ind) ? `<a href="${sourceLink(ind)}" target="_blank" rel="noopener">${src}</a>` : src}. Values are the average of the latest three years within ${c.W} years of ${c.asOf}; hollow points are older than ${c.limit} years. Fit: ${c.fit.ok ? (c.fit.method === 'structure' ? `the verdict layer’s Huber regression on log GDP per capita and ${structureWords(c.fit.controls).join(', ')}; points are values net of the structural terms (component plus residual), so each one’s distance from the line is its residual in the rating` : c.fit.method === 'lowess' ? `LOWESS, span ${c.fit.span}, 2 robustness passes` : 'Huber robust regression on log GDP per capita') : 'none'}, outliers winsorized at the 1st and 99th percentiles for the fit; shaded band is ±1 robust standard deviation. Comparators (${state.set === 'custom' ? 'chosen by you' : `${SET_LABEL[state.set]} set${c.added.length ? ` plus ${c.added.length} you added` : ''}`}, labeled by code): ${c.peers.map((p) => `${nameOf(p)} (${p})`).join(', ') || 'none'}.${missing}${off}${asofNote} ${vintage()}`;
   const chips = $('extra-labels');
   chips.replaceChildren(...(c.added.length ? [h('span', { class: 'small muted' }, 'Added:')] : []), ...c.added.map((iso3) => h('span', { class: 'ev-chip' }, nameOf(iso3), h('button', { type: 'button', 'aria-label': `Remove ${nameOf(iso3)}`, onclick: () => { state.added = state.added.filter((x) => x !== iso3); render(); } }, '×'))));
   $('chart').setAttribute('aria-label', `${shortName(ind)} against GDP per capita for ${c.rows.length} economies`);
@@ -690,7 +710,8 @@ async function render() {
 }
 
 // ---------- node view (rail, C9, C4, C7) ----------
-const hrefFor = (view) => withData(`/growth-test-site/desk/evidence.html?iso=${state.iso}&node=${encodeURIComponent(view)}${currentHash()}`);
+const hrefFor = (view) => (COUNTRY_VIEWS.includes(view) ? withData(`/growth-test-site/desk/evidence.html?iso=${state.iso}&node=${encodeURIComponent(view)}${currentHash()}`)
+  : areaPageHref(state.iso, view) + currentHash());
 
 function nodeControls() {
   const box = $('node-controls');
@@ -708,7 +729,7 @@ function nodeControls() {
 
 async function renderNodeView(c) {
   const R = state.registry, view = state.node;
-  renderRail($('rail'), { registry: R, scorecard: state.scorecard, current: view, hrefFor, onPick: pickView });
+  if ($('rail')) renderRail($('rail'), { registry: R, scorecard: state.scorecard, current: view, hrefFor, onPick: pickView });
   renderNodeHead({ titleEl: $('h-node'), qEl: $('node-q'), verdictEl: $('node-verdict') }, { view, registry: R, scorecard: state.scorecard, iso: state.iso, countryName: nameOf(state.iso), set: state.set === 'custom' ? 'structural' : state.set });
   nodeControls();
   const host = $('chartN');
@@ -722,7 +743,7 @@ async function renderNodeView(c) {
     const comp = await getJSON(`${DATA}/composition/${state.iso}.json`, { optional: true });
     const peerComps = (await Promise.all(c.peers.filter((p) => p !== state.iso).map((p) => getJSON(`${DATA}/composition/${p}.json`, { optional: true })))).filter(Boolean);
     out = drawComposition(host, { ...base, comp, peerComps });
-    $('footN').textContent = `Top: goods exports by product group, as shares of all goods exports (services are not included); filled bars are the latest year, dashed outlines ten years earlier, navy ticks the median of the ${setName(c)} comparators with at least three reporting. Groups are HS 1992 chapters gathered into sectors. Below: value added (% of GDP) and employment (% of jobs) by sector; manufacturing is part of industry. Sources: Growth Lab, Harvard University, International Trade Data (HS92), mirror-cleaned exports; World Bank WDI (modelled ILO estimates for employment). Context only: no verdict uses it.`;
+    $('footN').textContent = `Top: goods exports by product group, as shares of all goods exports (services are not included); filled bars are the latest year, dashed outlines ten years earlier, navy ticks the median of the ${setName(c)} comparators with at least three reporting. Groups are HS 1992 chapters gathered into sectors. Below: value added (% of GDP) and employment (% of jobs) by sector; manufacturing is part of industry. Sources: Growth Lab, Harvard University, International Trade Data (HS92), mirror-cleaned exports; World Bank WDI (modeled ILO estimates for employment). Context only: no verdict uses it.`;
   } else if (view === 'firms') {
     const ids = R.indicators.indicators.filter((i) => /^ES\.OBST_/.test(i.id) && i.id.endsWith(`_${state.c7measure}`)).map((i) => i.id);
     const panels = (await Promise.all(ids.map(async (id) => ({ id, panel: await panel(id) })))).filter((x) => x.panel);
@@ -758,7 +779,7 @@ function nodeRecord(view) {
 function testChip(key, test) {
   if (key === 'c12') {
     const d = state.c12dir;
-    return d === 'toward' ? ['toward', '▲ toward binding', 'Camels pattern; shown, does not vote'] : d === 'away' ? ['away', '▼ away', 'Hippos pattern; shown, does not vote'] : d === 'mixed' ? ['mixed', '○ mixed', 'The vectors disagree; shown, does not vote'] : ['none', '○ no clear pattern', 'Shown, does not vote'];
+    return d === 'toward' ? ['toward', '▲ toward binding', 'Camels pattern; shown only'] : d === 'away' ? ['away', '▼ away', 'Hippos pattern; shown only'] : d === 'mixed' ? ['mixed', '○ mixed', 'The vectors disagree; shown, does not vote'] : ['none', '○ no clear pattern', 'Shown, does not vote'];
   }
   const rec = nodeRecord(state.node), t = rec && rec.tests && rec.tests[test];
   if (!t || t.T == null) return ['none', '○ not scored', 'The verdict layer has no score for this test'];
@@ -852,9 +873,9 @@ function hippoText(hp, vecNames, countryName, famOf) {
     // the percentile counts from the lowest gamma; the rank counts from the highest (most hippos missing = 1)
     const rank = hv.n - Math.round((hv.pctile / 100) * (hv.n - 1));
     const f = famOf(hv.id);
-    const inRating = hv.passes && f && isNum(f.signal)
+    const inRating = hv.passes && f && f.votes && isNum(f.signal)
       ? ` In the rating it enters ${f.node} as <strong>${fmtSigned(f.signal, 1)}</strong>: its γ is at the ${ordinalOf(Math.round(hv.pctile))} percentile of ${hv.n} economies.`
-      : ' It is shown here but not counted in the rating: this version did not pass both of its gates (the rubric changelog says which).';
+      : ' It is shown only, not in the rating: this version did not pass both of its gates (the rubric changelog says which).';
     const e = hv.entry, et = e && e.top, eb = e && e.bottom;
     const entry = et && et.at_risk && eb && eb.at_risk
       ? ` Did hippos ever try? Over the windows ending ${e.windows[0]} to ${e.windows[e.windows.length - 1]}, ${countryName} took up ${et.entries} of the ${et.at_risk} products it lacked that need the most ${factor} (${Math.round(et.rate * 100)}%) and ${eb.entries} of the ${eb.at_risk} that need the least (${Math.round(eb.rate * 100)}%).`
@@ -871,7 +892,7 @@ async function renderTests(c) {
   const isNode = !VIEWS.includes(view) && !!R.nodeById[view];
   const scope = isNode ? nodeScope(R, view) : [];
   const base = { P: window.Plot, pal: palette(), registry: R, iso: state.iso, peers: c.peers, asOf: c.asOf, countryName: nameOf(state.iso), nameOf };
-  const peersNote = `Comparators (${setName(c)}) are labelled by code.`;
+  const peersNote = `Comparators (${setName(c)}) are labeled by code.`;
   state.outs = {};
   // C5
   const pq = isNode ? pqChoices(R, state.fits.fits, view, scope) : null;
@@ -898,7 +919,7 @@ async function renderTests(c) {
     state.outs.c6 = out;
     $('readout6').innerHTML = out.text;
     const w = specs[0].window;
-    $('foot6').textContent = `Each column is one year: the change in the price the year before (top) and the change in investment that year (bottom), the pairing the verdict layer tests, over its window ${w[0]}–${w[1]}. Amber: they moved as the hypothesis predicts if the constraint binds; grey: they did not; outlined: one of them did not change, so the year is not counted. The counts are recomputed here from the same data; the p-value is a one-sided binomial test against chance (half the years), and the score is the verdict layer's, from the ${snapYear()} snapshot. Source: ${[...new Set(specs.flatMap((sp) => [sp.x, sp.y]).map((id) => R.indicatorById[id]).filter(Boolean).map(sourceLabel))].join('; ')}. ${vintage()}`;
+    $('foot6').textContent = `Each column is one year: the change in the price the year before (top) and the change in investment that year (bottom), the pairing the verdict layer tests, over its window ${w[0]}–${w[1]}. Teal: they moved as the hypothesis predicts if the constraint binds; gray: they did not; outlined: one of them did not change, so the year is not counted. The counts are recomputed here from the same data; the p-value is a one-sided binomial test against chance (half the years), and the score is the verdict layer's, from the ${snapYear()} snapshot. Source: ${[...new Set(specs.flatMap((sp) => [sp.x, sp.y]).map((id) => R.indicatorById[id]).filter(Boolean).map(sourceLabel))].join('; ')}. ${vintage()}`;
   }
   // C8
   const bypass = isNode ? R.indicators.indicators.filter((i) => i.test === 'circumvention' && i.direction && (i.nodes || []).some((n) => scope.includes(n))) : [];
@@ -908,7 +929,7 @@ async function renderTests(c) {
     const out = drawBypass($('chart8'), { ...base, width: $('chart8').clientWidth || 900, items, windowOf, onPick: pickIndicator });
     state.outs.c8 = out;
     $('readout8').innerHTML = out.text;
-    $('foot8').textContent = `One panel per test 3 (circumvention) indicator of this node: ${nameOf(state.iso)} in amber and its ${setName(c)} comparators, each at its latest reference value within the indicator's window to ${c.asOf}; the dashed line is the comparator median. The axis note says which way is more working-around. Click a panel to chart that indicator below. Source: ${[...new Set(items.map((x) => sourceLabel(x.ind)))].join('; ')}. ${vintage()}`;
+    $('foot8').textContent = `One panel per test 3 (circumvention) indicator of this node: ${nameOf(state.iso)} in teal and its ${setName(c)} comparators, each at its latest reference value within the indicator's window to ${c.asOf}; the dashed line is the comparator median. The axis note says which way is more working-around. Click a panel to chart that indicator below. Source: ${[...new Set(items.map((x) => sourceLabel(x.ind)))].join('; ')}. ${vintage()}`;
   }
   // C12
   const vecNames = isNode ? CAMEL_VECTORS[view] || CAMEL_VECTORS[view.split('.')[0]] || [] : [];
@@ -917,6 +938,17 @@ async function renderTests(c) {
   const camelFam = (id) => { const rec = ((state.scorecard && state.scorecard.indicators) || []).find((r) => r.id === id); if (!rec) return null; for (const n of state.scorecard.nodes || []) for (const f of n.families || []) if (f.id === rec.family) return { ...f, node: n.id }; return null; };
   const camelPanels = camel ? vecNames.filter((v) => camel.mine.vectors[v] && camel.products[v]).map((v) => { const fam = camelFam(camel.products[v].id); return { name: v, ...camel.products[v], ...camel.mine.vectors[v], year: camel.mine.year, fam, votes: !!(fam && fam.votes), ruler: camel.rulers[camel.products[v].id] || null }; }) : [];
   $('sec-c12').hidden = !camelPanels.length;
+  // C8 on the area page: test 4's block names the trade-based tilts that are shown only (they are not engine families)
+  if (AREA_MODE) {
+    // the hippo gap of the same vectors (the presence version of test 4): shown only unless it passed its gates and its family counts
+    const hpA = vecNames.length ? await hippoData(state.iso) : null;
+    const hippoShown = !!hpA && vecNames.some((v) => {
+      const hv = hpA.vectors && hpA.vectors[v]; if (!hv) return false;
+      // it counts here only if its family counts in this area (a family may count in another area, as contract intensity does)
+      const f = camelFam(hv.id); return !(hv.passes && f && f.votes && String(f.node).split('.')[0] === String(view).split('.')[0]);
+    });
+    window.dispatchEvent(new CustomEvent('area-camels', { detail: { node: view, shown: camelPanels.filter((pn) => !pn.votes).map((pn) => pn.label), hippoShown } }));
+  }
   if (!camelPanels.length) $('ruler12').replaceChildren();
   const sig = camelPanels.filter((pn) => Math.abs(pn.theta) >= 2 * pn.se);
   state.c12dir = !sig.length ? 'none' : sig.every((pn) => pn.theta < 0) ? 'toward' : sig.every((pn) => pn.theta > 0) ? 'away' : 'mixed';
@@ -925,7 +957,7 @@ async function renderTests(c) {
     state.outs.c12 = out;
     const hp = await hippoData(state.iso);
     $('readout12').innerHTML = out.text + hippoText(hp, vecNames, nameOf(state.iso), camelFam);
-    $('foot12').textContent = `Each dot is an HS 4-digit export product, placed by how intensively it uses the factor (US-based intensity, as a percentile of products) and by how much more ${nameOf(state.iso)} exported of it in ${camelPanels[0].year} than economies at its income level do (ln(1 + revealed comparative advantage), after a separate income fit for each product across about 180 economies). Open circles are industry averages (products sharing one intensity value), sized by the number of products. The line is the fitted tilt: the economy's average plus θ times each product's intensity (the Rajan-Zingales differences-in-differences design, Rajan and Zingales 1998; schooling intensity after Ciccone and Papaioannou 2009), so it rises when θ is positive and falls when θ is negative. A negative θ means more camels: the economy does well in products that need little of the factor. ${camelPanels.some((p) => p.votes) ? `Counted in the rating: ${camelPanels.filter((p) => p.votes).map((p) => p.label).join(', ')}, the vector${camelPanels.filter((p) => p.votes).length === 1 ? '' : 's'} that passed the placebo check; ` : ''}${camelPanels.some((p) => !p.votes) ? `shown but not counted: ${camelPanels.filter((p) => !p.votes).map((p) => p.label).join(', ')} (failed the placebo check; see the rubric changelog).` : ''} The hippo gap below the chart is the presence version of the same test: instead of how much the economy exports of each product, whether it exports it at all (RCA below 0.2 counts as absent), because where a constraint is severe the activities that need it never start, and a growth-based test cannot see them; γ is the slope of absence on intensity after a fit per product on income, export size, breadth, remoteness and landlockedness, each product weighted by how likely economies like this one are to export it, so a positive γ means the factor-heavy products are the missing ones. Caveats: intensities are assumed the same everywhere; exports are not output; services are missing; absence has other causes (comparative advantage, size, nobody tried). This is the latest year only and does not follow the as-of year. Sources: Growth Lab HS92 trade; the intensity vectors and the method are documented in the Methodology Note, section on test 4.`;
+    $('foot12').textContent = `Each dot is an HS 4-digit export product, placed by how intensively it uses the factor (US-based intensity, as a percentile of products) and by how much more ${nameOf(state.iso)} exported of it in ${camelPanels[0].year} than economies at its income level do (ln(1 + revealed comparative advantage), after a separate income fit for each product across about 180 economies). Open circles are industry averages (products sharing one intensity value), sized by the number of products. The line is the fitted tilt: the economy's average plus θ times each product's intensity (the Rajan-Zingales differences-in-differences design, Rajan and Zingales 1998; schooling intensity after Ciccone and Papaioannou 2009), so it rises when θ is positive and falls when θ is negative. A negative θ means more camels: the economy does well in products that need little of the factor. ${camelPanels.some((p) => p.votes) ? `Counts in the rating: ${camelPanels.filter((p) => p.votes).map((p) => p.label).join(', ')}, the vector${camelPanels.filter((p) => p.votes).length === 1 ? '' : 's'} that passed the placebo check; ` : ''}${camelPanels.some((p) => !p.votes) ? `shown only: ${camelPanels.filter((p) => !p.votes).map((p) => p.label).join(', ')} (failed the placebo check; see the rubric changelog).` : ''} The hippo gap below the chart is the presence version of the same test: instead of how much the economy exports of each product, whether it exports it at all (RCA below 0.2 counts as absent), because where a constraint is severe the activities that need it never start, and a growth-based test cannot see them; γ is the slope of absence on intensity after a fit per product on income, export size, breadth, remoteness and landlockedness, each product weighted by how likely economies like this one are to export it, so a positive γ means the factor-heavy products are the missing ones. Caveats: intensities are assumed the same everywhere; exports are not output; services are missing; absence has other causes (comparative advantage, size, nobody tried). This is the latest year only and does not follow the as-of year. Sources: Growth Lab HS92 trade; the intensity vectors and the method are documented in the Methodology Note, section on test 4.`;
   }
   for (const k of ['c5', 'c6', 'c8', 'c12']) { const a = document.querySelector(`.ev-actions[data-chart="${k}"]`); if (a) a.hidden = !(state.outs[k] && state.outs[k].csv); }
   renderTabs();
@@ -936,7 +968,7 @@ async function renderTests(c) {
 function palette() {
   return {
     text: css('--text', '#1c2e4a'), muted: css('--muted', '#4a5d7e'),
-    focus: css('--chart-focus', '#b8682a'), focusInk: css('--chart-focus-ink', '#9a5620'),
+    focus: css('--chart-focus', '#0e7c7b'), focusInk: css('--chart-focus-ink', '#0b6a69'),
     peer: css('--chart-peer', '#2e4060'), peerFill: css('--chart-peer-fill', '#e3e8f0'),
     fit: css('--chart-fit', '#4f6d99'), band: css('--chart-band', '#e6ebf2'),
     other: css('--chart-other', '#8f98a6'), binding: css('--chart-binding', '#9c1f45'), surface: css('--surface', '#ffffff'),
@@ -966,7 +998,7 @@ function drawBars(c) {
   const own = rows.filter((r) => r.iso3 === state.iso), peers = rows.filter((r) => r.iso3 !== state.iso);
   const marks = [];
   const x0 = lo < 0 ? lo - pad : 0, x1 = hi + pad;
-  // The binding side of the comparator median, tinted and labelled as on charts 1, 8, 9 and 12 (PRD 8.1).
+  // The binding side of the comparator median, tinted and labeled as on charts 1, 8, 9 and 12 (PRD 8.1).
   const dir = c.ind.direction || 0;
   if (s && dir) {
     marks.push(P.rect([0], { x1: dir > 0 ? s.median : x0, x2: dir > 0 ? x1 : s.median, fill: binding, fillOpacity: 0.06 }));
@@ -1059,7 +1091,7 @@ function showPlayer(year, ms) { if (pl.c1) pl.c1.show(year, ms); if (pl.c2) pl.c
 function markBehind(year) {
   const behind = !!(player && player.on && state.current && year !== state.current.asOf);
   for (const id of ['sec-c1', 'sec-c2']) $(id).classList.toggle('pl-behind', behind);
-  $('pl-note').textContent = !(player && player.on) ? `Play the years from 2005 to ${snapYear()}: bubbles sized by population, ${nameOf(state.iso)}'s path traced in amber, chart 2 as a bar race.`
+  $('pl-note').textContent = !(player && player.on) ? `Play the years from 2005 to ${snapYear()}: bubbles sized by population, ${nameOf(state.iso)}'s path traced in teal, chart 2 as a bar race.`
     : behind ? `Showing ${year}. The readouts and the rest of the page catch up when you pause. Comparators are today's set.`
     : `Paused at ${year}: every chart on the page shows data as of ${year}. Comparators are today's set.`;
 }
@@ -1277,7 +1309,7 @@ function renderLinesText(c) {
     parts.push(`${country} has fewer than two values between ${c.from} and ${c.asOf}.`);
   }
   $('readout3').innerHTML = parts.join(' ');
-  $('foot3').innerHTML = `Annual values in the ${state.c3years} years to ${c.asOf} (${c.from} onward). Thick line: ${country}. ${state.c3peers === 'lines' ? `Thin grey lines: each ${setName(c)} comparator, labelled by code at its last year; dotted where a comparator has data for fewer than half the years. ` : c.added.length ? 'Thin grey lines: the comparators you added. ' : ''}Dashed line and shaded band: the comparator median and middle half, drawn only for years where at least three comparators have data.${level ? '' : ' Each line is measured from its own first year with data in the range.'} Source: ${sourceLabel(c.ind)}. ${vintage()}`;
+  $('foot3').innerHTML = `Annual values in the ${state.c3years} years to ${c.asOf} (${c.from} onward). Thick line: ${country}. ${state.c3peers === 'lines' ? `Thin gray lines: each ${setName(c)} comparator, labeled by code at its last year; dotted where a comparator has data for fewer than half the years. ` : c.added.length ? 'Thin gray lines: the comparators you added. ' : ''}Dashed line and shaded band: the comparator median and middle half, drawn only for years where at least three comparators have data.${level ? '' : ' Each line is measured from its own first year with data in the range.'} Source: ${sourceLabel(c.ind)}. ${vintage()}`;
   $('chart3').setAttribute('aria-label', `Line chart of ${shortName(c.ind)} over time for ${country} and its comparators`);
 }
 const unit3 = (c) => { const u = unitOf(c.ind); return u ? ` (${u.startsWith('%') ? 'percentage points' : u})` : ''; };
@@ -1377,7 +1409,7 @@ function frameSVG(key, clone, { w, h: ch }) {
     if (line) out.push(line);
     return out;
   };
-  const ink = css('--text', '#1c2e4a'), muted = css('--muted', '#4a5d7e'), accent = css('--chart-focus-ink', '#9a5620'), bgc = css('--bg', '#ffffff');
+  const ink = css('--text', '#1c2e4a'), muted = css('--muted', '#4a5d7e'), accent = css('--chart-focus-ink', '#0b6a69'), bgc = css('--bg', '#ffffff');
   const parts = [];
   let y = 26;
   // Every attribute value goes through esc(): a raw double quote (as in a font family) would make the file invalid XML.
@@ -1431,7 +1463,7 @@ function slideSVG(key) {
   const title = indChart ? ($('ev-title').textContent || `${shortName(ind)}: ${t.q || t.title}`) : `${node ? `${nodeCode(state.node)} ${node.short}` : t.title}: ${t.q || t.title}`;
   const sub = [nameOf(state.iso), t.title, indChart ? ind.name : null, `comparators: ${setName(c)}`, `data as of ${c.asOf}`].filter(Boolean).join(' · ');
   const source = `${indChart ? `Source: ${sourceLabel(ind)}. ` : ''}The Growth Test, The New Foreign Assistance. ${vintage()}`;
-  const ink = css('--text', '#1c2e4a'), muted = css('--muted', '#4a5d7e'), accent = css('--chart-focus-ink', '#9a5620'), bgc = css('--bg', '#ffffff');
+  const ink = css('--text', '#1c2e4a'), muted = css('--muted', '#4a5d7e'), accent = css('--chart-focus-ink', '#0b6a69'), bgc = css('--bg', '#ffffff');
   const fit = (str, px, size) => { const max = Math.floor(px / (size * 0.52)); return str.length > max ? `${str.slice(0, max - 1)}…` : str; };
   const ts = Math.max(26, Math.min(38, Math.floor((W - 112) / (title.length * 0.5))));
   const top = 168, bottom = 66, box = { x: 56, y: top, w: W - 112, h: H - top - bottom };
@@ -1499,6 +1531,7 @@ async function main() {
     state.byIso = Object.fromEntries(countries.map((c) => [c.iso3, c]));
     if (!state.byIso[state.iso]) state.iso = 'KEN';
     await loadCountry();
+    if (AREA_MODE && !(state.node && registry.nodeById[state.node])) state.node = 'N5';
     if (!state.node || !(VIEWS.includes(state.node) || registry.nodeById[state.node])) {
       const ind = state.ind && registry.indicatorById[state.ind];
       state.node = ind && (ind.nodes || []).length ? ind.nodes[0] : 'growth';
@@ -1508,4 +1541,4 @@ async function main() {
     window.addEventListener('desk-setting', () => render());
   } catch (e) { showError(`Could not load the evidence data: ${e.message}. Rerun the engine CLI to write desk/data/panel and desk/data/fits.json.`); console.error(e); }
 }
-main();
+if (!REDIRECTED) main();

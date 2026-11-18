@@ -1,12 +1,13 @@
 // Self-discovery page (front-door PRD W9): the idea in plain words, the country's N12 rating and measures, the
 // other low-return areas as context (the elimination gate until rubric 0.2.7), and the nearby products (ingest/nearby_products.py) when they pass the stability check.
 import { tabHref, refreshNav } from './shell.mjs';
-import { getJSON, loadRegistry, initTheme, h, qs, dataBase, withData, currentSetting, SETTING_LABEL } from './common.mjs';
+import { getJSON, loadRegistry, h, dataBase, withData, currentSetting, SETTING_LABEL } from './common.mjs';
 import { plainTier, factText, plainSummary } from './card.mjs';
 import { renderSpace } from './selfdiscovery_space.mjs';
 
-initTheme();
-const iso = (qs('iso') || '').toUpperCase();
+// Interface PRD v0.3, C5: self-discovery is the area page for that area. Its sections live in area.html (hidden for other
+// areas); area.mjs calls mountSelfDiscovery(), and this module no longer runs a page of its own (selfdiscovery.html is retired).
+let iso = '';
 const DATA = dataBase();
 const $ = (id) => document.getElementById(id);
 // the other low-return areas, shown as context (front-door PRD W7's elimination rule, a gate until rubric 0.2.7)
@@ -15,11 +16,22 @@ let state = null;
 
 function showError(msg) { const e = $('page-error'); e.hidden = false; e.textContent = msg; }
 
+/**
+ * Show the self-discovery sections on the area page and draw them for one economy. A section's charts are drawn again when it
+ * is opened, since a folded section has no width to draw into.
+ * @param {HTMLElement} host the area page's extra host (its waiting line is removed)
+ * @param {string} economy ISO3
+ */
+export function mountSelfDiscovery(host, economy) {
+  iso = economy;
+  const wait = host.querySelector('.ar-sd-wait'); if (wait) wait.remove();
+  const box = document.getElementById('ar-sd'); if (box) box.hidden = false;
+  if (box) box.addEventListener('toggle', (e) => { if (e.target instanceof HTMLDetailsElement && e.target.open && state) render(); }, true);
+  return main().catch((e) => { console.error(e); showError(`Unexpected error: ${e.message}`); });
+}
+
 async function main() {
-  if (!iso) { showError('No economy selected. Open this page from a country’s Areas tab.'); return; }
-  const back = $('back-areas');
-  back.href = tabHref('/growth-test-site/desk/areas.html', iso, '&node=N12');
-  back.addEventListener('click', () => { back.href = tabHref('/growth-test-site/desk/areas.html', iso, '&node=N12'); });
+  if (!iso) { showError('No economy selected.'); return; }
   try {
     const [registry, sc, nearby, meta, hippo] = await Promise.all([loadRegistry(), getJSON(`${DATA}/${iso}.json`), getJSON(`${DATA}/nearby/${iso}.json`, { optional: true }), getJSON(`${DATA}/nearby/meta.json`, { optional: true }), getJSON(`${DATA}/hippo/${iso}.json`, { optional: true })]);
     state = { registry, sc, nearby, meta, hippo };
@@ -32,9 +44,7 @@ async function main() {
 function render() {
   const { registry, sc, nearby, meta, hippo } = state;
   const c = sc.country.name;
-  document.title = `${c} · Self-discovery · The Growth Test`;
-  $('sd-title').textContent = `Self-discovery in ${c}`;
-  $('sd-question').textContent = `Are firms in ${c} held back from trying new products?`;
+
   const m = sc.meta;
   $('versions').textContent = `Public data snapshot ${m.snapshot_id} · rubric ${m.rubric_version} · engine ${m.engine_version}.`;
   const n12 = sc.nodes.find((n) => n.id === 'N12');
@@ -57,7 +67,7 @@ function render() {
   const others = OTHERS.map((id) => sc.nodes.find((n) => n.id === id)).filter(Boolean);
   const head = h('thead', {}, h('tr', {}, h('th', {}, 'Other cause of low returns'), h('th', {}, `Rating (${SETTING_LABEL[setting]} reading)`), h('th', {}, 'Set aside?')));
   const body = h('tbody', {}, others.map((n) => h('tr', {},
-    h('td', {}, h('a', { href: tabHref('/growth-test-site/desk/areas.html', iso, `&node=${encodeURIComponent(n.id)}`) }, short(n.id)), n.sub_nodes && n.rollup_from ? h('span', { class: 'small muted' }, ` (rated through ${short(n.rollup_from).toLowerCase()})`) : null),
+    h('td', {}, h('a', { href: tabHref('/growth-test-site/desk/area.html', iso, `&area=${encodeURIComponent(n.id)}`) }, short(n.id)), n.sub_nodes && n.rollup_from ? h('span', { class: 'small muted' }, ` (rated through ${short(n.rollup_from).toLowerCase()})`) : null),
     h('td', {}, plainTier(tierOf(n))),
     h('td', {}, cleared(tierOf(n)) ? 'Yes' : 'Not yet'))));
   $('sd-elim').replaceChildren(head, body);
@@ -79,7 +89,7 @@ function render() {
     // alphabetical, never ranked: a numbered list reads as a list of targets (reader test, 1 November)
     const list = (items) => h('ul', { class: 'sd-nearby' }, items.slice().sort((a, b) => shortHs(a.name).localeCompare(shortHs(b.name))).map((p) => h('li', { title: p.name }, h('span', {}, shortHs(p.name)), h('span', { class: 'sd-hs small muted' }, ` HS ${p.hs4}`))));
     host.append(h('div', { class: 'sd-two' },
-      h('div', {}, h('h3', {}, 'The nearest products'), h('p', { class: 'small muted' }, `The ten products with most of their neighbours already exported by ${c}. Most are as simple as, or simpler than, what ${c} exports today.`), list(nearby.products)),
+      h('div', {}, h('h3', {}, 'The nearest products'), h('p', { class: 'small muted' }, `The ten products with most of their neighbors already exported by ${c}. Most are as simple as, or simpler than, what ${c} exports today.`), list(nearby.products)),
       h('div', {}, h('h3', {}, 'The nearest that are a step up'), h('p', { class: 'small muted' }, `The ten nearest products that are more complex than ${c}’s typical export: harder to make, and the kind of products richer countries tend to export.`), (nearby.step_up || []).length ? list(nearby.step_up) : h('p', { class: 'small' }, 'None found.'))));
     host.append(h('p', { class: 'small muted' }, `Is the list reliable? ${nearby.overlap} of the 20 products nearest to ${c} today were already among the nearest five years earlier. If the links between products were scrambled at random, only about ${Math.round(nearby.placebo_p95)} would be. Countries whose lists fail this check show none. ${c} exports ${nearby.exports_competitively} products competitively today.`));
   }
@@ -159,4 +169,3 @@ function renderOtherWay(c, hippo) {
     h('p', {}, 'What this cannot show: a missing product may be missing for comparative advantage, for market size, or because nobody has tried, not because of a constraint; the thriving products of a poor country are often farm goods whose intensities are not scored; eight products a side is a small sample. The same absence reading, run as a regression across every scored product (the hippo gap), is on the Evidence page under test 4; it did not pass its power check and does not vote (docs/hippo-gap-test.md). Built by ingest/hippo_gap.py.'));
 }
 
-main().catch((e) => { console.error(e); showError(`Unexpected error: ${e.message}`); });

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Area · The Growth Test</title>
+<meta name="description" content="One area of one economy in one place: its rating and plain reading, the four tests and what counts in each, the measures each way, every chart, the comparison countries and what would move the rating.">
+<script>(function(){try{var t=localStorage.getItem('desk-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="preload" href="/growth-test-site/desk/fonts/newsreader-normal-400600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/growth-test-site/desk/fonts/inter-normal-300700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/growth-test-site/desk/css/tokens.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/base.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/components.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/motion.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/pages/evidence.css">
+<script src="/growth-test-site/desk/vendor/d3-7.9.0.min.js"></script>
+<script src="/growth-test-site/desk/vendor/plot-0.6.16.min.js"></script>
+</head>
+<body data-page="area">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar"></header>
+<main id="main" class="wrap ev ar" tabindex="-1">
+  <!-- The area page (interface PRD v0.3, 5C): one area of one economy in one place. In this order: the rating and its plain
+       reading; "Does this look right?"; the four tests on one axis, each opening with what counts in it (C8) and showing every
+       measure of the test (C9); the measures toward and away, with equal weight; the charts for this area (the Analyst View's
+       per-area view, whole: evidence.mjs in area mode); the comparison countries; what would move the rating; your own rating.
+       The four tests are framed by the question the method rests on (E9 a). Self-discovery's sections fold here (C5). -->
+  <header class="ar-head" id="ar-head">
+    <p class="ar-crumbs" id="ar-crumbs"></p>
+    <h1 id="page-title" data-country-title>Area</h1>
+    <script>(function(){var q=new URLSearchParams(location.search),i=(q.get('iso')||'').toUpperCase();document.body.dataset.iso=i;if(i){document.title=i+' · '+document.title;}})();</script>
+    <p class="ar-q" id="ar-q"></p>
+    <div id="assume-host"></div>
+    <nav class="ar-walk" id="ar-walk" aria-label="The previous and the next area, in tree order"></nav>
+  </header>
+
+  <p id="page-error" class="note alert" hidden></p>
+
+  <!-- E9 a: the question the method rests on frames the four tests -->
+  <section class="ar-frame" id="ar-frame" aria-label="What the tests ask">
+    <p class="ar-ask">If this were binding, now, in this country, what would we expect to see?</p>
+    <p class="ar-frame-sub">The four tests are four ways of looking. The reading rests on the pattern they make together, never on one test alone.</p>
+  </section>
+
+  <p class="ov-changed" id="ar-changed" role="status" aria-live="polite"></p>
+  <section class="ar-plain" id="ar-plain" aria-label="The rating, the four tests and the measures"></section>
+  <div id="ar-extra"></div>
+  <!-- C5: self-discovery's thirteen sections, folded under their headings, with the product space open as its chart; shown only for
+       the self-discovery area (area.mjs mounts selfdiscovery.mjs). They came from the retired selfdiscovery.html. -->
+  <section class="ar-sd" id="ar-sd" aria-labelledby="ar-sd-h" hidden>
+    <span class="kicker">Self-discovery, section by section</span>
+    <h2 id="ar-sd-h">What the trade data show</h2>
+    <p class="small muted" id="sd-title" hidden></p><p class="small muted" id="sd-question" hidden></p>
+    <details class="panel ar-sd-sec" id="logic">
+      <summary class="ar-sd-sum"><span class="kicker">The idea, from the research</span><h3 id="logic-h">How a missing first try can hold growth back</h3></summary>
+      <div class="prose sd-prose">
+        <p><strong>Growing means making new things.</strong> Rich countries don’t just make more of the same; they make different products. For a poorer country the task is rarely to invent something. It is to find out which of the products the world already makes its own firms can make at low enough cost to sell. Hausmann and Rodrik call this <em>self-discovery</em>: finding out an economy’s own cost structure.</p>
+        <p><strong>The first firm pays; the others copy.</strong> Finding out is costly. If the first firm to try fails, it bears the whole loss. If it succeeds, others see that it works and follow, and the first firm keeps little of the gain. So firms try too few new things, even when trying would pay off for the country as a whole.</p>
+        <p><strong>New products need inputs nobody supplies yet.</strong> A new export may need its own standards, certification, cold storage, a port procedure or trained workers. These differ from one product to the next and are hard to know in advance, so a government can’t supply them all. It has to choose.</p>
+        <p><strong>A related idea: distance.</strong> Later work on the “product space” adds a second reason. Products that use similar know-how sit close together. A country that already makes many products near a new one has a short jump; a country far from everything has a long one, and the missing know-how and suppliers may need several firms to move at once. That is a coordination problem, which this tool treats as a separate area (coordination failures).</p>
+        <p class="small muted">Sources: Hausmann and Rodrik, “Economic Development as Self-Discovery” (2003) and “Doomed to Choose: Industrial Policy as Predicament” (2006); Hidalgo, Klinger, Barabási and Hausmann, “The Product Space Conditions the Development of Nations” (2007).</p>
+      </div>
+    </details>
+
+    <details class="panel ar-sd-sec" id="signature">
+      <summary class="ar-sd-sum"><span class="kicker">What the hypotheses predict, and what the data show here</span><h3 id="signature-h">The signature</h3></summary>
+      <div class="ar-sd-lead"><p>Four stories can sit behind “few new products”. Each predicts something different in the trade data. The cards say what each predicts and which way this country’s numbers point; the sentence under them says whether the self-discovery signature holds.</p></div>
+      <div class="sd-cards" id="sd-cards"></div>
+      <p class="plain" id="sd-signature"></p>
+      <p class="small muted">The signature is a reading beside the rating. Since rubric 0.2.8 the discovery gap votes on self-discovery like any other measure of its class; the other three cards are the conditions the story needs, and they inform the lean.</p>
+    </details>
+
+    <details class="panel ar-sd-sec" id="space" open>
+      <summary class="ar-sd-sum"><span class="kicker">Where the country sits</span><h3 id="space-h">The product space</h3></summary>
+      <div class="ar-sd-lead"><p>About 1,150 products, laid out once so that products made with similar know-how sit close together, and colored by sector. Full color: this country exports the product competitively. Pale: it does not. Teal ring: it started to since 2017–19. Outlined: the nearest products it does not yet make. This is a map of distance, <strong>not a list of sectors to back</strong>.</p></div>
+      <div class="sd-toolbar"><div class="sd-toggle" role="group" aria-label="Period" id="sd-map-toggle"></div><div class="sd-legend" id="sd-map-legend"></div></div>
+      <div class="sd-legend sd-sectors" id="sd-map-sectors" aria-label="Sectors"></div>
+      <div class="sd-chart sd-map" id="sd-map" aria-describedby="sd-map-text"></div>
+      <p class="plain" id="sd-map-text"></p>
+      <details class="rule-detail"><summary>Show the numbers</summary><div class="small" id="sd-map-table"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="jumps">
+      <summary class="ar-sd-sum"><span class="kicker">Short jumps or long ones?</span><h3 id="jumps-h">Jumps taken</h3></summary>
+      <div class="ar-sd-lead"><p>Each new export since 2017–19, placed by how much of its neighborhood the country already exported when it entered (its density). Entries far to the left were long jumps. The gray band is where the country’s other options sat.</p></div>
+      <div class="sd-legend sd-sectors" id="sd-jumps-sectors" aria-label="Sectors"></div>
+      <div class="sd-chart" id="sd-jumps" aria-describedby="sd-jumps-text"></div>
+      <p class="plain" id="sd-jumps-text"></p>
+      <details class="rule-detail"><summary>Show the numbers</summary><div class="small" id="sd-jumps-table"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="gap">
+      <summary class="ar-sd-sum"><span class="kicker">Fewer new products than expected, or more?</span><h3 id="gap-h">The discovery gap</h3></summary>
+      <div class="ar-sd-lead"><p>New competitive exports over 2017–19 to 2022–24 against the number a model predicts from the country’s position in the product space and its income. On the diagonal, as expected. Below it, fewer tries succeeded than its position predicts: the pattern the self-discovery story leaves. The comparison countries are shown for scale.</p></div>
+      <div class="sd-chart" id="sd-gap" aria-describedby="sd-gap-text"></div>
+      <p class="plain" id="sd-gap-text"></p>
+      <details class="rule-detail"><summary>Show the numbers</summary><div class="small" id="sd-gap-table"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="frontier">
+      <summary class="ar-sd-sum"><span class="kicker">Distance against complexity</span><h3 id="frontier-h">Where new products could come from</h3></summary>
+      <div class="ar-sd-lead"><p>Every product this country does not yet export competitively: how far it is (left is near) against how complex it is (up is more complex), sized by world trade. The quadrants are described in words. Nothing here is ranked, and near is not the same as good.</p></div>
+      <div class="sd-legend sd-sectors" id="sd-frontier-sectors" aria-label="Sectors"></div>
+      <div class="sd-chart" id="sd-frontier" aria-describedby="sd-frontier-text"></div>
+      <p class="plain" id="sd-frontier-text"></p>
+      <details class="rule-detail"><summary>Show the numbers</summary><div class="small" id="sd-frontier-table"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="survival">
+      <summary class="ar-sd-sum"><span class="kicker">Did past tries last?</span><h3 id="survival-h">Survival</h3></summary>
+      <div class="ar-sd-lead"><p>Of the products this country started exporting competitively in 2012–14, the share still exported competitively in 2019–21, beside its comparison countries and beside its own established exports. Tries that do not last point away from self-discovery and toward some other constraint.</p></div>
+      <div class="sd-chart" id="sd-survival" aria-describedby="sd-survival-text"></div>
+      <p class="plain" id="sd-survival-text"></p>
+      <details class="rule-detail"><summary>Show the numbers, and how all of this is made</summary><div class="small" id="sd-survival-table"></div><div class="small" id="sd-space-method"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="evidence">
+      <summary class="ar-sd-sum"><span class="kicker">What the public data show</span><h3 id="evidence-h">The measures</h3></summary>
+      <div class="ar-sd-lead"><p id="evidence-sub"></p></div>
+      <p class="plain" id="sd-lean"></p>
+      <ul class="sd-list" id="sd-measures"></ul>
+      <p class="small muted" id="sd-measures-note">Since rubric 0.2.8 the discovery gap can carry the rating on its own: it is the one gate-tested measure here, and the others inform the lean. Even so, a country with few new products may be held back by something else, such as power or roads, which is why the next section gives the rating its context. The firm surveys count products new to the firm, not new to the country, so they are only a rough guide.</p>
+    </details>
+
+    <details class="panel ar-sd-sec" id="elimination">
+      <summary class="ar-sd-sum"><span class="kicker">The other causes</span><h3 id="elim-h">Where do the other causes of low returns stand?</h3></summary>
+      <div class="ar-sd-lead"><p>A self-discovery problem can sit beside another one. Hausmann, Rodrik and Velasco put it under low appropriability as a branch of its own, not as what is left once everything else is ruled out, so the tool rates it from its own evidence. The reading is still stronger where the other causes are set aside and weaker where one of them is flagged. Here is where they stand for this country, under the reading chosen in the top bar.</p></div>
+      <div class="table-wrap"><table class="data sd-elim" id="sd-elim"></table></div>
+      <p class="plain" id="sd-elim-verdict"></p>
+      <p class="small muted">The limits of this test: several problems can hold growth back at once; a self-discovery problem can look like a missing road or cold store for one product; and where data are thin, “unclear” rarely turns into “ruled out”. This table is context for the rating, not a gate on it (until rubric 0.2.7 it was the gate).</p>
+    </details>
+
+    <details class="panel ar-sd-sec" id="nearby">
+      <summary class="ar-sd-sum"><span class="kicker">How far are the jumps?</span><h3 id="nearby-h">Nearby products</h3></summary>
+      <div class="ar-sd-lead"><p>Products this country does not yet export competitively, whose neighbors in the product space it already exports. This is information about distance, <strong>not a list of sectors to back</strong>: a near product is not always a better one, and a product that is near may still be uncompetitive for reasons of cost, scale or trade policy. Lists are in alphabetical order, not ranked.</p></div>
+      <div id="sd-nearby"></div>
+      <details class="rule-detail" style="margin-top:12px"><summary>How this list is made, and the check it must pass</summary><div class="small" id="sd-nearby-method"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="otherway">
+      <summary class="ar-sd-sum"><span class="kicker">The other direction</span><h3 id="otherway-h">From the camels to the water</h3></summary>
+      <div class="ar-sd-lead"><p>The camels-and-hippos test usually starts from a suspected constraint and asks whether the products that need it do badly. This runs it the other way round, as the Growth Lab’s analysts do by eye: which products does this country export far more than its income predicts, which products should it export by its income but does not at all, and what do the two groups need? The missing ones are the hippos a desert never shows. <strong>This is a hint about what to ask, not a verdict and not a list of sectors to back.</strong></p></div>
+      <div id="sd-otherway"></div>
+      <details class="rule-detail" style="margin-top:12px"><summary>How these lists are made, and what they cannot show</summary><div class="small" id="sd-otherway-method"></div></details>
+    </details>
+
+    <details class="panel ar-sd-sec" id="settle">
+      <summary class="ar-sd-sum"><span class="kicker">What would settle it</span><h3 id="settle-h">Evidence national statistics can’t give</h3></summary>
+      <ul class="sd-list">
+        <li><strong>Talk to the first movers.</strong> Firms that tried a new product or market in the last five years: what stopped them, and did others copy them before they recovered their costs?</li>
+        <li><strong>Map the missing inputs.</strong> For two or three nearby products, which specific public inputs are missing: standards, certification, logistics, regulation, skills?</li>
+        <li><strong>Go further with the research tools.</strong> The Harvard Growth Lab’s Atlas of Economic Complexity covers the product space in far more depth than this page.</li>
+      </ul>
+    </details>
+
+    <aside class="tnfa-view" aria-labelledby="sd-tnfa-h">
+      <span class="kicker">The New Foreign Assistance’s view · not part of any rating</span>
+      <h3 id="sd-tnfa-h">Why this matters for U.S. assistance</h3>
+      <p>If self-discovery is what holds growth back, the most useful help is narrow and temporary: share the risk of the first serious try at a new product, tie that support to results and withdraw it when the try fails, and fix the specific public inputs the product needs so that others can follow. Hausmann and Rodrik stress that discipline: support without it invites waste. This is very different from subsidizing whole sectors indefinitely. It is also why diagnosis comes first: backing first movers makes sense only once the more common problems have been ruled out.</p>
+    </aside>
+  </section>
+
+  <section class="ar-analyst" id="ar-analyst" aria-labelledby="ar-analyst-h">
+    <div class="ar-analyst-head">
+      <span class="kicker">For analysts</span>
+      <h2 id="ar-analyst-h">The charts, and every control</h2>
+      <p class="ev-sub small muted" id="ev-sub-area">Today's Analyst View for this area, whole: the evidence strip, the four tests' charts, any indicator charted
+        against income and the comparison countries, the year player and the downloads.</p>
+    <gt-fold><details class="k-fold"><summary class="gt-fold-sum">How to use this view</summary><div class="gt-fold-body"><p class="ev-sub" id="page-sub">Pick a node on the left. Each node shows every piece of evidence the verdict layer weighed; pick any indicator to chart it against the income trend, its comparators and its own history.</p><p class="ev-sub small">This is the analyst view: the evidence behind each verdict, chart by chart. For the plain answer, see the <a href="/growth-test-site/desk/country.html" data-keep-iso>Bottom line</a>.</p></div></details></gt-fold>
+    <p><button class="btn small" id="pack" type="button" title="One HTML file with every chart on this page, its readout and footnote; open it and print to PDF">Download chart pack</button>
+      <button class="btn small" id="pins" type="button" hidden title="One HTML file with every chart you added with “+ Pack”, from any node or indicator, each with its own settings">Download my pack (<span id="pins-n">0</span>)</button>
+      <button class="btn small" id="pins-clear" type="button" hidden>Clear my pack</button>
+      <span class="small muted" id="pins-status" role="status"></span></p>
+    </div>
+  <div class="ev-toolbar" id="toolbar">
+    <div class="ev-tb-row">
+      <button class="ev-tb-toggle" id="tb-toggle" type="button" aria-expanded="false" aria-controls="controls"><span class="ev-tb-summary" id="tb-summary"></span><span class="ev-tb-action">Change</span></button>
+      <button class="btn small ev-back" data-back type="button" hidden></button>
+    </div>
+    <form class="ev-controls" id="controls" aria-label="Chart settings" onsubmit="return false">
+      <label class="field"><span>Economy</span><select id="c-country"></select></label>
+      <label class="field ev-wide"><span>Indicator</span><select id="c-ind"></select></label>
+      <label class="field"><span>Find an indicator</span><input id="c-ind-find" type="search" list="c-ind-list" placeholder="Type a name, source or node" autocomplete="off"><datalist id="c-ind-list"></datalist></label>
+      <label class="field"><span>Comparators</span>
+        <select id="c-set"><option value="structural">Structural</option><option value="regional">Regional</option><option value="aspirational">Aspirational</option><option value="custom">Custom (only those added)</option></select></label>
+      <label class="field"><span>Fit line (chart 1)</span>
+        <select id="c-fit"><option value="linear">Income only: linear</option><option value="lowess">Income only: LOWESS</option><option value="structure">Income and structure (as the rating)</option></select></label>
+      <div class="field ev-asof"><label for="c-asof"><span>Data as of</span></label>
+        <div class="ev-asof-row"><select id="c-asof"></select><button class="btn small ev-back" data-back type="button" hidden></button></div></div>
+      <label class="field"><span>Add to comparators</span><input id="c-label" type="search" list="dl-countries" placeholder="Type a name"><datalist id="dl-countries"></datalist></label>
+    </form>
+    <div class="ev-labels" id="extra-labels" role="group" aria-label="Comparators you added"></div>
+  </div>
+
+  <details class="ev-key" id="how-to-read">
+    <summary>How to read this page</summary>
+    <p class="small"><strong>What it is for.</strong> Each node of the growth diagnostics tree asks whether one thing (finance, skills, electricity and so on) is holding back private investment. This page shows the evidence for one node at a time. The verdict itself is on the <a href="/growth-test-site/desk/country.html" data-keep-iso>Bottom line</a>; this page shows what that verdict weighed, so you can check it or build your own charts.</p>
+    <p class="small"><strong>"Toward binding" is a direction, not a conclusion.</strong> A dot on the binding side means that one indicator looks the way it would if the constraint held back growth, compared with economies at the same income level. One indicator never settles it. The tool is built to say when a constraint can be set aside, not to say a program should target one.</p>
+    <p class="small"><strong>"sd" means standard deviations</strong> from what income (and, where stated, population, resource rents and being landlocked) predicts. Within ±0.75 sd reads as normal for an economy of its kind; beyond ±2 sd is unusual.</p>
+    <p class="small"><strong>The four tests</strong> (the Hausmann-Rodrik-Velasco questions):</p>
+    <ul class="small tm-list">
+      <li><span data-tmark="price"></span><strong>1 · Price:</strong> is the thing expensive, or are firms rationed?</li>
+      <li><span data-tmark="changes"></span><strong>2 · Changes:</strong> when it got cheaper or dearer, did investment follow?</li>
+      <li><span data-tmark="circumvention"></span><strong>3 · Circumvention:</strong> are firms paying to work around it (generators, self-financing)?</li>
+      <li><span data-tmark="camels"></span><strong>4 · Camels and hippos:</strong> do the activities that thrive here need little of it? Camels do well in a desert; if an economy exports few products that need, say, external finance, finance may be the desert.</li>
+    </ul>
+    <p class="small muted">Every chart can be saved as PNG, SVG or CSV, and "Download chart pack" saves every chart on the page in one file. Hollow or dashed marks are older than the staleness limit.</p>
+  </details>
+
+  <details class="ev-key" id="class-key">
+    <summary>What the indicator classes A to D mean</summary>
+    <p class="small">Each indicator carries a letter for how directly it reveals a binding constraint (Workbook 4.6). The letter sets its weight in the verdict. Prices and rationing say the most; quantities and perceptions say less, because a low quantity can mean low demand rather than scarcity. The letter follows from two recorded facts: what the measure reads, and whose experience it records (firms’ own, or an expert’s estimate for a standard case).</p>
+    <table>
+      <thead><tr><th>Class</th><th>What it is</th><th>Examples</th><th class="num">Weight</th></tr></thead>
+      <tbody>
+        <tr><td><strong>A</strong></td><td>Prices, shadow prices and firms’ own experience of rationing</td><td>Real lending rate, returns to schooling, outages in a typical month, loan applications rejected, bribe requests</td><td class="num">1.0</td></tr>
+        <tr><td><strong>B</strong></td><td>Costly behavior that only makes sense if the constraint binds (working around it), and the camels test</td><td>Generator ownership, self-financing of investment, dollarization, informality, paying for private security</td><td class="num">0.9</td></tr>
+        <tr><td><strong>C</strong></td><td>Quantities, access measures, stated reasons and opinions, and experts’ estimates for a standard case</td><td>Credit to GDP, enrollment, remittances, obstacle rankings, Doing Business and B-READY time and cost</td><td class="num">0.6</td></tr>
+        <tr><td><strong>D</strong></td><td>Composite indices</td><td>Heritage and World Justice Project scores, the Human Capital Index, the Logistics Performance Index</td><td class="num">0.3, never decisive</td></tr>
+        <tr><td><strong>X</strong></td><td>Context, no vote</td><td>GDP per capita, nominal lending rate</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+    <p class="small muted">A verdict at either extreme must rest on at least two class A or B families.</p>
+  </details>
+
+  <div class="ev-layout">
+  <div class="ev-main">
+  <div id="view-node">
+  <section class="ev-section ev-nodeview" id="sec-node" aria-labelledby="h-node">
+    <h2 class="ev-h2" id="h-node"></h2>
+    <p class="ev-node-q" id="node-q"></p>
+    <p class="ev-node-verdict" id="node-verdict"></p>
+    <form class="ev-subcontrols" id="node-controls" onsubmit="return false" aria-label="Settings for this view"></form>
+    <figure class="ev-figure">
+      <div class="ev-chart ev-chart-node" id="chartN" role="img" aria-labelledby="h-node" aria-describedby="readoutN"></div>
+      <figcaption>
+        <p class="ev-readout" id="readoutN"></p>
+        <p class="ev-foot small muted" id="footN"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="node" role="group" aria-label="Download this node chart">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <div class="ev-tabs" id="test-tabs" role="tablist" aria-label="The four tests for this node" hidden></div>
+
+  <section class="ev-section ev-test" id="sec-c5" role="tabpanel" aria-labelledby="tab-c5" hidden>
+    <span class="kicker"><span data-tmark="price"></span>Test 1 · Price</span>
+    <h2 class="ev-h2" id="h-c5">Price against quantity</h2>
+    <p class="ev-node-q">Is it scarce, or is demand for it low?</p>
+    <form class="ev-subcontrols" id="c5-controls" onsubmit="return false" aria-label="Price against quantity settings">
+      <label class="field"><span>Price</span><select id="c5-price"></select></label>
+      <label class="field"><span>Quantity</span><select id="c5-qty"></select></label>
+      <label class="field"><span>Axes (left)</span><select id="c5-axes"><option value="resid">Distance from the income trend</option><option value="raw">Values</option></select></label>
+    </form>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart5" role="img" aria-labelledby="h-c5" aria-describedby="readout5"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout5"></p>
+        <p class="ev-foot small muted" id="foot5"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c5" role="group" aria-label="Download the price against quantity chart">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <section class="ev-section ev-test" id="sec-c6" role="tabpanel" aria-labelledby="tab-c6" hidden>
+    <span class="kicker"><span data-tmark="changes"></span>Test 2 · Changes</span>
+    <h2 class="ev-h2" id="h-c6">Co-movement</h2>
+    <p class="ev-node-q">When the constraint eased or tightened, did investment respond?</p>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart6" role="img" aria-labelledby="h-c6" aria-describedby="readout6"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout6"></p>
+        <p class="ev-foot small muted" id="foot6"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c6" role="group" aria-label="Download the co-movement chart">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <section class="ev-section ev-test" id="sec-c8" role="tabpanel" aria-labelledby="tab-c8" hidden>
+    <span class="kicker"><span data-tmark="circumvention"></span>Test 3 · Circumvention</span>
+    <h2 class="ev-h2" id="h-c8">Bypass behavior</h2>
+    <p class="ev-node-q">Are firms paying to work around the constraint?</p>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart8" role="group" aria-labelledby="h-c8" aria-describedby="readout8"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout8"></p>
+        <p class="ev-foot small muted" id="foot8"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c8" role="group" aria-label="Download the bypass chart">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <section class="ev-section ev-test" id="sec-c12" role="tabpanel" aria-labelledby="tab-c12" hidden>
+    <span class="kicker"><span data-tmark="camels"></span>Test 4 · Camels and hippos</span>
+    <h2 class="ev-h2" id="h-c12">What thrives, and what it needs</h2>
+    <p class="ev-node-q">Do the activities that thrive here need little of it?</p>
+    <div class="cr-host" id="ruler12"></div>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart12" role="img" aria-labelledby="h-c12" aria-describedby="readout12"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout12"></p>
+        <p class="ev-foot small muted" id="foot12"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c12" role="group" aria-label="Download the camels and hippos chart">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  </div>
+
+  <div id="view-ind" hidden>
+  <p class="ev-back"><button class="btn quiet small" id="back-node" type="button">← Back to the node</button></p>
+  <header class="ev-detail-head" id="detail-head">
+    <span class="kicker">Indicator detail</span>
+    <h2 id="ev-title">Loading…</h2>
+    <p class="ev-sub" id="ev-sub"></p>
+  </header>
+
+  <section class="ev-section" id="sec-c1" aria-labelledby="h-c1">
+    <h2 class="ev-h2" id="h-c1"><span class="ev-num">1</span> Against the income trend</h2>
+    <div class="ev-player" id="player" role="group" aria-label="Year player for charts 1 and 2">
+      <button class="btn small" data-pl="play" type="button" aria-pressed="false">▶ Play the years</button>
+      <input type="range" data-pl="year" aria-label="Data as of (year)">
+      <output data-pl="out" aria-live="off"></output>
+      <label class="pl-speed"><span>Speed</span>
+        <select data-pl="speed"><option value="1600">Slow</option><option value="900" selected>Normal</option><option value="450">Fast</option></select></label>
+      <button class="btn quiet small" data-pl="close" type="button" hidden>Back to the static chart</button>
+      <button class="btn quiet small" id="pl-record" type="button" title="Records charts 1 and 2 playing from the first year to the latest, as a WebM video">Save playback as video</button>
+      <p class="pl-note small muted" id="pl-note"></p>
+    </div>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart" role="img" aria-describedby="readout"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout"></p>
+        <p class="small muted" id="direction"></p>
+        <p class="ev-foot small muted" id="foot"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c1" role="group" aria-label="Download chart 1, against the income trend">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+      <button class="btn quiet small" id="copy-link" type="button">Copy link to this view</button>
+    </div>
+  </section>
+
+  <section class="ev-section" id="sec-c2" aria-labelledby="h-c2">
+    <h2 class="ev-h2" id="h-c2"><span class="ev-num">2</span> Against its comparators</h2>
+    <div class="ev-player ev-player-mini" id="player2" role="group" aria-label="Year player for chart 2">
+      <button class="btn small" id="pl2-play" type="button" aria-pressed="false">▶ Play the years</button>
+      <output id="pl2-year" aria-live="off"></output>
+      <span class="small muted">Plays as a bar race; chart 1 moves with it, and the page keeps one year.</span>
+    </div>
+    <figure class="ev-figure">
+      <div class="ev-chart ev-chart-bars" id="chart2" role="img" aria-describedby="readout2"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout2"></p>
+        <p class="ev-foot small muted" id="foot2"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c2" role="group" aria-label="Download chart 2, against its comparators">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <section class="ev-section" id="sec-c3" aria-labelledby="h-c3">
+    <h2 class="ev-h2" id="h-c3"><span class="ev-num">3</span> Over time against its comparators</h2>
+    <form class="ev-subcontrols" onsubmit="return false" aria-label="Time chart settings">
+      <label class="field"><span>Years shown</span>
+        <select id="c3-years"><option value="10">10</option><option value="20" selected>20</option><option value="30">30</option></select></label>
+      <label class="field"><span>Show</span>
+        <select id="c3-view"><option value="levels">Levels</option><option value="change">Change since the first year shown</option></select></label>
+      <label class="field"><span>Comparator lines</span>
+        <select id="c3-peers"><option value="lines">Each comparator</option><option value="band">Median and middle half only</option></select></label>
+    </form>
+    <figure class="ev-figure">
+      <div class="ev-chart" id="chart3" role="img" aria-describedby="readout3"></div>
+      <figcaption>
+        <p class="ev-readout" id="readout3"></p>
+        <p class="ev-foot small muted" id="foot3"></p>
+      </figcaption>
+    </figure>
+    <div class="ev-actions" data-chart="c3" role="group" aria-label="Download chart 3, over time">
+      <button class="btn small" data-kind="png" type="button">PNG</button>
+      <button class="btn small" data-kind="svg" type="button">SVG</button>
+      <button class="btn small" data-kind="csv" type="button">CSV</button>
+    </div>
+  </section>
+
+  <section class="ev-verdict" id="verdict" aria-label="What the verdict layer concluded"></section>
+
+  <details class="ev-table">
+    <summary>Data table: the economy and its comparators</summary>
+    <div id="table"></div>
+  </details>
+  </div>
+  </div>
+  </div>
+  </section>
+</main>
+
+<footer class="foot"></footer>
+<script type="module" src="/growth-test-site/desk/js/area.mjs"></script>
+</body>
+</html>

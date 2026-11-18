@@ -182,6 +182,23 @@ export const USER_TIERS = ['likely_binding', 'candidate', 'cannot_tell_conflicti
 export const TEST_ORDER = ['price', 'changes', 'circumvention', 'camels'];
 export const TEST_NUM = { price: 1, changes: 2, circumvention: 3, camels: 4 };
 
+/**
+ * The redesign flag (interface PRD v0.3, Part 11, step 2): the country overview, the assumptions line and the new bar. It is on
+ * everywhere, the published site included (Ryan, 18 November: the live site is republished with the redesign), until step 6
+ * removes it. `?redesign=off` or `?redesign=on` sets it for this browser (kept in storage), so the old pages can still be seen.
+ * @returns {boolean}
+ */
+export function redesignOn() {
+  if (typeof location === 'undefined') return true;
+  try {
+    const q = new URLSearchParams(location.search).get('redesign');
+    if (q === 'on' || q === 'off') localStorage.setItem('gt-redesign', q);
+    const v = localStorage.getItem('gt-redesign');
+    if (v === 'on' || v === 'off') return v === 'on';
+  } catch { /* storage may be unavailable: fall back to the default */ }
+  return true;
+}
+
 /** True for the three cannot-tell tiers. @param {string | null | undefined} t */
 export const isCannotTell = (t) => typeof t === 'string' && t.startsWith('cannot_tell');
 /** The engine's label for a tier ('—' for none). @param {string | null | undefined} t */
@@ -366,7 +383,7 @@ export const HASH = {
   pqp: 'pqp', pqq: 'pqq', pqaxes: 'pqaxes',
 };
 /** The keys that follow the user from tab to tab (shell.mjs): only what every country page understands. */
-export const CARRIED_KEYS = [HASH.set, HASH.peers, HASH.overrides, HASH.setting, HASH.tour, HASH.predict];
+export const CARRIED_KEYS = [HASH.set, HASH.peers, HASH.overrides, HASH.setting, HASH.tour, HASH.predict, HASH.view];
 /** The tour's keys (tour.mjs): a page rewriting its state must not drop them. */
 export const TEACHING_KEYS = [HASH.tour, HASH.predict];
 /** The hash as URLSearchParams. */
@@ -422,7 +439,29 @@ export function writeState(state) {
   if (setting !== 'standard') p.set(HASH.setting, setting);
   const cur = readHash();
   for (const k of TEACHING_KEYS) if (cur.get(k) != null) p.set(k, cur.get(k));
+  // the detail (interface PRD L1) travels in the link like the reading; a page rewriting its state keeps it
+  if (cur.get(HASH.view) === 'analyst') p.set(HASH.view, 'analyst');
   writeHash(p);
+}
+
+/**
+ * Interface PRD v0.3, Part 4 (L1, L2): the detail, Plain (the default for a first visit) or Analyst. The link carries it
+ * (#view=analyst), so a link reproduces what its sender saw; browser storage keeps the reader's choice. The detail changes
+ * only what is open by default and which words label it (L2): the same pages, markup, data and ratings.
+ * @returns {'plain' | 'analyst'}
+ */
+export function currentDetail() {
+  if (typeof location === 'undefined') return 'plain';
+  if (readHash().get(HASH.view) === 'analyst') return 'analyst';
+  try { if (localStorage.getItem('gt-detail') === 'analyst' && readHash().get(HASH.view) !== 'plain') return 'analyst'; } catch { /* no storage */ }
+  return 'plain';
+}
+/** Choose the detail: kept in storage and in the link, set on the root element, announced with 'desk-detail'. @param {'plain' | 'analyst'} d */
+export function setDetail(d) {
+  try { localStorage.setItem('gt-detail', d); } catch { /* the link still carries it */ }
+  setHashKeys({ [HASH.view]: d === 'analyst' ? 'analyst' : null });
+  document.documentElement.dataset.detail = d;
+  window.dispatchEvent(new CustomEvent('desk-detail', { detail: { detail: d } }));
 }
 
 // ---------- indicator helpers ----------
@@ -535,7 +574,7 @@ export function missingTestReason(test, nodeId, registry) {
   const specs = (registry.indicators.comovement_specs || []).filter((s) => s.node === nodeId || (s.also_nodes || []).includes(nodeId));
   const nb = registry.connectorsNotBuilt.filter((f) => f.nodes.includes(nodeId));
   if (test === 'camels') return registry.indicators.indicators.some((i) => i.test === 'camels' && /^(CHF?|HG)\./.test(i.id) && (i.nodes || []).includes(nodeId))
-    ? 'In the "4 · Camels and hippos" tab under the strip: the firm-level version (from the Enterprise Surveys) votes where it passed its power check; the ' +
+    ? 'In the "4 · Camels and hippos" tab under the strip: the firm-level version (from the Enterprise Surveys) counts where it passed its power check; the ' +
       'trade-based tilt and the presence version (the hippo gap) each vote only where they passed their gates, and are shown either way.'
     : 'Not computed: no intensity vector or survey sensitivity is connected for this area yet.';
   if (test === 'changes') return specs.length ? 'Not computed: the co-movement specification for this node had too few year pairs.' : 'Not computed: rubric ' +
@@ -564,3 +603,67 @@ export function downloadText(filename, text, type = 'text/markdown') {
 
 /** A query-string parameter of the page's URL, or null. @param {string} name @returns {string | null} */
 export function qs(name) { return new URLSearchParams(location.search).get(name); }
+
+/**
+ * Interface PRD v0.3, A8: an area's pictogram, drawn beside its name (a sub-area takes its roll-up's). It identifies the area and
+ * is never colored by its rating: the CSS gives it the muted ink of the text around it.
+ * @param {string} id the area, N0 to N13 or a sub-area id
+ * @returns {SVGSVGElement | null}
+ */
+export function pictogram(id) {
+  if (typeof document === 'undefined') return null;
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = /** @type {SVGSVGElement} */ (document.createElementNS(ns, 'svg'));
+  svg.setAttribute('class', 'icon pict'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false');
+  const use = document.createElementNS(ns, 'use'); use.setAttribute('href', `/growth-test-site/desk/img/icons.svg#area-${String(id).split('.')[0]}`);
+  svg.append(use);
+  return svg;
+}
+
+// ---------- C4: a number's source on tap in Plain (interface PRD v0.3, 5C) ----------
+/** "(Source, year)" as the plain helpers print it: "(World Bank GFDD, 2019–21 average)", "(Enterprise Surveys, 2025; 9 years old)". */
+const SOURCE_RE = /\(([A-Za-z][^()\n]*?), (\d{4}(?:[–-]\d{2,4})?(?: average(?:, 2 years with data)?)?(?:; \d+ years old)?)\)/g;
+/**
+ * Split a sentence into its text and its "(source, year)" parts. DOM-free, so the tests can read it under Node.
+ * @param {string} text
+ * @returns {Array<string | {source: string, year: string}>}
+ */
+export function splitSources(text) {
+  /** @type {Array<string | {source: string, year: string}>} */
+  const out = []; let last = 0; let m;
+  const re = new RegExp(SOURCE_RE.source, 'g');
+  while ((m = re.exec(text))) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    out.push({ source: m[1], year: m[2] }); last = re.lastIndex;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+/**
+ * C4: in Plain a number carries its year inline and its source on tap; in Analyst (and in every export, which this never
+ * touches) the source stays printed beside it. Each "(source, year)" in the text under root becomes the year with a small
+ * "source" button; CSS shows the source at once in Analyst and hides the button there.
+ * @param {Element | null} root
+ */
+export function tapSources(root) {
+  if (!root || typeof document === 'undefined') return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  /** @type {Text[]} */
+  const found = [];
+  while (walker.nextNode()) {
+    const n = /** @type {Text} */ (walker.currentNode);
+    const p = n.parentElement;
+    if (p && !p.closest('.src-wrap, button, script, style, summary') && new RegExp(SOURCE_RE.source).test(n.nodeValue || '')) found.push(n);
+  }
+  for (const n of found) {
+    const frag = document.createDocumentFragment();
+    for (const part of splitSources(n.nodeValue || '')) {
+      if (typeof part === 'string') { frag.append(part); continue; }
+      const btn = h('button', { type: 'button', class: 'src-tap', 'aria-expanded': 'false', title: `Source: ${part.source}` }, 'source');
+      const wrap = h('span', { class: 'src-wrap' }, '(', h('span', { class: 'src-name' }, `${part.source}, `), part.year, btn, ')');
+      btn.addEventListener('click', () => { const on = wrap.classList.toggle('on'); btn.setAttribute('aria-expanded', String(on)); });
+      frag.append(wrap);
+    }
+    n.replaceWith(frag);
+  }
+}

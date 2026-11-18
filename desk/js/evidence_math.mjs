@@ -150,7 +150,7 @@ export function lineAndBand(fit, rows, transform, points = 80) {
 
 /**
  * The verdict layer's own fit (income and structure) as a line against income: each economy's value net of its
- * structural terms (component-plus-residual), recentred so the cloud keeps its level. The vertical distance from the
+ * structural terms (component-plus-residual), recentered so the cloud keeps its level. The vertical distance from the
  * line is then the engine's residual, and t is the engine's. ef: the fits.json summary merged with fits/<id>.json.
  */
 export function structureFit(rows, ef) {

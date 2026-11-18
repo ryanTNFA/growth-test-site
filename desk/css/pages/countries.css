@@ -3,6 +3,8 @@
    The map's own rules (.ex-*) are the home page's, repeated here because pages/home.css loads on index.html only; when the
    home page retires they move to components.css. Durations live in motion.css. */
 @layer pages {
+/* D2: the way into Compare, beside the economies */
+.c-compare { margin: 2px 0 0; flex-basis: 100%; }
 main.countries { --gutter: clamp(16px, 4vw, 60px); }
 
 /* ---------- the head: the question, the one sentence, the search (D1) ---------- */
@@ -49,8 +51,6 @@ main.countries { --gutter: clamp(16px, 4vw, 60px); }
 .ex-gap { stroke: var(--tier-cannot-hatch); stroke-width: 0.7; }
 .ex-legend { margin: 6px 0 4px; }
 .ex-swatch-none { background: transparent; border: 1px dashed var(--rule-strong); }
-.ex-swatch-tint { background: var(--tier-cannot-tint); border-color: var(--rule); }
-.ex-swatch-gap { background: var(--tier-cannot-tint); border-color: var(--tier-cannot-hatch); }
 .ex-list { display: grid; gap: 6px; }
 .ex-group { border: 1px solid var(--rule); background: var(--surface); padding: 6px 10px; }
 .ex-group > summary { cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 8px; }

@@ -14,7 +14,7 @@ const s = (tag, attrs = {}, ...children) => {
   for (const c of children.flat(Infinity)) if (c != null && c !== false) el.append(c.nodeType ? c : document.createTextNode(String(c)));
   return el;
 };
-const INK = 'var(--text)', AMBER = 'var(--brand-amber)', PEER = 'var(--chart-peer)', OTHER = '#d8d3ca', OFF = '#e9e5dd', MUTED = 'var(--muted)';
+const INK = 'var(--text)', FOCUS = 'var(--chart-focus)', PEER = 'var(--chart-peer)', OTHER = '#d8d3ca', OFF = '#e9e5dd', MUTED = 'var(--muted)';
 const pct = (x, d = 0) => `${(100 * x).toFixed(d)}%`;
 const yrs = (w) => `${w[0]}–${String(w[1]).slice(2)}`;
 const median = (a) => { const v = a.filter((x) => x != null && Number.isFinite(x)).sort((p, q) => p - q); return v.length ? (v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2) : null; };
@@ -197,25 +197,25 @@ function renderMap(ctx) {
     nudge(secLabs, 18);
   }
   svg.append(labels);
-  const colour = (i) => sectorVar(sectorOf(geo, i));
+  const color = (i) => sectorVar(sectorOf(geo, i));
   const paint = () => {
     const on = sets[period];
     for (let i = 0; i < n; i++) {
       const el = circles[i];
       const isOn = on.has(i), isNew = period === 'now' && entered.has(i), isNear = nearSet.has(i) && !isOn;
-      el.setAttribute('fill', isNear ? '#fff' : colour(i));
+      el.setAttribute('fill', isNear ? '#fff' : color(i));
       el.setAttribute('fill-opacity', isOn || isNear ? 1 : 0.22);
-      el.setAttribute('stroke', isNew ? AMBER : isNear ? colour(i) : isOn ? '#fff' : 'none');
+      el.setAttribute('stroke', isNew ? FOCUS : isNear ? color(i) : isOn ? '#fff' : 'none');
       el.setAttribute('stroke-width', isNew ? 2.4 : isNear ? 1.8 : 0.6);
       if (isOn || isNew || isNear) nodes.append(el);   // draw on top of the pale ones
     }
     $('sd-map-text').textContent = period === 'now'
-      ? `In ${yrs(geo.meta.period)} ${c} exported ${sets.now.size} of ${n} products competitively (${sets.base.size} in ${yrs(ps.gap ? ps.gap.window[0] : [2017, 2019])}), shown in full colour; the ${entered.size} it has added since then are ringed in amber${nearSet.size ? `, and its ${nearSet.size} nearest products are outlined` : ''}. Products that share know-how sit close together, so the coloured area is the country’s reach, not its size.`
-      : `In 2017–19 ${c} exported ${sets.base.size} of ${n} products competitively, shown in full colour. Switch to 2022–24 to see what it has added since.`;
+      ? `In ${yrs(geo.meta.period)} ${c} exported ${sets.now.size} of ${n} products competitively (${sets.base.size} in ${yrs(ps.gap ? ps.gap.window[0] : [2017, 2019])}), shown in full color; the ${entered.size} it has added since then are ringed in teal${nearSet.size ? `, and its ${nearSet.size} nearest products are outlined` : ''}. Products that share know-how sit close together, so the colored area is the country’s reach, not its size.`
+      : `In 2017–19 ${c} exported ${sets.base.size} of ${n} products competitively, shown in full color. Switch to 2022–24 to see what it has added since.`;
   };
   const btn = (key, label) => h('button', { type: 'button', 'aria-pressed': String(period === key), onclick: () => { period = key; for (const b of $('sd-map-toggle').children) b.setAttribute('aria-pressed', String(b.dataset.key === key)); paint(); }, dataset: { key } }, label);
   $('sd-map-toggle').replaceChildren(btn('base', '2017–19'), btn('now', '2022–24'));
-  $('sd-map-legend').replaceChildren(h('span', { class: 'l-on' }, 'full colour: exported competitively'), h('span', { class: 'l-new' }, 'new since 2017–19'), h('span', { class: 'l-near' }, 'nearest, not yet made'), h('span', { class: 'l-pale' }, 'pale: other products'));
+  $('sd-map-legend').replaceChildren(h('span', { class: 'l-on' }, 'full color: exported competitively'), h('span', { class: 'l-new' }, 'new since 2017–19'), h('span', { class: 'l-near' }, 'nearest, not yet made'), h('span', { class: 'l-pale' }, 'pale: other products'));
   sectorLegend('sd-map-sectors', geo);
   const tip = tooltip(host);
   const chapter = (p) => CHAPTERS.find(([lo, hi]) => p.slice(0, 2) >= lo && p.slice(0, 2) <= hi);
@@ -230,7 +230,7 @@ function renderMap(ctx) {
   host.append(svg); paint();
   // the numbers: the products added since 2017-19
   const rows = [...entered.entries()].map(([i, d]) => [geo.names[i], geo.products[i], sectorCell(geo, i), (d / 100).toFixed(2), geo.pci[i] == null ? '—' : geo.pci[i].toFixed(1)]).sort((a, b) => a[0].localeCompare(b[0]));
-  $('sd-map-table').replaceChildren(h('p', {}, `${c}’s new competitive exports, 2017–19 to 2022–24 (alphabetical; density is how much of the product’s neighbourhood ${c} already exported in 2017–19, from 0 to 1).`),
+  $('sd-map-table').replaceChildren(h('p', {}, `${c}’s new competitive exports, 2017–19 to 2022–24 (alphabetical; density is how much of the product’s neighborhood ${c} already exported in 2017–19, from 0 to 1).`),
     rows.length ? table(['Product', 'HS', 'Sector', 'Density at entry', 'Complexity'], rows) : h('p', { class: 'muted' }, 'None.'));
 }
 const CHAPTERS = [['01', '05', 'animals'], ['06', '15', 'plants and oils'], ['16', '24', 'food, drink, tobacco'], ['25', '27', 'minerals and fuels'], ['28', '38', 'chemicals'], ['39', '40', 'plastics and rubber'], ['41', '43', 'leather'], ['44', '49', 'wood and paper'], ['50', '63', 'textiles and clothing'], ['64', '67', 'footwear and headgear'], ['68', '70', 'stone and glass'], ['71', '71', 'precious metals and stones'], ['72', '83', 'metals'], ['84', '85', 'machinery and electrical'], ['86', '89', 'vehicles and transport'], ['90', '92', 'instruments'], ['93', '93', 'arms'], ['94', '96', 'furniture and misc.'], ['97', '97', 'art']];
@@ -286,7 +286,7 @@ function renderJumps(ctx) {
     let lane = lanes.findIndex((lx) => px - lx >= 11);
     if (lane < 0) { lane = lanes.length; lanes.push(px); } else lanes[lane] = px;
     const cy = base - 10 - (lane % 7) * 11;
-    const el = s('circle', { cx: px, cy, r: 4.8, fill: sectorVar(sectorOf(geo, i)), stroke: AMBER, 'stroke-width': 1.8, 'data-i': i, 'data-d': d });
+    const el = s('circle', { cx: px, cy, r: 4.8, fill: sectorVar(sectorOf(geo, i)), stroke: FOCUS, 'stroke-width': 1.8, 'data-i': i, 'data-d': d });
     dots.append(el);
   }
   sectorLegend('sd-jumps-sectors', geo, sorted.map(([i]) => i));
@@ -294,10 +294,10 @@ function renderJumps(ctx) {
   dots.addEventListener('mouseleave', tip.hide);
   svg.append(dots);
   const ticks = []; for (let t = 0; t <= xmax + 1e-9; t += 0.1) ticks.push(+t.toFixed(1));
-  axisX(svg, x, ticks, base + 2, (t) => t.toFixed(1), 'density at entry: share of the product’s neighbourhood already exported (0 = far, 1 = surrounded)', W);
+  axisX(svg, x, ticks, base + 2, (t) => t.toFixed(1), 'density at entry: share of the product’s neighborhood already exported (0 = far, 1 = surrounded)', W);
   host.append(svg);
   const med = j.median_entry_density, opt = j.median_option_density;
-  const read = j.share_from_top_quartile >= 0.5 ? 'short jumps, into products whose neighbours it already made' : j.share_from_top_quartile >= 0.25 ? 'a mix of short and long jumps' : 'long jumps, far from what it already made';
+  const read = j.share_from_top_quartile >= 0.5 ? 'short jumps, into products whose neighbors it already made' : j.share_from_top_quartile >= 0.25 ? 'a mix of short and long jumps' : 'long jumps, far from what it already made';
   $('sd-jumps-text').textContent = `${c}’s ${j.n_entries} new exports sat at a median density of ${med.toFixed(2)} when it entered them, against ${opt.toFixed(2)} for the ${j.n_options} products it could have entered; ${pct(j.share_from_top_quartile)} came from the nearest quarter of its options. That is ${read}.${ctx.peers.length && summary[ctx.peers[0]] ? ` Its comparison countries’ entries sat at a median of ${median(peers.map((p) => summary[p].entry_density)) == null ? '—' : median(peers.map((p) => summary[p].entry_density)).toFixed(2)}.` : ''}`;
   $('sd-jumps-table').replaceChildren(table(['Product', 'HS', 'Sector', 'Density at entry'], sorted.map(([i, d]) => [geo.names[i], geo.products[i], sectorCell(geo, i), (d / 100).toFixed(2)])));
 }
@@ -336,7 +336,7 @@ function renderGap(ctx) {
   if (beyond) svg.append(s('text', { x: x(lim), y: y(lim) - 6, 'text-anchor': 'end', class: 'lab' }, `${beyond} larger exporters lie beyond this range`));
   const pg = s('g');
   const plabs = [];
-  // labels alternate sides, in order of height, so near neighbours do not sit on each other
+  // labels alternate sides, in order of height, so near neighbors do not sit on each other
   peers.slice().sort((a, b) => y(summary[a].actual) - y(summary[b].actual)).forEach((p, k) => {
     const v = summary[p];
     pg.append(s('circle', { cx: x(v.expected), cy: y(v.actual), r: 4.5, fill: PEER, 'data-k': p }));
@@ -347,8 +347,8 @@ function renderGap(ctx) {
   nudge(plabs.filter((l) => !l.left), 13); nudge(plabs.filter((l) => l.left), 13);
   svg.append(pg);
   const me = s('g');
-  if (g.expected_lo != null) me.append(s('line', { x1: x(g.expected_lo), x2: x(g.expected_hi), y1: y(g.actual), y2: y(g.actual), stroke: AMBER, 'stroke-width': 2.5 }));
-  me.append(s('circle', { cx: x(g.expected), cy: y(g.actual), r: 6.5, fill: AMBER, stroke: INK, 'stroke-width': 1.5, 'data-k': iso }));
+  if (g.expected_lo != null) me.append(s('line', { x1: x(g.expected_lo), x2: x(g.expected_hi), y1: y(g.actual), y2: y(g.actual), stroke: FOCUS, 'stroke-width': 2.5 }));
+  me.append(s('circle', { cx: x(g.expected), cy: y(g.actual), r: 6.5, fill: FOCUS, stroke: INK, 'stroke-width': 1.5, 'data-k': iso }));
   me.append(s('text', { x: x(g.expected) + 9, y: y(g.actual) - 7, class: 'name', style: 'font-weight:600' }, c));
   svg.append(me);
   const over = (ev) => { const el = ev.target.closest('circle'); if (!el) return tip.hide(); const k = el.dataset.k, v = summary[k]; tip.show(ev, `<b>${nameOf(k)}</b><br>${v.actual} new exports against ${v.expected} expected${v.expected_lo != null ? ` (${v.expected_lo}–${v.expected_hi})` : ''}<br>gap ${v.z > 0 ? '+' : ''}${v.z}${v.hub ? ' · a re-export hub: read with care' : ''}`); };
@@ -416,7 +416,7 @@ function renderFrontier(ctx) {
   host.append(svg);
   const nearCount = cand.filter((i) => dist(i) < dmed).length;
   const complexNear = cand.filter((i) => dist(i) < dmed && geo.pci[i] > pmed).length;
-  $('sd-frontier-text').textContent = `${cand.length} products ${c} does not yet export competitively, ${nearCount} of them nearer than its median option and ${complexNear} both nearer and more complex than the median (the top-left quarter). Bottom left are the easiest next steps with the least to learn; bottom right, far and simple, is rarely worth a jump. ${near.size ? `The ${near.size} products on its nearest lists are outlined and the ten nearest are named.` : 'Its nearest-products lists did not pass their stability check, so none is marked.'} Colours are the Growth Lab’s product sections. Near is a statement about distance, not about returns: the tool does not rank these.`;
+  $('sd-frontier-text').textContent = `${cand.length} products ${c} does not yet export competitively, ${nearCount} of them nearer than its median option and ${complexNear} both nearer and more complex than the median (the top-left quarter). Bottom left are the easiest next steps with the least to learn; bottom right, far and simple, is rarely worth a jump. ${near.size ? `The ${near.size} products on its nearest lists are outlined and the ten nearest are named.` : 'Its nearest-products lists did not pass their stability check, so none is marked.'} Colors are the Growth Lab’s product sections. Near is a statement about distance, not about returns: the tool does not rank these.`;
   const rows = [...near.entries()].filter(([i]) => i != null).map(([i, kind]) => [geo.names[i], geo.products[i], sectorCell(geo, i), kind, dist(i).toFixed(2), (geo.pci[i] > 0 ? '+' : '') + geo.pci[i].toFixed(1), `US$${fmtBn(geo.trade[i])}`]).sort((a, b) => a[0].localeCompare(b[0]));
   $('sd-frontier-table').replaceChildren(rows.length ? table(['Product', 'HS', 'Sector', 'List', 'Distance', 'Complexity', 'World trade'], rows) : h('p', { class: 'muted' }, 'No nearest list is shown for this country.'));
 }
@@ -429,7 +429,7 @@ function renderSurvival(ctx) {
   const peerVals = peers.map((p) => summary[p].survival).filter((v) => v != null);
   const allMed = median(Object.values(summary).map((v) => v.survival));
   const bars = [];
-  if (sv) bars.push({ label: `${c}: products entered in ${yrs(sv.windows[1])}`, v: sv.rate, n: `${sv.alive} of ${sv.entrants}`, fill: AMBER });
+  if (sv) bars.push({ label: `${c}: products entered in ${yrs(sv.windows[1])}`, v: sv.rate, n: `${sv.alive} of ${sv.entrants}`, fill: FOCUS });
   if (sv && sv.incumbent_rate != null) bars.push({ label: `${c}: its established exports of ${yrs(sv.windows[1])}`, v: sv.incumbent_rate, n: `${sv.incumbents_alive} of ${sv.incumbents}`, fill: INK });
   if (peerVals.length) bars.push({ label: `comparison countries’ entries (median of ${peerVals.length})`, v: median(peerVals), n: '', fill: PEER });
   if (allMed != null) bars.push({ label: `all economies’ entries (median)`, v: allMed, n: '', fill: OTHER });
@@ -466,7 +466,7 @@ function renderMethod(ctx, r) {
     h('h3', { style: 'margin-top:12px' }, 'How these views are made'),
     h('p', {}, meta.method),
     h('p', {}, `Windows: the discovery gap on ${meta.windows.A.map(yrs).join(' to ')} and ${meta.windows.B.map(yrs).join(' to ')}; survival on products entered in ${yrs(meta.survival_windows[1])} (absent in ${yrs(meta.survival_windows[0])}) and still there in ${yrs(meta.survival_windows[2])}; the intensive margin on ${meta.margin_windows.map(yrs).join(' to ')}. An entry must reach US$${(meta.thresholds.entry_value / 1e6).toFixed(0)} million a year. Fit of the entry model: ${fit ? `pseudo-R² ${fit.pseudo_r2.toFixed(2)}, rank accuracy (AUC) ${fit.auc.toFixed(2)}, dispersion ${fit.dispersion.toFixed(1)}` : ''}; the gap is scaled by that dispersion and capped at ±${meta.thresholds.z_cap}.`),
-    h('p', {}, `The discovery gap's gates: a scrambled product space must give a gap centred on zero (${g.placebo && g.placebo.passes ? 'passed' : 'failed'}; ${meta.thresholds.placebos} shuffles), and the gap must rank economies alike across the two windows (rank correlation ${g.reliability ? g.reliability.real_rho_A_B.toFixed(2) : '—'} against a bar of ${meta.thresholds.stable_rho}: ${g.reliability && g.reliability.passes ? 'passed' : 'failed'}). It is class ${g.class} in the registry: ${g.class === 'B' ? 'it votes on the self-discovery rating (rubric 0.2.8) below high income, and informs without voting in high-income economies and re-export hubs (rubric 0.2.9)' : 'it informs the lean as a quantity'}. One thing to know: with the product space scrambled, the gap still ranks economies almost as the real one does (rank correlation ${g.placebo && g.placebo.real_vs_mean_placebo_rho_B != null ? g.placebo.real_vs_mean_placebo_rho_B.toFixed(2) : '—'}), so most of what the gap measures is how many new products an economy adds relative to its diversification and income, and the product space's fine structure adds little to that.`),
+    h('p', {}, `The discovery gap's gates: a scrambled product space must give a gap centered on zero (${g.placebo && g.placebo.passes ? 'passed' : 'failed'}; ${meta.thresholds.placebos} shuffles), and the gap must rank economies alike across the two windows (rank correlation ${g.reliability ? g.reliability.real_rho_A_B.toFixed(2) : '—'} against a bar of ${meta.thresholds.stable_rho}: ${g.reliability && g.reliability.passes ? 'passed' : 'failed'}). It is class ${g.class} in the registry: ${g.class === 'B' ? 'it votes on the self-discovery rating (rubric 0.2.8) below high income, and informs without voting in high-income economies and re-export hubs (rubric 0.2.9)' : 'it informs the lean as a quantity'}. One thing to know: with the product space scrambled, the gap still ranks economies almost as the real one does (rank correlation ${g.placebo && g.placebo.real_vs_mean_placebo_rho_B != null ? g.placebo.real_vs_mean_placebo_rho_B.toFixed(2) : '—'}), so most of what the gap measures is how many new products an economy adds relative to its diversification and income, and the product space's fine structure adds little to that.`),
     h('p', {}, `The signature cards read the four measures against ${c}'s structural comparison countries where it has them, else against all economies: H1 toward when the gap is −1 or below; H2 toward when fewer than half the entries came from the nearest quarter of the options; H3 toward when survival is ten points or more below the comparison; H4 toward when incumbent growth is at or above the comparison. The signature holds when H1 points toward it, H4 does not point away and H3 does not point toward it. This is a display reading (plan W10, section 3.2). The rating itself comes from the engine: since rubric 0.2.8 self-discovery is tiered like the other areas, with the discovery gap voting at its class weight and the other measures informing the lean; until 0.2.7 it was judged by elimination.`),
-    h('p', {}, `Source: ${meta.source} Built by ingest/productspace.py. The layout is computed by the tool from the same method and data as the Atlas of Economic Complexity, not copied from it; the product sections and their names are the Growth Lab’s public classification (${ctx.geo.meta.sections_source || 'github.com/cid-harvard/classifications'}). The colours are the tool’s own.`));
+    h('p', {}, `Source: ${meta.source} Built by ingest/productspace.py. The layout is computed by the tool from the same method and data as the Atlas of Economic Complexity, not copied from it; the product sections and their names are the Growth Lab’s public classification (${ctx.geo.meta.sections_source || 'github.com/cid-harvard/classifications'}). The colors are the tool’s own.`));
 }

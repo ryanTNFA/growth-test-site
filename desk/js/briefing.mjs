@@ -131,11 +131,11 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
   w();
   w('- Each indicator is compared with what is typical for an economy of the same income, population, resource rents and landlocked status ("t" below; |t| ≥ 0.75 is a weak signal, ≥ 1.5 strong) and with a set of comparator countries (rank from the worst).');
   w('- A signal of +1 or +2 points toward the area being a problem; −1 or −2 points away from it.');
-  w('- The first decision (N0) is the fork at the root, not an area: its score is the finance side’s, so a positive score leans to costly finance and a negative one to low returns. Both sides are constraints; say which side, never "constraint or not".\n- Evidence classes: A measures the cost of the constraint directly (a price); B measures behaviour that reveals it (paying to get around it); C is a quantity or survey answer that cannot tell cause from effect; D is an expert rating. Weights: A 1.0, B 0.9, C 0.6, D 0.3, reduced for old data.');
-  w('- Who votes: on the price, circumvention and camels tests only class A and B families vote; class C and D families there only inform (marked "informs" in Part 5). The changes test is one co-movement family and always votes. The class follows from what a measure reads: a price, firms’ own experience of rationing, or a costly behaviour votes; a quantity, a stated reason, an opinion, a composite index or an expert’s estimate for a standard case informs (rubric 0.4.0).');
-  w('- Corroborated flags: where the voting evidence is missing, old or neutral, at least two recent measures that only inform, one of them a measured fact, all pointing toward a problem and none against, give "worth a closer look" (sub-reason corroborated). They never give "probably not".');
-  w('- Test score T: the weighted average of the voting families’ signals on that test, shrunk toward zero when there is little evidence. Area score N: the weighted average of the test scores, with the price test counted double.');
-  w('- E is the number of voting families; C is the number of tests that point the same way as N with |T| of at least 0.5.');
+  w('- The first decision (N0) is the fork at the root, not an area: its score is the finance side’s, so a positive score leans to costly finance and a negative one to low returns. Both sides are constraints; say which side, never "constraint or not".\n- Evidence classes: A measures the cost of the constraint directly (a price); B measures behavior that reveals it (paying to get around it); C is a quantity or survey answer that cannot tell cause from effect; D is an expert rating. Weights: A 1.0, B 0.9, C 0.6, D 0.3, reduced for old data.');
+  w('- What counts: on the price, circumvention and camels tests only class A and B families count; class C and D families there are shown only (marked "shown only" in Part 5). The changes test is one co-movement family and always counts. The class follows from what a measure reads: a price, firms’ own experience of rationing, or a costly behavior counts; a quantity, a stated reason, an opinion, a composite index or an expert’s estimate for a standard case is shown only (rubric 0.4.0).');
+  w('- Corroborated flags: where the evidence that counts is missing, old or neutral, at least two recent measures shown only, one of them a measured fact, all pointing toward a problem and none against, give "worth a closer look" (sub-reason corroborated). They never give "probably not".');
+  w('- Test score T: the weighted average of the signals of the families that count on that test, shrunk toward zero when there is little evidence. Area score N: the weighted average of the test scores, with the price test counted double.');
+  w('- E is the number of families that count; C is the number of tests that point the same way as N with |T| of at least 0.5.');
   w('- Ratings: worth a closer look needs N ≥ 0.5 with C ≥ 2, or N ≥ 1 on its own ("alternative rule"); probably not is the mirror (N ≤ −0.5 with C ≥ 2, or N ≤ −1). Likely binding and ruled out are much stricter (|N| ≥ 1, E ≥ 5, C ≥ 3, no dissenting class A/B family). Unclear comes with one of four reasons: not connected (the tool has no route to the evidence that could settle it, for any country), no recent data (this country lacks recent class A/B data: E < 2, or nothing from the last 8 years), one kind of evidence (only one test speaks with any strength; the lean is given), and mixed (tests point in opposite directions).');
   w('- One area is not rated. Policy and political uncertainty (N11.policy) is context to describe, like geography: partly an outcome of the other constraints, so it is neither scored nor part of the micro-risk roll-up.');
   w('- The changes test is a sign test: across year pairs, did investment move the way the theory predicts when the constraint eased or tightened? Part 5 gives the count of agreeing year pairs and its p-value.');
@@ -151,7 +151,7 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
 
   w(`## Part 5. All evidence, area by area (${c.name})`);
   w();
-  w('For each scored area: the rating, the score N, the tests, and every evidence family with its indicators. "Votes" says whether the family counts in the rating or only informs.');
+  w('For each scored area: the rating, the score N, the tests, and every evidence family with its indicators. "Counts" says whether the family counts in the rating or is shown only.');
   w();
   for (const n of view.nodes) {
     if ((!n.scored && n.tier !== 'elimination') || n.sub_nodes) continue;
@@ -159,12 +159,12 @@ export function buildBriefing({ idea, title, memo, view, scorecard, registry, ac
     w();
     const tests = Object.entries(n.tests || {}).filter(([, t]) => t && t.T != null).map(([k, t]) => `${TEST_NAMES[k] || k} ${fmtSigned(t.T, 2)}`);
     const why = n.cannot_tell_reason ? ` Reason unclear: ${n.cannot_tell_reason.replace(/_/g, ' ')}${n.cannot_tell_detail && n.cannot_tell_detail.lean ? ` (leans ${n.cannot_tell_detail.lean.band === 'slight' ? 'slightly ' : ''}${n.cannot_tell_detail.lean.direction === 'toward' ? 'toward' : 'away from'} a problem)` : ''}.` : '';
-    w(`N = ${n.N == null ? '—' : fmtSigned(n.N, 2)}; voting families E = ${n.E ?? 0}; tests: ${tests.length ? tests.join(', ') : 'none observed'}.${why}${n.tier_reason ? ` Rule: ${n.tier_reason}` : ''}`);
+    w(`N = ${n.N == null ? '—' : fmtSigned(n.N, 2)}; families that count E = ${n.E ?? 0}; tests: ${tests.length ? tests.join(', ') : 'none observed'}.${why}${n.tier_reason ? ` Rule: ${n.tier_reason}` : ''}`);
     w();
     const fams = n.families || [];
     if (!fams.length) { w('No evidence family has data for this area.'); w(); continue; }
-    w(table(['Family', 'Test', 'Class', 'Votes', 'Signal', 'Year', 'Indicators'],
-      fams.map((f) => [f.id, TEST_NAMES[f.test] || f.test, f.class, f.votes ? 'yes' : 'informs', f.signal == null ? '—' : fmtSigned(f.signal, 1), yearSpan(f),
+    w(table(['Family', 'Test', 'Class', 'Counts', 'Signal', 'Year', 'Indicators'],
+      fams.map((f) => [f.id, TEST_NAMES[f.test] || f.test, f.class, f.votes ? 'yes' : 'shown only', f.signal == null ? '—' : fmtSigned(f.signal, 1), yearSpan(f),
         cmById[f.id] ? comovementText(cmById[f.id], byId) : (f.indicators || []).map((id) => indicatorText(byId[id], setKey) || id).join(' / ')])));
     w();
   }

@@ -8,7 +8,7 @@
 export const RATING = '.tier-badge, .strip, .bl-list, .tier-dot, [data-area], .ledger, .tally';
 const DURS = { 1: 150, 2: 250, 3: 400 };
 
-/** True when the reader asked for reduced motion (or there is no window, as under Node). */
+/** True under reduced motion, or with no window (Node). */
 export function reducedMotion() {
   return typeof window === 'undefined' || !window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
@@ -16,7 +16,7 @@ export function reducedMotion() {
 export function token(name) {
   return typeof document === 'undefined' ? '' : getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
-/** --dur-1, --dur-2 or --dur-3 in milliseconds (0 under reduced motion). */
+/** --dur-n in milliseconds (0 under reduced motion). */
 export function dur(n = 2) {
   if (reducedMotion()) return 0;
   const v = token(`--dur-${n}`);
@@ -25,7 +25,7 @@ export function dur(n = 2) {
 }
 /** The --ease token as a CSS easing string, for the Web Animations API and transitions. */
 export function easing() { return token('--ease') || 'ease'; }
-/** The --ease token as a function of t in [0, 1], for D3 transitions (a cubic Bézier solved by bisection). */
+/** The --ease token as a function of t in [0, 1], for D3 (a cubic Bézier, by bisection). */
 export function easeFn(t) {
   const m = easing().match(/cubic-bezier\(([^)]*)\)/);
   if (!m) return t;
@@ -49,11 +49,7 @@ function allowed(el, what) {
   return true;
 }
 
-/**
- * Reveal an element as it scrolls into view: CSS animation-timeline where the browser has it (motion.css,
- * .reveal-scroll), an IntersectionObserver that adds .in otherwise. The static equivalent is simply being there:
- * under reduced motion, or without either mechanism, .in is added at once.
- */
+/** Reveal as it scrolls into view (CSS animation-timeline, else an IntersectionObserver); static under reduced motion. */
 export function reveal(el) {
   if (!allowed(el, 'reveal')) return;
   el.classList.add('reveal');
@@ -66,10 +62,7 @@ export function reveal(el) {
   io.observe(el);
 }
 
-/**
- * Animate a <details> open and closed (its height, --dur-2, --ease) through the Web Animations API. Under reduced
- * motion, or without the API, the browser's instant open is the static equivalent and nothing is attached.
- */
+/** Animate a <details> open and closed (height, --dur-2, --ease); the instant open under reduced motion. */
 export function disclose(details) {
   if (!allowed(details, 'disclose')) return;
   const summary = details.querySelector(':scope > summary');
@@ -91,3 +84,13 @@ export function disclose(details) {
     setTimeout(() => { if (anim === a) { finish(); a.cancel(); } }, dur(2) + 100); // a stalled animation clock must not leave the fold half way
   });
 }
+
+/**
+ * Tenet 6's one named exception (interface PRD 5F): a rating the reader has just changed fades in once, at most 250 ms. The
+ * caller writes the line that is its static equivalent (F2); under reduced motion nothing moves. @param {Element | null} el
+ */
+export function ratingChanged(el) {
+  if (!el || reducedMotion() || typeof el.animate !== 'function') return;
+  el.animate([{ opacity: 0.35 }, { opacity: 1 }], { duration: Math.min(dur(2), 250), easing: easing() });
+}
+

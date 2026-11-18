@@ -234,7 +234,9 @@ export function renderNodeHead({ titleEl, qEl, verdictEl }, { view, registry, sc
     offStandard ? h('span', { class: 'small muted' }, ` (${SETTING_LABEL[setting]} reading, not the one to cite)`) : null,
     ' ', robustChip(sn),
     lean ? h('span', { class: 'small muted' }, ` ${lean}.`) : null,
-    ' ', h('a', { href: withData(`/growth-test-site/desk/areas.html?iso=${iso}&node=${encodeURIComponent(view)}`) + currentHash() }, 'Open the rating card for the reasoning'),
+    // on the area page the reasoning is the card above; elsewhere the link opens the area's page (5C)
+    document.body.dataset.page === 'area' ? null
+      : [' ', h('a', { href: withData(`/growth-test-site/desk/area.html?iso=${iso}&area=${encodeURIComponent(view)}`) + currentHash() }, 'Open the area’s page for the reasoning')],
     bySet ? h('span', { class: 'small muted' }, ` ${bySet}`) : null,
   ].filter(Boolean));
   const np = sn.tier === 'elimination' ? null : noPriceNote(scorecard, view, countryName);
@@ -290,18 +292,15 @@ export function drawStrip(host, ctx) {
   for (const t of TEST_ORDER) {
     const rs = fams.filter((r) => r.test === t);
     if (!rs.length) continue;
-    // On tests 1, 3 and 4 only class A and B evidence counts toward the rating; quantities and perceptions inform (test 3 since rubric 0.4.0).
-    // Two blocks keep a reader from taking an informing quantity for a price.
-    const split = (t === 'price' || t === 'camels' || t === 'circumvention') && rs.some((r) => !r.votes) && rs.some((r) => r.votes);
-    if (split) {
-      heads.push({ key: `__${t}`, text: `${TEST_LABEL[t].toUpperCase()} · COUNTS`, test: t, first: true });
-      keys.push(`__${t}`, ...rs.filter((r) => r.votes).map((r) => r.id));
-      heads.push({ key: `__${t}_inform`, text: `${TEST_LABEL[t].toUpperCase()} · INFORMS ONLY`, test: t, first: false });
-      keys.push(`__${t}_inform`, ...rs.filter((r) => !r.votes).map((r) => r.id));
-    } else {
-      heads.push({ key: `__${t}`, text: TEST_LABEL[t].toUpperCase(), test: t, first: true });
-      keys.push(`__${t}`, ...rs.map((r) => r.id));
-    }
+    // On tests 1, 3 and 4 only class A and B evidence counts toward the rating; quantities and perceptions are shown only
+    // (test 3 since rubric 0.4.0). Every test's group carries its label, "counts" or "shown only", even when all its
+    // measures are one kind (interface PRD C10), so a reader never takes a shown-only quantity for a price.
+    const groups = [['COUNTS', rs.filter((r) => r.votes)], ['SHOWN ONLY', rs.filter((r) => !r.votes)]].filter(([, g]) => g.length);
+    groups.forEach(([word, g], i) => {
+      const key = i === 0 ? `__${t}` : `__${t}_inform`;
+      heads.push({ key, text: `${TEST_LABEL[t].toUpperCase()} · ${word}`, test: t, first: i === 0 });
+      keys.push(key, ...g.map((r) => r.id));
+    });
   }
   if (!fams.length) {
     host.append(h('p', { class: 'ev-empty' }, `No indicator for this node has a value for ${ctx.countryName} in the window.`));
@@ -316,8 +315,14 @@ export function drawStrip(host, ctx) {
     const sd = (r) => fmtSigned(r.x, 1);
     // The family's signal (−2 to +2, what enters the verdict) after the arrow, and whether it counts.
     const sig = (r) => (r.signal == null ? '' : ` → ${fmtSigned(r.signal, 1)}`);
+    // three states, three ways (C10): shown only; counts and reads 0; counts and pushes the test
+    const countsWord = (r) => (!r.votes ? 'shown only' : r.signal === 0 ? 'counts, reads 0' : 'counts');
+    // a counted measure at zero says why in words (C10)
+    const zeroWhy = (r) => (r.test === 'camels'
+      ? 'its tilt is inside the middle band, or too close to zero to tell from no tilt (two standard errors)'
+      : 'its gap to similar economies is inside the middle band');
     const variants = [
-      (r) => `${sd(r)}${r.rank ? ` · ${ordinal(r.rank)} of ${r.of}` : ''}${sig(r)} (${r.votes ? 'counts' : 'informs'}) · ${r.year}`,
+      (r) => `${sd(r)}${r.rank ? ` · ${ordinal(r.rank)} of ${r.of}` : ''}${sig(r)} (${countsWord(r)}) · ${r.year}`,
       (r) => `${sd(r)}${r.rank ? ` · ${r.rank}/${r.of}` : ''}${sig(r)} · ${r.year}`,
       (r) => `${sd(r)}${sig(r)}`,
       (r) => `${sd(r)} · ${r.year}`,
@@ -326,7 +331,7 @@ export function drawStrip(host, ctx) {
     // Every screen keeps a usable strip: 260 px from 640 px up, 120 px on phones.
     const { f: right, mr } = variants.find((v) => width - ml - v.mr >= (narrow ? 120 : 260)) || variants[variants.length - 1];
     const shortHead = narrow || width - ml - mr < 250; // the two direction labels need about 230 px side by side
-    // The axis title centred under the strip where it fits, else ending at the strip's right edge; the short form where neither fits.
+    // The axis title centered under the strip where it fits, else ending at the strip's right edge; the short form where neither fits.
     const cx = (ml + width - mr) / 2, xFit = (s) => { const w = textW(s, 12) + 4; return w / 2 <= Math.min(cx, width - cx) ? 'center' : w <= width - mr ? 'right' : null; };
     const xLong = 'Standard deviations from what income and structure predict, binding side to the right →', xShort = 'sd from prediction, binding side right →';
     const xLabel = !narrow && xFit(xLong) ? xLong : xShort;
@@ -344,7 +349,7 @@ export function drawStrip(host, ctx) {
       P.dot(rows.filter((r) => r.stale), { ...dot, fillOpacity: 0.3, strokeDasharray: '2.5,2' }),
       P.text(rows.filter((r) => Math.abs(r.x) > lim), { x: 'xc', y: 'id', text: (d) => (d.x > 0 ? '▶' : '◀'), fontSize: 9, fill: pal.text, dy: -10 }),
       P.text(heads, { x: -lim, y: 'key', text: 'text', textAnchor: narrow ? 'start' : 'end', dx: narrow ? 2 + BADGE + 6 - ml : -12 - BADGE - 6, fontSize: 10.5, fontWeight: 600, fill: pal.muted, fontFamily: MONO }),
-      // the marks, in literal colours so a downloaded chart keeps them: at a phone's left edge, else in a column beside the axis
+      // the marks, in literal colors so a downloaded chart keeps them: at a phone's left edge, else in a column beside the axis
       (_index, scales) => {
         const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         const y = /** @type {any} */ (scales).y, half = typeof y.bandwidth === 'function' ? y.bandwidth() / 2 : 0;
@@ -357,7 +362,7 @@ export function drawStrip(host, ctx) {
       P.text(rows, { x: lim, y: 'id', text: right, textAnchor: 'start', dx: 10, fontSize: 11.5, fill: (d) => (d.stale ? pal.muted : pal.text) }),
       P.text([shortHead ? 'binding ▶' : '▲ toward binding'], { frameAnchor: 'top-right', dy: -14, dx: -4, textAnchor: 'end', fontSize: 11, fontWeight: 600, fill: pal.binding }),
       P.text([shortHead ? '◀ not' : '◀ away from binding'], { frameAnchor: 'top-left', dy: -14, dx: 4, textAnchor: 'start', fontSize: 11, fill: pal.muted }),
-      P.tip(rows, P.pointerY({ x: 'xc', y: 'id', title: (d) => `${fullName(d)}\nClass ${d.cls}, ${TEST_LABEL[d.test]}\n${d.members.map((r) => `${d.members.length > 1 ? `${shortName(ind(r.id) || { name: r.id })}: ` : ''}${fmtSigned(r.x, 2)} sd on the binding side${ind(r.id) && ind(r.id).direction === -1 ? ' (lower is binding, so the sign flips)' : ''}, ${r.year}, ${sourceLabel(ind(r.id) || {})}`).join('\n')}${d.rank ? `\n${ordinal(d.rank)} most binding of ${d.of} with its comparators` : ''}${d.signal != null ? `\nSignal ${fmtSigned(d.signal, 1)} · ${d.votes ? 'counts in the rating' : 'informs, does not count'}` : ''}${d.stale ? `\nMore than ${limit} years before the ${snap} snapshot` : ''}\nClick to chart it below` })),
+      P.tip(rows, P.pointerY({ x: 'xc', y: 'id', title: (d) => `${fullName(d)}\nClass ${d.cls}, ${TEST_LABEL[d.test]}\n${d.members.map((r) => `${d.members.length > 1 ? `${shortName(ind(r.id) || { name: r.id })}: ` : ''}${fmtSigned(r.x, 2)} sd on the binding side${ind(r.id) && ind(r.id).direction === -1 ? ' (lower is binding, so the sign flips)' : ''}, ${r.year}, ${sourceLabel(ind(r.id) || {})}`).join('\n')}${d.rank ? `\n${ordinal(d.rank)} most binding of ${d.of} with its comparators` : ''}${d.signal != null ? `\nSignal ${fmtSigned(d.signal, 1)} · ${d.votes ? (d.signal === 0 ? `counts in the rating and reads 0: ${zeroWhy(d)}` : 'counts in the rating') : 'shown only, not in the rating'}` : ''}${d.stale ? `\nMore than ${limit} years before the ${snap} snapshot` : ''}\nClick to chart it below` })),
     ];
     const chart = P.plot({
       width, height, marginLeft: ml, marginRight: mr, marginTop: 30, marginBottom: 46,
@@ -386,7 +391,7 @@ export function drawStrip(host, ctx) {
       ? `${yi ? shortName(yi).toLowerCase() : c.y} moved ${c.expected_sign < 0 ? 'against' : 'with'} ${xi ? shortName(xi).toLowerCase() : c.x} in ${c.agree} of ${c.pairs} years (p = ${fmt(c.p_value, 2)}), ${c.direction}.`
       : `${what}: too few years with both series to test.`));
   }
-  if (fams.length && !fams.some((r) => r.test === 'camels')) notes.append(h('p', {}, h('strong', {}, 'Test 4 · Camels and hippos: '), ['N0', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N10', 'N11'].includes(String(view || '').split('.')[0]) ? 'in the "4 · Camels and hippos" tab below: the firm-level version from the Enterprise Surveys votes where it passed its power check; the trade-based tilt and the presence version (the hippo gap) vote only where they passed their gates, and are shown either way (Methods, Test 4).' : 'not computed for this area: no intensity vector or survey sensitivity is connected for it yet.'));
+  if (fams.length && !fams.some((r) => r.test === 'camels')) notes.append(h('p', {}, h('strong', {}, 'Test 4 · Camels and hippos: '), ['N0', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N10', 'N11'].includes(String(view || '').split('.')[0]) ? 'in the "4 · Camels and hippos" tab below: the firm-level version from the Enterprise Surveys counts where it passed its power check; the trade-based tilt and the presence version (the hippo gap) vote only where they passed their gates, and are shown either way (Methods, Test 4).' : 'not computed for this area: no intensity vector or survey sensitivity is connected for it yet.'));
   if (m.missing.length) {
     notes.append(h('p', {}, h('strong', {}, `No value in the window (${m.missing.length}): `),
       m.missing.map((x) => `${shortName(ind(x.id) || { name: x.id })}${x.lastYear ? ` (latest ${x.lastYear})` : ''}`).join('; '), '.'));
@@ -401,7 +406,7 @@ export function drawStrip(host, ctx) {
   const T = (registry.params && registry.params.tiers) || {}, up = (T.candidate && T.candidate.N_min) ?? 0.5;
   const tw = top(voting, 1), aw = top(voting, -1);
   const text = fams.length
-    ? `Of <strong>${fams.length}</strong> evidence families with data, <strong>${voting.length}</strong> count toward the rating; the rest inform it.${tw ? ` Strongest counting signals toward binding: ${tw}.` : ''}${aw ? ` Away: ${aw}.` : ''}${sn && isNum(sn.N) ? ` Node score <strong>${fmtSigned(sn.N, 2)}</strong>; “worth a closer look” needs ${fmtSigned(up, 2)}.` : ''}`
+    ? `Of <strong>${fams.length}</strong> evidence families with data, <strong>${voting.length}</strong> count toward the rating; the rest are shown only.${tw ? ` Strongest counting signals toward binding: ${tw}.` : ''}${aw ? ` Away: ${aw}.` : ''}${sn && isNum(sn.N) ? ` Node score <strong>${fmtSigned(sn.N, 2)}</strong>; “worth a closer look” needs ${fmtSigned(up, 2)}.` : ''}`
     : '';
   const famOf = new Map(fams.flatMap((f) => f.members.map((r) => [`${r.id}|${r.node}`, f])));
   const csv = ['indicator,name,node,test,class,family,family_signal,family_counts,distance_sd_binding_side,distance_sd_raw,rank_most_binding,of,year'];

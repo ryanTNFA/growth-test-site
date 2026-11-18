@@ -17,7 +17,7 @@ export const TEST_SHORT = { price: 'Price', changes: 'Changes', circumvention: '
 /** What each class of evidence is, in a few words. */
 export const CLASS_WORDS = {
   A: 'a price, or firms’ own experience of rationing: measures the cost directly',
-  B: 'a workaround: costly behaviour that only makes sense if it binds',
+  B: 'a workaround: costly behavior that only makes sense if it binds',
   C: 'a quantity, a stated reason or an expert’s estimate: cannot tell cause from effect',
   D: 'a composite index',
 };

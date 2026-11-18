@@ -3,6 +3,8 @@
    tool's part on a quiet surface. Durations live in motion.css; shared pieces in components.css. */
 @layer pages {
 main.standard { --gutter: clamp(16px, 4vw, 60px); }
+/* the editorial register (interface PRD E1): the page's accent is TNFA's amber; shared controls stay ink (--control) */
+main.standard { --accent: var(--amber); --accent-hover: var(--amber-hover); --accent-soft: var(--amber-soft); }
 .std { max-width: 46rem; padding-block: 36px 24px; }
 .std-head h1 { font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); margin-bottom: 18px; }
 .std-head .kicker { margin-bottom: 14px; }
@@ -20,6 +22,8 @@ main.standard { --gutter: clamp(16px, 4vw, 60px); }
 .std-links li strong { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; line-height: 1.25; }
 .std-links li strong::before { content: counter(l) ' · '; font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.05em; color: var(--muted); vertical-align: 0.2em; }
 .std-links li span { font-size: 1rem; line-height: 1.5; color: var(--muted); }
+/* the premise, said once (E6): set apart from the three questions by a rule */
+.std-premise { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--rule); }
 .std-tool { padding: 22px 24px 18px; background: var(--surface-2); }
 .std-tool .prose { max-width: none; }
 .std-tool .small a { margin-right: 14px; }

@@ -3,9 +3,12 @@
    (css/pages/<page>.css) comes last. Every file wraps its rules in its own @layer, so a later layer wins over an
    earlier one whatever the specificity, and the order below is the only cascade rule to remember.
    Visual system: the TNFA Design System (https://claude.ai/artifact/FGtwDL393QuVYodATMiRLR).
-   Light is TNFA's data-page theme (bg-soft ground, ink text, one amber accent, square corners).
+   Light is TNFA's data-page theme (bg-soft ground, ink text). Interface PRD v0.3, 5A: on a tool page amber means
+   "worth a closer look" and nothing else (A1), so --accent, the color of links, buttons and eyebrows, is ink (A2) and the
+   brand's amber lives in --amber, which only the story and the standard's page use (their pages layer sets --accent to it).
+   Clickable things are rounded (--radius-control, --radius-pill); ratings, data marks and bands stay square (A6).
    The dark theme is a tool-only extension derived from the same tokens; the website has none.
-   --chart-* and --tier-* are the TNFA data palette (validated for colour-vision deficiency and contrast).
+   --chart-* and --tier-* are the data palette; every value was chosen with tests/test_palette.py (A9), not by eye.
    tests/test_palette.py reads the light block and both dark blocks from this file. */
 @layer tokens, base, components, motion, pages;
 
@@ -19,37 +22,49 @@
   --muted: #4a5d7e;
   --rule: #e6d9d0;
   --rule-strong: #7a879c;
-  /* the accent (TNFA: amber-mid for text and fills, amber for marks and rules, amber-pale) */
-  --accent: #9a5620;
-  --accent-hover: #7d4519;
+  /* the accent: ink on tool pages (A2); a filled control is ink with white text, a hover tint is a cool pale */
+  --accent: #1c2e4a;
+  --accent-hover: #0d1a2e;
   --accent-ink: #ffffff;
-  --accent-soft: #f5e6d4;
+  --accent-soft: #e6ebf2;
+  --focus-ring: #1c2e4a;
+  /* controls (buttons, toggles): ink on every page, the story's included (E1 changes only its shared controls) */
+  --control: #1c2e4a;
+  --control-hover: #0d1a2e;
+  --control-ink: #ffffff;
+  --control-soft: #e6ebf2;
+  /* TNFA's amber (amber-mid for text, amber for rules, amber-pale): the editorial pages' accent only (E1) */
+  --amber: #9a5620;
+  --amber-hover: #7d4519;
+  --amber-soft: #f5e6d4;
   --brand-amber: #b8682a;
   --banner: #1e3452;
-  /* chart roles */
-  --chart-focus: #b8682a;
-  --chart-focus-ink: #9a5620;
+  /* chart roles: the economy in focus is teal, not amber, since amber is a rating (A1) */
+  --chart-focus: #0e7c7b;
+  --chart-focus-ink: #0b6a69;
   --chart-peer: #2e4060;
   --chart-peer-fill: #e3e8f0;
   --chart-fit: #4f6d99;
   --chart-band: #e6ebf2;
   --chart-other: #8f98a6;
   --chart-binding: #9c1f45;
-  /* verdict tiers: a diverging scale from ruled out (navy) through cannot tell (neutral hatch) to binding (crimson) */
-  --tier-ruled: #2e4060;
+  /* verdict tiers: a diverging scale from ruled out (steel blue, A4) through unclear (a quiet warm gray with a fine
+     texture for each of its three kinds, A3) to binding (crimson) */
+  --tier-ruled: #2c5d86;
   --tier-ruled-ink: #ffffff;
-  --tier-probnot: #7f98c0;
+  --tier-probnot: #79a0c4;
   --tier-probnot-ink: #1c2e4a;
-  --tier-cannot: #ffffff;
-  --tier-cannot-hatch: #6d7a90;
-  --tier-weak-hatch: #b9c2d0;
+  --tier-cannot: #ebe6dc;
+  --tier-cannot-hatch: #857e72;
+  --tier-weak-hatch: #b9b2a5;
   --tier-cannot-ink: #1c2e4a;
-  --tier-cannot-tint: #e9e4d8;
+  --tier-cannot-tint: #ebe6dc;
   --tier-candidate: #d4852a;
   --tier-candidate-ink: #1c2e4a;
   --tier-binding: #9c1f45;
   --tier-binding-ink: #ffffff;
-  --tier-context: #f4ede0;
+  /* context (not a constraint, or a sector study): an empty box, so it is never taken for unclear's warm gray (A3) */
+  --tier-context: #ffffff;
   --tier-context-ink: #4a5d7e;
   /* type (TNFA families) */
   --serif: Newsreader, Georgia, "Times New Roman", serif;
@@ -59,7 +74,9 @@
   --maxw: 1240px;
   --gutter: clamp(20px, 4vw, 60px);
   --radius: 0;
-  --radius-tag: 3px;
+  --radius-tag: 0;
+  --radius-control: 4px;
+  --radius-pill: 999px;
   /* one elevation, for the drawer, menus and tooltips only (visual-upgrade PRD V1, decision V-D2) */
   --elev: 0 10px 30px rgba(28, 46, 74, 0.16);
   /* D9 vocabulary (Growth Test PRD): one easing family and one duration scale for entrances, reveals, hovers and
@@ -92,34 +109,38 @@
   :root:not([data-theme="light"]) {
     --bg: #111a28; --surface: #172338; --surface-2: #1f2d45;
     --text: #ece6da; --muted: #a9b4c6; --rule: #2a3a54; --rule-strong: #6b7c99;
-    --accent: #e0a066; --accent-hover: #f0b98a; --accent-ink: #111a28; --accent-soft: #3a2c22;
+    --accent: #ece6da; --accent-hover: #ffffff; --accent-ink: #111a28; --accent-soft: #26354f; --focus-ring: #ece6da;
+    --control: #ece6da; --control-hover: #ffffff; --control-ink: #111a28; --control-soft: #26354f;
+    --amber: #e0a066; --amber-hover: #f0b98a; --amber-soft: #3a2c22;
     --brand-amber: #c27a38; --banner: #0b1220;
-    --chart-focus: #c27a38; --chart-focus-ink: #e0a066; --chart-peer: #a9bde0; --chart-peer-fill: #24344f;
+    --chart-focus: #3fb3b0; --chart-focus-ink: #62c8c5; --chart-peer: #a9bde0; --chart-peer-fill: #24344f;
     --chart-fit: #7f9fcf; --chart-band: #1f2e47; --chart-other: #5d6a80; --chart-binding: #e0608f;
-    --tier-ruled: #c5d1e6; --tier-ruled-ink: #111a28; --tier-probnot: #52688d; --tier-probnot-ink: #ece6da;
-    --tier-cannot: #1f2d45; --tier-cannot-hatch: #8a98b0; --tier-weak-hatch: #46587a; --tier-cannot-ink: #ece6da; --tier-cannot-tint: #243249;
+    --tier-ruled: #a9c8e6; --tier-ruled-ink: #111a28; --tier-probnot: #3f6b93; --tier-probnot-ink: #ece6da;
+    --tier-cannot: #283140; --tier-cannot-hatch: #80889a; --tier-weak-hatch: #4a5262; --tier-cannot-ink: #ece6da; --tier-cannot-tint: #283140;
     --tier-candidate: #e5923a; --tier-candidate-ink: #111a28; --tier-binding: #e0608f; --tier-binding-ink: #111a28;
-    --tier-context: #1f2d45; --tier-context-ink: #a9b4c6; --elev: 0 10px 30px rgba(0, 0, 0, 0.55);
+    --tier-context: #172338; --tier-context-ink: #a9b4c6; --elev: 0 10px 30px rgba(0, 0, 0, 0.55);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #111a28; --surface: #172338; --surface-2: #1f2d45;
   --text: #ece6da; --muted: #a9b4c6; --rule: #2a3a54; --rule-strong: #6b7c99;
-  --accent: #e0a066; --accent-hover: #f0b98a; --accent-ink: #111a28; --accent-soft: #3a2c22;
+  --accent: #ece6da; --accent-hover: #ffffff; --accent-ink: #111a28; --accent-soft: #26354f; --focus-ring: #ece6da;
+  --control: #ece6da; --control-hover: #ffffff; --control-ink: #111a28; --control-soft: #26354f;
+  --amber: #e0a066; --amber-hover: #f0b98a; --amber-soft: #3a2c22;
   --brand-amber: #c27a38; --banner: #0b1220;
-  --chart-focus: #c27a38; --chart-focus-ink: #e0a066; --chart-peer: #a9bde0; --chart-peer-fill: #24344f;
+  --chart-focus: #3fb3b0; --chart-focus-ink: #62c8c5; --chart-peer: #a9bde0; --chart-peer-fill: #24344f;
   --chart-fit: #7f9fcf; --chart-band: #1f2e47; --chart-other: #5d6a80; --chart-binding: #e0608f;
-  --tier-ruled: #c5d1e6; --tier-ruled-ink: #111a28; --tier-probnot: #52688d; --tier-probnot-ink: #ece6da;
-  --tier-cannot: #1f2d45; --tier-cannot-hatch: #8a98b0; --tier-weak-hatch: #46587a; --tier-cannot-ink: #ece6da; --tier-cannot-tint: #243249;
+  --tier-ruled: #a9c8e6; --tier-ruled-ink: #111a28; --tier-probnot: #3f6b93; --tier-probnot-ink: #ece6da;
+  --tier-cannot: #283140; --tier-cannot-hatch: #80889a; --tier-weak-hatch: #4a5262; --tier-cannot-ink: #ece6da; --tier-cannot-tint: #283140;
   --tier-candidate: #e5923a; --tier-candidate-ink: #111a28; --tier-binding: #e0608f; --tier-binding-ink: #111a28;
-  --tier-context: #1f2d45; --tier-context-ink: #a9b4c6; --elev: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --tier-context: #172338; --tier-context-ink: #a9b4c6; --elev: 0 10px 30px rgba(0, 0, 0, 0.55);
   color-scheme: dark;
 }
 
 /* Product sections (the Growth Lab's ten, BSD-3-Clause classification): a categorical palette for the product-space views only.
    Validated with the dataviz validator: lightness 0.43-0.77, chroma >= 0.10, adjacent-pair CVD dE >= 10, >= 3:1 on white and bg-soft.
-   Nine hues cannot all be told apart under colour-vision deficiency, so every view also names the section (labels, legend, tooltip, table). */
+   Nine hues cannot all be told apart under color-vision deficiency, so every view also names the section (labels, legend, tooltip, table). */
 :root {
   --sector-agriculture: #307c1b;
   --sector-textiles: #d4599b;

@@ -1,6 +1,6 @@
 // @ts-check
 // The two marks that sit beside a rating on every surface (Growth Test PRD 6C, C7): the robustness chip (front-door
-// PRD W4, Q7) and the reason-and-lean tag beside a grey badge (W1). Drawn by the node card, the Bottom line, the
+// PRD W4, Q7) and the reason-and-lean tag beside a gray badge (W1). Drawn by the node card, the Bottom line, the
 // Analyst View's node head and the heat map, so they are the same everywhere. card.mjs imports this module and this
 // module imports plainTier from card.mjs; the cycle is harmless because neither uses the other at load time.
 import { h, ROBUST_PLAIN, robustDetail, cannotTellCode, leanOf, CANNOT_TELL_PLAIN } from '../common.mjs';
@@ -23,7 +23,7 @@ export function robustChip(n) {
 }
 
 /**
- * Reason and lean beside a grey badge: "one kind of evidence ↗". Null for any other tier.
+ * Reason and lean beside a gray badge: "one kind of evidence ↗". Null for any other tier.
  * @param {any} n a node of the scorecard
  * @returns {HTMLElement | null}
  */

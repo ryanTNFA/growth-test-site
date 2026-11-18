@@ -1,4 +1,4 @@
-// "Explore one area across countries" (front-door PRD W3, section 3.4): pick an area; a world map colours each
+// "Explore one area across countries" (front-door PRD W3, section 3.4): pick an area; a world map colors each
 // economy by its rating for that area under the default comparison set, and a list groups the economies by rating,
 // alphabetically within each group. Never a ranking: no list sorts by score, and nothing is summed across areas.
 // No map library: an Equal Earth projection (Šavrič, Patterson and Jenny 2018) drawn straight into SVG.
@@ -12,7 +12,7 @@ const W = 960, H = 470;
 const AREAS = ['N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N10', 'N11', 'N11.property', 'N11.corruption', 'N11.taxes', 'N11.regulation', 'N11.crime', 'N12'];
 const GROUPS = [
   { key: 'look', label: 'Worth a closer look', tiers: ['likely_binding', 'candidate'] },
-  { key: 'not', label: 'Probably not the main constraint', tiers: ['probably_not', 'ruled_out'] },
+  { key: 'not', label: 'The data argue against it', tiers: ['probably_not', 'ruled_out'] }, // G1: the three answers' words
   { key: 'conflicting', label: 'Unclear: conflicting evidence', tiers: ['cannot_tell_conflicting'] },
   { key: 'weak', label: 'Unclear: evidence too weak', tiers: ['cannot_tell_weak'] },
   { key: 'gap', label: 'Unclear: data gap', tiers: ['cannot_tell_data_gap'] },
@@ -37,9 +37,19 @@ function pathOf(geom) {
   return d;
 }
 const el = (tag, attrs = {}) => { const e = document.createElementNS(SVG, tag); for (const [k, v] of Object.entries(attrs)) if (v != null) e.setAttribute(k, v); return e; };
-// On the map every "can't tell" is one quiet tint (visual-upgrade PRD V1, decision V-D1); a data gap gets an outline
-// (class ex-gap). The three kinds keep their hatches in the list and its swatches, where a reader is close enough to see them.
-const fillOf = (tier) => (tier && tier.startsWith('cannot_tell') ? 'var(--tier-cannot-tint)' : tierPaint(tier).fill);
+// Interface PRD v0.3, A3: the three kinds of unclear stay distinct on the map too, drawn quietly: a fine single hatch for
+// evidence too weak, a fine cross-hatch for conflicting evidence, the plain warm gray with an outline (class ex-gap) for a
+// data gap. The patterns are the map's own (finer than the tree's), defined once in its <defs>.
+const UNCLEAR_FILL = { cannot_tell_weak: 'url(#ex-hatch)', cannot_tell_conflicting: 'url(#ex-cross)', cannot_tell_data_gap: 'var(--tier-cannot-tint)' };
+const fillOf = (tier) => (tier && UNCLEAR_FILL[tier]) || (tier && tier.startsWith('cannot_tell') ? 'var(--tier-cannot-tint)' : tierPaint(tier).fill);
+/** A map pattern: the warm gray with hairlines every 3.5 units, one direction or two. */
+function mapPattern(id, cross) {
+  const p = el('pattern', { id, patternUnits: 'userSpaceOnUse', width: 3.5, height: 3.5, patternTransform: 'rotate(45)' });
+  const line = (x2, y2) => el('line', { x1: 0, y1: 0, x2, y2, style: 'stroke: var(--tier-cannot-hatch); stroke-width: 0.55' });
+  p.append(el('rect', { width: 3.5, height: 3.5, style: 'fill: var(--tier-cannot-tint)' }), line(0, 3.5));
+  if (cross) p.append(line(3.5, 0));
+  return p;
+}
 
 export async function mountExplorer(host, { index, registry }) {
   const geo = await getJSON('/growth-test-site/desk/geo/world-110m.json', { optional: true });
@@ -56,6 +66,7 @@ export async function mountExplorer(host, { index, registry }) {
   const regSel = h('select', { id: 'ex-region' }, opt('', 'All regions'), regions.map((r) => opt(r, r)));
   const incSel = h('select', { id: 'ex-income' }, opt('', 'All income groups'), incomes.map((r) => opt(r, r)));
   const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, class: 'ex-map', role: 'img' });
+  const defs = el('defs'); defs.append(mapPattern('ex-hatch', false), mapPattern('ex-cross', true)); svg.append(defs);
   const shapes = {};
   const dots = [];
   if (geo) for (const f of geo.features) {
@@ -91,8 +102,8 @@ export async function mountExplorer(host, { index, registry }) {
       s.p.classList.toggle('ex-gap', tier === 'cannot_tell_data_gap');
       s.t.textContent = `${c.name}: ${(tier ? plainTierOf(area, tier) : 'not rated').toLowerCase()}. Open its bottom line.`;
     }
-    // the reader test of 2 November: say which area the colours are about, or the lists read as verdicts on whole countries
-    which.textContent = `Showing one area, ${label(area).toLowerCase()}: each colour is that area’s rating for the country, not a verdict on the country.`;
+    // the reader test of 2 November: say which area the colors are about, or the lists read as verdicts on whole countries
+    which.textContent = `Showing one area, ${label(area).toLowerCase()}: each color is that area’s rating for the country, not a verdict on the country.`;
     listHost.replaceChildren();
     for (const g of GROUPS) {
       const members = index.countries.filter((c) => inScope(c) && c.tiers && g.tiers.includes(c.tiers[area])).sort((a, b) => a.name.localeCompare(b.name));
@@ -112,12 +123,13 @@ export async function mountExplorer(host, { index, registry }) {
     const parts = [['h', 'Holds under every reading: '], ['s', 'Depends on the reading: '], ['c', 'Depends on the comparison countries: ']];
     return parts.map(([k, label]) => [members.filter((c) => markOf(c.iso3, area) === k), label]).filter(([l]) => l.length).map(([l, label]) => para(l, label));
   }
-  // the map's key: the two verdicts, one tint for "can't tell" (outlined for a data gap), and the uncovered dash
+  // the map's key: the three answers, unclear's three kinds under the third (A3, B2), and the uncovered dash
   keyHost.append(
     h('span', {}, h('span', { class: 'swatch t-candidate', 'aria-hidden': 'true' }), 'Worth a closer look'),
-    h('span', {}, h('span', { class: 'swatch t-probably_not', 'aria-hidden': 'true' }), 'Probably not the main constraint'),
-    h('span', {}, h('span', { class: 'swatch ex-swatch-tint', 'aria-hidden': 'true' }), 'Unclear (the list says why)'),
-    h('span', {}, h('span', { class: 'swatch ex-swatch-gap', 'aria-hidden': 'true' }), 'Unclear: data gap'),
+    h('span', {}, h('span', { class: 'swatch t-probably_not', 'aria-hidden': 'true' }), 'The data argue against it'),
+    h('span', {}, 'Unclear: ', h('span', { class: 'swatch t-cannot_tell_weak', 'aria-hidden': 'true' }), 'evidence too weak'),
+    h('span', {}, h('span', { class: 'swatch t-cannot_tell_conflicting', 'aria-hidden': 'true' }), 'conflicting'),
+    h('span', {}, h('span', { class: 'swatch t-cannot_tell_data_gap', 'aria-hidden': 'true' }), 'data gap'),
     h('span', {}, h('span', { class: 'swatch ex-swatch-none', 'aria-hidden': 'true' }), 'Not covered'));
   for (const s of [areaSel, regSel, incSel]) s.addEventListener('change', draw);
   host.replaceChildren(

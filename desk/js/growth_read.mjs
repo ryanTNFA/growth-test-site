@@ -73,7 +73,7 @@ export function vsLine(x, lines, d) {
  * @property {number | null} value the dot, clamped to the range (null when there is no figure)
  * @property {boolean} clipped the figure lies beyond the range
  * @property {Zone[]} zones
- * @property {{at: number, label: string}[]} ticks the lines, labelled (an empty label draws the line alone)
+ * @property {{at: number, label: string}[]} ticks the lines, labeled (an empty label draws the line alone)
  * @property {[string, string]} ends what the left and right ends mean
  */
 /**

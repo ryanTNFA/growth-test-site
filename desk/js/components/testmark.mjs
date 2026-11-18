@@ -11,7 +11,7 @@
 //                    level body on long striding legs, one hump, and a neck that dips from the shoulder to a head held forward;
 //                    a filled body keeps that outline where a thin stroke blurs.)
 // testMark() is the badge (the glyph in a soft disc) set before a test's name; fillTestMarks() fills the static pages'
-// placeholders (<span data-tmark="price">); glyphGroup() draws the badge inside an SVG chart in literal colours.
+// placeholders (<span data-tmark="price">); glyphGroup() draws the badge inside an SVG chart in literal colors.
 // Self-contained (no import from common.mjs), so shell.mjs can fill every page's placeholders without an import cycle.
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -71,7 +71,7 @@ function strokes(parent, key, ink = 'currentColor') {
 }
 
 /**
- * The bare glyph as an <svg>, styled by the .tglyph rule (stroke in the current colour).
+ * The bare glyph as an <svg>, styled by the .tglyph rule (stroke in the current color).
  * @param {string} key a test key: price, changes, circumvention or camels
  */
 export function testGlyph(key) {
@@ -105,7 +105,7 @@ export function fillTestMarks(root = document) {
 }
 
 /**
- * The badge inside an SVG chart, centred on (cx, cy), in literal colours so a downloaded chart keeps it.
+ * The badge inside an SVG chart, centered on (cx, cy), in literal colors so a downloaded chart keeps it.
  * @param {string} key @param {{cx: number, cy: number, size: number, disc: string, ink: string}} o
  */
 export function glyphGroup(key, { cx, cy, size, disc, ink }) {

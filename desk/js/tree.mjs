@@ -31,7 +31,7 @@ function addPattern(defs, id, stroke, width, size, cross = false) {
 function caption(n) {
   if (!n) return 'not scored';
   if (n.tier === 'elimination') return 'judged by elimination';
-  // an unclear box says why (front-door PRD W1): no bare grey
+  // an unclear box says why (front-door PRD W1): no bare gray
   const code = cannotTellCode(n);
   if (code) return CANNOT_TELL_PLAIN[code].label;
   const yr = yearsText(evidenceYears(n));
@@ -39,7 +39,7 @@ function caption(n) {
   return `${n.E} source${n.E === 1 ? '' : 's'}${yr ? ` · ${yr}` : n.R ? ` · data to ${n.R}` : ''}`;
 }
 
-/** Which branch the first decision points to, or null when it is unclear (the colour alone cannot say which side). */
+/** Which branch the first decision points to, or null when it is unclear (the color alone cannot say which side). */
 export function forkSide(n) {
   if (!n || !forkSideOf(n.tier)) return null;
   return forkWords(n.tier).toLowerCase();
@@ -111,10 +111,11 @@ export function renderTree(container, { registry, nodes, overrides = {}, onOpen,
   const width = yMax + NODE_W + margin.left + margin.right;
   const height = (x1 - x0) + NODE_H + margin.top + margin.bottom + 10;
 
-  const svg = d3.create('svg').attr('viewBox', [0, 0, width, height]).attr('role', 'group').attr('aria-label', 'Growth diagnostics tree: from the symptom, the first decision (finance or low returns), then the finance branch at the top and low returns below; each area coloured by its rating').attr('focusable', 'false').attr('style', `max-width:${Math.round(width * 1.2)}px`);
+  const svg = d3.create('svg').attr('viewBox', [0, 0, width, height]).attr('role', 'group').attr('aria-label', 'Growth diagnostics tree: from the symptom, the first decision (finance or low returns), then the finance branch at the top and low returns below; each area colored by its rating').attr('focusable', 'false').attr('style', `max-width:${Math.round(width * 1.2)}px`);
   const defs = svg.append('defs');
-  addPattern(defs, 'hatch', 'var(--tier-cannot-hatch)', 1.2, 6);
-  addPattern(defs, 'crosshatch', 'var(--tier-cannot-hatch)', 1, 6, true);
+  // unclear's three kinds, quiet (interface PRD A3): hairlines on the warm gray; the data gap is the plain gray, dashed
+  addPattern(defs, 'hatch', 'var(--tier-cannot-hatch)', 0.8, 6);
+  addPattern(defs, 'crosshatch', 'var(--tier-cannot-hatch)', 0.7, 6, true);
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top - x0})`);
 
   const isStruct = (d) => STRUCT.has(d.id);
@@ -266,4 +267,39 @@ function fallbackList(regNodes, byId, overrides, onOpen) {
   };
   wrap.append(build(null));
   return wrap;
+}
+
+/**
+ * The country overview's map of the tree (interface PRD v0.3, B2 and B3): the first decision, then the finance branch and
+ * the two low-return branches as columns of boxes, each box the area's name on its rating (three ratings, unclear in its
+ * three kinds) and, under the name, a few words: the kind of unclear, or the rating. Built from HTML so it fits the first
+ * screen beside the answer (B6); a box is a link to the area's page and its title is the one-line reading. The first
+ * decision is a direction, never a rating, so its box carries words and no fill.
+ * @param {{registry: any, nodes: any[], overrides?: Record<string, {tier: string}>, href: (id: string) => string,
+ *   describe: (id: string, tier: string | null, node: any) => {name: string, why: string, title: string, lean?: string}}} opts
+ * @returns {HTMLElement}
+ */
+export function overviewMap({ registry, nodes, overrides = {}, href, describe }) {
+  const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
+  const reg = registry.nodes.nodes;
+  const regById = Object.fromEntries(reg.map((n) => [n.id, n]));
+  const label = (id) => (regById[id] ? String(regById[id].short).replace(/\?$/, '') : id);
+  const AREAS = new Set(['N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'N10', 'N11', 'N12', 'N13']);
+  const kids = (pid) => reg.filter((n) => n.parent === pid && AREAS.has(n.id)).map((n) => n.id);
+  const box = (id, fork = false) => {
+    const n = byId[id]; const ov = overrides[id]; const t = ov ? ov.tier : (n ? n.tier : null);
+    const d = describe(id, t, n);
+    return h('a', { class: `ovt-box ${fork ? 'ovt-fork-box' : tierClass(t)}${ov ? ' ov' : ''}`, href: href(id), 'data-node': id, title: d.title,
+      'aria-label': `${d.name}: ${d.why}${ov ? ' (your override)' : ''}` },
+    h('span', { class: 'ovt-name' }, d.name, d.lean ? h('span', { class: 'lean-mark', 'aria-hidden': 'true' }, ` ${d.lean}`) : null),
+    h('span', { class: 'ovt-why' }, d.why));
+  };
+  // a column names its group, except where the group is the whole branch (finance)
+  const col = (...groups) => h('div', { class: 'ovt-col' }, ...groups.flatMap((pid) => [pid === 'FIN' ? null : h('p', { class: 'ovt-lab' }, label(pid)),
+    ...kids(pid).map((id) => box(id))]).filter(Boolean));
+  return h('div', { class: 'ovt', role: 'group', 'aria-label': 'The decision tree: the first decision, then the finance areas and the low-return areas, each named on its rating' },
+    h('div', { class: 'ovt-fork' }, h('p', { class: 'ovt-lab' }, 'The first decision'), box('N0', true)),
+    h('div', { class: 'ovt-branches' },
+      h('div', { class: 'ovt-branch' }, h('p', { class: 'ovt-branch-lab' }, label('FIN')), h('div', { class: 'ovt-cols' }, col('FIN'))),
+      h('div', { class: 'ovt-branch' }, h('p', { class: 'ovt-branch-lab' }, label('RET')), h('div', { class: 'ovt-cols' }, col('SOC'), col('GOV', 'MKT')))));
 }

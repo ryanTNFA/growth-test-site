@@ -2,11 +2,11 @@
 // The root page: the story (Growth Test PRD, Part 10), the scrolling front door in six beats. The copy is
 // static HTML (index.html), so the first paint needs nothing from here. This module mounts the Long View after first paint
 // (beat 1, drawing itself once per session; static under reduced motion), wires the two country searches (D5: a country is
-// one click from the first screen), and reveals beats 2 to 6 as they scroll into view through motion.mjs (D9: scroll-linked
-// motion on the argument surfaces only; the page has no rating surface).
+// one click from the first screen), and marks the question the reader is on in the rail of the three questions (interface
+// PRD E8 b). The beats' ease-in is plain CSS (motion.css, E8 c), so a browser without scroll timelines, or a reader who asked
+// for less motion, sees the static page; nothing here moves anything.
 import './shell.mjs';
 import { initTheme, h, getJSON, dataBase, withData } from './common.mjs';
-import { reveal } from './motion.mjs';
 
 initTheme();
 
@@ -57,5 +57,24 @@ for (const form of /** @type {NodeListOf<HTMLFormElement>} */ (document.querySel
   input.addEventListener('input', () => input.setCustomValidity(''));
 }
 
-// ---------- beats 2 to 6: reveal as they scroll into view (static under reduced motion) ----------
-for (const el of document.querySelectorAll('.beat:not(.beat-hero) > .beat-in')) reveal(el);
+// ---------- the rail of the three questions (E8 b): the beat in the middle of the window names its questions ----------
+const rail = document.querySelector('.q-rail');
+const railBeats = /** @type {HTMLElement[]} */ ([...document.querySelectorAll('.story-argument .beat[data-q]')]);
+/** @param {string} qs the beat's questions, "1", "1 2 3" or "" */
+function markQuestions(qs) {
+  if (!rail) return;
+  const on = new Set(qs.split(/\s+/).filter(Boolean));
+  for (const li of rail.querySelectorAll('li[data-q]')) {
+    const here = on.has(li.getAttribute('data-q') || '');
+    li.classList.toggle('on', here);
+    if (here) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
+  }
+  rail.classList.toggle('many', on.size > 1);
+}
+if (rail && railBeats.length && 'IntersectionObserver' in window) {
+  // a thin band across the middle of the window: the beat crossing it is the one being read
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) markQuestions(/** @type {HTMLElement} */ (e.target).dataset.q || '');
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  for (const b of railBeats) io.observe(b);
+}

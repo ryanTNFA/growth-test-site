@@ -19,16 +19,19 @@ const fold = (label, ...body) => h('gt-fold', {}, h('details', { class: 'k-fold'
 /**
  * The node card in its side drawer. getState() supplies the current view; onOverride(id, override | null) records the
  * user's call; onOpenNode(id, sub) opens another card (sub: the sub-area to show first in a roll-up's card).
- * @param {{drawer: HTMLElement, scrim: HTMLElement, registry: any, getState: () => any, onOverride: (id: string, ov: any) => void,
- * onOpenNode?: (id: string, sub?: string) => void}} parts
+ * inline (interface PRD v0.3, 5C): the card is drawn in place on the area page, the one home of each area, instead of in a
+ * drawer; the page draws its own head, so the card's head, its close button and its focus trap are left out.
+ * @param {{drawer: HTMLElement, scrim?: HTMLElement | null, registry: any, getState: () => any, onOverride: (id: string, ov: any) => void,
+ * onOpenNode?: (id: string, sub?: string) => void, inline?: boolean}} parts
  * @returns {{open: (id: string, sub?: string) => void, close: () => void, refresh: () => void, readonly currentId: string | null}}
  */
-export function createCard({ drawer, scrim, registry, getState, onOverride, onOpenNode }) {
+export function createCard({ drawer, scrim = null, registry, getState, onOverride, onOpenNode, inline = false }) {
   let lastFocus = null;
   let currentId = null;
   let subPick = null; // the sub-area picked inside a roll-up's card (micro risk); null shows the one that sets the rating
 
   function close() {
+    if (inline) return;
     // restore focus before hiding the drawer from assistive technology, so no focused element
     // sits inside an aria-hidden subtree (Chrome warns otherwise)
     const target = lastFocus && lastFocus.focus && !drawer.contains(lastFocus) ? lastFocus : null;
@@ -45,6 +48,7 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     currentId = nodeId;
     subPick = sub || null;
     render(nodeId);
+    if (inline) return;
     drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false'); scrim.classList.add('show');
     document.body.style.overflow = 'hidden';
     const closeBtn = /** @type {HTMLElement | null} */ (drawer.querySelector('.drawer-close')); if (closeBtn) closeBtn.focus();
@@ -57,13 +61,13 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     subPick = sid;
     const top = drawer.scrollTop;
     render(currentId);
-    drawer.scrollTop = top;
+    if (!inline) drawer.scrollTop = top;
     const row = /** @type {HTMLElement | null} */ (drawer.querySelector(`.sub-row[data-sub="${sid}"]`)); if (row) row.focus();
   }
-  scrim.addEventListener('click', close);
-  document.addEventListener('keydown',
+  if (scrim) scrim.addEventListener('click', close);
+  if (!inline) document.addEventListener('keydown',
     (e) => { if (e.key === 'Escape' && drawer.classList.contains('open') && !(e.target instanceof Node && drawer.contains(e.target))) close(); });
-  drawer.addEventListener('keydown', (e) => {
+  if (!inline) drawer.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { e.preventDefault(); close(); return; }
     if (e.key === 'Tab') {
       // the tour's sheet sits outside the drawer (fixed on the body) while a stop is inside it: Tab reaches it too
@@ -97,7 +101,11 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     // header; a sub-area's card leads back to its roll-up, which opens with this sub-area shown
     const up = view.nodes.find((n) => (n.sub_nodes || []).includes(nodeId));
     const upReg = up ? registry.nodeById[up.id] : null;
-    drawer.append(h('div', { class: 'drawer-head' },
+    if (inline) {
+      // the area page draws the name and the question; a sub-area's page leads back to its roll-up
+      if (up && onOpenNode) drawer.append(h('button', { class: 'btn quiet small sub-up', type: 'button', onclick: () => onOpenNode(up.id, nodeId) },
+        `Back to ${upReg ? upReg.short.toLowerCase() : up.id} and its other sub-areas`));
+    } else drawer.append(h('div', { class: 'drawer-head' },
       h('div', {},
         up && onOpenNode ? h('button', { class: 'btn quiet small sub-up', type: 'button', onclick: () => onOpenNode(up.id, nodeId) },
           `Back to ${upReg ? upReg.short.toLowerCase() : up.id} and its other sub-areas`) : null,
@@ -105,13 +113,9 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
         h('h2', { id: 'drawer-title' }, reg ? reg.short : nodeId),
         h('div', { class: 'small muted' }, reg ? reg.label : ''),
         reg && reg.question ? h('p', { class: 'q' }, reg.question) : null,
-        nodeId === 'N12' ? h('a', { class: 'small sd-link',
-          href: withData(`/growth-test-site/desk/selfdiscovery.html?iso=${new URLSearchParams(location.search).get('iso') || ''}`) + currentHash() },
-          'Self-discovery explained, with nearby products →') : null,
         h('a', { class: 'small',
-          href: withData(`/growth-test-site/desk/evidence.html?iso=${new URLSearchParams(location.search).get('iso') || ''}&node=${encodeURIComponent(nodeId)}&from=snapshot`) +
-            currentHash() },
-          'Analyst View for this area →')),
+          href: withData(`/growth-test-site/desk/area.html?iso=${new URLSearchParams(location.search).get('iso') || ''}&area=${encodeURIComponent(nodeId)}`) + currentHash() },
+          'Open the full page →')),
       h('button', { class: 'btn quiet small drawer-close', type: 'button', 'aria-label': 'Close evidence card', onclick: close }, 'Close')));
 
     if (!node) { drawer.append(h('p', { class: 'note' }, 'This area is not scored in the snapshot.')); return; }
@@ -166,9 +170,9 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     if (scored) {
       const inf = node.E_informing != null ? node.E_informing : (node.informing || []).length;
       const eTxt = node.sub_nodes && rep !== node
-        ? `${node.E ?? '—'} across all ${node.sub_nodes.length} sub-areas${inf ? ` (+ ${inf} informing)` : ''}; ` +
+        ? `${node.E ?? '—'} across all ${node.sub_nodes.length} sub-areas${inf ? ` (+ ${inf} shown only)` : ''}; ` +
           `${repReg ? repReg.short.toLowerCase() : rep.id} itself: ${rep.E ?? '—'}`
-        : `${node.E ?? '—'}${inf ? ` + ${inf} informing (do not vote)` : ''}`;
+        : `${node.E ?? '—'}${inf ? ` + ${inf} shown only` : ''}`;
       rule.append(h('dl', { class: 'kv', style: 'margin-top:10px' },
         h('dt', {}, 'Score N (−2 to +2)'), h('dd', { class: 'num' }, fmtSigned(node.N)),
         h('dt', {}, 'Tests agreeing, C (of 4)'), h('dd', { class: 'num' }, node.C ?? '—'),
@@ -259,7 +263,7 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
           'toward one). Evidence type: A prices and rationing, B working around the problem, C quantities, opinions and ' +
           'expert estimates, D composite indices.'));
       if (fams.some((f) => f.votes === false)) sec.append(h('p', { class: 'small muted', style: 'margin-top:6px' },
-        'Measures marked “informs, does not vote” are quantities, opinions, composite indices or experts’ estimates for a standard case (class C/D): ' +
+        'Measures marked “shown only” are quantities, opinions, composite indices or experts’ estimates for a standard case (class C/D): ' +
           'they are shown, and listed on the other side where they disagree, ' +
           'but they do not move the score.'));
       drawer.append(sec);
@@ -312,7 +316,7 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
         h('span', {}, h('span', { class: `signal ${f.signal > 0 ? 'pos' : f.signal < 0 ? 'neg' : ''}`,
           title: 'score from −2 (away from a problem) to +2 (toward one)' }, fmtSignal(f.signal)),
           informs ? ` class ${f.class} · ${f.year ?? '—'}` : ` class ${f.class} · weight ${fmt(f.weight, 2)} · ${f.year ?? '—'}`,
-          informs ? h('span', { class: 'flag', style: 'margin-left:6px', title: f.vote_note || '' }, 'informs, does not vote') : null,
+          informs ? h('span', { class: 'flag', style: 'margin-left:6px', title: f.vote_note || '' }, 'shown only') : null,
           lb ? h('span', { class: 'lb', style: 'margin-left:6px', title: 'removing this measure changes the rating' }, 'rating depends on it') : null)));
       const tbl = h('table', {}, h('thead', {}, h('tr', {}, h('th', {}, 'Indicator'), h('th', { class: 'num' }, 'Value'), h('th', { class: 'num' }, 'Years'),
         h('th', { class: 'num', title: 'Gap to countries at the same income, in standard deviations; percentile across all economies' },
@@ -371,10 +375,10 @@ export function createCard({ drawer, scrim, registry, getState, onOverride, onOp
     // load-bearing
     const ofSub = ev !== node ? ` for ${evReg ? evReg.short.toLowerCase() : ev.id}` : ''; // a roll-up's card names the sub-area these belong to
     if ((ev.load_bearing || []).length) drawer.append(h('section', {}, h('h3', {}, `Measures the rating${ofSub} depends on`), h('p', { class: 'small' },
-      `Removing any one of these voting measures changes the rating${ofSub}: ${ev.load_bearing.map(prettyFamily).join(', ')}.`)));
+      `Removing any one of these measures that count changes the rating${ofSub}: ${ev.load_bearing.map(prettyFamily).join(', ')}.`)));
     if ((ev.informing_dissent || []).length && ev.tier !== 'elimination') drawer.append(h('section', {}, h('h3', {}, 'Supporting measures that disagree'),
       h('p', { class: 'small' },
-      `Quantities or opinions that disagree with the rating by a full point or more. They do not vote, but they block the firmest ratings: ` +
+      `Quantities or opinions that disagree with the rating by a full point or more. They do not count, but they block the firmest ratings: ` +
         `${ev.informing_dissent.map(prettyFamily).join(', ')}.`)));
 
     // hand-off: what would change this, in-country checks, data gaps
@@ -534,10 +538,10 @@ const CLASS_SHORT = { A: 'price or rationing', B: 'strong indirect evidence', C:
 const CLASS_PLAIN = {
   // rubric 0.4.0 (registry/evidence_kinds.json): the class follows from what a measure reads and whose experience it records
   A: 'Class A: prices, shadow prices and firms’ own experience of rationing (weight 1.0)',
-  B: 'Class B: costly behaviour that only makes sense if the constraint binds, such as owning a generator, and the camels test (weight 0.9)',
-  C: 'Class C: quantities, stated reasons and opinions, and experts’ estimates for a standard case (weight 0.6; shown, does not vote)',
+  B: 'Class B: costly behavior that only makes sense if the constraint binds, such as owning a generator, and the camels test (weight 0.9)',
+  C: 'Class C: quantities, stated reasons and opinions, and experts’ estimates for a standard case (weight 0.6; shown only)',
   D: 'Class D: composite indices (weight 0.3, never decisive)',
-  X: 'Class X: context, no vote',
+  X: 'Class X: context, does not count',
 };
 const leanWord = (x) => (x == null ? '' : x >= 0.5 ? 'toward a problem' : x <= -0.5 ? 'away from a problem' : 'near zero');
 
@@ -687,7 +691,7 @@ function whyNotLikely(n, P) {
   const run = testsRun(n);
   if ((n.C ?? 0) < L.C_min) out.push(run <= (n.C ?? 0) ? `only ${run} of the 4 standard tests could be run (${L.C_min} must agree)` : `only ${n.C ?? 0} of ` +
     `the ${run} tests that could be run agree (${L.C_min} must)`);
-  if ((n.E ?? 0) < L.E_min) out.push(`only ${plural(n.E ?? 0, 'independent source votes', 'independent sources vote')} (${L.E_min} needed)`);
+  if ((n.E ?? 0) < L.E_min) out.push(`only ${plural(n.E ?? 0, 'independent source counts', 'independent sources count')} (${L.E_min} needed)`);
   if ((n.F ?? 0) > L.F_max) out.push('the rating changes with the choice of comparison countries');
   if ((n.informing_dissent || []).length) out.push(`a supporting measure points the other way (${n.informing_dissent.map(prettyFamily).join(', ')})`);
   if ((n.AB_pos ?? 0) < L.AB_positive_families_min) out.push(`fewer than ${L.AB_positive_families_min} high-quality measures point toward a problem`);
@@ -699,7 +703,7 @@ function whyNotRuledOut(n, P) {
   if ((n.N ?? 0) > R.N_max) out.push(`the score is ${fmtSigned(n.N)} (${fmtSigned(R.N_max)} or lower needed)`);
   if ((n.C ?? 0) < R.C_min) out.push(run <= (n.C ?? 0) ? `only ${run} of the 4 standard tests could be run (${R.C_min} must agree)` : `only ${n.C ?? 0} of ` +
     `the ${run} tests that could be run agree (${R.C_min} must)`);
-  if ((n.E ?? 0) < R.E_min) out.push(`only ${plural(n.E ?? 0, 'independent source votes', 'independent sources vote')} (${R.E_min} needed)`);
+  if ((n.E ?? 0) < R.E_min) out.push(`only ${plural(n.E ?? 0, 'independent source counts', 'independent sources count')} (${R.E_min} needed)`);
   if (!(n.tests && n.tests.circumvention && n.tests.circumvention.T != null)) out.push('there is no measure of firms working around the problem');
   if ((n.AB_pos ?? 0) > 0) out.push(`${plural(n.AB_pos, 'high-quality measure still points', 'high-quality measures still point')} toward a problem`);
   if ((n.informing_dissent || []).length) out.push(`a supporting measure points the other way (${n.informing_dissent.map(prettyFamily).join(', ')})`);
@@ -714,12 +718,12 @@ function whyNotRuledOut(n, P) {
 /** @type {[RegExp, (m: RegExpMatchArray) => string][]} */
 const BLOCKER_WORDS = [
   [/^C = (\d) < 3 \(no evidence for ([^)]*)\)/,
-    (m) => `only ${m[1]} of the four tests speak${m[1] === '1' ? 's' : ''} (no voting evidence on ` +
+    (m) => `only ${m[1]} of the four tests speak${m[1] === '1' ? 's' : ''} (no evidence that counts on ` +
       `${m[2].replace(/T_/g, '').replace(/circumvention/g, 'workarounds').replace(/changes/g, 'co-movement').replace(/: no voting evidence/g, '')})`],
   [/^C = (\d) < 3/, (m) => `only ${m[1]} of the four tests speak`],
   [/^E = (\d+) < 5 voting families(?:; (\d+) quantity families inform without voting)?/,
-    (m) => `${m[1]} voting famil${m[1] === '1' ? 'y' : 'ies'}, not the five a firm verdict needs${m[2] ? ` (${m[2]} quantity measures inform without ` +
-      `voting)` : ''}`],
+    (m) => `${m[1]} ${m[1] === '1' ? 'family that counts' : 'families that count'}, not the five a firm verdict needs${m[2] ? ` (${m[2]} quantity ` +
+      `measures shown only)` : ''}`],
   [/^N = ([-\d.]+) < 1/, (m) => `the net score (${m[1]}) is below the flagging line`],
   [/^N = ([-\d.]+) > -1/, (m) => `the net score (${m[1]}) is above the clearing line`],
   [/^T_price = ([-\d.]+) > -0\.5/, () => 'the price test does not point away from a problem'],
@@ -750,11 +754,12 @@ export function whyNotLines(node) {
     items.length > 3 ? ` (and ${items.length - 3} more in the rule detail)` : '', '.') : null);
   return h('div', { class: 'why-not-lines' }, line('Why not higher:', up), line('Why not lower:', down));
 }
-// Predict first helpers (the set lives in tour.mjs; read it lazily so this module stays importable without it)
-let lessonMod = null;
-import('./tour.mjs').then((m) => { lessonMod = m; }).catch(() => {});
-const revealedSet = () => (lessonMod ? lessonMod.revealed : new Set());
-const revealArea = (id) => { if (lessonMod) lessonMod.reveal(id); };
+// Predict first lived with the tour, which came down in step 2 of the interface redesign (PRD v0.3, E3) and returns rebuilt.
+// Until then nothing is hidden for a prediction: the set is always empty and revealing is a no-op.
+/** @type {Set<string>} */
+const NOTHING_HIDDEN = new Set();
+const revealedSet = () => NOTHING_HIDDEN;
+const revealArea = (/** @type {string} */ _id) => {};
 
 /** One plain paragraph that leads every card and tree hover. */
 /** The voting families a node needs before it can be rated: its own floor (nodes.json evidence_floor, engine 0.1.8) or E_below. */
@@ -786,11 +791,11 @@ export function plainSummary(node, ctx, { brief = false } = {}) {
   const s = [];
   const via = ev !== node ? ` The rating comes from ${evShort}, one of ${node.sub_nodes.length} sub-areas.` : '';
   if (t === 'candidate' && ev.tier_subreason === 'corroborated') {
-    // rubric 0.4.0: flagged by recent facts that only inform, where the prices and behaviours that vote are missing, old or neutral
+    // rubric 0.4.0: flagged by recent facts that only inform, where the prices and behaviors that vote are missing, old or neutral
     const by = corroboratingFacts(ev, ctx, brief ? 1 : 3);
     s.push(`Worth a closer look, on recent facts that only inform.${via}`);
     if (by.length) s.push(`Pointing toward a problem: ${by.map((x) => x.text).join('; ')}.`);
-    if (!brief) s.push('The prices and behaviours that would settle this are missing, old or neutral here, and none of these facts is a price: ' +
+    if (!brief) s.push('The prices and behaviors that would settle this are missing, old or neutral here, and none of these facts is a price: ' +
       'a reason to look, not a finding.');
   } else if (t === 'likely_binding' || t === 'candidate') {
     s.push(t === 'likely_binding' ? `Likely a main constraint, still to be confirmed in-country.${via}` : `Worth a closer look, not established.${via}`);
@@ -825,7 +830,7 @@ export function plainSummary(node, ctx, { brief = false } = {}) {
           const r = (ctx.indicators || []).find((x) => x.id === (f.indicators || [])[0]);
           return r ? shortName(r) : String(f.id).replace(/_/g, ' ');
         };
-        s.push(`${englishList(dg.map(nm))} ${dg.length === 1 ? 'informs' : 'inform'} but ${dg.length === 1 ? 'does' : 'do'} not vote here: ` +
+        s.push(`${englishList(dg.map(nm))} ${dg.length === 1 ? 'is' : 'are'} shown only here: ` +
           `${String(dg[0].class_note).replace(/^class C for this economy: /, '').replace(/, so the measure informs but does not vote$/, '')}.`);
       }
       whatThereIs();
@@ -1013,7 +1018,7 @@ export const FIELD_QUESTIONS = {
   N6: ['Ask two freight forwarders or exporters the door-to-port time and cost for a container, and where the delays are: port, border or roads.',
     'Ask the port or customs authority for container dwell times and clearance times.'],
   N7: ['Ask firms and the telecoms regulator about the price and reliability of business internet.',
-    'Ask farmers\' organisations and the water authority whether irrigation or water supply limits expansion.'],
+    'Ask farmers\' organizations and the water authority whether irrigation or water supply limits expansion.'],
   N8: ['Ask the land registry how long a commercial title transfer takes and what share of plots are registered.',
     'Ask two investors whether land-title disputes delayed a project, and for how long.'],
   N10: ['Ask the central bank and two banks about inflation expectations and access to foreign exchange.',
@@ -1023,7 +1028,7 @@ export const FIELD_QUESTIONS = {
     'Ask an accounting firm how tax audits and refunds are handled and whether informal payments speed them up.'],
   'N11.taxes': ['Ask an accounting firm what a typical medium-sized firm pays in total taxes and how long VAT refunds take.',
     'Ask firms whether tax rates or tax administration is the bigger problem.'],
-  'N11.regulation': ['Ask firms how long licences, permits and inspections take, and whether incumbents use regulation to keep competitors out.'],
+  'N11.regulation': ['Ask firms how long licenses, permits and inspections take, and whether incumbents use regulation to keep competitors out.'],
   'N11.crime': ['Ask firms and the chamber of commerce what they spend on security and whether theft or extortion has changed where they operate.'],
   'N11.policy': ['Ask investors which policy reversals in the last five years hurt their plans, and how they price that risk.'],
   N12: ['Ask the investment promotion agency which new export products started in the last five years and what held back the first movers.',

@@ -4,7 +4,7 @@
 //   patternChecks: the pattern, the record in one line (its eras), and the four checks that find the engine's patterns
 //     (rubric 0.3.0), each a track with the zones where a pattern fits, the lines and the economy's dot.
 //   growthChart: income per person and growth each year on one time axis, the last 30 years unless the reader asks
-//     for all; the last decade and the decade before shaded, their averages drawn across them and labelled at the
+//     for all; the last decade and the decade before shaded, their averages drawn across them and labeled at the
 //     right, the peer median beside them; the eras since 1990 split by dashed lines, each with its average at the top;
 //     drawn at the width it is given.
 //   incomeStrip: the figures the statement reads against income, one dot each on a shared scale of standard deviations.
@@ -234,7 +234,7 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
   const G1 = g.G1 || {}, G3 = g.G3 || {}, G4 = g.G4 || {};
   const level = allLevel.filter((p) => p[0] >= from), growth = allGrowth.filter((p) => p[0] >= from);
   const narrow = W < 520;
-  // the averages, labelled at their right ends: the right margin is as wide as the longest label
+  // the averages, labeled at their right ends: the right margin is as wide as the longest label
   const avgDefs = [
     { win: G1.years_prior_10y || G1.window_prior_10y, v: G1.avg_prior_10y, cls: 'before', lab: narrow ? 'before' : 'decade before' },
     G1.structural_n > 1 ? { win: G1.years_10y || G1.window_10y, v: G1.structural_median_10y, cls: 'peers', lab: narrow ? 'peers' : 'peer median' } : null,
@@ -312,7 +312,7 @@ function chartSvg(W, { level: allLevel, growth: allGrowth, g, name }, from) {
       svg.append(s('path', { d: `M${x - half},${base}L${x},${tip}L${x + half},${base}Z`, class: 'gc-cut' }));
     }
   }
-  // the averages: a halo under each keeps it clear of the bars; each is labelled at its right end, nudged apart when close
+  // the averages: a halo under each keeps it clear of the bars; each is labeled at its right end, nudged apart when close
   const avgs = avgDefs.map((a) => ({ ...a, w: inside(a.win) })).filter((a) => Array.isArray(a.w))
     .map((a) => ({ ...a, x0: X(a.w[0]) - bw / 2, x1: X(a.w[1]) + bw / 2, y: BY(a.v), ly: BY(a.v) }));
   for (const a of avgs) svg.append(s('line', { x1: a.x0, x2: a.x1, y1: a.y, y2: a.y, class: 'gc-halo' }));

@@ -14,7 +14,7 @@ export const STRIP_AREAS = ['N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8'
  *   href?: ((id: string) => string) | null, leans?: Record<string, {band: string, mark: string, words: string}> | null,
  *   highlight?: string | null, overrides?: Record<string, {tier: string}> | null}} [opts]
  *   size 'sm' | 'md' | 'lg'; label(id) and plain(tier) for the words; href(id) makes each square a link; leans {id: leanOf()}
- *   puts the arrow on a grey square; highlight marks one area; overrides {id: {tier}} marks the user's own calls.
+ *   puts the arrow on a gray square; highlight marks one area; overrides {id: {tier}} marks the user's own calls.
  * @returns {HTMLElement}
  */
 export function strip(tiers, { size = 'sm', label = (id) => id, plain = (t) => t || 'not rated', href = null, leans = null, highlight = null,

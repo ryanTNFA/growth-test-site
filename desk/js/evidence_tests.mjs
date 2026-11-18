@@ -1,5 +1,5 @@
 // Evidence page, a node's tests (evidence-viz-prd phase 4): C5 price against quantity (test 1), C6 co-movement
-// (test 2) and C8 bypass behaviour (test 3), drawn under the C9 strip where they apply. evidence.mjs owns the
+// (test 2) and C8 bypass behavior (test 3), drawn under the C9 strip where they apply. evidence.mjs owns the
 // state and passes what these need in `ctx`, as it does for evidence_node.mjs.
 import { h, fmt, fmtSigned, shortName, unitHint } from './common.mjs';
 import { scatterRows, linearFit, priceQtyRows, pricePath, quadrant, comovePairs, peerBars } from './evidence_math.mjs';
@@ -136,7 +136,7 @@ export function drawPriceQty(host, ctx) {
     y: axes === 'raw' ? { type: logOf(pInd), label: `↑ ${axisLabel(pInd, maxCh - 2)}`, grid: true } : { domain: [-lim, lim], label: trunc(`↑ ${shortName(pInd)}: sd from income trend`, maxCh), grid: true, tickFormat: (d) => (d === 0 ? '0' : fmtSigned(d, 0)) },
     marks,
   });
-  // Right: the economy's own path, one point a year, labelled at the ends.
+  // Right: the economy's own path, one point a year, labeled at the ends.
   const path = pricePath(pPanel, qPanel, iso, asOf - 29, asOf, 3);
   let right = null;
   if (path.length >= 2) {
@@ -242,7 +242,7 @@ export function drawComove(host, ctx) {
   return { csv, text: panels.length ? text.join(' ') : '' };
 }
 
-// ---------- C8 bypass behaviour ----------
+// ---------- C8 bypass behavior ----------
 /** A small peer comparison for each circumvention indicator of the node, two to a row on wide screens. */
 export function drawBypass(host, ctx) {
   const { P, pal, iso, peers, asOf, width: w0, countryName, items, windowOf, nameOf, onPick, registry } = ctx;
@@ -283,7 +283,7 @@ export function drawBypass(host, ctx) {
     chart.querySelectorAll('g[aria-label="y-axis tick label"] text').forEach((n) => { if (n.textContent.startsWith(`${iso} `)) { n.setAttribute('font-weight', '700'); n.setAttribute('fill', pal.focusInk); } });
     // Each panel is a button for the mouse and the keyboard. A nested svg takes clicks only where something is painted,
     // so an unpainted rect under the marks gives it the whole panel; and Chrome does not paint the page's
-    // :focus-visible outline on a nested svg, so the panel draws that ring itself, in the outline's colour.
+    // :focus-visible outline on a nested svg, so the panel draws that ring itself, in the outline's color.
     chart.prepend(svgEl('rect', { width: cw, height, fill: 'none', 'pointer-events': 'all' }));
     chart.style.cursor = 'pointer'; chart.style.outlineStyle = 'none';
     for (const [k, v] of Object.entries({ tabindex: '0', role: 'button', 'aria-label': `Chart ${shortName(ind)} below` })) chart.setAttribute(k, v);
@@ -373,23 +373,24 @@ export function rulerWords(r, { name, votes, direction }) {
   const zero = twoSe == null ? `its ${r.year} tilt has no standard error, so it cannot be told from zero`
     : `its ${r.year} tilt is ${th(r.value)}, ${r.clear ? 'more' : 'less'} than ${fmt(twoSe, 3)} from zero`;
   let head = `${BAND_WORDS[band][0].toUpperCase()}${BAND_WORDS[band].slice(1)}: ${ordinalN(r.rank)} of ${r.n}`;
-  if (side && !r.clear) head += ', but too close to zero to count';
-  if (votes) head += `; scores ${band === 0 || !r.clear ? '0' : fmtSigned(r.signal, 0)}`;
+  // "count" means one thing (interface PRD G5): whether a measure enters a test's score, never the size of a reading
+  if (side && !r.clear) head += ', but too close to zero: reads 0';
+  else if (votes) head += `; scores ${band === 0 ? '0' : fmtSigned(r.signal, 0)}`;
   const beyond = direction === -1 ? 'below' : 'above';
   let need = '';
   const where = { 2: 'the most camel-like 10 percent', 1: 'the most camel-like quarter', '-1': 'the most hippo-like quarter', '-2': 'the most hippo-like 10 percent' };
   if (side && r.clear) {
-    // a measure outside the rating would count, not counts
-    const counts = votes ? 'It counts as' : 'It would count as';
+    // a measure outside the rating would read, not reads
+    const counts = votes ? 'It reads as' : 'It would read as';
     need = `${counts} ${Math.abs(band) === 2 ? 'strong ' : ''}${side}${votes ? '' : ' if this measure were in the rating'}: its average tilt, ${th(r.value_ref)}, `
       + `is in ${where[band]} of economies, and ${zero}.`;
   }
   else if (side && twoSe != null) {
     need = `Its average tilt, ${th(r.value_ref)}, is in the ${side} band, but its ${r.year} tilt, ${th(r.value)}, is within ${fmt(twoSe, 3)} of zero `
-      + '(two standard errors), so it does not count.';
-  } else if (side) need = `Its average tilt, ${th(r.value_ref)}, is in the ${side} band, but ${zero}, so it does not count.`;
+      + '(two standard errors), so it reads 0.';
+  } else if (side) need = `Its average tilt, ${th(r.value_ref)}, is in the ${side} band, but ${zero}, so it reads 0.`;
   else if (r.camelEdge != null) {
-    need = `To count as camels, ${name} would need an average tilt ${beyond} ${thr(r.camelEdge)} (it has ${th(r.value_ref)})`
+    need = `To read as camels, ${name} would need an average tilt ${beyond} ${thr(r.camelEdge)} (it has ${th(r.value_ref)})`
       + (twoSe == null ? ', and a standard error for its latest tilt.' : ` and a ${r.year} tilt more than ${fmt(twoSe, 3)} from zero (it has ${th(r.value)}).`);
   }
   return { head, need, counted: votes };
@@ -443,7 +444,7 @@ export function rulerSvg(ruler, r, { name, iso, width, pal, votes, nameOf }) {
   defs.append(pat);
   if (twoSe != null) {
     add('rect', { x: X(-twoSe), y: B - 9, width: X(twoSe) - X(-twoSe), height: 18, fill: `url(#${pid})` });
-    add('text', { x: X(0), y: B + 24, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, 'too close to zero to count');
+    add('text', { x: X(0), y: B + 24, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, 'too close to zero: reads 0');
   } else {
     add('rect', { x: L, y: B - 9, width: W - L - R, height: 18, fill: `url(#${pid})` });
     add('text', { x: X(0), y: B + 24, 'text-anchor': 'middle', 'font-size': 10.5, fill: pal.muted }, 'no standard error: cannot be told from zero');
@@ -480,8 +481,8 @@ export function drawCamels(host, ctx) {
     rulerBlocks.push(h('div', { class: 'cr' },
       h('p', { class: 'cr-k' }, `${pn.label.charAt(0).toUpperCase() + pn.label.slice(1)}`),
       h('p', { class: 'cr-head' }, w.head),
-      h('p', { class: 'cr-chip' }, pn.votes ? `Counted in the rating${pn.fam && pn.fam.node ? ` (${pn.fam.node})` : ''}.`
-        : 'Shown, not counted in the rating: this measure has not passed its placebo check.'),
+      h('p', { class: 'cr-chip' }, pn.votes ? `Counts in the rating${pn.fam && pn.fam.node ? ` (${pn.fam.node})` : ''}.`
+        : 'Shown only: this measure has not passed its placebo check, so it is not in the rating.'),
       h('p', { class: 'cr-row' }, `Where ${countryName} ranks: ${tiltSpan(r)}, among ${r.n} economies (1 = exports lean furthest from products that need ${factor})`),
       rulerSvg(pn.ruler, r, { name: countryName, iso, width, pal, votes: pn.votes, nameOf }),
       w.need ? h('p', { class: 'cr-need' }, w.need) : null));
@@ -567,7 +568,7 @@ export function drawCamels(host, ctx) {
     const gated = r ? r.band !== 0 && !r.clear : Math.abs(pn.theta) < 2 * pn.se;
     const inRating = pn.votes && f && isNum(f.signal)
       ? ` In the rating it enters ${f.node} as <strong>${fmtSigned(f.signal, 1)}</strong>: its average tilt is at the ${ordinal(Math.round(pct))} percentile of ${n} economies${f.signal === 0 ? (gated ? ', and its latest tilt is within two standard errors of zero, so it scores 0' : ', between the bands that score') : ''} (the workbook's percentile bands: 10th or below +2, 25th +1, 75th −1, 90th or above −2, oriented so camels point toward binding).`
-      : ' It is shown here but not counted in the rating: this vector did not pass its placebo check (see the rubric changelog).';
+      : ' It is shown only, not in the rating: this vector did not pass its placebo check (see the rubric changelog).';
     const rank = r ? ` It ranks ${ordinal(r.rank)} of ${r.n} economies counting from the most camels, by ${tiltSpan(r)}.` : '';
     return `<strong>${pn.label.charAt(0).toUpperCase() + pn.label.slice(1)}</strong>: θ = ${fmtSigned(pn.theta, 3)} in ${pn.year} (se ${fmt(pn.se, 3)}, clustered by ${pn.se_cluster || 'source industry'}), ${pattern}.${rank}${cover}${inRating}`;
   };

@@ -11,23 +11,23 @@ import { heatRow, TEST_ORDER } from './evidence_math.mjs';
 import { railModel, nodeScope, VIEWS } from './evidence_node.mjs';
 import { testMark } from './components/testmark.mjs';
 
-initTheme();
 const DATA = dataBase();
 const $ = (id) => document.getElementById(id);
 const TEST_HEAD = { price: '1 · Price', changes: '2 · Changes', circumvention: '3 · Circumvention', camels: '4 · Camels' };
-const LIM = 2; // the colour scale saturates at ±2 (sd for benchmarking; test scores run from −2 to +2)
+const LIM = 2; // the color scale saturates at ±2 (sd for benchmarking; test scores run from −2 to +2)
 // Ryan, 8 November 2026: a test the method never defines for an area is not missing data. It is blank for every economy,
-// so it reads as not applicable (a closed grey cell), apart from "no data" (a dashed, empty cell: this economy lacks it).
+// so it reads as not applicable (a closed gray cell), apart from "no data" (a dashed, empty cell: this economy lacks it).
 const NA = new Set(['no test defined', 'no indicator']);
 
-const state = { iso: (qs('iso') || 'KEN').toUpperCase(), set: 'structural', overrides: {}, registry: null, countries: [], scorecard: null, model: [] };
+const state = { iso: (qs('iso') || 'KEN').toUpperCase(), set: 'structural', overrides: {}, registry: null, countries: [], scorecard: null, model: [],
+  /** @type {((o: any) => void) | null} */ onChange: null };
 
 const css = (v, fb) => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || fb;
 const nameOf = (iso3) => (state.countries.find((c) => c.iso3 === iso3) || { name: iso3 }).name;
 /** The set the verdict layer scored the tests with. The page's own choice (state.set) only steers the Evidence links; no cell depends on it. */
 const activeSet = () => (state.scorecard && state.scorecard.meta && state.scorecard.meta.active_comparator_set) || 'structural';
 
-// ---------- colour ----------
+// ---------- color ----------
 function lum(hex) {
   const c = d3.color(hex); if (!c) return 0;
   const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
@@ -36,7 +36,7 @@ function lum(hex) {
 }
 const contrast = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
 
-/** Cell fill and ink for a value: toward binding in the binding colour, away in navy, neutral near zero. */
+/** Cell fill and ink for a value: toward binding in the binding color, away in navy, neutral near zero. */
 function cellPaint(v) {
   const surface = css('--surface', '#ffffff'), text = css('--text', '#1c2e4a');
   if (v == null) return null;
@@ -89,6 +89,9 @@ function buildModel() {
       });
     }
   }
+  // E9 b: benchmarking read against the country's own other areas too: each area's gap ranked within this economy
+  const benched = rows.filter((r) => r.id && !r.context && !r.sub && r.bench != null).sort((a, b) => b.bench - a.bench);
+  benched.forEach((r, i) => { r.benchRank = i + 1; r.benchOf = benched.length; });
   state.model = rows;
 }
 
@@ -102,6 +105,15 @@ function valueCell(v, empty, title) {
   const p = cellPaint(v);
   return h('td', { class: 'sm-cell', style: `background:${p.fill};color:${p.ink}`, title: title || '' }, fmtSigned(Math.abs(v) < 0.05 ? 0 : v, 1));
 }
+
+/** The benchmarking cell, with the area's rank among this economy's own areas under the value (E9 b). */
+function benchCell(r, title) {
+  const td = valueCell(r.bench == null ? null : Math.max(-3, Math.min(3, r.bench)), r.benchEmpty,
+    r.benchRank ? `${title} Among ${nameOf(state.iso)}'s own areas: ${ordinalOf(r.benchRank)} weakest of ${r.benchOf}.` : title);
+  if (r.benchRank) td.append(h('span', { class: 'sm-rank' }, `${ordinalOf(r.benchRank)} of ${r.benchOf} here`));
+  return td;
+}
+const ordinalOf = (k) => { const v = k % 100; const s = ['th', 'st', 'nd', 'rd']; return `${k}${s[(v - 20) % 10] || s[v] || s[0]}`; };
 
 function conclusionCells(r) {
   if (!r.id) return [];
@@ -140,7 +152,7 @@ function render() {
     const bt = r.bench != null ? `${r.nBench} indicators with data: ${r.toward} at least 0.75 sd toward binding, ${r.away} at least 0.75 sd away. Median of their binding-side distances from what income and structure predict.` : 'No indicator of this node has a value in the window.';
     body.append(h('tr', { class: `${r.sub ? 'sm-sub' : ''}${r.context ? ' sm-context' : ''}${state.overrides[r.id] ? ' sm-overridden' : ''}` },
       h('th', { scope: 'row', class: 'sm-node' }, h('a', { href }, h('span', { class: 'sm-id' }, r.sub ? '' : nodeCode(r.id)), ' ', r.short)),
-      valueCell(r.bench == null ? null : Math.max(-3, Math.min(3, r.bench)), r.benchEmpty, bt), gap(),
+      benchCell(r, bt), gap(),
       ...TEST_ORDER.map((t) => valueCell(r.tests[t], r.empty[t], r.why[t] || `${TEST_HEAD[t]}: the verdict layer's test score, from −2 (evidence against) to +2 (for).`)),
       h('td', { class: 'sm-tier' }, r.tier ? [h('span', { class: `tier-badge ${tierClass(r.tier)}`, title: r.bySet || null }, h('span', {}, plainTierOf(r.id, r.tier))), r.tagNode ? reasonTag(r.tagNode) : null, r.tagNode ? robustChip(r.tagNode) : null] : '—'),
       ...conclusionCells(r)));
@@ -171,13 +183,39 @@ function renderText() {
     ovs.length ? `You have set your own conclusion on ${ovs.length} node${ovs.length > 1 ? 's' : ''}.` : '',
   ].filter(Boolean).join(' ');
   const active = activeSet();
-  $('foot').textContent = `Benchmarking: the median, across the node's indicators with a value, of each one's distance from what income and structure predict, in standard deviations, turned so positive is the binding side (the C9 evidence strip's dots). Tests 1 to 4: the verdict layer's test scores (T), from −2 (evidence against the constraint binding) to +2 (for). Colour saturates at ±${LIM}. Comparators: benchmarking measures against every economy with data, not a comparator set; the test scores are computed with the verdict layer's ${active} comparators${state.set !== active ? `` : ''}. The rating column follows the comparators chosen above (the verdict layer computes a rating under each set; hover a rating to see where the sets disagree). "No test defined": the registry has no specification, vector or indicator for that test on the area, a gap in the tool, the same for every economy; "no data": it has one, but this economy has no usable value in the window; "stale": only old data; "no indicator": nothing in the registry benchmarks the area. The first decision’s rating is a direction (leans to finance, leans to low returns, cannot tell which side), never a constraint rating: both sides of the fork are constraints. Hover a cell for details. Snapshot ${sc.meta ? sc.meta.snapshot_id : ''}, rubric ${sc.meta ? sc.meta.rubric_version : ''}. Your conclusions are yours, not the tool's; they live in this page's link, which the Bottom line and its memo read too.`;
+  if ($('foot')) $('foot').textContent = `Benchmarking: the median, across the node's indicators with a value, of each one's distance from what income and structure predict, in standard deviations, turned so positive is the binding side (the C9 evidence strip's dots). Tests 1 to 4: the verdict layer's test scores (T), from −2 (evidence against the constraint binding) to +2 (for). Color saturates at ±${LIM}. Comparators: benchmarking measures against every economy with data, not a comparator set; the test scores are computed with the verdict layer's ${active} comparators${state.set !== active ? `` : ''}. The rating column follows the comparators chosen above (the verdict layer computes a rating under each set; hover a rating to see where the sets disagree). "No test defined": the registry has no specification, vector or indicator for that test on the area, a gap in the tool, the same for every economy; "no data": it has one, but this economy has no usable value in the window; "stale": only old data; "no indicator": nothing in the registry benchmarks the area. The first decision’s rating is a direction (leans to finance, leans to low returns, cannot tell which side), never a constraint rating: both sides of the fork are constraints. Hover a cell for details. Snapshot ${sc.meta ? sc.meta.snapshot_id : ''}, rubric ${sc.meta ? sc.meta.rubric_version : ''}. Your conclusions are yours, not the tool's; they live in this page's link, which the Bottom line and its memo read too.`;
   const hash = currentHash();
-  $('to-snapshot').href = withData(`/growth-test-site/desk/country.html?iso=${state.iso}${hash}`);
+  if ($('to-snapshot')) $('to-snapshot').href = withData(`/growth-test-site/desk/country.html?iso=${state.iso}${hash}`);
   refreshNav();
 }
 
-function save() { writeState({ set: state.set, overrides: state.overrides }); renderText(); }
+function save() {
+  // inside the overview the host page owns the link's state (its peers and reading too); it takes the conclusions back
+  if (state.onChange) { state.onChange(state.overrides); renderText(); return; }
+  writeState({ set: state.set, overrides: state.overrides }); renderText();
+}
+
+/**
+ * The overview's Grid view (interface PRD v0.3, B5): the heat map and its conclusions column inside the country overview,
+ * without the Heat map page's own controls (its 66 controls reduce to the grid and the conclusions). The host passes the
+ * data it has already loaded; `onChange(overrides)` takes the reader's conclusions back into the host's state and link.
+ * @param {HTMLElement} host
+ * @param {{iso: string, registry: any, scorecard: any, countries?: any[], overrides: Record<string, any>, set?: string,
+ *   onChange: (overrides: Record<string, any>) => void}} opts
+ */
+export function mountGrid(host, { iso, registry, scorecard, countries = [], overrides, set = 'structural', onChange }) {
+  Object.assign(state, { iso, registry, scorecard, countries, overrides, set, onChange });
+  host.replaceChildren(
+    h('p', { class: 'small muted' }, 'One row per area. Benchmarking asks whether the area is unusually weak for an economy at this income: it is a first ' +
+      'screen, and benchmarking does not count in the rating. The four tests make the rating; each scores from −2 (evidence against) to +2 (for).'),
+    h('div', { class: 'sm-key', id: 'key', 'aria-hidden': 'true' }),
+    h('div', { class: 'sm-scroll', id: 'heat-wrap', role: 'region', 'aria-label': 'The grid: each area’s benchmarking, its four tests, its rating and your conclusion',
+      tabindex: '0' }),
+    h('p', { class: 'sm-readout', id: 'readout' }));
+  render();
+}
+/** Redraw the grid after the host changed the overrides or the theme. */
+export function redrawGrid(overrides) { if (overrides) state.overrides = overrides; if (state.scorecard && $('heat-wrap')) render(); }
 
 // ---------- export ----------
 const fileBase = () => `${state.iso}-c10-summary-${state.scorecard.meta ? state.scorecard.meta.snapshot_id : ''}`.replace(/[^A-Za-z0-9._-]/g, '_');
@@ -267,8 +305,8 @@ async function loadCountry() {
   const name = nameOf(state.iso);
   $('page-title').textContent = `${name}: diagnostic summary`;
   document.title = `${name} · Heat map · The Growth Test`;
-  $('page-sub').textContent = 'Each row is a node of the tree. The colour shows which way the evidence leans; the verdict layer\'s tier and your own conclusion sit beside it. '
-    + 'A dashed empty cell has no data for this economy; a grey n/a cell is a test the method does not define for that area, so it is blank for every economy. '
+  $('page-sub').textContent = 'Each row is a node of the tree. The color shows which way the evidence leans; the verdict layer\'s tier and your own conclusion sit beside it. '
+    + 'A dashed empty cell has no data for this economy; a gray n/a cell is a test the method does not define for that area, so it is blank for every economy. '
     + 'Click a node to see its evidence.';
 }
 
@@ -309,4 +347,5 @@ async function main() {
     render();
   } catch (e) { const el = $('page-error'); el.hidden = false; el.textContent = `Could not load the summary: ${e.message}`; console.error(e); }
 }
-main();
+// the Heat map page runs itself; the country overview imports this module for mountGrid() only
+if (document.body.dataset.page === 'heat') { initTheme(); main(); }

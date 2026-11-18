@@ -1,7 +1,7 @@
 // The Long View (visual-upgrade PRD V5, front-door PRD W8.3): two centuries of GDP per capita by world region beside
-// the share of people in extreme poverty. It sits in the "Why this exists" band and makes TNFA's case; it is labelled
+// the share of people in extreme poverty. It sits in the "Why this exists" band and makes TNFA's case; it is labeled
 // as TNFA's view and rates no country. It mirrors the "Two centuries of economic growth" chart on TNFA's own site:
-// the same six regions, in the site's colours, on a linear dollar scale, on the site's navy ground. Drawn by hand into
+// the same six regions, in the site's colors, on a linear dollar scale, on the site's navy ground. Drawn by hand into
 // SVG (no D3 on the home page). "Play" sweeps the years from 1820; with reduced motion, or without JavaScript timers,
 // the whole chart shows at once. Data: desk/data/longview.json (ingest/src_longview.py), loaded after the map so it
 // never delays it.
@@ -12,7 +12,7 @@ const NS = 'http://www.w3.org/2000/svg';
 const W = 960, H = 400, TOP = 44, BOTTOM = 36, LEFT = 58, GAP = 70, LABEL = 160;
 const PANEL = (W - LEFT - GAP - LABEL - 40) / 2; // two panels of equal width; the first keeps room for its labels
 const Y0 = 1820, Y1 = 2022, YMAX = 60000;
-// The series as the TNFA site draws them (thenewforeignassistance.org, js/index.js): its names, colours and widths.
+// The series as the TNFA site draws them (thenewforeignassistance.org, js/index.js): its names, colors and widths.
 const SERIES = [
   { key: 'Western offshoots', label: 'Western Offshoots', color: '#e07a4a', width: 2.8 },
   { key: 'Eastern Europe', label: 'Eastern Europe', color: '#7ec86a', width: 2.8 },
@@ -63,7 +63,7 @@ export async function mountLongView(host, { autoplay = false } = {}) {
     ends.push({ label: s.label, color: s.color, y: yUsd(pts[pts.length - 1][1]) });
   }
   g1.append(lines1);
-  // labels at the right edge in the line's colour; bottom-to-top, the lower label keeps its point and the one above moves up
+  // labels at the right edge in the line's color; bottom-to-top, the lower label keeps its point and the one above moves up
   ends.sort((a, b) => b.y - a.y);
   for (let i = 1; i < ends.length; i++) if (ends[i - 1].y - ends[i].y < 16) ends[i].y = ends[i - 1].y - 16;
   const labels1 = el('g', { 'clip-path': `url(#${clipId})` });

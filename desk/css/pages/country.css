@@ -38,7 +38,7 @@ main.bottom { --gutter: clamp(16px, 4vw, 60px); }
 .bl-list h2 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin: 0 0 4px; }
 .bl-stop h2::before, .bl-look h2::before, .bl-unclear h2::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 10px; vertical-align: 1px; }
 .bl-stop h2::before { background: var(--tier-probnot); }
-.bl-look h2::before { background: var(--brand-amber); }
+.bl-look h2::before { background: var(--tier-candidate); }
 .bl-unclear h2::before { border: 1px dashed var(--tier-cannot-hatch); }
 .bl-sub { margin: 0 0 8px; color: var(--muted); font-size: 0.875rem; }
 .bl-list ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px; }
@@ -66,10 +66,10 @@ main.bottom { --gutter: clamp(16px, 4vw, 60px); }
   border-bottom: 1px solid var(--rule-strong); }
 .k-cards-fold > .k-sec-head::-webkit-details-marker { display: none; }
 .k-sec-head h2 { margin: 0; font-size: 1.6rem; }
-.k-sec-head::after { content: 'Open'; margin-left: auto; font-family: var(--display); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8125rem; color: var(--accent);
-  border: 1px solid var(--accent); padding: 4px 12px; }
+.k-sec-head::after { content: 'Open'; margin-left: auto; font-family: var(--sans); font-weight: 500; font-size: 0.875rem; color: var(--control);
+  border: 1px solid var(--control); border-radius: var(--radius-control); padding: 3px 12px; }
 .k-cards-fold[open] > .k-sec-head::after { content: 'Close'; }
-.k-sec-head:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 4px; }
+.k-sec-head:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
 .k-sec-note { margin: 12px 0 14px; max-width: 70ch; }
 .k-card-h { font-family: var(--sans); font-size: 0.8125rem; font-weight: 600; margin: 8px 0 4px; color: var(--muted); }
 .k-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
@@ -103,5 +103,54 @@ main.bottom { --gutter: clamp(16px, 4vw, 60px); }
   .k-question { max-width: none; }
   .k-card-grid { grid-template-columns: 1fr; }
   .bl-why { white-space: normal; }
+}
+
+/* ---------- the country overview (interface PRD v0.3, 5B; the redesign flag puts .ov-on on the body) ----------
+   The answer block at the left, the tree as the map of the page at the right; both in the first screen at 1366 × 768 (B6). */
+@media (min-width: 1000px) { .ov-on .k-head { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; } }
+.ov-on .k-head { padding-block: 16px 6px; }
+.ov-ask { margin: 10px 0 4px; font-size: 0.9375rem; color: var(--muted); }
+.ov-on .k-question { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem); max-width: 18ch; margin-bottom: 14px; }
+/* B1: three counts in equal type, then the caveat line; none folds */
+.ov-counts { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 4px; }
+.ov-count { display: flex; align-items: baseline; gap: 10px; font-family: var(--serif); font-size: 1.1875rem; line-height: 1.3; }
+.ov-n { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; min-width: 1.4em; text-align: right; font-variant-numeric: lining-nums tabular-nums; }
+.ov-count::before { content: ''; flex: none; width: 10px; height: 10px; align-self: center; }
+.ov-look::before { background: var(--tier-candidate); }
+.ov-against::before { background: var(--tier-probnot); }
+.ov-unclear::before { background: var(--tier-cannot); border: 1px solid var(--tier-cannot-hatch); }
+.ov-answer { margin: 0 0 4px; }
+.ov-caveat { margin: 0 0 6px; font-size: 0.9375rem; color: var(--text); }
+.ov-transition { margin: 0; font-size: 0.9375rem; color: var(--muted); max-width: 60ch; }
+.ov-on #assume-host { margin: 0 0 4px; }
+
+/* B2, B3: the map of the tree, HTML boxes in branch columns; a box is its area's link and is square, like every rating */
+.ov-map-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 8px; }
+.ov-map-title { margin: 0; font-family: var(--mono); font-size: var(--fs-label); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.ovt { display: grid; gap: 10px; }
+.ovt-fork { display: flex; align-items: center; gap: 12px; }
+.ovt-fork .ovt-lab { margin: 0; }
+.ovt-branches { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px; }
+.ovt-branch { border-top: 1px solid var(--rule-strong); padding-top: 4px; min-width: 0; }
+.ovt-branch-lab { margin: 0 0 4px; font-family: var(--serif); font-size: 1rem; font-weight: 500; }
+.ovt-cols { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 10px; }
+.ovt-col { display: grid; gap: 5px; align-content: start; min-width: 0; }
+.ovt-lab { margin: 4px 0 0; font-family: var(--mono); font-size: 0.66rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.ovt-box { display: grid; gap: 1px; padding: 5px 8px 6px; text-decoration: none; border: 1px solid var(--rule-strong); min-width: 0; }
+.ovt-box:hover, .ovt-box:focus-visible { box-shadow: inset 0 0 0 2px var(--text); }
+.ovt-name { font-family: var(--sans); font-weight: 600; font-size: 0.875rem; line-height: 1.2; overflow-wrap: anywhere; justify-self: start; }
+.ovt-why { font-size: 0.75rem; line-height: 1.2; }
+/* text over the two textures sits on a patch of the plain gray, as in the badges */
+.ovt-box.t-cannot_tell_weak .ovt-name, .ovt-box.t-cannot_tell_conflicting .ovt-name, .ovt-box.t-cannot_tell_weak .ovt-why,
+.ovt-box.t-cannot_tell_conflicting .ovt-why { background: var(--tier-cannot); padding: 0 3px; justify-self: start; }
+.ovt-fork-box { background: var(--surface); color: var(--text); border-style: dashed; }
+.ovt-box.ov { outline: 2px dashed var(--text); outline-offset: 2px; }
+.ov-key { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; font-size: var(--fs-caption); color: var(--muted); }
+.ov-key-sub { color: var(--muted); }
+.ov-key-unclear { white-space: normal; }
+.ov-grid-sec { margin: 8px 0 18px; }
+@media (max-width: 700px) {
+  .ovt-branches { grid-template-columns: 1fr; }
+  .ovt-cols { grid-auto-flow: row; }
 }
 }

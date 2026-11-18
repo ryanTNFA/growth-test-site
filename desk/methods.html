@@ -25,6 +25,59 @@
     <p class="answer">Growth diagnostics, applied to public data for 217 economies, with every rule, number and document open.</p>
   </header>
 
+  <!-- Interface PRD v0.3, E2: Method opens with the three ratings and what each licenses, in the overview's colors (Methodology Note
+       sections 1.4 and 4.8). DRAFT copy for Ryan's edit (Night 2, 18 November). -->
+  <section class="panel" id="ratings" aria-labelledby="ratings-h">
+    <div class="panel-head"><div><span class="kicker">The three answers</span><h2 id="ratings-h">Three ratings, and what each one licenses</h2></div>
+      <p>Every area in every economy gets one of three ratings. Each is a first read of public data, not a finding, and none recommends funding.</p></div>
+    <ul class="mr-ratings">
+      <li class="mr-rating" data-rating="look">
+        <span class="mr-sw" aria-hidden="true"><span class="swatch t-candidate"></span><span class="swatch t-likely_binding"></span></span>
+        <div>
+          <h3>Worth a closer look</h3>
+          <p><strong>It says:</strong> the evidence leans toward this area holding private investment back here.</p>
+          <p><strong>It licenses:</strong> looking here first, with field work, microdata and the firms that live with it. It does not say the
+            area binds. The crimson, <em>likely a main constraint</em>, needs strong evidence on at least three tests and from at least five
+            independent sources, a high price among them, that holds across the comparison countries. It is still an instruction to look, not a
+            finding.</p>
+        </div>
+      </li>
+      <li class="mr-rating" data-rating="against">
+        <span class="mr-sw" aria-hidden="true"><span class="swatch t-probably_not"></span><span class="swatch t-ruled_out"></span></span>
+        <div>
+          <h3>The data argue against it</h3>
+          <p><strong>It says:</strong> the evidence leans against this area being what holds private investment back now.</p>
+          <p><strong>It licenses:</strong> asking a program aimed at this area what it knows that the public data do not. This is the tool’s
+            strongest use: it is licensed to say stop, not go. The lighter shade, <em>probably not</em>, has the same low bar as “worth a closer
+            look”, so on its own it should not close a debate or drop a program. The darker, <em>ruled out</em>, needs much more: a low price,
+            firms not working around it, five independent sources, three agreeing tests, recent evidence, and the same answer under every
+            comparison set. Even then it means not the main obstacle now, not that the area is fine.</p>
+        </div>
+      </li>
+      <li class="mr-rating" data-rating="unclear">
+        <span class="mr-sw" aria-hidden="true"><span class="swatch t-cannot_tell_weak"></span><span class="swatch t-cannot_tell_conflicting"></span><span class="swatch t-cannot_tell_data_gap"></span></span>
+        <div>
+          <h3>Unclear, in three kinds</h3>
+          <p><strong>It says:</strong> the public data cannot answer the question for this area here. It is not an average or a neutral score.</p>
+          <p><strong>It licenses:</strong> nothing either way. Each kind says what would settle it.</p>
+          <ul class="mr-kinds">
+            <li><span class="swatch t-cannot_tell_weak" aria-hidden="true"></span><strong>Evidence too weak.</strong> Evidence exists but points
+              nowhere clearly, or only one kind of evidence speaks. A second kind (a price, a response to change, or firms working around it)
+              would settle it.</li>
+            <li><span class="swatch t-cannot_tell_conflicting" aria-hidden="true"></span><strong>Conflicting.</strong> Some tests point one way
+              and some the other, which often means it binds for some sectors or regions and not others. Work on those sectors or regions
+              would settle it.</li>
+            <li><span class="swatch t-cannot_tell_data_gap" aria-hidden="true"></span><strong>Data gap.</strong> Too little usable, recent
+              evidence. A newer survey or data year would settle it, or a measure the tool does not connect yet.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <p class="small muted mr-names">In the Analyst View and in every export the ratings carry the engine’s five names: likely a main constraint,
+      worth a closer look, unclear (in its three kinds), probably not the main constraint, and ruled out. The rules behind each are in the
+      Methodology Note, section 4.8.</p>
+  </section>
+
   <section class="panel" id="about" aria-labelledby="about-h">
     <div class="panel-head"><div><span class="kicker">About this Beta</span><h2 id="about-h">What it is, and what it is not</h2></div></div>
     <div class="prose methods-prose">
@@ -38,7 +91,7 @@
     <div class="panel-head"><div><span class="kicker">The New Foreign Assistance’s view</span><h2 id="mcc-h">Why this way of choosing</h2></div></div>
     <div class="prose methods-prose">
       <p>Growth is the only proven way out of extreme poverty, and in any economy a few problems hold private investment back far more than the rest. Growth diagnostics is the discipline of finding those few before spending. Its authors put the case plainly: reforms are not free, governments cannot do everything at once, and a reform that leaves the binding constraint in place does little for growth however sound it is on its own (Hausmann, Rodrik and Velasco, “Growth Diagnostics”, 2005). Rodrik made the same point about the long reform lists of the 1990s: the same policy goals can be met by many institutional arrangements, so the question is what binds here, not what the list says (<em>One Economics, Many Recipes</em>, 2007).</p>
-      <p>The practical consequence for assistance is the one this site is built around. Programs that ignore what actually holds growth back in a country are unlikely to reduce poverty durably, whatever else they achieve. Choosing before spending means diagnosing first, with the government and the firms that live with the constraint, and measuring what the diagnosis could not settle. Published constraints analyses, among them those of the Millennium Challenge Corporation and the Harvard Growth Lab, show the method at full strength: months of fieldwork, microdata and judgement. Their experience also shows its limits: a diagnosis can drift toward what an agency can fund, and the link from diagnosis to the projects finally chosen has often been loose (Hausmann, Klinger and Wagner, “Doing Growth Diagnostics in Practice: A ‘Mindbook’”, 2008, on the practice; evaluations of the analyses on the drift).</p>
+      <p>The practical consequence for assistance is the one this site is built around. Programs that ignore what actually holds growth back in a country are unlikely to reduce poverty durably, whatever else they achieve. Choosing before spending means diagnosing first, with the government and the firms that live with the constraint, and measuring what the diagnosis could not settle. Published constraints analyses, among them those of the Millennium Challenge Corporation and the Harvard Growth Lab, show the method at full strength: months of fieldwork, microdata and judgment. Their experience also shows its limits: a diagnosis can drift toward what an agency can fund, and the link from diagnosis to the projects finally chosen has often been loose (Hausmann, Klinger and Wagner, “Doing Growth Diagnostics in Practice: A ‘Mindbook’”, 2008, on the practice; evaluations of the analyses on the drift).</p>
       <p>The Growth Test takes the first step, the diagnosis, and makes a quick, public first read of it available for any country. An automated read from public data is a large simplification of the full exercise. A diagnosis still needs people on the ground; the aim is that they start with sharper questions.</p>
       <p class="small muted">The New Foreign Assistance holds that sustained growth is the only proven cure for extreme poverty, that aid should strengthen the public goods that let private enterprise flourish, and that programs should end when their job is done. The ratings on this site follow the method and the data, not these views. <a href="https://thenewforeignassistance.org" target="_blank" rel="noopener">thenewforeignassistance.org</a></p>
     </div>
@@ -57,10 +110,95 @@
     </div>
   </section>
 
+  <!-- Interface PRD v0.3, E9 (a, b, e): the question the method rests on frames the four tests; benchmarking is a fifth way of looking,
+       which never counts; the product space is a lens, not a test. DRAFT copy for Ryan's edit (17 November). -->
+  <section class="panel" id="question" aria-labelledby="question-h">
+    <div class="panel-head"><div><span class="kicker">The question the tests ask</span>
+      <h2 id="question-h">If this were binding, now, in this country, what would we expect to see?</h2></div></div>
+    <div class="prose">
+      <p>Every area is examined the same way. Suppose it were what holds private investment back, now, in this economy: what would the public data
+        show? The four tests are four ways of looking, and the reading rests on the pattern they make together, never on one test alone.</p>
+      <ol class="mq-ways">
+        <li><strong>Is it expensive or rationed?</strong> The price of the constraint, or the queue for it.</li>
+        <li><strong>When it eases, does investment respond?</strong> Movement over time, not a level.</li>
+        <li><strong>Do firms pay to work around it?</strong> Generators, own wells, informal credit, private security.</li>
+        <li><strong>Do the activities that need it most do worst?</strong> Camels thrive where water is scarce; hippos do not.</li>
+        <li class="mq-fifth"><strong>Is it unusually weak for an economy like this?</strong> Benchmarking, a fifth way of looking, which never counts. It is
+          read two ways: against similar economies, as the grid's first column shows, and against the country's own other areas, since a poor
+          economy is behind on nearly everything; the grid ranks each area's gap within the country. A weak area is not, for that reason, a
+          binding one.</li>
+      </ol>
+      <p>The complexity approach, the product space, is a lens the self-discovery page shows, not a test the tool scores. The discovery gap drawn
+        from it is one measure among that area's evidence.</p>
+    </div>
+  </section>
+
+  <!-- Interface PRD v0.3, E5: each test in plain words, theta included (Methodology Note sections 1.3 and 3.6; the registry's classes
+       as of rubric 0.4.0). DRAFT copy for Ryan's edit (Night 2, 18 November). -->
+  <section class="panel" id="tests" aria-labelledby="tests-h">
+    <div class="panel-head"><div><span class="kicker">The four tests, one at a time</span><h2 id="tests-h">What each test reads, and what counts</h2></div>
+      <p>Every measure is first compared with what an economy at the same income would show, since almost everything improves as countries get
+        richer.</p></div>
+    <div class="prose methods-prose">
+      <section class="mt-test" id="test-price" aria-labelledby="test-price-h">
+        <h3 id="test-price-h">1. Is it expensive or rationed?</h3>
+        <p>If an area binds, its price is high, or firms cannot get it at the going price. The test reads prices and firms’ own experience of
+          rationing: the real lending rate, returns to schooling, outages in a typical month, loans refused, bribes asked for. Quantities, such
+          as credit to GDP or school enrollment, are shown and do not count, because a low quantity can mean low demand rather than scarcity.
+          This test counts double in the net score.</p>
+      </section>
+      <section class="mt-test" id="test-changes" aria-labelledby="test-changes-h">
+        <h3 id="test-changes-h">2. When it eases, does investment respond?</h3>
+        <p>If high interest rates hold investment back, investment should fall when rates rise and recover when they fall. The test reads
+          movement over time, not a level: whether the two have moved together over the last 20 years more often than chance would give.</p>
+      </section>
+      <section class="mt-test" id="test-workarounds" aria-labelledby="test-workarounds-h">
+        <h3 id="test-workarounds-h">3. Do firms pay to work around it?</h3>
+        <p>Firms that buy generators, finance investment from their own savings, hire private security or stay informal are paying to get around
+          a constraint. These count because they cost money and pay off only if the constraint binds. A quantity or a stated reason filed under
+          this test, such as firms saying they need no loan, is shown and does not count.</p>
+      </section>
+      <section class="mt-test" id="test-camels" aria-labelledby="test-camels-h">
+        <h3 id="test-camels-h">4. Do the activities that need it most do worst? Camels, hippos and θ</h3>
+        <p>In a desert the camels thrive and the hippos do not. If finance is scarce, an economy should export unusually little of what needs a
+          lot of finance, and its firms in finance-hungry sectors should grow more slowly.</p>
+        <p><strong>What θ asks.</strong> Does the economy’s export basket lean away from products that need the factor, compared with economies
+          at the same income? θ (theta) is that lean: one number per economy and factor, estimated across the products it exports. What all
+          economies share, and what rises or falls with income, is taken out first, so θ measures only what is unusual for an economy this
+          rich.</p>
+        <p><strong>How to read its sign.</strong> A negative θ means fewer factor-heavy products than income predicts: more camels, which points
+          toward the factor binding. A positive θ points away. A θ near zero says nothing either way. The hippo gap (γ, gamma) asks the presence
+          question instead: is the economy missing altogether from factor-heavy products? It is positive when it is, and absence has other
+          causes too: comparative advantage, market size, or that nobody has tried yet.</p>
+        <p><strong>Two checks, for two different risks.</strong></p>
+        <ul class="mt-checks">
+          <li><em>The shuffle test, on each trade measure.</em> The factor’s intensity values are reassigned at random among industries 99
+            times, which keeps the structure of trade and removes the economics. A measure counts only if its real tilts are steadier over five
+            years, and agree better across two ways of measuring exports, than 95 percent of the shuffled versions. It asks whether the measure
+            picks up the factor at all, or only the shape of trade.</li>
+          <li><em>The two-standard-error check, on each economy.</em> Where a measure counts, an economy’s θ moves its rating only if it lies
+            more than two standard errors from zero. It keeps a tilt that could be noise from moving a rating. A tilt that clears it scores by
+            where it falls among all economies, from +2 for the strongest tenth of camels to −2 for the strongest tenth the other way.</li>
+        </ul>
+        <p><strong>Which versions count today.</strong> Twelve firm-level versions, from the World Bank’s Enterprise Surveys, ask whether firms
+          in the sectors most exposed to a constraint grow more slowly; all twelve count, each having passed a power check that recovers a
+          planted tilt of known size. Of six export tilts from trade data, only skills counts, toward human capital. Finance, collateral-poor
+          products, contract intensity, transport time and electricity did not pass the shuffle test, so they are drawn on the area’s chart and
+          do not count. Planted-tilt checks suggest why: a tilt of realistic size is hard to recover from trade data. Of the hippo gaps, contract
+          intensity counts, toward property rights; the rest are shown only. Every area page says which of its tilts are shown only.</p>
+        <p class="small mt-credit"><strong>Borrowed:</strong> the test itself, from Hausmann, Klinger and Wagner’s Mindbook; its design, from
+          Rajan and Zingales (1998); the published intensity measures (Rajan and Zingales; Ciccone and Papaioannou; Nunn; Braun; Hummels and
+          Schaur; the US Bureau of Economic Analysis); the trade data, from the Harvard Growth Lab; and the firm surveys, from the World Bank.
+          <strong>Added by the tool:</strong> one tilt per economy and factor, measured against economies at the same income, with the shuffle
+          test on each measure and the two-standard-error check on each economy.</p>
+      </section>
+    </div>
+  </section>
+
   <section class="panel" id="ledger" aria-labelledby="ledger-h">
     <div class="panel-head"><div><span class="kicker">How a rating adds up</span><h2 id="ledger-h">From a measure’s gap to a rating, on one axis</h2></div><p>Indonesia’s electricity, read from its data file. The same figure sits in every area’s card.</p></div>
     <div class="prose methods-prose">
-      <p>Every measure is compared with what an economy at the same income would show, in standard deviations, and ranked among the comparison countries; the two readings become a signal from −2 to +2, binding to the right. Each test adds up its counted measures, thicker ones counting more; the four tests add up into the net score, the price test counting double; the net score is read against the lines. A quantity or an opinion is shown but not counted on the price and camels tests, because a low quantity can mean low demand rather than scarcity.</p>
+      <p>Every measure is compared with what an economy at the same income would show, in standard deviations, and ranked among the comparison countries; the two readings become a signal from −2 to +2, binding to the right. Each test adds up its counted measures, thicker ones counting more; the four tests add up into the net score, the price test counting double; the net score is read against the lines. A quantity or an opinion is shown only on the price and camels tests, because a low quantity can mean low demand rather than scarcity.</p>
     </div>
     <div id="ledger-host" class="methods-ledger"><p class="small muted">Loading Indonesia’s electricity…</p></div>
   </section>
@@ -68,6 +206,39 @@
   <!-- Ryan, 10 November 2026: where the numbers come from, by kind of institution, so no single institution decides the
        ratings. Each tile is the institution's name in text until logo use rights are cleared; a cleared logo goes in
        desk/img/sources/ and its file name in the tile's data-logo. -->
+  <!-- Interface PRD v0.3, E9 (d): the published critique of the method, answered point by point. DRAFT copy for Ryan's edit. -->
+  <section class="panel" id="limits" aria-labelledby="limits-h">
+    <div class="panel-head"><div><span class="kicker">Known limits</span><h2 id="limits-h">What the method cannot do, and what the tool does about it</h2></div>
+      <p>Felipe, Usui and Abdon (2011) set out the main criticisms of growth diagnostics from practice. Each, and the tool's answer:</p></div>
+    <ul class="mq-limits prose">
+      <li><strong>Price and non-price signals are hard to tell apart.</strong> A high price can signal scarcity, or a market that works. The tool
+        sorts every measure by what it reads (a price, a workaround, a quantity, an index), and on most tests only prices, rationing and costly
+        behavior count: the evidence classes.</li>
+      <li><strong>The branches of the tree are not independent.</strong> One problem can show in several areas. The tool asks for more than one kind
+        of evidence before it flags an area, and lets recent measures that are shown only open a closer look only when they agree and none
+        disagrees: the corroboration rule. An area with one kind of evidence says so.</li>
+      <li><strong>The method is static: it reads what binds today.</strong> So does the tool. Every measure carries its year, and every reading is a
+        first read of public data to a date, not a forecast.</li>
+      <li><strong>It was built more for starting growth than for keeping it going.</strong> The overview names the transition the reading is about,
+        from the growth record (getting out of a collapse, speeding up, keeping an acceleration going), and says that what binds one transition
+        need not bind another.</li>
+      <li><strong>It assumes that investment drives growth.</strong> The tool states that premise once, on the standard's page: a binding constraint
+        is one whose easing moves private investment and entrepreneurship, the margin on which growth speeds up.</li>
+    </ul>
+    <h3 class="src-h">The method's sources</h3>
+    <ul class="mq-sources small">
+      <li>Hausmann, R., D. Rodrik and A. Velasco, <a href="https://growthlab.hks.harvard.edu/publication/growth-diagnostics/" target="_blank" rel="noopener">“Growth Diagnostics”</a>,
+        Growth Lab Working Paper 3, Harvard Kennedy School, 2005; published in N. Serra and J. E. Stiglitz (eds), <em>The Washington Consensus
+        Reconsidered</em>, Oxford University Press, 2008, 324–355.</li>
+      <li>Hausmann, R., B. Klinger and R. Wagner, <a href="https://www.hks.harvard.edu/centers/cid/publications/faculty-working-papers/doing-growth-diagnostics-practice" target="_blank" rel="noopener">“Doing Growth Diagnostics in Practice: A ‘Mindbook’”</a>,
+        CID Working Paper 177, Harvard University, 2008.</li>
+      <li>Rodrik, D., <a href="https://doi.org/10.1257/jep.24.3.33" target="_blank" rel="noopener">“Diagnostics before Prescription”</a>, <em>Journal of Economic Perspectives</em> 24 (3), 2010,
+        33–44.</li>
+      <li>Felipe, J., N. Usui and A. Abdon, <a href="https://doi.org/10.1142/S1793993311000300" target="_blank" rel="noopener">“Rethinking the Growth Diagnostics Approach: Questions from the Practitioners”</a>,
+        <em>Journal of International Commerce, Economics and Policy</em> 2 (2), 2011, 251–276.</li>
+    </ul>
+  </section>
+
   <section class="panel" id="sources" aria-labelledby="sources-h">
     <div class="panel-head"><div><span class="kicker">Data providers</span><h2 id="sources-h">Where the numbers come from</h2></div><p>Every measure on the site links to its source. These are the institutions whose published data the tool reads, by kind.</p></div>
     <p class="src-disclaimer">None of these institutions is a partner of The New Foreign Assistance, and none has reviewed or endorsed The Growth Test. They are data providers only: the tool reads their published data and credits them, and the readings are the tool’s.</p>
@@ -90,7 +261,7 @@
       </ul>
     </div>
     <div class="src-group">
-      <h3 class="src-h">International organisations</h3>
+      <h3 class="src-h">International organizations</h3>
       <ul class="src-strip">
         <li class="src-tile" data-logo=""><a href="https://data.worldbank.org/" target="_blank" rel="noopener"><span class="src-name">World Bank</span><span class="src-what">Development Indicators, Enterprise Surveys, Business Ready</span></a></li>
         <li class="src-tile" data-logo=""><a href="https://data.imf.org/" target="_blank" rel="noopener"><span class="src-name">International Monetary Fund</span><span class="src-what">Rates, prices and financial soundness</span></a></li>

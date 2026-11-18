@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evidence · The Growth Test</title>
+<title>Explore the data · The Growth Test</title>
 <meta name="description" content="Income-trend scatter for any indicator: every economy against log GDP per capita, the fitted line, the country and its comparators.">
 <script>(function(){try{var t=localStorage.getItem('desk-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="preload" href="/growth-test-site/desk/fonts/newsreader-normal-400600.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,10 +21,10 @@
 <header class="topbar"></header>
 <main id="main" class="wrap ev" tabindex="-1">
   <header class="ev-head">
-    <span class="kicker">Evidence</span>
-    <h1 id="page-title" data-country-title>The evidence, node by node</h1>
-    <script>(function(){var i=(new URLSearchParams(location.search).get('iso')||'').toUpperCase();if(i){document.getElementById('page-title').textContent=i+': the evidence, node by node';document.title=i+' · '+document.title;}})();</script>
-    <p class="answer">Every piece of evidence behind each rating, chart by chart, with the comparison countries and the years it rests on.</p>
+    <span class="kicker">Explore the data</span>
+    <h1 id="page-title" data-country-title>Explore the data</h1>
+    <script>(function(){var i=(new URLSearchParams(location.search).get('iso')||'').toUpperCase();if(i){document.getElementById('page-title').textContent=i+': explore the data';document.title=i+' · '+document.title;}})();</script>
+    <p class="answer">Any indicator, against income and the comparison countries, and the economy’s growth record, exports and firms’ obstacles. Each area’s own evidence is on its page.</p>
     <gt-fold><details class="k-fold"><summary class="gt-fold-sum">How to use this view</summary><div class="gt-fold-body"><p class="ev-sub" id="page-sub">Pick a node on the left. Each node shows every piece of evidence the verdict layer weighed; pick any indicator to chart it against the income trend, its comparators and its own history.</p><p class="ev-sub small">This is the analyst view: the evidence behind each verdict, chart by chart. For the plain answer, see the <a href="/growth-test-site/desk/country.html" data-keep-iso>Bottom line</a>.</p></div></details></gt-fold>
     <p><button class="btn small" id="pack" type="button" title="One HTML file with every chart on this page, its readout and footnote; open it and print to PDF">Download chart pack</button>
       <button class="btn small" id="pins" type="button" hidden title="One HTML file with every chart you added with “+ Pack”, from any node or indicator, each with its own settings">Download my pack (<span id="pins-n">0</span>)</button>
@@ -76,7 +76,7 @@
       <thead><tr><th>Class</th><th>What it is</th><th>Examples</th><th class="num">Weight</th></tr></thead>
       <tbody>
         <tr><td><strong>A</strong></td><td>Prices, shadow prices and firms’ own experience of rationing</td><td>Real lending rate, returns to schooling, outages in a typical month, loan applications rejected, bribe requests</td><td class="num">1.0</td></tr>
-        <tr><td><strong>B</strong></td><td>Costly behaviour that only makes sense if the constraint binds (working around it), and the camels test</td><td>Generator ownership, self-financing of investment, dollarization, informality, paying for private security</td><td class="num">0.9</td></tr>
+        <tr><td><strong>B</strong></td><td>Costly behavior that only makes sense if the constraint binds (working around it), and the camels test</td><td>Generator ownership, self-financing of investment, dollarization, informality, paying for private security</td><td class="num">0.9</td></tr>
         <tr><td><strong>C</strong></td><td>Quantities, access measures, stated reasons and opinions, and experts’ estimates for a standard case</td><td>Credit to GDP, enrollment, remittances, obstacle rankings, Doing Business and B-READY time and cost</td><td class="num">0.6</td></tr>
         <tr><td><strong>D</strong></td><td>Composite indices</td><td>Heritage and World Justice Project scores, the Human Capital Index, the Logistics Performance Index</td><td class="num">0.3, never decisive</td></tr>
         <tr><td><strong>X</strong></td><td>Context, no vote</td><td>GDP per capita, nominal lending rate</td><td class="num">0</td></tr>
@@ -86,7 +86,7 @@
   </details>
 
   <div class="ev-layout">
-  <nav class="ev-rail" id="rail" aria-label="Evidence by node"></nav>
+  <nav class="ev-rail" id="rail" aria-label="The country views and the areas"></nav>
   <div class="ev-main">
   <div id="view-node">
   <section class="ev-section ev-nodeview" id="sec-node" aria-labelledby="h-node">
@@ -153,7 +153,7 @@
 
   <section class="ev-section ev-test" id="sec-c8" role="tabpanel" aria-labelledby="tab-c8" hidden>
     <span class="kicker"><span data-tmark="circumvention"></span>Test 3 · Circumvention</span>
-    <h2 class="ev-h2" id="h-c8">Bypass behaviour</h2>
+    <h2 class="ev-h2" id="h-c8">Bypass behavior</h2>
     <p class="ev-node-q">Are firms paying to work around the constraint?</p>
     <figure class="ev-figure">
       <div class="ev-chart" id="chart8" role="group" aria-labelledby="h-c8" aria-describedby="readout8"></div>

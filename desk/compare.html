@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare · The Growth Test</title>
+<meta name="description" content="Two to four economies you pick, area by area in the order of the decision tree: each area's rating in each, with its reason. Not a ranking of countries.">
+<script>(function(){try{var t=localStorage.getItem('desk-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="preload" href="/growth-test-site/desk/fonts/newsreader-normal-400600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/growth-test-site/desk/fonts/inter-normal-300700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/growth-test-site/desk/css/tokens.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/base.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/components.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/motion.css">
+<link rel="stylesheet" href="/growth-test-site/desk/css/pages/compare.css">
+</head>
+<body data-page="compare">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar"></header>
+<main id="main" class="wrap cmp" tabindex="-1">
+  <!-- Compare (interface PRD v0.3, D2): two to four economies the reader picks, as columns in the order picked; the areas as
+       rows in tree order; each cell one of the three ratings, unclear in its three kinds, with its reason on tap. No totals,
+       no score, no sort across economies: this is not a ranking of countries. It reads the snapshot's index only. -->
+  <header class="cmp-head">
+    <span class="kicker">Compare</span>
+    <h1>Compare economies, area by area</h1>
+    <p class="cmp-sub">Two to four economies you pick, as columns in the order you picked them; the areas as rows, in the order of the decision tree.
+      Each cell is that area's rating in that economy; tap it for the reason and the way to the area's page.</p>
+    <p class="cmp-not"><strong>This is not a ranking of countries.</strong> There are no totals, no scores and no sorting across economies.</p>
+  </header>
+  <p id="page-error" class="note alert" hidden></p>
+  <form class="cmp-pick" id="cmp-pick" role="search" aria-label="Add an economy to the comparison">
+    <label class="field"><span>Add an economy</span><input id="cmp-add" type="search" list="cmp-countries" placeholder="Name or ISO code" autocomplete="off"></label>
+    <datalist id="cmp-countries"></datalist>
+    <button class="btn small" type="submit">Add</button>
+    <span class="small muted" id="cmp-status" role="status"></span>
+  </form>
+  <div class="cmp-picked" id="cmp-picked" role="list" aria-label="The economies compared, in the order picked"></div>
+  <div class="table-wrap cmp-wrap" id="cmp-table"></div>
+  <div class="ov-key" id="cmp-key"></div>
+</main>
+
+<footer class="foot"></footer>
+<script type="module" src="/growth-test-site/desk/js/compare.mjs"></script>
+</body>
+</html>

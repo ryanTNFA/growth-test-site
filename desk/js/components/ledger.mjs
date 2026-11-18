@@ -2,12 +2,12 @@
 // The ledger: how a rating adds up, drawn on one axis (Ryan, 7 November 2026: "greater and more intuitive understanding of
 // the four tests and how the various data types contribute to ratings"). Every bar reaches a number the engine already
 // computed (anatomy.mjs); nothing is derived here but pixel positions. One axis for every level, -2 at the left, +2 at
-// the right, 0 in the middle, binding to the right in the chart's binding colour and away in ink: a measure's signal,
+// the right, 0 in the middle, binding to the right in the chart's binding color and away in ink: a measure's signal,
 // a test's score, the net score. Thicker counts more (the class weight after recency; the price test's double weight);
 // hollow is shown but not counted. The tier appears only as the existing chip. Plain h() elements, no SVG, no motion:
 // the ledger is a rating surface (motion.mjs refuses it). The full ledger lives in the Areas drawer and on the Methods
 // page; the tally (the four tests, the net score and the lines) beside the Bottom line's cards and the Analyst View's verdict.
-import { h, fmtSigned } from '../common.mjs';
+import { h, fmtSigned, englishList } from '../common.mjs';
 import { TEST_SHORT, bandWord } from '../anatomy.mjs';
 import { testMark } from './testmark.mjs';
 
@@ -126,7 +126,7 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
     'Each bar reaches a measure’s signal, −2 to +2. Most rest on two readings shown under the name: the gap from what income predicts, in ' +
     'standard deviations (sd), and the rank among the comparison countries; a changes bar rests on how often investment moved as predicted. ' +
     'Thicker counts more: class A (a price) thickest, then B (a workaround), C (a quantity), D (a composite index), and older data thinner. ' +
-    'Hollow bars are shown but not counted. A test’s score is the weighted average of its counted bars, pulled toward 0 when its evidence is ' +
+    'Hollow bars are shown only. A test’s score is the weighted average of its counted bars, pulled toward 0 when its evidence is ' +
     `thin; the price test counts double in the net score. ${thresholdWords(a)}`));
   return el;
 }
@@ -137,11 +137,12 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
 function testSection(a, t, fork, missing, why) {
   const head = `Test ${t.num} · ${TEST_SHORT[t.key]}${t.weight > 1 ? ` ×${t.weight}` : ''}`;
   const sec = h('section', { class: 'lg-test', 'data-test': t.key },
-    h('h4', { class: 'lg-th' }, testMark(t.key), h('span', { class: 'lg-tn' }, head), ' ', h('span', { class: 'lg-q' }, t.question)));
-  for (const f of t.voting) sec.append(famRow(f, fork));
+    h('h4', { class: 'lg-th' }, testMark(t.key), h('span', { class: 'lg-tn' }, head), ' ', h('span', { class: 'lg-q' }, t.question)),
+    restsOn(t));
+  for (const f of t.voting) sec.append(famRow(f, fork, false, t.key));
   if (t.informing.length) {
-    sec.append(h('div', { class: 'lg-subrule' }, `shown, not counted (${t.informing.length})`));
-    for (const f of t.informing) sec.append(famRow(f, fork, true));
+    sec.append(h('div', { class: 'lg-subrule' }, `shown only (${t.informing.length})`));
+    for (const f of t.informing) sec.append(famRow(f, fork, true, t.key));
   }
   const words = t.T == null ? h('span', { class: 'muted' }, noScore(t, missing))
     : h('span', {}, `T ${fmt2(t.T)}`, t.shrunk ? h('span', { class: 'lg-tag' }, ' · thin: pulled toward 0') : null,
@@ -152,12 +153,30 @@ function testSection(a, t, fork, missing, why) {
   if (reason) sec.append(h('p', { class: 'lg-why' }, reason));
   return sec;
 }
-/** One measure's row. @param {any} f @param {boolean} fork @param {boolean} [informs] */
-function famRow(f, fork, informs = false) {
-  const parts = [f.sd != null ? `${fmtSigned(f.sd, 1)} sd` : '', f.rankText || '', f.detail || '', f.members > 1 ? `1 of ${f.members} measures` : '']
+const lowerName = (s) => String(s).replace(/^[A-Z](?=[a-z])/, (c) => c.toLowerCase());
+/**
+ * Interface PRD v0.3, C8: each test's block opens with one line naming the measures that count in it for this area, then those
+ * shown only; a test with nothing that counts says so. A counted measure at zero says "reads 0" (G5).
+ * @param {any} t one test of ratingAnatomy()
+ */
+function restsOn(t) {
+  const parts = t.voting.length
+    ? [h('strong', {}, 'Counts: '), `${englishList(t.voting.map((f) => `${lowerName(f.name)}${f.signal === 0 ? ' (reads 0)' : ''}`))}.`]
+    : [h('strong', {}, 'Nothing counts in this test here.')];
+  if (t.informing.length) parts.push(' ', h('strong', {}, 'Shown only: '), `${englishList(t.informing.map((f) => lowerName(f.name)))}.`);
+  return h('p', { class: 'lg-rests' }, ...parts);
+}
+/** C10: why a counted measure reads zero, in words. @param {string} key the test */
+const zeroWhy = (key) => (key === 'camels' ? 'reads 0: inside the middle band, or too close to zero to tell from no tilt (two standard errors)'
+  : key === 'changes' ? 'reads 0: investment did not move clearly either way with it' : 'reads 0: inside the middle band');
+/** One measure's row. @param {any} f @param {boolean} fork @param {boolean} [informs] @param {string} [key] the test */
+function famRow(f, fork, informs = false, key = '') {
+  // L2 and G2: the standard deviations and the class letter are Analyst detail; Plain keeps the rank and the words
+  const parts = [f.rankText || '', f.detail || '', f.members > 1 ? `1 of ${f.members} measures` : '', !informs && f.signal === 0 ? zeroWhy(key) : '']
     .filter(Boolean);
-  const lab = h('span', {}, h('span', { class: 'lg-name' }, f.name), ' ', h('span', { class: 'lg-cls', title: `class ${f.cls}` }, f.cls),
-    parts.length ? h('span', { class: 'lg-sub' }, parts.join(' · ')) : null);
+  const sd = f.sd != null ? h('span', { class: 'an-only' }, `${fmtSigned(f.sd, 1)} sd${parts.length ? ' · ' : ''}`) : null;
+  const lab = h('span', {}, h('span', { class: 'lg-name' }, f.name), ' ', h('span', { class: 'lg-cls an-only', title: `class ${f.cls}` }, f.cls),
+    sd || parts.length ? h('span', { class: 'lg-sub' }, sd, parts.join(' · ')) : null);
   const sig = f.signal == null ? '—' : fmt1(f.signal);
   const w = f.weight.toFixed(Math.abs(f.weight * 10 - Math.round(f.weight * 10)) < 1e-9 ? 1 : 2);
   const val = informs ? h('span', { class: 'muted' }, `${sig} · ${f.year ?? ''}`)
@@ -172,7 +191,7 @@ function ruleWords(a, fork) {
   const agreeing = `${count(C, 'test agrees', 'tests agree')}, pointing`;
   if (t === 'candidate' && a.subreason === 'corroborated') {
     // rubric 0.4.0: flagged by recent measures that are shown but not counted; the net score and its lines did not decide this
-    return `the measures that count are missing, old or neutral, and ${word(a.corroboratedBy)} recent measures shown but not counted ` +
+    return `the measures that count are missing, old or neutral, and ${word(a.corroboratedBy)} recent measures shown only ` +
       `all point ${side[0]}, none against: a closer look on those, not on the net score`;
   }
   if (t === 'candidate') {

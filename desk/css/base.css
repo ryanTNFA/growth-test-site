@@ -37,7 +37,8 @@ small, .small { font-size: var(--fs-caption); }
 .mono { font-family: var(--mono); font-size: 0.8125em; }
 hr { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0; }
 code { font-family: var(--mono); font-size: 0.875em; }
-:focus-visible { outline: 2px solid var(--brand-amber); outline-offset: 2px; }
+/* the focus ring is ink, 2 px, offset, so it shows on an amber cell (interface PRD A2) */
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 6px 10px; border: 1px solid var(--rule-strong); z-index: 100; }
 .skip-link:focus { left: 8px; }
@@ -46,7 +47,7 @@ main[tabindex="-1"]:focus { outline: none; }
 /* Inside scrolling boxes an outside ring is clipped by the overflow: draw it inside instead. */
 .tree-wrap :focus-visible, .table-wrap :focus-visible, .fam-scroll :focus-visible, .editor .suggest li:focus-visible { outline-offset: -2px; }
 .editor .suggest li:focus-visible { background: var(--accent-soft); }
-/* Windows high contrast: keep the tier colours, which carry meaning, rather than flattening them to system colours. */
+/* Windows high contrast: keep the tier colors, which carry meaning, rather than flattening them to system colors. */
 @media (forced-colors: active) {
   .tier-badge, .tier-dot, .swatch, .chipstrip .chip, .sm-swatch { forced-color-adjust: none; }
 }
