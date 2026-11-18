@@ -489,6 +489,16 @@
       "reads": "hazard",
       "basis": "own"
     },
+    "ids_private_rate": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 2): the contract rate a government agreed with private foreign lenders on new loans and bonds, over the US 10-year yield, from the official debtor reporting system (World Bank IDS)"
+    },
+    "imf_credit": {
+      "reads": "behaviour",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 2): borrowing from the IMF, the lender of last resort, under its conditions, a costly step taken when private foreign finance is shut or too dear; recorded in the IMF's own accounts"
+    },
     "inflation": {
       "reads": "price",
       "basis": "own",

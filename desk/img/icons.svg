@@ -36,6 +36,7 @@
   <symbol id="area-N6" viewBox="0 0 24 24"><title>transport</title><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
   <symbol id="area-N7" viewBox="0 0 24 24"><title>other infrastructure</title><path d="M8 4.5c2.5 3 4 5.3 4 7.3a4 4 0 0 1-8 0c0-2 1.5-4.3 4-7.3z"/><path d="M15 9a5 5 0 0 1 5 5M15 5.5a8.5 8.5 0 0 1 7.5 8.5"/><circle cx="15.5" cy="14" r="0.8"/></symbol>
   <symbol id="area-N8" viewBox="0 0 24 24"><title>land</title><path d="M3 19 8 9l5 6 3-4 5 8z"/><path d="M15 3v6M15 3h4l-1.5 1.5L19 6h-4"/></symbol>
+  <symbol id="area-N9" viewBox="0 0 24 24"><title>geography</title><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></symbol>
   <symbol id="area-N10" viewBox="0 0 24 24"><title>macro risk</title><path d="M3 17l4-6 4 3 4-7 3 4 3-2"/><path d="M3 20.5h18"/></symbol>
   <symbol id="area-N11" viewBox="0 0 24 24"><title>micro risk</title><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
   <symbol id="area-N12" viewBox="0 0 24 24"><title>self-discovery</title><path d="M9 17.5h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1v1.5h5V16c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>

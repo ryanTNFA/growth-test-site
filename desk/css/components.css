@@ -336,6 +336,11 @@ table.data td .sub { display: block; font-size: 0.75rem; color: var(--muted); }
 }
 .tooltip.show { display: block; }
 .tooltip .tt-title { font-weight: 600; margin-bottom: 2px; }
+/* Plot's hover tip is a white box by default. Plot sets that outside the cascade layers, where a plain layered rule loses
+   to it, so the variable is forced here: on every page with a chart the tip is drawn with the page tokens, in light and dark. */
+svg[class*="plot-"] { --plot-background: var(--surface) !important; }
+svg g[aria-label="tip"] path { fill: var(--surface); stroke: var(--rule-strong); }
+svg g[aria-label="tip"] text, svg g[aria-label="tip"] tspan { fill: var(--text); }
 .tree-fallback ul { list-style: none; padding-left: 18px; }
 
 /* ---------- statements ---------- */
@@ -411,10 +416,13 @@ table.data td .sub { display: block; font-size: 0.75rem; color: var(--muted); }
 .fam-head .lb { border: 1px solid var(--accent); color: var(--accent); font-size: 0.7rem; padding: 0 5px; border-radius: var(--radius-tag); }
 .fam-scroll { overflow-x: auto; min-width: 0; max-width: 100%; }
 .ledger, .kv, .blockers, .reason { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
-.fam table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 0.78rem; }
+/* Headers wrap: unwrapped, the three long ones took the whole width and squeezed the indicator's name to one word a line. */
+.fam table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.78rem; }
 .fam td, .fam th { padding: 5px 8px; border-top: 1px solid var(--rule); text-align: left; vertical-align: top; }
-.fam th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 600; border-top: 0; white-space: nowrap; }
-.fam td.num, .fam th.num { text-align: right; white-space: nowrap; }
+.fam th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 600; border-top: 0; vertical-align: bottom; }
+.fam th:first-child, .fam td:first-child { min-width: 15rem; }
+.fam td.num, .fam th.num { text-align: right; }
+.fam td.num { white-space: nowrap; }
 .fam td .sub { display: block; font-size: 0.7rem; color: var(--muted); }
 .flag { display: inline-block; font-size: 0.72rem; border: 1px solid var(--rule-strong); padding: 0 5px; border-radius: var(--radius-tag); color: var(--muted); margin-left: 4px; white-space: nowrap; vertical-align: middle; }
 .flag.warn { border-color: var(--text); color: var(--text); }
@@ -655,6 +663,9 @@ button.robust[aria-expanded="true"]::after { content: ' ▴'; }
 .lg-net { border-top: 2px solid var(--text); margin-top: 14px; padding-top: 8px; font-weight: 600; }
 .lg-net .lg-val { font-weight: 400; }
 .lg-tag { font-weight: 400; color: var(--muted); }
+/* the ask for a data source beside an empty test: a link in ink (5A), not on paper */
+.lg-suggest { font: inherit; color: var(--text); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+@media print { .lg-suggest { display: none; } }
 .lg-tag.agrees { color: var(--text); }
 .lg-x { color: var(--muted); font-weight: 400; }
 .lg-chip { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 10px; font-size: 0.9375rem; }
@@ -880,6 +891,8 @@ details[open] > .gt-fold-sum::after { transform: rotate(-135deg); }
 .areas-menu-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; min-width: 14rem; }
 .areas-menu-list a { display: block; padding: 4px 10px; color: var(--text); text-decoration: none; border-radius: var(--radius-control); }
 .areas-menu-list a:hover { background: var(--control-soft); }
+/* micro risk's sub-areas sit under it, indented to its name (past the pictogram) and a step smaller */
+.areas-menu-list a.sub { padding: 2px 10px 2px 2.55rem; font-size: 0.875rem; }
 .assume-wrap { margin: 14px 0 0; }
 .assume { font-size: 0.875rem; color: var(--muted); }
 /* the line reads as text with a disclosure mark, so it wraps like a sentence on a narrow column */
@@ -991,6 +1004,14 @@ ul.sd-nearby { margin: 6px 0 8px; padding-left: 1.1em; display: grid; gap: 3px; 
 .ar-pos { order: 1; color: var(--muted); font-size: var(--fs-caption); }
 .ar-next { order: 2; }
 /* E9 a: the method's question frames the four tests */
+/* the note on an area with no rating (coordination, geography): the idea, what to ask, where to read more */
+.ar-note { margin: 16px 0 6px; padding: 16px 20px 18px; background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--text); }
+.ar-note h2 { margin: 2px 0 10px; font-size: 1.5rem; max-width: 34ch; }
+.ar-note h3 { margin: 18px 0 6px; font-size: 1.0625rem; }
+.ar-note-facts { margin: 0 0 12px; padding: 8px 12px; background: var(--surface-2); font-size: 0.9375rem; max-width: 46rem; }
+.ar-note-ask, .ar-note-read { margin: 0; padding-left: 1.2em; max-width: 46rem; display: grid; gap: 5px; }
+.ar-note-ask { font-family: var(--serif); font-size: 1.0625rem; line-height: 1.5; }
+.ar-note-read { font-size: 0.9375rem; }
 .ar-frame { margin: 14px 0 6px; padding: 12px 16px; background: var(--surface-2); border-left: 4px solid var(--text); max-width: 80ch; }
 .ar-ask { margin: 0 0 4px; font-family: var(--serif); font-size: 1.1875rem; line-height: 1.35; }
 .ar-frame-sub { margin: 0; font-size: 0.9375rem; color: var(--muted); }

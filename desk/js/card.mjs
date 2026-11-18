@@ -5,10 +5,10 @@ import { nodeCode, h, fmt, fmtSigned, fmtSignal, fmtValue, tierLabel, tierClass,
   subreasonLabel, TEST_ORDER, TEST_NUM, USER_TIERS, isStale, withData, TIER_ORD, englishList, isRegistryGap, DATA_GAP_KINDS, cannotTellCode, leanOf,
   CANNOT_TELL_PLAIN, ROBUST_PLAIN, robustDetail, currentHash, missingTestKind, MISSING_TEST_LABEL, FORK, forkWords, forkSideOf,
   } from './common.mjs';
-import { ratingAnatomy } from './anatomy.mjs';
+import { ratingAnatomy, TEST_SHORT } from './anatomy.mjs';
 import { ledger } from './components/ledger.mjs';
 import { robustChip, reasonTag } from './components/marks.mjs';
-import { ratingCheck, sendReadingButton } from './components/feedback.mjs';
+import { ratingCheck, sendReadingButton, openFeedback } from './components/feedback.mjs';
 export { robustChip, reasonTag }; // moved to components/marks.mjs (C7); re-exported for one release
 
 const FOCUSABLE = 'button, [href], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])';
@@ -233,7 +233,14 @@ export function createCard({ drawer, scrim = null, registry, getState, onOverrid
         setting: view.setting || 'standard', comovement: scorecard.comovement || [] });
       const chip = h('span', { class: `tier-badge ${tierClass(ev.tier)}` }, h('span', {}, plainTierOf(ev.id, ev.tier)));
       const lg = ledger(a, { fork: ev.id === FORK, chip, country, missing: (t) => MISSING_TEST_LABEL[missingTestKind(t, ev.id, registry)],
-        why: (t) => missingTestReason(t, ev.id, registry).replace(/^Not computed: /, '') });
+        why: (t) => missingTestReason(t, ev.id, registry).replace(/^Not computed: /, ''),
+        // an empty test is where a reader may know a source the tool lacks: the ask opens the feedback box, already about this area and test
+        suggest: (t) => h('button', { class: 'lg-suggest', type: 'button', onclick: () => openFeedback({ kind: 'note', title: 'Suggest a data source',
+          label: 'The source, and a link if you have one',
+          placeholder: 'A survey, an administrative series, a price database: anything public that covers this.',
+          fields: { area: ev.id, area_name: evReg ? evReg.short : ev.id },
+          note: `Data source for ${evReg ? evReg.short.toLowerCase() : ev.id}, test ${t.num} (${TEST_SHORT[t.key]}): ` }) },
+        'Know a data source that could fill it? Tell us.') });
       if (lg) {
         sec.append(lg); drawer.append(sec);
       }
@@ -245,7 +252,7 @@ export function createCard({ drawer, scrim = null, registry, getState, onOverrid
       const dir = ev.N != null && ev.N < 0 ? -1 : 1;
       const sec = h('section', {}, h('h3', {},
         ev !== node ? `Evidence for ${evReg ? evReg.short.toLowerCase() : ev.id}${ev === rep ? ', the sub-area that sets this rating' : ''}`
-          : 'Evidence by measure, with the other side given equal weight'));
+          : 'Evidence by measure'));
       const order = (list) => [...list.filter((f) => f.votes !== false), ...list.filter((f) => f.votes === false)];
       const pos = order(fams.filter((f) => f.signal * dir >= 0.5));
       const neg = order(fams.filter((f) => f.signal * dir <= -0.5));

@@ -15,6 +15,7 @@ import { createCard, plainTier, plainTierOf } from './card.mjs';
 import { loadCountryState, applySetting } from './countrystate.mjs';
 import { ratingChanged } from './motion.mjs';
 import { STRIP_AREAS } from './components/strip.mjs';
+import { areaNote } from './area_notes.mjs';
 
 const $ = (id) => document.getElementById(id);
 const iso = (qs('iso') || document.body.dataset.iso || 'KEN').toUpperCase();
@@ -42,13 +43,15 @@ async function main() {
   const title = $('page-title'); title.replaceChildren(pictogram(area) || '', area === 'N0' ? 'Costly finance, or low returns?' : name);
   title.removeAttribute('data-country-title');
   $('ar-q').textContent = reg.question || reg.label || '';
-  const at = STRIP_AREAS.indexOf(STRIP_AREAS.includes(area) ? area : String(reg.parent));
+  // the walk follows the tree: geography (context, not rated, so not on the strip) sits after land, where the tree has it
+  const WALK = STRIP_AREAS.flatMap((id) => (id === 'N8' ? [id, 'N9'] : [id]));
+  const at = WALK.indexOf(WALK.includes(area) ? area : String(reg.parent));
   const step = (i, rel) => {
-    const id = STRIP_AREAS[i]; if (!id) return h('span', {});
+    const id = WALK[i]; if (!id) return h('span', {});
     const r = R.nodeById[id];
     return h('a', { class: rel === 'prev' ? 'ar-step ar-prev' : 'ar-step ar-next', rel, href: areaHref(iso, id) }, rel === 'prev' ? '← ' : '', String(r ? r.short : id).replace(/\?$/, ''), rel === 'next' ? ' →' : '');
   };
-  $('ar-walk').replaceChildren(step(at - 1, 'prev'), h('span', { class: 'ar-pos' }, `${at + 1} of ${STRIP_AREAS.length} in tree order`), step(at + 1, 'next'));
+  $('ar-walk').replaceChildren(step(at - 1, 'prev'), h('span', { class: 'ar-pos' }, `${at + 1} of ${WALK.length} in tree order`), step(at + 1, 'next'));
 
   // L3: the assumptions line under the area's name
   const members = Array.isArray(state.peers) ? state.peers : ((sc.comparators[state.activeSet] || { members: [] }).members);
@@ -93,6 +96,9 @@ async function main() {
   window.addEventListener('desk-detail', applyDetail);
   if (state.lastRecompute) $('ar-plain').prepend(h('p', { class: 'note' }, state.lastRecompute));
 
+  // an area with no rating opens with the idea from the research; the frame for the four tests does not apply there
+  const note = areaNote(area, { country: sc.country });
+  if (note) { $('ar-note').replaceChildren(note); $('ar-note').hidden = false; $('ar-frame').hidden = true; }
   if (area === 'N0') $('ar-extra').append(topSplit(state));
   if (area === 'N12') mountSelfDiscovery();
   refreshNav();

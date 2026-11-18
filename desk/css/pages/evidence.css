@@ -78,11 +78,6 @@
 .ev-key li { margin: 2px 0; }
 #how-to-read { margin-bottom: 2px; }
 
-/* Plot's hover tip defaults to a white box; draw it with the page tokens so it reads in dark mode. */
-.ev-chart svg { --plot-background: var(--surface); }
-.ev-chart g[aria-label="tip"] path { stroke: var(--rule-strong); }
-.ev-chart g[aria-label="tip"] text, .ev-chart g[aria-label="tip"] tspan { fill: var(--text); }
-
 /* Indicator options whose data end before the window (disabled options are grayed by the browser). */
 .ev-controls option.ev-opt-old { color: var(--muted); }
 .ev-empty .btn { margin-left: 4px; }

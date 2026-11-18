@@ -110,16 +110,18 @@ export function tally(a, { fork = false, missing = () => 'no test', of = '' } = 
  * The full ledger: every measure under its test with its class, signal, weight and vote; the four test scores; the net
  * score against the lines; the tier chip with the rule that fired.
  * @param {any} a from ratingAnatomy()
- * @param {{fork?: boolean, chip?: HTMLElement | null, missing?: (key: string) => string, why?: (key: string) => string, country?: string}} [o]
- *   missing: the short words for a test with no score; why: the longer reason, drawn on its own line under the row
+ * @param {{fork?: boolean, chip?: HTMLElement | null, missing?: (key: string) => string, why?: (key: string) => string, country?: string,
+ *   suggest?: ((t: any) => HTMLElement | null) | null}} [o]
+ *   missing: the short words for a test with no score; why: the longer reason, drawn on its own line under the row;
+ *   suggest: the page's way to ask for a data source, drawn beside "Nothing counts in this test here" (Ryan, 18 November 2026)
  * @returns {HTMLElement | null}
  */
-export function ledger(a, { fork = false, chip = null, missing = () => 'no test defined', why = () => '', country = '' } = {}) {
+export function ledger(a, { fork = false, chip = null, missing = () => 'no test defined', why = () => '', country = '', suggest = null } = {}) {
   if (!a) return null;
   const label = `How the ${fork ? 'first decision' : 'rating'} adds up${country ? ` for ${country}` : ''}: ${tallyWords(a, fork)}`;
   const el = h('div', { class: `ledger${fork ? ' fork' : ''}`, role: 'figure', 'aria-label': label });
   el.append(axis(fork));
-  for (const t of a.tests) el.append(testSection(a, t, fork, missing, why));
+  for (const t of a.tests) el.append(testSection(a, t, fork, missing, why, suggest));
   el.append(row('lg-net', h('span', {}, 'Net score'), track(a.N, { thick: 12, fork, ticks: thresholdTicks(a) }), h('span', {}, netWords(a))));
   el.append(h('div', { class: 'lg-chip' }, chip, h('span', { class: 'lg-rule' }, ruleWords(a, fork))));
   el.append(h('p', { class: 'lg-key' },
@@ -134,12 +136,13 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
 /**
  * One test: its counted measures, the ones shown but not counted, its score.
  * @param {any} a @param {any} t @param {boolean} fork @param {(k: string) => string} missing @param {(k: string) => string} why
+ * @param {((t: any) => HTMLElement | null) | null} [suggest]
  */
-function testSection(a, t, fork, missing, why) {
+function testSection(a, t, fork, missing, why, suggest = null) {
   const head = `Test ${t.num} · ${TEST_SHORT[t.key]}${t.weight > 1 ? ` ×${t.weight}` : ''}`;
   const sec = h('section', { class: 'lg-test', 'data-test': t.key },
     h('h4', { class: 'lg-th' }, testMark(t.key), h('span', { class: 'lg-tn' }, head), ' ', h('span', { class: 'lg-q' }, t.question)),
-    restsOn(t));
+    restsOn(t, suggest));
   for (const f of t.voting) sec.append(famRow(f, fork, false, t.key));
   if (t.informing.length) {
     sec.append(h('div', { class: 'lg-subrule' }, `shown only (${t.informing.length})`));
@@ -158,12 +161,14 @@ const lowerName = (s) => String(s).replace(/^[A-Z](?=[a-z])/, (c) => c.toLowerCa
 /**
  * Interface PRD v0.3, C8: each test's block opens with one line naming the measures that count in it for this area, then those
  * shown only; a test with nothing that counts says so. A counted measure at zero says "reads 0" (G5).
- * @param {any} t one test of ratingAnatomy()
+ * An empty test is where a reader may know a source the tool lacks, so the page's ask for one sits right there.
+ * @param {any} t one test of ratingAnatomy() @param {((t: any) => HTMLElement | null) | null} [suggest]
  */
-function restsOn(t) {
+function restsOn(t, suggest = null) {
+  const ask = !t.voting.length && suggest ? suggest(t) : null;
   const parts = t.voting.length
     ? [h('strong', {}, 'Counts: '), `${englishList(t.voting.map((f) => `${lowerName(f.name)}${f.signal === 0 ? ' (reads 0)' : ''}`))}.`]
-    : [h('strong', {}, 'Nothing counts in this test here.')];
+    : [h('strong', {}, 'Nothing counts in this test here.'), ...(ask ? [' ', ask] : [])];
   if (t.informing.length) parts.push(' ', h('strong', {}, 'Shown only: '), `${englishList(t.informing.map((f) => lowerName(f.name)))}.`);
   return h('p', { class: 'lg-rests' }, ...parts);
 }

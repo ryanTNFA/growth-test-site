@@ -1,6 +1,6 @@
 {
   "_comment": "Constraint Check indicator registry v0.1.2 (prototype; changes from v0.1 and v0.1.1 in docs/CHANGELOG-rubric.md). Fields: id (source code), name, source (worldbank_wdi | worldbank_zip | weo | eci | derived | static), nodes (list of node ids or [] for context), test (price | changes | circumvention | camels | context), class (A|B|C|D|X where X = context, no signal), direction (+1 = higher value means MORE binding, -1 = higher value means LESS binding, 0 = context), transform (none | log1p | log | logit), family (evidence family id; signals within a family are deduplicated to one), slow (true if slow-moving stock: recency decay relaxed), years (first year to ingest), notes. Optional: source_code (World Bank API indicator code when it differs from the id) and source_id (World Bank source/database id) for the bulk-zip fetch; hidden_until_fixed (true = the engine treats the indicator as unavailable: not displayed, not counted); regime_sensitive (\"monetary\": downgraded to class C for economies in registry/static_monetary_regimes.json, v0.1.2); fallback_for (indicator id: this indicator carries no signal for an economy where that indicator is available in the window, v0.1.2); caveat (one sentence the Desk prints under the indicator).",
-  "rubric_version": "0.5.0",
+  "rubric_version": "0.5.1",
   "indicators": [
     {
       "id": "NY.GDP.PCAP.PP.KD",
@@ -5223,6 +5223,45 @@
       "notes": "How much the exchange rate against the US dollar moved month to month over three years (IMF ER): an official series of the price every importer, exporter and foreign-currency borrower faces. Higher = more macro instability = more likely binding. Pegs read near zero by construction, so it is not computed below 0.25 percent a month and informs under a hard peg.",
       "years": 2010,
       "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "intl_finance",
+      "nodes": [
+        "N1"
+      ],
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "IFN.PRIVATE_RATE_SPREAD",
+      "test": "price",
+      "family": "ids_private_rate",
+      "transform": "none",
+      "name": "Rate on new government borrowing from private lenders, over the US 10-year yield (points)",
+      "caveat": "Contract rate on new loans and bonds; countries that stop borrowing drop out.",
+      "notes": "What a government agreed to pay private foreign lenders on new loans and bonds (World Bank IDS), weighted by the amounts over five years, above the US 10-year Treasury yield. A price the borrower actually contracted, from the official debtor reporting system. Higher = foreign finance costlier = international finance more likely binding. Countries shut out of markets stop borrowing and drop out, so the worst cases can be missing rather than high; high-income economies do not report.",
+      "years": 1995,
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "intl_finance",
+      "nodes": [
+        "N1"
+      ],
+      "class": "B",
+      "direction": 1,
+      "slow": false,
+      "id": "IFN.IMF_CREDIT_QUOTA",
+      "test": "circumvention",
+      "family": "imf_credit",
+      "transform": "log1p",
+      "name": "Use of IMF credit (% of quota)",
+      "notes": "How much the government owes the IMF, as a share of its quota (IMF Fund accounts). Borrowing from the lender of last resort under its conditions is a costly step taken when private foreign finance is shut or too dear. Higher = more likely binding. The 2020 pandemic emergency loans and routine concessional loans to low-income countries also count; the comparison with economies at the same income absorbs part of that.",
+      "years": 1990,
+      "reads": "behaviour",
       "basis": "own"
     }
   ],

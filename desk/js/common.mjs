@@ -525,6 +525,7 @@ export const EXTRA_GROUPS = {
   oecd_cbcr: { label: 'OECD Corporate Tax Statistics, country-by-country reporting', url: 'https://data-explorer.oecd.org/' },
   transport: { label: 'World Bank WDI (balance of payments) and Logistics Performance Indicators 2.0', url: 'https://lpi.worldbank.org/' },
   imf_rates: { label: 'IMF (MFS interest rates, FSI, exchange rates)', url: 'https://data.imf.org' },
+  intl_finance: { label: 'World Bank International Debt Statistics; IMF Fund accounts', url: 'https://datacatalog.worldbank.org/' },
 };
 /** The source's web page for an indicator, or null. @param {any} ind @returns {string | null} */
 export function sourceLink(ind) {
@@ -596,8 +597,8 @@ export function missingTestReason(test, nodeId, registry) {
     ? 'In the "4 · Camels and hippos" tab under the strip: the firm-level version (from the Enterprise Surveys) counts where it passed its power check; the ' +
       'trade-based tilt and the presence version (the hippo gap) each vote only where they passed their gates, and are shown either way.'
     : 'Not computed: no intensity vector or survey sensitivity is connected for this area yet.';
-  if (test === 'changes') return specs.length ? 'Not computed: the co-movement specification for this node had too few year pairs.' : 'Not computed: rubric ' +
-    'v0.1 has no co-movement specification for this node.';
+  if (test === 'changes') return specs.length ? 'Not computed: the co-movement specification for this node had too few year pairs.'
+    : 'Not computed: no co-movement specification is defined for this area yet.';
   if (test === 'circumvention') return `Not computed: no circumvention family with usable data for this node${nb.length ? `; connectors not built: ` +
     `${nb.map((f) => `${f.family} (${f.source})`).join('; ')}` : ''}.`;
   return 'Not computed: no price family with usable data for this node.';

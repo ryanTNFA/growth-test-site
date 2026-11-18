@@ -133,14 +133,22 @@ function detailControl() {
 
 /** The twelve areas and the first decision, in tree order, for the Areas menu; names come from the registry when it arrives. */
 let areaNames = /** @type {Record<string, string>} */ ({});
+/** Micro risk's sub-areas, in the registry's order, and the names the menu shows until the registry arrives. */
+const MICRO_SUBS = ['N11.property', 'N11.corruption', 'N11.taxes', 'N11.regulation', 'N11.crime', 'N11.policy'];
+const MENU_NAMES = /** @type {Record<string, string>} */ ({ N9: 'Geography', 'N11.property': 'Property rights', 'N11.corruption': 'Corruption',
+  'N11.taxes': 'Taxes', 'N11.regulation': 'Regulation', 'N11.crime': 'Crime', 'N11.policy': 'Policy uncertainty' });
 /** L4, row 2: the country's name with its switcher, Overview, and Areas (a menu of the twelve). Compare joins at step 5. */
 function row2v3(iso) {
   const ov = h('a', { class: 'tab', 'data-tab': 'bottom', href: tabHref('/growth-test-site/desk/country.html', iso), 'aria-current': PAGE === 'bottom' ? 'page' : null },
     'Overview');
   ov.addEventListener('click', () => { ov.href = tabHref('/growth-test-site/desk/country.html', currentIso() || iso); });
   const list = h('ul', { class: 'areas-menu-list' });
-  const fill = () => list.replaceChildren(...STRIP_AREAS.map((id) => h('li', {}, h('a', { href: areaHref(currentIso() || iso, id) },
-    pictogram(id) || '', areaNames[id] || id))));
+  // Ryan, 18 November 2026: micro risk's six sub-areas are each one tap away, listed under it; geography (context, not rated) has
+  // its page too, after land, where the tree has it
+  const item = (id, sub = false) => h('li', {}, h('a', { class: sub ? 'sub' : null, href: areaHref(currentIso() || iso, id) },
+    sub ? '' : pictogram(id) || '', areaNames[id] || MENU_NAMES[id] || id));
+  const fill = () => list.replaceChildren(...STRIP_AREAS.flatMap((id) => [item(id),
+    ...(id === 'N8' ? [item('N9')] : id === 'N11' ? MICRO_SUBS.map((s) => item(s, true)) : [])]));
   fill();
   const menu = h('details', { class: 'nav-menu areas-menu' }, h('summary', { 'aria-current': PAGE === 'area' ? 'page' : null }, 'Areas'),
     h('div', { class: 'nav-menu-body' }, list));

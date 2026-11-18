@@ -137,8 +137,10 @@ const SENT = 'Sent. Thank you: someone at The New Foreign Assistance reads every
 
 /**
  * Open the feedback box. `opts.kind` is 'note' by default; `opts.fields` carries what the caller already knows (the area,
- * the tool's rating, the reader's answer or rating); `opts.note` pre-fills the text.
- * @param {{kind?: string, fields?: Record<string, any>, note?: string}} [opts]
+ * the tool's rating, the reader's answer or rating); `opts.note` pre-fills the text. `opts.title`, `opts.label` and
+ * `opts.placeholder` reword the box for a caller with a narrower question (a data source for an empty test); the message
+ * and its fields are the same.
+ * @param {{kind?: string, fields?: Record<string, any>, note?: string, title?: string, label?: string, placeholder?: string}} [opts]
  */
 export function openFeedback(opts = {}) {
   const kind = opts.kind || 'note';
@@ -152,7 +154,7 @@ export function openFeedback(opts = {}) {
   const shut = () => { if (dialog.open) dialog.close(); dialog.remove(); };
 
   const note = h('textarea', { id: 'fb-note', rows: '5', maxlength: String(MAX_NOTE),
-    placeholder: 'What did you expect, and what did you see instead?' }, opts.note || '');
+    placeholder: opts.placeholder || 'What did you expect, and what did you see instead?' }, opts.note || '');
   const email = h('input', { id: 'fb-email', type: 'email', autocomplete: 'email', placeholder: 'you@example.org' });
   const trap = h('input', { class: 'fb-trap', type: 'text', name: 'website', tabindex: '-1', autocomplete: 'off', 'aria-hidden': 'true' });
   const status = h('p', { class: 'fb-status small', role: 'status', 'aria-live': 'polite' });
@@ -194,10 +196,10 @@ export function openFeedback(opts = {}) {
     status.replaceChildren(r.reason === 'not_connected' ? 'The feedback box is not connected yet. ' : 'That did not send. ',
       h('a', { href: mailtoHref(payload) }, 'Send it as an email instead'), shot ? ' (attach the screenshot yourself).' : '.');
   } },
-  h('h2', { id: 'fb-title' }, TITLES[kind] || TITLES.note),
+  h('h2', { id: 'fb-title' }, opts.title || TITLES[kind] || TITLES.note),
   about ? h('p', { class: 'fb-about small' }, 'About: ', h('strong', {}, about)) : null,
   fields.answer ? h('p', { class: 'small' }, 'Your answer: ', h('strong', {}, (ANSWERS.find((a) => a[0] === fields.answer) || [])[1] || fields.answer)) : null,
-  h('label', { for: 'fb-note' }, kind === 'note' ? 'Your note' : 'A sentence on why (optional)'), note,
+  h('label', { for: 'fb-note' }, opts.label || (kind === 'note' ? 'Your note' : 'A sentence on why (optional)')), note,
   h('div', { class: 'fb-row' }, capture, h('label', { class: 'btn quiet small', for: 'fb-file' }, 'Attach an image'), file,
     h('span', { class: 'small muted' }, 'or paste one here')),
   preview,
