@@ -109,7 +109,7 @@ Counts per source are from `registry/indicators.json` (classes) and `data/snapsh
 | Derived (computed by the engine) | 8 | A 3, B 2, X 3 | n/a | n/a | n/a | n/a | n/a |
 | Static (`STATIC.LANDLOCKED`) | 1 | X 1 | n/a | n/a | n/a | `registry/static_landlocked.json` | n/a |
 
-Per-indicator coverage (`n_obs`, `n_countries`, `first_year`, `latest_year`) and per-source retrieval details are in `data/snapshot/meta.json`; the generated codebook (PRD section 17, D3) will publish them per series.
+Per-indicator coverage (`n_obs`, `n_countries`, `first_year`, `latest_year`) and per-source retrieval details are in `data/snapshot/meta.json`; the generated codebook will publish them per series.
 
 Static lists that change indicator classes or comparator pools:
 
@@ -551,11 +551,11 @@ No result on external validity exists. The thresholds are uncalibrated.
 | 3. Expert panel | Arms A0–A5 on the same vintage packs (published report, junior economist with and without the tool, the tool alone, senior diagnostician with equal and with unconstrained information); blinded pairwise judgments and red-team error counts; inter-expert agreement as the ceiling | Tool not statistically worse than inter-expert agreement; the junior-with-Workbook arm not worse than the senior arm on tier agreement | | Workbook 8.4–8.6 |
 | Ex-post outcomes | For references at least seven years old, whether named constraints were relaxed and investment responded | reported with caveats | | Workbook 8.9 |
 | Calibration property | Contradiction rate by tier must fall monotonically from probably not to ruled out | required | | Workbook 8.6 |
-| Test 4 re-entry | Real vector must beat the 95th percentile of about 99 industry-permuted placebos on five-year stability and on the export-share comparison; joint estimation of the finance and schooling tilts; RCA within the products a vector covers, "not estimable" below about 50 covered products; signal zero when \|θ\| < 2 clustered standard errors; the Workbook 4.7 percentile rule or a documented deviation | all five | the placebo criterion fails | Done in rubric 0.1.6: schooling passed and votes; finance and transport failed and are display only. Changelog; PRD §18 E5 |
-| Replication | An outside economist rebuilds the published numbers for three economies from the replication package on a clean machine without asking a question | rebuilt | | PRD §17.3 |
-| Plain language | Five non-economists answer the D2 comprehension check | four of five correct | | PRD §17.1 D2 |
+| Test 4 re-entry | Real vector must beat the 95th percentile of about 99 industry-permuted placebos on five-year stability and on the export-share comparison; joint estimation of the finance and schooling tilts; RCA within the products a vector covers, "not estimable" below about 50 covered products; signal zero when \|θ\| < 2 clustered standard errors; the Workbook 4.7 percentile rule or a documented deviation | all five | the placebo criterion fails | Done in rubric 0.1.6: schooling passed and votes; finance and transport failed and are display only. Changelog |
+| Replication | An outside economist rebuilds the published numbers for three economies from the replication package on a clean machine without asking a question | rebuilt | | release criteria |
+| Plain language | Five non-economists answer the D2 comprehension check | four of five correct | | release criteria |
 
-Every failed kill criterion will be published, not dropped (PRD §17.2).
+Every failed kill criterion will be published, not dropped.
 
 ---
 
@@ -636,7 +636,7 @@ These do not change any number but would mislead a reader:
 
 The bootstrap seed hashes the rubric version, so rank-stability draws change with every rubric version by construction.
 
-This note is v0.1. It will stay v0.x until the validation in section 6.2 is run, and becomes v1.0 after the external methods review required by PRD §17.2. Releases with a DOI, a `CITATION.cff` file and permanent URLs are planned (PRD §17.1, D5) but do not exist yet; there is no tagged release to cite.
+This note is v0.1. It will stay v0.x until the validation in section 6.2 is run, and becomes v1.0 after the external methods review required before release. Releases with a DOI, a `CITATION.cff` file and permanent URLs are planned but do not exist yet; there is no tagged release to cite.
 
 **Suggested citation until a release exists:**
 
@@ -644,7 +644,7 @@ This note is v0.1. It will stay v0.x until the validation in section 6.2 is run,
 
 When citing a number, give the economy, node, tier, the indicator and its reference years, and the three versions, for example: "The Growth Test (rubric 0.1.6, engine 0.1.4, snapshot 2026-10-24), Kenya, N11.corruption: candidate; bribery incidence 33 percent of firms (Enterprise Survey 2025), ICR t = 3.6."
 
-**Reproducing a number.** `python ingest/fetch_snapshot.py --offline` rebuilds the snapshot from the raw cache; `node engine/cli.mjs --snapshot data/snapshot --registry registry --out out --desk desk/data` rebuilds every Scorecard; `node --test engine/test` and `python -I -m unittest discover -s tests` run the tests. The replication package with a raw-file manifest and expected hashes (PRD §17.1, D6) is not yet built.
+**Reproducing a number.** `python ingest/fetch_snapshot.py --offline` rebuilds the snapshot from the raw cache; `node engine/cli.mjs --snapshot data/snapshot --registry registry --out out --desk desk/data` rebuilds every Scorecard; `node --test engine/test` and `python -I -m unittest discover -s tests` run the tests. The replication package with a raw-file manifest and expected hashes is not yet built.
 
 ---
 

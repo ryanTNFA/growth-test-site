@@ -3,7 +3,7 @@
 // few links out.
 //
 // Google Analytics: one loader, the tool's own (J2). It sends to TNFA's GA4 property (J1) and runs ONLY when the page is served
-// from growthtest.thenewforeignassistance.org AND the reader has pressed Accept on the consent banner (Ryan, 18 November 2026:
+// from growthtest.thenewforeignassistance.org AND the reader has pressed Accept on the consent banner (18 November 2026:
 // "a standard consent banner"). Until then nothing is fetched from Google and no cookie is set. A local copy, the replication
 // package, GitHub's own address, a preview and the tests send nothing and show no banner. It also stays off, without asking, for
 // an automated browser, for a browser that sends Global Privacy Control or Do Not Track, and for anyone who opened a page once
@@ -81,14 +81,14 @@ export function eventParams(name, params = {}) {
   return out;
 }
 
-// ---------- links out that name us (Ryan, 18 November 2026) ----------
+// ---------- links out that name us (18 November 2026) ----------
 /** The host of an absolute web address, lower case, or '' for anything else. @param {string} href */
 const hostOf = (href) => { const m = /^https?:\/\/([^/?#:]+)/i.exec(String(href)); return m ? m[1].toLowerCase() : ''; };
 /** Partners whose own analytics should see where a reader came from, beyond the Method page's data-provider tiles. */
 export const UTM_PARTNER_HOSTS = ['growthlab.hks.harvard.edu', 'atlas.hks.harvard.edu', 'www.cgdev.org'];
 /**
  * A link out, labeled with where it came from. A data provider's tile and the partners above are labeled. A link to TNFA's
- * own site is never labeled (Ryan, 18 November 2026): the tool and the site share one analytics property, where a label on a
+ * own site is never labeled (18 November 2026): the tool and the site share one analytics property, where a label on a
  * link between them would overwrite how the reader first arrived, and a label kept "for now" is one nobody remembers to
  * remove. The outbound_tnfa event counts those clicks instead. Every other link (a study's DOI, an indicator's source) is
  * left exactly as it is.

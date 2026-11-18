@@ -231,7 +231,7 @@ export function camelsSignal(ctx, ind, iso3, r) {
 }
 
 /**
- * The camel ruler (Ryan, 9 November 2026: show what counts as a camel): for every indicator scored by the workbook 4.7
+ * The camel ruler (9 November 2026: show what counts as a camel): for every indicator scored by the workbook 4.7
  * percentile rule, every economy's reference theta ranked as camelsSignal ranks it, its band, the latest-year theta and
  * SE the 2-SE gate reads, and the signal camelsSignal gives (computed for class X indicators too, as a "would score";
  * the Desk says those are not counted). edges are the band boundaries in theta units, each midway between the last

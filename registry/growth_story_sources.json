@@ -1,5 +1,5 @@
 {
-  "_comment": "Where the annual growth story may look, and how recent its sources must be (Ryan, 9 November 2026: no story resting on two old reports; UN sources as the fallback for small economies; data only as the last resort). Tier 2 is searched only when tier 1 gives fewer than min_recent_sources recent sources; with fewer across both, no AI story is written (tier 3) and the page shows the pattern, the eras and the level line from the data. A domain covers its subdomains. synth/check_sources.py enforces every rule here in code.",
+  "_comment": "Where the annual growth story may look, and how recent its sources must be (9 November 2026: no story resting on two old reports; UN sources as the fallback for small economies; data only as the last resort). Tier 2 is searched only when tier 1 gives fewer than min_recent_sources recent sources; with fewer across both, no AI story is written (tier 3) and the page shows the pattern, the eras and the level line from the data. A domain covers its subdomains. synth/check_sources.py enforces every rule here in code.",
   "recent_years": 3,
   "since_last_year_months": 18,
   "min_recent_sources": 2,

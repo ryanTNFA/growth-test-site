@@ -223,7 +223,7 @@ html:has(.ev-toolbar) { scroll-padding-top: calc(var(--tb-h, 84px) + 12px); }
 }
 }
 
-/* test 4's camel ruler (Ryan, 9 November 2026): the answer above the products behind it */
+/* test 4's camel ruler (9 November 2026): the answer above the products behind it */
 .cr-host { margin: 0; }
 .cr-list { display: grid; gap: 14px; margin: 0 0 14px; }
 .cr { border-top: 1px solid var(--rule); padding-top: 8px; }

@@ -202,7 +202,7 @@ export function createCard({ drawer, scrim = null, registry, getState, onOverrid
 
     // N11 roll-up: sub-nodes
     if (node.sub_nodes) {
-      // each sub-area is a row to pick: its own four tests and measures show below, in this card (Ryan, 15 November 2026)
+      // each sub-area is a row to pick: its own four tests and measures show below, in this card (15 November 2026)
       const sec = h('section', { class: 'subareas' }, h('h3', {}, 'Sub-areas'), h('p', { class: 'small muted', style: 'margin:0 0 8px' },
         'The rating above takes the most worrying sub-area; among the unclear ones, conflicting before weak before data gap. ' +
           'Pick any sub-area to see its own tests and measures below.'));

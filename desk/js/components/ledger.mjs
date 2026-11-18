@@ -1,5 +1,5 @@
 // @ts-check
-// The ledger: how a rating adds up, drawn on one axis (Ryan, 7 November 2026: "greater and more intuitive understanding of
+// The ledger: how a rating adds up, drawn on one axis (7 November 2026: "greater and more intuitive understanding of
 // the four tests and how the various data types contribute to ratings"). Every bar reaches a number the engine already
 // computed (anatomy.mjs); nothing is derived here but pixel positions. One axis for every level, -2 at the left, +2 at
 // the right, 0 in the middle, binding to the right in the chart's binding color and away in ink: a measure's signal,
@@ -113,7 +113,7 @@ export function tally(a, { fork = false, missing = () => 'no test', of = '' } = 
  * @param {{fork?: boolean, chip?: HTMLElement | null, missing?: (key: string) => string, why?: (key: string) => string, country?: string,
  *   suggest?: ((t: any) => HTMLElement | null) | null}} [o]
  *   missing: the short words for a test with no score; why: the longer reason, drawn on its own line under the row;
- *   suggest: the page's way to ask for a data source, drawn beside "Nothing counts in this test here" (Ryan, 18 November 2026)
+ *   suggest: the page's way to ask for a data source, drawn beside "Nothing counts in this test here" (18 November 2026)
  * @returns {HTMLElement | null}
  */
 export function ledger(a, { fork = false, chip = null, missing = () => 'no test defined', why = () => '', country = '', suggest = null } = {}) {

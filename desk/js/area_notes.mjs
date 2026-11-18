@@ -1,7 +1,7 @@
 // @ts-check
 // Two areas carry no rating: coordination (it needs sector work) and geography (context, not a removable constraint). Their
 // pages were a shell: a chip and one sentence. Each now opens with the idea from the research, why the tool gives no rating,
-// what to ask in the country, and where to read more (Ryan, 18 November 2026). This is the tool's voice: it describes an idea
+// what to ask in the country, and where to read more (18 November 2026). This is the tool's voice: it describes an idea
 // and the debate around it and recommends nothing. Coordination is written with care. The research that names the problem is
 // also wary of governments choosing sectors, and the page says both; nothing here reads as "pick the national sectors".
 // Every study in a reading list was checked against its publisher's or Crossref's record before it was listed, and each note

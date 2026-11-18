@@ -319,7 +319,7 @@ export function drawBypass(host, ctx) {
 }
 
 // ---------- the camel ruler (test 4: what counts as a camel) ----------
-// Ryan, 9 November 2026: the scatter "doesn't really tell me the story quickly"; show what our threshold is for a camel,
+// 9 November 2026: the scatter "doesn't really tell me the story quickly"; show what our threshold is for a camel,
 // for every place the test is used. Every number comes from the engine's ruler file (engine/src/scorecard.mjs
 // camelRulers, desk/data/ruler/{id}.json): each economy's average tilt ranked as the rating ranks it, the band edges in
 // theta units, and the latest-year tilt and standard error the 2-SE check reads. Nothing is recomputed here.
@@ -427,7 +427,7 @@ export function rulerSvg(ruler, r, { name, iso, width, pal, votes, nameOf }) {
   add('rect', { x: L, y: A0, width: W - L - R, height: AH, fill: 'none', stroke: pal.other, 'stroke-opacity': 0.5 });
   for (const v of refs) add('line', { x1: X(v), x2: X(v), y1: A0 + 5, y2: A0 + AH - 5, stroke: pal.text, 'stroke-opacity': 0.3 });
   add('line', { x1: X(0), x2: X(0), y1: A0 - 2, y2: B + 14, stroke: pal.text, 'stroke-opacity': 0.5, 'stroke-dasharray': '2 3' });
-  // the economy, and the most camel-like and most hippo-like economies at the ends (Ryan's #1 and #n)
+  // the economy, and the most camel-like and most hippo-like economies at the ends (ranks #1 and #n)
   add('circle', { cx: X(r.value_ref), cy: A0 + AH / 2, r: 6.5, fill: pal.focus, stroke: pal.surface, 'stroke-width': 2 });
   const lab = `${narrow ? iso : name}, ${ordinalN(r.rank)}`, lw = lab.length * 6.6;
   add('text', { x: Math.min(W - R - lw / 2, Math.max(L + lw / 2, X(r.value_ref))), y: A0 + AH + 15, 'text-anchor': 'middle', 'font-size': 11.5, 'font-weight': 600, fill: pal.focusInk }, lab);
@@ -470,7 +470,7 @@ export function drawCamels(host, ctx) {
   const { P, pal, width: w0, countryName, panels, iso, nameOf } = ctx;
   host.replaceChildren();
   const width = Math.max(320, w0);
-  // the answer first: one ruler per factor, then the products behind it (Ryan, 9 November 2026)
+  // the answer first: one ruler per factor, then the products behind it (9 November 2026)
   const rulerBlocks = [];
   for (const pn of panels) {
     const r = rulerRow(pn.ruler, iso);

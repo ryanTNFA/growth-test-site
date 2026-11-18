@@ -22,7 +22,7 @@ export const TIER_ORD = { ruled_out: -2, probably_not: -1, cannot_tell_data_gap:
  * The first decision (N0) is the fork at the root of the tree, not an area: its four tests are the finance tests, so its
  * score is the finance side's. A positive score says credit is dear or rationed (the finance branch); a negative one says
  * finance is cheap and available, which is the low-returns branch. Its tier is therefore a direction, never a constraint
- * rating (both sides are constraints), and every page words it with FORK_WORDS (Ryan, 6 November 2026).
+ * rating (both sides are constraints), and every page words it with FORK_WORDS (6 November 2026).
  */
 export const FORK = 'N0';
 export const FORK_WORDS = {
@@ -186,7 +186,7 @@ export const TEST_NUM = { price: 1, changes: 2, circumvention: 3, camels: 4 };
 
 /**
  * The redesign flag (interface PRD v0.3, Part 11, step 2): the country overview, the assumptions line and the new bar. It is on
- * everywhere, the published site included (Ryan, 18 November: the live site is republished with the redesign), until step 6
+ * everywhere, the published site included (18 November: the live site is republished with the redesign), until step 6
  * removes it. `?redesign=off` or `?redesign=on` sets it for this browser (kept in storage), so the old pages can still be seen.
  * @returns {boolean}
  */

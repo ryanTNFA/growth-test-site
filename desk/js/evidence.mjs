@@ -123,7 +123,7 @@ function indText(i, also = []) {
 }
 
 // Chrome draws a native select's list as wide as its longest option; a 200-character option pushed the list past the
-// window's edge, shifted it left and cut it off (Ryan, 9 November 2026). The visible text is capped; the full text is the
+// window's edge, shifted it left and cut it off (9 November 2026). The visible text is capped; the full text is the
 // option's title and stays in the "Find an indicator" box.
 const OPT_MAX = 96;
 const capOpt = (s, room) => (s.length > room ? `${s.slice(0, room - 1)}…` : s);

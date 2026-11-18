@@ -130,7 +130,7 @@ main.story { --accent: var(--amber); --accent-hover: var(--amber-hover); --accen
 @media (max-width: 900px) { .gt-entries { grid-template-columns: 1fr; } }
 .gt-sources { max-width: 80ch; }
 
-/* ---------- TNFA's devices on the scroll (the design system's Motifs and Typography; Ryan, 18 November 2026) ---------- */
+/* ---------- TNFA's devices on the scroll (the design system's Motifs and Typography; 18 November 2026) ---------- */
 .beat { position: relative; }
 /* warm bands separate sections, not boxes: beats 3 and 5 sit on the warm neutral, at full width */
 .beat-band { background: var(--surface-2); }

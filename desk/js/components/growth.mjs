@@ -1,5 +1,5 @@
 // @ts-check
-// The growth problem, drawn (Ryan, 8 November 2026: the section "feels pretty dull, given its importance"). Three
+// The growth problem, drawn (8 November 2026: the section "feels pretty dull, given its importance"). Three
 // pictures on the Areas page, each from numbers already in the data file (growth_read.mjs arranges them):
 //   patternChecks: the pattern, the record in one line (its eras), and the four checks that find the engine's patterns
 //     (rubric 0.3.0), each a track with the zones where a pattern fits, the lines and the economy's dot.
@@ -57,7 +57,7 @@ export function growthStory(narrative, snapshotId) {
   const threads = Array.isArray(st.threads) ? st.threads : [];
   const sinceCites = (st.since_last_year && st.since_last_year.citations) || [];
   const n = new Set([...threads.flatMap((t) => (t.citations || []).map((c) => c.url)), ...sinceCites.map((c) => c.url)]).size;
-  // Ryan, 9 November 2026: the AI label is said plainly but quietly, at the end, in the caption's size: the stories are
+  // 9 November 2026: the AI label is said plainly but quietly, at the end, in the caption's size: the stories are
   // reliable, and a loud warning on one of the first things a reader sees would undermine the site
   const reviewed = meta.status === 'reviewed' && meta.reviewed_on ? `, reviewed ${longDate(meta.reviewed_on)}` : '';
   const label = `Summary drafted with AI from ${n} published source${n === 1 ? '' : 's'} and checked against the data, ${longDate(meta.written)}${reviewed}.`;
@@ -149,7 +149,7 @@ export function patternChecks(read) {
 }
 
 // ---------- the growth record ----------
-// The chart opens on the last 30 years (Ryan, 8 November 2026: on the full record the recent bars and the lines across
+// The chart opens on the last 30 years (8 November 2026: on the full record the recent bars and the lines across
 // them were "hard to read or interpret"). Thirty years shows the decade before the 20-year window, so that window has a
 // visible start, and every peak the collapse check can count (8–30 years old); a button shows all years, and the
 // reader's choice holds for the visit as they move between economies (each a page load, so it is kept in sessionStorage).

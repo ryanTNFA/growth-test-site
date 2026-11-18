@@ -1,5 +1,5 @@
 // @ts-check
-// The four tests' marks (Ryan, 8 November 2026: make "test 1, test 2, test 3, test 4" more intuitive and memorable,
+// The four tests' marks (8 November 2026: make "test 1, test 2, test 3, test 4" more intuitive and memorable,
 // with something visual rather than a different font, called out where the tests matter without overdoing it). One
 // small glyph per test on the icon sprite's 24-unit grid, drawn as inline paths so a chart that carries one still
 // carries it when downloaded:
@@ -7,7 +7,7 @@
 //   2 changes        a line that turns up after a dashed marker: when it changed, did investment move?
 //   3 circumvention  a path that arcs over a block: are firms paying to get around it?
 //   4 camels         a camel, filled: do the activities that need it least do best? (camels thrive where water is scarce)
-//                    (Ryan, the same day: the first, outlined camel "looks like a sheep" when small. A camel reads at 14 px by a
+//                    (the same day: the first, outlined camel "looks like a sheep" when small. A camel reads at 14 px by a
 //                    level body on long striding legs, one hump, and a neck that dips from the shoulder to a head held forward;
 //                    a filled body keeps that outline where a thin stroke blurs.)
 // testMark() is the badge (the glyph in a soft disc) set before a test's name; fillTestMarks() fills the static pages'

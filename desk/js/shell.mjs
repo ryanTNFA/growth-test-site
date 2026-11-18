@@ -71,7 +71,7 @@ export function areaHref(iso, id) {
 }
 
 /**
- * L4: the site row. On a country page "Countries" leaves it, since the country's switcher does that job (Ryan, 18 November:
+ * L4: the site row. On a country page "Countries" leaves it, since the country's switcher does that job (18 November:
  * nine controls on a country page, B6; ten since the Self-discovery tab, 18 November).
  * @param {(href: string, label: string, key: string) => HTMLElement} link @param {boolean} onCountry
  */
@@ -107,7 +107,7 @@ function row1() {
 
 /**
  * L4, row 1: the brand, Countries (not on a country page), Explore the data, Method, The argument and the detail control. Feedback
- * is in the footer of every page and in each area's "Does this look right?" (Ryan, 18 November); the theme switch is in the footer.
+ * is in the footer of every page and in each area's "Does this look right?" (18 November); the theme switch is in the footer.
  * @param {boolean} onCountry
  */
 function row1v3(onCountry) {
@@ -146,7 +146,7 @@ function row2v3(iso) {
     'Overview');
   ov.addEventListener('click', () => { ov.href = tabHref('/growth-test-site/desk/country.html', currentIso() || iso); });
   const list = h('ul', { class: 'areas-menu-list' });
-  // Ryan, 18 November 2026: micro risk's six sub-areas are each one tap away, listed under it; geography (context, not rated) has
+  // 18 November 2026: micro risk's six sub-areas are each one tap away, listed under it; geography (context, not rated) has
   // its page too, after land, where the tree has it
   const item = (id, sub = false) => h('li', {}, h('a', { class: sub ? 'sub' : null, href: areaHref(currentIso() || iso, id) },
     sub ? '' : pictogram(id) || '', areaNames[id] || MENU_NAMES[id] || id));
@@ -171,7 +171,7 @@ function row2v3(iso) {
 }
 
 /**
- * Self-discovery, beside Compare (Ryan, 18 November 2026: the redesign had folded it too far down, on one of thirteen area pages).
+ * Self-discovery, beside Compare (18 November 2026: the redesign had folded it too far down, on one of thirteen area pages).
  * It opens the area's own page, where the product space and the signature are open. The row holds ten controls with it.
  * @param {string} iso
  */

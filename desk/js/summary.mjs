@@ -15,7 +15,7 @@ const DATA = dataBase();
 const $ = (id) => document.getElementById(id);
 const TEST_HEAD = { price: '1 · Price', changes: '2 · Changes', circumvention: '3 · Circumvention', camels: '4 · Camels' };
 const LIM = 2; // the color scale saturates at ±2 (sd for benchmarking; test scores run from −2 to +2)
-// Ryan, 8 November 2026: a test the method never defines for an area is not missing data. It is blank for every economy,
+// 8 November 2026: a test the method never defines for an area is not missing data. It is blank for every economy,
 // so it reads as not applicable (a closed gray cell), apart from "no data" (a dashed, empty cell: this economy lacks it).
 const NA = new Set(['no test defined', 'no indicator']);
 

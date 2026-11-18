@@ -1,6 +1,6 @@
 # The Growth Test: datasheet and model card
 
-*Release: rubric 0.1.6, engine 0.1.4, data snapshot 2026-10-24. The New Foreign Assistance (TNFA). Draft of 29 October 2026 (PRD section 17, D4). Part 1 follows "Datasheets for Datasets" (Gebru et al. 2021) for the data snapshot. Part 2 follows "Model Cards for Model Reporting" (Mitchell et al. 2019) for the rubric and engine. Section references (§) are to the Methodology Note, `docs/methodology-note.md`.*
+*Release: rubric 0.1.6, engine 0.1.4, data snapshot 2026-10-24. The New Foreign Assistance (TNFA). Draft of 29 October 2026. Part 1 follows "Datasheets for Datasets" (Gebru et al. 2021) for the data snapshot. Part 2 follows "Model Cards for Model Reporting" (Mitchell et al. 2019) for the rubric and engine. Section references (§) are to the Methodology Note, `docs/methodology-note.md`.*
 
 ---
 
@@ -58,7 +58,7 @@
 
 - TNFA maintains it.
 - Each refresh is a new snapshot id, recorded in `data/snapshot/meta.json`. A change to the rubric is recorded in `docs/CHANGELOG-rubric.md`.
-- Errata will go on a public errata page, which does not exist yet (PRD §17.1, D5).
+- Errata will go on a public errata page, which does not exist yet.
 
 ---
 
