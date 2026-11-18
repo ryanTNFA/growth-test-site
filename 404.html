@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Growth Test has moved</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://growthtest.thenewforeignassistance.org/">
+<!-- The old address of The Growth Test (interface PRD v0.3, I2). GitHub Pages serves this file for every path that no longer
+     exists here, so one script forwards any old link to the same page at the new address, with its query and its settings
+     (the part after #) kept. Without scripts, the refresh below goes to the new front page after three seconds. -->
+<script>
+(function () {
+  var NEW = 'https://growthtest.thenewforeignassistance.org';
+  var OLD_BASE = '/growth-test-site';
+  var path = location.pathname;
+  if (path.indexOf(OLD_BASE) === 0) path = path.slice(OLD_BASE.length);
+  location.replace(NEW + (path || '/') + location.search + location.hash);
+})();
+</script>
+<meta http-equiv="refresh" content="3; url=https://growthtest.thenewforeignassistance.org/">
+<style>body { font: 1.125rem/1.5 Georgia, serif; color: #1c2e4a; background: #faf7f0; margin: 15vh auto; max-width: 34rem; padding: 0 16px; } a { color: inherit; }</style>
+</head>
+<body>
+<p>The Growth Test has moved to <a href="https://growthtest.thenewforeignassistance.org/">growthtest.thenewforeignassistance.org</a>.</p>
+</body>
+</html>
