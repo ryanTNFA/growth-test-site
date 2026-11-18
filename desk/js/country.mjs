@@ -9,7 +9,7 @@
 // comparison countries and the dissent never fold. The area page (area.mjs) shares the state (countrystate.mjs) and the helpers
 // (card.mjs, components/); the memo is built from the same bottomLine() call as the three lists.
 import { tabHref, refreshNav, REDESIGN, setAssumptions, areaHref } from './shell.mjs';
-import { currentDetail, pictogram, tapSources } from './common.mjs';
+import { currentDetail, pictogram, tapSources, announce } from './common.mjs';
 import { ratingChanged } from './motion.mjs';
 import { initTheme, h, parseHash, writeState, qs, withData, englishList, downloadText, SETTING_LABEL, fmt, fmtInt, shortName, gNorm,
   tierClass, nodeCode, missingTestKind, MISSING_TEST_LABEL, cannotTellCode, CANNOT_TELL_PLAIN, leanOf, fmtSigned, fmtValue, unitHint, sourceLink, sourceLabel,
@@ -543,7 +543,8 @@ function renderAssistance() {
         h('li', {}, h('strong', {}, 'Fix what binds, or little changes. '), `Programs that ignore what actually holds growth back in ${c} are unlikely to reduce poverty for long. ` +
           'A reform that leaves the binding constraint in place does little for growth, however sound it is on its own (Hausmann, Rodrik and Velasco, 2005).')),
       h('p', { class: 'small' }, h('a', { href: withData('/growth-test-site/desk/methods.html#mcc') }, 'Why this way of choosing →'), ' ',
-        h('a', { href: 'https://thenewforeignassistance.org', target: '_blank', rel: 'noopener' }, 'About The New Foreign Assistance →'))));
+        h('a', { href: 'https://thenewforeignassistance.org', target: '_blank', rel: 'noopener', onclick: () => announce('outbound_tnfa') },
+          'About The New Foreign Assistance →'))));
 }
 
 // ---------- take it further: the memo, the link, and the idea briefing for the reader's own AI (explanation folded, D2) ----------

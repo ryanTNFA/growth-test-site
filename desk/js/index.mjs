@@ -1,5 +1,5 @@
 // @ts-check
-// The root page: the story (Growth Test PRD, Part 10), the scrolling front door in six beats. The copy is
+// The root page: the story (Growth Test PRD, Part 10), the scrolling front door in seven beats. The copy is
 // static HTML (index.html), so the first paint needs nothing from here. This module mounts the Long View after first paint
 // (beat 1, drawing itself once per session; static under reduced motion), wires the two country searches (D5: a country is
 // one click from the first screen), and marks the question the reader is on in the rail of the three questions (interface

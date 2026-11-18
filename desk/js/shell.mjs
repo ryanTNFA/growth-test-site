@@ -15,9 +15,12 @@ import { h, withData, qs, getJSON, dataBase, SETTINGS, SETTING_LABEL, SETTING_HI
 import { STRIP_AREAS } from './components/strip.mjs';
 import { monthYear } from './country_text.mjs';
 import { fillTestMarks } from './components/testmark.mjs';
+import { startAnalytics, tagOutbound, analyticsHere, reopenConsent } from './analytics.mjs';
 import './components/elements.mjs'; // <gt-term> and <gt-fold>, on every page (C7)
 
 const PAGE = document.body.dataset.page || '';
+/** The self-discovery area's page has its own tab in the country row, so the Areas menu is not marked current there. */
+const ON_SD = PAGE === 'area' && qs('area') === 'N12';
 // Interface PRD v0.3, step 2: behind the redesign flag the bar is L4's (one row of site links, then the country's name and
 // switcher, Overview and the Areas menu) and the reading and the comparison set leave it for the assumptions line (L3).
 export const REDESIGN = redesignOn();
@@ -69,7 +72,7 @@ export function areaHref(iso, id) {
 
 /**
  * L4: the site row. On a country page "Countries" leaves it, since the country's switcher does that job (Ryan, 18 November:
- * nine controls on a country page, B6).
+ * nine controls on a country page, B6; ten since the Self-discovery tab, 18 November).
  * @param {(href: string, label: string, key: string) => HTMLElement} link @param {boolean} onCountry
  */
 function barItemsV3(link, onCountry) {
@@ -150,7 +153,7 @@ function row2v3(iso) {
   const fill = () => list.replaceChildren(...STRIP_AREAS.flatMap((id) => [item(id),
     ...(id === 'N8' ? [item('N9')] : id === 'N11' ? MICRO_SUBS.map((s) => item(s, true)) : [])]));
   fill();
-  const menu = h('details', { class: 'nav-menu areas-menu' }, h('summary', { 'aria-current': PAGE === 'area' ? 'page' : null }, 'Areas'),
+  const menu = h('details', { class: 'nav-menu areas-menu' }, h('summary', { 'aria-current': PAGE === 'area' && !ON_SD ? 'page' : null }, 'Areas'),
     h('div', { class: 'nav-menu-body' }, list));
   menu.addEventListener('toggle', () => {
     if (!menu.open) return;
@@ -164,7 +167,18 @@ function row2v3(iso) {
   return h('div', { class: 'nav-country' },
     h('div', { class: 'wrap' },
       h('div', { class: 'nav-country-id' }, h('span', { class: 'nav-country-name', id: 'nav-country-name' }, iso), input, datalist),
-      h('nav', { class: 'tabs', 'aria-label': 'Country views' }, ov, menu, compareLink(iso))));
+      h('nav', { class: 'tabs', 'aria-label': 'Country views' }, ov, menu, compareLink(iso), selfDiscoveryLink(iso))));
+}
+
+/**
+ * Self-discovery, beside Compare (Ryan, 18 November 2026: the redesign had folded it too far down, on one of thirteen area pages).
+ * It opens the area's own page, where the product space and the signature are open. The row holds ten controls with it.
+ * @param {string} iso
+ */
+function selfDiscoveryLink(iso) {
+  const a = h('a', { class: 'tab', 'data-tab': 'selfdiscovery', href: areaHref(iso, 'N12'), 'aria-current': ON_SD ? 'page' : null }, 'Self-discovery');
+  a.addEventListener('click', () => { a.href = areaHref(currentIso() || iso, 'N12'); });
+  return a;
 }
 
 /** D2: Compare, from the country's row, starting from this economy. */
@@ -335,6 +349,10 @@ function footer() {
     h('p', { id: 'cite-as' }, 'Cite as: Moore, Ryan A., and The New Foreign Assistance, ', h('em', {}, 'The Growth Test'), ', ',
       h('a', { href: 'https://doi.org/10.5281/zenodo.23924472' }, 'doi:10.5281/zenodo.23924472'),
       ' (the DOI resolves to the latest release; each release has its own). Code Apache 2.0; documents and derived data CC BY 4.0.'),
+    // J5: said on the site, where it is true (the published TNFA address), with the way to change the answer to the banner
+    analyticsHere() ? h('p', { class: 'small muted', id: 'analytics-note' },
+      'With your consent, this site uses Google Analytics to count visits and the pages and features used. ',
+      h('button', { class: 'btn quiet small', type: 'button', onclick: () => reopenConsent() }, 'Change your choice')) : '',
     REDESIGN ? h('p', {}, h('button', { id: 'theme-toggle', class: 'btn quiet small', type: 'button' }, 'Theme: Auto')) : '',
     h('p', { class: 'small muted', id: 'affiliation' },
       `${NAME} is not affiliated with or endorsed by the Growth Lab at Harvard Kennedy School, the Observatory of Economic Complexity or the ` +
@@ -357,6 +375,9 @@ function mount() {
   fillTestMarks(); // the four tests' marks on the static pages (<span data-tmark="price">)
   const foot = document.querySelector('footer.foot');
   if (foot && !foot.childElementCount) foot.replaceChildren(footer());
+  // the links out that name us; analytics on the published TNFA address only, after the reader's consent (analytics.mjs; PRD 5J)
+  tagOutbound(document, PAGE || 'page');
+  startAnalytics();
   const header = document.querySelector('header.topbar');
   if (!header) { wireFeedback(); return; }
   const iso = currentIso();

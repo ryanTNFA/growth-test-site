@@ -1,8 +1,8 @@
 /* The Growth Test: the root page, the story (Growth Test PRD, Part 10; D9) (C5, pages layer; cap 300 lines).
-   Six beats. Interface PRD E8: the hero and the assistance band keep a full screen on a laptop; beats 2 to 4 take the
+   Seven beats. Interface PRD E8: the hero and the assistance band keep a full screen on a laptop; beats 2 to 4 take the
    height of their content, with generous spacing, so they read as one piece and not as slides. The two dark bands bleed
    to the window's edges and their edges fade into the paper. A rail of the three questions stays in view from beat 2 to
-   beat 5 (sticky; index.mjs marks the current one). The scroll-driven ease-in lives in motion.css. Durations and easings live in motion.css; shared pieces (.gt-band,
+   beat 6 (sticky; index.mjs marks the current one). The scroll-driven ease-in lives in motion.css. Durations and easings live in motion.css; shared pieces (.gt-band,
    .icon, .elev-1) in components.css. */
 @layer pages {
 /* the page runs edge to edge; each beat's inner column is the wrap (phones: a 16 px gutter) */
@@ -58,7 +58,8 @@ main.story { --accent: var(--amber); --accent-hover: var(--amber-hover); --accen
 .gt-three { counter-reset: q; list-style: none; margin: 26px 0 24px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 32px;
   max-width: 68rem; }
 .gt-three li { counter-increment: q; display: grid; gap: 8px; align-content: start; padding: 14px 0 0; border-top: 2px solid var(--accent); }
-.gt-three li::before { content: counter(q); font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.05em; color: var(--accent); }
+.gt-three li::before { content: counter(q, decimal-leading-zero); font-family: var(--serif); font-weight: 500; font-size: 2.5rem; line-height: 1;
+  letter-spacing: -0.01em; color: var(--accent); }
 .gt-three strong { font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.2; text-wrap: balance; }
 .gt-three span { font-size: 1rem; line-height: 1.5; color: var(--muted); }
 @media (max-width: 800px) { .gt-three { grid-template-columns: 1fr; gap: 14px; } .gt-three strong { font-size: 1.3rem; } }
@@ -128,4 +129,33 @@ main.story { --accent: var(--amber); --accent-hover: var(--amber-hover); --accen
 .gt-entry .gt-ask-row input[type="search"] { flex: 1 1 0; min-width: 0; width: 100%; }
 @media (max-width: 900px) { .gt-entries { grid-template-columns: 1fr; } }
 .gt-sources { max-width: 80ch; }
+
+/* ---------- TNFA's devices on the scroll (the design system's Motifs and Typography; Ryan, 18 November 2026) ---------- */
+.beat { position: relative; }
+/* warm bands separate sections, not boxes: beats 3 and 5 sit on the warm neutral, at full width */
+.beat-band { background: var(--surface-2); }
+/* flag-stripe bars: amber, square-ended, of varying length, stacked against the page's right edge beside a beat's intro; never behind text */
+.gt-bars { position: absolute; right: 0; top: clamp(56px, 8vh, 96px); width: clamp(96px, 14vw, 240px); height: 62px; pointer-events: none;
+  background: linear-gradient(var(--brand-amber), var(--brand-amber)) right 0 / 100% 8px no-repeat,
+    linear-gradient(var(--brand-amber), var(--brand-amber)) right 18px / 62% 8px no-repeat,
+    linear-gradient(var(--brand-amber), var(--brand-amber)) right 36px / 84% 8px no-repeat,
+    linear-gradient(var(--brand-amber), var(--brand-amber)) right 54px / 38% 8px no-repeat; }
+@media (max-width: 1000px) { .gt-bars { display: none; } }
+/* numerals are part of the composition: questions 2 and 3, each with its numeral in a column to the left of its title */
+.gt-pair { list-style: none; margin: 28px 0 26px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 56px; max-width: 72rem; }
+.gt-pair li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 18px; align-items: start; padding-top: 16px; border-top: 2px solid var(--accent); }
+.gt-num { font-family: var(--serif); font-weight: 500; font-size: 2.5rem; line-height: 1; letter-spacing: -0.01em; color: var(--accent); }
+.gt-pair strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.5rem; line-height: 1.2; margin-bottom: 8px; text-wrap: balance; }
+.gt-pair p { margin: 0; font-size: 1.0625rem; line-height: 1.55; }
+@media (max-width: 800px) { .gt-pair { grid-template-columns: 1fr; } .gt-num { font-size: 2rem; } }
+/* the pull-quote slab: a warm block behind the left edge of a line worth keeping */
+.gt-pull { position: relative; isolation: isolate; font-family: var(--serif); font-size: clamp(1.3125rem, 1.1rem + 0.9vw, 1.6875rem); line-height: 1.35;
+  max-width: 36ch; margin: 30px 0 8px; padding: 14px 0 14px 28px; text-wrap: balance; }
+.gt-pull::before { content: ''; position: absolute; z-index: -1; left: 0; top: 0; bottom: 0; width: 56px; background: var(--amber-soft); }
+.beat-band .gt-pull::before { background: color-mix(in srgb, var(--brand-amber) 22%, var(--surface-2)); }
+/* the one statistic of the assistance band, as large as a heading */
+.gt-stat { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 22px; align-items: center; margin: 24px 0 22px; max-width: 46rem; }
+.gt-stat-n { font-family: var(--serif); font-weight: 500; font-size: clamp(3.5rem, 2rem + 6vw, 6.5rem); line-height: 0.95; letter-spacing: -0.02em; color: var(--brand-amber); }
+.gt-stat-l { font-family: var(--serif); font-size: 1.3125rem; line-height: 1.35; color: var(--band-text); max-width: 20ch; }
+@media (max-width: 600px) { .gt-stat { grid-template-columns: 1fr; } }
 }

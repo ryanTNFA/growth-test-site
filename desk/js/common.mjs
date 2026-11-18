@@ -121,6 +121,8 @@ export const CANNOT_TELL_PLAIN = {
   no_recent_data: { label: 'no recent data', short: 'No recent data', gapInTool: false },
   one_kind: { label: 'one kind of evidence', short: 'One kind of evidence', gapInTool: false },
   mixed: { label: 'evidence points both ways', short: 'Mixed', gapInTool: false },
+  // rubric 0.5.2: the guard on international finance (a low rate on a few loans is not cheap finance)
+  rare_borrower: { label: 'rarely borrows abroad', short: 'Rarely borrows abroad', gapInTool: false },
 };
 /**
  * The plain reason code of a cannot-tell node (CANNOT_TELL_PLAIN key), or null for any other tier.
@@ -612,8 +614,22 @@ export function englishList(items, conj = 'and') {
   return `${a.slice(0, -1).join(', ')} ${conj} ${a[a.length - 1]}`;
 }
 
+/**
+ * Say on the window that something countable happened (an export, a sent message, a tap on the way back to TNFA). Only
+ * analytics.mjs listens, and only on the published TNFA address; nothing else changes. Codes only, never a reader's text.
+ * @param {string} name @param {Record<string, any>} [params]
+ */
+export function announce(name, params = {}) {
+  if (typeof window === 'undefined' || typeof CustomEvent === 'undefined') return;
+  window.dispatchEvent(new CustomEvent('gt-track', { detail: { ...params, name } }));
+}
+/** The kind of export a file name stands for, as analytics counts it. @param {string} filename */
+export const exportKind = (filename) => (/memo/.test(filename) ? 'memo' : /briefing/.test(filename) ? 'briefing'
+  : /chart-pack/.test(filename) ? 'chart_pack' : /\.csv$/.test(filename) ? 'data' : /\.svg$/.test(filename) ? 'chart' : 'file');
+
 /** Offer a text file for download. @param {string} filename @param {string} text @param {string} [type] MIME type */
 export function downloadText(filename, text, type = 'text/markdown') {
+  announce('export', { export_type: exportKind(filename) });
   const blob = new Blob([text], { type: `${type};charset=utf-8` });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');

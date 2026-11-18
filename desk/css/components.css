@@ -1004,6 +1004,13 @@ ul.sd-nearby { margin: 6px 0 8px; padding-left: 1.1em; display: grid; gap: 3px; 
 .ar-pos { order: 1; color: var(--muted); font-size: var(--fs-caption); }
 .ar-next { order: 2; }
 /* E9 a: the method's question frames the four tests */
+/* the analytics consent banner (interface PRD 5J): a bar at the foot of the window, two buttons of equal weight */
+.consent { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; background: var(--surface); border-top: 2px solid var(--text); box-shadow: var(--elev); }
+.consent-in { max-width: var(--maxw); margin: 0 auto; padding: 14px var(--gutter); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+.consent-text { margin: 0; flex: 1 1 28rem; font-size: 0.9375rem; line-height: 1.45; max-width: 80ch; }
+.consent-actions { display: flex; gap: 10px; }
+.consent-actions .btn { min-width: 7rem; }
+@media print { .consent { display: none; } }
 /* the note on an area with no rating (coordination, geography): the idea, what to ask, where to read more */
 .ar-note { margin: 16px 0 6px; padding: 16px 20px 18px; background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--text); }
 .ar-note h2 { margin: 2px 0 10px; font-size: 1.5rem; max-width: 34ch; }

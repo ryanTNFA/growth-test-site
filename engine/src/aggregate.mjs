@@ -761,6 +761,37 @@ export function applyTopSplitOverride(node, topSplit, rationingSignal, params = 
   return node;
 }
 
+/**
+ * Rare-borrower guard (rubric 0.5.2, engine 0.3.2; docs/data-extension-plan.md 11.5). International finance cannot read
+ * probably_not or ruled_out for an economy that borrowed from private foreign lenders in fewer than
+ * params.rare_borrower.min_years of the last five years: a low rate on a few loans, or no credit from the IMF, looks the same
+ * for a country with easy finance and for one shut out of markets, so only a regular borrower's low price is evidence. The
+ * node reads cannot_tell_weak with the plain reason 'rare_borrower' and `rare_borrower_guard: true`. No signal, score or fit
+ * changes. `borrowingYears` is the latest value of IFN.BORROWING_YEARS (null where the economy does not report to the World
+ * Bank's debtor reporting system: the guard does not apply). Mutates and returns the node.
+ */
+export function applyRareBorrowerGuard(node, borrowingYears, params = null) {
+  node.rare_borrower_guard = false;
+  const min = params && params.rare_borrower ? params.rare_borrower.min_years : null;
+  if (!isNum(min) || !isNum(borrowingYears) || borrowingYears >= min) return node;
+  const against = (t) => t === 'probably_not' || t === 'ruled_out';
+  // the readings under the other comparison sets follow the same rule, so the page never shows "argue against" beside the flag
+  if (node.tier_by_set) for (const k of Object.keys(node.tier_by_set)) if (against(node.tier_by_set[k])) node.tier_by_set[k] = 'cannot_tell_weak';
+  if (!against(node.tier)) return node;
+  const was = node.tier;
+  node.tier = 'cannot_tell_weak';
+  node.tier_subreason = 'rare_borrower';
+  node.rare_borrower_guard = true;
+  node.rare_borrower_years = borrowingYears;
+  const info = cannotTellInfo(node, params);
+  node.cannot_tell_reason = 'rare_borrower';
+  node.cannot_tell_detail = info.cannot_tell_detail;
+  node.tier_reason =
+    `cannot_tell_weak (was ${was}; rare-borrower guard): new borrowing from private foreign lenders in ${borrowingYears} of the last five ` +
+    `years, fewer than ${min}, so a low reading is not counted as evidence against a problem. Original: ${node.tier_reason}`;
+  return node;
+}
+
 function subreasonLabel(sr) {
   switch (sr) {
     case 'conflicting': return 'conflicting';

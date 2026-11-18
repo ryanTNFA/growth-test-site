@@ -18,14 +18,15 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar"></header>
 <main id="main" class="wrap story home" tabindex="-1">
-  <!-- The root page: the story in six beats (Growth Test PRD, Part 10; shipped 6 November 2026).
+  <!-- The root page: the story in seven beats (Growth Test PRD, Part 10; shipped 6 November 2026; a beat for questions 2 and 3
+       added 18 November, with TNFA's scroll devices: flag-stripe bars, numerals, the pull-quote slab, a headline statistic).
        The copy below is a DRAFT: the final copy waits on Ryan's domain and trademark check (PRD Part 8, decision 1) and on
        Ryan's and Daniel's edit. Beats 1 to 3 and 5 are in the voice of Getting to Growth, authored by TNFA and labeled so;
        the tool's voice begins at beat 4. Sources: Daniel Handel's forthcoming CFR essay; Hausmann, Rodrik and Velasco (2005);
        Pritchett's four-part test (CGD, 2014); Ryan's "recovering randomista" post; the Long View's data sources in its caption.
        Interface PRD v0.3, E6 to E8 (17 November): beat 2 states the argument as three questions, in order (what binds, can it be
        moved, does this move it cost-effectively); beat 3 carries question 1, beat 4 says the tool gives a first read on question 1
-       only, beat 5 asks all three. A rail of the three questions stays in view from beat 2 to beat 5 (CSS sticky; index.mjs marks
+       only, beat 5 takes questions 2 and 3, beat 6 asks all three. A rail of the three questions stays in view from beat 2 to beat 6 (CSS sticky; index.mjs marks
        the question the beat is on). Pritchett's four-part test left beat 2 and stays in the sources. -->
 
   <!-- Beat 1: the Long View as the hero, drawing itself once per session (index.mjs); the country search and the map's entry inside the first screen (D5) -->
@@ -50,7 +51,7 @@
     </div>
   </section>
 
-  <!-- Beats 2 to 5 share the rail of the three questions (E8 b) -->
+  <!-- Beats 2 to 6 share the rail of the three questions (E8 b) -->
   <div class="story-argument">
   <nav class="q-rail" aria-label="The three questions">
     <ol>
@@ -62,6 +63,7 @@
 
   <!-- Beat 2: growth did that; the argument as three questions, in order (E6, E7) -->
   <section class="beat" id="beat-2" aria-labelledby="b2-h" data-q="">
+    <span class="gt-bars" aria-hidden="true"></span>
     <div class="beat-in">
       <p class="kicker">2 · Getting to Growth</p>
       <h2 id="b2-h">Growth did that, and nothing else has.</h2>
@@ -71,12 +73,12 @@
         <li><strong>Can it be moved?</strong><span>Why it binds, and whether a lever within reach would ease it at a scale that matters.</span></li>
         <li><strong>Does this move it cost-effectively?</strong><span>Evidence that the program eases the constraint, measured on the constraint, at a cost the gain justifies.</span></li>
       </ol>
-      <p class="prose">Most proposals start at the third. Rigor there is welcome. Without the first two, it answers the wrong question well.</p>
+      <p class="gt-pull">Most proposals start at the third. Rigor there is welcome. Without the first two, it answers the wrong question well.</p>
     </div>
   </section>
 
   <!-- Beat 3: growth is not a list; recipes fail by design -->
-  <section class="beat" id="beat-3" aria-labelledby="b3-h" data-q="1">
+  <section class="beat beat-band" id="beat-3" aria-labelledby="b3-h" data-q="1">
     <div class="beat-in beat-cols">
       <div>
         <p class="kicker">3 · Getting to Growth · question 1: what binds?</p>
@@ -123,25 +125,43 @@
     </div>
   </section>
 
-  <!-- Beat 5: the corollary for assistance, one screen, TNFA's voice; the one sentence on the Millennium Challenge Corporation lives here and nowhere on the analytical pages -->
-  <section class="beat gt-band beat-assist" id="beat-5" aria-labelledby="b5-h" data-q="1 2 3">
+  <!-- Beat 5: questions 2 and 3, each with its own kind of evidence, in Getting to Growth's voice (Ryan, 18 November 2026: the rail
+       jumped from question 1 to all three). Rigorous, independent evaluation takes its place at question 3. -->
+  <section class="beat beat-band" id="beat-5" aria-labelledby="b5-h" data-q="2 3">
+    <span class="gt-bars" aria-hidden="true"></span>
     <div class="beat-in">
-      <p class="kicker">5 · Getting to Growth · The New Foreign Assistance’s view</p>
-      <h2 id="b5-h">The corollary for assistance.</h2>
-      <p class="prose lede">Assistance that wants to be built to end has to work toward the one thing that ends the need for it. Under three percent of the old foreign-assistance budget went to growth.</p>
+      <p class="kicker">5 · Getting to Growth · questions 2 and 3</p>
+      <h2 id="b5-h">A diagnosis is where the work starts.</h2>
+      <p class="prose lede">Knowing what binds does not say what to do about it. Two questions are left, and each needs its own kind of evidence.</p>
+      <ol class="gt-pair" start="2">
+        <li><span class="gt-num" aria-hidden="true">02</span><div><strong>Can it be moved?</strong><p>A constraint lasts for a reason: a law, a price set by decree, a monopoly, a utility that cannot cover its costs. Ask why it has lasted and who gains from it. Then ask whether a lever within reach would ease it at a scale firms would notice. That is work for the country: its officials, its firms and the people who know its politics. No dataset answers it.</p></div></li>
+        <li><span class="gt-num" aria-hidden="true">03</span><div><strong>Does this move it cost-effectively?</strong><p>Here rigorous, independent evaluation takes its rightful place. A program aimed at what binds still has to show that it eased the constraint, measured on the constraint, at a cost the gain justifies. Trials and careful natural experiments are the best tools there are for that. Publishing the result, whatever it says, is what makes the next decision better.</p></div></li>
+      </ol>
+      <p class="gt-pull">Growth diagnostics and the trials movement grew out of the same disappointment with the reform lists of the 1990s. They answer different questions. Asked in order, each makes the other’s answer worth more.</p>
+      <p class="small muted gt-cite">Rodrik, D., <a href="https://doi.org/10.1257/jep.24.3.33" target="_blank" rel="noopener">“Diagnostics before Prescription”</a>, <em>Journal of Economic Perspectives</em> 24(3), 2010; the four-part test for an evaluation is in the sources below.</p>
+    </div>
+  </section>
+
+  <!-- Beat 6: the corollary for assistance, one screen, TNFA's voice; the one sentence on the Millennium Challenge Corporation lives here and nowhere on the analytical pages -->
+  <section class="beat gt-band beat-assist" id="beat-6" aria-labelledby="b6-h" data-q="1 2 3">
+    <div class="beat-in">
+      <p class="kicker">6 · Getting to Growth · The New Foreign Assistance’s view</p>
+      <h2 id="b6-h">The corollary for assistance.</h2>
+      <p class="prose lede">Assistance that wants to be built to end has to work toward the one thing that ends the need for it.</p>
+      <p class="gt-stat"><span class="gt-stat-n">&lt;3%</span><span class="gt-stat-l">of the old foreign-assistance budget went to growth.</span></p>
       <p class="prose">Where assistance has focused on what binds, with the evidence published whatever it says, it has had a record the rest did not. The Millennium Challenge Corporation, which funds against a published constraints analysis and publishes its evaluations whatever they find, is the proof that focus works.</p>
       <p class="gt-question"><svg class="icon" aria-hidden="true"><use href="/growth-test-site/desk/img/icons.svg#target"/></svg> The questions before money moves: what binds here, can it be moved, and does this move it cost-effectively?</p>
-      <p class="small gt-cite">Handel, D., forthcoming (Council on Foreign Relations), on the share of the budget that went to growth. <a href="/growth-test-site/desk/methods.html#mcc">Why this way of choosing →</a> <a href="https://thenewforeignassistance.org" target="_blank" rel="noopener">About The New Foreign Assistance →</a></p>
+      <p class="small gt-cite">Under three percent: the author’s calculation in Handel, D., forthcoming (Council on Foreign Relations), from Congressional Research Service, <a href="https://www.congress.gov/crs_external_products/IF/PDF/IF10261/IF10261.20.pdf" target="_blank" rel="noopener">“U.S. Agency for International Development: An Overview”</a> (IF10261, version 20, 2025), Figure 1. <a href="/growth-test-site/desk/methods.html#mcc">Why this way of choosing →</a> <a href="https://thenewforeignassistance.org" target="_blank" rel="noopener">About The New Foreign Assistance →</a></p>
     </div>
   </section>
 
   </div>
 
-  <!-- Beat 6: ask the growth test: the search, the map (the flagged Countries page), and the standard one click away -->
-  <section class="beat beat-ask" id="beat-6" aria-labelledby="b6-h">
+  <!-- Beat 7: ask the growth test: the search, the map (the flagged Countries page), and the standard one click away -->
+  <section class="beat beat-ask" id="beat-7" aria-labelledby="b7-h">
     <div class="beat-in">
-      <p class="kicker">6 · Ask the growth test</p>
-      <h2 id="b6-h">Ask the growth test.</h2>
+      <p class="kicker">7 · Ask the growth test</p>
+      <h2 id="b7-h">Ask the growth test.</h2>
       <div class="gt-entries">
         <form class="gt-entry elev-1" id="ask-6" role="search" aria-label="Find a country">
           <svg class="icon lg" aria-hidden="true"><use href="/growth-test-site/desk/img/icons.svg#search"/></svg>

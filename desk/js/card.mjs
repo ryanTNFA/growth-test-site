@@ -137,7 +137,10 @@ export function createCard({ drawer, scrim = null, registry, getState, onOverrid
         plainTierOf(nodeId, ov.tier)))) : null,
       node.F ? h('span', { class: 'flag warn small' }, 'sensitive to the choice of comparison countries') : null,
       node.top_split_override ? h('span', { class: 'flag warn small' },
-        `first-decision cap applied${node.top_split_override_row ? ` (${node.top_split_override_row.replace(/_/g, ' ')})` : ''}`) : null));
+        `first-decision cap applied${node.top_split_override_row ? ` (${node.top_split_override_row.replace(/_/g, ' ')})` : ''}`) : null,
+      node.rare_borrower_guard ? h('span', { class: 'flag warn small',
+        title: 'New borrowing from private foreign lenders in fewer than four of the last five years: a low reading is not counted against' },
+      'rarely borrows abroad: low readings not counted') : null));
     plainSec.append(h('p', { class: 'plain' }, plainSummary(node, pctx)));
     const setLine = tierBySetLine(node, activeSet, Array.isArray(st.peers));
     if (setLine) plainSec.append(h('p', { class: 'small', style: 'margin-top:6px' }, setLine));
@@ -841,6 +844,12 @@ export function plainSummary(node, ctx, { brief = false } = {}) {
           `${String(dg[0].class_note).replace(/^class C for this economy: /, '').replace(/, so the measure informs but does not vote$/, '')}.`);
       }
       whatThereIs();
+    } else if (code === 'rare_borrower') {
+      // rubric 0.5.2 (plan 11.5): the readings point away, but for a country that rarely borrows abroad they are not evidence
+      s.push(`Unclear: ${c} rarely borrows from private foreign lenders, so the low readings here are not counted against a problem. ` +
+        'A low rate on a few loans, or no credit from the IMF, looks the same for a country with easy finance and for one shut out ' +
+        'of markets.');
+      whatThereIs();
     } else if (code === 'one_kind') {
       const lean = leanOf(ev);
       const speaking = speakingTests(ev);
@@ -1120,7 +1129,7 @@ export function bottomLine(ctx) {
   const unclearIds = by((t) => isCannotTell(t) || t === 'desk_undiagnosable' || t === 'elimination');
   // the four plain reasons of front-door PRD W1, plus sector study and N12's elimination status
   const groups = { oneKind: [], mixed: [], toolGap: [], dataGap: [], sector: [], elimination: [] };
-  const groupOf = { one_kind: 'oneKind', mixed: 'mixed', not_connected: 'toolGap', no_recent_data: 'dataGap' };
+  const groupOf = { one_kind: 'oneKind', mixed: 'mixed', not_connected: 'toolGap', no_recent_data: 'dataGap', rare_borrower: 'oneKind' };
   for (const id of unclearIds) {
     const n = nodeOf(id);
     if (n.tier === 'desk_undiagnosable') groups.sector.push(item(id));

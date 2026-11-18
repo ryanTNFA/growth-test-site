@@ -1,6 +1,6 @@
 {
   "_comment": "Rubric parameters v0.1.4 (Workbook Appendix B as corrected by docs/CHANGELOG-rubric.md). Every number here is a starting point to be calibrated in Phase 0. The engine must read all thresholds from this file; nothing numeric is hard-coded.",
-  "rubric_version": "0.5.1",
+  "rubric_version": "0.5.2",
   "snapshot_reference_window_years": 12,
   "icr": {
     "controls": [
@@ -166,6 +166,10 @@
       "min_growth_pct": 3.0,
       "size": 10
     }
+  },
+  "rare_borrower": {
+    "_comment": "rubric 0.5.2 (docs/data-extension-plan.md 11.5): international finance (N1) cannot read probably_not or ruled_out for an economy with new borrowing from private foreign lenders (IFN.BORROWING_YEARS) in fewer than min_years of the last five years; it reads cannot_tell_weak with the plain reason rare_borrower. Four of five is the definition of regular access in plan 11.2.",
+    "min_years": 4
   },
   "top_split": {
     "_comment": "v0.1.2: credit growth reads as 'high' only when private credit to GDP is not thin (ICR t of FS.AST.PRVT.GD.ZS > credit_depth_thin_t, the ICR strong threshold); net cash flow from banks is recorded alongside. The cap-at-candidate for finance nodes applies to every row in which the real rate is classified 'low', not only low_demand.",

@@ -4,9 +4,10 @@
 //   "Does this look right?" on every rating card (card.mjs): one tap, with a sentence if wanted;
 //   "Send this reading to the team" beside an override (card.mjs): the reader's own rating and the reason they gave.
 // Every message carries where the reader was (the page address holds the country, the area, the reading and the comparison
-// set) so nobody has to describe it. Nothing is sent until the reader presses a button; there are no cookies and no tracking.
+// set) so nobody has to describe it. Nothing is sent until the reader presses a button. We cannot tell who sent a message: no
+// sign-in, cookie or analytics ID goes with it (interface PRD J7). Analytics hears only that a message was sent.
 // Nothing at module level touches the document, so the message builders run under Node in the tests.
-import { h, readHash, HASH } from '../common.mjs';
+import { h, readHash, HASH, announce } from '../common.mjs';
 import { FEEDBACK_ENDPOINT, FEEDBACK_EMAIL } from '../feedback_config.mjs';
 
 export const KINDS = ['note', 'rating_check', 'reading'];
@@ -67,7 +68,7 @@ export function buildPayload(kind, fields = {}, ctx = pageContext(), id = newId(
  * @param {{endpoint?: string, fetchFn?: typeof fetch}} [opts]
  * @returns {Promise<{ok: boolean, reason?: string, unconfirmed?: boolean}>}
  */
-export async function sendFeedback(payload, { endpoint = FEEDBACK_ENDPOINT, fetchFn = globalThis.fetch } = {}) {
+async function post(payload, { endpoint = FEEDBACK_ENDPOINT, fetchFn = globalThis.fetch } = {}) {
   if (!endpoint) return { ok: false, reason: 'not_connected' };
   const body = JSON.stringify(payload);
   const headers = { 'Content-Type': 'text/plain;charset=utf-8' };
@@ -85,6 +86,19 @@ export async function sendFeedback(payload, { endpoint = FEEDBACK_ENDPOINT, fetc
       return { ok: false, reason: 'network' };
     }
   }
+}
+
+/**
+ * Send one message. Analytics is told that a message was sent, with the area's code and nothing else: never what it said,
+ * never its id, so a visit cannot be matched to a message (J7).
+ * @param {Record<string, any>} payload
+ * @param {{endpoint?: string, fetchFn?: typeof fetch}} [opts]
+ * @returns {Promise<{ok: boolean, reason?: string, unconfirmed?: boolean}>}
+ */
+export async function sendFeedback(payload, opts = {}) {
+  const r = await post(payload, opts);
+  if (r.ok) announce('feedback_sent', { area: payload && payload.area });
+  return r;
 }
 
 /** The same details as an email, for when the receiver is not connected or a message will not send. @param {Record<string, any>} p */
@@ -204,8 +218,9 @@ export function openFeedback(opts = {}) {
     h('span', { class: 'small muted' }, 'or paste one here')),
   preview,
   h('label', { for: 'fb-email' }, 'Email, only if you want a reply (optional)'), email, trap,
-  h('p', { class: 'fb-privacy small muted' }, 'We receive what you write, this page’s address and settings, your browser’s name and window size, and ' +
-    'the screenshot if you add one. Nothing else, and nothing until you press Send.'),
+  h('p', { class: 'fb-privacy small muted' }, 'We can’t tell who sent this: no sign-in, cookie or analytics ID goes with it, and we see an email ' +
+    'address only if you leave one. Check a screenshot before you attach it. We receive what you write, this page’s address and settings, your ' +
+    'browser’s name and window size, and the screenshot if you add one. Nothing else, and nothing until you press Send.'),
   status,
   h('div', { class: 'fb-actions' }, send, cancel));
 

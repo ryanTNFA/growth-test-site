@@ -3,7 +3,7 @@
 // scatter, C2 peer comparison and C3 over time for one indicator; the year player (player.mjs) animates C1 and C2.
 import { refreshNav } from './shell.mjs';
 import { isNum } from '../../engine/src/stats.mjs';
-import { nodeCode, getJSON, listedFile, loadRegistry, initTheme, h, fmt, fmtSigned, qs, unitHint, shortName, sourceLink, sourceLabel, dataBase, withData, downloadText, tierLabelOf, tierClass, HASH, TEACHING_KEYS, readHash, writeHash, currentHash } from './common.mjs';
+import { nodeCode, getJSON, listedFile, loadRegistry, initTheme, h, fmt, fmtSigned, qs, unitHint, shortName, sourceLink, sourceLabel, dataBase, withData, downloadText, announce, tierLabelOf, tierClass, HASH, TEACHING_KEYS, readHash, writeHash, currentHash } from './common.mjs';
 import { INCOME_ID, refSpan, scatterRows, structureFit, linearFit, lowessFit, lineAndBand, peerRank, residualPercentile, backTransform, referenceTable, viableYears, peerSummary, seriesRows, coverage, changeSinceStart, peerBand, slope, endpoints, stripRows, playerFrames, playerDomains, raceFrames } from './evidence_math.mjs';
 import { createControls, bubbleChart, barRace } from './player.mjs';
 import { reducedMotion } from './motion.mjs';
@@ -1438,6 +1438,7 @@ const fileBase = (key) => ['c5', 'c6', 'c8', 'c12'].includes(key)
 function exportSVG(key) { const s = chartSVG(key, { framed: true }); if (s) downloadText(`${fileBase(key)}.svg`, s.text, 'image/svg+xml'); }
 function exportPNG(key) {
   const s = chartSVG(key, { framed: true }); if (!s) return;
+  announce('export', { export_type: 'chart' });
   const img = new Image();
   const scale = 1600 / s.w;
   img.onerror = () => {

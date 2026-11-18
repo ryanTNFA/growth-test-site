@@ -1,6 +1,6 @@
 {
   "_comment": "Constraint Check indicator registry v0.1.2 (prototype; changes from v0.1 and v0.1.1 in docs/CHANGELOG-rubric.md). Fields: id (source code), name, source (worldbank_wdi | worldbank_zip | weo | eci | derived | static), nodes (list of node ids or [] for context), test (price | changes | circumvention | camels | context), class (A|B|C|D|X where X = context, no signal), direction (+1 = higher value means MORE binding, -1 = higher value means LESS binding, 0 = context), transform (none | log1p | log | logit), family (evidence family id; signals within a family are deduplicated to one), slow (true if slow-moving stock: recency decay relaxed), years (first year to ingest), notes. Optional: source_code (World Bank API indicator code when it differs from the id) and source_id (World Bank source/database id) for the bulk-zip fetch; hidden_until_fixed (true = the engine treats the indicator as unavailable: not displayed, not counted); regime_sensitive (\"monetary\": downgraded to class C for economies in registry/static_monetary_regimes.json, v0.1.2); fallback_for (indicator id: this indicator carries no signal for an economy where that indicator is available in the window, v0.1.2); caveat (one sentence the Desk prints under the indicator).",
-  "rubric_version": "0.5.1",
+  "rubric_version": "0.5.2",
   "indicators": [
     {
       "id": "NY.GDP.PCAP.PP.KD",
@@ -5259,10 +5259,26 @@
       "family": "imf_credit",
       "transform": "log1p",
       "name": "Use of IMF credit (% of quota)",
+      "caveat": "No credit from the Fund can mean easy finance or no access at all; read it with the borrowing rate.",
       "notes": "How much the government owes the IMF, as a share of its quota (IMF Fund accounts). Borrowing from the lender of last resort under its conditions is a costly step taken when private foreign finance is shut or too dear. Higher = more likely binding. The 2020 pandemic emergency loans and routine concessional loans to low-income countries also count; the comparison with economies at the same income absorbs part of that.",
       "years": 1990,
       "reads": "behaviour",
       "basis": "own"
+    },
+    {
+      "id": "IFN.BORROWING_YEARS",
+      "source": "extra",
+      "extra_group": "intl_finance",
+      "nodes": [],
+      "test": "context",
+      "class": "X",
+      "direction": 0,
+      "transform": "none",
+      "family": "ids_borrowing_years",
+      "slow": false,
+      "name": "Years with a priced new borrowing from private foreign lenders, of the last five",
+      "notes": "Context input, no signal of its own (class X). In how many of the last five years the government agreed new loans or bonds with private foreign lenders at a rate on record (World Bank IDS): the years the borrowing-rate spread rests on. The engine's rare-borrower guard reads it: with fewer than four, international finance cannot read 'the data argue against it', because a low rate on a few loans is not cheap finance (plan 11.5).",
+      "years": 1995
     }
   ],
   "comovement_specs": [

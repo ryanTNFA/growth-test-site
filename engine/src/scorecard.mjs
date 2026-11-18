@@ -16,14 +16,17 @@ import {
   comovement,
   buildFamilies,
 } from './signals.mjs';
-import { evaluateNode, rollupNode, rankNodes, statements, bootstrapRanks, applyTopSplitOverride, paramsForSetting, robustnessMark } from './aggregate.mjs';
+import { evaluateNode, rollupNode, rankNodes, statements, bootstrapRanks, applyTopSplitOverride, applyRareBorrowerGuard, paramsForSetting,
+  robustnessMark } from './aggregate.mjs';
 import { topSplit, RATE_SOURCES } from './topsplit.mjs';
 import { growthUniverse, growthProblem } from './growth.mjs';
 
-export const ENGINE_VERSION = '0.3.1';
+export const ENGINE_VERSION = '0.3.2';
 export const DEFAULT_SETS = ['structural', 'regional', 'aspirational'];
 export const DESK_SERIES = ['NY.GDP.PCAP.KD', 'NY.GDP.PCAP.KD.ZG', 'NE.GDI.FTOT.ZS', 'FR.INR.RINR', 'FS.AST.PRVT.GD.ZS', 'FP.CPI.TOTL.ZG'];
 export const RATIONING_INDICATOR = 'IC.FRM.CRDC.FL.ZS';
+/** Years with new borrowing from private foreign lenders, of the last five (context, class X): read by the rare-borrower guard. */
+export const BORROWING_YEARS_INDICATOR = 'IFN.BORROWING_YEARS';
 
 function uniq(xs) {
   return [...new Set(xs)];
@@ -637,6 +640,9 @@ export function assembleVerdicts({ indicators, comovement: cm, setMembers, activ
     const rationingSignal = rationing ? signalForSet(rationing, activeSet) : null;
     const financeIds = defs.filter((d) => d.diagnosable && (d.branch === 'finance' || d.id === 'N0')).map((d) => d.id);
     for (const id of financeIds) if (ev[id]) applyTopSplitOverride(ev[id], ts, rationingSignal, params);
+    // rubric 0.5.2 (plan 11.5): international finance cannot read "argue against" for an economy that rarely borrows abroad
+    const borrowing = indicators.find((i) => i.id === BORROWING_YEARS_INDICATOR);
+    if (ev.N1) applyRareBorrowerGuard(ev.N1, borrowing ? borrowing.value : null, params);
     for (const d of rollupDefs) ev[d.id] = rollupNode(d, d.rollup_of.map((s) => ev[s]), params);
     return ev;
   };
