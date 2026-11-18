@@ -88,7 +88,7 @@ Counts per source are from `registry/indicators.json` (classes) and `data/snapsh
 | World Bank bulk files from other databases (`worldbank_zip`: WGI voice and accountability, HCI) | 3 | C 2, X 1 | 6,694 | 1996–2025 | 174–207 | WGI 2026-09-25; HCI 2020-09-21 | World Bank open data |
 | IMF World Economic Outlook (`weo`) | 4 | C 2, X 2 | 25,032 | 1990–2025 | 193–196 | October 2026 WEO via the IMF DataMapper (SDMX was unavailable); years after 2025 dropped as projections | IMF terms |
 | Growth Lab Economic Complexity Index (`eci`) | 1 | C 1 | 4,289 | 1995–2024 | 144 | Harvard Dataverse file 13439575 | as published |
-| Enterprise Surveys via Data360 (`es360`) | 40 | A 4, B 4, C 32 | 17,963 | 2006–2026 | 151–180 | Data360 metadata 2026-08-25 | CC BY 4.0 |
+| Enterprise Surveys via Data360 (`es360`), with the B-READY tax items from rubric 0.5 (values only where 30 or more firms answered) | 44 | A 11, B 2, C 31 | 18,464 | 2006–2026 | 89–180 | Data360 metadata 2026-08-25; tax items 2021–2026 surveys | CC BY 4.0 |
 | IMF SDMX: interest rates, FSIs, direct investment, monetary statistics, WEO (`imf`) | 16 | A 1, B 4, C 5, X 6 | 40,838 | 1990–2025 | 24–173 | current dataflows as served 2026-10-26 (unversioned); FRED GS10 for the US benchmark after the IMF US series ends | IMF terms; FRED public domain |
 | ESCAP-World Bank Trade Cost Database (`escap`) | 12 | A 12 | 51,222 | 1995–2025 | 146–190 | 2026 release, file dated 2026-08-05 | non-commercial use with attribution |
 | Global Financial Development Database (`gfdd`) | 10 | A 3, B 2, C 5 | 35,159 | 1960–2021 | 131–185 | 2022-09-23 | CC BY 4.0 |
@@ -101,6 +101,9 @@ Counts per source are from `registry/indicators.json` (classes) and `data/snapsh
 | World Uncertainty Index, Ahir, Bloom and Furceri (`wui`) | 1 | C 1 | 8,847 | 1952–2025 | 142 | October 2026 update; quarters averaged to years, all four required | all rights reserved; cite NBER WP 29763 |
 | GI-TOC Global Organized Crime Index (`ocindex`): criminality, resilience | 2 | D 1, X 1 | 1,158 | 2020–2024 | 193 | editions 2021, 2023, 2025; year = edition − 1 | all rights reserved; attribution |
 | World Bank Business Ready (`bready`): property transfer, dispute resolution, liquidation and company-entry times and fees | 5 | A 5 | 721 | 2024–2025 | 86–101 | 2024 (50 economies) and 2025 (101) editions, economy-answer files | CC BY 4.0 (Data360), attribution |
+| OECD Corporate Tax Statistics, country-by-country reporting (`oecd_cbcr`), rubric 0.5: tax paid over profit of large multinational groups, a fallback where firms' reported rate is missing | 1 | A 1 | 1,069 | 2016–2023 | 162 | Table I as served 2026-11-18 | OECD terms: any use with credit |
+| Freight cost rate (WDI balance of payments) and LPI 2.0 container dwell times (`transport`), rubric 0.5 | 3 | A 3 | 3,821 | 2000–2025 | 142–153 | WDI 2026-10-08; LPI 2.0 2023–2024 | CC BY 4.0 |
+| IMF deposit-like rates, FSI net interest margin, exchange rates (`imf_rates`), rubric 0.5 | 3 | A 3 | 8,488 | 1990–2025 | 143–157 | dataflows as served 2026-11-18 | IMF terms |
 | Growth Lab trade data, HS92 (`atlas`) | 5 | C 5 | 29,731 | 1995–2024 | 209 | Dataverse v18.0, 2026-04-22 | CC0 1.0 |
 | Camels-and-hippos θ and its standard errors (`camels`, computed by `ingest/camels.py`) | 6 | B 1 (`CH.SKILL`), X 5 | 18,512 | 2000–2024 | 144 | computed 2026-10-29 from the `atlas` file and three intensity vectors | derived |
 | Derived (computed by the engine) | 8 | A 3, B 2, X 3 | n/a | n/a | n/a | n/a | n/a |
@@ -369,8 +372,8 @@ Within a node, signal-bearing indicators are grouped by (test, family). Family s
 
 Economy-specific downgrades of a class A or B indicator to class C (the registry class is kept as `class_registry`, the reason as `class_note`):
 
-- `monetary`: economies in `static_monetary_regimes.json` (`FP.CPI.TOTL.ZG`, `DERIV.INFLATION_VOL`, the two IMF dollarization ratios).
-- `trade_hub`: the seven hubs in `static_trade_hubs.json` (the 12 ESCAP trade-cost series; the discovery gap `PS.GAP` too).
+- `monetary`: economies in `static_monetary_regimes.json` (`FP.CPI.TOTL.ZG`, `DERIV.INFLATION_VOL`, the two IMF dollarization ratios, and from rubric 0.5 exchange-rate instability `IMF.ER_VOL`, which is also not computed below 0.25 percent a month, where a peg reads near zero by construction).
+- `trade_hub`: the seven hubs in `static_trade_hubs.json` (the 12 ESCAP trade-cost series; the discovery gap `PS.GAP` too; from rubric 0.5 the freight cost rate `TR.FREIGHT_COST_RATE` and the multinationals' tax rate `OECD.CBCR_TAX_PAID`).
 - `high_income` (engine 0.1.9, rubric 0.2.9): the World Bank high-income group from the snapshot (86 economies), for the discovery gap `PS.GAP`: a mature exporter adds few new products because the products it lacks are ones it left behind, so the gap informs without voting there.
 - `low_voice`: economies whose WGI voice and accountability reference value is ≤ −1.0 (`params.candour`; 49 economies at rubric 0.1.5), for self-reported bribery (`IC.FRM.BRIB.ZS`, `IC.FRM.CORR.ZS`, `IC.TAX.GIFT.ZS`). The threshold is a judgment set after seeing results.
 
@@ -381,12 +384,24 @@ Economy-specific downgrades of a class A or B indicator to class C (the registry
 For each test k, over the voting families with weight w_f > 0:
 
 ```
-T_k = Σ_f w_f · s_f / max(Σ_f w_f, test_weight_floor)          test_weight_floor = 1.0 (the class A weight)
+T_k = Σ_f w_f · s_f / max( √((1 − ρ)·Σ_f w_f² + ρ·(Σ_f w_f)²), test_weight_floor )
+        ρ = test_combine_rho = 0.25 (rubric 0.5)      test_weight_floor = 1.0 (the class A weight)
 ```
+
+**Rubric 0.5 (18 November 2026).** ρ is the correlation assumed between the families on one test. Until rubric 0.4 the
+score was the weighted mean, Σ w·s / max(Σ w, 1), which is the case ρ = 1: every family treated as the same measurement
+repeated. Under it three families at +1 scored +1, like one, and a family at 0 pulled the score toward 0, so adding
+evidence to a test could only weaken it unless the new family was stronger than the average, and areas with fewer
+measures were the easiest to rate. Measured across economies, the signals of two families on the same test correlate at
+a median of +0.12 (49 pairs; `docs/test-combining-review.md`); ρ = 0.25 rounds that up because banding to −2..+2
+understates it. Families that agree now accumulate, with a ceiling of 1/√ρ = 2 times their average signal however many
+there are: two at +1 give 1.26, three 1.41, four 1.51. A family at 0 still weakens the test (+2 and 0 give 1.26; +2 and
+two 0s give 0.94), and a test with one family scores exactly as before. Two families that correlate above about 0.6 are
+nearly the same evidence and should be merged into one family rather than counted twice.
 
 T_k is null when the test has no family; `{T: null, not_observed: true}` for a price test, or (rubric 0.1.6, `tiers.camels_test_quantity_rule: "ab_only"`) a camels test, with informing class C/D families only. The floor shrinks thin tests toward zero: one class C family at +1 gives 0.6; one class A family at +2 keeps +2.
 
-*Implementation:* `engine/src/aggregate.mjs:testScores`. *Test:* `engine/test/aggregate.test.mjs` ("weight floor: a test with thin voting weight is shrunk toward zero, a class A family keeps its value").
+*Implementation:* `engine/src/aggregate.mjs:testScores`. *Tests:* `engine/test/aggregate.test.mjs` ("weight floor: a test with thin voting weight is shrunk toward zero, a class A family keeps its value"; "test_combine_rho spans the weighted mean (1) to the weighted Stouffer combination (0)").
 
 ### 4.4 Node score N
 
@@ -655,10 +670,11 @@ When citing a number, give the economy, node, tier, the indicator and its refere
 - Newey, W. and K. West (1987). "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix." *Econometrica* 55(3).
 - Psacharopoulos, G. and H. Patrinos (2018). "Returns to Investment in Education: A Decennial Review of the Global Literature." World Bank Policy Research Working Paper 8402.
 - Rajan, R. and L. Zingales (1998). "Financial Dependence and Growth." *American Economic Review* 88(3).
-- World Bank. World Development Indicators; Worldwide Governance Indicators; Enterprise Surveys (Data360); Global Financial Development Database; Doing Business (2004–2020); Business Ready (B-READY) 2024 and 2025; Human Capital Index.
+- World Bank. World Development Indicators; Worldwide Governance Indicators; Enterprise Surveys (Data360); Global Financial Development Database; Doing Business (2004–2020); Business Ready (B-READY) 2024 and 2025; Human Capital Index; Logistics Performance Indicators 2.0 (Data360, 2023 and 2024).
 - Ahir, H., N. Bloom and D. Furceri (2022). "The World Uncertainty Index." NBER Working Paper 29763; data updated October 2026.
 - The Heritage Foundation. *Index of Economic Freedom*, 2026 edition and earlier editions.
 - World Justice Project. *WJP Rule of Law Index*, 2026 historical data file.
 - Global Initiative Against Transnational Organized Crime. *Global Organized Crime Index*, 2021, 2023 and 2025 editions.
-- IMF. World Economic Outlook (October 2026); International Financial Statistics and Financial Soundness Indicators via SDMX 3.0.
+- IMF. World Economic Outlook (October 2026); International Financial Statistics and Financial Soundness Indicators via SDMX 3.0; from rubric 0.5 also Monetary and Financial Statistics interest rates (deposit, savings, euro-area harmonized), the Financial Soundness balance sheet and income statement, and Exchange Rates, accessed 18 November 2026.
+- OECD. Corporate Tax Statistics: country-by-country reporting, Table I, OECD Data Explorer, accessed 18 November 2026.
 - Prindex (ODI and Global Land Alliance). Rounds 1 and 2 public data, 2024 release.

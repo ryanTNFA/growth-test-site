@@ -62,12 +62,20 @@ function isAB(f) {
  * params.tiers.circumvention_test_quantity_rule the same way (rubric 0.4.0, engine 0.3.0: a quantity or a stated reason
  * filed under circumvention is not a behaviour that only pays if the constraint binds). Test 2 is never filtered.
  *
+ * Combining (rubric 0.5, params.tiers.test_combine_rho): T_k = Σ w·s / max(√((1 − ρ)·Σ w² + ρ·(Σ w)²), floor); ρ = 1 is
+ * the weighted mean below, ρ = 0.25 in use.
+ *
  * Weight floor (v0.1.2, params.tiers.test_weight_floor, 1.0 = the class A weight): a test whose
  * voting weight mass is thinner than the floor is shrunk toward zero, so one class C family at +1
  * gives T = 0.6 and one class A family keeps its full value. Without the floor T_k is the plain
  * weighted mean of v0.1.
  */
-export function testScores(families, tests = TEST_ORDER, priceRule = null, floor = 0, camelsRule = 'all_vote', circRule = 'all_vote') {
+export function testScores(families, tests = TEST_ORDER, priceRule = null, floor = 0, camelsRule = 'all_vote', circRule = 'all_vote', rho = 1) {
+  // Rubric 0.5 (engine 0.3.1): rho = params.tiers.test_combine_rho, the correlation assumed between families on one
+  // test. The scale is sqrt((1 - rho) * sum(w^2) + rho * (sum w)^2): rho = 1 gives sum(w), the weighted mean of earlier
+  // rubrics; rho = 0 gives the weighted Stouffer combination, where agreeing independent families accumulate. One family
+  // scores the same at every rho. See docs/test-combining-review.md.
+  const r = isNum(rho) ? Math.min(1, Math.max(0, rho)) : 1;
   const rule = priceRule || 'all_vote';
   if (!PRICE_TEST_RULES.includes(rule)) throw new Error(`unknown tiers.price_test_quantity_rule: ${priceRule}`);
   const fl = isNum(floor) && floor > 0 ? floor : 0;
@@ -96,11 +104,14 @@ export function testScores(families, tests = TEST_ORDER, priceRule = null, floor
     }
     let num = 0;
     let den = 0;
+    let ss = 0;
     for (const f of voting) {
       num += f.weight * f.signal;
       den += f.weight;
+      ss += f.weight * f.weight;
     }
-    out[k] = { T: num / Math.max(den, fl), families: voting.map((f) => f.id), informing: informing.map((f) => f.id), weight_mass: den, shrunk: fl > den };
+    const scale = r === 1 ? den : Math.sqrt((1 - r) * ss + r * den * den);
+    out[k] = { T: num / Math.max(scale, fl), families: voting.map((f) => f.id), informing: informing.map((f) => f.id), weight_mass: den, shrunk: fl > scale };
   }
   return out;
 }
@@ -127,7 +138,7 @@ export function nodeStats(families, params) {
   const active = families.filter((f) => f.weight > 0);
   const T = params.tiers;
   const tests = testScores(active, TEST_ORDER, T.price_test_quantity_rule, T.test_weight_floor, T.camels_test_quantity_rule || 'all_vote',
-    T.circumvention_test_quantity_rule || 'all_vote');
+    T.circumvention_test_quantity_rule || 'all_vote', T.test_combine_rho);
   // Informing families are those a test's quantity rule keeps out of its score: the price test's and, under
   // camels_test_quantity_rule "ab_only" (rubric v0.1.6), test 4's. Neither counts toward E.
   const informingIds = new Set(['price', 'camels', 'circumvention'].flatMap((k) => ((tests[k] && tests[k].informing) || []).map((id) => `${k}|${id}`)));

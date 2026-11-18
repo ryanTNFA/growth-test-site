@@ -82,6 +82,11 @@
       "reads": "quantity",
       "basis": "own"
     },
+    "bop_freight_cost": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): what the economy pays non-resident carriers for transport per dollar of goods imported, an ad valorem cost rate from the official balance of payments; not computed for net exporters of transport services"
+    },
     "broad_money": {
       "reads": "quantity",
       "basis": "own"
@@ -145,6 +150,11 @@
     "camels_skill": {
       "reads": "latent_demand",
       "basis": "own"
+    },
+    "cbcr_tax_rate": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): cash income tax large multinational groups pay over the profit they book in the economy, from their own country-by-country reports compiled by tax authorities; whether a large-multinational rate may vote for the whole economy is rule question 3 of docs/data-extension-plan.md"
     },
     "crowding_out": {
       "reads": "quantity",
@@ -364,6 +374,21 @@
       "reads": "rationing",
       "basis": "own"
     },
+    "es_tax_admin_delay": {
+      "reads": "rationing",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): weeks firms waited for a VAT refund or a final audit report, their own experience of delay, read like the customs and connection delays; kept only where 30 or more firms answered"
+    },
+    "es_tax_rate_paid": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): the effective income-based tax rate firms report paying, a price they bear, from their own accounts; the Doing Business total tax rate is the expert estimate for a standardized firm and keeps informing"
+    },
+    "es_tax_time": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): hours a year the median firm spends on tax compliance, a cost it bears, read like management time on regulation"
+    },
     "es_tax_visits": {
       "reads": "quantity",
       "basis": "own"
@@ -399,6 +424,11 @@
     "fiscal_balance": {
       "reads": "quantity",
       "basis": "own"
+    },
+    "fx_instability": {
+      "reads": "price",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): how much the official exchange rate against the dollar moved month to month, an official series of the price every importer, exporter and foreign-currency borrower faces; not computed for pegs and informing under hard pegs"
     },
     "gfdd_concentration": {
       "reads": "quantity",
@@ -480,6 +510,11 @@
       "reads": "index",
       "basis": "own",
       "why": "rubric 0.4.0: composites of unlike sub-indicators, like the governance indices; class C before"
+    },
+    "lpi2_dwell": {
+      "reads": "rationing",
+      "basis": "own",
+      "why": "rubric 0.5 (wave 1): median days containers spent in port, from shipment tracking records (World Bank LPI 2.0): delay experienced at the going price, read like the customs days; the perception LPI it replaces keeps informing"
     },
     "npl": {
       "reads": "quantity",

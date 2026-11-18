@@ -3,7 +3,7 @@
 // scatter, C2 peer comparison and C3 over time for one indicator; the year player (player.mjs) animates C1 and C2.
 import { refreshNav } from './shell.mjs';
 import { isNum } from '../../engine/src/stats.mjs';
-import { nodeCode, getJSON, loadRegistry, initTheme, h, fmt, fmtSigned, qs, unitHint, shortName, sourceLink, sourceLabel, dataBase, withData, downloadText, tierLabelOf, tierClass, HASH, TEACHING_KEYS, readHash, writeHash, currentHash } from './common.mjs';
+import { nodeCode, getJSON, listedFile, loadRegistry, initTheme, h, fmt, fmtSigned, qs, unitHint, shortName, sourceLink, sourceLabel, dataBase, withData, downloadText, tierLabelOf, tierClass, HASH, TEACHING_KEYS, readHash, writeHash, currentHash } from './common.mjs';
 import { INCOME_ID, refSpan, scatterRows, structureFit, linearFit, lowessFit, lineAndBand, peerRank, residualPercentile, backTransform, referenceTable, viableYears, peerSummary, seriesRows, coverage, changeSinceStart, peerBand, slope, endpoints, stripRows, playerFrames, playerDomains, raceFrames } from './evidence_math.mjs';
 import { createControls, bubbleChart, barRace } from './player.mjs';
 import { reducedMotion } from './motion.mjs';
@@ -835,7 +835,7 @@ function fitFor(id) {
 /** Latest-year camels-and-hippos residuals for one economy plus the shared product list; null when not built. */
 const camelCache = {};
 async function camelData(iso, vecNames) {
-  if (!camelCache[iso]) camelCache[iso] = getJSON(`${DATA}/camels/${iso}.json`, { optional: true });
+  if (!camelCache[iso]) camelCache[iso] = listedFile(DATA, 'camels', iso);
   for (const v of vecNames) if (!camelCache[`p:${v}`]) camelCache[`p:${v}`] = getJSON(`${DATA}/camels/products/${v}.json`, { optional: true });
   const [mine, ...prods] = await Promise.all([camelCache[iso], ...vecNames.map((v) => camelCache[`p:${v}`])]);
   const products = Object.fromEntries(vecNames.map((v, k) => [v, prods[k]]).filter(([, p]) => p));
@@ -849,7 +849,7 @@ async function camelData(iso, vecNames) {
 
 /** The presence version of test 4 (ingest/hippo_gap.py): the hippo gap, entry rates and the surprises; null when not built. */
 function hippoData(iso) {
-  if (!camelCache[`h:${iso}`]) camelCache[`h:${iso}`] = getJSON(`${DATA}/hippo/${iso}.json`, { optional: true });
+  if (!camelCache[`h:${iso}`]) camelCache[`h:${iso}`] = listedFile(DATA, 'hippo', iso);
   return camelCache[`h:${iso}`];
 }
 

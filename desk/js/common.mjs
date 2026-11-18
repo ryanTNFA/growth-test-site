@@ -235,6 +235,21 @@ export async function getJSON(url, { optional = false } = {}) {
 }
 
 /**
+ * One economy's file in a folder that not every economy has (camels, hippo), or null without a request when the folder's
+ * index.json does not list it, so the browser logs no 404. Without an index, it asks for the file as before.
+ * @param {string} base the data folder (dataBase())
+ * @param {string} dir the folder, such as 'camels'
+ * @param {string} iso
+ * @returns {Promise<any>}
+ */
+export function listedFile(base, dir, iso) {
+  const key = `${base}/${dir}`;
+  if (!listedFile.cache[key]) listedFile.cache[key] = getJSON(`${key}/index.json`, { optional: true }).then((d) => (d && d.isos ? new Set(d.isos) : null));
+  return listedFile.cache[key].then((set) => (!set || set.has(iso) ? getJSON(`${key}/${iso}.json`, { optional: true }) : null));
+}
+listedFile.cache = /** @type {Record<string, Promise<Set<string> | null>>} */ ({});
+
+/**
  * The registry the pages read: indicators, nodes and params, with lookups by id and the connectors not built.
  * @returns {Promise<{indicators: any, nodes: any, params: any, indicatorById: Record<string, any>, nodeById: Record<string, any>, connectorsNotBuilt: any[]}>}
  */
@@ -506,6 +521,10 @@ export const EXTRA_GROUPS = {
   wui: { label: 'World Uncertainty Index (Ahir, Bloom and Furceri)', url: 'https://worlduncertaintyindex.com/' },
   ocindex: { label: 'GI-TOC, Global Organized Crime Index', url: 'https://ocindex.net/' },
   bready: { label: 'World Bank Business Ready (B-READY)', url: 'https://www.worldbank.org/en/businessready' },
+  // rubric 0.5 (wave 1 of docs/data-extension-plan.md)
+  oecd_cbcr: { label: 'OECD Corporate Tax Statistics, country-by-country reporting', url: 'https://data-explorer.oecd.org/' },
+  transport: { label: 'World Bank WDI (balance of payments) and Logistics Performance Indicators 2.0', url: 'https://lpi.worldbank.org/' },
+  imf_rates: { label: 'IMF (MFS interest rates, FSI, exchange rates)', url: 'https://data.imf.org' },
 };
 /** The source's web page for an indicator, or null. @param {any} ind @returns {string | null} */
 export function sourceLink(ind) {
@@ -660,7 +679,7 @@ export function tapSources(root) {
     for (const part of splitSources(n.nodeValue || '')) {
       if (typeof part === 'string') { frag.append(part); continue; }
       const btn = h('button', { type: 'button', class: 'src-tap', 'aria-expanded': 'false', title: `Source: ${part.source}` }, 'source');
-      const wrap = h('span', { class: 'src-wrap' }, '(', h('span', { class: 'src-name' }, `${part.source}, `), part.year, btn, ')');
+      const wrap = h('span', { class: 'src-wrap' }, '(', h('span', { class: 'src-cite' }, `${part.source}, `), part.year, btn, ')');
       btn.addEventListener('click', () => { const on = wrap.classList.toggle('on'); btn.setAttribute('aria-expanded', String(on)); });
       frag.append(wrap);
     }

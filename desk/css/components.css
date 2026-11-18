@@ -905,7 +905,7 @@ h1 > .pict { width: 0.8em; height: 0.8em; vertical-align: -0.04em; }
 /* ---------- the detail (interface PRD L1, L2): Plain leaves out class letters, codes and sd; Analyst shows them ---------- */
 html[data-detail="plain"] .an-only, html[data-detail="plain"] .sm-id { display: none !important; }
 /* C4: in Plain a number's source waits behind its "source" tap; in Analyst it is printed and the tap is not drawn */
-html[data-detail="plain"] .src-wrap:not(.on) .src-name { display: none; }
+html[data-detail="plain"] .src-wrap:not(.on) .src-cite { display: none; }
 html:not([data-detail="plain"]) .src-tap { display: none; }
 .src-tap { font: inherit; font-family: var(--sans); font-size: 0.75em; line-height: 1.2; margin-left: 5px; padding: 0 6px; border: 1px solid var(--rule-strong);
   border-radius: var(--radius-pill); background: none; color: var(--muted); cursor: pointer; vertical-align: 0.1em; }

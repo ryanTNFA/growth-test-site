@@ -126,8 +126,9 @@ export function ledger(a, { fork = false, chip = null, missing = () => 'no test 
     'Each bar reaches a measure’s signal, −2 to +2. Most rest on two readings shown under the name: the gap from what income predicts, in ' +
     'standard deviations (sd), and the rank among the comparison countries; a changes bar rests on how often investment moved as predicted. ' +
     'Thicker counts more: class A (a price) thickest, then B (a workaround), C (a quantity), D (a composite index), and older data thinner. ' +
-    'Hollow bars are shown only. A test’s score is the weighted average of its counted bars, pulled toward 0 when its evidence is ' +
-    `thin; the price test counts double in the net score. ${thresholdWords(a)}`));
+    'Hollow bars are shown only. A test’s score adds up its counted bars, discounted because measures overlap: bars that agree ' +
+    'strengthen it, a bar at 0 weakens it, and thin evidence pulls it toward 0. The price test counts double in the net score. ' +
+    `${thresholdWords(a)}`));
   return el;
 }
 /**

@@ -1,6 +1,6 @@
 {
   "_comment": "Constraint Check indicator registry v0.1.2 (prototype; changes from v0.1 and v0.1.1 in docs/CHANGELOG-rubric.md). Fields: id (source code), name, source (worldbank_wdi | worldbank_zip | weo | eci | derived | static), nodes (list of node ids or [] for context), test (price | changes | circumvention | camels | context), class (A|B|C|D|X where X = context, no signal), direction (+1 = higher value means MORE binding, -1 = higher value means LESS binding, 0 = context), transform (none | log1p | log | logit), family (evidence family id; signals within a family are deduplicated to one), slow (true if slow-moving stock: recency decay relaxed), years (first year to ingest), notes. Optional: source_code (World Bank API indicator code when it differs from the id) and source_id (World Bank source/database id) for the bulk-zip fetch; hidden_until_fixed (true = the engine treats the indicator as unavailable: not displayed, not counted); regime_sensitive (\"monetary\": downgraded to class C for economies in registry/static_monetary_regimes.json, v0.1.2); fallback_for (indicator id: this indicator carries no signal for an economy where that indicator is available in the window, v0.1.2); caveat (one sentence the Desk prints under the indicator).",
-  "rubric_version": "0.4.0",
+  "rubric_version": "0.5.0",
   "indicators": [
     {
       "id": "NY.GDP.PCAP.PP.KD",
@@ -2024,6 +2024,82 @@
       "basis": "own"
     },
     {
+      "id": "ES.TAX_RATE_PAID",
+      "name": "Reported effective income-based tax rate",
+      "source": "extra",
+      "extra_group": "es360",
+      "nodes": [
+        "N11.taxes"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "none",
+      "family": "es_tax_rate_paid",
+      "slow": false,
+      "years": 2021,
+      "notes": "Data360 WB_ES_T_BREADY_TAX8 (Enterprise Surveys, all sectors). Effective income-based tax rate as reported by the firm (B-READY taxation module, surveys since 2021): a price firms actually pay, from their own accounts, so it votes. Higher = taxes take more of the return = more likely binding. A low reported rate can also reflect evasion; the surveys cover registered firms with five or more workers.",
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "id": "ES.TAX_HOURS",
+      "name": "Hours spent on tax compliance annually [median]",
+      "source": "extra",
+      "extra_group": "es360",
+      "nodes": [
+        "N11.taxes"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "es_tax_time",
+      "slow": false,
+      "years": 2021,
+      "notes": "Data360 WB_ES_T_BREADY_TAX1_MEDIAN (Enterprise Surveys, all sectors). Hours a year the median firm spends on tax compliance (B-READY, surveys since 2021): the time cost of paying taxes, borne by the firm, so it votes. Right-skewed, so log1p. It rises with income; the income-conditional comparison absorbs that. Unrelated to the reported rate across economies (rank correlation -0.07), so the two are separate evidence.",
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "id": "ES.VAT_REFUND_WEEKS",
+      "name": "Weeks to receive VAT refund [median]",
+      "source": "extra",
+      "extra_group": "es360",
+      "nodes": [
+        "N11.taxes"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "es_tax_admin_delay",
+      "slow": false,
+      "years": 2023,
+      "notes": "Data360 WB_ES_T_BREADY_TAX5_MEDIAN (Enterprise Surveys, all sectors). Weeks the median firm waited to receive a VAT refund (B-READY, surveys since 2021): rationing by delay, experienced by the firm. Only firms that claimed a refund answer, hence the 30-firm floor. Shares one family with the audit delay so the two delays vote once.",
+      "reads": "rationing",
+      "basis": "own"
+    },
+    {
+      "id": "ES.TAX_AUDIT_WEEKS",
+      "name": "Weeks until the final tax audit report [median]",
+      "source": "extra",
+      "extra_group": "es360",
+      "nodes": [
+        "N11.taxes"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "log1p",
+      "family": "es_tax_admin_delay",
+      "slow": false,
+      "years": 2022,
+      "notes": "Data360 WB_ES_T_BREADY_TAX4_MEDIAN (Enterprise Surveys, all sectors). Weeks the median audited firm waited for the final tax audit report (B-READY, surveys since 2021): delay experienced by the firm. Only audited firms answer, hence the 30-firm floor. Same family as the VAT refund delay.",
+      "reads": "rationing",
+      "basis": "own"
+    },
+    {
       "id": "IMF.LEND",
       "name": "Lending interest rate, nominal (% per year), IMF MFS",
       "source": "extra",
@@ -2987,6 +3063,8 @@
       "slow": false,
       "years": 2000,
       "notes": "Mindbook/Workbook N3: the intermediation wedge decomposes as spread = f(reserve requirement eps, operating cost c, deposit rate); the criterion is eps + c. Net interest margin is the realized intermediation markup (class A price). Higher = costlier intermediation. Pitfall: high margins are expected when rates are high for savings reasons (N2); read with the deposit rate.",
+      "fallback_for": "IMF.FSI_NIM",
+      "review_note": "v0.1.3 coordinator review: rubric 0.5: GFDD stops in 2021; the IMF FSI margin (rank correlation +0.94 to +0.96 with it, 2019-2021) replaces it, and GFDD counts only where the IMF margin is missing",
       "reads": "price",
       "basis": "own"
     },
@@ -5005,6 +5083,147 @@
       "reads": "price",
       "basis": "estimate",
       "class_before_0_4_0": "A"
+    },
+    {
+      "id": "OECD.CBCR_TAX_PAID",
+      "name": "Tax large multinational groups pay on their profit here, 3-year average (%)",
+      "source": "extra",
+      "extra_group": "oecd_cbcr",
+      "nodes": [
+        "N11.taxes"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "transform": "none",
+      "family": "cbcr_tax_rate",
+      "slow": false,
+      "regime_sensitive": "trade_hub",
+      "fallback_for": "ES.TAX_RATE_PAID",
+      "caveat": "Only groups with revenue of EUR 750 million or more; in hubs the ratio reflects profit booking.",
+      "notes": "Cash income tax that multinational groups with consolidated revenue of EUR 750 million or more pay in this economy, over the profit they book here, summed over the reporting home jurisdictions and three years. A price firms actually pay, from their own filings as compiled by tax authorities. Higher = taxes take more of the return = more likely binding. It is the large-multinational rate, not the small-firm rate; in re-export and profit-booking hubs (static trade_hubs list) it reflects profit shifting, so it informs there. Intra-group dividends in profit can push the ratio down. It counts only where the rate firms report in the Enterprise Surveys (ES.TAX_RATE_PAID) is missing.",
+      "years": 2016,
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "transport",
+      "nodes": [
+        "N6"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "TR.FREIGHT_COST_RATE",
+      "name": "Freight cost rate: transport services imports over goods imports (%)",
+      "transform": "log1p",
+      "family": "bop_freight_cost",
+      "regime_sensitive": "trade_hub",
+      "caveat": "Includes passenger fares; payments to resident carriers are not in it.",
+      "notes": "What the economy pays non-resident carriers for transport per dollar of goods imported (balance of payments, WDI): an ad valorem transport cost rate from an official series, so it votes. Not computed for net exporters of transport services (shipping nations, canal economies). Higher = transport costlier = more likely binding. Includes passenger fares and port services; economies with large national fleets or airlines read low; bulky imports raise it. Hubs inform only.",
+      "years": 2000,
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "transport",
+      "nodes": [
+        "N6"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "TR.CONTAINER_DWELL_IMP",
+      "name": "Container import dwell time in port (median days, LPI 2.0)",
+      "transform": "log1p",
+      "family": "lpi2_dwell",
+      "notes": "Median days from discharge until an imported container leaves the port, from container tracking records (World Bank LPI 2.0): delay experienced at the going price, so it votes. Higher = slower = more likely binding. Coastal economies only; includes time importers choose to leave cargo in port. Shares a family with export dwell time.",
+      "years": 2023,
+      "reads": "rationing",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "transport",
+      "nodes": [
+        "N6"
+      ],
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "TR.CONTAINER_DWELL_EXP",
+      "name": "Container export dwell time in port (median days, LPI 2.0)",
+      "transform": "log1p",
+      "family": "lpi2_dwell",
+      "notes": "Median days an export container spends in the port before loading, from container tracking records (World Bank LPI 2.0). Same family as import dwell time, so the two vote once.",
+      "years": 2023,
+      "reads": "rationing",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "imf_rates",
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "IMF.REAL_DEPOSIT_WIDE",
+      "name": "Real deposit rate, from IMF deposit-like rates (%)",
+      "nodes": [
+        "N2"
+      ],
+      "transform": "none",
+      "family": "real_deposit_rate",
+      "fallback_for": "DERIV.REAL_DEPOSIT",
+      "notes": "The real return savers get on a deposit-like rate (IMF deposit, savings or euro-area harmonized deposit rate, deflated by CPI inflation), where WDI carries no deposit rate: the same construct and family as DERIV.REAL_DEPOSIT, which it stands in for. Higher = savers must be paid more = domestic savings more likely binding. Reads the wrong way where rates are administered and inflation is high, as the WDI version does.",
+      "years": 1990,
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "imf_rates",
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "IMF.FSI_NIM",
+      "name": "Net interest margin of deposit takers (% of total assets, IMF FSI)",
+      "nodes": [
+        "N3"
+      ],
+      "transform": "none",
+      "family": "gfdd_nim",
+      "notes": "Net interest income over total assets of deposit takers, from supervisory accounts (IMF FSI): the realized price of intermediation, current where the GFDD margin stops in 2021. Higher = intermediation costlier = more likely binding. Total assets rather than earning assets, so it is compared within this source only; GFDD.NIM is its fallback.",
+      "years": 2000,
+      "reads": "price",
+      "basis": "own"
+    },
+    {
+      "source": "extra",
+      "extra_group": "imf_rates",
+      "test": "price",
+      "class": "A",
+      "direction": 1,
+      "slow": false,
+      "id": "IMF.ER_VOL",
+      "name": "Exchange-rate instability against the dollar (sd of monthly changes, %)",
+      "nodes": [
+        "N10"
+      ],
+      "transform": "log1p",
+      "family": "fx_instability",
+      "regime_sensitive": "monetary",
+      "caveat": "Not computed for pegs; a stable official rate under a parallel market is not safety.",
+      "notes": "How much the exchange rate against the US dollar moved month to month over three years (IMF ER): an official series of the price every importer, exporter and foreign-currency borrower faces. Higher = more macro instability = more likely binding. Pegs read near zero by construction, so it is not computed below 0.25 percent a month and informs under a hard peg.",
+      "years": 2010,
+      "reads": "price",
+      "basis": "own"
     }
   ],
   "comovement_specs": [

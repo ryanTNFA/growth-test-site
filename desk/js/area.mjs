@@ -36,7 +36,8 @@ async function main() {
 
   // the head: the economy (back to its overview), the area, its question; the walk through the tree (C7)
   $('ar-crumbs').replaceChildren(h('a', { href: tabHref('/growth-test-site/desk/country.html', iso) }, c), ' · ',
-    parent && /^N11$/.test(parent.id) ? [h('a', { href: areaHref(iso, parent.id) }, String(parent.short)), ' · '] : '',
+    // spread: replaceChildren takes nodes and strings, and an array would be printed as text (the link's address)
+    ...(parent && /^N11$/.test(parent.id) ? [h('a', { href: areaHref(iso, parent.id) }, String(parent.short)), ' · '] : []),
     area === 'N0' ? 'the first decision' : h('span', { class: 'an-only' }, `${nodeCode(area)} of the tree`));
   const title = $('page-title'); title.replaceChildren(pictogram(area) || '', area === 'N0' ? 'Costly finance, or low returns?' : name);
   title.removeAttribute('data-country-title');

@@ -1,7 +1,7 @@
 // Self-discovery page (front-door PRD W9): the idea in plain words, the country's N12 rating and measures, the
 // other low-return areas as context (the elimination gate until rubric 0.2.7), and the nearby products (ingest/nearby_products.py) when they pass the stability check.
 import { tabHref, refreshNav } from './shell.mjs';
-import { getJSON, loadRegistry, h, dataBase, withData, currentSetting, SETTING_LABEL } from './common.mjs';
+import { getJSON, listedFile, loadRegistry, h, dataBase, withData, currentSetting, SETTING_LABEL } from './common.mjs';
 import { plainTier, factText, plainSummary } from './card.mjs';
 import { renderSpace } from './selfdiscovery_space.mjs';
 
@@ -33,7 +33,7 @@ export function mountSelfDiscovery(host, economy) {
 async function main() {
   if (!iso) { showError('No economy selected.'); return; }
   try {
-    const [registry, sc, nearby, meta, hippo] = await Promise.all([loadRegistry(), getJSON(`${DATA}/${iso}.json`), getJSON(`${DATA}/nearby/${iso}.json`, { optional: true }), getJSON(`${DATA}/nearby/meta.json`, { optional: true }), getJSON(`${DATA}/hippo/${iso}.json`, { optional: true })]);
+    const [registry, sc, nearby, meta, hippo] = await Promise.all([loadRegistry(), getJSON(`${DATA}/${iso}.json`), getJSON(`${DATA}/nearby/${iso}.json`, { optional: true }), getJSON(`${DATA}/nearby/meta.json`, { optional: true }), listedFile(DATA, 'hippo', iso)]);
     state = { registry, sc, nearby, meta, hippo };
   } catch (e) { showError(`Could not load the data for ${iso}: ${e.message}`); return; }
   render();

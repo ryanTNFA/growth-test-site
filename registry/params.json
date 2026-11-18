@@ -1,6 +1,6 @@
 {
   "_comment": "Rubric parameters v0.1.4 (Workbook Appendix B as corrected by docs/CHANGELOG-rubric.md). Every number here is a starting point to be calibrated in Phase 0. The engine must read all thresholds from this file; nothing numeric is hard-coded.",
-  "rubric_version": "0.4.0",
+  "rubric_version": "0.5.0",
   "snapshot_reference_window_years": 12,
   "icr": {
     "controls": [
@@ -77,6 +77,8 @@
     "corroboration": {"_comment": "Rubric 0.4.0 (13 November 2026). Where the voting evidence leaves a node at cannot_tell (data gap or weak), fresh informing evidence that agrees opens a closer look: at least families_min distinct informing families no older than max_age_years, each at signal_min or more, at least measured_min of them a measured fact (not an opinion, an index or an expert estimate), none at against_signal_max or less, and N not below N_min. It can only produce candidate (sub-reason corroborated). Excluded: the first decision (a direction, not a rating); international finance (its informing families, reserves, external debt, FDI and remittances, read differently under a monetary union, a float or an offshore centre: on the first run they flagged Belgium, Bermuda, Cyprus and Croatia); self-discovery (whose informing families describe one export basket several ways). N_min 0 means the voters must not lean away at all: at -0.5 twelve more cells qualified, in most of which real voting evidence pointed away. The cautious setting switches it off. Thresholds set from an audit of the 0.3.1 build, not calibrated.", "enabled": true, "max_age_years": 5, "signal_min": 1.5, "families_min": 2, "measured_min": 1, "against_signal_max": -1, "N_min": 0, "exclude_nodes": ["N0", "N1", "N12"]},
     "evidence_count_rule": "voting_families",
     "test_weight_floor": 1.0,
+    "test_combine_rho": 0.25,
+    "_test_combine_rho": "rubric 0.5 (Ryan, 18 November 2026): the assumed correlation between families on one test. T_k = sum(w s) / max(sqrt((1 - rho) sum(w^2) + rho (sum w)^2), test_weight_floor). 1 = the weighted mean of rubric 0.4 (families treated as one measurement repeated); 0 = weighted Stouffer (independent families accumulate). Measured within-test correlation of family signals: median +0.12 over 49 pairs (docs/test-combining-review.md); 0.25 rounds it up because banding to -2..+2 understates it. One family scores the same at every rho.",
     "extreme_tier_informing_dissent_min_abs": 1.0,
     "test_weights": {
       "price": 2,
